@@ -12,3 +12,5 @@
     - [Plano_de_Aula_Semana_06](/Planos%20de%20aula/Plano_de_Aula_Semana_06.md)
     - [Plano_de_Aula_Semana_07](/Planos%20de%20aula/Plano_de_Aula_Semana_07.md)
     - [Plano_de_Aula_Semana_08](/Planos%20de%20aula/Plano_de_Aula_Semana_08.md)
+    - [Plano_de_Aula_Semana_09](/Planos%20de%20aula/Plano_de_Aula_Semana_09.md)
+    - [Plano_de_Aula_Semana_10](/Planos%20de%20aula/Plano_de_Aula_Semana_10.md)
