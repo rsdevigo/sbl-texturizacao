@@ -139,28 +139,30 @@ NF = (PA × 0,40) + (CC × 0,20) + (PF × 0,40)
 
 | Instrumento | Descrição | Peso | Quando |
 |---|---|---|---|
-| **Portfolio de Artefatos (PA)** | Conjunto de entregas parciais ao longo do semestre: mapas UV, materiais PBR, texturas artísticas e bake. Avaliados com rubrica por entrega. | 40% | Semanas 3–14 |
-| **Críticas Coletivas (CC)** | Participação nas críticas semanais como apresentador e como avaliador dos colegas. Avalia comunicação, autoavaliação e incorporação de feedback. | 20% | Semanas 2–16 |
-| **Projeto Final – Kit Modular (PF)** | Kit Modular de Ambiente completo com 5–10 assets texturizados, importados e funcionais na Unity. Defesa oral com justificativa das escolhas técnicas e artísticas. | 40% | Semana 17 |
+| **Portfolio de Artefatos (PA)** | Conjunto de entregas parciais avaliadas nas **5 críticas formais intermediárias** (CF1–CF5, semanas 3, 5, 8, 11 e 14). Cada CF gera autoavaliação obrigatória e feedback escrito do professor. A nota do PA é composta com **pesos crescentes** por CF, valorizando a trajetória de aprendizado (CF1=10%, CF2=15%, CF3=20%, CF4=25%, CF5=30%). | 40% | Semanas 3–14 (CF1–CF5) |
+| **Críticas Coletivas (CC)** | Participação nas críticas como apresentador e avaliador dos colegas. Inclui as 6 críticas formais e as críticas informais semanais. Avalia comunicação, autoavaliação e incorporação de feedback. | 20% | Semanas 2–16 |
+| **Projeto Final – Kit Modular (PF)** | Kit Modular de Ambiente completo com 5–10 assets texturizados, importados e funcionais na Unity. Apresentado na **Crítica Formal 6** (semana 17) com defesa oral e justificativa das escolhas técnicas e artísticas. | 40% | Semana 17 (CF6) |
 
 ---
 
 ## 9. Critérios de Avaliação
 
-| Critério | Insuficiente (0–4) | Básico (5–6) | Satisfatório (7–8) | Excelente (9–10) |
-|---|---|---|---|---|
-| **Qualidade Técnica UV** | Sobreposição evidente, distorção severa. | UV funcional com distorções menores. | UV bem distribuído, mínima distorção. | UV otimizado, texels uniformes, sem sobreposição. |
-| **Qualidade dos Mapas PBR** | Mapas inconsistentes ou ausentes. | Mapas básicos presentes, sem coerência. | Metallic, roughness e normal coerentes. | Mapas fisicamente plausíveis com detalhes de bake. |
-| **Leitura Visual do Asset** | O asset não comunica o material. | Materiais perceptíveis sem consistência. | Assets com leitura clara e coerente. | Alta qualidade visual; materiais convincentes no motor. |
-| **Otimização e Performance** | Texturas superdimensionadas, sem atlas. | Tamanho razoável, atlas incompleto. | Textures e atlas apropriados à plataforma. | Totalmente otimizado: atlas, mipmaps, compressão. |
-| **Documentação e Reflexão** | Sem justificativas das decisões. | Decisões superficialmente justificadas. | Justificativas claras das escolhas técnicas. | Reflexão crítica sobre processo, erros e aprendizados. |
+A avaliação utiliza os 10 critérios definidos na **Rubrica Mestre do Projeto Integrador**, com escala de 1 a 5 (Insuficiente → Excelente) e descritores observáveis para cada nível. Os critérios são:
 
-### 9.1 Critérios de Participação nas Críticas Coletivas
+| Critério | Foco |
+|---|---|
+| **C1 — Processo de Projeto** | Organização, registro de decisões e incorporação de feedback ao longo do semestre |
+| **C2 — Direção Artística** | Coerência visual do kit: paleta, estilo e consistência entre assets |
+| **C3 — UV Mapping** | Qualidade do layout UV: distorção, aproveitamento de espaço e texel density |
+| **C4 — Materiais PBR** | Plausibilidade física dos materiais: albedo, metallic, roughness e normal |
+| **C5 — Texturização** | Detalhamento artístico: variação de cor, desgaste, sujeira e narrativa de uso |
+| **C6 — Bake** | Transferência de detalhe high→low poly: normal map, AO e curvature sem artefatos |
+| **C7 — Otimização** | Uso de atlas, trim sheets, channel packing e resolução adequada ao asset |
+| **C8 — Integração na Unity** | Configuração correta dos materiais e aparência final no motor de jogo |
+| **C9 — Apresentação** | Organização da entrega, documentação e capacidade de defender decisões |
+| **C10 — Participação nas Critiques** | Qualidade do feedback dado, recepção de críticas e justificativa de escolhas |
 
-- Apresentação clara do trabalho em progresso (o que foi feito, qual foi a intenção, quais dificuldades foram encontradas).
-- Autoavaliação honesta com identificação de pontos de melhoria.
-- Qualidade do feedback dado aos pares (específico, construtivo, baseado em critérios técnicos ou artísticos).
-- Evidência de incorporação de feedback recebido em entregas subsequentes.
+Nem todos os critérios são avaliados em todas as críticas formais — a tabela de critérios ativos por CF está na Rubrica Mestre. Os descritores completos de cada nível encontram-se na Rubrica Mestre do Projeto Integrador.
 
 ---
 
@@ -233,25 +235,28 @@ A nota máxima passível de ser atingida após a Recuperação Final é 7,0 (set
 
 ## 13. Cronograma Resumido
 
-| Semana | Conteúdo / Atividade | Entrega / Marco |
-|---|---|---|
-| 1 | Apresentação da disciplina, SBL, escolha de temas | Tema do Kit definido |
-| 2 | Fundamentos de textura e UV; primeiro critique | — |
-| 3 | Abertura de malha UV — Smart Unwrap e Seams | UV Map 01 (asset simples) |
-| 4 | Layout UV, distorção e otimização | UV Map 02 (asset do projeto) |
-| 5 | Fundamentos PBR; criação de Albedo e Normal | — |
-| 6 | Metallic, Roughness, Subsurface no 3D Coat | Set PBR 01 (1 material) |
-| 7 | Texturas seamless e geração procedural | — |
-| 8 | Workflow completo PBR no 3D Coat | Set PBR 02 (2 materiais) |
-| 9 | Pintura digital: camadas e máscaras | — |
-| 10 | Stencils e detalhamento artístico | Textura Artística 01 |
-| 11 | Bake: Normal Map e AO (high→low) | — |
-| 12 | Bake avançado: Curvature e ID Map | Bake completo do asset principal |
-| 13 | Texture Atlas — conceito e criação | — |
-| 14 | Trim Sheets e UDIMs | Atlas / Trim Sheet do Kit |
-| 15 | Otimização: compressão, mipmaps, empacotamento | — |
-| 16 | Integração na Unity: materiais, lightmap UV | Assets importados na Unity |
-| 17 | Apresentação e defesa do Projeto Final | Kit Modular de Ambiente completo |
+> 🔴 **Crítica Formal** (CF) — avaliação estruturada com rubrica, autoavaliação obrigatória e feedback escrito.  
+> 🔵 Crítica Informal — circulante em estúdio ou comentário coletivo rápido.
+
+| Semana | Conteúdo / Atividade | Entrega / Marco | Crítica |
+|---|---|---|---|
+| 1 | Apresentação da disciplina, SBL, escolha de temas | Mood board + Tema do Kit definido | 🔵 Informal |
+| 2 | Fundamentos de textura e UV; projeções simples no Blender | Arquivo .blend com 3 objetos UV mapeados | 🔵 Informal |
+| 3 | Abertura de malha UV — Smart Unwrap e Seams | Asset 01 com UV aberto | 🔴 **CF1** |
+| 4 | Layout UV, distorção e otimização | Asset 01 revisado + Asset 02 com UV | 🔵 Informal |
+| 5 | Fundamentos PBR — Albedo, Metallic, Roughness | 4 materiais PBR no Blender | 🔴 **CF2** |
+| 6 | Texturas seamless e tileable | Textura seamless + Asset 01 texturizado | 🔵 Informal |
+| 7 | Mapas PBR avançados: Normal, SSS, procedural | Asset 02 com material PBR completo | 🔵 Informal |
+| 8 | Workflow PBR no 3D Coat: camadas e exportação | Asset 01 texturizado no 3D Coat (mapas PBR) | 🔴 **CF3** |
+| 9 | Pintura digital: desgaste, sujeira e variação de cor | Asset 01 com camadas de detalhe pintadas | 🔵 Informal |
+| 10 | Stencils e detalhamento artístico | Asset 02 com detalhes via stencil | 🔵 Informal |
+| 11 | Bake: Normal Map e AO (high→low) | Normal Map e AO mapa baked + material atualizado | 🔴 **CF4** |
+| 12 | Bake avançado: Curvature e ID Map | Pacote completo de bake (4 mapas) | 🔵 Informal |
+| 13 | Texture Atlas — conceito e criação | Texture Atlas com 3+ assets do kit | 🔵 Informal |
+| 14 | Trim Sheets: criação e aplicação | Trim Sheet temática + asset mapeado | 🔴 **CF5** |
+| 15 | Otimização: compressão, mipmaps, channel packing | Assets com ORM + tabela de memória | 🔵 Informal |
+| 16 | Integração na Unity: materiais e lightmap UV | Cena na Unity com assets e lightmap | 🔵 Informal |
+| 17 | Apresentação e defesa do Projeto Final | Kit Modular de Ambiente completo | 🔴 **CF6** |
 
 ---
 

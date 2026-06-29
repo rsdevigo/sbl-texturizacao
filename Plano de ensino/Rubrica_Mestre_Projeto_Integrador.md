@@ -11,11 +11,10 @@
 
 Esta rubrica é o instrumento avaliativo central da disciplina. Ela acompanha o estudante durante todo o semestre e serve de base para:
 
-- **Críticas formais** (semanais e intermediárias)
-- **Avaliações parciais** (entregas A1, A2, A3)
-- **Autoavaliação** (antes de cada crítica)
-- **Avaliação por pares** (críticas coletivas)
-- **Avaliação final** (entrega do projeto completo)
+- **Críticas formais** periódicas (CF1–CF5, semanas 3, 5, 8, 11, 14) — compõem o Portfolio de Artefatos (PA)
+- **Autoavaliação** (antes de cada crítica formal)
+- **Avaliação por pares** (críticas coletivas formais e informais) — compõe as Críticas Coletivas (CC)
+- **Avaliação final** (CF6, semana 17) — Projeto Final (PF)
 
 Todos os critérios são **observáveis e verificáveis**. O avaliador deve conseguir justificar o nível atribuído apontando evidências concretas no trabalho do estudante.
 
@@ -199,36 +198,59 @@ Todos os critérios são **observáveis e verificáveis**. O avaliador deve cons
 
 ## Pesos por Momento Avaliativo
 
-### Estrutura de Pesos
+### Conexão com os Instrumentos do Plano de Ensino
 
-A distribuição de pesos reflete a progressão pedagógica da disciplina: no início, processo e participação têm peso maior porque o produto ainda está em formação. Ao final, a qualidade técnica e o resultado integrado são priorizados.
+Os 6 momentos de crítica formal conectam-se diretamente aos três instrumentos avaliativos definidos no Plano de Ensino:
+
+| Instrumento | Corresponde a | Peso na Nota Final |
+|---|---|---|
+| **Portfolio de Artefatos (PA)** | CF1 a CF5 — semanas 3, 5, 8, 11 e 14 | 40% |
+| **Críticas Coletivas (CC)** | C10 — Participação, registrado em todas as CF | 20% |
+| **Projeto Final (PF)** | CF6 — Apresentação e defesa (semana 17) | 40% |
+
+```
+NF = (PA × 0,40) + (CC × 0,20) + (PF × 0,40)
+```
+
+A nota do **PA** é calculada com **pesos crescentes** entre CF1 e CF5, valorizando a trajetória de aprendizado — um aluno que melhora consistentemente é recompensado pelo estado avançado do trabalho, não penalizado pelas notas iniciais quando ainda estava formando o conhecimento:
+
+| Crítica Formal | Semana | Peso no PA |
+|---|---|---|
+| CF1 | 3 | 10% |
+| CF2 | 5 | 15% |
+| CF3 | 8 | 20% |
+| CF4 | 11 | 25% |
+| CF5 | 14 | 30% |
+| **Total** | | **100%** |
+
+A nota de **CC** é consolidada pelo professor a partir dos registros de C10 ao longo de todas as CF. O **PF** é a avaliação da CF6.
 
 ---
 
-#### Avaliações Intermediárias (A1, A2, A3)
+### Critérios Ativos por Crítica Formal
 
-> Cada avaliação intermediária corresponde a uma fase do pipeline. Os critérios avaliados em cada fase são os diretamente trabalhados até aquele ponto.
+A tabela indica quais critérios são formalmente avaliados em cada CF. Critérios marcados como *obs.* são observados e registrados, mas não compõem a nota daquela CF.
 
-| Critério | A1 (Sem. 1–5) | A2 (Sem. 6–10) | A3 (Sem. 11–14) |
-|---|---|---|---|
-| C1 — Processo de Projeto | 25% | 15% | 10% |
-| C2 — Direção Artística | 25% | 15% | 10% |
-| C3 — UV Mapping | 30% | 10% | — |
-| C4 — Materiais PBR | 20% | 15% | 10% |
-| C5 — Texturização | — | 25% | 15% |
-| C6 — Bake | — | 20% | 10% |
-| C7 — Otimização | — | — | 20% |
-| C8 — Integração na Unity | — | — | 15% |
-| C9 — Apresentação | — | — | 10% |
-| C10 — Participação nas Critiques | — (observação) | — (observação) | — (observação) |
+| Critério | CF1 (Sem. 3) | CF2 (Sem. 5) | CF3 (Sem. 8) | CF4 (Sem. 11) | CF5 (Sem. 14) | CF6 (Sem. 17) |
+|---|---|---|---|---|---|---|
+| C1 — Processo de Projeto | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| C2 — Direção Artística | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| C3 — UV Mapping | ✓ | ✓ | obs. | — | — | ✓ |
+| C4 — Materiais PBR | — | ✓ | ✓ | ✓ | obs. | ✓ |
+| C5 — Texturização | — | — | ✓ | ✓ | ✓ | ✓ |
+| C6 — Bake | — | — | — | ✓ | ✓ | ✓ |
+| C7 — Otimização | — | — | — | — | ✓ | ✓ |
+| C8 — Integração na Unity | — | — | — | — | — | ✓ |
+| C9 — Apresentação | — | — | — | — | ✓ | ✓ |
+| C10 — Participação (CC) | obs. | obs. | obs. | obs. | obs. | ✓ |
 
-> **Nota:** O Critério 10 (Participação nas Critiques) é avaliado continuamente e acumulado para a Avaliação Final. Não compõe as notas intermediárias como número, mas o professor mantém registro de observação.
+> **Legenda:** ✓ = critério avaliado e registrado nesta CF | obs. = observado e anotado, não compõe nota | — = não aplicável ainda
 
 ---
 
-#### Avaliação Final (Semanas 15–17)
+#### Avaliação Final (Semana 17 — CF6 / Projeto Final)
 
-> Avalia o projeto completo integrado. Todos os critérios são considerados.
+> Avalia o projeto completo integrado na apresentação e defesa final. Todos os critérios são considerados.
 
 | Critério | Peso |
 |---|---|
@@ -248,7 +270,7 @@ A distribuição de pesos reflete a progressão pedagógica da disciplina: no in
 
 ### Justificativa Pedagógica dos Pesos
 
-**C5 — Texturização (14%)** recebe o maior peso na avaliação final por ser o núcleo da disciplina e o critério que mais diretamente reflete o domínio da competência central: transformar superfícies 3D em materiais crivos e com narrativa visual.
+**C5 — Texturização (14%)** recebe o maior peso na avaliação final por ser o núcleo da disciplina e o critério que mais diretamente reflete o domínio da competência central: transformar superfícies 3D em materiais críveis e com narrativa visual.
 
 **C2 — Direção Artística, C4 — Materiais PBR e C8 — Integração na Unity (12% cada)** compartilham peso elevado porque representam os três pilares do resultado: a proposta visual, a qualidade técnica dos materiais e a entrega funcional no motor.
 
@@ -266,30 +288,28 @@ A distribuição de pesos reflete a progressão pedagógica da disciplina: no in
 
 ### Instrumento 1 — Ficha de Crítica Formal
 
-> Para uso nas críticas semanais e intermediárias. Versão compacta e rápida.
+> Para uso nas 6 críticas formais (CF1–CF6). Antes de preencher, consulte a tabela **Critérios Ativos por Crítica Formal** e deixe em branco os critérios marcados como "—" para a CF atual. Critérios marcados como "obs." recebem anotação mas não nota.
 
-**Estudante:** _____________________________ **Semana:** _______ **Data:** _______
+**Estudante:** _____________________________ **CF:** _______ **Semana:** _______ **Data:** _______
 
-| Critério | 1 | 2 | 3 | 4 | 5 | Observação |
-|---|---|---|---|---|---|---|
-| C1 — Processo | ○ | ○ | ○ | ○ | ○ | |
-| C2 — Dir. Artística | ○ | ○ | ○ | ○ | ○ | |
-| C3 — UV Mapping | ○ | ○ | ○ | ○ | ○ | |
-| C4 — Materiais PBR | ○ | ○ | ○ | ○ | ○ | |
-| C5 — Texturização | ○ | ○ | ○ | ○ | ○ | |
-| C6 — Bake | ○ | ○ | ○ | ○ | ○ | |
-| C7 — Otimização | ○ | ○ | ○ | ○ | ○ | |
-| C8 — Unity | ○ | ○ | ○ | ○ | ○ | |
-| C9 — Apresentação | ○ | ○ | ○ | ○ | ○ | |
-| C10 — Critiques | ○ | ○ | ○ | ○ | ○ | |
+| Critério | Status nesta CF | 1 | 2 | 3 | 4 | 5 | Observação |
+|---|---|---|---|---|---|---|---|
+| C1 — Processo | ✓ em todas | ○ | ○ | ○ | ○ | ○ | |
+| C2 — Dir. Artística | ✓ em todas | ○ | ○ | ○ | ○ | ○ | |
+| C3 — UV Mapping | ✓ CF1–CF2 / obs. CF3 | ○ | ○ | ○ | ○ | ○ | |
+| C4 — Materiais PBR | ✓ CF2–CF4 / obs. CF5 | ○ | ○ | ○ | ○ | ○ | |
+| C5 — Texturização | ✓ CF3–CF6 | ○ | ○ | ○ | ○ | ○ | |
+| C6 — Bake | ✓ CF4–CF6 | ○ | ○ | ○ | ○ | ○ | |
+| C7 — Otimização | ✓ CF5–CF6 | ○ | ○ | ○ | ○ | ○ | |
+| C8 — Unity | ✓ CF6 apenas | ○ | ○ | ○ | ○ | ○ | |
+| C9 — Apresentação | ✓ CF5–CF6 | ○ | ○ | ○ | ○ | ○ | |
+| C10 — Critiques (CC) | obs. CF1–CF5 / ✓ CF6 | ○ | ○ | ○ | ○ | ○ | |
 
-**Ponto mais forte desta semana:**  
+**Ponto mais forte desta crítica:**  
 _____________________________________________________________
 
-**Prioridade de melhoria para a próxima semana:**  
+**Prioridade de melhoria para a próxima entrega:**  
 _____________________________________________________________
-
-**Critérios não aplicáveis nesta semana:** _______________________
 
 ---
 
@@ -297,9 +317,9 @@ _____________________________________________________________
 
 > Para ser preenchida pelo estudante **antes** de cada crítica formal. O professor compara com sua própria avaliação durante a critique.
 
-**Nome:** _____________________________ **Semana:** _______ **Data:** _______
+**Nome:** _____________________________ **CF:** _______ **Semana:** _______ **Data:** _______
 
-Para cada critério, responda:
+Para cada critério aplicável nesta CF, responda:
 
 1. Em qual nível você acredita que está? (1 a 5)
 2. Qual evidência no seu trabalho justifica esse nível?
@@ -315,31 +335,31 @@ O que mudaria: _________________________________________________
 Nível: _____ | Evidência: ____________________________________________  
 O que mudaria: _________________________________________________
 
-**C3 — UV Mapping**  
+**C3 — UV Mapping** *(CF1, CF2 e CF6)*  
 Nível: _____ | Evidência: ____________________________________________  
 O que mudaria: _________________________________________________
 
-**C4 — Materiais PBR**  
+**C4 — Materiais PBR** *(CF2, CF3, CF4 e CF6)*  
 Nível: _____ | Evidência: ____________________________________________  
 O que mudaria: _________________________________________________
 
-**C5 — Texturização**  
+**C5 — Texturização** *(CF3 em diante)*  
 Nível: _____ | Evidência: ____________________________________________  
 O que mudaria: _________________________________________________
 
-**C6 — Bake**  
+**C6 — Bake** *(CF4 em diante)*  
 Nível: _____ | Evidência: ____________________________________________  
 O que mudaria: _________________________________________________
 
-**C7 — Otimização**  
+**C7 — Otimização** *(CF5 e CF6)*  
 Nível: _____ | Evidência: ____________________________________________  
 O que mudaria: _________________________________________________
 
-**C8 — Integração na Unity**  
+**C8 — Integração na Unity** *(CF6 apenas)*  
 Nível: _____ | Evidência: ____________________________________________  
 O que mudaria: _________________________________________________
 
-**C9 — Apresentação**  
+**C9 — Apresentação** *(CF5 e CF6)*  
 Nível: _____ | Evidência: ____________________________________________  
 O que mudaria: _________________________________________________
 
@@ -370,7 +390,7 @@ _______________________________________________________________
 |---|---|---|
 | C1 — Processo de Projeto | | *Ex: "Vi que você incorporou o feedback de curvatura da semana passada — o desgaste ficou mais crível."* |
 | C2 — Direção Artística | | *Ex: "A paleta do kit é coerente, mas o barril destoa dos outros assets em saturação."* |
-| C3 — UV Mapping | | *Ex: "As UVs do tronco da coluna têm estramento visível no checker. As demais estão bem."* |
+| C3 — UV Mapping | | *Ex: "As UVs do tronco da coluna têm estiramento visível no checker. As demais estão bem."* |
 | C4 — Materiais PBR | | *Ex: "O roughness da pedra está muito uniforme. Pedra real tem variação de polimento nas arestas."* |
 | C5 — Texturização | | *Ex: "O desgaste está só nas arestas. Faltou sujeira acumulada nos cantos e partes baixas."* |
 | C6 — Bake | | *Ex: "O normal map do arco tem um seam visível na parte de cima. O restante está limpo."* |
@@ -453,4 +473,4 @@ O que eu **aprendi** que não estava no plano: ________________________
 
 ---
 
-*Rubrica Mestre — Texturização — Jogos Digitais | Versão 1.0 | 2026*
+*Rubrica Mestre — Texturização — Jogos Digitais | Versão 2.0 | 2026*
