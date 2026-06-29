@@ -36,16 +36,18 @@ Ao final da semana, o estudante será capaz de:
 
 ---
 
-## Critérios da Rubrica Mestre ativos nesta semana
+## Critérios observados nesta semana
 
-| Critério | Foco desta semana |
+> ⚠️ **Semana sem crítica formal — nenhuma nota é atribuída.** O professor observa e registra evidências nos critérios abaixo para calibrar a avaliação da CF4 (sem 11). O estudante recebe feedback oral durante o estúdio.
+
+| Critério | O que observar |
 |---|---|
+| C1 — Processo de Projeto | Registro do processo: screenshots comparativos antes/depois, nomenclatura das camadas no 3D Coat, versão salva com sufixo `_S09` |
 | C2 — Direção Artística | O desgaste é coerente com o tema do kit? A história do objeto está alinhada com a proposta estética do moodboard? |
 | C5 — Texturização | Qualidade e intenção das camadas de detalhe: edge wear nas arestas corretas, sujeira com lógica gravitacional e de uso, scratches com direção e intensidade plausíveis |
-| C1 — Processo de Projeto | Registro do processo: screenshots comparativos antes/depois, nomenclatura das camadas no 3D Coat, versão salva com sufixo `_S09` |
-| C10 — Participação | Qualidade do feedback oferecido na crítica informal: é observável e específico? Conecta desgaste à lógica de uso do objeto? |
+| C10 — Participação (CC) | Qualidade do feedback oferecido na crítica informal: é observável e específico? Conecta desgaste à lógica de uso do objeto? |
 
-> **Janela A2 em andamento (Semanas 6–11):** Esta é a quarta semana da janela A2. C5 (Texturização) é o critério central desta semana — é onde a avaliação intermediária mais cresce. A distinção entre nível 2 ("desgaste uniforme e irreal") e nível 4 ("camadas com narrativa de uso perceptível") é exatamente o que esta aula ensina. O professor deve manter registro de observação de C5 durante o estúdio.
+> **Progressão do PA — entre CF3 e CF4:** Esta semana fica entre a CF3 (sem 8) e a CF4 (sem 11). C5 (Texturização) é o critério central — é onde o trabalho desta semana mais impacta a próxima avaliação formal. A distinção entre nível 2 ("desgaste uniforme e irreal") e nível 4 ("camadas com narrativa de uso perceptível") é exatamente o que esta aula ensina. O professor deve manter registro de observação de C5 durante o estúdio para calibrar a CF4.
 
 ---
 

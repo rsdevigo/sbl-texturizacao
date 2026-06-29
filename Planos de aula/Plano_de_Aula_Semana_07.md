@@ -36,17 +36,19 @@ Ao final da semana, o estudante será capaz de:
 
 ---
 
-## Critérios da Rubrica Mestre ativos nesta semana
+## Critérios observados nesta semana
 
-| Critério | Foco desta semana |
+> ⚠️ **Semana sem crítica formal — nenhuma nota é atribuída.** O professor observa e registra evidências nos critérios abaixo para calibrar a avaliação da CF3 (sem 8). O estudante recebe feedback oral durante o estúdio.
+
+| Critério | O que observar |
 |---|---|
 | C1 — Processo de Projeto | Organização do node tree (nomenclatura dos nós, uso de frames); registro visual do material antes e depois do Normal Map |
 | C2 — Direção Artística | Coerência do relevo simulado pelo Normal Map com o universo do kit; variação de roughness que conta a história do material |
 | C4 — Materiais PBR | Construção do material completo: todos os quatro canais conectados com lógica física correta |
-| C5 — Texturização | Primeiro contato avaliativo: a profundidade visual adicionada pelo Normal Map + variação de Roughness qualifica como detalhe de texturização |
-| C10 — Participação | Qualidade da leitura crítica na critique informal: capacidade de identificar onde o Normal Map adiciona ou não credibilidade visual |
+| C5 — Texturização | Primeiro contato observável: a profundidade visual adicionada pelo Normal Map + variação de Roughness será avaliada formalmente na CF3 |
+| C10 — Participação (CC) | Qualidade da leitura crítica na critique informal: capacidade de identificar onde o Normal Map adiciona ou não credibilidade visual |
 
-> **Janela A2 em andamento:** Esta é a segunda semana da janela A2 (Semanas 6–11). C4 e C5 têm peso crescente. Esta semana é a primeira em que C5 começa a ser observado de forma substantiva — a profundidade do material via Normal Map é a evidência central.
+> **Progressão do PA — entre CF2 e CF3:** Esta é a segunda semana antes da CF3 (sem 8). C4 e C5 estão em desenvolvimento ativo. C5 começa a ser observado de forma substantiva esta semana — a profundidade visual adicionada pelo Normal Map + variação de Roughness é a evidência central. O professor registra observações para calibrar a avaliação de C4 e C5 na CF3.
 
 ---
 

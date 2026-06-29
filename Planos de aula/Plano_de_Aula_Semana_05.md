@@ -43,7 +43,7 @@ Ao final da semana, o estudante será capaz de:
 | C4 — Materiais PBR | **Estreia na avaliação** — 4 materiais com valores de Metallic e Roughness fisicamente plausíveis |
 | C10 — Participação | Qualidade da autoavaliação, da apresentação oral e do feedback oferecido na crítica formal |
 
-> **Nota sobre A1:** Esta semana fecha a janela de avaliação A1 (Semanas 1–5). Os critérios C1, C2, C3 e C4 compõem 100% da nota A1. O professor deve ter clareza das notas parciais observadas nas Semanas 1–4 para ancorá-las na crítica desta semana.
+> **CF2 — Crítica Formal (Portfolio de Artefatos):** Esta é a segunda crítica formal do semestre. C1, C2, C3 e C4 são avaliados — C3 pela última vez como critério principal (a partir da CF3, entra em modo de observação). O professor deve calibrar o nível atribuído com base no progresso observado nas semanas 1–4. A nota desta CF contribui com 15% para o PA.
 
 ---
 
@@ -355,7 +355,7 @@ Sem HDRI, o Rendered Mode mostra iluminação de mundo padrão (cinza uniforme) 
 | Asset 01 com material PBR aplicado | `.blend` com sufixo `_Asset01_PBR_Semana05` | Até o fim do segundo encontro |
 | Screenshots: Viewport Rendered com 4 materiais + Asset 01 com material aplicado | PNG ou JPG (2 imagens no mínimo) | Até o fim do segundo encontro |
 
-> **Nota:** Esta é a semana de encerramento da A1. O professor deve registrar as notas de C1, C2, C3 e C4 observadas ao longo das Semanas 1–5 na ficha de avaliação intermediária antes da próxima aula.
+> **Nota:** Esta semana encerra a CF2. O professor deve registrar as notas de C1, C2, C3 e C4 na Ficha de Crítica Formal e consolidar o registro de C10 (observação) antes da próxima aula.
 
 ---
 

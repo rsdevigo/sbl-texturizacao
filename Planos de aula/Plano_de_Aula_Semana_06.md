@@ -33,16 +33,18 @@ Ao final da semana, o estudante será capaz de:
 
 ---
 
-## Critérios da Rubrica Mestre ativos nesta semana
+## Critérios observados nesta semana
 
-| Critério | Foco desta semana |
+> ⚠️ **Semana sem crítica formal — nenhuma nota é atribuída.** O professor observa e registra evidências nos critérios abaixo para calibrar a avaliação da próxima CF. O estudante não recebe nota, mas recebe feedback oral durante o estúdio.
+
+| Critério | O que observar |
 |---|---|
 | C1 — Processo de Projeto | Nomenclatura e organização dos arquivos de textura; registro visual da textura antes e depois do patch |
 | C2 — Direção Artística | Coerência entre a textura escolhida/criada e o universo visual do kit; paleta respeitada |
 | C4 — Materiais PBR | Integração correta da textura ao canal Albedo; manutenção dos valores de Metallic e Roughness já calibrados |
-| C10 — Participação | Qualidade das observações na crítica circulante; capacidade de identificar costuras visíveis no trabalho dos colegas |
+| C10 — Participação (CC) | Qualidade das observações na crítica circulante; capacidade de identificar costuras visíveis no trabalho dos colegas |
 
-> **Nota sobre A2:** Esta semana inaugura progressivamente a janela de avaliação A2 (Semanas 6–11). Os critérios C4, C5 (Pintura e Detalhe) e C6 (Bake) são os focos desta unidade. C4 já foi iniciado na Semana 5 — aqui ele começa a ser exercitado com textura real, não apenas valores planos.
+> **Progressão do PA — entre CF2 e CF3:** Esta semana fica entre a CF2 (sem 5) e a CF3 (sem 8). C4 (Materiais PBR) continua em desenvolvimento — aqui passa de valores planos para textura real. C5 (Texturização) começa a ser observado pelo professor, mas só será formalmente avaliado a partir da CF3. O professor registra observações de C4 e C5 no campo de anotações da Ficha de Crítica Formal da semana seguinte.
 
 ---
 

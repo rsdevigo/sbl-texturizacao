@@ -49,7 +49,7 @@ Ao final da semana, o estudante será capaz de:
 | C9 — Apresentação | Qualidade e organização da apresentação na crítica formal: breakdown visual, clareza da defesa oral, uso da autoavaliação |
 | C10 — Participação | Qualidade das perguntas e feedbacks oferecidos durante a crítica dos colegas; postura de recepção e negociação de feedback sobre o próprio trabalho |
 
-> **Janela A2 em andamento (Semanas 6–11):** Esta é a terceira semana da janela A2. C5 (Texturização) tem peso crescente e esta semana inicia sua avaliação substantiva com os primeiros mapas pintados no 3D Coat. C9 (Apresentação) é avaliado formalmente pela primeira vez nesta semana — a crítica formal é o momento em que o estudante demonstra não apenas o que produziu, mas como articula suas decisões.
+> **CF3 — Crítica Formal (Portfolio de Artefatos):** Esta é a terceira crítica formal do semestre. C5 (Texturização) entra formalmente na avaliação nesta CF — os primeiros mapas pintados no 3D Coat são a evidência central. C9 (Apresentação) é avaliado formalmente pela primeira vez nesta CF — o estudante deve demonstrar não apenas o que produziu, mas como articula suas decisões. A nota desta CF contribui com 20% para o PA.
 
 ---
 

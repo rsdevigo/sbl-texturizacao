@@ -241,7 +241,7 @@ A tabela indica quais critérios são formalmente avaliados em cada CF. Critéri
 | C6 — Bake | — | — | — | ✓ | ✓ | ✓ |
 | C7 — Otimização | — | — | — | — | ✓ | ✓ |
 | C8 — Integração na Unity | — | — | — | — | — | ✓ |
-| C9 — Apresentação | — | — | — | — | ✓ | ✓ |
+| C9 — Apresentação | — | obs. | ✓ | ✓ | ✓ | ✓ |
 | C10 — Participação (CC) | obs. | obs. | obs. | obs. | obs. | ✓ |
 
 > **Legenda:** ✓ = critério avaliado e registrado nesta CF | obs. = observado e anotado, não compõe nota | — = não aplicável ainda
@@ -302,7 +302,7 @@ A tabela indica quais critérios são formalmente avaliados em cada CF. Critéri
 | C6 — Bake | ✓ CF4–CF6 | ○ | ○ | ○ | ○ | ○ | |
 | C7 — Otimização | ✓ CF5–CF6 | ○ | ○ | ○ | ○ | ○ | |
 | C8 — Unity | ✓ CF6 apenas | ○ | ○ | ○ | ○ | ○ | |
-| C9 — Apresentação | ✓ CF5–CF6 | ○ | ○ | ○ | ○ | ○ | |
+| C9 — Apresentação | obs. CF2 / ✓ CF3–CF6 | ○ | ○ | ○ | ○ | ○ | |
 | C10 — Critiques (CC) | obs. CF1–CF5 / ✓ CF6 | ○ | ○ | ○ | ○ | ○ | |
 
 **Ponto mais forte desta crítica:**  
@@ -359,7 +359,7 @@ O que mudaria: _________________________________________________
 Nível: _____ | Evidência: ____________________________________________  
 O que mudaria: _________________________________________________
 
-**C9 — Apresentação** *(CF5 e CF6)*  
+**C9 — Apresentação** *(CF3 em diante)*  
 Nível: _____ | Evidência: ____________________________________________  
 O que mudaria: _________________________________________________
 
