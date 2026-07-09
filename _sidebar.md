@@ -1,5 +1,5 @@
   - Cronograma
-    - [cronograma texturizacao](/Cronograma/cronograma_texturizacao.md)
+    - [Cronograma texturizacao](/Cronograma/cronograma_texturizacao.md)
   - Plano de ensino
     - [Plano de Ensino Texturizacao](/Plano%20de%20ensino/Plano_de_Ensino_Texturizacao.md)
     - [Rubrica Mestre Projeto Integrador](/Plano%20de%20ensino/Rubrica_Mestre_Projeto_Integrador.md)
@@ -21,3 +21,5 @@
     - [Plano de Aula Semana 15](/Planos%20de%20aula/Plano_de_Aula_Semana_15.md)
     - [Plano de Aula Semana 16](/Planos%20de%20aula/Plano_de_Aula_Semana_16.md)
     - [Plano de Aula Semana 17](/Planos%20de%20aula/Plano_de_Aula_Semana_17.md)
+  - Recursos
+    - [Recursos](/Recursos/Recursos_de_Aprendizagem_a_Preparar.md)
