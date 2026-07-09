@@ -20,18 +20,6 @@ Se você tem mais tempo, vale ler o Guia do Professor por completo antes de toca
 
 ---
 
-## Estrutura do repositório
-
-| Pasta | Conteúdo | Quando consultar |
-|---|---|---|
-| [`Guia do Professor/`](Guia%20do%20Professor/) | Manual pedagógico completo: filosofia SBL, condução de estúdio e crítica, feedback, perfis de estudantes, problemas técnicos comuns, integração com outras disciplinas | Antes do semestre e sempre que surgir dúvida de condução |
-| [`Plano de ensino/`](Plano%20de%20ensino/) | Plano de Ensino oficial e Rubrica Mestre do Projeto Integrador (10 critérios avaliativos e 3 instrumentos de avaliação) | Antes do semestre e antes de cada crítica formal |
-| [`Cronograma/`](Cronograma/) | Cronograma detalhado das 17 semanas | Planejamento geral e ajustes de calendário |
-| [`Planos de aula/`](Planos%20de%20aula/) | Um plano de aula por semana (01 a 17), já estruturado no formato de dois encontros (mini aula + demonstração + estúdio / crítica + estúdio + fechamento) | Preparação semanal |
-| [`Recursos/`](Recursos/) | Levantamento de todos os arquivos, cenas e materiais de apoio que precisam ser preparados previamente, organizado por semana | No início do semestre, para preparar o material com antecedência |
-
----
-
 ## Visão geral da disciplina
 
 - **Carga horária:** 17 semanas letivas, 2 encontros de 1h30 por semana (51 horas totais).
