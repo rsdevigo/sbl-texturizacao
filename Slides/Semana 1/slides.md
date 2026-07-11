@@ -109,11 +109,7 @@ Como produzir: no Blender, criar um plano com duas imagens — uma raster de bai
 
 ## O pipeline da disciplina
 
-```mermaid
-graph LR
-Blender --> ThreeDCoat[3D Coat]
-ThreeDCoat --> Unity
-```
+![large](assets/mermaid-1.png)
 
 Modelagem + UV → Texturização PBR → Motor de jogo
 
