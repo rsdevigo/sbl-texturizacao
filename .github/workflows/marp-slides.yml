@@ -114,7 +114,7 @@ jobs:
 
           echo "${{ steps.changed.outputs.files }}" | python3 "$RUNNER_TEMP/render_mermaid.py" "$RUNNER_TEMP/puppeteer-config.json"
 
-      - name: Gerar HTML, PDF e PPTX
+      - name: Gerar PDF e PPTX
         if: steps.changed.outputs.files != ''
         run: |
           THEME="Slides/themes/academic-course.css"
@@ -130,7 +130,6 @@ jobs:
 
             echo "Gerando slides para: $file"
 
-            marp --theme "$THEME" "$file" -o "$dir/$base.html"
             marp --theme "$THEME" "$file" --pdf --allow-local-files -o "$dir/$base.pdf"
             marp --theme "$THEME" "$file" --pptx --allow-local-files -o "$dir/$base.pptx"
           done
@@ -149,9 +148,7 @@ jobs:
             enc=$(printf '%s' "$week" | sed 's/ /%20/g')
 
             {
-              echo "    - $week"
-              echo "      - [Slides](/Slides/$enc/slides.md)"
-              [ -f "$dir/$base.html" ] && echo "      - [HTML](/Slides/$enc/$base.html)"
+              echo "    - [$week](/Slides/$enc/slides.md)"
               [ -f "$dir/$base.pdf" ] && echo "      - [PDF](/Slides/$enc/$base.pdf)"
               [ -f "$dir/$base.pptx" ] && echo "      - [PPTX](/Slides/$enc/$base.pptx)"
             } >> "$BLOCK"
@@ -189,7 +186,7 @@ jobs:
 
               git add "$file"
               [ -d "$dir/assets" ] && git add "$dir/assets"
-              git add "$dir/$base.html" "$dir/$base.pdf" "$dir/$base.pptx"
+              git add "$dir/$base.pdf" "$dir/$base.pptx"
             done
           fi
 
