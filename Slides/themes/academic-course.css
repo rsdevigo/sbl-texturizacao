@@ -263,6 +263,17 @@ img[alt~="large"]  { width: 720px; }
 img[alt~="flat"]   { box-shadow: none; } /* imagem sem sombra */
 img[alt~="plain"]  { box-shadow: none; border-radius: 0; }
 
+/* Diagramas (ex.: Mermaid renderizado como imagem): encolhe mantendo a
+   proporção para caber na área de conteúdo do slide, sem depender da
+   orientação/altura nativa do diagrama. */
+img[alt~="diagram"] {
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 440px;
+  box-shadow: none;
+}
+
 /* ------------------------------------------------------------------ *
  * 10. COMPONENTES (callouts)
  * Uso no Markdown:

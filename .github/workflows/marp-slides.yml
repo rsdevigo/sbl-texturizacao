@@ -99,7 +99,7 @@ jobs:
                   )
                   mmd_path.unlink()
                   counter += 1
-                  return f"![large]({img_path.relative_to(p.parent).as_posix()})"
+                  return f"![diagram]({img_path.relative_to(p.parent).as_posix()})"
 
               new_text = MERMAID_RE.sub(repl, text)
               if new_text != text:
