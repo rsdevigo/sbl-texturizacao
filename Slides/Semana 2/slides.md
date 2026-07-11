@@ -111,13 +111,7 @@ Notas: Comparação com o mapa-múndi (projeção de Mercator) funciona muito be
 
 ## Quatro tipos de projeção
 
-```mermaid
-graph LR
-A[Forma do objeto] --> B[Planar]
-A --> C[Cilíndrica]
-A --> D[Esférica]
-A --> E[Cúbica]
-```
+![large](assets/mermaid-1.png)
 
 A projeção certa **depende da forma**. Não existe uma que sirva para tudo.
 

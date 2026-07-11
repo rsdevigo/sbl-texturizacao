@@ -30,4 +30,7 @@
     - [Semana 1](/Slides/Semana%201/slides.md)
       - [PDF](Slides/Semana%201/semana_1_slides.pdf ':ignore')
       - [PPTX](Slides/Semana%201/semana_1_slides.pptx ':ignore')
+    - [Semana 2](/Slides/Semana%202/slides.md)
+      - [PDF](Slides/Semana%202/semana_2_slides.pdf ':ignore')
+      - [PPTX](Slides/Semana%202/semana_2_slides.pptx ':ignore')
 <!-- SLIDES:END -->
