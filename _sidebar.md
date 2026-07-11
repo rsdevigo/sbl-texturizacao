@@ -27,9 +27,7 @@
     - [Guia do Professor Texturizacao](/Guia%20do%20Professor/Guia_do_Professor_Texturizacao.md)
   - Slides
 <!-- SLIDES:START -->
-    - Semana 1
-      - [Slides](/Slides/Semana%201/slides.md)
-      - [HTML](/Slides/Semana%201/semana_1_slides.html)
+    - [Semana 1](/Slides/Semana%201/slides.md)
       - [PDF](/Slides/Semana%201/semana_1_slides.pdf)
       - [PPTX](/Slides/Semana%201/semana_1_slides.pptx)
 <!-- SLIDES:END -->
