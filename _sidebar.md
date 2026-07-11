@@ -25,3 +25,6 @@
     - [Recursos](/Recursos/Recursos_de_Aprendizagem_a_Preparar.md)
   - Guia do Professor
     - [Guia do Professor Texturizacao](/Guia%20do%20Professor/Guia_do_Professor_Texturizacao.md)
+  - Slides
+<!-- SLIDES:START -->
+<!-- SLIDES:END -->

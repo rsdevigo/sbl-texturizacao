@@ -1,0 +1,201 @@
+name: Gerar slides com Marp
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-slides:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detectar slides.md alterados
+        id: changed
+        run: |
+          THEME_CHANGED=0
+          if git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- 'Slides/themes/**' 2>/dev/null | grep -q .; then
+            THEME_CHANGED=1
+          fi
+
+          if [ "$THEME_CHANGED" = "1" ] || [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ] || [ -z "${{ github.event.before }}" ]; then
+            # Tema mudou (ou não há commit anterior válido): regera todos os decks.
+            FILES=$(find Slides -type f -name "slides.md" -not -path "Slides/examples/*")
+          else
+            FILES=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- 'Slides/**/slides.md' | grep -v '^Slides/examples/' || true)
+          fi
+
+          echo "Arquivos a regenerar:"
+          echo "$FILES"
+
+          {
+            echo "files<<EOF"
+            echo "$FILES"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Configurar Node.js
+        if: steps.changed.outputs.files != ''
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar Marp CLI e Mermaid CLI
+        if: steps.changed.outputs.files != ''
+        run: |
+          npm install -g @marp-team/marp-cli @mermaid-js/mermaid-cli
+
+      - name: Preparar configuração do Puppeteer
+        if: steps.changed.outputs.files != ''
+        run: |
+          cat > "$RUNNER_TEMP/puppeteer-config.json" <<'JSON'
+          {"args": ["--no-sandbox", "--disable-setuid-sandbox"]}
+          JSON
+
+      - name: Gerar diagramas Mermaid como imagens
+        if: steps.changed.outputs.files != ''
+        run: |
+          cat > "$RUNNER_TEMP/render_mermaid.py" <<'PY'
+          import re
+          import subprocess
+          import sys
+          import pathlib
+
+          MERMAID_RE = re.compile(r"```mermaid\s*\n(.*?)\n```", re.DOTALL)
+          PUPPETEER_CFG = sys.argv[1]
+
+          def process_file(path):
+              p = pathlib.Path(path)
+              if not p.is_file():
+                  return
+              text = p.read_text(encoding="utf-8")
+              if "```mermaid" not in text:
+                  return
+
+              assets_dir = p.parent / "assets"
+              assets_dir.mkdir(exist_ok=True)
+              counter = 1
+
+              def repl(m):
+                  nonlocal counter
+                  while (assets_dir / f"mermaid-{counter}.png").exists():
+                      counter += 1
+                  img_path = assets_dir / f"mermaid-{counter}.png"
+                  mmd_path = assets_dir / f"mermaid-{counter}.mmd"
+                  mmd_path.write_text(m.group(1), encoding="utf-8")
+                  print(f"Renderizando diagrama Mermaid: {img_path}", file=sys.stderr)
+                  subprocess.run(
+                      ["mmdc", "-i", str(mmd_path), "-o", str(img_path),
+                       "-b", "transparent", "-p", PUPPETEER_CFG],
+                      check=True,
+                  )
+                  mmd_path.unlink()
+                  counter += 1
+                  return f"![large]({img_path.relative_to(p.parent).as_posix()})"
+
+              new_text = MERMAID_RE.sub(repl, text)
+              if new_text != text:
+                  p.write_text(new_text, encoding="utf-8")
+                  print(f"Atualizado: {path}")
+
+          for line in sys.stdin:
+              path = line.rstrip("\n")
+              if path:
+                  process_file(path)
+          PY
+
+          echo "${{ steps.changed.outputs.files }}" | python3 "$RUNNER_TEMP/render_mermaid.py" "$RUNNER_TEMP/puppeteer-config.json"
+
+      - name: Gerar HTML, PDF e PPTX
+        if: steps.changed.outputs.files != ''
+        run: |
+          THEME="Slides/themes/academic-course.css"
+
+          echo "${{ steps.changed.outputs.files }}" | while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            [ -f "$file" ] || continue
+
+            dir=$(dirname "$file")
+            week=$(basename "$dir")
+            num=$(printf '%s' "$week" | grep -oE '[0-9]+' | head -1)
+            base="semana_${num}_slides"
+
+            echo "Gerando slides para: $file"
+
+            marp --theme "$THEME" "$file" -o "$dir/$base.html"
+            marp --theme "$THEME" "$file" --pdf --allow-local-files -o "$dir/$base.pdf"
+            marp --theme "$THEME" "$file" --pptx --allow-local-files -o "$dir/$base.pptx"
+          done
+
+      - name: Atualizar _sidebar.md
+        run: |
+          SIDEBAR="_sidebar.md"
+          BLOCK=$(mktemp)
+
+          while IFS= read -r -d '' dir; do
+            week=$(basename "$dir")
+            [ -f "$dir/slides.md" ] || continue
+
+            num=$(printf '%s' "$week" | grep -oE '[0-9]+' | head -1)
+            base="semana_${num}_slides"
+            enc=$(printf '%s' "$week" | sed 's/ /%20/g')
+
+            {
+              echo "    - $week"
+              echo "      - [Slides](/Slides/$enc/slides.md)"
+              [ -f "$dir/$base.html" ] && echo "      - [HTML](/Slides/$enc/$base.html)"
+              [ -f "$dir/$base.pdf" ] && echo "      - [PDF](/Slides/$enc/$base.pdf)"
+              [ -f "$dir/$base.pptx" ] && echo "      - [PPTX](/Slides/$enc/$base.pptx)"
+            } >> "$BLOCK"
+          done < <(find Slides -mindepth 1 -maxdepth 1 -type d ! -name examples ! -name themes -print0 | sort -z -V)
+
+          awk -v blockfile="$BLOCK" '
+            /<!-- SLIDES:START -->/ {
+              print
+              while ((getline line < blockfile) > 0) print line
+              skip = 1
+              next
+            }
+            /<!-- SLIDES:END -->/ { skip = 0 }
+            !skip
+          ' "$SIDEBAR" > "$SIDEBAR.tmp"
+
+          mv "$SIDEBAR.tmp" "$SIDEBAR"
+          rm -f "$BLOCK"
+
+      - name: Commit das alterações
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add _sidebar.md
+
+          if [ -n "${{ steps.changed.outputs.files }}" ]; then
+            echo "${{ steps.changed.outputs.files }}" | while IFS= read -r file; do
+              [ -z "$file" ] && continue
+              [ -f "$file" ] || continue
+              dir=$(dirname "$file")
+              week=$(basename "$dir")
+              num=$(printf '%s' "$week" | grep -oE '[0-9]+' | head -1)
+              base="semana_${num}_slides"
+
+              git add "$file"
+              [ -d "$dir/assets" ] && git add "$dir/assets"
+              git add "$dir/$base.html" "$dir/$base.pdf" "$dir/$base.pptx"
+            done
+          fi
+
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: regenerar slides, diagramas e sidebar [skip ci]"
+            git push
+          else
+            echo "Nenhuma alteração a commitar."
+          fi
