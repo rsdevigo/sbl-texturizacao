@@ -28,6 +28,6 @@
   - Slides
 <!-- SLIDES:START -->
     - [Semana 1](/Slides/Semana%201/slides.md)
-      - [PDF](/Slides/Semana%201/semana_1_slides.pdf ':ignore')
-      - [PPTX](/Slides/Semana%201/semana_1_slides.pptx ':ignore')
+      - [PDF](Slides/Semana%201/semana_1_slides.pdf ':ignore')
+      - [PPTX](Slides/Semana%201/semana_1_slides.pptx ':ignore')
 <!-- SLIDES:END -->

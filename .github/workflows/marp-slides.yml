@@ -149,8 +149,8 @@ jobs:
 
             {
               echo "    - [$week](/Slides/$enc/slides.md)"
-              [ -f "$dir/$base.pdf" ] && echo "      - [PDF](/Slides/$enc/$base.pdf ':ignore')"
-              [ -f "$dir/$base.pptx" ] && echo "      - [PPTX](/Slides/$enc/$base.pptx ':ignore')"
+              [ -f "$dir/$base.pdf" ] && echo "      - [PDF](Slides/$enc/$base.pdf ':ignore')"
+              [ -f "$dir/$base.pptx" ] && echo "      - [PPTX](Slides/$enc/$base.pptx ':ignore')"
             } >> "$BLOCK"
           done < <(find Slides -mindepth 1 -maxdepth 1 -type d ! -name examples ! -name themes -print0 | sort -z -V)
 
