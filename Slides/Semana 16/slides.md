@@ -156,16 +156,7 @@ Como produzir: no Blender, no UV Editor, capturar o layout do UV1 do asset de de
 
 ## O caminho do asset até a cena
 
-```mermaid
-flowchart LR
-    UV1[UV1 textura] --> FBX[Export FBX]
-    UV2[UV2 lightmap] --> FBX
-    Mapas[Albedo Normal ORM] --> Mat[Material Unity]
-    FBX --> Unity[Import Unity]
-    Unity --> Mat
-    Mat --> Bake[Lightmap bake]
-    Bake --> Render[Renders finais]
-```
+![diagram](assets/mermaid-1.png)
 
 Os dois canais de UV vão juntos no FBX; os mapas já produzidos entram no shader da Unity; a cena marcada como *Static* recebe o bake.
 

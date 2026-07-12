@@ -89,11 +89,7 @@ Notas: Definição central. A palavra-chave é TRANSFERÊNCIA via projeção pel
 
 ## Dois papéis, uma mesma peça
 
-```mermaid
-graph LR
-High["High-poly<br/>milhões de polígonos<br/>detalhe real<br/>nunca vai pro jogo"] -->|bake| Mapa["Textura<br/>Normal / AO"]
-Mapa --> Low["Low-poly<br/>malha de produção<br/>com a memória do detalhe"]
-```
+![diagram](assets/mermaid-1.png)
 
 <!--
 Notas: O high-poly existe SÓ para ser "fotografado" pelo bake e pode até ser descartado. A malha que joga é sempre o low-poly — mas com a memória do detalhe gravada em textura. Frase do plano de aula: "O high-poly nunca aparece no jogo." O GitHub Action converte o mermaid em imagem; por isso o diagrama vai no markdown, não na nota.
@@ -105,14 +101,7 @@ Notas: O high-poly existe SÓ para ser "fotografado" pelo bake e pode até ser d
 
 ## Os cinco mapas de bake
 
-```mermaid
-graph TD
-Bake[Bake] --> N["Normal<br/>direção da superfície"]
-Bake --> AO["Ambient Occlusion<br/>sombra de contato"]
-Bake --> C["Curvature<br/>convexo / côncavo"]
-Bake --> ID["ID Map<br/>máscara por material"]
-Bake --> T["Thickness<br/>espessura da geometria"]
-```
+![diagram](assets/mermaid-2.png)
 
 <div class="tip">
 

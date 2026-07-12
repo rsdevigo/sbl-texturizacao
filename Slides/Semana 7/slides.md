@@ -125,13 +125,7 @@ Notas: Apresentar o kit mínimo de nós. Não é preciso decorar parâmetros —
 
 ## Os dois fluxos da semana
 
-```mermaid
-graph LR
-A[Noise Texture] --> B[Bump]
-B --> N[Normal • BSDF]
-C[Noise Texture] --> D[ColorRamp]
-D --> R[Roughness • BSDF]
-```
+![diagram](assets/mermaid-1.png)
 
 <!--
 Notas: Núcleo procedimental. Dois caminhos independentes que chegam a canais diferentes do Principled BSDF: um Noise vira relevo (via Bump → Normal), outro Noise vira variação de brilho (via ColorRamp → Roughness). São dois Noise Texture SEPARADOS — não reaproveitar o mesmo nó. O GitHub Action converte o mermaid em imagem.

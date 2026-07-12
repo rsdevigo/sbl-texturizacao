@@ -196,13 +196,7 @@ Notas: Isola o erro mais comum e mais custoso da semana (Possíveis Dificuldades
 
 ## O fluxo do atlas
 
-```mermaid
-graph LR
-Kit["Assets do kit<br/>com UV individual"] --> Escolha["Escolha por<br/>uso conjunto"]
-Escolha --> UV["UV combinado<br/>2048×2048"]
-UV --> Textura["Textura única<br/>do atlas"]
-Textura --> Motor["Unity<br/>1 material,<br/>menos draw calls"]
-```
+![diagram](assets/mermaid-1.png)
 
 <!--
 Notas: O GitHub Action converte o mermaid em imagem — por isso o diagrama vai no markdown, não na nota. Fechar a lógica: parte-se dos assets já texturizados (com UV individual das semanas anteriores), escolhe-se o grupo por uso conjunto, remapeia-se o UV para um espaço combinado, gera-se uma textura única e chega-se ao motor com um material só. Cada etapa é uma decisão de artista, não de programador.

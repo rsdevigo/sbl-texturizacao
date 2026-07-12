@@ -213,13 +213,7 @@ Notas: Nota do professor do plano de aula, essencial para evitar retrabalho no e
 
 ## O pacote completo de bake
 
-```mermaid
-graph LR
-S11["Semana 11<br/>Normal + AO<br/>(aparência)"] --> Pacote["Pacote de bake<br/>do asset"]
-S12["Semana 12<br/>ID Map + Curvature<br/>(máscara)"] --> Pacote
-Pacote --> Coat["3D Coat<br/>seleção + máscara<br/>automáticas"]
-Coat --> Refino["Pintura livre<br/>de refinamento"]
-```
+![diagram](assets/mermaid-1.png)
 
 <!--
 Notas: O GitHub Action converte o mermaid em imagem — por isso o diagrama vai no markdown, não na nota. Fechar a ideia: os quatro mapas (Normal, AO, Curvature, ID Map) formam o pacote completo de bake da disciplina. A partir de agora qualquer asset novo pode passar pelo fluxo completo desde o início. O 3D Coat consome o pacote para gerar seleção e máscara; a pintura livre entra depois, só no refinamento.

@@ -226,13 +226,7 @@ Notas: Objetivo 5 do plano de aula e o coração da CF5 (C7 entra em nota pela p
 
 ## O fluxo da trim sheet
 
-```mermaid
-graph LR
-Kit["Assets modulares<br/>que se repetem"] --> Faixas["Planejar faixas<br/>por tipo de detalhe"]
-Faixas --> Trim["Pintar a trim<br/>bordas sem costura"]
-Trim --> UV["UV elongado<br/>com tiling"]
-UV --> Reuso["Mesma trim<br/>em várias peças"]
-```
+![diagram](assets/mermaid-1.png)
 
 <!--
 Notas: O GitHub Action converte o mermaid em imagem — por isso o diagrama vai no markdown, não na nota. Fechar a lógica: parte-se dos elementos modulares que se repetem, planejam-se as faixas por tipo de detalhe, pinta-se a trim com bordas sem costura, mapeia-se o UV elongado com tiling e chega-se à reutilização da mesma trim em várias peças. Cada etapa é decisão de artista.

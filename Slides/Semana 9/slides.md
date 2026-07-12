@@ -93,12 +93,7 @@ Notas: A diferença não é técnica, é de direção artística. Perguntar: "O 
 
 ## Os três tipos de detalhe de superfície
 
-```mermaid
-graph LR
-Uso[História de uso] --> EW[Edge Wear<br/>arestas expostas]
-Uso --> Dirt[Dirt / Grime<br/>cavidades e base]
-Uso --> Scr[Scratches<br/>direção do movimento]
-```
+![diagram](assets/mermaid-1.png)
 
 <!--
 Notas: Esta taxonomia organiza todo o processo de pintura da semana. Cada tipo responde a uma lógica física diferente: edge wear = exposição ao contato; dirt = gravidade + abrigo; scratches = direção de uso. Os próximos três slides detalham cada um. O GitHub Action converte o mermaid em imagem.
@@ -167,12 +162,7 @@ Notas: Riscos têm direção e comprimento que revelam como o objeto foi usado �
 
 ## Onde pintar: a lógica de uso
 
-```mermaid
-graph TD
-Obj[O objeto] --> Alto[Topo e projeções<br/>edge wear + scratches]
-Obj --> Baixo[Base e cavidades<br/>dirt acumulado]
-Obj --> Contato[Pontos de manipulação<br/>desgaste intenso]
-```
+![diagram](assets/mermaid-2.png)
 
 <!--
 Notas: A pergunta que resolve tudo: "o que o usuário toca? o que bate no chão quando o objeto é largado? onde a poeira cairia e ficaria parada?". O desgaste uniforme é decorativo; o desgaste posicionado pela lógica de uso é narrativo. Este é o critério C5 (Texturização) que separa o nível 2 do nível 4 na rubrica. Insistir na assimetria — é ela que torna o desgaste crível.

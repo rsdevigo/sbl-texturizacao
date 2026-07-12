@@ -95,13 +95,7 @@ Notas: A distinção mais importante da aula — e a fonte do erro mais comum de
 
 ## Fluxo de trabalho com stencil
 
-```mermaid
-graph LR
-Fonte[Fonte<br/>biblioteca ou Krita] --> Carregar[Carregar<br/>Import Stencil]
-Carregar --> Posicionar[Posicionar<br/>mover / escalar / girar]
-Posicionar --> Pintar[Pintar<br/>Color + Roughness]
-Pintar --> Integrar[Integrar<br/>suavizar bordas]
-```
+![diagram](assets/mermaid-1.png)
 
 <!--
 Notas: Este é o percurso completo que a demonstração e o estúdio seguem. Cinco etapas: obter a fonte (biblioteca do professor ou criação no Krita) → carregar no painel Stencils → posicionar com intenção → pintar em pelo menos dois canais → integrar suavizando as bordas. O GitHub Action converte o mermaid em imagem. Não deixar o diagrama grande — cinco nós em linha bastam para ancorar a estrutura da aula.

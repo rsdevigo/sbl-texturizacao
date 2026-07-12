@@ -162,15 +162,7 @@ Como produzir: no Krita, abrir uma textura de pedra parcialmente tratada, pressi
 
 ## O ciclo de trabalho da semana
 
-```mermaid
-graph LR
-A[Foto] --> B[Offset 50%]
-B --> C[Patch no Krita]
-C --> D[Wrap Around W]
-D -->|costura?| C
-D -->|ok| E[Export PNG]
-E --> F[Blender: Albedo]
-```
+![diagram](assets/mermaid-1.png)
 
 <!--
 Notas: Núcleo procedimental da semana. O ciclo Krita -> Blender vai se repetir várias vezes no estúdio — é normal. Reforçar o loop C->D->C: verificar no Wrap Around, voltar ao patch se houver costura. O GitHub Action converte o bloco mermaid em imagem automaticamente.

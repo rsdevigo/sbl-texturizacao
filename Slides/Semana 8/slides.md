@@ -70,11 +70,7 @@ Notas: Fixar a diferença fundamental antes de qualquer detalhe de interface. Os
 
 ## Onde o 3D Coat entra no pipeline
 
-```mermaid
-graph LR
-Blender[Blender • modelagem + UV] --> Coat[3D Coat • texturização]
-Coat --> Unity[Unity • motor]
-```
+![diagram](assets/mermaid-1.png)
 
 <!--
 Notas: O 3D Coat recebe a malha com UV do Blender e devolve mapas de imagem que representam cada canal PBR. Esses mapas voltam ao Blender (para conferência) ou vão direto para a Unity. Reforçar: esta é a posição exata do 3D Coat no pipeline da disciplina — não substitui o Blender, entra depois do UV pronto.
@@ -114,12 +110,7 @@ Notas: Este é o conceito mais estranho para quem vem do Krita/Photoshop puro. O
 
 ## O fluxo da aula em quatro etapas
 
-```mermaid
-graph LR
-A[Exportar do Blender] --> B[Importar no 3D Coat]
-B --> C[Pintar por canal]
-C --> D[Exportar mapas e conectar no Blender]
-```
+![diagram](assets/mermaid-2.png)
 
 <!--
 Notas: Núcleo procedimental da semana. Exportar como .obj (com UV Coords marcado) ou .fbx. Importar em Per Pixel Painting. Pintar Color, depois Roughness, depois Metallic — nessa ordem. Exportar como PNG e reconectar no Principled BSDF, lembrando do Color Space Non-Color para os mapas de dado. O GitHub Action converte o mermaid em imagem.

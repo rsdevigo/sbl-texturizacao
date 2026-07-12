@@ -199,14 +199,7 @@ Notas: Tópico 4 da mini aula — o coração da aula prática. Channel packing 
 
 ## O pipeline do channel packing
 
-```mermaid
-flowchart LR
-    R[Roughness] --> ORM[Mapa ORM<br/>R+G+B]
-    M[Metallic] --> ORM
-    AO[Ambient Occlusion] --> ORM
-    ORM --> S[Separate Color]
-    S --> Mat[Material PBR]
-```
+![diagram](assets/mermaid-1.png)
 
 Três mapas grayscale entram nos canais R, G e B; no material, um nó **Separate Color** os devolve a cada input.
 

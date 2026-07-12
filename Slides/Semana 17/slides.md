@@ -96,12 +96,7 @@ Notas: Item central da mini aula. Frase do plano: "Vocês não precisam explicar
 
 ## Os 10 minutos: uma sequência sugerida
 
-```mermaid
-graph LR
-A["Tema + referência<br/>1–2 min"] --> B["Breakdown de processo<br/>2–3 min"]
-B --> C["2–3 destaques técnicos<br/>3–4 min"]
-C --> D["Cena Unity + renders<br/>2 min"]
-```
+![diagram](assets/mermaid-1.png)
 
 Uma sugestão, **não um roteiro rígido** — ajuste ao seu projeto.
 
