@@ -12,7 +12,7 @@ footer: "IFMS • Semana 03"
 
 # Seams manuais
 
-## Você decide onde a malha se abre
+## Você decide onde a malha se abre 
 
 **Semana 3** — Abertura de malha com Seams manuais e Unwrap
 

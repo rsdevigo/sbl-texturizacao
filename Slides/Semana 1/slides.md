@@ -10,7 +10,7 @@ footer: "IFMS • Semana 01"
 <!-- _class: cover -->
 <!-- _paginate: false -->
 
-# Texturização
+# Texturização 
 
 ## Do modelo à superfície
 

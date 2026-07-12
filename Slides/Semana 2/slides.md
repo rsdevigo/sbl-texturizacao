@@ -266,9 +266,9 @@ Notas: Fechar a mini aula amarrando os conceitos. Cada item volta aplicado na pr
 
 ---
 
-## Agora: demonstração
+## Agora: demonstração 
 
-A seguir, **projeção UV no Blender**:
+A seguir, **projeção UV no Blender**: 
 
 Cubo → Cube Projection • Esfera → Sphere & Cylinder
 

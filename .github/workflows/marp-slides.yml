@@ -21,13 +21,13 @@ jobs:
       - name: Detectar slides.md alterados
         id: changed
         run: |
-          THEME_CHANGED=0
-          if git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- 'Slides/themes/**' 2>/dev/null | grep -q .; then
-            THEME_CHANGED=1
+          FORCE_ALL=0
+          if git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- 'Slides/themes/**' '.github/workflows/marp-slides.yml' 2>/dev/null | grep -q .; then
+            FORCE_ALL=1
           fi
 
-          if [ "$THEME_CHANGED" = "1" ] || [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ] || [ -z "${{ github.event.before }}" ]; then
-            # Tema mudou (ou não há commit anterior válido): regera todos os decks.
+          if [ "$FORCE_ALL" = "1" ] || [ "${{ github.event.before }}" = "0000000000000000000000000000000000000000" ] || [ -z "${{ github.event.before }}" ]; then
+            # Tema ou o próprio workflow mudou (ou não há commit anterior válido): regera todos os decks.
             FILES=$(find Slides -type f -name "slides.md" -not -path "Slides/examples/*")
           else
             FILES=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- 'Slides/**/slides.md' | grep -v '^Slides/examples/' || true)
