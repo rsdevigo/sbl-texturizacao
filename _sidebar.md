@@ -36,4 +36,7 @@
     - [Semana 3](/Slides/Semana%203/slides.md)
       - [PDF](Slides/Semana%203/semana_3_slides.pdf ':ignore')
       - [PPTX](Slides/Semana%203/semana_3_slides.pptx ':ignore')
+    - [Semana 4](/Slides/Semana%204/slides.md)
+      - [PDF](Slides/Semana%204/semana_4_slides.pdf ':ignore')
+      - [PPTX](Slides/Semana%204/semana_4_slides.pptx ':ignore')
 <!-- SLIDES:END -->
