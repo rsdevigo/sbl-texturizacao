@@ -119,7 +119,7 @@ jobs:
         run: |
           THEME="Slides/themes/academic-course.css"
 
-          echo "${{ steps.changed.outputs.files }}" | while IFS= read -r file; do
+          while IFS= read -r file <&3; do
             [ -z "$file" ] && continue
             [ -f "$file" ] || continue
 
@@ -130,9 +130,9 @@ jobs:
 
             echo "Gerando slides para: $file"
 
-            marp --theme "$THEME" "$file" --pdf --allow-local-files -o "$dir/$base.pdf"
-            marp --theme "$THEME" "$file" --pptx --allow-local-files -o "$dir/$base.pptx"
-          done
+            marp --theme "$THEME" "$file" --pdf --allow-local-files -o "$dir/$base.pdf" < /dev/null
+            marp --theme "$THEME" "$file" --pptx --allow-local-files -o "$dir/$base.pptx" < /dev/null
+          done 3<<< "${{ steps.changed.outputs.files }}"
 
       - name: Atualizar _sidebar.md
         run: |
@@ -176,7 +176,7 @@ jobs:
           git add _sidebar.md
 
           if [ -n "${{ steps.changed.outputs.files }}" ]; then
-            echo "${{ steps.changed.outputs.files }}" | while IFS= read -r file; do
+            while IFS= read -r file <&3; do
               [ -z "$file" ] && continue
               [ -f "$file" ] || continue
               dir=$(dirname "$file")
@@ -187,7 +187,7 @@ jobs:
               git add "$file"
               [ -d "$dir/assets" ] && git add "$dir/assets"
               git add "$dir/$base.pdf" "$dir/$base.pptx"
-            done
+            done 3<<< "${{ steps.changed.outputs.files }}"
           fi
 
           if ! git diff --cached --quiet; then
