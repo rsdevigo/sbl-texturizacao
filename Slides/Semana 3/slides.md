@@ -157,13 +157,7 @@ Notas: Mencionar padding apenas como PRINCÍPIO, sem números. Se perguntarem va
 
 ## Do modelo à textura — o fluxo
 
-```mermaid
-graph LR
-Modelo3D --> MarkSeam
-MarkSeam --> Unwrap
-Unwrap --> Islands
-Islands --> Checker
-```
+![diagram](assets/mermaid-1.png)
 
 O seam é o passo que **decide** como o Unwrap vai abrir a malha.
 
