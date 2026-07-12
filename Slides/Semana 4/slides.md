@@ -137,21 +137,21 @@ Notas: Padding maior evita bleeding em mipmaps, mas desperdiça espaço. Para re
 
 ---
 
+<!-- _class: diagram -->
+
 ## A ordem importa
 
-![diagram](assets/mermaid-1.png)
+```mermaid
+flowchart LR
+    A[Distorcao<br/>Stretch Overlay] --> B[Normalizacao<br/>Average Islands Scale]
+    B --> C[Empacotamento<br/>Pack Islands]
+    C --> D[UV pronto<br/>para textura]
+```
 
 Pack Islands **não corrige** distorção — só reposiciona.
-Uma island distorcida é empacotada **distorcida**.
 
 <!--
-Notas: Este diagrama é o núcleo procedimental da semana. Repetir verbalmente e projetar durante o estúdio: "Distorção -> Normalização -> Empacotamento". Inverter a ordem é o erro nº 1 da semana. Renderizar o Mermaid abaixo para assets/mermaid-1.png.
-
-DIAGRAMA (Mermaid) para gerar assets/mermaid-1.png:
-graph LR
-  A[Distorcao<br/>Stretch Overlay] --> B[Normalizacao<br/>Average Islands Scale]
-  B --> C[Empacotamento<br/>Pack Islands]
-  C --> D[UV pronto<br/>para textura]
+Notas: Este diagrama é o núcleo procedimental da semana. Repetir verbalmente e projetar durante o estúdio: "Distorção -> Normalização -> Empacotamento". Inverter a ordem é o erro nº 1 da semana. O GitHub Action converte o bloco mermaid em imagem automaticamente — não é preciso gerar arquivo manualmente. Uma island distorcida é empacotada distorcida.
 -->
 
 ---
