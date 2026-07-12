@@ -180,15 +180,7 @@ Notas: Ao contrário do Metallic, Roughness é genuinamente contínuo. Cuidado c
 
 ## A pergunta que guia cada material
 
-```mermaid
-graph LR
-A[Que material é?] --> B{Condutor ou dielétrico?}
-B -->|Condutor| C[Metallic 1]
-B -->|Dielétrico| D[Metallic 0]
-C --> E{Qual a microtextura?}
-D --> E
-E --> F[Definir Roughness 0-1]
-```
+![diagram](assets/mermaid-1.png)
 
 <!--
 Notas: Este diagrama é o núcleo procedimental da semana. Repetir verbalmente no estúdio: "condutor ou dielétrico? qual a microtextura?". O GitHub Action converte o bloco mermaid em imagem automaticamente. Cada material do kit deve passar por essas duas perguntas antes de qualquer valor ser digitado.
