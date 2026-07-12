@@ -141,12 +141,7 @@ Notas: Padding maior evita bleeding em mipmaps, mas desperdiça espaço. Para re
 
 ## A ordem importa
 
-```mermaid
-flowchart LR
-    A[Distorcao<br/>Stretch Overlay] --> B[Normalizacao<br/>Average Islands Scale]
-    B --> C[Empacotamento<br/>Pack Islands]
-    C --> D[UV pronto<br/>para textura]
-```
+![diagram](assets/mermaid-1.png)
 
 Pack Islands **não corrige** distorção — só reposiciona.
 
