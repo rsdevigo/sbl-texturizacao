@@ -17,7 +17,7 @@ footer: "IFMS • Semana 11"
 **Semana 11** — Transferindo detalhe de geometria do high-poly para o low-poly
 
 <!--
-Notas: Abertura da mini aula (20 min). Unidade III — Pintura Digital e Bake. Crítica 🔴 FORMAL (CF4) nesta semana — a 4ª das 6, primeira a avaliar o Critério 6 (Bake). Mensagem central: até agora todo detalhe foi pintado à mão sobre o low-poly (S09 desgaste, S10 stencil). Hoje entra uma peça nova de workflow — esculpir/modelar detalhe em uma malha auxiliar de alta resolução e TRANSFERIR esse detalhe para o low-poly pelo bake. Deixar claro na capa: o bake não substitui a pintura; ele resolve o que a pintura não resolve bem — detalhe de geometria real (chanfros, entalhes profundos). Apostila: Cap. 8.
+Notas: Abertura da mini aula (20 min). Unidade III — Pintura Digital e Bake. Crítica 🔴 FORMAL (CF4) nesta semana — a 4ª das 6, primeira a avaliar o Critério 6 (Bake). Mensagem central: até agora todo detalhe foi pintado à mão sobre o low-poly (S09 desgaste, S10 stencil). Hoje entra uma peça nova de workflow — esculpir/modelar detalhe em uma malha auxiliar de alta resolução e TRANSFERIR esse detalhe para o low-poly pelo bake. Deixar claro na capa: o bake não substitui a pintura; ele resolve o que a pintura não resolve bem — detalhe de geometria real (chanfros, entalhes profundos). Apostila: Parte V, Cap. 15 — Bake de Texturas.
 -->
 
 ---

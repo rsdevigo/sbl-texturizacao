@@ -17,7 +17,7 @@ footer: "IFMS • Semana 14"
 **Semana 14** — Quando o padrão vale mais que o objeto
 
 <!--
-Notas: Abertura da mini aula (20 min). Unidade IV — Otimização e Integração ao Motor. Crítica 🔴 FORMAL (CF5) nesta semana — vale 30% do Portfolio de Artefatos, o maior peso das cinco críticas formais realizadas até aqui, e a primeira vez que o Critério 7 (Otimização) entra em nota formal. Apostila Cap. 9 — Trim Sheets: conceito e workflow; Aplicação em arquitetura modular. Mensagem central da capa: na Semana 13 o problema era agrupar OBJETOS distintos em uma textura fixa (atlas). Hoje o problema é o oposto — elementos que se REPETEM em quantidade variável (paredes, vigas, molduras, trilhos). A trim sheet é uma faixa de textura que se estica e repete via tiling ao longo de qualquer comprimento, sem nunca precisar de textura nova por segmento. Não antecipar UDIMs / channel packing (S15).
+Notas: Abertura da mini aula (20 min). Unidade IV — Otimização e Integração ao Motor. Crítica 🔴 FORMAL (CF5) nesta semana — vale 30% do Portfolio de Artefatos, o maior peso das cinco críticas formais realizadas até aqui, e a primeira vez que o Critério 7 (Otimização) entra em nota formal. Apostila: Parte V, Cap. 18 — Texture Atlas e Trim Sheets (conceito e workflow de trim sheets; aplicação em arquitetura modular). Mensagem central da capa: na Semana 13 o problema era agrupar OBJETOS distintos em uma textura fixa (atlas). Hoje o problema é o oposto — elementos que se REPETEM em quantidade variável (paredes, vigas, molduras, trilhos). A trim sheet é uma faixa de textura que se estica e repete via tiling ao longo de qualquer comprimento, sem nunca precisar de textura nova por segmento. Não antecipar UDIMs / channel packing (S15).
 -->
 
 ---

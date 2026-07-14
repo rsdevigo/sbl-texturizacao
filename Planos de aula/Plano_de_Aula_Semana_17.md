@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning
 **Unidade:** V — Projeto Final e Apresentação
 **Tema:** Apresentação e defesa do Kit Modular de Ambiente
-**Apostila:** Todos os capítulos — integração semestral (Cap. 1 a 12)
+**Apostila:** Todos os capítulos — integração semestral (Parte I a VI, Cap. 1 a 25). Leitura obrigatória desta semana: Parte VI, Cap. 24 — Apresentação Profissional de Assets (breakdown visual, portfólio e padrão ArtStation)
 **Carga horária:** 3h (2 encontros de 1h30)
 **Crítica:** 🔴 **FORMAL — CF6 / Projeto Final (PF)** — todos os 10 critérios da rubrica avaliados com nota
 
@@ -15,6 +15,7 @@ Os estudantes chegam com:
 - Kit Modular de Ambiente completo: assets com UV1 validado (Semanas 2–4), materiais PBR completos (Semanas 5–8), texturização artística com detalhe pintado e bake integrado (Semanas 9–12), otimização consolidada em atlas/trim/ORM (Semanas 13–15) e cena montada na Unity com lightmap baked e renders finais (Semana 16)
 - Autoavaliação (Instrumento 2 da rubrica) preenchida previamente à aula, cobrindo todos os 10 critérios
 - Documento de processo acumulado ao longo do semestre: moodboard, versões, anotações de crítica, checklists semanais (Instrumento 4)
+- Leitura de Parte VI, Cap. 24 — Apresentação Profissional de Assets, disponibilizada ao final da Semana 16, orientando o formato de breakdown visual e portfólio esperado nesta defesa
 - Nenhuma entrega técnica nova a produzir — esta semana não introduz conteúdo técnico inédito; é o encerramento do projeto integrador
 
 > **Nota de transição:** Todas as 16 semanas anteriores produziram peças isoladas de um mesmo projeto — UV, material, textura, bake, otimização, integração no motor. A Semana 17 não ensina nada tecnicamente novo: ela pede que o estudante monte essas peças em uma narrativa coerente e as defenda oralmente diante da turma e do professor. É, ao mesmo tempo, o encerramento pedagógico da disciplina e a avaliação de maior peso do semestre (CF6, 40% da nota final via Projeto Final).
@@ -65,6 +66,7 @@ Ao final da semana, o estudante será capaz de:
 - Kit modular de referência do professor (ou de uma coorte anterior, se disponível) para uso na demonstração de padrão esperado
 - Lista de ordem de apresentação definida e divulgada com antecedência (evita disputa de horário no dia)
 - Projeto Unity, arquivos `.blend` e pasta de renders de cada estudante, testados previamente quanto à abertura sem erros (recomenda-se checagem no dia anterior)
+- Apostila — Parte VI, Cap. 24 — Apresentação Profissional de Assets, disponibilizada com antecedência como leitura obrigatória para orientar o breakdown visual e a documentação da defesa
 
 > **Preparação prévia:** Confirmar, na aula anterior (Semana 16) ou por comunicado, que cada estudante testou a abertura do próprio projeto Unity e da pasta de entrega em uma máquina do laboratório — problemas técnicos de última hora (arquivo corrompido, projeto não abre) não devem consumir tempo da defesa formal.
 

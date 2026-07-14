@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning  
 **Unidade:** II — Materiais PBR e Workflow  
 **Tema:** Criação de texturas seamless e tileable  
-**Apostila:** Cap. 4 — Texturas seamless; Fontes de texturas e técnicas de criação  
+**Apostila:** Parte IV, Cap. 12 — Texturas Seamless e Tileables (fontes de texturas e técnicas de criação)  
 **Carga horária:** 3h (2 encontros de 1h30)  
 **Crítica:** 🔵 Informal — Crítica circulante em estúdio e comentário coletivo ao final do segundo encontro
 
@@ -56,8 +56,9 @@ Ao final da semana, o estudante será capaz de:
 - Krita aberto e configurado para uso (confirmar instalação no laboratório com antecedência)
 - Acesso à internet para acessar Poly Haven (polyhaven.com) e AmbientCG (ambientcg.com)
 - Projetor para a demonstração
-- Apostila Cap. 4 — disponibilizada antes da aula
+- Apostila — Parte IV, Cap. 12 — disponibilizada antes da aula
 - Checkerboard texture para verificação de UV (já presente nos arquivos dos estudantes da Semana 2)
+- Add-on UVPackmaster (versão gratuita), se disponível no laboratório, para a recapitulação de empacotamento avançado de UV no início da mini-aula (retomando a Semana 4). Não é essencial — se indisponível, mencionar apenas verbalmente
 
 ---
 
@@ -65,9 +66,13 @@ Ao final da semana, o estudante será capaz de:
 
 ### Mini Aula — 20 minutos
 
+**Recapitulação rápida (5 min): empacotamento avançado de UV**
+
+Antes de começar o conteúdo novo, retomar em 5 minutos o que ficou pendente da Semana 4: o add-on UVPackmaster (quando disponível no laboratório) permite empacotamento de UV islands com rotação livre e aproveitamento de formas irregulares — um resultado mais eficiente que o Pack Islands nativo do Blender, especialmente para islands orgânicas. Mostrar rapidamente (ou, se o add-on não estiver instalado, descrever com uma imagem) a diferença de aproveitamento de espaço entre um Pack Islands nativo e um empacotamento via UVPackmaster no mesmo asset. Fechar com a pergunta: *"Vale a pena reabrir o Pack Islands do Asset 01 ou do Asset 02 com essa ferramenta antes de aplicar a textura de hoje? Se sim, façam isso nos primeiros minutos do estúdio."*
+
 **Texturas seamless: por que repetição sem costuras é uma exigência de produção**
 
-Objetivo: mostrar que o problema da costura não é estético — é funcional. Uma textura não-seamless aplicada em uma parede de jogo cria linhas visíveis que quebram a ilusão de realidade independentemente da qualidade artística do resto do material.
+Objetivo (15 min restantes): mostrar que o problema da costura não é estético — é funcional. Uma textura não-seamless aplicada em uma parede de jogo cria linhas visíveis que quebram a ilusão de realidade independentemente da qualidade artística do resto do material.
 
 **Desenvolvimento:**
 

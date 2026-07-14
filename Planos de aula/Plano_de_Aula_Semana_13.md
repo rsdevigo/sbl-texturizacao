@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning
 **Unidade:** IV — Otimização e Integração ao Motor
 **Tema:** Texture Atlas: unificação de assets em uma única textura
-**Apostila:** Cap. 9 — Texture Atlas: conceito e criação; Otimização de draw calls
+**Apostila:** Parte V, Cap. 18 — Texture Atlas e Trim Sheets (conceito e criação de atlas; otimização de draw calls)
 **Carga horária:** 3h (2 encontros de 1h30)
 **Crítica:** 🔵 **Informal** — circulante, sem nota formal nesta semana
 
@@ -54,7 +54,7 @@ Ao final da semana, o estudante será capaz de:
 - Arquivos `.blend` de todos os assets do kit de cada estudante (mínimo 3, já com UV, material e bake das semanas anteriores)
 - Arquivo de demonstração do professor: 3 assets simples do kit de referência do professor (ex.: barril, caixote, tocha), cada um ainda com UV individual, prontos para serem combinados ao vivo
 - Projetor para demonstração
-- Apostila Cap. 9 — trecho de Texture Atlas, disponibilizado antes da aula
+- Apostila — Parte V, Cap. 18 — trecho de Texture Atlas, disponibilizado antes da aula
 
 > **Preparação do conjunto de demonstração:** É necessário que os três objetos de referência já existam com UV individual e textura aplicada antes da aula — modelá-los ou texturizá-los do zero consumiria o tempo da demonstração. O importante é que sejam objetos de tamanho e complexidade visivelmente diferentes entre si (um grande, um médio, um pequeno), para que a decisão de proporção de espaço no atlas fique clara para a turma.
 
@@ -105,6 +105,10 @@ Nem todo conjunto de assets é um bom candidato para atlas conjunto. Critérios 
 Os princípios já dominados — padding entre ilhas, texel density consistente, aproveitamento de espaço — continuam valendo integralmente, mas agora aplicados entre **objetos diferentes**, não apenas entre ilhas do mesmo objeto. A texel density precisa ser mantida coerente entre os assets combinados: se um objeto pequeno ocupa proporcionalmente mais espaço no atlas do que sua importância visual justifica, ele está "roubando" resolução dos demais.
 
 > **Nota do professor:** Este é o ponto onde mais erros conceituais aparecem. Reforçar que texel density consistente entre objetos diferentes no mesmo atlas é tão importante quanto era entre ilhas do mesmo objeto na Semana 4 — a diferença é que agora o "objeto" de referência é o kit inteiro, não uma peça isolada.
+
+**5. Panorama rápido: quando o atlas não é suficiente (5 min)**
+
+O Texture Atlas resolve bem a combinação de vários objetos pequenos ou médios em uma única textura de resolução moderada (2048×2048, por exemplo). Mas existe um caso que o atlas não resolve bem: um **único** asset muito complexo, que precisaria de mais resolução do que um atlas ou uma textura simples conseguem oferecer sem estourar o tamanho do arquivo. Para esse caso existe o UDIM (Multi-Tile Texturing) — um sistema que distribui o UV de um único asset por vários blocos (tiles) de textura, cada um com sua própria imagem, multiplicando a densidade de texels disponível. *"Guardem esse nome — UDIM — porque vocês vão usá-lo na Semana 15, quando tivermos um caso concreto que realmente precisa dele. Por hoje, a diferença que importa é: atlas agrupa vários objetos numa textura; UDIM multiplica a resolução de um único objeto muito complexo."*
 
 ---
 

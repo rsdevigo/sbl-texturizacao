@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning  
 **Unidade:** II — Materiais PBR e Workflow  
 **Tema:** Fundamentos do Physically Based Rendering (PBR)  
-**Apostila:** Cap. 4 — Fundamentos de PBR; Mapas PBR: Diffuse/Albedo, Metallic e Roughness  
+**Apostila:** Parte III, Cap. 8 — Fundamentos do Physically Based Rendering; Parte III, Cap. 9 — Os Mapas que Compõem um Material PBR (Diffuse/Albedo, Metallic e Roughness). Leitura de apoio para esta CF2: Parte VI, Cap. 23 — Controle de Qualidade de Materiais  
 **Carga horária:** 3h (2 encontros de 1h30)  
 **Crítica:** 🔴 FORMAL — Apresentação estruturada com rubrica, autoavaliação obrigatória e feedback escrito do professor
 
@@ -56,7 +56,7 @@ Ao final da semana, o estudante será capaz de:
 - Projetor para demonstração e para a crítica formal
 - Fichas de Crítica Formal (Instrumento 1 da Rubrica Mestre) — imprimir ou disponibilizar digitalmente
 - Formulário de Autoavaliação (Instrumento 2) — enviado aos estudantes com pelo menos 48h de antecedência para preenchimento antes da aula
-- Apostila Cap. 4 — disponibilizada antes da aula
+- Apostila — Parte III, Cap. 8 e Cap. 9 — disponibilizadas antes da aula. Parte VI, Cap. 23 (Controle de Qualidade de Materiais) recomendado como leitura de apoio para a autoavaliação desta CF2
 - Referências visuais de materiais reais preparadas pelo professor: foto de metal polido, metal fosco, plástico, pedra, madeira (5 imagens)
 
 ---

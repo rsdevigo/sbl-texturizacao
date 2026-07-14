@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning
 **Unidade:** IV — Otimização e Integração ao Motor
 **Tema:** UDIMs e otimização: compressão, mipmaps e empacotamento de canais
-**Apostila:** Cap. 10 — UDIMs e Multi Tile Texture; Cap. 11 — Otimização: compressão, mipmaps e channel packing
+**Apostila:** Parte V, Cap. 19 — UDIMs, Texture Arrays e Multi-Tile Texturing; Parte V, Cap. 20 — Compressão, Mipmaps e Packing de Canais
 **Carga horária:** 3h (2 encontros de 1h30)
 **Crítica:** 🔵 **Informal** — circulante, sem nota formal nesta semana
 
@@ -31,6 +31,7 @@ Ao final da semana, o estudante será capaz de:
 4. Executar channel packing, combinando três mapas em escala de cinza (Roughness, Metallic, AO) nos canais R, G e B de uma única imagem (mapa ORM), reduzindo o número de texturas carregadas por material.
 5. Justificar a resolução de textura escolhida para cada asset do kit com base em sua importância visual e distância de câmera esperada em cena, em vez de aplicar a mesma resolução a todos os assets por padrão.
 6. Quantificar, em uma tabela comparativa, a economia de memória obtida entre o estado anterior (texturas separadas, sem compressão otimizada) e o estado após a otimização desta semana.
+7. Importar um asset otimizado do kit na Unity e configurar um material PBR básico (Albedo, Normal, Metallic/Smoothness), sem lightmap, preparando o terreno técnico para a integração completa da Semana 16.
 
 ---
 
@@ -55,7 +56,7 @@ Ao final da semana, o estudante será capaz de:
 - Editor de imagem com suporte a edição por canal (Krita, Photoshop ou equivalente) para o channel packing manual, caso o 3D Coat do laboratório não exporte ORM nativamente
 - Arquivo de demonstração do professor: um asset simples já com Roughness, Metallic e AO separados, pronto para ser combinado ao vivo em um mapa ORM
 - Projetor para demonstração
-- Apostila Cap. 10 e Cap. 11 — trechos de UDIMs e otimização, disponibilizados antes da aula
+- Apostila — Parte V, Cap. 19 e Cap. 20 — trechos de UDIMs e otimização, disponibilizados antes da aula
 - Planilha ou tabela simples (impressa ou digital) para o registro da comparação de memória antes/depois
 
 > **Preparação do conjunto de demonstração:** É necessário que os três mapas em escala de cinza (Roughness, Metallic, AO) do objeto de referência já existam antes da aula, para que o tempo da demonstração seja dedicado à combinação dos canais e não à geração dos mapas em si.
@@ -82,7 +83,7 @@ Deixar 2–3 respostas (geralmente subestimadas). Revelar a proporção real (ar
 
 **1. UDIMs (Multi Tile Texture): quando um único espaço 0–1 não é suficiente**
 
-Até aqui, todo UV foi mapeado dentro de um único espaço 0–1 (Semanas 2–4), mesmo quando múltiplos objetos compartilhavam esse espaço via atlas (Semana 13). UDIMs estendem esse conceito: em vez de um único tile, o UV pode ocupar múltiplos tiles numerados (1001, 1002, 1003...), cada um funcionando como um espaço 0–1 independente com sua própria textura de alta resolução. Isso é usado quando um único asset — tipicamente um objeto *hero* do kit, com muito mais detalhe que os demais — precisa de mais resolução do que um único tile comportaria sem ficar borrado.
+Este conceito já foi apresentado de forma breve na Semana 13, ao final da mini-aula de Texture Atlas — hoje é a aplicação prática dele. Até aqui, todo UV foi mapeado dentro de um único espaço 0–1 (Semanas 2–4), mesmo quando múltiplos objetos compartilhavam esse espaço via atlas (Semana 13). UDIMs estendem esse conceito: em vez de um único tile, o UV pode ocupar múltiplos tiles numerados (1001, 1002, 1003...), cada um funcionando como um espaço 0–1 independente com sua própria textura de alta resolução. Isso é usado quando um único asset — tipicamente um objeto *hero* do kit, com muito mais detalhe que os demais — precisa de mais resolução do que um único tile comportaria sem ficar borrado.
 
 *"Pensem no espaço UV 0–1 como uma folha de papel. Até agora, tudo o que vocês fizeram coube em uma folha — mesmo quando vários objetos dividiram a mesma folha no atlas. UDIM é usar mais de uma folha para o mesmo objeto, quando ele é grande ou detalhado demais para uma folha só."*
 
@@ -142,7 +143,14 @@ Abrir o editor de imagem com os três mapas em escala de cinza do objeto de demo
 1. Comparar o peso em disco (proxy para memória de vídeo) dos três arquivos separados versus o único arquivo ORM comprimido.
 2. Registrar a economia percentual como exemplo do tipo de dado que os estudantes vão calcular para o próprio kit.
 
-> **Nota do professor:** Se o laboratório não tiver um editor de imagem com edição por canal disponível, é aceitável demonstrar o processo conceitualmente com um arquivo ORM já preparado de antemão, focando o tempo na reconfiguração do material no Blender, que é a parte mais transferível para o projeto dos estudantes.
+**Passo 5 — Importação básica de um asset na Unity, sem lightmap (5 min):**
+1. Abrir a Unity com um projeto já criado (URP configurado previamente pelo professor, para não consumir tempo de aula com setup de projeto).
+2. Arrastar o arquivo `.fbx` do asset de demonstração (já com o ORM e os demais mapas otimizados) para a pasta de Assets.
+3. Criar um novo material URP/Lit e conectar Albedo, Normal Map (marcando a textura como "Normal Map" no Inspector) e o mapa ORM nos slots de Metallic/Smoothness e Occlusion.
+4. Arrastar o material para o asset na cena e mostrar o resultado sob a iluminação padrão da Unity — sem qualquer configuração de lightmap.
+5. *"Isso é só a ponta do fluxo. Na Semana 16 vocês vão abrir um segundo canal de UV para a luz e rodar um lightmap bake da cena inteira — hoje o objetivo é só ver que o material que vocês otimizaram funciona igual dentro do motor."*
+
+> **Nota do professor:** Se o laboratório não tiver um editor de imagem com edição por canal disponível, é aceitável demonstrar o Passo 1 conceitualmente com um arquivo ORM já preparado de antemão, focando o tempo na reconfiguração do material no Blender e na importação na Unity, que são as partes mais transferíveis para o projeto dos estudantes.
 
 ---
 
@@ -171,6 +179,8 @@ Abrir o editor de imagem com os três mapas em escala de cinza do objeto de demo
 1. Salvar o arquivo: `[Nome]_ORM_S15.blend`.
 2. Preencher a tabela de memória: peso das texturas separadas (antes) versus peso do ORM comprimido (depois), para o asset trabalhado nesta etapa.
 3. Screenshot do node setup com a separação de canais, para levar à crítica circulante do segundo encontro.
+
+> Estudantes que concluírem as Etapas 1–3 com tempo sobrando já podem iniciar a importação do asset otimizado na Unity (ver Bloco 3 do segundo encontro) — não é obrigatório nesta etapa, mas adianta o trabalho do Encontro 2.
 
 **Papel do professor:**
 
@@ -236,6 +246,13 @@ Encorajar comparação entre colegas — *"Compare a lógica de resolução do s
 2. Exportar todos os mapas ORM finalizados.
 3. Salvar arquivo Blender com sufixo `_Otimizacao_S15_Final`.
 
+**Bloco 5 — Importação básica de um asset na Unity, sem lightmap (≈15 min, dentro do tempo do Bloco 3 de quem já concluiu a avaliação de UDIM):**
+1. Exportar do Blender, como `.fbx`, um asset do kit já com o ORM e os demais mapas otimizados.
+2. Na Unity: importar o `.fbx`, criar um material URP/Lit e conectar Albedo, Normal (com a flag "Normal Map" ativada no Inspector) e o mapa ORM nos slots de Metallic/Smoothness e Occlusion.
+3. Aplicar o material ao asset na cena e verificar sob a iluminação padrão da Unity que a aparência é coerente com o resultado no Blender/3D Coat.
+4. Salvar a cena da Unity — ela será reaproveitada diretamente na Semana 16, quando o foco passa a ser exclusivamente o UV2 e o lightmap bake.
+5. Não é necessário importar mais de um asset nem configurar iluminação além do padrão — o objetivo desta semana é apenas validar que o material otimizado funciona no motor.
+
 **Papel do professor:**
 
 - Priorizar apoio aos estudantes com inversão de canais no ORM (erro mais custoso de diagnosticar sem verificação sistemática por canal).
@@ -256,7 +273,7 @@ Pergunta aberta: *"Olhando as quatro semanas da Unidade IV — atlas, trim, otim
 Deixar 2–3 respostas. O objetivo é consolidar que essas técnicas são práticas de produção real, não exercícios isolados da disciplina.
 
 3. **(2 min — Antecipação da Semana 16)**
-*"Semana que vem: integração completa na Unity — lightmap UV, configuração de materiais URP/HDRP e um lightmap bake da cena do seu kit inteiro. É a primeira vez que todos os assets do kit vão aparecer juntos, montados, no motor de jogo de verdade."*
+*"Vocês já importaram um asset na Unity hoje e viram o material funcionando. Semana que vem é a integração completa: todos os assets do kit na cena, um segundo canal de UV dedicado à luz (UV2) e um lightmap bake da cena inteira. Como a parte de importação e material vocês já dominam, a Semana 16 vai poder focar inteiramente nisso — UV2 e luz."*
 
 4. **(2 min — Confirmação das entregas)**
 Recapitular nomenclatura de entrega e prazo. Lembrar que a tabela de memória fechada hoje será parte da evidência de C7 na apresentação final da Semana 17.
@@ -320,6 +337,7 @@ Como nas semanas anteriores da Unidade IV, o primeiro asset consome mais tempo p
 | Arquivo Blender com materiais reconfigurados para leitura de ORM | `.blend` com sufixo `_Otimizacao_S15_Final` | Até o fim do segundo encontro |
 | Tabela de classificação hero/secundário/fundo com resolução justificada por asset | Documento digital ou planilha | Até o fim do segundo encontro |
 | Tabela comparativa de memória estimada (antes vs. depois da otimização) | Documento digital ou planilha, anexado ao arquivo de entrega | Até o fim do segundo encontro |
+| Um asset do kit importado na Unity com material PBR básico configurado (sem lightmap) | Cena da Unity salva + screenshot | Até o fim do segundo encontro |
 
 > **Nota:** Não há nota formal nesta semana (crítica informal). A tabela de memória e o(s) mapa(s) ORM produzidos hoje compõem o conjunto de evidências acumuladas de C7 (Otimização) que será apresentado de forma consolidada na CF6 da Semana 17 (Projeto Final).
 

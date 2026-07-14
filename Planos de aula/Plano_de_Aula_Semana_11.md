@@ -1,8 +1,8 @@
 # Plano de Aula — Semana 11
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning
 **Unidade:** III — Pintura Digital e Bake
-**Tema:** Bake de texturas: Normal Map, Ambient Occlusion e Curvature
-**Apostila:** Cap. 8 — Bake de texturas no Blender; Normal Map, Ambient Occlusion e Curvature Map
+**Tema:** Bake de texturas: Normal Map e Ambient Occlusion
+**Apostila:** Parte V, Cap. 15 — Bake de Texturas (no Blender: Normal Map e Ambient Occlusion). Leitura de apoio para esta CF4: Parte VI, Cap. 23 — Controle de Qualidade de Materiais
 **Carga horária:** 3h (2 encontros de 1h30)
 **Crítica:** 🔴 **FORMAL — CF4** (peso de 25% no Portfolio de Artefatos)
 
@@ -66,7 +66,7 @@ Ao final da semana, o estudante será capaz de:
 - Projetor para demonstração e para a Crítica Formal
 - Ficha de Crítica Formal (Instrumento 1 da Rubrica Mestre) impressa ou digital, uma por estudante
 - Ficha de Autoavaliação (Instrumento 2) preenchida por cada estudante, trazida para a aula
-- Apostila Cap. 8 — disponibilizada antes da aula
+- Apostila — Parte V, Cap. 15 — disponibilizada antes da aula. Parte VI, Cap. 23 (Controle de Qualidade de Materiais) recomendado como leitura de apoio para a autoavaliação desta CF4
 
 > **Preparação do par high-poly/low-poly de demonstração:** É essencial que o par já exista pronto antes da aula — modelar ao vivo consumiria o tempo da demonstração. O high-poly deve ter detalhe claramente superior (chanfros definidos, profundidade real nos entalhes) para que o resultado do bake seja visualmente convincente quando projetado no low-poly.
 

@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning
 **Unidade:** III — Pintura Digital e Bake
 **Tema:** Bake avançado: ID Map, Curvature e integração ao workflow PBR
-**Apostila:** Cap. 8 — ID Map e Curvature Map; Uso de bakes como base de mascaramento no 3D Coat
+**Apostila:** Parte V, Cap. 15 — Bake de Texturas (ID Map e Curvature Map); Parte V, Cap. 17 — Máscaras, Stencils e Decals (uso de bakes como base de mascaramento no 3D Coat)
 **Carga horária:** 3h (2 encontros de 1h30)
 **Crítica:** 🔵 **Informal** — circulante, sem nota formal nesta semana
 
@@ -54,7 +54,7 @@ Ao final da semana, o estudante será capaz de:
 - Arquivos `.blend` do Asset 01 e Asset 02 de cada estudante, já com pacote de bake de Normal + AO da Semana 11
 - Arquivo de demonstração do professor: asset com pelo menos dois materiais distintos (ex: madeira + reforço metálico) preparado para bake de ID Map, e mesmo asset com detalhe de aresta/sulco suficiente para um Curvature Map ilustrativo
 - Projetor para demonstração
-- Apostila Cap. 8 — trecho de ID Map e Curvature Map, disponibilizado antes da aula
+- Apostila — Parte V, Cap. 15 (ID Map e Curvature Map) e Cap. 17 — trechos disponibilizados antes da aula
 
 > **Preparação do asset de demonstração:** É necessário que o asset já tenha **grupos de material ou seleções de face nomeadas** antes da aula (ex: `Mat_Madeira`, `Mat_Metal`) — atribuir isso ao vivo consumiria tempo da demonstração. O ID Map depende inteiramente dessa organização prévia.
 
@@ -123,7 +123,7 @@ Abrir o Blender com o asset de demonstração já preparado: dois materiais nome
 **Passo 2 — Bake de Curvature Map (6 min):**
 1. Criar novo `Image Texture Node`: `Asset_CurvatureBake_2048`, Non-Color.
 2. Mostrar que, para este bake, **não é necessário** selecionar high-poly e low-poly juntos — pode-se bakear a curvatura do próprio low-poly diretamente (ou usar o high-poly se houver detalhe fino que só existe nele).
-3. Em `Bake Type`, usar o método disponível na versão do Blender (nó `Pointiness` no Color Attribute, ou addon/shader de curvature, conforme a apostila Cap. 8 detalha o procedimento passo a passo da versão em uso).
+3. Em `Bake Type`, usar o método disponível na versão do Blender (nó `Pointiness` no Color Attribute, ou addon/shader de curvature, conforme a apostila, Parte V, Cap. 15, detalha o procedimento passo a passo da versão em uso).
 4. Executar o bake. Mostrar o resultado: tons claros nas arestas do baú/objeto, tons escuros nos sulcos e reentrâncias.
 5. *"Comparem mentalmente com o AO da semana passada: a AO escurece onde falta luz ambiente; a Curvature escurece onde a geometria é côncava, independente de luz nenhuma. São informações diferentes, mesmo que visualmente pareçam parecidas à primeira vista."*
 

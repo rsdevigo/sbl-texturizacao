@@ -17,7 +17,7 @@ footer: "IFMS • Semana 16"
 **Semana 16** — O kit inteiro, montado pela primeira vez
 
 <!--
-Notas: Abertura da mini aula (20 min). Unidade IV — Otimização e Integração ao Motor. Crítica 🔵 INFORMAL (circulante), sem nota formal nesta semana. Apostila Cap. 11 — Abertura de malha para lightmap; Cap. 12 — Importação e configuração na Unity; renderização de modelos texturizados. Mensagem central da capa: até aqui todo o trabalho aconteceu no Blender e no 3D Coat. Hoje o kit inteiro entra, pela primeira vez, em um motor de jogo real. Isso exige duas coisas novas: um segundo canal de UV só para a luz (UV2) e a reconstrução dos mapas PBR já produzidos dentro do sistema de material da Unity. É o ensaio geral da apresentação final (S17). NÃO antecipar a apresentação/defesa nem os critérios formais da CF6 — isso é conteúdo da S17.
+Notas: Abertura da mini aula (20 min). Unidade IV — Otimização e Integração ao Motor. Crítica 🔵 INFORMAL (circulante), sem nota formal nesta semana. Apostila: Parte VI, Cap. 21 — Lightmaps e Iluminação em Motores (abertura de malha para lightmap); Parte VI, Cap. 22 — Integração com Unreal Engine e Unity (importação e configuração); Parte III, Cap. 11 — Shaders, Iluminação e Aparência Final (renderização de modelos texturizados). Mensagem central da capa: até aqui todo o trabalho aconteceu no Blender e no 3D Coat. Hoje o kit inteiro entra, pela primeira vez, em um motor de jogo real. Isso exige duas coisas novas: um segundo canal de UV só para a luz (UV2) e a reconstrução dos mapas PBR já produzidos dentro do sistema de material da Unity. É o ensaio geral da apresentação final (S17). NÃO antecipar a apresentação/defesa nem os critérios formais da CF6 — isso é conteúdo da S17.
 -->
 
 ---

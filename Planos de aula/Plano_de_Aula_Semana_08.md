@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning  
 **Unidade:** II — Materiais PBR e Workflow  
 **Tema:** Workflow no 3D Coat: camadas, projeção e exportação PBR  
-**Apostila:** Cap. 6 — Introdução ao 3D Coat; Workflow de texturização PBR: camadas e exportação  
+**Apostila:** Parte III, Cap. 10 — Construção e Análise de Materiais Reais (introdução ao 3D Coat; workflow de texturização PBR: camadas e exportação). Leitura de apoio para esta CF3: Parte VI, Cap. 23 — Controle de Qualidade de Materiais  
 **Carga horária:** 3h (2 encontros de 1h30)  
 **Crítica:** 🔴 FORMAL — Apresentação estruturada com rubrica, autoavaliação obrigatória e feedback escrito do professor
 
@@ -31,10 +31,11 @@ Ao final da semana, o estudante será capaz de:
 1. Identificar os principais espaços de trabalho do 3D Coat (Paint Room, UV Room, Render Room) e sua função no pipeline de texturização.
 2. Importar um asset com UV mapeado do Blender para o 3D Coat no modo Per Pixel Painting (PBR workflow).
 3. Navegar no sistema de camadas do 3D Coat e criar camadas separadas para cada tipo de informação (cor base, variação de Roughness, variação de Metallic).
-4. Pintar os canais PBR básicos diretamente sobre a malha 3D: Color (Albedo), Roughness e Metallic.
-5. Exportar os mapas PBR gerados no 3D Coat (Albedo, Roughness, Metallic) em resolução e formato adequados.
-6. Configurar o material no Blender utilizando os mapas exportados pelo 3D Coat no lugar dos nós procedurais da semana anterior.
-7. (Crítica formal) Apresentar e defender oralmente as decisões de material tomadas durante as Semanas 5–7, utilizando vocabulário técnico correto e a autoavaliação como ponto de partida.
+4. Descrever quando o Subsurface Scattering (SSS) é fisicamente adequado e localizar o canal correspondente no sistema de camadas do 3D Coat.
+5. Pintar os canais PBR básicos diretamente sobre a malha 3D: Color (Albedo), Roughness e Metallic.
+6. Exportar os mapas PBR gerados no 3D Coat (Albedo, Roughness, Metallic) em resolução e formato adequados.
+7. Configurar o material no Blender utilizando os mapas exportados pelo 3D Coat no lugar dos nós procedurais da semana anterior.
+8. (Crítica formal) Apresentar e defender oralmente as decisões de material tomadas durante as Semanas 5–7, utilizando vocabulário técnico correto e a autoavaliação como ponto de partida.
 
 ---
 
@@ -62,7 +63,7 @@ Ao final da semana, o estudante será capaz de:
 - Projetor para demonstração e para a crítica formal
 - Fichas de Crítica Formal impressas (Instrumento 1 da Rubrica Mestre) — uma por estudante apresentado
 - Fichas de Autoavaliação preenchidas pelos estudantes (Instrumento 2 da Rubrica Mestre)
-- Apostila Cap. 6 — disponibilizada antes da aula
+- Apostila — Parte III, Cap. 10 — disponibilizada antes da aula. Parte VI, Cap. 23 (Controle de Qualidade de Materiais) recomendado como leitura de apoio para a autoavaliação desta CF3
 - Pasta de exportação criada previamente no computador de demonstração do professor: `[DEMO]_3DCoat_Exportacao/`
 
 > **Nota sobre versões do 3D Coat:** A interface do 3D Coat passou por reorganizações significativas entre versões. Verificar a versão instalada no laboratório antes da aula e adaptar os atalhos e nomes de menu conforme necessário. Os princípios de fluxo (importar → pintar por canal → exportar) são estáveis entre versões, mas nomes de painéis podem variar (ex: "Texture Editor" vs "UV Room" em versões mais antigas).
@@ -111,9 +112,13 @@ O 3D Coat organiza o trabalho em "Rooms" (salas), cada uma com ferramentas e pai
 
 O Paint Room trabalha com um sistema de camadas similar ao Photoshop ou Krita — empilhadas de baixo para cima, com modos de mistura (Normal, Multiply, Overlay, etc.) e opacidade. A diferença fundamental: cada camada no 3D Coat não armazena apenas cor — ela armazena informação para **múltiplos canais simultaneamente**.
 
-Cada camada pode conter dados para: Color (Albedo), Roughness, Metallic, Normal/Depth, Opacity. Ao pintar, o artista escolece qual canal está ativo no momento — mas a estrutura de camadas é compartilhada.
+Cada camada pode conter dados para: Color (Albedo), Roughness, Metallic, Normal/Depth, Opacity e **Subsurface**. Ao pintar, o artista escolece qual canal está ativo no momento — mas a estrutura de camadas é compartilhada.
 
 Analogia: *"É como se cada camada do Krita tivesse várias 'sub-imagens' invisíveis uma atrás da outra. Quando você pinta no canal de Color, só o Color é afetado. Quando você pinta no canal de Roughness, apenas o Roughness muda — a estrutura de camadas permanece a mesma."*
+
+**Subsurface Scattering (SSS) como canal do 3D Coat**
+
+O Subsurface Scattering simula materiais que permitem que a luz penetre levemente antes de ser dispersa internamente — como pele, cera, mármore, folhas e tecidos finos. O resultado visual é uma suavidade característica nas transições de luz/sombra e um leve "brilho interno" nas bordas. Para assets de kits modulares de ambiente, o SSS raramente é necessário (pedra, metal, madeira e concreto não são subsurface); as exceções são elementos decorativos orgânicos (flores, folhas, tecidos) ou itens de cena com materiais translúcidos (velas, cristais). No 3D Coat, assim como no Principled BSDF do Blender, o canal Subsurface aceita valores de 0 (sem efeito) a 1 (máximo) — para quem tiver um elemento orgânico no kit, vale localizar esse canal na interface hoje, mesmo sem pintar nele ainda.
 
 **4. O workflow da aula em quatro etapas**
 

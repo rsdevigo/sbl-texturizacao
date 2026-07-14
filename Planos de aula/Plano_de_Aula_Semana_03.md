@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning  
 **Unidade:** I — Fundamentos e Mapeamento UV  
 **Tema:** Abertura de malha com Seams manuais e Unwrap  
-**Apostila:** Cap. 2 — Smart UV Project; Cap. 3 — Seams e Unwrap manual no Blender  
+**Apostila:** Parte II, Cap. 5 — UV Unwrapping (Smart UV Project, Seams e Unwrap manual)  
 **Carga horária:** 3h (2 encontros de 1h30)  
 **Crítica:** ⭕ FORMAL — autoavaliação obrigatória, rubrica e feedback escrito do professor
 
@@ -52,7 +52,7 @@ Ao final da semana, o estudante será capaz de:
 - Textura de checkerboard (embutida no Blender ou PNG externo 1024×1024 com grid de cores)
 - Arquivo de Autoavaliação impresso ou compartilhado digitalmente (Instrumento 2 da Rubrica Mestre) — distribuir **antes** do segundo encontro, de preferência no fechamento do primeiro
 - Projetor para demonstração e para a crítica formal
-- Apostila Cap. 2 e Cap. 3 — disponibilizadas antes da aula
+- Apostila — Parte II, Cap. 5 — disponibilizada antes da aula
 
 ---
 

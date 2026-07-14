@@ -17,7 +17,7 @@ footer: "IFMS • Semana 12"
 **Semana 12** — Quando o bake deixa de capturar aparência e passa a capturar informação
 
 <!--
-Notas: Abertura da mini aula (20 min). Unidade III — Pintura Digital e Bake. Crítica 🔵 INFORMAL nesta semana (circulante, sem nota). Apostila Cap. 8 — ID Map e Curvature Map. Mensagem central da capa: até a Semana 11 todo bake existia para SER VISTO (Normal engana a luz, AO dá sombra de contato). Hoje entram dois mapas que NÃO são feitos para o olho — são feitos para o software LER e gerar seleção/máscara automática no 3D Coat. O processo de bake em si (cage, ray distance, resolução) já foi dominado na S11; o que muda é o PROPÓSITO. Não antecipar Atlas/Trim Sheets (S13-14).
+Notas: Abertura da mini aula (20 min). Unidade III — Pintura Digital e Bake. Crítica 🔵 INFORMAL nesta semana (circulante, sem nota). Apostila: Parte V, Cap. 15 — Bake de Texturas (ID Map e Curvature Map); Parte V, Cap. 17 — Máscaras, Stencils e Decals. Mensagem central da capa: até a Semana 11 todo bake existia para SER VISTO (Normal engana a luz, AO dá sombra de contato). Hoje entram dois mapas que NÃO são feitos para o olho — são feitos para o software LER e gerar seleção/máscara automática no 3D Coat. O processo de bake em si (cage, ray distance, resolução) já foi dominado na S11; o que muda é o PROPÓSITO. Não antecipar Atlas/Trim Sheets (S13-14).
 -->
 
 ---

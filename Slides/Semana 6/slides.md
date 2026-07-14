@@ -38,6 +38,22 @@ Notas: Ler rápido. Cada objetivo retorna ao longo da aula. Não antecipar Norma
 
 ---
 
+## Recapitulação rápida (5 min): empacotamento avançado de UV
+
+Antes do conteúdo novo, retomamos o que ficou pendente da **Semana 4**: o add-on **UVPackmaster** permite empacotar UV islands com rotação livre e aproveitamento de formas irregulares — resultado mais eficiente que o Pack Islands nativo, especialmente para islands orgânicas.
+
+<div class="tip">
+
+Vale a pena reabrir o Pack Islands do Asset 01 ou 02 com essa ferramenta antes de aplicar a textura de hoje? Se sim, façam isso nos primeiros minutos do estúdio.
+
+</div>
+
+<!--
+Notas: Abertura da mini aula — os 5 primeiros minutos, antes de entrar no conteúdo novo de textura seamless. Mostrar rapidamente (ou descrever com uma imagem, se o add-on não estiver instalado no laboratório) a diferença de aproveitamento de espaço entre um Pack Islands nativo e um empacotamento via UVPackmaster no mesmo asset — reaproveitar o mesmo asset de demonstração da Semana 4, se possível. Não é essencial ter o add-on instalado: se indisponível, mencionar apenas verbalmente. Fechar com a pergunta do slide e seguir para o conteúdo novo da semana.
+-->
+
+---
+
 <!-- _class: question -->
 
 # O que está errado nesta parede?

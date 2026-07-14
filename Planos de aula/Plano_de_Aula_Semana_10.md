@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning  
 **Unidade:** III — Pintura Digital e Bake  
 **Tema:** Uso de Stencils em texturização  
-**Apostila:** Cap. 7 — Uso de stencils no 3D Coat; Criação e importação de alphas  
+**Apostila:** Parte V, Cap. 17 — Máscaras, Stencils e Decals (uso de stencils no 3D Coat; criação e importação de alphas)  
 **Carga horária:** 3h (2 encontros de 1h30)  
 **Crítica:** 🔵 Informal — Crítica circulante no segundo encontro
 
@@ -60,7 +60,7 @@ Ao final da semana, o estudante será capaz de:
 - Arquivo de demonstração do professor: asset de pedra com UV e camadas base pintadas (Color, Roughness, Metallic — Fill), pronto para receber stencils
 - Coleção de stencils organizada por categoria temática: **rachaduras** (pedra, concreto), **corrosão e oxidação** (metal, enferrujado), **padrões e símbolos** (runas, marcas industriais, grafites) — disponível como pasta .zip no servidor da disciplina ou pen drive
 - Projetor para demonstração e crítica informal
-- Apostila Cap. 7 — disponibilizada antes da aula
+- Apostila — Parte V, Cap. 17 — disponibilizada antes da aula
 
 > **Preparação da coleção de stencils:** Organizar entre 15–20 stencils em escala de cinza (PNG fundo preto, detalhes brancos) divididos por categoria. Stencils com fundo preto funcionam diretamente no 3D Coat em modo de blend "Multiply". Fontes: [Poly Haven](https://polyhaven.com), [ArtStation Marketplace](https://www.artstation.com/marketplace) (muitos gratuitos), ou criados em aula no Krita como parte da demonstração.
 

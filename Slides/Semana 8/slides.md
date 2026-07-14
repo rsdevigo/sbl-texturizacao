@@ -92,7 +92,7 @@ Notas: O 3D Coat organiza o trabalho em "Rooms" especializadas. No workflow da d
 
 ## Camadas que guardam múltiplos canais
 
-O Paint Room usa camadas empilhadas — como no Krita — mas cada camada guarda dados para **vários canais ao mesmo tempo**: Color, Roughness, Metallic, Normal, Opacity.
+O Paint Room usa camadas empilhadas — como no Krita — mas cada camada guarda dados para **vários canais ao mesmo tempo**: Color, Roughness, Metallic, Normal/Depth, Opacity e **Subsurface**.
 
 <div class="tip">
 
@@ -100,8 +100,14 @@ O Paint Room usa camadas empilhadas — como no Krita — mas cada camada guarda
 
 </div>
 
+<div class="tip">
+
+**Subsurface Scattering (SSS)** é um desses canais: simula luz que penetra levemente o material (pele, cera, mármore, folhas, tecidos finos). Para um kit de ambiente, quase sempre fica em 0 — vale localizar o canal hoje, mesmo sem pintar nele.
+
+</div>
+
 <!--
-Notas: Este é o conceito mais estranho para quem vem do Krita/Photoshop puro. O artista escolhe qual canal está ativo no momento de pintar, mas a pilha de camadas (ordem, blend mode, opacidade) é a mesma para todos os canais. Essa distinção evita o erro mais comum da aula: pintar no canal errado.
+Notas: Este é o conceito mais estranho para quem vem do Krita/Photoshop puro. O artista escolhe qual canal está ativo no momento de pintar, mas a pilha de camadas (ordem, blend mode, opacidade) é a mesma para todos os canais. Essa distinção evita o erro mais comum da aula: pintar no canal errado. SSS não foi abordado na Semana 7 (ficou reservado para hoje, de propósito, para não sobrecarregar a mini-aula de Normal Map/procedural) — aqui entra apenas de forma breve e conceitual, sem cobrança prática: localizar o canal na interface é suficiente para quem tiver um elemento orgânico no kit (flor, folha, tecido, vela, cristal).
 -->
 
 ---

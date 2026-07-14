@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning
 **Unidade:** IV — Otimização e Integração ao Motor
 **Tema:** Trim Sheets: criação e aplicação para assets modulares
-**Apostila:** Cap. 9 — Trim Sheets: conceito e workflow; Aplicação em arquitetura modular
+**Apostila:** Parte V, Cap. 18 — Texture Atlas e Trim Sheets (conceito e workflow de trim sheets; aplicação em arquitetura modular). Leitura de apoio para esta CF5: Parte VI, Cap. 23 — Controle de Qualidade de Materiais
 **Carga horária:** 3h (2 encontros de 1h30)
 **Crítica:** 🔴 **FORMAL — CF5** (peso de 30% no Portfolio de Artefatos — o maior peso entre as cinco críticas formais realizadas até agora)
 
@@ -66,7 +66,7 @@ Ao final da semana, o estudante será capaz de:
 - Projetor para demonstração e para a Crítica Formal
 - Ficha de Crítica Formal (Instrumento 1 da Rubrica Mestre), uma por estudante
 - Ficha de Autoavaliação (Instrumento 2), preenchida por cada estudante e trazida para a aula
-- Apostila Cap. 9 — trecho de Trim Sheets, disponibilizado antes da aula
+- Apostila — Parte V, Cap. 18 — trecho de Trim Sheets, disponibilizado antes da aula. Parte VI, Cap. 23 (Controle de Qualidade de Materiais) recomendado como leitura de apoio para a autoavaliação desta CF5
 
 > **Preparação da Trim Sheet de demonstração:** É essencial que a trim já exista pronta antes da aula — pintá-la do zero consumiria o tempo da demonstração. A trim de referência deve ter ao menos três faixas distintas (ex.: madeira, metal, ornamento) para que a lógica de divisão por tipo de detalhe fique visualmente clara.
 

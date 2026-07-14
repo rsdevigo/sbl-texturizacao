@@ -17,7 +17,7 @@ footer: "IFMS • Semana 13"
 **Semana 13** — Quando o kit deixa de ser asset por asset e passa a ser produção
 
 <!--
-Notas: Abertura da mini aula (20 min). Início da Unidade IV — Otimização e Integração ao Motor. Crítica 🔵 INFORMAL nesta semana (circulante, sem nota). Apostila Cap. 9 — Texture Atlas: conceito e criação; Otimização de draw calls. Mensagem central da capa: até a Semana 12 cada asset teve sua própria textura dedicada — correto para APRENDER UV, PBR, pintura e bake em profundidade, mas não é como um kit modular é entregue em produção. Hoje o foco desloca de "como texturizar bem um objeto" para "como texturizar um kit inteiro de forma eficiente para o motor". Não é técnica nova de pintura ou bake — é decisão de ARQUITETURA de produção. Não antecipar Trim Sheets (S14).
+Notas: Abertura da mini aula (20 min). Início da Unidade IV — Otimização e Integração ao Motor. Crítica 🔵 INFORMAL nesta semana (circulante, sem nota). Apostila: Parte V, Cap. 18 — Texture Atlas e Trim Sheets (conceito e criação de atlas; otimização de draw calls). Mensagem central da capa: até a Semana 12 cada asset teve sua própria textura dedicada — correto para APRENDER UV, PBR, pintura e bake em profundidade, mas não é como um kit modular é entregue em produção. Hoje o foco desloca de "como texturizar bem um objeto" para "como texturizar um kit inteiro de forma eficiente para o motor". Não é técnica nova de pintura ou bake — é decisão de ARQUITETURA de produção. Não antecipar Trim Sheets (S14).
 -->
 
 ---

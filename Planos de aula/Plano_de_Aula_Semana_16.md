@@ -2,7 +2,8 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning
 **Unidade:** IV — Otimização e Integração ao Motor
 **Tema:** Integração na Unity: materiais, lightmap UV e renderização
-**Apostila:** Cap. 11 — Abertura de malha para lightmap; Cap. 12 — Importação e configuração na Unity; Renderização de modelos texturizados
+**Apostila:** Parte VI, Cap. 21 — Lightmaps e Iluminação em Motores (abertura de malha para lightmap); Parte VI, Cap. 22 — Integração com Unreal Engine e Unity (importação e configuração)
+**Leitura complementar:** Parte III, Cap. 11 — Shaders, Iluminação e Aparência Final (ancora o item "renderização de modelos texturizados" da ementa; a prática permanece integrada à demonstração e ao estúdio desta semana, sem mini-aula própria)
 **Carga horária:** 3h (2 encontros de 1h30)
 **Crítica:** 🔵 **Informal** — circulante, sem nota formal nesta semana
 
@@ -15,9 +16,9 @@ Os estudantes chegam com:
 - Kit modular com UV principal (UV1) validado desde as Semanas 2–4, materiais PBR completos (Albedo, Metallic, Roughness, Normal) desde as Semanas 5–8, texturas com detalhe pintado e bake integrado desde as Semanas 9–12
 - Otimização de textura consolidada na Unidade IV: Texture Atlas (Semana 13), Trim Sheet validada formalmente na CF5 (Semana 14), e mapa ORM / decisões de resolução e compressão fechados na Semana 15
 - Tabela comparativa de memória (antes/depois da otimização) já preenchida, cobrindo todos os assets trabalhados até aqui
-- Nenhuma experiência prévia na disciplina com a Unity como motor de destino — até aqui, todo o trabalho de visualização e validação ocorreu inteiramente no Blender e no 3D Coat
+- Um asset do kit já importado na Unity na Semana 15, com material PBR básico configurado (Albedo, Normal, Metallic/Smoothness), sem lightmap — a importação e a configuração de material na Unity **já foram praticadas**; esta semana não repete esse primeiro contato
 
-> **Nota de transição:** As Semanas 13 a 15 resolveram a Unidade IV do lado da **produção de conteúdo**: menos texturas (atlas, trim) e texturas mais leves (channel packing, compressão, resolução justificada). Esta semana fecha a unidade transportando esse conteúdo, pela primeira vez, para dentro de um motor de jogo real. Isso exige um UV que ainda não foi trabalhado na disciplina — o **UV2 de lightmap**, distinto do UV1 usado desde a Semana 2 para aplicar textura — e a reconfiguração dos mapas PBR já produzidos dentro do sistema de materiais da Unity (URP/HDRP), que lê e interpreta canais de forma diferente do Principled BSDF do Blender. O resultado esperado é a primeira visão do kit modular inteiro, montado como cena, sob iluminação baked — o ensaio geral antes da apresentação final da Semana 17.
+> **Nota de transição:** As Semanas 13 a 15 resolveram a Unidade IV do lado da **produção de conteúdo**: menos texturas (atlas, trim) e texturas mais leves (channel packing, compressão, resolução justificada). A própria Semana 15 já deu o primeiro passo de integração ao motor, importando um asset e configurando seu material na Unity. Esta semana fecha a unidade com a peça que faltava: um UV que ainda não foi trabalhado na disciplina — o **UV2 de lightmap**, distinto do UV1 usado desde a Semana 2 para aplicar textura — e o lightmap bake da cena completa. Como a importação e a configuração de material já são conhecidas, o tempo desta semana se concentra inteiramente em UV2 e luz. O resultado esperado é a primeira visão do kit modular inteiro, montado como cena, sob iluminação baked — o ensaio geral antes da apresentação final da Semana 17.
 
 ---
 
@@ -28,7 +29,7 @@ Ao final da semana, o estudante será capaz de:
 1. Diferenciar UV1 (mapa de textura, trabalhado desde a Semana 2) de UV2 (mapa de lightmap), explicando por que a iluminação baked exige um layout de UV com regras próprias — sem sobreposição entre ilhas, mesmo que isso já exista intencionalmente no UV1.
 2. Gerar um UV2 de lightmap no Blender para os assets do kit, distinto do UV1 já validado, respeitando padding suficiente para evitar vazamento de luz (light bleeding) entre ilhas adjacentes.
 3. Exportar os assets do kit em FBX preservando ambos os canais de UV (UV1 e UV2) e importá-los corretamente na Unity.
-4. Configurar materiais PBR na Unity (Standard/URP/HDRP, conforme o pipeline do laboratório), conectando corretamente os mapas já produzidos (Albedo, mapa ORM ou Metallic/Roughness separados, Normal Map) aos slots equivalentes do shader da Unity.
+4. Reaproveitar a configuração de material já praticada na Semana 15 para os demais assets do kit (Standard/URP/HDRP, conforme o pipeline do laboratório), sem repetir o primeiro contato com o shader da Unity.
 5. Executar um lightmap bake simples da cena com todos os assets do kit montados, ajustando parâmetros básicos de iluminação (luz direcional, intensidade, resolução de lightmap) para uma primeira leitura coerente do ambiente.
 6. Capturar renders finais da cena montada na Unity sob a iluminação baked, a partir de múltiplos ângulos, como primeira evidência visual do kit modular funcionando como um todo integrado.
 
@@ -55,7 +56,7 @@ Ao final da semana, o estudante será capaz de:
 - Todos os assets do kit de cada estudante, já otimizados (atlas, trim, ORM) ao final da Semana 15, com arquivos `.blend` e mapas de textura exportados
 - Arquivo de demonstração do professor: um asset simples já com UV1 validado, pronto para receber UV2 ao vivo
 - Projetor para demonstração
-- Apostila Cap. 11 e Cap. 12 — trechos de lightmap UV e importação/configuração na Unity, disponibilizados antes da aula
+- Apostila — Parte VI, Cap. 21 e Cap. 22 — trechos de lightmap UV e importação/configuração na Unity, disponibilizados antes da aula. Leitura complementar (opcional): Parte III, Cap. 11 — Shaders, Iluminação e Aparência Final, para o estudante que quiser aprofundar o tema de renderização final além do que é praticado em estúdio
 - Luz direcional (Directional Light) configurada na cena base, para uso imediato no lightmap bake
 
 > **Preparação do laboratório:** É necessário confirmar, antes da aula, que a Unity está instalada e o pipeline URP funcional em todas as máquinas — problemas de instalação nesta etapa final da disciplina custam tempo de estúdio que não pode ser recuperado nas duas últimas semanas.
@@ -66,15 +67,15 @@ Ao final da semana, o estudante será capaz de:
 
 ### Mini Aula — 20 minutos
 
-**Do arquivo de produção à cena no motor: UV2, lightmap e materiais na Unity**
+**Do arquivo de produção à cena no motor: UV2 e lightmap**
 
-Objetivo: fazer o estudante entender que integrar ao motor não é apenas "importar o arquivo" — é preparar o asset com uma camada de informação nova (UV2) e reconfigurar os mapas PBR dentro de um sistema de material diferente do usado até aqui.
+Objetivo: fazer o estudante entender que a última peça da integração ao motor é uma camada de informação nova (UV2) e o cálculo de iluminação baked — a importação e a configuração de material, praticadas na Semana 15, não são o foco de hoje.
 
 **Abertura:**
 
-Exibir no projetor o mesmo asset do kit em duas situações: o material completo aberto no Blender (Principled BSDF, todos os nós conectados) e o mesmo asset ainda sem material, cinza, recém-importado na Unity. Perguntar: *"Tudo que vocês fizeram nas últimas 15 semanas está guardado nesses mapas de textura. Por que será que, ao importar para a Unity, o objeto aparece cinza, sem nenhum material aplicado automaticamente?"*
+Exibir no projetor o asset que cada estudante já importou e configurou na Unity na Semana 15, sob a iluminação padrão (sem lightmap). Perguntar: *"Esse material já está correto. O que ainda falta para essa cena ficar com uma iluminação convincente, do jeito que apareceria num jogo pronto?"*
 
-Deixar 2–3 respostas. Direcionar para a ideia central: a Unity não lê o node setup do Blender — ela só recebe a geometria, o UV e os arquivos de textura brutos. O trabalho de hoje é reconstruir, dentro do sistema de material da Unity, a mesma lógica de leitura de mapas que já existe no Blender, mais uma camada de UV nova que nunca foi necessária até agora: o lightmap.
+Deixar 2–3 respostas. Direcionar para a ideia central: falta a luz calculada e gravada como textura — o lightmap — que exige um canal de UV que nunca foi necessário até agora, o UV2. O trabalho de hoje é gerar esse UV2 e rodar o primeiro lightmap bake da cena.
 
 ---
 
@@ -92,51 +93,43 @@ O Blender oferece uma opção de geração automática de um segundo canal de UV
 
 *"Vocês não vão reabrir o UV1 que já está pronto e validado desde as primeiras semanas. UV2 é um mapa adicional, gerado de forma automática na maioria dos casos, que existe só para a luz — o UV1 continua sendo o responsável pela aparência da textura."*
 
-**3. Materiais na Unity: reconstruindo o fluxo PBR em outro shader**
+> **Lembrete rápido (sem aprofundar):** a configuração de material no shader Lit da Unity — Base Map, Normal Map com a flag ativada, Metallic/Smoothness — já foi praticada na Semana 15. Se algum estudante ainda tiver dúvida pontual, ela é resolvida individualmente no estúdio, não retomada para a turma toda aqui.
 
-O shader padrão da Unity (Lit, no URP) espera os mapas PBR em slots próprios: Base Map (Albedo), Normal Map, e um slot combinado de Metallic/Smoothness (ou Mask Map, dependendo do pipeline). Isso exige atenção a duas diferenças em relação ao que foi produzido no Blender: primeiro, o slot de "Smoothness" da Unity é o inverso do Roughness usado até aqui (superfície mais lisa = valor mais alto), o que pode exigir inverter o canal correspondente do mapa ORM produzido na Semana 15. Segundo, o Normal Map importado precisa ter a flag de importação "Normal Map" ativada no Inspector da Unity — sem isso, a textura é lida como cor comum e o resultado fica visualmente incorreto.
-
-*"Os mapas que vocês já produziram estão certos — o trabalho técnico e artístico das últimas 15 semanas não muda. O que muda é o container que lê esses mapas. É como levar a mesma receita de um forno para outro: os ingredientes são os mesmos, mas o forno tem os próprios botões e você precisa saber onde cada um fica."*
-
-**4. Lightmap bake: da malha estática à iluminação calculada**
+**3. Lightmap bake: da malha estática à iluminação calculada**
 
 Para que um objeto receba lightmap bake na Unity, ele precisa estar marcado como estático (Static, ou especificamente Contribute GI). O processo de bake calcula a iluminação indireta da cena (luz que rebate entre superfícies) e a grava como textura no UV2 de cada objeto — sendo por isso que o UV2 sem sobreposição é pré-requisito, não detalhe técnico secundário.
 
 *"O bake de lightmap da Unity é conceitualmente parecido com o bake de Normal Map e AO que vocês já fizeram no Blender nas Semanas 11 e 12: em ambos os casos, uma informação complexa (luz, ou detalhe de superfície) é calculada uma vez e gravada como textura, para não precisar ser recalculada em tempo real."*
 
-> **Nota do professor:** Reforçar que esta é a primeira vez na disciplina que o estudante trabalha com um sistema de UV e material fora do par Blender/3D Coat. É esperado e normal que a primeira importação de cada estudante tenha pelo menos um problema (normal map incorreto, smoothness invertido, ou lightmap com vazamento) — o objetivo da semana é o primeiro ciclo completo de diagnóstico e correção nesse ambiente novo, não a perfeição na primeira tentativa.
+> **Nota do professor:** A configuração de material (normal map, smoothness) já foi praticada na Semana 15, então problemas nela devem ser resolvidos rapidamente e de forma pontual. O que é novo — e onde é esperado e normal que a primeira tentativa de cada estudante tenha algum problema — é o UV2 e o lightmap bake (vazamento de luz por sobreposição, por exemplo). O objetivo da semana é o primeiro ciclo completo de diagnóstico e correção nesse aspecto específico, não a perfeição na primeira tentativa.
 
 ---
 
 ### Demonstração — 20 minutos
 
-**Do Blender à cena Unity: UV2, exportação, material e primeiro lightmap bake**
+**Do arquivo de produção à cena no motor: UV2, reexportação e primeiro lightmap bake**
 
 **Setup (1 min):**
-Abrir o asset de demonstração no Blender, já com UV1 validado, e a Unity aberta em uma segunda janela ou monitor, com a cena base já criada.
+Abrir no Blender o mesmo asset de demonstração usado na Semana 15 (já com UV1 validado), e a Unity aberta em uma segunda janela ou monitor, com a cena da Semana 15 já carregada — o asset já importado e com material configurado.
 
 **Percurso da demonstração:**
 
-**Passo 1 — Geração de UV2 no Blender (4 min):**
+**Passo 1 — Geração de UV2 no Blender (6 min):**
 1. No asset de demonstração, gerar o segundo canal de UV com a ferramenta de lightmap do Blender.
 2. Mostrar no UV Editor a diferença entre o layout do UV1 (com ilhas possivelmente sobrepostas ou repetidas) e o layout do UV2 gerado (sem sobreposição, com padding entre ilhas).
 
-**Passo 2 — Exportação e importação (4 min):**
-1. Exportar o asset como FBX, confirmando nas opções de exportação que ambos os canais de UV serão incluídos.
-2. Importar o FBX na Unity, arrastando o asset para a cena base.
-3. Mostrar o objeto aparecendo cinza (sem material), retomando o gancho da abertura da mini aula.
+**Passo 2 — Reexportação e reimportação (5 min):**
+1. Reexportar o asset como FBX, confirmando nas opções de exportação que ambos os canais de UV (UV1 e UV2) serão incluídos.
+2. Reimportar o FBX na Unity, substituindo o asset já presente na cena da Semana 15 — o material já configurado permanece associado, sem precisar ser refeito.
+3. *"Reparem que o material continua funcionando normalmente — vocês só adicionaram um canal de UV a mais. Nada do que foi configurado na Semana 15 precisou ser refeito."*
 
-**Passo 3 — Configuração do material no shader da Unity (8 min):**
-1. Criar um novo material no shader Lit (URP) da Unity.
-2. Conectar o Albedo ao Base Map, o Normal Map ao slot correspondente (ativando a flag "Normal Map" no Inspector da textura antes de conectar) e o mapa Metallic/Smoothness (ajustando ou invertendo o canal de Roughness/Smoothness conforme necessário).
-3. Aplicar o material ao objeto e comparar visualmente com o render de referência do mesmo asset no Blender.
-
-**Passo 4 — Lightmap bake simples (3 min):**
+**Passo 3 — Lightmap bake simples (8 min):**
 1. Marcar o objeto como Static (Contribute GI).
 2. Configurar uma luz direcional simples na cena, se ainda não configurada.
 3. Executar o bake de lightmap (Generate Lighting) e mostrar o resultado antes/depois na viewport da Unity.
+4. Verificar rotacionando a câmera: há alguma mancha de luz incoerente? Se sim, é sinal de sobreposição no UV2.
 
-> **Nota do professor:** Se o tempo de bake for muito longo para caber nos 20 minutos, preparar antecipadamente uma cena já com o bake concluído para mostrar o resultado final, e usar o tempo ao vivo para a parte mais transferível: a configuração do material e o entendimento do UV2.
+> **Nota do professor:** Se o tempo de bake for muito longo para caber nos 20 minutos, preparar antecipadamente uma cena já com o bake concluído para mostrar o resultado final, e usar o tempo ao vivo para a parte mais transferível: a geração do UV2 e o diagnóstico de vazamento de luz.
 
 ---
 
@@ -146,34 +139,34 @@ Abrir o asset de demonstração no Blender, já com UV1 validado, e a Unity aber
 
 **Consigna entregue verbalmente:**
 
-> *"Cinquenta minutos com três objetivos, na ordem: gerar UV2 de lightmap para os assets do seu kit, exportar em FBX preservando os dois canais de UV, e importar na Unity configurando o material de pelo menos dois assets. Não é necessário ter o kit inteiro montado até o fim deste encontro — o objetivo é validar o processo completo em uma amostra do kit antes de expandir no segundo encontro."*
+> *"Cinquenta minutos com três objetivos, na ordem: gerar UV2 de lightmap para os assets do seu kit, reexportar em FBX preservando os dois canais de UV, e reimportar na Unity — reaproveitando o asset e o material que já configuraram na Semana 15, e importando os demais assets do kit com o mesmo material já dominado. Não é necessário ter o kit inteiro montado até o fim deste encontro — o objetivo é validar o processo de UV2 em uma amostra do kit antes de expandir no segundo encontro."*
 
 **Atividade estruturada:**
 
-**Etapa 1 — Geração de UV2 (≈15 min):**
+**Etapa 1 — Geração de UV2 (≈20 min):**
 1. Para cada asset do kit, gerar o segundo canal de UV (lightmap) no Blender, sem alterar o UV1 já validado.
 2. Verificar visualmente no UV Editor que o UV2 não tem ilhas sobrepostas e possui padding suficiente entre elas.
 
-**Etapa 2 — Exportação em FBX (≈10 min):**
-1. Exportar os assets trabalhados em FBX, conferindo que ambos os canais de UV estão incluídos na exportação.
+**Etapa 2 — Reexportação em FBX (≈10 min):**
+1. Reexportar os assets trabalhados em FBX, conferindo que ambos os canais de UV estão incluídos na exportação.
 2. Organizar os arquivos exportados em uma pasta clara para importação na Unity.
 
-**Etapa 3 — Importação e primeira configuração de material (≈25 min):**
-1. Importar os assets exportados no projeto Unity.
-2. Criar e configurar o material de pelo menos dois assets do kit, conectando Albedo, Normal Map (com a flag correta ativada) e o mapa de Metallic/Smoothness.
-3. Posicionar os assets configurados na cena base, comparando visualmente o resultado com o render de referência produzido no Blender.
+**Etapa 3 — Reimportação e expansão para mais assets (≈20 min):**
+1. Reimportar na Unity o asset já usado na Semana 15 (o material configurado permanece válido — não recriar).
+2. Importar e configurar o material de mais um ou dois assets do kit, repetindo o fluxo já dominado (Albedo, Normal Map com a flag ativada, Metallic/Smoothness) — desta vez sem tempo dedicado a explicar o processo, apenas executá-lo.
+3. Posicionar os assets na cena, comparando visualmente o resultado com o render de referência produzido no Blender.
 
 **Papel do professor:**
 
 Circular verificando:
 
 - **O UV2 realmente não tem sobreposição?** Erro mais comum e mais custoso de diagnosticar depois: verificar visualmente o layout do UV2 no UV Editor antes de exportar, não depois do bake já ter apresentado vazamento de luz.
-- **A flag "Normal Map" foi ativada na importação da textura?** Verificar diretamente no Inspector da Unity — um Normal Map sem essa flag produz um resultado visualmente estranho, mas nem sempre óbvio para quem está vendo pela primeira vez.
-- **O Smoothness está coerente, ou foi conectado como se fosse Roughness sem inverter?** Perguntar: "Essa superfície deveria ser mais lisa ou mais áspera aqui? O valor que você está vendo bate com isso?"
+- **O material da Semana 15 permaneceu correto após a reimportação?** Ocasionalmente a reimportação pode desconectar texturas — conferir rapidamente antes de seguir em frente.
+- **Os novos assets configurados repetem os mesmos erros da Semana 15, ou o estudante já resolve sozinho (normal map, smoothness)?** Se o estudante ainda erra os mesmos pontos, é um sinal de que a Semana 15 não consolidou o suficiente — reforçar individualmente sem tomar tempo da turma.
 
 Perguntas de mediação circulante:
 - *"Se você girar essa ilha do UV2 no editor, ela toca ou sobrepõe alguma outra ilha? Vamos conferir com o zoom."*
-- *"Compare o material na Unity com o render do Blender: alguma coisa parece mais brilhante ou mais opaca do que deveria? Isso costuma ser o Smoothness invertido."*
+- *"O material que você configurou na Semana 15 continua correto depois de reimportar o asset com UV2? Confere rápido."*
 
 ---
 

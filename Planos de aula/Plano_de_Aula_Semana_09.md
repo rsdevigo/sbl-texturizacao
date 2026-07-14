@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning  
 **Unidade:** III — Pintura Digital e Bake  
 **Tema:** Texturização artística: desgaste, sujeira e detalhes hand-painted no 3D Coat  
-**Apostila:** Cap. 7 — Pintura digital aplicada a texturas; Ferramentas de pintura no 3D Coat  
+**Apostila:** Parte IV, Cap. 14 — Pintura Digital para Jogos (aplicada a texturas; ferramentas de pintura no 3D Coat)  
 **Carga horária:** 3h (2 encontros de 1h30)  
 **Crítica:** 🔵 Informal — Crítica circulante no segundo encontro
 
@@ -59,7 +59,7 @@ Ao final da semana, o estudante será capaz de:
 - Arquivo de demonstração do professor: asset com textura base já pintada (Color + Roughness + Metallic com Fill simples), pronto para receber detalhes
 - Projetor para demonstração e para a crítica informal
 - Coleção de referências visuais de desgaste organizadas por tema (Medieval, Sci-Fi, Pós-apocalíptico, etc.) — exibir no projetor durante o estúdio como apoio visual
-- Apostila Cap. 7 — disponibilizada antes da aula
+- Apostila — Parte IV, Cap. 14 — disponibilizada antes da aula
 
 > **Preparação do arquivo de demonstração:** O asset usado na demonstração deve ter as três camadas base já pintadas (sem detalhes), exatamente no estado em que os estudantes chegam com o Asset 01. Isso garante que a demonstração parte do mesmo ponto de partida que o estúdio — e que o antes/depois seja imediatamente comparável.
 

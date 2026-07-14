@@ -131,8 +131,14 @@ Depois de normalizar, as islands ficam espalhadas fora do quadrado.
 
 Margin sugerida: **0.004** (textura 1024px) • **0.008** (textura 512px).
 
+<div class="tip">
+
+Ferramentas de empacotamento mais sofisticadas (ex.: **UVPackmaster**) voltam como recapitulação de 5 min no **início da Semana 6** — hoje o foco é só o Pack Islands nativo.
+
+</div>
+
 <!--
-Notas: Padding maior evita bleeding em mipmaps, mas desperdiça espaço. Para resultados sofisticados (rotação de islands, formas irregulares), citar o add-on UVPackmaster — mas só demonstrar se estiver instalado em todos os computadores. Não aprofundar a ferramenta hoje.
+Notas: Padding maior evita bleeding em mipmaps, mas desperdiça espaço. Não usar/demonstrar UVPackmaster nesta aula — para não sobrecarregar a mini-aula, ele é citado apenas como nome e retomado com 5 min de recapitulação no início da Semana 6, quando o Asset 01 já estiver pronto para receber textura. Hoje o Pack Islands nativo do Blender é suficiente para o Asset 01 e o Asset 02.
 -->
 
 ---

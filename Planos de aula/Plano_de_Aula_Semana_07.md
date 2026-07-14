@@ -1,8 +1,8 @@
 # Plano de Aula — Semana 7
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning  
 **Unidade:** II — Materiais PBR e Workflow  
-**Tema:** Mapas PBR avançados: Normal Map, Subsurface Scattering e geração procedural  
-**Apostila:** Cap. 4 — Normal Map e Subsurface Scattering; Cap. 5 — Geração procedural no Blender  
+**Tema:** Mapas PBR avançados: Normal Map e geração procedural  
+**Apostila:** Parte V, Cap. 16 — Normal Maps e Transferência de Detalhes; Parte IV, Cap. 13 — Texturização Procedural (geração procedural no Blender)  
 **Carga horária:** 3h (2 encontros de 1h30)  
 **Crítica:** 🔵 Informal — Crítica circulante com ênfase em leitura de profundidade e coerência do material
 
@@ -32,7 +32,8 @@ Ao final da semana, o estudante será capaz de:
 3. Gerar um Normal Map procedural no Blender usando os nós Noise Texture → Bump → Normal Map e conectá-lo ao Principled BSDF.
 4. Criar variação de Roughness dentro de um material usando os nós Noise Texture e ColorRamp.
 5. Montar um material PBR completo no Blender com os quatro canais principais conectados: Albedo (Image Texture), Metallic (valor), Roughness (nó procedural) e Normal (nó procedural ou mapa).
-6. Descrever quando o Subsurface Scattering é fisicamente adequado e configurar o parâmetro SSS no Principled BSDF de forma básica.
+
+> O Subsurface Scattering (SSS) não é abordado nesta semana — ele é apresentado na Semana 8, junto ao sistema de canais do 3D Coat, para não sobrecarregar esta mini-aula com um quinto conceito novo.
 
 ---
 
@@ -61,7 +62,7 @@ Ao final da semana, o estudante será capaz de:
 - Arquivo de demonstração do professor: Asset simples (cubo ou parede) com textura seamless já conectada ao Albedo
 - Acesso à internet (Poly Haven como fonte de Normal Maps para referência de qualidade)
 - Projetor para demonstração
-- Apostila Cap. 4 e Cap. 5 — disponibilizadas antes da aula
+- Apostila — Parte V, Cap. 16 e Parte IV, Cap. 13 — disponibilizadas antes da aula
 - HDRI de iluminação neutra no Blender para visualização correta do Normal Map (arquivos dos estudantes já devem ter HDRI das semanas anteriores)
 
 > **Nota sobre Blender 4.x:** O nó Musgrave Texture foi incorporado ao nó Noise Texture no Blender 4.0 (parâmetro *Detail* e *Roughness* expandidos cobrem os casos de uso do Musgrave). Na demonstração, verificar a versão instalada no laboratório e adaptar a nomenclatura dos nós conforme necessário. Em Blender 3.x, o Musgrave Texture ainda existe como nó separado.
@@ -72,7 +73,7 @@ Ao final da semana, o estudante será capaz de:
 
 ### Mini Aula — 20 minutos
 
-**Normal Map, SSS e geração procedural: adicionando profundidade sem adicionar geometria**
+**Normal Map e geração procedural: adicionando profundidade sem adicionar geometria**
 
 Objetivo: mostrar que os mapas de textura não são apenas "imagens sobre a superfície" — alguns mapas alteram a forma como a luz interage com o objeto, simulando geometria que não existe. Esse princípio é central na produção de assets para jogos em tempo real, onde o custo de polígonos é limitado.
 
@@ -132,15 +133,7 @@ Noise Texture B (escala grande, macro-relevo) → MixRGB/Math → Bump
 → Normal (entrada do Principled BSDF)
 ```
 
-**3. Subsurface Scattering — quando e como usar**
-
-O Subsurface Scattering (SSS) simula materiais que permitem que a luz penetre levemente antes de ser dispersa internamente — como pele, cera, mármore, folhas e tecidos finos. O resultado visual é uma suavidade característica nas transições de luz/sombra e um leve "brilho interno" nas bordas.
-
-Para assets de kits modulares de ambiente, o SSS raramente é necessário (pedra, metal, madeira, concreto não são subsurface). Exceções: elementos decorativos orgânicos (flores, folhas, tecidos), itens de cena com materiais translúcidos.
-
-No Principled BSDF, o parâmetro **Subsurface** vai de 0 (sem efeito) a 1 (máximo). O parâmetro **Subsurface Color** define a cor que a luz assume ao atravessar o material. Para testes, valores entre 0.05 e 0.15 já produzem o efeito visível sem exagero.
-
-> **Nota do professor:** O SSS é mencionado brevemente nesta semana para completar o vocabulário do Principled BSDF. A aplicação prática relevante para o kit da maioria dos estudantes é o Normal Map e a variação de Roughness. Se o tempo da mini aula apertar, o SSS pode ser coberto em 2 minutos como "existe esse parâmetro, use em materiais orgânicos" — sem aprofundamento.
+> **Nota do professor:** O Subsurface Scattering (SSS) não é tratado nesta mini-aula — ele será apresentado na Semana 8, como um canal adicional do sistema de camadas do 3D Coat. Isso mantém o foco de hoje inteiramente no Normal Map e na variação procedural de Roughness.
 
 ---
 
@@ -182,13 +175,7 @@ Abrir o Blender com o asset de demonstração já carregado — uma parede simpl
 3. Nomear os frames clicando no label: `Normal_Procedural` e `Roughness_Variacao`.
 4. Comentar: *"Organizar o node tree em frames é equivalente a organizar camadas no Krita — em projetos reais, o Shader Editor pode ter 30, 40 nós. Sem estrutura, fica impossível de manter."*
 
-**Passo 4 — Demo rápida de SSS (2 min):**
-1. Localizar o parâmetro `Subsurface` no Principled BSDF (valor padrão: 0).
-2. Aumentar para 0.1 e mudar `Subsurface Color` para um laranja suave (como se fosse cera ou pele).
-3. Mostrar ao vivo: *"Esse efeito de luz passando pelo material. Para pedra, isso é errado — coloca de volta em 0. Para uma vela ou planta no kit, seria esse o parâmetro."*
-4. Retornar Subsurface a 0.
-
-**Passo 5 — Verificação final (3 min):**
+**Passo 4 — Verificação final (5 min):**
 1. Rodar a câmera ao redor do asset no Viewport Rendered.
 2. Comparar com e sem os nós de Normal e Roughness (desabilitar os frames temporariamente com `M`).
 3. Mostrar o antes/depois: *"O asset é idêntico geometricamente. O que mudou foi a informação que chegou para o cálculo de luz. Isso é o princípio central de PBR: simular física, não falsificar aparência."*
@@ -296,6 +283,7 @@ Para estudantes que concluíram os dois assets:
 1. Experimentar adicionar um terceiro nó ao Normal Map: dois Noise Textures com escalas diferentes (micro e macro) combinados via nó `Math → Add` antes do Bump. O resultado simula materiais com detalhe em múltiplas escalas (ex: pedra com micro-rugosidade E rachados maiores).
 2. Ou: exportar o material do Asset 01 como `.blend` de material reutilizável para usar como ponto de partida nos próximos assets do kit.
 3. Ou: começar a mapear a textura seamless também ao canal `Normal` diretamente — conectar o PNG do Poly Haven que inclui Normal Map e comparar com o Normal Map procedural.
+4. Ou: se o kit tiver um elemento orgânico (planta, vela, tecido), adiantar a leitura do trecho de Subsurface Scattering na Apostila (Semana 8) e testar informalmente o parâmetro `Subsurface` do Principled BSDF — sem cobrança de entrega, apenas exploração.
 
 **Papel do professor:**
 

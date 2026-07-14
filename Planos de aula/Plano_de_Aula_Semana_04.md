@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning  
 **Unidade:** I — Fundamentos e Mapeamento UV  
 **Tema:** Otimização de layout UV: distorção, aproveitamento e densidade de texel  
-**Apostila:** Cap. 3 — Análise de distorção; Otimização de layout e empacotamento de UV islands  
+**Apostila:** Parte II, Cap. 6 — Texel Density e Organização de UVs (análise de distorção; otimização de layout e empacotamento de UV islands)  
 **Carga horária:** 3h (2 encontros de 1h30)  
 **Crítica:** 🔵 Informal — circulante em estúdio e comentário coletivo ao final do segundo encontro
 
@@ -52,10 +52,10 @@ Ao final da semana, o estudante será capaz de:
 - Computadores com Blender instalado (3.x ou 4.x)
 - Asset 01 com UV da Semana 3 (cada estudante traz o próprio arquivo)
 - Arquivo de demonstração preparado pelo professor: um UV com problemas reais — islands de tamanhos desproporcionais, desperdício de espaço, distorção visível no Stretch Overlay. Pode ser o mesmo prop da Semana 3, propositalmente mal otimizado, ou um arquivo novo
-- Add-on UVPackmaster (versão gratuita) instalado nos computadores do laboratório — verificar disponibilidade com antecedência. Alternativa: Pack Islands nativo do Blender (sempre disponível)
+- Pack Islands nativo do Blender (ferramenta usada nesta semana). O add-on UVPackmaster (versão gratuita), se disponível no laboratório, é retomado como recapitulação de 5 minutos na Semana 6 — não é necessário para esta aula
 - Textura de checkerboard (mesma usada nas Semanas 2 e 3)
 - Projetor para demonstração e para a crítica informal
-- Apostila Cap. 3 — disponibilizada antes da aula
+- Apostila — Parte II, Cap. 6 — disponibilizada antes da aula
 
 ---
 
@@ -105,9 +105,9 @@ No UV Editor, com todas as islands selecionadas, o comando `UV > Average Islands
 
 Depois de normalizar, as islands vão estar espalhadas fora do quadrado UV. Pack Islands reorganiza automaticamente todas as islands dentro do quadrado UV (0–1), maximizando o aproveitamento do espaço e respeitando um padding mínimo configurável.
 
-Usar: `UV > Pack Islands` com Margin de 0.003–0.008 dependendo da resolução da textura final (valores maiores para texturas menores).
+Usar: `UV > Pack Islands` com Margin de 0.003–0.008 dependendo da resolução da textura final (valores maiores para texturas menores). Isso é suficiente para o Asset 01 e o Asset 02 desta semana.
 
-Para resultados mais sofisticados: o add-on UVPackmaster oferece empacotamento com rotação de islands e formas irregulares — útil para assets com muitas islands orgânicas.
+> **Nota:** ferramentas de empacotamento mais sofisticadas, como o add-on UVPackmaster (rotação de islands, formas irregulares, útil para assets com muitas islands orgânicas), não são vistas hoje para não sobrecarregar a mini-aula — elas voltam como recapitulação rápida no início da Semana 6, quando o Asset 01 já estará pronto para receber textura.
 
 **5. O que Pack Islands não resolve**
 
@@ -149,7 +149,7 @@ Abrir o arquivo de demonstração com UV propositalmente mal otimizado. Configur
 
 Usar Ctrl+Z repetidamente para desfazer e refazer o processo, mostrando o UV Editor antes e depois. Perguntar: *"Que porcentagem do espaço UV vocês estimam que estava desperdiçada antes?"* Mostrar no painel de propriedades do UV Editor a métrica de coverage (se disponível no add-on ou visualmente).
 
-> **Nota do professor:** Mantenha o arquivo de demonstração aberto durante o estúdio para referência. Se o UVPackmaster estiver disponível, dedique 1 minuto ao final para mostrar a diferença de resultado — mas não aprofunde a ferramenta se ela não estiver instalada em todos os computadores.
+> **Nota do professor:** Mantenha o arquivo de demonstração aberto durante o estúdio para referência. Não é necessário demonstrar o UVPackmaster nesta semana — ele será mostrado na recapitulação da Semana 6.
 
 ---
 

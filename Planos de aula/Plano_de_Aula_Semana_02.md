@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning  
 **Unidade:** I — Fundamentos e Mapeamento UV  
 **Tema:** Fundamentos de mapeamento UV: conceitos e projeção de textura  
-**Apostila:** Cap. 2 — Projeção de textura e mapa UV; Conceitos de texel density e espaço UV  
+**Apostila:** Parte II, Cap. 4 — Coordenadas UV e Projeções de Textura; Parte II, Cap. 6 — Texel Density e Organização de UVs  
 **Carga horária:** 3h (2 encontros de 1h30)  
 **Crítica:** Informal — circulante em estúdio e comentário coletivo ao final do segundo encontro
 
@@ -50,7 +50,7 @@ Ao final da semana, o estudante será capaz de:
 - Arquivo de prática preparado pelo professor: cena .blend com cubo, cilindro, esfera e um prop simples temático (ex.: barril, caixa ou pedra) — **distribuir antes do primeiro encontro ou no início da aula**
 - Textura de checkerboard (incluída no Blender por padrão ou PNG externo de 1024×1024 com grid de cores)
 - Projetor para demonstração
-- Apostila Cap. 2 — disponibilizada antes da aula
+- Apostila — Parte II, Cap. 4 e Cap. 6 — disponibilizadas antes da aula
 
 ---
 

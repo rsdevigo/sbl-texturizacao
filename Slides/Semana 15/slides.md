@@ -17,7 +17,7 @@ footer: "IFMS • Semana 15"
 **Semana 15** — Otimizar não é só ter menos texturas
 
 <!--
-Notas: Abertura da mini aula (20 min). Unidade IV — Otimização e Integração ao Motor. Crítica 🔵 INFORMAL (circulante), sem nota formal nesta semana. Apostila Cap. 10 — UDIMs e Multi Tile Texture; Cap. 11 — Otimização: compressão, mipmaps e channel packing. Mensagem central da capa: as Semanas 13 e 14 otimizaram a QUANTIDADE de texturas — menos arquivos, por agrupamento (atlas) ou reutilização por tiling (trim). Hoje o foco muda para o PESO e a ESTRUTURA de cada textura que sobrou: resolução, formato de compressão, mipmaps e número de mapas carregados por material. É a última semana de conteúdo novo antes da integração à Unity (S16) e da apresentação final (S17). NÃO antecipar lightmap UV nem configuração de materiais na Unity (S16).
+Notas: Abertura da mini aula (20 min). Unidade IV — Otimização e Integração ao Motor. Crítica 🔵 INFORMAL (circulante), sem nota formal nesta semana. Apostila: Parte V, Cap. 19 — UDIMs, Texture Arrays e Multi-Tile Texturing; Parte V, Cap. 20 — Compressão, Mipmaps e Packing de Canais. Mensagem central da capa: as Semanas 13 e 14 otimizaram a QUANTIDADE de texturas — menos arquivos, por agrupamento (atlas) ou reutilização por tiling (trim). Hoje o foco muda para o PESO e a ESTRUTURA de cada textura que sobrou: resolução, formato de compressão, mipmaps e número de mapas carregados por material. É a última semana de conteúdo novo antes da integração à Unity (S16) e da apresentação final (S17). NÃO antecipar lightmap UV nem configuração de materiais na Unity (S16).
 -->
 
 ---

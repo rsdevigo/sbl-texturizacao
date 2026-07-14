@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning  
 **Unidade:** I — Fundamentos e Mapeamento UV  
 **Tema:** Apresentação da disciplina, pipeline e escolha de tema do Kit Modular  
-**Apostila:** Cap. 1 — Visão geral do pipeline de texturização  
+**Apostila:** Parte I, Cap. 1 — Materiais, Texturas e Representação Visual; Parte VI, Cap. 25 — Pipeline Completo de Texturização para Jogos (visão geral do pipeline)  
 **Carga horária:** 3h (2 encontros de 1h30)  
 **Crítica:** Informal (circulante em estúdio)
 
@@ -39,7 +39,7 @@ Ao final da semana, o estudante será capaz de:
 - Ferramenta de montagem de moodboard: PureRef (recomendado), Google Slides, Figma ou similar
 - Projetor para demonstração
 - Exemplos de kits modulares prontos (preparados pelo professor): 1 Medieval, 1 Sci-Fi, 1 Pós-apocalíptico
-- Apostila — Cap. 1 (disponibilizada antes da aula)
+- Apostila — Parte I, Cap. 1 e Parte VI, Cap. 25 (disponibilizadas antes da aula)
 
 ---
 
@@ -98,23 +98,25 @@ Mostrar 2–3 kits modulares de referência (imagens ou vídeo). Para cada um, c
 
 **Consigna entregue verbalmente:**
 
-> *"Você vai trabalhar com esse tema pelo semestre inteiro. O moodboard não é decoração — é sua bússola visual. Toda decisão de cor, material e detalhe vai ser comparada a ele nas críticas. Escolha bem."*
+> *"Vocês já vêm construindo repertório visual desde Arte Conceitual — moodboards, estudos de material, definições de linguagem. Hoje não começamos do zero: vocês vão revisitar esse material e escolher o que serve de ponto de partida para o Kit Modular. O moodboard não é decoração — é sua bússola visual. Toda decisão de cor, material e detalhe vai ser comparada a ele nas críticas."*
 
 **Atividade:**
 
-1. Cada estudante define provisoriamente um tema (Medieval, Sci-Fi, Pós-apocalíptico, Fantasia, Cyberpunk ou outro aprovado pelo professor).
-2. Pesquisa e coleta no mínimo 10 referências visuais: ambientes, texturas, iluminação e assets do tema.
-3. Organiza as referências em um painel visual usando PureRef, Google Slides ou Figma.
-4. Começa a redigir um parágrafo de justificativa: *Por que esse tema? Que atmosfera você quer criar? Quais materiais predominam no ambiente?*
+1. Cada estudante abre o material de referência já produzido em Arte Conceitual (moodboards, estudos de material, pranchas de linguagem visual) e revisita o que já existe.
+2. Define provisoriamente um tema para o Kit Modular (Medieval, Sci-Fi, Pós-apocalíptico, Fantasia, Cyberpunk ou outro aprovado pelo professor) com base no repertório revisitado.
+3. Seleciona e reorganiza as referências de Arte Conceitual diretamente aplicáveis a esse tema; pesquisa e coleta referências novas apenas para preencher lacunas, até somar no mínimo 10 referências no total (ambientes, texturas, iluminação e assets do tema).
+4. Organiza as referências selecionadas em um painel visual usando PureRef, Google Slides ou Figma.
+5. Começa a redigir um parágrafo de justificativa: *Por que esse tema? O que do meu trabalho em Arte Conceitual já aponta nessa direção? Que atmosfera você quer criar? Quais materiais predominam no ambiente?*
 
 **Papel do professor:**
 
 Circular pelo estúdio, fazer perguntas que aprofundem a escolha:
-- *"Por que essa referência específica? O que ela te diz sobre o material?"*
+- *"Essa referência vem do seu material de Arte Conceitual ou é nova? O que ela te diz sobre o material?"*
+- *"Olhando o que você já produziu em Arte Conceitual, o que já resolve parte desse tema e o que ainda falta?"*
 - *"Esse tom de iluminação é o que você quer para o kit inteiro?"*
 - *"Você já pensou em que tipo de assets vão compor esse ambiente?"*
 
-Não corrigir nem aprovar temas ainda — apenas provocar reflexão.
+Não corrigir nem aprovar temas ainda — apenas provocar reflexão. Para estudantes sem repertório prévio suficiente de Arte Conceitual, tratar a pesquisa nova como prioridade, sem penalização.
 
 ---
 
@@ -148,7 +150,7 @@ Cada estudante mostra brevemente (1–2 min) seu moodboard em progresso e declar
 
 **Atividade:**
 
-1. Incorporar os feedbacks recebidos na crítica e refinar o moodboard (adicionar, remover ou reorganizar referências).
+1. Incorporar os feedbacks recebidos na crítica e refinar o moodboard curado a partir do material de Arte Conceitual (adicionar, remover ou reorganizar referências).
 2. Redigir o **Documento de Definição de Tema** — uma página com:
    - Nome do tema
    - Descrição da atmosfera visual (3–5 frases)
@@ -228,7 +230,7 @@ Alguns estudantes podem estranhar que a Semana 1 não envolva software. Estraté
 
 | Entrega | Formato | Prazo |
 |---|---|---|
-| Moodboard temático (mín. 10 referências organizadas) | PNG, PDF ou link (PureRef, Figma, Slides) | Até o fim do segundo encontro |
+| Moodboard temático curado a partir do material de Arte Conceitual, complementado quando necessário (mín. 10 referências organizadas) | PNG, PDF ou link (PureRef, Figma, Slides) | Até o fim do segundo encontro |
 | Documento de Definição de Tema (1 página) | PDF ou DOCX | Até o fim do segundo encontro |
 
 ---

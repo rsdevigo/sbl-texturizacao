@@ -14,10 +14,10 @@ footer: "IFMS • Semana 07"
 
 ## O material deixa de ser plano
 
-**Semana 7** — Normal Map, Roughness procedural e SSS
+**Semana 7** — Normal Map e geração procedural
 
 <!--
-Notas: Abertura da mini aula (20 min). Unidade II, entre a CF2 (Sem 5) e a CF3 (Sem 8). Mensagem central: nesta semana o material ganha PROFUNDIDADE. Nas Semanas 5-6 o Albedo passou de cor plana a imagem real; agora o Normal Map simula relevo e o Roughness varia dentro da mesma superfície — sem adicionar um único polígono. Saída da semana: o primeiro material PBR COMPLETO (Albedo + Metallic + Roughness + Normal). Não é tutorial de cliques: é entender por que a luz "acredita" em uma superfície que não existe.
+Notas: Abertura da mini aula (20 min). Unidade II, entre a CF2 (Sem 5) e a CF3 (Sem 8). Mensagem central: nesta semana o material ganha PROFUNDIDADE. Nas Semanas 5-6 o Albedo passou de cor plana a imagem real; agora o Normal Map simula relevo e o Roughness varia dentro da mesma superfície — sem adicionar um único polígono. Saída da semana: o primeiro material PBR COMPLETO (Albedo + Metallic + Roughness + Normal). O Subsurface Scattering (SSS) NÃO é abordado nesta semana — foi movido para a Semana 8, junto ao sistema de camadas do 3D Coat, para não sobrecarregar esta mini-aula com um quinto conceito novo. Não é tutorial de cliques: é entender por que a luz "acredita" em uma superfície que não existe.
 -->
 
 ---
@@ -33,7 +33,7 @@ Ao final da semana você será capaz de:
 - Montar um material PBR **completo** com os quatro canais conectados
 
 <!--
-Notas: Ler rápido. Cada objetivo retorna ao longo da aula. Não antecipar 3D Coat (Semana 8) nem bake (Semana 11) — hoje tudo acontece com nós procedurais no Blender. O SSS entra apenas para completar o vocabulário do Principled BSDF.
+Notas: Ler rápido. Cada objetivo retorna ao longo da aula. Não antecipar 3D Coat (Semana 8) nem bake (Semana 11) — hoje tudo acontece com nós procedurais no Blender. SSS não é tratado hoje — fica para a Semana 8.
 -->
 
 ---
@@ -189,24 +189,6 @@ Como produzir: no Blender, montar Noise → ColorRamp → Roughness, capturar o 
 
 ---
 
-## Subsurface Scattering: quando usar
-
-O **SSS** simula luz que **penetra** o material antes de dispersar — pele, cera, mármore, folhas, tecidos finos.
-
-Para um kit de ambiente (pedra, metal, madeira, concreto): **quase nunca**.
-
-<div class="error">
-
-SSS em pedra ou metal deixa o material com aparência de **plástico ou cera**.
-
-</div>
-
-<!--
-Notas: O SSS entra só para completar o vocabulário do Principled BSDF. No Principled: parâmetro Subsurface de 0 a 1; valores 0.05–0.15 já produzem efeito visível. Para o kit da maioria, o valor correto é 0. Exceção: elementos orgânicos (vela, planta, tecido). Se o tempo apertar, cobrir em 2 minutos: "existe esse parâmetro, use em materiais orgânicos".
--->
-
----
-
 ## O material PBR completo
 
 Quatro canais trabalhando juntos no Principled BSDF:
@@ -257,9 +239,10 @@ Notas: Os três erros mais frequentes da semana, alinhados ao bloco de dificulda
 - **Noise → Bump → Normal** e **Noise → ColorRamp → Roughness**
 - Calibre o **Strength**; afaste os marcadores do **ColorRamp**
 - Material completo = **Albedo + Metallic + Roughness + Normal**
+- **SSS** fica para a Semana 8 — hoje não entra no vocabulário da aula
 
 <!--
-Notas: Amarrar a mini aula. Cada item retorna na demonstração e no estúdio. Não reler tudo — apontar a conexão com a demo. Lembrar: hoje é crítica INFORMAL; o foco é ler profundidade e coerência do material no trabalho dos colegas. Na Semana 8 (CF FORMAL) o mesmo material vem no 3D Coat.
+Notas: Amarrar a mini aula. Cada item retorna na demonstração e no estúdio. Não reler tudo — apontar a conexão com a demo. Lembrar: hoje é crítica INFORMAL; o foco é ler profundidade e coerência do material no trabalho dos colegas. Na Semana 8 (CF FORMAL) o mesmo material vem no 3D Coat, e é lá que o Subsurface Scattering aparece como canal do sistema de camadas.
 -->
 
 ---
@@ -291,7 +274,7 @@ Shader Editor à esquerda, Viewport Rendered à direita.
 ![large](assets/demo_material_completo.webp)
 
 <!--
-Notas: Transição para a demonstração de 20 min. Sequência: parede com Albedo da Semana 6 -> Noise → Bump → Normal (calibrar Strength) -> segundo Noise → ColorRamp → Roughness (afastar marcadores) -> organizar em frames -> demo rápida de SSS (subir a 0.1 e voltar a 0) -> comparar antes/depois desabilitando os frames com M. Fechar com a mensagem: o asset é idêntico geometricamente; o que mudou foi a informação que chegou ao cálculo de luz.
+Notas: Transição para a demonstração de 20 min. Sequência: parede com Albedo da Semana 6 -> Noise → Bump → Normal (calibrar Strength) -> segundo Noise → ColorRamp → Roughness (afastar marcadores) -> organizar em frames -> comparar antes/depois desabilitando os frames com M. Não demonstrar SSS — ele fica para a Semana 8, junto ao sistema de camadas do 3D Coat. Fechar com a mensagem: o asset é idêntico geometricamente; o que mudou foi a informação que chegou ao cálculo de luz.
 
 [!FIGURA]
 Objetivo didático: dar à turma um alvo visual do resultado esperado e antecipar o layout de tela da demonstração.
