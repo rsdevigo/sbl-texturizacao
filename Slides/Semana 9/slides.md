@@ -233,6 +233,20 @@ Notas: Os três erros mais frequentes, alinhados às Possíveis Dificuldades do 
 
 ---
 
+<!-- _class: industry -->
+
+## Na indústria
+
+Desgaste pintado à mão continua sendo o que diferencia um asset "correto" de um asset que conta uma história — mesmo com automação de smart materials, a decisão de onde e quanto desgastar é sempre do artista.
+
+Estúdios reconhecidos pela força narrativa ambiental (The Last of Us, BioShock) são estudados justamente pela lógica de uso por trás de cada arranhão e mancha, não pela quantidade de detalhe.
+
+<!--
+Notas: Contextualizar o valor profissional. Narrativa ambiental via desgaste é uma das competências mais valorizadas em portfólios de texturização — separa quem "suja a textura" de quem conta uma história de uso. Amarra à Semana 12, onde ID/Curvature acelera esse mesmo tipo de decisão via smart materials, sem substituir o julgamento aprendido aqui.
+-->
+
+---
+
 <!-- _class: summary-slide -->
 
 # Resumo

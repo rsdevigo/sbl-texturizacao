@@ -13,6 +13,7 @@
 Os estudantes chegam com:
 
 - Kit Modular de Ambiente completo: assets com UV1 validado (Semanas 2–4), materiais PBR completos (Semanas 5–8), texturização artística com detalhe pintado e bake integrado (Semanas 9–12), otimização consolidada em atlas/trim/ORM (Semanas 13–15) e cena montada na Unity com lightmap baked e renders finais (Semana 16)
+- Nota e feedback escrito do Checkpoint C8 (Semana 16) já devolvidos, com eventual reentrega de Recuperação Paralela já concluída — C8 chega à CF6 com pelo menos um ciclo de avaliação e correção formal já realizado, não como primeiro contato avaliativo
 - Autoavaliação (Instrumento 2 da rubrica) preenchida previamente à aula, cobrindo todos os 10 critérios
 - Documento de processo acumulado ao longo do semestre: moodboard, versões, anotações de crítica, checklists semanais (Instrumento 4)
 - Leitura de Parte VI, Cap. 24 — Apresentação Profissional de Assets, disponibilizada ao final da Semana 16, orientando o formato de breakdown visual e portfólio esperado nesta defesa

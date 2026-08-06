@@ -13,9 +13,12 @@
 Os estudantes chegam com:
 
 - Pacote completo de bake (Normal, AO, Curvature, ID Map) dominado e aplicado em pelo menos um asset do kit — Semana 12
-- Dois assets consolidados (Asset 01 e Asset 02) com UV finalizado, material PBR completo, desgaste pintado e bake integrado — Semanas 1 a 12
+- Dois **Assets Hero** consolidados (Asset 01 e Asset 02) com UV finalizado, material PBR completo, desgaste pintado e bake integrado — Semanas 1 a 12
+- Ao menos um **Asset Secundário** adicional, produzido em ciclo abreviado (UV simples + material PBR coerente com o kit, sem o mesmo aprofundamento de pintura e bake dos Heróis) — ver "Diretriz de composição do kit" abaixo
 - Feedback da CF4 (Semana 11) incorporado, com prioridade de melhoria já trabalhada
 - Kit modular com identidade visual e paleta já estabelecidas (moodboard atualizado desde a Semana 1)
+
+> **Diretriz de composição do kit (Plano de Ensino, Seção 8.1):** o Kit Modular final exige 5 a 10 assets, mas nem todos recebem o mesmo tratamento individual. Os Assets Hero (2, produzidos nas Semanas 1–12) recebem o fluxo completo. Os Assets Secundários (2–3) devem ser modelados e ter um UV e material básico preparados como tarefa extraclasse entre as Semanas 9 e 12 — não é esperado que recebam pintura de desgaste ou bake dedicados; a Semana 13 é justamente onde eles ganham textura de fato, ao entrarem no Texture Atlas junto aos Heróis. Se um estudante chega a esta semana sem nenhum Asset Secundário modelado, o professor deve orientá-lo a usar parte da Etapa 1 do estúdio (abaixo) para escolher um objeto simples já existente no repositório de referência da disciplina, em vez de atrasar a criação do UV combinado.
 
 > **Nota de transição:** Até aqui, cada asset do kit recebeu sua própria textura dedicada — um UV, um conjunto de mapas, um material. Essa abordagem foi correta para aprender UV mapping, PBR, pintura e bake em profundidade, mas não é como um kit modular é entregue em produção real. Esta semana inicia a **Unidade IV**, que desloca o foco de "como texturizar bem um objeto" para "como texturizar um kit inteiro de forma eficiente para o motor de jogo". O primeiro problema desse novo bloco é o **Texture Atlas**: em vez de cada asset carregar sua própria textura (o que gera múltiplos draw calls quando vários objetos aparecem juntos em cena), vários assets passam a compartilhar uma única textura, reorganizando seus UVs dentro do mesmo espaço 0–1. Isso não é um recurso novo de pintura ou bake — é uma decisão de **arquitetura de produção**, e exige revisitar o UV mapping aprendido nas Semanas 2 a 4 sob uma lente nova: eficiência para tempo real, não apenas ausência de distorção.
 
@@ -51,7 +54,7 @@ Ao final da semana, o estudante será capaz de:
 
 - Computadores com Blender instalado (3.x ou 4.x)
 - Computadores com 3D Coat instalado (versão 2023 ou superior)
-- Arquivos `.blend` de todos os assets do kit de cada estudante (mínimo 3, já com UV, material e bake das semanas anteriores)
+- Arquivos `.blend` de todos os assets do kit de cada estudante (mínimo 3: os dois Assets Hero com UV, material e bake das semanas anteriores, mais ao menos um Asset Secundário com UV e modelagem prontos, ainda sem textura final)
 - Arquivo de demonstração do professor: 3 assets simples do kit de referência do professor (ex.: barril, caixote, tocha), cada um ainda com UV individual, prontos para serem combinados ao vivo
 - Projetor para demonstração
 - Apostila — Parte V, Cap. 18 — trecho de Texture Atlas, disponibilizado antes da aula
@@ -157,6 +160,7 @@ Abrir o Blender com os três objetos de demonstração já carregados, cada um c
 **Etapa 1 — Seleção e justificativa dos assets (≈10 min):**
 1. Revisar os assets do kit já produzidos e escolher três que aparecem juntos com frequência na composição do ambiente.
 2. Escrever uma justificativa breve (2–3 frases) de por que esses três foram escolhidos — esse registro alimenta C1 (Processo) e C7 (Otimização).
+3. Atualizar (ou iniciar) o **inventário do kit**: uma tabela simples com uma linha por asset, indicando nome, camada (Hero, Secundário ou Repetição) e status (modelado / com UV / texturizado). Esse inventário passa a ser atualizado a cada semana até a Semana 17 e é a forma de verificar, cedo, se o kit está a caminho do mínimo de 5 assets.
 
 **Etapa 2 — Reorganização do UV combinado (≈25 min):**
 1. Selecionar os três objetos no Blender e abrir o UV Editor em modo conjunto.
@@ -321,6 +325,7 @@ Reorganizar UV é mais rápido que reconstruir texturas pintadas à mão nas nov
 | Textura do Texture Atlas exportada | `.png`, 2048×2048, pasta `_Atlas_S13` | Até o fim do segundo encontro |
 | Justificativa escrita da escolha dos assets combinados (2–3 frases) | Documento digital ou anotação junto ao arquivo de entrega | Até o fim do segundo encontro |
 | Render comparativo: assets com textura individual (antes) vs. com atlas combinado (depois) | `.png` com sufixo `_Comparativo_Atlas_S13` | Até o fim do segundo encontro |
+| Inventário do kit atualizado (asset / camada / status) | Tabela simples, digital ou anexada ao arquivo de entrega | Até o fim do segundo encontro |
 
 > **Nota:** Não há nota formal nesta semana (crítica informal). A qualidade do atlas produzido hoje, junto com a justificativa de agrupamento, será avaliada como evidência de C7 na CF5 da Semana 14 (Trim Sheets), quando Otimização entra em nota formal pela primeira vez.
 

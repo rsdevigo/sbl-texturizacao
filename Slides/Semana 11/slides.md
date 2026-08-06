@@ -233,6 +233,20 @@ Notas: Deliberadamente breve. A nota do professor no plano de aula é explícita
 
 ---
 
+<!-- _class: industry -->
+
+## Na indústria
+
+Bake de high-poly para low-poly é a espinha dorsal de qualquer pipeline de asset em tempo real — nenhum jogo renderiza geometria de escultura diretamente, mesmo em hardware atual.
+
+Um normal map com artefato visível é um dos primeiros pontos verificados em qualquer revisão técnica de asset antes da aprovação para o motor — o mesmo protocolo de checagem (rotacionar, olhar superfícies planas) que vocês praticaram hoje.
+
+<!--
+Notas: Contextualizar o valor profissional. O fluxo high-poly → bake → low-poly é universal na produção de jogos em tempo real, independente de engine ou estilo visual. Amarra à Semana 12 (ID/Curvature) e à Semana 16 (verificação do resultado dentro da Unity): o mesmo protocolo de checagem de artefatos se repete em cada etapa seguinte do pipeline.
+-->
+
+---
+
 <!-- _class: summary-slide -->
 
 # Resumo

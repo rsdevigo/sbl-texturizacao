@@ -5,7 +5,7 @@
 **Apostila:** Parte VI, Cap. 21 — Lightmaps e Iluminação em Motores (abertura de malha para lightmap); Parte VI, Cap. 22 — Integração com Unreal Engine e Unity (importação e configuração)
 **Leitura complementar:** Parte III, Cap. 11 — Shaders, Iluminação e Aparência Final (ancora o item "renderização de modelos texturizados" da ementa; a prática permanece integrada à demonstração e ao estúdio desta semana, sem mini-aula própria)
 **Carga horária:** 3h (2 encontros de 1h30)
-**Crítica:** 🔵 **Informal** — circulante, sem nota formal nesta semana
+**Crítica:** 🔴 **Checkpoint C8 (formal)** — dedicado exclusivamente à Integração na Unity; primeiro momento em que C8 recebe nota (10% do Portfolio de Artefatos)
 
 ---
 
@@ -19,6 +19,8 @@ Os estudantes chegam com:
 - Um asset do kit já importado na Unity na Semana 15, com material PBR básico configurado (Albedo, Normal, Metallic/Smoothness), sem lightmap — a importação e a configuração de material na Unity **já foram praticadas**; esta semana não repete esse primeiro contato
 
 > **Nota de transição:** As Semanas 13 a 15 resolveram a Unidade IV do lado da **produção de conteúdo**: menos texturas (atlas, trim) e texturas mais leves (channel packing, compressão, resolução justificada). A própria Semana 15 já deu o primeiro passo de integração ao motor, importando um asset e configurando seu material na Unity. Esta semana fecha a unidade com a peça que faltava: um UV que ainda não foi trabalhado na disciplina — o **UV2 de lightmap**, distinto do UV1 usado desde a Semana 2 para aplicar textura — e o lightmap bake da cena completa. Como a importação e a configuração de material já são conhecidas, o tempo desta semana se concentra inteiramente em UV2 e luz. O resultado esperado é a primeira visão do kit modular inteiro, montado como cena, sob iluminação baked — o ensaio geral antes da apresentação final da Semana 17.
+
+> **Atenção — Checkpoint C8:** Diferente das Semanas 13 a 15, esta semana não é mais uma crítica informal. C8 (Integração na Unity) aparece pela primeira vez na disciplina na Semana 15 e, até esta correção, só era avaliado com nota na CF6 (Semana 17) — a única competência inteiramente nova do semestre sem nenhum checkpoint formal antes da defesa final. A partir de agora, a cena montada e o lightmap baked desta semana recebem nota formal de C8, com peso de 10% no Portfolio de Artefatos e sujeita à Recuperação Paralela (Plano de Ensino, Seção 10): quem tirar nota abaixo de 5,0 pode corrigir e reentregar até o início da Semana 17.
 
 ---
 
@@ -37,14 +39,16 @@ Ao final da semana, o estudante será capaz de:
 
 ## Critérios observados nesta semana
 
-> 🔵 **Crítica Informal.** Não há nota formal nesta semana. C8 (Integração na Unity) aparece pela primeira vez na disciplina — ele só passa a valer nota formal na CF6 (Semana 17), então nesta semana ele é praticado e observado, não avaliado. C7 (Otimização) retorna em observação, pois é na Unity que as decisões de resolução, compressão e channel packing da Semana 15 são finalmente verificadas em contexto de motor real.
+> 🔴 **Checkpoint C8 — crítica formal dedicada.** C8 (Integração na Unity) apareceu pela primeira vez na Semana 15 como prática; nesta semana ele recebe sua **primeira nota formal** da disciplina, com peso de 10% no PA (ver Rubrica Mestre). C1 e C7 seguem apenas observados — o processo de importação e a verificação de otimização em contexto real continuam relevantes como evidência acumulada para a CF6, mas não compõem a nota do Checkpoint.
 
 | Critério | Status | O que observar |
 |---|---|---|
 | C1 — Processo de Projeto | obs. | Registro do processo de importação (o que funcionou de primeira, o que precisou de retrabalho) e decisões de configuração de material anotadas |
 | C7 — Otimização | obs. — verificação em contexto real | As resoluções e compressões definidas na Semana 15 se comportam bem dentro da Unity, ou houve necessidade de ajuste ao ver o resultado no motor? |
-| C8 — Integração na Unity | obs. — primeira prática, sem nota | Materiais com texturas nos slots corretos; normal map com a flag correta ativada; UV2 sem sobreposição; asset em escala coerente na cena |
+| C8 — Integração na Unity | ✓ **Nota — primeira vez avaliado formalmente** | Materiais com texturas nos slots corretos; normal map com a flag correta ativada; UV2 sem sobreposição; asset em escala coerente na cena; cena completa montada e lightmap baked sem vazamento de luz perceptível |
 | C10 — Participação (CC) | obs. | Qualidade do feedback dado na crítica circulante sobre a configuração de materiais e o resultado do lightmap dos colegas |
+
+> **Lembrete de peso:** O Checkpoint C8 corresponde a 10% da nota do Portfolio de Artefatos (PA) — os pontos percentuais remanejados da CF5 (Semana 14), que antes valia 30% e agora vale 20%. É sujeito à Recuperação Paralela como qualquer outra entrega do PA.
 
 ---
 
@@ -58,6 +62,8 @@ Ao final da semana, o estudante será capaz de:
 - Projetor para demonstração
 - Apostila — Parte VI, Cap. 21 e Cap. 22 — trechos de lightmap UV e importação/configuração na Unity, disponibilizados antes da aula. Leitura complementar (opcional): Parte III, Cap. 11 — Shaders, Iluminação e Aparência Final, para o estudante que quiser aprofundar o tema de renderização final além do que é praticado em estúdio
 - Luz direcional (Directional Light) configurada na cena base, para uso imediato no lightmap bake
+- Ficha de Crítica Formal (Instrumento 1 da Rubrica Mestre), preenchida apenas para C8 (demais critérios permanecem em branco, conforme a tabela de Critérios Ativos)
+- Ficha de Autoavaliação (Instrumento 2), preenchida pelo estudante para C8 antes do fechamento da Semana 16
 
 > **Preparação do laboratório:** É necessário confirmar, antes da aula, que a Unity está instalada e o pipeline URP funcional em todas as máquinas — problemas de instalação nesta etapa final da disciplina custam tempo de estúdio que não pode ser recuperado nas duas últimas semanas.
 
@@ -174,10 +180,12 @@ Perguntas de mediação circulante:
 
 ### Crítica Coletiva — 20 minutos
 
-**Formato: circulante, sem nota formal**
+**Formato: circulante, formativa — a nota do Checkpoint C8 é atribuída depois, sobre a entrega final**
+
+> Como a cena completa do kit só fica pronta ao final do segundo bloco de estúdio (Bloco 3, abaixo), esta crítica circulante não é o momento de atribuição de nota — é feedback formativo sobre o que já está pronto até aqui, igual às críticas circulantes das Semanas 13 e 15. A nota formal de C8 (Checkpoint C8) é preenchida pelo professor na Ficha de Crítica Formal **após a entrega**, com base no projeto Unity final, no lightmap bake e nos renders submetidos ao fim da Semana 16.
 
 **Abertura (2 min):**
-*"Hoje é crítica circulante — vou passar de estação em estação vendo os assets já importados e configurados na Unity. Tenham a cena aberta com pelo menos dois assets configurados, e o comparativo com o render do Blender à mão."*
+*"Hoje é crítica circulante — vou passar de estação em estação vendo os assets já importados e configurados na Unity. Tenham a cena aberta com pelo menos dois assets configurados, e o comparativo com o render do Blender à mão. A nota formal de C8 desta semana — o Checkpoint C8 — vai considerar a cena completa que vocês entregarem ao final do segundo encontro, não o que eu vir agora."*
 
 **Dinâmica (16 min):**
 Circulação livre pelas estações. Em cada uma, o professor observa o material configurado na Unity e faz perguntas diretas:
@@ -239,8 +247,8 @@ Deixar 2–3 respostas. O objetivo é consolidar que a interoperabilidade entre 
 3. **(2 min — Antecipação da Semana 17)**
 *"Semana que vem é a última: apresentação e defesa do Kit Modular de Ambiente completo. A cena que vocês montaram hoje na Unity, os renders capturados e toda a documentação de processo das últimas 16 semanas vão compor essa apresentação final."*
 
-4. **(2 min — Confirmação das entregas)**
-Recapitular nomenclatura de entrega e prazo. Lembrar que os renders de hoje já podem começar a compor a documentação visual (breakdown) exigida na apresentação final, especialmente para o Critério 9 (Apresentação).
+4. **(2 min — Confirmação das entregas e da nota do Checkpoint C8)**
+Recapitular nomenclatura de entrega e prazo. Explicar que a nota do Checkpoint C8 (10% do PA) será devolvida por escrito, seguindo o mesmo prazo das demais CFs, e que — como qualquer entrega do Portfolio de Artefatos — está sujeita à Recuperação Paralela: quem tirar nota abaixo de 5,0 pode corrigir a integração e reentregar até o início da Semana 17. Lembrar que os renders de hoje já podem começar a compor a documentação visual (breakdown) exigida na apresentação final, especialmente para o Critério 9 (Apresentação).
 
 ---
 
@@ -283,11 +291,11 @@ Como em outras semanas de introdução a uma ferramenta nova, o primeiro asset c
 
 | Evidência | Critério da Rubrica | Como avaliar |
 |---|---|---|
-| UV2 de lightmap gerado para os assets do kit, sem sobreposição entre ilhas, visível no UV Editor do Blender | C8 — Integração na Unity (obs.) | A inspeção visual do UV2 confirma ausência de sobreposição e padding adequado entre ilhas? |
-| Assets exportados em FBX e importados na Unity preservando UV1 e UV2 | C8 — Integração na Unity (obs.) | A configuração de importação confirma que ambos os canais de UV vieram do arquivo, sem substituição por lightmap UV gerado automaticamente? |
-| Materiais configurados no shader da Unity com Albedo, Normal Map (flag correta) e Metallic/Smoothness coerentes com os mapas produzidos | C7 — Otimização (obs.) / C8 — Integração na Unity (obs.) | O resultado visual na Unity é comparável ao render de referência produzido no Blender, sem inversões de canal perceptíveis? |
+| UV2 de lightmap gerado para os assets do kit, sem sobreposição entre ilhas, visível no UV Editor do Blender | C8 — Integração na Unity (✓ nota — Checkpoint C8) | A inspeção visual do UV2 confirma ausência de sobreposição e padding adequado entre ilhas? |
+| Assets exportados em FBX e importados na Unity preservando UV1 e UV2 | C8 — Integração na Unity (✓ nota — Checkpoint C8) | A configuração de importação confirma que ambos os canais de UV vieram do arquivo, sem substituição por lightmap UV gerado automaticamente? |
+| Materiais configurados no shader da Unity com Albedo, Normal Map (flag correta) e Metallic/Smoothness coerentes com os mapas produzidos | C7 — Otimização (obs.) / C8 — Integração na Unity (✓ nota — Checkpoint C8) | O resultado visual na Unity é comparável ao render de referência produzido no Blender, sem inversões de canal perceptíveis? |
 | Cena completa montada com todos os assets do kit posicionados de forma coerente com o tema | C2 — Direção Artística (obs., revisitado) | A composição da cena comunica o tema do kit modular sem explicação adicional? |
-| Lightmap bake da cena executado, sem vazamento de luz perceptível entre objetos ou dentro de um mesmo asset | C8 — Integração na Unity (obs.) | O resultado do bake apresenta manchas de luz incoerentes, ou a iluminação lê corretamente a geometria de cada objeto? |
+| Lightmap bake da cena executado, sem vazamento de luz perceptível entre objetos ou dentro de um mesmo asset | C8 — Integração na Unity (✓ nota — Checkpoint C8) | O resultado do bake apresenta manchas de luz incoerentes, ou a iluminação lê corretamente a geometria de cada objeto? |
 | Renders finais da cena capturados em ao menos 4 ângulos diferentes | C9 — Apresentação (obs., revisitado) | Os ângulos escolhidos comunicam bem o kit modular como um conjunto coeso, e não apenas objetos isolados? |
 | Participação na crítica circulante: comentários referenciando configuração de material, UV2 ou resultado do bake, não apenas impressão visual geral | C10 — Participação (obs.) | O feedback dado menciona um ponto técnico específico (flag de normal map, sobreposição de UV2, escala) ou é genérico? |
 
@@ -300,8 +308,9 @@ Como em outras semanas de introdução a uma ferramenta nova, o primeiro asset c
 | Assets do kit com UV2 de lightmap gerado, sem sobreposição | `.blend` atualizado | Até o fim do segundo encontro |
 | Projeto Unity com todos os assets do kit importados, materiais configurados e lightmap baked | Pasta de projeto Unity, nomeada `[Nome]_Kit_Unity_S16` | Até o fim do segundo encontro |
 | Renders finais da cena renderizada na Unity, em pelo menos 4 ângulos | `.png` ou `.jpg`, pasta `_Renders_S16` | Até o fim do segundo encontro |
+| Ficha de Autoavaliação (Instrumento 2) preenchida para C8 | Documento digital ou impresso | Até o fim do segundo encontro |
 
-> **Nota:** Não há nota formal nesta semana (crítica informal). O material produzido — cena Unity montada, lightmap baked e renders finais — compõe a evidência central de C8 (Integração na Unity) que será formalmente avaliada pela primeira vez na CF6 da Semana 17 (Projeto Final), junto com todos os demais critérios da rubrica.
+> **Nota sobre a nota do Checkpoint C8:** Esta semana atribui nota formal a C8 (Integração na Unity) pela primeira vez na disciplina, com peso de 10% no Portfolio de Artefatos. O material entregue — cena Unity montada, lightmap baked e renders finais — é a evidência avaliada pelo professor na Ficha de Crítica Formal (Instrumento 1), preenchida só para C8. Estudantes com nota abaixo de 5,0 têm direito a Recuperação Paralela (Plano de Ensino, Seção 10), corrigindo e reentregando até o início da Semana 17. C8 volta a ser avaliado, desta vez com todos os critérios da rubrica, na CF6 (Projeto Final).
 
 ---
 

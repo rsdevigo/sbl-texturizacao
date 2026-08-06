@@ -248,6 +248,20 @@ Notas: Os três erros mais frequentes da semana, alinhados às Possíveis Dificu
 
 ---
 
+<!-- _class: industry -->
+
+## Na indústria
+
+3D Coat, Substance Painter e Mari são as ferramentas-padrão de pintura PBR em produção de jogos — o fluxo de exportar canais e reconectar no material do motor/DCC, praticado hoje pela primeira vez, se repete quase idêntico em qualquer pipeline profissional.
+
+Canal invertido (roughness/smoothness) é um dos bugs visuais mais comuns em produção — e um dos mais rápidos de diagnosticar quando se sabe exatamente o que procurar.
+
+<!--
+Notas: Contextualizar o valor profissional. O primeiro contato com uma ferramenta de pintura PBR dedicada (3D Coat) é um marco real de carreira — é a mesma ferramenta (ou concorrente direta) usada em produção. Amarra à Semana 16, onde o mesmo tipo de inversão de canal (Roughness vs. Smoothness) reaparece na Unity.
+-->
+
+---
+
 <!-- _class: summary-slide -->
 
 # Resumo

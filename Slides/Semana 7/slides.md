@@ -230,6 +230,20 @@ Notas: Os três erros mais frequentes da semana, alinhados ao bloco de dificulda
 
 ---
 
+<!-- _class: industry -->
+
+## Na indústria
+
+Ferramentas de geração procedural (Substance Designer, geometry/shader nodes) são hoje o método padrão de produção de materiais base em estúdios AAA — a pintura manual entra depois, para o detalhe que torna cada asset único.
+
+Roughness bem variado é o que faz um material "ler" como sujo, novo ou desgastado à distância, muito antes de qualquer detalhe fino ser percebido de perto.
+
+<!--
+Notas: Contextualizar o valor profissional. Geração procedural de texturas é competência central em produção real (Substance Designer é padrão de mercado) — mesmo quando o fluxo desta disciplina prioriza pintura manual no 3D Coat, é importante que o estudante saiba que essa outra via existe e é dominante na indústria. Amarra à Apostila, Parte IV, Cap. 13, que trata o tema com profundidade que a mini-aula desta semana só introduz.
+-->
+
+---
+
 <!-- _class: summary-slide -->
 
 # Resumo

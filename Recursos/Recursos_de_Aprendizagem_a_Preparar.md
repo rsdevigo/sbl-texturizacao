@@ -36,4 +36,4 @@ Levantamento de todos os recursos que o professor precisa preparar previamente, 
 
 ## Observações
 
-As fichas dos Instrumentos 1, 2 e 3 (R05, R10, R28) se repetem em várias semanas — basta prepará-las uma vez e reutilizar. A apostila (capítulos 1–12) é citada em quase todos os planos como leitura prévia, mas já é fonte primária existente, não incluída aqui como novo recurso a criar.
+As fichas dos Instrumentos 1, 2 e 3 (R05, R10, R28) se repetem em várias semanas — basta prepará-las uma vez e reutilizar. A apostila (Partes I a VI, 25 capítulos) é citada em quase todos os planos como leitura prévia, sempre no formato "Parte X, Cap. N — Título", mas já é fonte primária existente, não incluída aqui como novo recurso a criar.

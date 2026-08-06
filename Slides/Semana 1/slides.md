@@ -24,8 +24,8 @@ Um **Kit Modular de Ambiente** construído por você, do início ao fim do semes
 
 Tudo que aprendermos será aplicado a esse único projeto.
 
-![large](assets/kit_modular_exemplo.webp)
-
+![large](assets/kit_modular_exemplo.png)
+Fonte: https://kenney-assets.itch.io/modular-buildings
 <!--
 Notas: Esta é a promessa da disciplina. Não é uma sequência de exercícios soltos — é um projeto que acompanha o semestre inteiro. Fixar essa ideia agora reduz a ansiedade por "conteúdo técnico" na primeira semana.
 
@@ -94,7 +94,7 @@ Notas: Material é o "recipiente"; textura é o "conteúdo". Essa relação hier
 | Controle detalhado | Resolução infinita |
 | Ocupa memória | Leve, ajustável |
 
-![large](assets/raster_vs_procedural.webp)
+![large](assets/raster_vs_procedural.png)
 
 <!--
 Notas: Apresentar como duas abordagens complementares, não rivais. Na disciplina o foco será raster/PBR pintado no 3D Coat, mas o estudante deve saber que a procedural existe. Evitar aprofundar em nós procedurais.
@@ -160,12 +160,12 @@ Notas: O tema é o dispositivo pedagógico da disciplina. Ele será escolhido ne
 Não é decoração.
 
 Toda decisão de **cor**, **material** e **detalhe** será comparada a ele nas críticas.
-
+Fonte: https://bernard_trudel.artstation.com/projects/XB0bd3
 </div>
 
 <div class="media">
 
-![large](assets/moodboard_exemplo.webp)
+![large](assets/moodboard_exemplo.jpeg)
 
 </div>
 
@@ -216,6 +216,20 @@ Notas: Útil para estudantes paralisados pela quantidade de opções. Sugerir qu
 
 ---
 
+<!-- _class: industry -->
+
+## Na indústria
+
+Todo pipeline de produção de jogos começa como este semestre: um moodboard aprovado antes de qualquer asset ser modelado. Nenhum estúdio pinta textura sem antes decidir, por escrito e em imagem, para onde o projeto está indo.
+
+A diferença entre um artista júnior e um sênior começa aqui: saber recusar um tema sem repertório visual suficiente para sustentá-lo até o fim.
+
+<!--
+Notas: Contextualizar o valor profissional. A reunião de kickoff de um projeto real de arte segue a mesma lógica da escolha de tema desta semana — moodboard, referências e justificativa antes de qualquer produção. Amarra ao restante do semestre: o tema escolhido hoje é o que sustenta a coerência avaliada em C2 (Direção Artística) até a Semana 17.
+-->
+
+---
+
 <!-- _class: summary-slide -->
 
 # Resumo
@@ -239,7 +253,7 @@ Shading Workspace • UV Editor • Viewport Shading
 
 E exemplos de **kits modulares** de referência.
 
-![large](assets/blender_workspaces_tour.webp)
+![large](assets/blender_workspaces_tour.png)
 
 <!--
 Notas: Transição para a demonstração de 20 min. Deixar claro que é orientação espacial, não tutorial — o estudante só precisa reconhecer esses espaços. O mapeamento UV será ensinado na Semana 2.

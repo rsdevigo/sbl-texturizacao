@@ -246,6 +246,20 @@ Notas: Os três erros mais frequentes, alinhados às Possíveis Dificuldades do 
 
 ---
 
+<!-- _class: industry -->
+
+## Na indústria
+
+Bibliotecas de stencil e alpha reutilizáveis são ativos permanentes de um estúdio — construídas uma vez, aplicadas em dezenas de projetos seguintes, exatamente como vocês vão reaproveitar os próprios stencils ao longo do semestre.
+
+Saber integrar um stencil sem deixá-lo "colado" na superfície — respeitando luz, escala e desgaste ao redor — é o que separa uso amador de uso profissional da ferramenta.
+
+<!--
+Notas: Contextualizar o valor profissional. Stencils e alphas reutilizáveis compõem parte do capital técnico de um estúdio, tanto quanto os assets finais. Amarra à Semana 13 (Texture Atlas): a lógica de reaproveitar um recurso entre múltiplos contextos, aprendida aqui com stencils, volta lá aplicada a texturas inteiras.
+-->
+
+---
+
 <!-- _class: summary-slide -->
 
 # Resumo

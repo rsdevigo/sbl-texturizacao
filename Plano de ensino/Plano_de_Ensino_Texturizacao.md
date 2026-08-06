@@ -139,9 +139,21 @@ NF = (PA × 0,40) + (CC × 0,20) + (PF × 0,40)
 
 | Instrumento | Descrição | Peso | Quando |
 |---|---|---|---|
-| **Portfolio de Artefatos (PA)** | Conjunto de entregas parciais avaliadas nas **5 críticas formais intermediárias** (CF1–CF5, semanas 3, 5, 8, 11 e 14). Cada CF gera autoavaliação obrigatória e feedback escrito do professor. A nota do PA é composta com **pesos crescentes** por CF, valorizando a trajetória de aprendizado (CF1=10%, CF2=15%, CF3=20%, CF4=25%, CF5=30%). | 40% | Semanas 3–14 (CF1–CF5) |
+| **Portfolio de Artefatos (PA)** | Conjunto de entregas parciais avaliadas nas **5 críticas formais intermediárias** (CF1–CF5, semanas 3, 5, 8, 11 e 14) mais o **Checkpoint C8** (semana 16), dedicado exclusivamente à primeira nota formal de Integração na Unity. Cada momento gera autoavaliação obrigatória e feedback escrito do professor. A nota do PA é composta com **pesos crescentes** por CF até a CF5, com o Checkpoint C8 completando o total (CF1=10%, CF2=15%, CF3=20%, CF4=25%, CF5=20%, Checkpoint C8=10%). Ver Rubrica Mestre, Seção "Pesos por Momento Avaliativo". | 40% | Semanas 3–16 (CF1–CF5 e Checkpoint C8) |
 | **Críticas Coletivas (CC)** | Participação nas críticas como apresentador e avaliador dos colegas. Inclui as 6 críticas formais e as críticas informais semanais. Avalia comunicação, autoavaliação e incorporação de feedback. | 20% | Semanas 2–16 |
 | **Projeto Final – Kit Modular (PF)** | Kit Modular de Ambiente completo com 5–10 assets texturizados, importados e funcionais na Unity. Apresentado na **Crítica Formal 6** (semana 17) com defesa oral e justificativa das escolhas técnicas e artísticas. | 40% | Semana 17 (CF6) |
+
+### 8.1 Composição do Kit Modular: Assets Hero, Secundários e de Repetição
+
+Os 5 a 10 assets exigidos no Kit Modular final não têm todos o mesmo nível de acabamento individual, nem são produzidos com a mesma técnica — essa diferenciação é intencional e faz parte do próprio conteúdo de otimização da Unidade IV. O kit é composto em três camadas, cada uma associada a um momento e uma técnica específicos do cronograma:
+
+| Camada | Quantidade mínima | Quando é produzida | Nível de acabamento | Técnica de produção |
+|---|---|---|---|---|
+| **Assets Hero** | 2 | Semanas 1–12 | Completo: UV individual, PBR completo, pintura de desgaste, bake dedicado | Fluxo individual ensinado semana a semana (Asset 01 e Asset 02) |
+| **Assets Secundários** | 2–3 | A partir da Semana 9, com produção abreviada concluída até a Semana 13 | Ciclo abreviado: UV simples e material PBR coerente com o kit, sem o mesmo aprofundamento de pintura e bake dos heróis | Combinados aos heróis no Texture Atlas (Semana 13) |
+| **Assets de Repetição** | 2–4 | Semana 14 | Uma única Trim Sheet aplicada a múltiplas variações do mesmo elemento modular (parede, moldura, viga) | Trim Sheet (Semana 14) |
+
+A soma mínima das três camadas (2 + 2 + 2) já atinge o piso de 5 assets exigido no Plano de Ensino; um kit com 3 secundários e 4 de repetição chega a 9, dentro do teto de 10. Essa distribuição resolve, por desenho, a diferença de esforço entre as camadas: não se espera que os assets Secundários e de Repetição recebam o mesmo tempo de pintura e bake dedicados aos Heróis — espera-se, em vez disso, que estejam bem integrados ao kit através da técnica de otimização correspondente. Um inventário do kit (asset / camada / status) deve ser registrado como parte da entrega da Semana 13, servindo de evidência para C1 (Processo) e C7 (Otimização) e permitindo ao professor identificar cedo qualquer estudante abaixo do piso de 5 assets.
 
 ---
 
@@ -168,7 +180,7 @@ Nem todos os critérios são avaliados em todas as críticas formais — a tabel
 
 ## 10. Recuperação Paralela
 
-A recuperação paralela ocorre de forma contínua, integrada à dinâmica da disciplina. Estudantes que não atingirem a pontuação mínima em uma entrega do Portfolio de Artefatos (nota < 5,0) terão a oportunidade de retrabalhar o artefato e entregá-lo novamente até a semana seguinte à devolução do feedback. A nota do artefato refeito substitui a nota original.
+A recuperação paralela ocorre de forma contínua, integrada à dinâmica da disciplina. Estudantes que não atingirem a pontuação mínima em uma entrega do Portfolio de Artefatos (nota < 5,0) — incluindo o Checkpoint C8 da Semana 16 — terão a oportunidade de retrabalhar o artefato e entregá-lo novamente até a semana seguinte à devolução do feedback. A nota do artefato refeito substitui a nota original. No caso específico do Checkpoint C8, a reentrega deve ocorrer até o início da Semana 17, garantindo que a Integração na Unity tenha passado por ao menos um ciclo de correção formal antes de valer 12% da nota final na CF6.
 
 O professor indicará formalmente, por escrito, os pontos que devem ser revisados. O processo de recuperação paralela não se aplica às Críticas Coletivas, pois sua natureza é processual e presencial.
 

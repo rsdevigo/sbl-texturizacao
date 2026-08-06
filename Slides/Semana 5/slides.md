@@ -250,6 +250,20 @@ Notas: Os três erros mais frequentes da semana, alinhados ao bloco de dificulda
 
 ---
 
+<!-- _class: industry -->
+
+## Na indústria
+
+Desde a adoção do workflow PBR pela indústria de jogos (por volta de 2014), nenhum material AAA é aprovado sem calibração contra valores de referência real — artistas de textura mantêm cartelas de roughness e metallic medidos, não estimados.
+
+Errar metallic ou roughness fora da faixa física de um material é o tipo de erro que uma revisão técnica sênior identifica em segundos, antes mesmo de olhar o restante do asset.
+
+<!--
+Notas: Contextualizar o valor profissional. PBR deixou de ser opcional na indústria há mais de uma década — hoje é o piso mínimo de qualquer pipeline de material em tempo real. Amarra à CF2 desta semana (C4 avaliado formalmente): a calibração contra referência real que a mini-aula ensinou é literalmente o critério observável da rubrica.
+-->
+
+---
+
 <!-- _class: summary-slide -->
 
 # Resumo

@@ -211,6 +211,20 @@ Notas: Os três erros mais frequentes da semana. O primeiro é técnico (menu), 
 
 ---
 
+<!-- _class: industry -->
+
+## Na indústria
+
+Posicionamento de seam é uma das decisões mais revisadas em crítica de portfólio: um seam mal colocado aparece em qualquer render de apresentação, por melhor que seja a pintura da textura.
+
+Estúdios mantêm guias internos de "seam placement" por tipo de asset — orgânico, hard-surface, arquitetura — exatamente a atenção que a crítica formal de hoje começa a cobrar.
+
+<!--
+Notas: Contextualizar o valor profissional. Seam placement mal feito é um dos primeiros pontos observados em qualquer review técnico de asset, independente da qualidade da textura aplicada. Amarra à CF1 desta semana (C3 avaliado pela primeira vez): o padrão de exigência técnica que começa aqui é o mesmo cobrado profissionalmente.
+-->
+
+---
+
 <!-- _class: summary-slide -->
 
 # Resumo

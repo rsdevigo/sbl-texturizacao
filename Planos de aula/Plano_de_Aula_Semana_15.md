@@ -25,7 +25,7 @@ Os estudantes chegam com:
 
 Ao final da semana, o estudante será capaz de:
 
-1. Explicar o que são UDIMs (Multi Tile Texture), diferenciando-os do espaço UV único 0–1 usado até aqui, e identificar em que situação um asset do próprio kit justificaria seu uso.
+1. Explicar o que são UDIMs (Multi Tile Texture), diferenciando-os do espaço UV único 0–1 usado até aqui e do conceito de Texture Array (estrutura de tempo real do motor, não de autoria), e identificar em que situação um asset do próprio kit justificaria o uso de UDIM.
 2. Diferenciar os principais formatos de compressão de textura para tempo real (BC1, BC3, BC7), relacionando cada um ao tipo de mapa PBR mais adequado (ex.: BC1 para Albedo sem alpha, BC7 para Normal Map de alta fidelidade).
 3. Explicar o que são mipmaps, por que são gerados automaticamente pelo motor e como isso impacta a escolha de resolução e de compressão da textura.
 4. Executar channel packing, combinando três mapas em escala de cinza (Roughness, Metallic, AO) nos canais R, G e B de uma única imagem (mapa ORM), reduzindo o número de texturas carregadas por material.
@@ -88,6 +88,8 @@ Este conceito já foi apresentado de forma breve na Semana 13, ao final da mini-
 *"Pensem no espaço UV 0–1 como uma folha de papel. Até agora, tudo o que vocês fizeram coube em uma folha — mesmo quando vários objetos dividiram a mesma folha no atlas. UDIM é usar mais de uma folha para o mesmo objeto, quando ele é grande ou detalhado demais para uma folha só."*
 
 *"Isso é exceção, não regra: a maioria dos assets de um kit modular de ambiente não precisa de UDIM — atlas e trim sheet já resolvem a maior parte dos casos das Semanas 13 e 14. UDIM se justifica para o objeto mais importante e mais próximo da câmera do seu kit, se houver um."*
+
+**UDIM não é a mesma coisa que Texture Array (panorama rápido, sem prática hoje):** UDIM resolve um problema de **autoria** — dar mais espaço de textura a um único asset durante a produção no Blender/3D Coat (Apostila, Parte V, Cap. 19). Um **Texture Array** resolve um problema diferente, de **tempo real**: é uma estrutura de dados do motor de jogo (Unity, Unreal) que empilha várias texturas do mesmo tamanho e formato em uma única ligação (*binding*), acessadas por índice — útil, por exemplo, para dar variação a dezenas de instâncias do mesmo asset modular (tijolos com pequenas diferenças de sujeira, ou terrenos com múltiplos materiais) sem criar um material por variação (Apostila, Parte V, Cap. 19, ver também Glossário). Não faz parte da prática desta disciplina — a Unity, a partir da Semana 16, usa os assets já otimizados em atlas e trim diretamente —, mas vale nomear a diferença: UDIM multiplica o espaço de textura de um asset antes de ele chegar ao motor; Texture Array multiplica variações de textura já dentro do motor, em tempo de renderização.
 
 **2. Compressão de textura: BC1, BC3, BC7**
 

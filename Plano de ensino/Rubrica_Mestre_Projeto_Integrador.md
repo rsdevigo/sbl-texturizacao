@@ -66,6 +66,8 @@ Todos os critérios são **observáveis e verificáveis**. O avaliador deve cons
 
 **Evidências esperadas:** moodboard, paleta de cores, consistência visual entre assets, capacidade de verbalizar a proposta.
 
+> **Nota sobre camadas do kit (ver Plano de Ensino, Seção 8.1):** o Kit Modular final é composto por Assets Hero, Secundários e de Repetição, com níveis de acabamento individual diferentes por desenho. Na CF6, C2 avalia a **coerência entre essas camadas** — paleta e linguagem visual consistentes em todo o kit — e não exige que Assets Secundários e de Repetição tenham o mesmo grau de refinamento individual dos Assets Hero.
+
 ---
 
 ### Critério 3 — UV Mapping
@@ -113,6 +115,8 @@ Todos os critérios são **observáveis e verificáveis**. O avaliador deve cons
 | 5 — Excelente | Texturização com profundidade narrativa e artística. Desgaste diferenciado por tipo de uso (impacto, fricção, oxidação). Sujeira acumulada com lógica gravitacional e de uso. Micro-detalhes (poros, riscos finos, variação de material) visíveis em close-up sem comprometer a leitura à distância de uso. |
 
 **Evidências esperadas:** renders em close-up e à distância de uso, comparativo com referência visual, isolamento dos mapas de detalhe.
+
+> **Nota sobre camadas do kit (ver Plano de Ensino, Seção 8.1):** o aprofundamento narrativo descrito nos níveis 4 e 5 é esperado prioritariamente nos Assets Hero (Semanas 1–12), onde há tempo dedicado de pintura por asset. Nos Assets Secundários e de Repetição, C5 avalia se o resultado obtido via Texture Atlas (Semana 13) e Trim Sheet (Semana 14) mantém coerência visual com os Heróis, não se atingiu o mesmo nível de detalhamento individual.
 
 ---
 
@@ -162,6 +166,8 @@ Todos os critérios são **observáveis e verificáveis**. O avaliador deve cons
 
 **Evidências esperadas:** screenshot da Unity com o asset montado, configuração dos materiais no Inspector, renders com diferentes condições de luz.
 
+> **Nota sobre o momento de avaliação:** C8 recebe sua primeira nota formal no **Checkpoint C8 (Semana 16)**, não apenas na CF6 (Semana 17). Isso dá ao estudante um ciclo de feedback e recuperação paralela antes de C8 valer 12% da nota final na defesa.
+
 ---
 
 ### Critério 9 — Apresentação
@@ -204,7 +210,7 @@ Os 6 momentos de crítica formal conectam-se diretamente aos três instrumentos 
 
 | Instrumento | Corresponde a | Peso na Nota Final |
 |---|---|---|
-| **Portfolio de Artefatos (PA)** | CF1 a CF5 — semanas 3, 5, 8, 11 e 14 | 40% |
+| **Portfolio de Artefatos (PA)** | CF1 a CF5 (semanas 3, 5, 8, 11 e 14) + Checkpoint C8 (semana 16) | 40% |
 | **Críticas Coletivas (CC)** | C10 — Participação, registrado em todas as CF | 20% |
 | **Projeto Final (PF)** | CF6 — Apresentação e defesa (semana 17) | 40% |
 
@@ -212,18 +218,21 @@ Os 6 momentos de crítica formal conectam-se diretamente aos três instrumentos 
 NF = (PA × 0,40) + (CC × 0,20) + (PF × 0,40)
 ```
 
-A nota do **PA** é calculada com **pesos crescentes** entre CF1 e CF5, valorizando a trajetória de aprendizado — um aluno que melhora consistentemente é recompensado pelo estado avançado do trabalho, não penalizado pelas notas iniciais quando ainda estava formando o conhecimento:
+A nota do **PA** é calculada com **pesos crescentes** entre CF1 e CF5, valorizando a trajetória de aprendizado — um aluno que melhora consistentemente é recompensado pelo estado avançado do trabalho, não penalizado pelas notas iniciais quando ainda estava formando o conhecimento. A partir da Semana 15, C8 (Integração na Unity) passou a ser praticado, mas não existia nenhum momento formal para avaliá-lo com nota antes da defesa final — um risco identificado em auditoria pedagógica, já que C8 é a única competência inteiramente nova do semestre e pesa 12% na CF6. Para corrigir isso, o **Checkpoint C8** (Semana 16) passa a compor o PA como um sexto momento avaliativo, dedicado exclusivamente a C8, com os 10 pontos percentuais necessários remanejados da CF5 (antes 30%, agora 20% — ainda o segundo maior peso entre os momentos intermediários):
 
-| Crítica Formal | Semana | Peso no PA |
-|---|---|---|
-| CF1 | 3 | 10% |
-| CF2 | 5 | 15% |
-| CF3 | 8 | 20% |
-| CF4 | 11 | 25% |
-| CF5 | 14 | 30% |
-| **Total** | | **100%** |
+| Momento Avaliativo | Semana | Peso no PA | Critério(s) avaliado(s) com nota |
+|---|---|---|---|
+| CF1 | 3 | 10% | C1, C2, C3 |
+| CF2 | 5 | 15% | C1, C2, C3, C4 |
+| CF3 | 8 | 20% | C1, C2, C4, C5, C9 |
+| CF4 | 11 | 25% | C1, C2, C4, C5, C6, C9 |
+| CF5 | 14 | 20% | C1, C2, C5, C6, C7, C9 |
+| **Checkpoint C8** | 16 | 10% | C8 (exclusivo) |
+| **Total** | | **100%** | |
 
 A nota de **CC** é consolidada pelo professor a partir dos registros de C10 ao longo de todas as CF. O **PF** é a avaliação da CF6.
+
+> **Checkpoint C8 — natureza e recuperação.** Diferente das CF1–CF5, o Checkpoint C8 avalia um único critério: a nota atribuída corresponde diretamente ao nível de C8 (1 a 5) observado na cena Unity montada na Semana 16. Por integrar o Portfolio de Artefatos, o Checkpoint C8 está sujeito às mesmas regras de **Recuperação Paralela** do Plano de Ensino (Seção 10): um estudante com nota abaixo de 5,0 pode corrigir a integração e reentregar até a semana seguinte (antes da Semana 17), com a nota corrigida substituindo a original. Isso garante que a única competência inteiramente nova do semestre tenha, pela primeira vez, um ciclo formal de avaliação e correção antes de valer 12% da nota final na defesa (CF6).
 
 ---
 
@@ -231,26 +240,30 @@ A nota de **CC** é consolidada pelo professor a partir dos registros de C10 ao 
 
 A tabela indica quais critérios são formalmente avaliados em cada CF. Critérios marcados como *obs.* são observados e registrados, mas não compõem a nota daquela CF.
 
-| Critério | CF1 (Sem. 3) | CF2 (Sem. 5) | CF3 (Sem. 8) | CF4 (Sem. 11) | CF5 (Sem. 14) | CF6 (Sem. 17) |
-|---|---|---|---|---|---|---|
-| C1 — Processo de Projeto | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| C2 — Direção Artística | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| C3 — UV Mapping | ✓ | ✓ | obs. | — | — | ✓ |
-| C4 — Materiais PBR | — | ✓ | ✓ | ✓ | obs. | ✓ |
-| C5 — Texturização | — | — | ✓ | ✓ | ✓ | ✓ |
-| C6 — Bake | — | — | — | ✓ | ✓ | ✓ |
-| C7 — Otimização | — | — | — | — | ✓ | ✓ |
-| C8 — Integração na Unity | — | — | — | — | — | ✓ |
-| C9 — Apresentação | — | obs. | ✓ | ✓ | ✓ | ✓ |
-| C10 — Participação (CC) | obs. | obs. | obs. | obs. | obs. | ✓ |
+| Critério | CF1 (Sem. 3) | CF2 (Sem. 5) | CF3 (Sem. 8) | CF4 (Sem. 11) | CF5 (Sem. 14) | Checkpoint C8 (Sem. 16) | CF6 (Sem. 17) |
+|---|---|---|---|---|---|---|---|
+| C1 — Processo de Projeto | ✓ | ✓ | ✓ | ✓ | ✓ | obs. | ✓ |
+| C2 — Direção Artística | ✓ | ✓ | ✓ | ✓ | ✓ | — | ✓ |
+| C3 — UV Mapping | ✓ | ✓ | obs. | — | — | — | ✓ |
+| C4 — Materiais PBR | — | ✓ | ✓ | ✓ | obs. | — | ✓ |
+| C5 — Texturização | — | — | ✓ | ✓ | ✓ | — | ✓ |
+| C6 — Bake | — | — | — | ✓ | ✓ | — | ✓ |
+| C7 — Otimização | — | — | — | — | ✓ | obs. | ✓ |
+| C8 — Integração na Unity | — | — | — | — | — | ✓ | ✓ |
+| C9 — Apresentação | — | obs. | ✓ | ✓ | ✓ | — | ✓ |
+| C10 — Participação (CC) | obs. | obs. | obs. | obs. | obs. | obs. | ✓ |
 
 > **Legenda:** ✓ = critério avaliado e registrado nesta CF | obs. = observado e anotado, não compõe nota | — = não aplicável ainda
+>
+> **Sobre o Checkpoint C8:** é o único momento avaliativo da disciplina dedicado a um único critério. C1 e C7 seguem observados (não compõem a nota do Checkpoint) porque o processo de importação e a verificação de otimização em contexto real continuam relevantes como evidência acumulada para a CF6, mesmo sem gerar nota própria aqui.
 
 ---
 
 #### Avaliação Final (Semana 17 — CF6 / Projeto Final)
 
 > Avalia o projeto completo integrado na apresentação e defesa final. Todos os critérios são considerados.
+
+> **Composição do kit avaliado:** o Kit Modular deve conter no mínimo 5 assets, distribuídos nas três camadas definidas no Plano de Ensino (Seção 8.1) — Hero, Secundários e de Repetição. C2 e C5, os dois critérios de maior peso nesta CF, avaliam a coerência visual e narrativa **entre as camadas do kit como um todo**, não a repetição do mesmo nível de acabamento individual em todos os assets.
 
 | Critério | Peso |
 |---|---|
@@ -288,22 +301,22 @@ A tabela indica quais critérios são formalmente avaliados em cada CF. Critéri
 
 ### Instrumento 1 — Ficha de Crítica Formal
 
-> Para uso nas 6 críticas formais (CF1–CF6). Antes de preencher, consulte a tabela **Critérios Ativos por Crítica Formal** e deixe em branco os critérios marcados como "—" para a CF atual. Critérios marcados como "obs." recebem anotação mas não nota.
+> Para uso nas 6 críticas formais (CF1–CF6) e no Checkpoint C8 (Semana 16). Antes de preencher, consulte a tabela **Critérios Ativos por Crítica Formal** e deixe em branco os critérios marcados como "—" para o momento atual. Critérios marcados como "obs." recebem anotação mas não nota.
 
-**Estudante:** _____________________________ **CF:** _______ **Semana:** _______ **Data:** _______
+**Estudante:** _____________________________ **CF / Checkpoint:** _______ **Semana:** _______ **Data:** _______
 
-| Critério | Status nesta CF | 1 | 2 | 3 | 4 | 5 | Observação |
+| Critério | Status neste momento | 1 | 2 | 3 | 4 | 5 | Observação |
 |---|---|---|---|---|---|---|---|
-| C1 — Processo | ✓ em todas | ○ | ○ | ○ | ○ | ○ | |
-| C2 — Dir. Artística | ✓ em todas | ○ | ○ | ○ | ○ | ○ | |
+| C1 — Processo | ✓ em todas / obs. no Checkpoint C8 | ○ | ○ | ○ | ○ | ○ | |
+| C2 — Dir. Artística | ✓ em todas (exceto Checkpoint C8) | ○ | ○ | ○ | ○ | ○ | |
 | C3 — UV Mapping | ✓ CF1–CF2 / obs. CF3 | ○ | ○ | ○ | ○ | ○ | |
 | C4 — Materiais PBR | ✓ CF2–CF4 / obs. CF5 | ○ | ○ | ○ | ○ | ○ | |
 | C5 — Texturização | ✓ CF3–CF6 | ○ | ○ | ○ | ○ | ○ | |
 | C6 — Bake | ✓ CF4–CF6 | ○ | ○ | ○ | ○ | ○ | |
-| C7 — Otimização | ✓ CF5–CF6 | ○ | ○ | ○ | ○ | ○ | |
-| C8 — Unity | ✓ CF6 apenas | ○ | ○ | ○ | ○ | ○ | |
+| C7 — Otimização | ✓ CF5–CF6 / obs. no Checkpoint C8 | ○ | ○ | ○ | ○ | ○ | |
+| C8 — Unity | ✓ **Checkpoint (Sem. 16) e CF6** | ○ | ○ | ○ | ○ | ○ | |
 | C9 — Apresentação | obs. CF2 / ✓ CF3–CF6 | ○ | ○ | ○ | ○ | ○ | |
-| C10 — Critiques (CC) | obs. CF1–CF5 / ✓ CF6 | ○ | ○ | ○ | ○ | ○ | |
+| C10 — Critiques (CC) | obs. CF1–CF5 e Checkpoint C8 / ✓ CF6 | ○ | ○ | ○ | ○ | ○ | |
 
 **Ponto mais forte desta crítica:**  
 _____________________________________________________________
@@ -355,7 +368,7 @@ O que mudaria: _________________________________________________
 Nível: _____ | Evidência: ____________________________________________  
 O que mudaria: _________________________________________________
 
-**C8 — Integração na Unity** *(CF6 apenas)*  
+**C8 — Integração na Unity** *(Checkpoint C8 — Semana 16 — e CF6)*  
 Nível: _____ | Evidência: ____________________________________________  
 O que mudaria: _________________________________________________
 
@@ -454,6 +467,7 @@ Marque o que foi concluído nesta semana:
 - [ ] Resoluções de textura definidas e justificadas
 - [ ] Verificado se o asset pode compartilhar textura com outro do kit
 - [ ] Trim sheet aplicado onde cabível
+- [ ] Inventário do kit atualizado (asset / camada — Hero, Secundário ou Repetição / status), a partir da Semana 13
 
 #### Unity (quando aplicável)
 - [ ] Asset importado e na escala correta

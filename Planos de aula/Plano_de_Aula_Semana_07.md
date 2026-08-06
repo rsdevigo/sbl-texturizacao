@@ -32,6 +32,7 @@ Ao final da semana, o estudante será capaz de:
 3. Gerar um Normal Map procedural no Blender usando os nós Noise Texture → Bump → Normal Map e conectá-lo ao Principled BSDF.
 4. Criar variação de Roughness dentro de um material usando os nós Noise Texture e ColorRamp.
 5. Montar um material PBR completo no Blender com os quatro canais principais conectados: Albedo (Image Texture), Metallic (valor), Roughness (nó procedural) e Normal (nó procedural ou mapa).
+6. Situar a geração procedural usada hoje (Normal e Roughness via nós) dentro do conceito mais amplo de texturização procedural apresentado na Semana 1 e aprofundado na Apostila (Parte IV, Cap. 13) — reconhecendo que o mesmo princípio de nós pode gerar também o próprio Albedo, não apenas mapas de suporte.
 
 > O Subsurface Scattering (SSS) não é abordado nesta semana — ele é apresentado na Semana 8, junto ao sistema de canais do 3D Coat, para não sobrecarregar esta mini-aula com um quinto conceito novo.
 
@@ -134,6 +135,14 @@ Noise Texture B (escala grande, macro-relevo) → MixRGB/Math → Bump
 ```
 
 > **Nota do professor:** O Subsurface Scattering (SSS) não é tratado nesta mini-aula — ele será apresentado na Semana 8, como um canal adicional do sistema de camadas do 3D Coat. Isso mantém o foco de hoje inteiramente no Normal Map e na variação procedural de Roughness.
+
+**3. Geração procedural como técnica de conteúdo, não só de suporte (panorama, 3 min)**
+
+Até aqui, os nós procedurais desta semana serviram para gerar mapas de *suporte* — Normal e Roughness, canais que dão profundidade e variação a uma cor já definida pelo Albedo fotográfico da Semana 6. Isso é apenas uma parte do que a Semana 1 apresentou como a distinção **raster vs. procedural**: o mesmo sistema de nós usado hoje para Bump e ColorRamp pode gerar o **Albedo inteiro** — um padrão de tijolos com Voronoi, veios de madeira com Wave Texture, manchas de sujeira com múltiplas camadas de Noise — sem depender de nenhuma imagem fotográfica.
+
+*"O que vocês fizeram hoje com Normal e Roughness é o mesmo princípio, em menor escala, do que a Apostila descreve no Capítulo 13 (Parte IV) para o material inteiro: gerar a aparência por matemática e parâmetros, não por pixels fixos de uma foto. A vantagem é que um material procedural nunca repete um pixel duas vezes e pode ser ajustado depois sem repintar nada — a desvantagem é o controle artístico mais indireto, que é exatamente o que a pintura manual do 3D Coat, a partir da Semana 8, devolve ao processo."*
+
+> **Leitura complementar recomendada (não avaliada nesta semana):** Apostila, Parte IV, Cap. 13 — Texturização Procedural, para o estudante que quiser levar essa técnica além do Normal/Roughness e experimentar Albedo inteiramente procedural em um asset secundário do próprio kit (ver Plano de Ensino, Seção 8.1 — Assets Secundários).
 
 ---
 
@@ -284,6 +293,7 @@ Para estudantes que concluíram os dois assets:
 2. Ou: exportar o material do Asset 01 como `.blend` de material reutilizável para usar como ponto de partida nos próximos assets do kit.
 3. Ou: começar a mapear a textura seamless também ao canal `Normal` diretamente — conectar o PNG do Poly Haven que inclui Normal Map e comparar com o Normal Map procedural.
 4. Ou: se o kit tiver um elemento orgânico (planta, vela, tecido), adiantar a leitura do trecho de Subsurface Scattering na Apostila (Semana 8) e testar informalmente o parâmetro `Subsurface` do Principled BSDF — sem cobrança de entrega, apenas exploração.
+5. Ou: experimentar gerar um Albedo inteiramente procedural (não apenas Normal/Roughness) para um Asset Secundário do kit — por exemplo, `Voronoi Texture → ColorRamp` para um padrão de tijolos ou pedras irregulares, conectado diretamente ao `Base Color` do Principled BSDF. Esta é a aplicação prática da leitura complementar da Apostila (Parte IV, Cap. 13) e uma forma rápida de dar textura básica a um asset que não vai receber o mesmo aprofundamento de pintura dos Assets Hero.
 
 **Papel do professor:**
 

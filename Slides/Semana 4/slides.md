@@ -235,6 +235,20 @@ Notas: Os três erros mais frequentes da semana. O primeiro é de ORDEM, o segun
 
 ---
 
+<!-- _class: industry -->
+
+## Na indústria
+
+Texel density consistente entre todos os assets de um jogo é item obrigatório de qualquer guia de estilo técnico de produção — inconsistência aqui é apontada em qualquer revisão de arte, por mais bonita que seja a textura isolada.
+
+Ferramentas como o UVPackmaster existem porque empacotar UV com eficiência, à mão, para um kit inteiro, não escala em produção real — mas o critério que a ferramenta automatiza é exatamente o que vocês aprenderam a julgar hoje.
+
+<!--
+Notas: Contextualizar o valor profissional. Texel density inconsistente é um dos erros mais visíveis (e mais fáceis de evitar) em portfólios iniciantes. Amarra à Semana 6, onde o addon UVPackmaster é citado como recapitulação — reforçar que a ferramenta acelera, mas o julgamento sobre a proporção correta continua sendo do artista.
+-->
+
+---
+
 <!-- _class: summary-slide -->
 
 # Resumo

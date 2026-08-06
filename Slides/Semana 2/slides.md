@@ -250,6 +250,20 @@ Notas: O primeiro é o problema técnico número 1 da semana; fixar Z → Materi
 
 ---
 
+<!-- _class: industry -->
+
+## Na indústria
+
+O checkerboard test que vocês praticaram hoje é o primeiro item de qualquer checklist de QA de UV em produção — nenhum asset avança para texturização sem passar por ele.
+
+Distorção não identificada agora aparece ampliada em toda textura pintada depois: corrigir na Semana 2 é sempre mais barato do que repintar na Semana 9.
+
+<!--
+Notas: Contextualizar o valor profissional. Checkerboard/UV checker é ferramenta de verificação padrão em qualquer pipeline, não recurso didático exclusivo da disciplina. Amarra à Semana 3 e 4 (padding, texel density): o hábito de verificar UV com checker antes de seguir adiante é o mesmo que sustenta C3 até a CF6.
+-->
+
+---
+
 <!-- _class: summary-slide -->
 
 # Resumo

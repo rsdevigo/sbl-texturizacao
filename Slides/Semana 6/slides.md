@@ -265,6 +265,20 @@ Notas: Os três erros mais frequentes da semana, alinhados ao bloco de dificulda
 
 ---
 
+<!-- _class: industry -->
+
+## Na indústria
+
+Bibliotecas como Quixel Megascans e Poliigon existem porque poucos estúdios pintam textura seamless do zero — a competência real de produção é adaptar e integrar referência de qualidade ao material do próprio projeto, não recriar tudo manualmente.
+
+Saber reconhecer (e corrigir) uma textura que não fecha em tile é tão valorizado quanto saber produzir uma do zero — é o defeito mais rápido de notar em qualquer render de superfície repetida.
+
+<!--
+Notas: Contextualizar o valor profissional. O uso de bibliotecas de textura scaneada é rotina em produção — a habilidade técnica cobrada do artista é curadoria, adaptação e correção de seams, não produção manual de tudo. Amarra à Semana 13/14: a mesma atenção a costura sem descontinuidade volta no tiling de trim sheets.
+-->
+
+---
+
 <!-- _class: summary-slide -->
 
 # Resumo
