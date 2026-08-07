@@ -25,7 +25,6 @@ Um **Kit Modular de Ambiente** construído por você, do início ao fim do semes
 Tudo que aprendermos será aplicado a esse único projeto.
 
 ![large](assets/kit_modular_exemplo.png)
-Fonte: https://kenney-assets.itch.io/modular-buildings
 <!--
 Notas: Esta é a promessa da disciplina. Não é uma sequência de exercícios soltos — é um projeto que acompanha o semestre inteiro. Fixar essa ideia agora reduz a ansiedade por "conteúdo técnico" na primeira semana.
 
@@ -94,10 +93,18 @@ Notas: Material é o "recipiente"; textura é o "conteúdo". Essa relação hier
 | Controle detalhado | Resolução infinita |
 | Ocupa memória | Leve, ajustável |
 
+<!--
+Notas: Apresentar como duas abordagens complementares, não rivais. Na disciplina o foco será raster/PBR pintado no 3D Coat, mas o estudante deve saber que a procedural existe. Evitar aprofundar em nós procedurais.
+-->
+
+---
+
+## Raster vs. Procedural — na prática
+
 ![large](assets/raster_vs_procedural.png)
 
 <!--
-Notas: Apresentar como duas abordagens complementares, não rivais. Na disciplina o foco será raster/PBR pintado no 3D Coat, mas o estudante deve saber que a procedural existe. Evitar aprofundar em nós procedurais.
+Notas: Mostrar o contraste visual antes de seguir para o pipeline da disciplina.
 
 FIGURA (produzir) — assets/raster_vs_procedural.webp
 Objetivo: contrastar visualmente uma textura raster (pixelada ao ampliar) com uma procedural (nítida em qualquer escala), tornando a diferença concreta.
@@ -165,7 +172,7 @@ Fonte: https://bernard_trudel.artstation.com/projects/XB0bd3
 
 <div class="media">
 
-![large](assets/moodboard_exemplo.jpeg)
+![large](assets/moodboard_exemplo.jpg)
 
 </div>
 
