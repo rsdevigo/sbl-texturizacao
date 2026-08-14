@@ -23,6 +23,7 @@
     - [Plano de Aula Semana 17](/Planos%20de%20aula/Plano_de_Aula_Semana_17.md)
   - Recursos
     - [Recursos](/Recursos/Recursos_de_Aprendizagem_a_Preparar.md)
+    - [Lista de Props Culturais MS](/Recursos/Lista_de_Props_Culturais_MS.md)
   - Guia do Professor
     - [Guia do Professor Texturizacao](/Guia%20do%20Professor/Guia_do_Professor_Texturizacao.md)
   - Slides

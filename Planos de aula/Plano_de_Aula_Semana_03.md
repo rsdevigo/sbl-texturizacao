@@ -1,22 +1,20 @@
 # Plano de Aula — Semana 3
-**Disciplina:** Texturização | **Metodologia:** Studio-Based Learning  
-**Unidade:** I — Fundamentos e Mapeamento UV  
-**Tema:** Abertura de malha com Seams manuais e Unwrap  
-**Apostila:** Parte II, Cap. 5 — UV Unwrapping (Smart UV Project, Seams e Unwrap manual)  
-**Carga horária:** 3h (2 encontros de 1h30)  
-**Crítica:** ⭕ FORMAL — autoavaliação obrigatória, rubrica e feedback escrito do professor
+**Disciplina:** Texturização | **Curso:** Tecnologia em Jogos Digitais | **Metodologia:** Studio-Based Learning
+**Unidade:** I — Fundamentos, Mapeamento UV e Definição do Hero Asset (Semanas 1–5)
+**Tema da semana:** Moodboard temático e definição do Hero Asset Referência
+**Apostila:** Revisão da Parte I, Cap. 1 (aplicada à escolha do tema); leitura antecipada da Parte II, Cap. 5 — UV Unwrapping, para a Semana 4
+**Carga horária:** 3h (2 encontros de 1h30)
+**Crítica:** 🔵 Informal — Roda de temas
 
 ---
 
-## Pré-requisito da semana
+## O que já foi ministrado (Semanas 1–2 — não repetir)
 
-Os estudantes chegam com:
-- Tema do Kit Modular definido e registrado no Documento de Definição de Tema (Semana 1)
-- Experiência com os 4 tipos de projeção UV automática (planar, cilíndrica, esférica, cúbica) e checkerboard (Semana 2)
-- Familiaridade com o UV Editor no layout dividido com o Viewport (Semana 2)
-- Arquivo `.blend` com 3 objetos UV mapeados entregue (Semana 2)
+Na **Semana 1**, os estudantes foram apresentados ao trabalho interdisciplinar (Pintura Digital e Arte Conceitual, Texturização, Modelagem 3D e Level Design; entregável final = fase caminhável na Unity; tema = mundo fantástico a partir de elementos regionais de MS ou do estado de origem) e participaram da dinâmica de ideação cultural: apresentação de 5 props culturais reais de MS (Cerâmica Terena, Viola de Cocho, Tereré/erva-mate, Complexo Ferroviário Rede Noroeste, Igreja/Catedral colonial), pesquisa em grupo especialista, reagrupamento jigsaw e aplicação de técnicas de ideação forçada (matriz morfológica, SCAMPER, conexões forçadas). Cada estudante saiu com **1–2 ideias individuais de recorte temático, sem compromisso formal**.
 
-Nenhuma operação de seam ou unwrap manual foi apresentada ainda. Esta é a primeira vez que os estudantes trabalham diretamente em um asset do seu kit modular — não em objetos de prática genéricos.
+Na **Semana 2**, os estudantes tiveram o primeiro contato técnico real com o Blender: conceito de espaço UV (0–1), distorção, sobreposição, os quatro tipos de projeção (planar, cilíndrica, esférica, cúbica) e uso do checkerboard como ferramenta de diagnóstico, praticados em objetos geométricos neutros (cubo, cilindro, esfera, prop neutro) — **sem qualquer amarração temática**.
+
+**Importante:** até aqui, nenhum estudante tem tema, moodboard ou Hero Asset oficiais — apenas ideias em amadurecimento e uma ferramenta técnica (projeção UV) ainda não aplicada a um asset real. Esta é a semana em que isso muda: **o tema e o Hero Asset Referência passam a ser dados oficiais do trabalho de cada estudante a partir de hoje**, e todo material das semanas seguintes vai tratá-los como definidos.
 
 ---
 
@@ -24,11 +22,11 @@ Nenhuma operação de seam ou unwrap manual foi apresentada ainda. Esta é a pri
 
 Ao final da semana, o estudante será capaz de:
 
-1. Identificar as limitações do Smart UV Project e explicar por que ele é insuficiente para assets de produção.
-2. Marcar seams em uma malha 3D com base em critérios visuais e estruturais (bordas ocultas, áreas de menor contraste, geometria natural do objeto).
-3. Executar o Unwrap manual no Blender e verificar o resultado com checkerboard.
-4. Organizar islands no UV Editor: separar, mover, rotacionar e escalar islands manualmente.
-5. Identificar problemas no próprio UV layout usando os critérios da Rubrica Mestre (C3) e articular a autoavaliação por escrito antes da crítica formal.
+1. Consolidar um moodboard temático curado (mínimo de 10 referências organizadas) que traduza visualmente o recorte cultural amadurecido desde a Semana 1 em um mundo fantástico coerente.
+2. Explicar o conceito de Hero Asset Referência — uma peça única e altamente representativa do tema que funciona como prova de conceito do pipeline completo (UV → PBR → 3D Coat) antes de escalar para o Kit Modular inteiro.
+3. Selecionar e justificar por escrito um Hero Asset Referência, avaliando três critérios: legibilidade do tema, viabilidade técnica e potencial de reaproveitamento de linguagem visual no restante do kit.
+4. Comunicar oralmente, de forma clara e justificada, a proposta temática e a escolha do Hero Asset para a turma e o professor (primeiro exercício formal de comunicação visual da disciplina).
+5. Alinhar com Modelagem 3D e Level Design o briefing do Hero Asset Referência, viabilizando sua modelagem para a Semana 4.
 
 ---
 
@@ -36,23 +34,21 @@ Ao final da semana, o estudante será capaz de:
 
 | Critério | Foco desta semana |
 |---|---|
-| C1 — Processo de Projeto | Pasta organizada, arquivo salvo com nomenclatura correta, autoavaliação entregue antes da crítica |
-| C2 — Direção Artística | O asset escolhido para esta semana é coerente com o moodboard e representa o tema definido |
-| C3 — UV Mapping | **Foco principal:** ausência de sobreposição, distorção mínima, seams em locais não visíveis, islands organizadas |
-| C10 — Participação | Qualidade da autoavaliação, apresentação na crítica formal e feedback oferecido ao colega |
+| C1 — Processo de Projeto | Início do registro formal de processo: pasta de referências organizada (moodboard), primeira decisão documentada e justificada por escrito |
+| C2 — Direção Artística | Primeira articulação da proposta visual: paleta e linguagem ainda em formação — nível esperado 2–3 da rubrica, não mais que isso nesta fase |
+| C10 — Participação nas Critiques | Engajamento na roda de temas: clareza ao apresentar a própria proposta e qualidade das perguntas/comentários aos colegas |
 
-> Esta é a **primeira crítica formal** da disciplina. O professor deve comunicar com clareza antes do encontro que a autoavaliação é obrigatória e será comparada com a avaliação do professor durante a crítica.
+> C3 (UV Mapping) e C4–C9 ainda não são exigidos — não há UV, material ou textura aplicados a um asset real até aqui. Esta semana não gera nota isolada, mas **abre o processo que será avaliado na Crítica Formal da Semana 4 (C3)**: um moodboard fraco ou um Hero Asset mal justificado nesta semana compromete diretamente a qualidade do que chega à CF1.
 
 ---
 
 ## Recursos necessários
 
-- Computadores com Blender instalado (3.x ou 4.x)
-- Arquivo de demonstração preparado pelo professor: um prop temático com geometria moderada — recomenda-se barril, caixote ou bloco de pedra lavrada (formato `.blend`, UV ainda não aberto)
-- Textura de checkerboard (embutida no Blender ou PNG externo 1024×1024 com grid de cores)
-- Arquivo de Autoavaliação impresso ou compartilhado digitalmente (Instrumento 2 da Rubrica Mestre) — distribuir **antes** do segundo encontro, de preferência no fechamento do primeiro
-- Projetor para demonstração e para a crítica formal
-- Apostila — Parte II, Cap. 5 — disponibilizada antes da aula
+- Computadores ou dispositivos para apresentação de referências visuais (PDF, PNG ou link de moodboard online — Pinterest, PureRef, Milanote ou equivalente)
+- Projetor para a roda de temas
+- Modelo de justificativa de Hero Asset (template curto: nome do asset, 1 parágrafo de justificativa) — professor pode distribuir como documento compartilhado
+- Apostila — revisão da Parte I, Cap. 1, e leitura antecipada da Parte II, Cap. 5 (disponibilizada antes da aula)
+- Canal de comunicação com os professores de Pintura Digital e Arte Conceitual e de Modelagem 3D e Level Design, para alinhar o cronograma de entrega das referências e do briefing do Hero Asset entre as três disciplinas
 
 ---
 
@@ -60,176 +56,123 @@ Ao final da semana, o estudante será capaz de:
 
 ### Mini Aula — 20 minutos
 
-**Seams: a lógica do corte que o computador não faz por você**
+**O que é um Hero Asset Referência e por que ele existe**
 
-Objetivo: construir o raciocínio por trás do posicionamento de seams antes de qualquer operação técnica.
+Objetivo: dar significado técnico e estratégico à escolha que os estudantes vão fazer hoje, antes de pedir que decidam.
 
 **Desenvolvimento:**
 
-Abrir com a pergunta da semana passada relembrada: *"Na Semana 2, vocês testaram o Smart UV Project. O que aconteceu com ele num objeto mais complexo do que um cubo?"* Deixar 2–3 respostas antes de prosseguir.
-
-Apresentar a limitação central:
-
-> *"O Smart UV Project corta onde o Blender acha melhor — que é onde o ângulo entre faces é maior. Ele não sabe o que é visível no jogo, não sabe onde fica a frente do objeto, não sabe que a costura de uma bota não aparece no personagem. Seams manuais são o contraponto: você decide onde cortar e por quê."*
+Abrir com uma pergunta para a turma: *"Se vocês tivessem que provar, com uma única peça, que o pipeline inteiro — UV, PBR, pintura no 3D Coat — funciona para o tema de vocês, qual peça escolheriam?"* Deixar 2–3 respostas antes de nomear o conceito.
 
 **Conteúdo a cobrir:**
 
-**1. O que é um seam**  
-Um seam é uma marcação de aresta que instrui o Blender a cortar a malha naquele ponto antes de desdobrar. É o equivalente às dobras de uma caixa de papelão: você escolhe onde abrir para que o objeto "planifique" da forma que você quer. Seams não alteram a geometria — são apenas instruções de corte para o UV.
+1. **Definição de Hero Asset Referência.** Uma peça única, não necessariamente parte literal do Kit Modular final, que representa com máxima clareza o tema escolhido. Ela funciona como prova de conceito: é nela que cada etapa do pipeline (abertura de UV na Semana 4, material PBR na Semana 6–7, texturização no 3D Coat na Semana 8–9) é testada pela primeira vez, antes de escalar para o conjunto de assets do Kit Modular a partir da Semana 10.
 
-**2. Critérios para posicionar seams bem**  
-- Preferir arestas que ficam ocultas no modelo final: fundos, partes inferiores, interior de encaixes, áreas que ficam contra outras superfícies.
-- Seguir a geometria natural do objeto: costuras de barril ficam nas junções das tábuas, não no centro de uma face.
-- Em objetos com simetria, um seam no eixo central permite espelhar UV islands e economizar espaço.
-- Evitar seams em arestas em destaque, cantos frontais ou superfícies que o jogador sempre verá de perto.
+2. **Por que não começar direto pelo Kit Modular.** Modelar, abrir UV e texturizar uma peça só é mais rápido de iterar e corrigir do que descobrir um problema de pipeline depois de já ter dez assets modelados. O Hero Asset é onde os erros são baratos.
 
-**3. Princípios de um bom layout UV**  
-- **Islands:** cada região desdobrada separada por seams forma uma island. O objetivo é ter o menor número de islands necessário sem introduzir distorção.
-- **Padding:** espaço em branco entre islands. Evita que texturas "sangrem" de uma island para outra, especialmente em mipmaps. Valor mínimo prático: 4 pixels para texturas de 1024×1024.
-- **Aproveitamento de espaço:** ocupar bem o quadrado UV (0–1). Espaço desperdiçado = resolução de textura desperdiçada.
+3. **Três critérios para escolher um bom Hero Asset:**
+   - **Legibilidade do tema:** olhando só para essa peça, dá para reconhecer o mundo fantástico proposto? Ela concentra os elementos mais distintivos do recorte cultural trabalhado desde a Semana 1?
+   - **Viabilidade técnica:** a peça tem complexidade adequada a um semestre de aprendizagem — nem tão simples que não desafie o pipeline (um cubo texturizado não prova nada), nem tão complexa que consuma todo o tempo disponível (uma arquitetura inteira não é um Hero Asset, é o Kit Modular inteiro).
+   - **Potencial de reaproveitamento:** os materiais, a paleta e a linguagem de desgaste definidos nessa peça poderão ser reaproveitados nos assets secundários e de repetição do kit a partir da Semana 10? Um Hero Asset "isolado" demais do resto do kit gera retrabalho depois.
 
-**4. Smart UV Project: quando ainda é útil**  
-Para objetos de apoio, fundos ou assets que nunca serão vistos de perto, o Smart UV Project é aceitável. Para assets principais do kit modular — que terão texturização detalhada — seams manuais são obrigatórios.
+4. **O papel do moodboard.** O moodboard não é uma coleção de imagens bonitas — é a evidência visual de que a proposta temática é coerente e específica. Um moodboard genérico ("fantasia medieval") não orienta escolha nenhuma; um moodboard específico (por exemplo: cerâmica Terena reinterpretada como arquitetura mágica, paleta de barro queimado e pigmento mineral) já sugere naturalmente qual peça vira o Hero Asset.
 
-> **Nota do professor:** Não entre em detalhes sobre padding numérico ou empacotamento automático agora — isso é Semana 4. O foco desta mini aula é o raciocínio de posicionamento de seam, não a otimização de layout. Se um estudante perguntar sobre UVPackmaster ou add-ons de empacotamento, responda: *"Vamos usar isso na Semana 4. Hoje o objetivo é entender a lógica antes de automatizar."*
+> **Nota do professor:** não entre em detalhes técnicos de UV ou material nesta mini aula — isso pertence às Semanas 4 e 6–8. O foco de hoje é decisão de projeto e comunicação visual, não execução técnica. Se surgir a pergunta "como eu abro o UV disso?", responda: *"Isso é semana que vem — hoje o Modelagem 3D e Level Design ainda está desenhando essa peça com vocês. Primeiro escolhemos o quê, depois o como."*
 
 ---
 
 ### Demonstração — 20 minutos
 
-**Abertura de malha de um prop com seams manuais no Blender**
+**Exemplos de Hero Assets de referência e critério de coerência com o moodboard**
 
-**Setup (2 min):**  
-Abrir o arquivo de demonstração com o prop (barril, caixote ou pedra). Configurar o layout dividido: Viewport 3D à esquerda, UV Editor à direita. Ativar Material Preview com checkerboard já conectado ao material (ou conectar ao vivo se a turma tiver visto como fazer na Semana 2).
+**Parte 1 — Exemplos de projetos de referência (12 min):**
 
-**Parte 1 — Smart UV Project como linha de base (3 min):**  
-Entrar em Edit Mode, selecionar tudo (`A`), aplicar Smart UV Project. Mostrar o resultado no UV Editor e no Viewport com checker. Perguntar à turma: *"Onde vocês veem distorção? Onde estão as costuras?"* Identificar 2–3 problemas concretos antes de prosseguir.
+1. Apresentar 3–4 exemplos de projetos publicados (ArtStation ou portfólios equivalentes) em que um único asset — uma arma, um altar, uma porta, um totem — funciona claramente como "peça-chave" de um kit modular maior.
+2. Para cada exemplo, guiar a turma a identificar: *"O que essa peça está me dizendo sobre o mundo antes mesmo de eu ver o resto do kit?"* — praticando a leitura de legibilidade temática que será exigida deles.
+3. Mostrar, quando disponível, o moodboard que provavelmente originou aquele Hero Asset, e apontar a correspondência direta entre referência e execução: paleta, formas, materiais.
 
-**Parte 2 — Marcando seams manualmente (10 min):**  
+**Parte 2 — Critério de avaliação da coerência moodboard → Hero Asset (8 min):**
 
-1. Desfazer o Smart UV Project (`Ctrl+Z`).
-2. Mudar para seleção de aresta (`2`).
-3. Selecionar arestas estratégicas seguindo os critérios da mini aula: fundo do barril, junção vertical traseira, aro inferior.
-4. Para cada grupo de arestas selecionadas: `Edge > Mark Seam` (ou `Ctrl+E` → Mark Seam). Mostrar como as arestas ficam em vermelho.
-5. Selecionar tudo (`A`) e executar `U` → **Unwrap**. Observar o novo layout no UV Editor.
-6. Comparar com checkerboard: onde a distorção diminuiu em relação ao Smart UV Project?
+1. Demonstrar, com um exemplo fictício rápido (pode ser um recorte simples, tipo "ferrovia abandonada + mitologia local"), como transformar um conjunto de referências dispersas em uma escolha de Hero Asset justificável em um parágrafo.
+2. Modelar em voz alta a estrutura da justificativa que os estudantes vão escrever: *"Este objeto representa o tema porque [elemento do moodboard] + é viável porque [escopo/técnica] + vai se conectar ao resto do kit porque [material/paleta reaproveitável]."*
 
-> Ao vivo, mostrar um seam mal posicionado de propósito (em uma aresta frontal visível) e perguntar: *"Se a textura tivesse uma pintura aqui, o que aconteceria nessa aresta?"* — reforça a lógica visual do critério.
-
-**Parte 3 — Organização das islands (5 min):**  
-
-1. No UV Editor, mostrar como selecionar uma island individualmente (`L` sobre a island).
-2. Mover (`G`), rotacionar (`R`) e escalar (`S`) islands — os mesmos atalhos do Viewport 3D.
-3. Posicionar as islands dentro do quadrado UV sem sobreposição.
-4. Mostrar o Overlay de UV Stretch para verificar distorção residual.
-
-**Fechamento da demo (0 min — integrado):**  
-Não há encerramento formal. Transicionar diretamente para o estúdio: *"Agora vocês fazem no asset de vocês. O objetivo não é chegar no perfeito — é chegar no funcional e entender o que cada seam fez."*
-
-> **Nota do professor:** Mantenha o arquivo de demonstração aberto durante o estúdio para que os estudantes possam consultar os atalhos e o processo. Projete-o na tela ou deixe disponível na pasta compartilhada da turma.
+> **Nota do professor:** não é necessário abrir Blender ou 3D Coat nesta demonstração — é a primeira aula inteiramente conceitual/curatorial do semestre. Isso é proposital: reforça que decisão de projeto é etapa distinta de execução técnica.
 
 ---
 
 ### Produção em Estúdio — 50 minutos
 
-**Abrir o UV do Asset 01 do Kit Modular com seams manuais**
+**Consolidação do moodboard e primeira definição do Hero Asset**
 
 **Consigna entregue verbalmente:**
 
-> *"Este é o primeiro asset real do kit de vocês. Não é um exercício de prática — é o começo do projeto semestral. O UV que vocês abrirem hoje vai ser a base da texturização nas próximas semanas. Façam com cuidado. Distribuam os seams onde eles fazem sentido para o seu objeto específico — não existe uma resposta única. Existe a justificativa certa."*
+> *"Primeira etapa: organizem as referências que vocês já têm de Pintura Digital e Arte Conceitual e das ideias da Semana 1 em um moodboard único, com pelo menos 10 imagens. Não precisa ser bonito ainda — precisa ser específico. Segunda etapa: a partir desse moodboard, listem 2–3 candidatos a Hero Asset e comecem a testar cada um contra os três critérios que vimos: legibilidade, viabilidade, reaproveitamento."*
 
 **Atividade estruturada:**
 
-1. Abrir o arquivo `.blend` com o Asset 01 do kit (modelagem trazida de disciplinas anteriores ou criada especificamente para o kit — o professor define com antecedência qual asset será a entrega desta semana).
-2. Em Edit Mode, identificar as arestas candidatas a seam com base nos critérios apresentados.
-3. Marcar seams e executar Unwrap (`U` → Unwrap).
-4. Aplicar checkerboard e verificar distorção no Viewport com Material Preview.
-5. Organizar as islands no UV Editor: sem sobreposição, todas dentro do quadrado UV (0–1).
-6. Ajustar seams adicionais se a distorção for inaceitável e refazer o Unwrap.
-7. Salvar com nomenclatura `[Nome]_Asset01_UV_Semana03.blend`.
+1. **(20 min) Consolidação do moodboard.** Reunir e organizar referências já produzidas em Pintura Digital e Arte Conceitual, complementando com novas buscas se necessário. Mínimo de 10 referências, organizadas por categoria (paleta, formas/silhueta, materiais, referência cultural direta).
+2. **(20 min) Lista de candidatos a Hero Asset.** A partir do moodboard, cada estudante lista 2–3 objetos/peças candidatas e anota, para cada uma, uma frase rápida sobre cada critério (legibilidade / viabilidade / reaproveitamento).
+3. **(10 min) Conversa informal em duplas.** Estudantes trocam suas listas em duplas e testam a legibilidade do tema do colega: *"Olhando só para essa lista de candidatos, que mundo eu imagino?"* — feedback rápido antes da decisão final.
 
 **Papel do professor:**
 
-Circular pelo estúdio fazendo perguntas diagnósticas que preparem para a crítica formal:
+Circular pelo estúdio perguntando:
+- *"Esse moodboard me diz um lugar específico, ou poderia ser qualquer fantasia genérica?"*
+- *"Se Modelagem 3D e Level Design tivesse que modelar isso essa semana, dá tempo?"*
+- *"Essa peça puxa uma paleta ou só um objeto isolado?"*
 
-- *"Por que você marcou seam nessa aresta e não na do lado?"*
-- *"Onde você acha que essa distorção vai aparecer quando você pintar a textura?"*
-- *"Se esse asset fosse visto de frente no jogo, onde o jogador nunca olharia? Coloca o seam lá."*
-- *"Você consegue descrever em uma frase o critério que usou para decidir onde cortar?"*
+Identificar estudantes com moodboard ainda disperso ou genérico — eles vão precisar de atenção prioritária no Encontro 2, antes da decisão final do Hero Asset.
 
-Identificar com antecedência quem vai precisar de mais tempo para concluir o UV antes da crítica e priorizá-los no estúdio do segundo encontro.
-
-> **Nota do professor:** Distribua o formulário de Autoavaliação (Instrumento 2 da Rubrica Mestre) nos **últimos 5 minutos deste encontro**, não no segundo. Isso dá tempo para o estudante refletir antes de chegar na crítica. Instrua: *"Preencham essa autoavaliação em casa ou antes de entrar na aula amanhã. Não é teste — é o ponto de partida da crítica."*
+> **Nota do professor:** não force a decisão final do Hero Asset ainda neste encontro. O objetivo do Encontro 1 é chegar a candidatos justificáveis; a escolha definitiva e o registro formal acontecem no Encontro 2, já informados pela roda de temas.
 
 ---
 
 ## ENCONTRO 2 (1h30)
 
-### Crítica Coletiva FORMAL — 20 minutos
+### Crítica Coletiva Informal — 20 minutos
 
-**Formato: Apresentação individual com autoavaliação e feedback escrito**
+**Formato: Roda de temas**
 
-Esta é a primeira crítica formal da disciplina. O objetivo é apresentar o trabalho com justificativa, receber feedback estruturado e desenvolver a prática de autoavaliação crítica.
+Cada estudante apresenta, em até 1 minuto, seu moodboard e o(s) candidato(s) a Hero Asset ainda em aberto.
 
-**Preparação (antes do encontro):**  
-O professor já coletou ou revisou rapidamente as autoavaliações e identificou 3–4 casos que ilustram situações distintas: UV com seams bem posicionados, UV com distorção evitável, UV com islands desorganizadas e UV com seam em posição visível. Esses casos serão usados como fio condutor da crítica coletiva.
+**Roteiro:**
 
-**Roteiro (20 min para 3–4 casos selecionados; turmas maiores ajustam o tempo por caso):**
+1. **(1 min por estudante, ajustar conforme tamanho da turma)** Cada estudante mostra o moodboard na tela e diz: *"Meu tema é ___. Meu candidato a Hero Asset é ___, porque ___."*
+2. **(comentário rápido da turma e do professor, 1–2 perguntas no máximo por apresentação)** Perguntas focadas nos três critérios: *"Isso está legível?"*, *"Isso é viável em uma semana de modelagem?"*, *"Isso puxa material para o resto do kit?"*
+3. **(fechamento, 3–5 min no total)** Professor sistematiza padrões observados na turma: temas que se repetem, riscos comuns (escopo grande demais, moodboard genérico), e reforça que a decisão final acontece hoje, na produção em estúdio que segue.
 
-1. **(2 min de abertura)** Professor apresenta o protocolo: *"Nesta crítica, cada apresentador tem 2 minutos para mostrar o UV e responder a uma pergunta. A turma observa e, ao final de cada apresentação, um colega oferece um feedback específico usando a linguagem da rubrica."*
+> **Nota do professor:** o objetivo da roda de temas não é aprovar ou reprovar propostas — é dar à turma um primeiro treino de comunicação visual e justificativa de decisões, competência central da disciplina (C10). Mantenha o ritmo rápido; é preferível ouvir todos brevemente do que aprofundar em poucos.
 
-2. **Para cada caso (3–4 min por caso):**
-   - Estudante projeta o UV Editor com checker ativo.
-   - Professor faz **uma única pergunta** ao apresentador: *"Por que você escolheu esse seam aqui?"* ou *"Qual foi a decisão mais difícil que você tomou no UV?"*
-   - Estudante responde.
-   - Um colega (indicado pelo professor) dá um feedback usando a linguagem do C3 da rubrica: *"Eu vejo [observação concreta]. Para chegar no Nível X, eu acho que precisaria de [ação específica]."*
-   - Professor complementa em 30 segundos — nunca substitui o feedback do colega, apenas acrescenta.
-
-3. **(3 min de síntese)** Professor aponta os padrões que apareceram na turma:
-   - Erro mais comum (ex.: seams em arestas frontais visíveis)
-   - Decisão mais acertada observada (ex.: aproveitar a geometria natural para esconder o seam)
-   - O que distingue o Nível 2 do Nível 3 no C3 nos trabalhos apresentados
-
-4. **(2 min de conexão com a rubrica)** Professor lê em voz alta a descrição do Nível 3 e do Nível 4 do C3: *"Nível 3 é o mínimo funcional. Nível 4 já exige seams invisíveis. O que falta para o trabalho de vocês chegar lá? Registrem isso na autoavaliação."*
-
-**O professor registra (para C10):**
-- Quem apresentou o trabalho com justificativa clara e não apenas descritiva
-- Quem ofereceu feedback específico com referência a critério da rubrica
-- Quem demonstrou dificuldade de articular a justificativa técnica das decisões
-
-> **Nota do professor:** Ao recolher as autoavaliações (Instrumento 2), compare o nível que o estudante atribuiu a si mesmo com o que você observou. Diferenças significativas (estudante se superestimou ou subestimou muito) são pontos de entrada para a conversa individual no estúdio. Registre observações na Ficha de Crítica Formal (Instrumento 1) para cada estudante apresentado.
+**Conectar à rubrica:** ao final, mencionar explicitamente: *"O que vocês acabaram de fazer — apresentar uma proposta e justificar por que ela funciona — é exatamente o tipo de comunicação que a Crítica Formal da Semana 4 vai exigir de novo, já com um UV real na tela. Fica mais fácil na segunda vez."*
 
 ---
 
 ### Produção em Estúdio — 60 minutos
 
-**Revisão do UV com base na crítica formal e preparação da entrega**
+**Fechamento do moodboard curado e definição final do Hero Asset**
 
 **Consigna:**
 
-> *"Vocês receberam feedback — específico, com critério, com nível de referência. Agora têm 60 minutos para incorporar pelo menos uma melhoria ao UV do Asset 01. Não precisa estar perfeito: precisa estar melhor do que estava e você precisa conseguir me dizer o que mudou e por quê."*
+> *"Com o que ouviram na roda de temas, fechem a decisão. Escolham um único Hero Asset, escrevam a justificativa em um parágrafo usando os três critérios, e finalizem o moodboard como arquivo de entrega. Depois, registrem esse briefing para compartilhar com Modelagem 3D e Level Design — é a peça que eles vão modelar a partir de agora."*
 
 **Atividade:**
 
-1. Rever o UV do Asset 01 à luz do feedback recebido na crítica:
-   - Reposicionar seams que estavam em locais visíveis.
-   - Corrigir distorção evitável com um seam adicional em área estratégica.
-   - Reorganizar islands que estavam fora do quadrado UV ou com sobreposição.
-2. Refazer o Unwrap após ajuste de seams e verificar com checkerboard.
-3. Organizar as islands finais no UV Editor: sem sobreposição, dentro do espaço UV.
-4. Capturar screenshot do UV Editor com checker ativo no Viewport.
-5. Salvar arquivo com versão atualizada: `[Nome]_Asset01_UV_Semana03_v2.blend`.
-6. Quem concluir com tempo: iniciar a abertura de UV de um segundo asset (a ser entregue formalmente apenas na Semana 4).
+1. Decisão final do Hero Asset Referência (um único candidato, não mais uma lista).
+2. Redação da justificativa (1 parágrafo, cobrindo legibilidade, viabilidade técnica e potencial de reaproveitamento).
+3. Finalização do moodboard como arquivo de entrega (PNG, PDF ou link), com no mínimo 10 referências organizadas.
+4. Registro do briefing do Hero Asset para Modelagem 3D e Level Design: descrição textual + referências visuais mais diretas do moodboard, formato definido em conjunto com o professor daquela disciplina (documento compartilhado, formulário ou entrega direta em aula, conforme combinado entre os professores).
+5. Nomear os arquivos com o padrão `[Nome]_Moodboard_Semana03` e `[Nome]_HeroAsset_Justificativa_Semana03`.
 
 **Papel do professor:**
 
 Priorizar atenção individual para:
-- Estudantes que na crítica demonstraram confusão sobre o critério de posicionamento de seam (colocam onde "parece certo" sem conseguir justificar).
-- Estudantes cujo asset tem geometria mais complexa e que precisarão de mais iterações de unwrap.
+- Estudantes que chegaram ao Encontro 2 com moodboard ainda disperso ou tema pouco específico — ajudar a fechar o recorte antes do fim da aula, mesmo que de forma mais simples.
+- Estudantes em dúvida entre dois candidatos a Hero Asset — usar os três critérios como desempate, não a preferência estética isolada.
+- Garantir que todos os estudantes tenham, ao final da aula, um Hero Asset único e comunicável a Modelagem 3D e Level Design — a modelagem começa imediatamente após esta semana, e um briefing tardio atrasa a Semana 4 inteira.
 
-Para quem avança rápido:
-- *"Ativa o UV Stretch Overlay e me mostra onde ainda tem vermelho. Qual seam você colocaria para reduzir esse estiramento?"*
-- *"Seu UV está funcional. O Nível 4 da rubrica diz 'seams invisíveis'. Você consegue auditar cada seam e me dizer: esse seam vai aparecer quando eu texturizar?"*
+Para quem termina rápido: revisar o moodboard de um colega e sugerir, por escrito, uma referência que falta ou uma inconsistência de paleta — pratica leitura crítica antes da Semana 4.
+
+> **Nota do professor:** não permita que a decisão do Hero Asset fique em aberto além deste encontro. O cronograma da Semana 4 depende de Modelagem 3D e Level Design já ter um briefing fechado para modelar.
 
 ---
 
@@ -237,38 +180,40 @@ Para quem avança rápido:
 
 **Roteiro:**
 
-1. **(2 min)** Síntese: *"Hoje vocês deram o passo mais importante do UV mapping: pararam de delegar decisões para o algoritmo e começaram a tomar decisões que têm consequência visual. Um seam mal posicionado agora vai aparecer como artefato na textura final. Um seam bem posicionado vai ser invisível. Essa é a diferença entre UV funcional e UV de produção."*
+1. **(2 min) Síntese rápida pelo professor:** *"A partir de hoje, tema e Hero Asset não são mais 'ideia em amadurecimento' — são dados do projeto de vocês. Tudo que vier a partir da Semana 4 assume que essa decisão está tomada."*
 
-2. **(3 min)** Reflexão individual registrada no formulário de autoavaliação (completar ou revisar a resposta à pergunta de reflexão do Instrumento 2): *"Qual foi a decisão técnica ou artística mais difícil que você tomou nesta semana? O que te fez decidir dessa forma?"* Pedir que 2 estudantes compartilhem voluntariamente.
+2. **(3 min) Reflexão individual registrada** (post-it físico, digital ou comentário no arquivo):
+   *"Complete a frase: 'Escolhi este Hero Asset porque ____. O que mais me preocupa nessa escolha é ____.'"*
+   Quem quiser compartilhar, pode — não é obrigatório.
 
-3. **(3 min)** Antecipação da Semana 4: *"Na semana que vem, vocês vão otimizar o UV que abriram hoje: normalizar texel density, empacotar islands de forma mais eficiente e abrir o UV do Asset 02. A base é o trabalho de hoje — quanto melhor o UV desta semana, menos retrabalho na próxima."*
+3. **(3 min) Ponte para a Semana 4:** *"Na próxima semana, vocês recebem o Hero Asset Referência modelado por Modelagem 3D e Level Design e abrem o UV dele de verdade — com seams manuais, não mais projeção automática. É a primeira Crítica Formal do semestre: vai valer nota, com rubrica e autoavaliação. Revisem o Nível 3 do Critério 3 na Rubrica Mestre antes de virem para a aula."*
 
-4. **(2 min)** Confirmação das entregas:
-   - Arquivo `.blend` com Asset 01 UV aberto (versão final após a revisão da crítica)
-   - Screenshot do UV Editor com checker ativo no Viewport
-   - Formulário de Autoavaliação preenchido e entregue ao professor
+4. **(2 min) Confirmação das entregas:**
+   - Moodboard temático curado (PNG, PDF ou link), mínimo 10 referências
+   - Justificativa do Hero Asset Referência (1 parágrafo, cobrindo os três critérios)
+   - Briefing do Hero Asset compartilhado com Modelagem 3D e Level Design
 
 ---
 
 ## Possíveis Dificuldades
 
-**1. Confusão entre Unwrap e Smart UV Project**  
-Estudantes podem continuar usando Smart UV Project mesmo após a mini aula, por ser o caminho mais curto no menu UV. Estratégia: durante a demonstração, mostrar explicitamente a diferença no menu `U` e criar um hábito verbal: *"Depois que você marcar seams, o comando é sempre Unwrap — não Smart UV."* Reforçar isso no início do estúdio.
+**1. Moodboard genérico ou disperso demais**
+Alguns estudantes chegam com referências bonitas mas sem coerência entre si ("fantasia" em geral, sem recorte cultural específico). Estratégia: voltar à pergunta da Semana 1 — *"Qual dos 5 props vocês trabalharam no jigsaw está por trás dessa referência? Se não conseguem apontar, o recorte ainda está solto demais."*
 
-**2. Dificuldade em decidir onde posicionar seams**  
-É o bloqueio mais comum desta semana. Estudantes com menor vocabulário visual têm dificuldade de identificar "onde o jogador não vai olhar". Estratégia: pedir que o estudante imagine o asset já no jogo e trace o percurso do olhar do jogador — as arestas que ficam fora desse percurso são candidatas a seam. Se isso não funcionar, pedir que identifique a "frente" do objeto e começar com um seam nos fundos.
+**2. Indecisão entre múltiplos candidatos a Hero Asset**
+Estudante gosta de mais de uma ideia e não consegue escolher. Estratégia: aplicar os três critérios como checklist objetivo e, em caso de empate, priorizar viabilidade técnica — é melhor um Hero Asset viável e bem executado do que um ambicioso e inacabado.
 
-**3. Seams excessivos resultando em islands demais**  
-Estudantes com medo de distorção podem marcar seams em todas as arestas. Resultado: dezenas de islands minúsculas impossíveis de organizar. Estratégia: estabelecer uma heurística prática — *"Tente resolver o UV do objeto com o menor número de seams possível antes de adicionar mais. Um barril simples deve ter entre 3 e 6 islands, não 30."*
+**3. Hero Asset escolhido é, na prática, um ambiente inteiro, não uma peça**
+Comum quando o estudante confunde Hero Asset com Kit Modular. Estratégia: perguntar *"Se eu tirasse essa peça de dentro do cenário e colocasse sozinha em um pedestal, ela ainda contaria a história do tema?"* — se a resposta exigir o cenário inteiro ao redor, não é um Hero Asset, é uma cena.
 
-**4. Resistência à crítica formal**  
-Primeira crítica formal gera ansiedade. Estudantes podem apresentar o trabalho inacabado por receio de exposição, ou apresentar de forma muito descritiva sem justificativa técnica. Estratégia: explicar antes que o objetivo da crítica não é julgar o resultado, mas praticar a justificativa. Um UV com problemas e uma boa explicação das decisões vale mais pedagogicamente do que um UV bom apresentado sem reflexão.
+**4. Justificativa escrita superficial ("porque achei bonito")**
+Estudante escolhe corretamente mas não consegue articular por quê. Estratégia: usar a estrutura de frase modelada na demonstração ("representa o tema porque... é viável porque... vai se conectar porque...") como andaime obrigatório na primeira vez.
 
-**5. Asset escolhido tem geometria muito complexa para a semana**  
-Alguns estudantes podem ter modelado assets detalhados em disciplinas anteriores (personagens, props com muitos detalhes) e tentar aplicar seams em geometria além do que é adequado para esta semana. Estratégia: redirecionar para um asset mais simples do kit (um bloco arquitetônico, um prop básico) e reservar a geometria complexa para as Semanas 3–4 de revisão.
+**5. Desalinhamento com Modelagem 3D e Level Design sobre o que é modelável em uma semana**
+Estudante escolhe um Hero Asset tecnicamente inviável no prazo (muita complexidade de forma, muitas peças móveis). Estratégia: se possível, ter um canal aberto com o professor de Modelagem 3D e Level Design durante a própria aula para validação rápida de escopo; caso contrário, professor de Texturização aplica um filtro conservador — na dúvida, sugerir simplificar.
 
-**6. Autoavaliação preenchida sem reflexão ("tudo está no nível 3")**  
-É comum na primeira vez. Estudantes preenchem o formulário sem se comprometer com uma avaliação honesta. Estratégia: na comparação durante a crítica, apontar a diferença sem expor o estudante: *"Você se avaliou no nível 3 no C3. Olhando para o seu checker, onde você acha que fica esse nível na rubrica?"* A pergunta convida à revisão sem julgamento.
+**6. Estudante ainda apegado à ideia de "esperar inspirar" em vez de decidir**
+Depois de semanas de amadurecimento livre, alguns resistem a fechar a decisão. Estratégia: lembrar que a decisão de hoje não é permanente e imutável — pequenos ajustes de escopo ainda são possíveis nas próximas semanas — mas o pipeline não anda sem uma peça definida para trabalhar.
 
 ---
 
@@ -276,37 +221,39 @@ Alguns estudantes podem ter modelado assets detalhados em disciplinas anteriores
 
 | Situação | Estratégia |
 |---|---|
-| Estudante trava na escolha do primeiro seam | Pedir que identifique a face "traseira" do objeto e marque todas as arestas que formam o contorno dessa face como seam. Isso cria uma primeira island funcional como ponto de partida. |
-| UV com muita distorção após o Unwrap | Perguntar: *"Esse estiramento está em uma face curva ou plana? Face plana com distorção geralmente significa que o seam está impedindo o Blender de abrir bem. Tente adicionar um seam nessa área."* |
-| Estudante não consegue articular a justificativa na crítica | Reformular como pergunta mais concreta: *"Me mostra o seam que você ficou mais em dúvida sobre onde colocar. O que te fez escolher esse lugar?"* Tirar o foco de "justificar o todo" para "justificar uma decisão específica". |
-| Estudante muito rápido e com UV funcional | Desafiar: *"Quantos seams você tem? Consegue chegar no mesmo resultado (ou melhor) com menos? Cada seam a menos é uma island a menos para organizar na texturização."* |
-| Estudante frustrado com resultado do Unwrap | Recontextualizar: *"Se você está vendo a distorção agora, no UV Editor, é porque o checker está funcionando. Você está economizando horas de retrabalho que aconteceriam depois de já ter pintado a textura."* |
-| Turma dispersa durante a crítica formal | Atribuir papéis fixos para a crítica: um estudante é o "observador de C3", outro de "C1". Quando o apresentador terminar, o observador respectivo dá o feedback. Estrutura fixa mantém atenção. |
+| Moodboard sem recorte cultural específico | Perguntar: *"Qual dos 5 props da Semana 1 está por trás dessa imagem?"* Reconectar à pesquisa já feita, em vez de pedir referências novas do zero. |
+| Estudante indeciso entre candidatos | Aplicar os três critérios como checklist; em empate, priorizar viabilidade técnica sobre preferência estética. |
+| Hero Asset na verdade é uma cena inteira | *"Se essa peça estivesse sozinha em um pedestal, ainda contaria a história?"* Se não, é preciso recortar uma única peça de dentro da cena. |
+| Justificativa vaga ou só estética | Oferecer o andaime de frase (representa porque / é viável porque / se conecta porque) até o estudante conseguir preencher com conteúdo específico. |
+| Escopo do Hero Asset inviável para Modelagem 3D e Level Design modelar a tempo | Sugerir simplificação de forma, mantendo os elementos mais legíveis do tema; validar com o professor da outra disciplina quando possível. |
+| Turma dispersa na roda de temas | Impor timebox rígido de 1 minuto por estudante com cronômetro visível; comprimir comentários a 1 pergunta por apresentação. |
+| Estudante resistente a fechar a decisão | Reforçar que pequenos ajustes de escopo ainda cabem adiante, mas o pipeline da Semana 4 depende de uma peça definida hoje. |
 
 ---
 
 ## Evidências de Aprendizagem
 
-| Evidência | Critério da Rubrica | Como avaliar |
-|---|---|---|
-| Asset 01 com UV aberto e seams manuais | C3 — UV Mapping | Ausência de sobreposição; islands dentro do espaço UV; distorção verificada com checker |
-| Posicionamento de seams em locais não visíveis | C3 — UV Mapping | Comparar a posição dos seams com a geometria do asset: estão em arestas que ficariam ocultas no uso real? |
-| Arquivo salvo com nomenclatura correta e versionado | C1 — Processo de Projeto | Existência do arquivo com nome correto e versão pós-crítica (_v2) |
-| Formulário de Autoavaliação preenchido com reflexão | C1 e C10 | Comparação entre nível declarado pelo estudante e nível observado pelo professor; qualidade da justificativa de evidência |
-| Participação na crítica formal (justificativa e feedback) | C10 — Participação | Capacidade de justificar uma decisão técnica com vocabulário da rubrica; qualidade do feedback ao colega (específico, observável, referenciado) |
+| Evidência | Objetivo(s) relacionado(s) | Critério da Rubrica | Como avaliar |
+|---|---|---|---|
+| Moodboard temático curado (mínimo 10 referências, organizadas) | Objetivo 1 | C1 — Processo de Projeto | Existência do registro organizado; especificidade e coerência interna das referências (não genéricas) |
+| Justificativa escrita do Hero Asset Referência (1 parágrafo) | Objetivos 2, 3 | C1, C2 — Processo de Projeto / Direção Artística (nível inicial) | Presença explícita dos três critérios (legibilidade, viabilidade, reaproveitamento); clareza da argumentação |
+| Participação na roda de temas | Objetivo 4 | C10 — Participação nas Critiques | Clareza da apresentação em até 1 minuto; qualidade das perguntas feitas aos colegas |
+| Briefing do Hero Asset compartilhado com Modelagem 3D e Level Design | Objetivo 5 | C1 — Processo de Projeto | Existência e clareza do registro; completude suficiente para viabilizar a modelagem na semana seguinte |
+
+> **Nota:** esta semana não gera nota isolada, mas é a base direta da Crítica Formal da Semana 4 (CF1) — um moodboard fraco ou um Hero Asset mal escolhido hoje compromete diretamente C2 e C3 na próxima semana. O professor registra observações qualitativas individuais sobre especificidade temática e clareza de justificativa, para acompanhamento prioritário até a CF1.
 
 ---
 
 ## Entrega da Semana 3
 
-| Entrega | Formato | Prazo |
-|---|---|---|
-| Asset 01 do Kit Modular com UV aberto via seams manuais e Unwrap | `.blend` (versão pós-crítica, sufixo `_v2`) | Até o fim do segundo encontro |
-| Screenshot do UV Editor com checker ativo no Viewport | PNG ou JPG | Até o fim do segundo encontro |
-| Formulário de Autoavaliação (Instrumento 2 da Rubrica Mestre) | Impresso ou PDF preenchido | Entregue ao professor no início do segundo encontro |
+| Entrega | Formato | Escopo | Prazo |
+|---|---|---|---|
+| Moodboard temático curado | PNG, PDF ou link (Pinterest/PureRef/Milanote) | Individual | Até o fim do segundo encontro |
+| Justificativa do Hero Asset Referência (1 parágrafo) | Texto (comentário no arquivo, `.txt` ou `.docx`) | Individual | Até o fim do segundo encontro |
+| Briefing do Hero Asset para Modelagem 3D e Level Design | Conforme combinado entre os professores (documento compartilhado, formulário ou entrega em aula) | Individual | Até o fim do segundo encontro |
 
-> **Nota:** Esta é a **primeira semana com registro formal de avaliação**. O professor preenche a Ficha de Crítica Formal (Instrumento 1 da Rubrica Mestre) para cada estudante avaliado na crítica, com atenção especial ao C3. Os critérios C4 a C9 são marcados como "não aplicável". O C1 e o C10 são registrados qualitativamente.
+> Não há entrega técnica em Blender/3D Coat nesta semana — a primeira operação sobre o Hero Asset real (abertura de UV) começa na Semana 4, primeira Crítica Formal do semestre.
 
 ---
 
-*Plano de Aula — Texturização — Jogos Digitais | Semana 3 | 2026*
+*Plano de Aula — Texturização — Jogos Digitais | Semana 3 | 2026 | Prof. Rodrigo Devigo — IFMS Campus Dourados*
