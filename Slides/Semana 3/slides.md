@@ -80,11 +80,7 @@ Notas: Ênfase no "não precisa ser literal": pode ser um objeto simbólico que 
 
 Prova de conceito do pipeline completo — **antes** de escalar para o Kit Modular inteiro.
 
-```mermaid
-graph LR
-  A[Semana 3<br/>Hero Asset definido] --> B[Semanas 4-9<br/>UV · PBR · 3D Coat]
-  B --> C[Semana 10+<br/>Kit Modular completo]
-```
+![diagram](assets/mermaid-2.png)
 
 <!--
 Notas: O Hero Asset é onde cada etapa do pipeline é testada pela primeira vez — UV na Semana 4, material PBR nas Semanas 6-7, texturização no 3D Coat nas Semanas 8-9. Só depois disso validado é que o Kit Modular é produzido de fato, a partir da Semana 10. Não detalhar UV ou PBR agora — apenas nomear a trajetória.
