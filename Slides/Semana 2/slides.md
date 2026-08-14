@@ -10,256 +10,224 @@ footer: "IFMS • Semana 02"
 <!-- _class: cover -->
 <!-- _paginate: false -->
 
-# Mapeamento UV
+# Texturização
 
-## Desdobrando o 3D no plano
+## Mapeamento UV
 
-**Semana 2** — Conceitos e projeção de textura
+**Semana 2** — Fundamentos de mapeamento UV: conceitos e projeção de textura
 
 <!--
-Notas: Abertura da mini aula (20 min). Não é tutorial — é a construção da intuição conceitual antes de abrir o Blender na demonstração. Lembrar que esta é a primeira vez que a turma abre o UV Editor com intenção de trabalho.
+Notas: Esta é a primeira semana em que a turma opera o Blender com intenção de trabalho. Na Semana 1 houve apenas orientação espacial, sem prática. Abrir deixando isso explícito.
 -->
 
 ---
 
-## Objetivos de hoje
+## O que já vimos
+
+Textura × material • raster × procedural • pipeline **Blender → 3D Coat → Unity**.
+
+O trabalho interdisciplinar e o tema do semestre — ainda **em amadurecimento**, sem recorte fechado.
+
+<!--
+Notas: Revisão de 30 segundos, não uma retomada de conteúdo. Reforçar que tema e Hero Asset Referência só fecham na Semana 3 — hoje ninguém trabalha "no seu tema", e sim em objetos neutros de prática.
+-->
+
+---
+
+<div class="objectives">
 
 Ao final da semana você será capaz de:
 
-- Explicar **o que é** um mapa UV e por que ele existe
-- Ler o **espaço UV (0–1)**: distorção, sobreposição e desperdício
-- Aplicar as **quatro projeções**: planar, cilíndrica, esférica, cúbica
-- Usar o **checkerboard** para diagnosticar distorção
+- Explicar o que é um **mapa UV** e por que ele existe
+- Reconhecer **distorção** e **sobreposição** com o checkerboard
+- Aplicar os 4 tipos de **projeção UV**
+- Antecipar, de forma intuitiva, o conceito de **texel density**
+
+</div>
 
 <!--
-Notas: Ler rápido. Cada objetivo volta ao longo da aula. Não detalhar agora. Texel density entra apenas como intuição — o cálculo numérico é Semana 4.
+Notas: Ler rápido. Os quatro objetivos são cobertos na mini aula e praticados na demonstração e no estúdio. O quarto item é só intuição — o cálculo formal de texel density é conteúdo da Semana 5, não desta.
 -->
 
 ---
 
 <!-- _class: question -->
 
-# Você tem uma esfera 3D e quer pintá-la. Como dizer ao computador **onde** cada pixel vai parar?
+# Você tem uma esfera 3D e quer **pintar** ela. Como dizer ao computador onde cada pixel da textura vai parar?
 
 <!--
-Notas: Deixar 2–3 respostas da turma antes de apresentar a analogia da caixa de papelão. Não corrigir — usar as respostas como ponte para o conceito de "desdobrar".
+Notas: Deixar 2–3 respostas da turma antes de seguir. A resposta que queremos chegar: é preciso um sistema de coordenadas que relacione cada ponto da superfície 3D a um ponto da imagem 2D — isso é o mapa UV.
 -->
 
 ---
 
-## A analogia da caixa
+## O que é um mapa UV
 
-UV mapping é **desdobrar** um objeto 3D como uma caixa de papelão.
+**UV mapping** é "desdobrar" um objeto 3D como se fosse uma caixa de papelão.
 
-Você corta as dobras e abre tudo em um **plano 2D**.
-
-É nesse plano que a textura será pintada.
-
-![large](assets/analogia_caixa_uv.webp)
+Você corta as dobras (**seams**) e abre tudo em um plano 2D — é nesse plano que a textura é pintada.
 
 <!--
-Notas: Esta é a imagem mental central da semana. "Cortar as dobras" antecipa o conceito de seam (Semana 3), mas NÃO nomear seam ainda em profundidade — apenas plantar a ideia de que existe um corte.
-
-FIGURA (produzir) — assets/analogia_caixa_uv.webp
-Objetivo: tornar concreta a ideia de "desdobrar" um objeto 3D em um plano 2D, ancorando o conceito abstrato de UV na experiência física de abrir uma caixa.
-Descrição: um cubo 3D à esquerda e, à direita, o mesmo cubo "aberto" em forma de cruz (planificação) sobre o quadrado da textura, com as faces numeradas para mostrar a correspondência.
-Como produzir: no Blender, criar um cubo, aplicar Cube Projection e posicionar o Viewport 3D ao lado do UV Editor. Renderizar ou capturar as duas visões. No Krita, montar a comparação lado a lado e numerar as faces correspondentes.
+Notas: Fixar essa analogia — ela volta em todas as semanas de UV do semestre. Não citar "seams" como operação ainda: seams manuais são conteúdo da Semana 4 (Hero Asset Referência). Aqui é só nomear o conceito. Referência: apostila, Parte II, Cap. 4.
 -->
 
 ---
 
-## O espaço UV (0–1)
+<!-- _class: diagram -->
 
-O UV Editor é um **quadrado de 0 a 1** nos dois eixos.
+## O espaço UV
 
-A textura ocupa exatamente esse quadrado.
+```mermaid
+graph LR
+  A["Objeto 3D<br/>(vértices)"] -->|coordenada UV| B["Espaço UV<br/>quadrado 0–1"]
+  B -->|pintura/textura| C["Imagem 2D"]
+```
 
-Cada vértice tem uma coordenada UV: *"este ponto do objeto = este ponto da textura"*.
-
-![large](assets/espaco_uv_0_1.webp)
+Cada vértice do objeto tem uma coordenada UV: "esse ponto do objeto corresponde a esse ponto da textura".
 
 <!--
-Notas: Fixar que U e V vão de 0 a 1, independentemente da resolução da textura. Mostrar o cubo aberto ao lado da textura que o cobre. Não falar em UDIMs ou tiles múltiplas — isso é muito à frente.
+Notas: O quadrado 0–1 é o mesmo para qualquer objeto, do prop mais simples ao asset mais complexo do kit. É a base de tudo que vem depois no semestre — bake, atlas e trim sheet, mais adiante, também operam dentro desse mesmo espaço.
+-->
 
-FIGURA (produzir) — assets/espaco_uv_0_1.webp
-Objetivo: mostrar que o espaço UV é um quadrado normalizado (0–1) onde as islands do objeto são posicionadas sobre a textura.
-Descrição: o UV Editor do Blender com os eixos rotulados 0 e 1, uma textura checkerboard preenchendo o quadrado e as islands de um cubo posicionadas sobre ela.
-Como produzir: no Blender, abrir o UV Editor com um cubo desdobrado e checkerboard carregado. Capturar a tela e, no Krita, adicionar os rótulos "0" e "1" nos cantos dos eixos U e V.
+---
+
+<!-- _class: image-right -->
+
+<div class="text">
+
+## Um cubo desdobrado
+
+Seis faces, um plano 2D.
+
+A textura de **checkerboard** revela onde a projeção distorce.
+
+</div>
+
+<div class="media">
+
+![large](assets/cubo_uv_checker.webp)
+
+</div>
+
+<!--
+Notas: Primeira imagem concreta da relação objeto ↔ UV Editor ↔ textura. Vai ser revisitada na demonstração, ao vivo no Blender.
+
+[!FIGURA]
+Objetivo didático — Tornar concreta a relação entre a malha 3D, o layout UV e a textura aplicada, antes de qualquer prática no Blender.
+Arquivo sugerido — assets/cubo_uv_checker.webp
+Descrição — Composição em três partes lado a lado: (1) um cubo 3D com checkerboard aplicado no viewport; (2) o mesmo cubo desdobrado no UV Editor, mostrando as 6 faces organizadas como ilhas; (3) a textura de checkerboard isolada. Setas leves conectando as três partes.
+Como produzir — No Blender, aplicar Cube Projection em um cubo, ativar Material Preview com uma textura de checkerboard, e capturar o Viewport e o UV Editor lado a lado. Montar a composição final no Krita, adicionando a textura isolada e as setas de conexão.
 -->
 
 ---
 
 ## O problema da distorção
 
-Não dá para desdobrar uma esfera **sem distorção** — como um mapa-múndi plano.
+Não é possível desdobrar uma esfera sem distorção — assim como não existe mapa-múndi perfeitamente plano sem deformar algo.
 
-O objetivo **não é eliminar** a distorção.
-
-O objetivo é **controlá-la**: mantê-la onde ninguém percebe.
-
-<div class="tip">
-
-Distorção invisível é distorção resolvida.
-
-</div>
+O objetivo não é **eliminar** distorção, é **controlá-la**: mantê-la onde não é percebida.
 
 <!--
-Notas: Comparação com o mapa-múndi (projeção de Mercator) funciona muito bem. Reforçar a mudança de expectativa: nesta semana o sucesso é OBSERVAR e NOMEAR a distorção, não zerá-la. Isso previne a paralisia do "quero deixar perfeito".
+Notas: Analogia do mapa-múndi costuma ser eficaz porque é uma experiência visual que a maioria já teve (Groenlândia "gigante" na projeção Mercator). Não aprofundar em geometria — é só para instalar a intuição de que distorção é inevitável, e o trabalho do artista é administrá-la.
 -->
 
 ---
 
 ## Quatro tipos de projeção
 
-![diagram](assets/mermaid-1.png)
-
-A projeção certa **depende da forma**. Não existe uma que sirva para tudo.
+| Projeção | Quando usar |
+|---|---|
+| **Planar** | Superfícies planas, vista de um ângulo |
+| **Cilíndrica** | Colunas, troncos, tubos |
+| **Esférica** | Esferas, cabeças — distorce nos polos |
+| **Cúbica (Box)** | Formas com faces reconhecíveis |
 
 <!--
-Notas: Introduzir as quatro projeções como um menu de ferramentas, cada uma boa para uma família de formas. Os próximos slides detalham uma a uma com uma frase cada. Não sobrecarregar.
+Notas: Não é uma lista para decorar — é um repertório de primeiras tentativas. Nenhuma projeção automática é definitiva; a partir da Semana 4, seams manuais vão refinar o resultado em cima de qualquer uma dessas.
 -->
 
 ---
 
-## Planar & Cilíndrica
+<!-- _class: image-right -->
 
-**Planar** — projeta de um ângulo, como uma câmera.
-Boa para superfícies **planas**. Distorce nas bordas laterais.
+<div class="text">
 
-**Cilíndrica** — enrola a textura ao redor do objeto.
-Boa para **colunas, tubos, troncos, pernas**.
+## A mesma esfera, quatro resultados
 
-![large](assets/projecao_planar_cilindrica.webp)
+O checker mostra: cada projeção falha de um jeito diferente.
+
+</div>
+
+<div class="media">
+
+![large](assets/comparativo_projecoes_uv.webp)
+
+</div>
 
 <!--
-Notas: Emparelhar planar e cilíndrica porque são as mais intuitivas. Pedir exemplos concretos à turma: "que peça do kit de vocês seria planar? qual seria cilíndrica?". Conectar ao projeto integrador.
+Notas: Esta é a imagem-chave da aula — usar para a transição direta ao "vamos testar isso ao vivo" da demonstração.
 
-FIGURA (produzir) — assets/projecao_planar_cilindrica.webp
-Objetivo: associar cada projeção à família de formas onde ela distorce menos, comparando visualmente o checkerboard resultante.
-Descrição: à esquerda, um plano/parede com projeção planar e checker uniforme; à direita, um cilindro com projeção cilíndrica mostrando o seam vertical e o grid regular no corpo.
-Como produzir: no Blender, aplicar Project From View (planar) em um plano e Cylinder Projection em um cilindro, ambos com checkerboard. Capturar Viewport + UV Editor e montar lado a lado no Krita.
+[!FIGURA]
+Objetivo didático — Mostrar num único quadro comparativo que a escolha de projeção muda o resultado visível, tornando tangível algo que só a palavra "distorção" não comunica.
+Arquivo sugerido — assets/comparativo_projecoes_uv.webp
+Descrição — Grade 2×2 com a mesma esfera renderizada com checkerboard, uma célula por tipo de projeção (Planar, Cilíndrica, Esférica, Cúbica), cada uma rotulada. Nas células de Esférica e Planar, destacar em vermelho leve as áreas de maior distorção (polos e bordas).
+Como produzir — No Blender, aplicar cada tipo de projeção UV na mesma esfera com material de checkerboard e capturar o render em Material Preview. Montar a grade 2×2 com rótulos no Krita, adicionando os destaques de distorção com um pincel semitransparente.
 -->
 
 ---
 
-## Esférica & Cúbica
+## Checkerboard: a ferramenta de diagnóstico
 
-**Esférica** — enrola em todas as direções.
-Boa para **esferas e cabeças**. Distorce nos **polos**.
+O grid revela o que os olhos sozinhos não veem.
 
-**Cúbica (Box)** — seis projeções planares nas faces de um cubo imaginário.
-Boa para formas com **faces reconhecíveis**.
-
-![large](assets/projecao_esferica_cubica.webp)
+- **Quadrados regulares** → projeção adequada
+- **Esticado (vermelho no Stretch Overlay)** → distorção
+- **Sobreposto** → duas partes do objeto disputando o mesmo espaço UV
 
 <!--
-Notas: A distorção nos polos da esférica é o ponto mais visual — mostrar como o checker "aperta" no topo e na base. A cúbica é a mais usada para props do kit modular nesta fase. Não entrar em Smart UV Project ainda (é a demonstração).
-
-FIGURA (produzir) — assets/projecao_esferica_cubica.webp
-Objetivo: evidenciar onde cada projeção falha — os polos na esférica e as arestas na cúbica — para o estudante reconhecer o padrão no próprio trabalho.
-Descrição: à esquerda, uma esfera com projeção esférica e o checker comprimido nos polos; à direita, um cubo com Cube Projection e checker uniforme nas seis faces.
-Como produzir: no Blender, aplicar Sphere Projection a uma UV Sphere e Cube Projection a um cubo, ambos com checkerboard. Capturar e comparar no Krita, destacando com uma seta a compressão nos polos.
+Notas: Distorção e sobreposição são problemas diferentes, frequentemente confundidos. Vai ser o principal ponto de dúvida no estúdio — reforçar aqui para reduzir retrabalho na demonstração.
 -->
 
 ---
 
-## O checkerboard é seu diagnóstico
+<div class="error">
 
-Um grid regular aplicado à superfície **revela** o que os UVs escondem.
+Aceitar o resultado do **Smart UV Project** sem revisar.
 
-- Quadrados **uniformes** → distorção sob controle
-- Quadrados **esticados** → estiramento (stretch)
-- Quadrados **repetidos/sobrepostos** → duas partes no mesmo espaço UV
+</div>
+
+Ele é rápido, mas não sabe o que é importante no objeto — vamos sempre conferir com o checker.
+
+<!--
+Notas: Smart UV Project entra na demonstração como recurso rápido, não como solução final. A revisão manual de seams começa de fato na Semana 4, quando há um asset real (Hero Asset Referência) em jogo.
+-->
+
+---
 
 <div class="tip">
 
-Se a grade parece regular, a textura vai parecer regular.
+**Island maior no espaço UV = mais nítido na textura final.**
 
 </div>
 
+O cálculo exato disso — **texel density** — é conteúdo da Semana 5. Por hoje, basta o olho.
+
 <!--
-Notas: O checker é a ferramenta central da semana. No Blender, ativar via Z → Material Preview após conectar a textura ao Principled BSDF. ANTECIPAR o erro comum: aplicar a textura no UV Editor mas esquecer de ativar o Material Preview no Viewport.
+Notas: Antecipação intencional, sem fórmula. Se um estudante perguntar por valores numéricos, responder: "vamos medir isso na Semana 5 — por enquanto, use o olho e o checker."
 -->
 
 ---
 
-## Distorção ≠ Sobreposição
-
-<div class="columns">
-<div class="col negative">
-
-### Distorção
-
-O grid está **deformado** — esticado ou comprimido.
-Problema de **forma** da island.
-
-</div>
-<div class="col negative">
-
-### Sobreposição
-
-Duas partes ocupam o **mesmo espaço UV**.
-O checker aparece **duplicado**.
-
-</div>
-</div>
-
-<!--
-Notas: Este é o ponto conceitual mais difícil da semana — os dois problemas se parecem no checker mas são distintos. Distorção se corrige com melhor projeção/seam; sobreposição se corrige separando as islands. Usar o UV Stretch Overlay para mostrar a distorção isoladamente.
--->
-
----
-
-## Texel density — a intuição
-
-**Texel** = pixel de textura. **Density** = texels por centímetro do objeto.
-
-Uma parede grande e uma pedra pequena com o **mesmo espaço UV**?
-
-A parede fica **embaçada**, a pedra fica **nítida** — ou vice-versa.
-
-<div class="industry">
-
-Islands maiores no espaço UV = mais nítidas. O cálculo numérico vem na Semana 4.
-
-</div>
-
-<!--
-Notas: NÃO entrar em fórmulas agora. Só a intuição "island maior = mais nítida". Se perguntarem valores exatos: "Vamos medir na Semana 4 — por enquanto, use o checker para ver se parece uniforme."
--->
-
----
-
-## Erros comuns
-
-<div class="error">
-
-Aplicar textura no UV Editor e esquecer de ativar **Material Preview** (`Z`) — o checker não aparece no Viewport.
-
-</div>
-
-<div class="error">
-
-Tentar **eliminar toda** a distorção só com projeção automática nesta semana.
-
-</div>
-
-<!--
-Notas: O primeiro é o problema técnico número 1 da semana; fixar Z → Material Preview como verificação obrigatória. O segundo é uma questão de expectativa — a solução (seams) é Semana 3. Recontextualizar erros de UV como economia de trabalho futuro.
--->
-
----
-
-<!-- _class: industry -->
+<!-- _class: invert -->
 
 ## Na indústria
 
-O checkerboard test que vocês praticaram hoje é o primeiro item de qualquer checklist de QA de UV em produção — nenhum asset avança para texturização sem passar por ele.
+Nenhum asset de produção vai para o motor de jogo sem um UV revisado manualmente.
 
-Distorção não identificada agora aparece ampliada em toda textura pintada depois: corrigir na Semana 2 é sempre mais barato do que repintar na Semana 9.
+A projeção automática é o ponto de partida — nunca o resultado final.
 
 <!--
-Notas: Contextualizar o valor profissional. Checkerboard/UV checker é ferramenta de verificação padrão em qualquer pipeline, não recurso didático exclusivo da disciplina. Amarra à Semana 3 e 4 (padding, texel density): o hábito de verificar UV com checker antes de seguir adiante é o mesmo que sustenta C3 até a CF6.
+Notas: Contextualizar o valor profissional do cuidado com UV, que parece "burocrático" nesta fase introdutória. Amarra ao C3 (UV Mapping) da Rubrica Mestre, já ativo nesta semana.
 -->
 
 ---
@@ -268,33 +236,32 @@ Notas: Contextualizar o valor profissional. Checkerboard/UV checker é ferrament
 
 # Resumo
 
-- UV = **desdobrar** o 3D em um plano 2D
-- Espaço UV vai de **0 a 1** • cada vértice tem sua coordenada
-- Distorção não se elimina, se **controla**
-- Projeção **depende da forma**: planar, cilíndrica, esférica, cúbica
-- **Checker** diagnostica • distorção **≠** sobreposição
+- **UV mapping** = desdobrar o objeto 3D em um plano 2D
+- Distorção é **inevitável** — o trabalho é **controlá-la**
+- 4 projeções: **planar, cilíndrica, esférica, cúbica**
+- **Checkerboard** diagnostica distorção e sobreposição
+- Island maior = mais nítido → **texel density**, na Semana 5
 
 <!--
-Notas: Fechar a mini aula amarrando os conceitos. Cada item volta aplicado na produção em estúdio. Não reler tudo — apontar a conexão com o próximo passo.
+Notas: Fechar amarrando os conceitos antes da demonstração. Não reler linha a linha — apontar que tudo isso será testado ao vivo em seguida, nos três objetos do arquivo de prática.
 -->
 
 ---
 
-## Agora: demonstração 
+## Agora: demonstração
 
-A seguir, **projeção UV no Blender**: 
+Cubo e esfera, ao vivo no Blender.
 
-Cubo → Cube Projection • Esfera → Sphere & Cylinder
+Testando as quatro projeções com **checkerboard** ativo.
 
-Checkerboard aplicado • UV Stretch Overlay
-
-![large](assets/demo_layout_blender.webp)
+![large](assets/blender_uv_editor_layout.webp)
 
 <!--
-Notas: Transição para a demonstração de 20 min. Configurar o layout: Viewport 3D à esquerda, UV Editor à direita — usaremos esse layout dividido a semana toda. Seams manuais NÃO entram hoje: "Agora entendemos o problema. Semana que vem, aprendemos a controlar onde cortar."
+Notas: Transição para os 20 min de demonstração. Layout de tela padrão a partir de hoje: Viewport 3D à esquerda, UV Editor à direita. Deixar claro que seams manuais não entram nesta demonstração — isso é Semana 4.
 
-FIGURA (produzir) — assets/demo_layout_blender.webp
-Objetivo: orientar visualmente o layout de tela dividido (Viewport 3D + UV Editor) que será usado durante toda a demonstração e o estúdio.
-Descrição: captura do Blender com a janela dividida: à esquerda o Viewport 3D com um cubo em Material Preview e checkerboard; à direita o UV Editor com as islands do mesmo cubo.
-Como produzir: no Blender, montar o layout dividido descrito, carregar o checkerboard e capturar a tela cheia. Opcionalmente, no Krita, rotular "Viewport 3D" e "UV Editor" sobre cada painel.
+[!FIGURA]
+Objetivo didático — Antecipar visualmente o layout de tela que será usado durante toda a demonstração e a produção em estúdio, para que o estudante já configure sua própria tela da mesma forma.
+Arquivo sugerido — assets/blender_uv_editor_layout.webp
+Descrição — Captura da interface do Blender dividida em duas áreas lado a lado: Viewport 3D à esquerda (mostrando um objeto com checkerboard em Material Preview) e UV Editor à direita (mostrando o layout UV correspondente). Um rótulo simples identifica cada painel.
+Como produzir — No Blender, configurar o layout de tela dividido, aplicar checkerboard em Material Preview e capturar a interface completa. Adicionar os dois rótulos no Krita.
 -->
