@@ -181,8 +181,6 @@ Notas: Nenhum software substitui o outro nesse fluxo. Se surgirem perguntas téc
 
 Um **mundo fantástico original**, criado a partir de elementos **regionais de Mato Grosso do Sul**.
 
-Ou do seu estado de origem.
-
 <!--
 Notas: Não é "fazer um jogo sobre MS". É usar o repertório cultural real como matéria-prima de fantasia. O recorte não fecha hoje — ele amadurece até a Semana 3, quando definimos o Hero Asset Referência. Hoje, começamos a gerar matéria-prima.
 -->
