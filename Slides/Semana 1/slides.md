@@ -46,12 +46,7 @@ Como produzir — Montar no Blender 4–5 peças modulares simples de um tema qu
 
 ## Três disciplinas, um entregável
 
-```mermaid
-graph LR
-  A[Pintura Digital<br/>e Arte Conceitual] --> D[Fase caminhável<br/>na Unity]
-  B[Texturização] --> D
-  C[Modelagem 3D<br/>e Level Design] --> D
-```
+![diagram](assets/mermaid-2.png)
 
 <!--
 Notas: Deixar muito claro que o projeto é único e compartilhado. O concept art define a direção, a modelagem entrega a geometria, a texturização entrega a superfície. Nenhuma disciplina fecha o projeto sozinha — e o recorte temático nasce do diálogo entre as três, não é escolhido isoladamente aqui.
@@ -145,11 +140,7 @@ Como produzir — No Blender, criar um plano com uma imagem raster de baixa reso
 
 ## O pipeline da disciplina
 
-```mermaid
-graph LR
-  A[Blender] --> B[3D Coat]
-  B --> C[Unity]
-```
+![diagram](assets/mermaid-3.png)
 
 Modelagem + UV → Texturização PBR → Motor de jogo
 
@@ -342,23 +333,7 @@ Checagem antes de liberar a etapa: o grupo consegue responder a 3 perguntas conc
 
 ## Reagrupamento
 
-```mermaid
-graph LR
-  subgraph G["Grupos especialistas"]
-    A[Prop A]
-    B[Prop B]
-    C[Prop C]
-    D[Prop D]
-  end
-  A --> N1[Grupo misto 1]
-  B --> N1
-  C --> N1
-  D --> N1
-  A --> N2[Grupo misto 2]
-  B --> N2
-  C --> N2
-  D --> N2
-```
+![diagram](assets/mermaid-4.png)
 
 Cada grupo novo recebe **um especialista de cada prop**.
 
