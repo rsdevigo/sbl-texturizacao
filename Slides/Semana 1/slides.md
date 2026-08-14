@@ -28,7 +28,7 @@ Uma **fase caminhável** na Unity.
 
 Construída por vocês, com **concept art**, **modelagem** e **texturização** coerentes entre si.
 
-![large](assets/kit_modular_exemplo.png)
+![large](assets/fase_caminhavel_exemplo.webp)
 
 <!--
 Notas: Esta é a promessa do semestre. Não é uma sequência de exercícios soltos — tudo alimenta um único entregável, apresentado na Semana 16. "Caminhável" significa apenas locomoção: não vamos programar gameplay. O valor está no ambiente.
@@ -46,7 +46,12 @@ Como produzir — Montar no Blender 4–5 peças modulares simples de um tema qu
 
 ## Três disciplinas, um entregável
 
-![diagram](assets/mermaid-2.png)
+```mermaid
+graph LR
+  A[Pintura Digital<br/>e Arte Conceitual] --> D[Fase caminhável<br/>na Unity]
+  B[Texturização] --> D
+  C[Modelagem 3D<br/>e Level Design] --> D
+```
 
 <!--
 Notas: Deixar muito claro que o projeto é único e compartilhado. O concept art define a direção, a modelagem entrega a geometria, a texturização entrega a superfície. Nenhuma disciplina fecha o projeto sozinha — e o recorte temático nasce do diálogo entre as três, não é escolhido isoladamente aqui.
@@ -140,7 +145,11 @@ Como produzir — No Blender, criar um plano com uma imagem raster de baixa reso
 
 ## O pipeline da disciplina
 
-![diagram](assets/mermaid-3.png)
+```mermaid
+graph LR
+  A[Blender] --> B[3D Coat]
+  B --> C[Unity]
+```
 
 Modelagem + UV → Texturização PBR → Motor de jogo
 
@@ -172,6 +181,8 @@ Notas: Nenhum software substitui o outro nesse fluxo. Se surgirem perguntas téc
 
 Um **mundo fantástico original**, criado a partir de elementos **regionais de Mato Grosso do Sul**.
 
+Ou do seu estado de origem.
+
 <!--
 Notas: Não é "fazer um jogo sobre MS". É usar o repertório cultural real como matéria-prima de fantasia. O recorte não fecha hoje — ele amadurece até a Semana 3, quando definimos o Hero Asset Referência. Hoje, começamos a gerar matéria-prima.
 -->
@@ -184,9 +195,11 @@ Notas: Não é "fazer um jogo sobre MS". É usar o repertório cultural real com
 
 ## Partimos de bens culturais reais
 
-Cerâmica Terena • Viola de Cocho • Tereré • Chamamé • Capoeira
-
-Complexo Ferroviário Noroeste • Igrejas históricas • Usina Santo Antônio
+- **Cerâmica Terena** — barro
+- **Viola de Cocho** — madeira
+- **Tereré** — chifre, metal, fibra
+- **Ferrovia Noroeste** — aço oxidado, tijolo
+- **Igrejas históricas** — pedra, cal, madeira
 
 </div>
 
@@ -199,11 +212,15 @@ Complexo Ferroviário Noroeste • Igrejas históricas • Usina Santo Antônio
 <!--
 Notas: Vitrine, não aula sobre cada item — o aprofundamento é trabalho dos grupos no estúdio. Fonte: Relação de Bens Materiais e Imateriais do Estado de Mato Grosso do Sul (Fundação de Cultura de MS). Mencionar que vários desses bens são patrimônio da humanidade pela UNESCO — isso dá peso à pesquisa.
 
+São 5 props, não 8, por dois motivos que valem dizer em voz alta: (1) o número de props define o TAMANHO dos grupos mistos do Encontro 2 — 5 props = grupos de 5, que é o limite para uma dinâmica de 15 min funcionar; (2) os 5 escolhidos cobrem 5 famílias de material distintas (barro, madeira, chifre/metal/fibra, aço oxidado/tijolo, pedra/cal), que é exatamente o repertório de superfície que vamos texturizar no semestre.
+
+Chamamé e Capoeira ficaram de fora por serem bens performáticos — riquíssimos culturalmente, mas pobres em superfície para esta disciplina. Se algum estudante insistir em um deles, aceitar como prop extra do grupo dele, não como grupo próprio.
+
 [!FIGURA]
 Objetivo didático — Apresentar visualmente os props culturais disponíveis para que a divisão em grupos seja rápida e informada, e não uma escolha às cegas por nome.
 Arquivo sugerido — assets/props_ms_vitrine.webp
-Descrição — Grade de 8 células, uma por prop, cada célula com uma fotografia de referência e o nome do bem cultural embaixo, em tipografia limpa e uniforme.
-Como produzir — Reunir 8 fotografias de referência (fontes oficiais: Fundação de Cultura de MS, IPHAN, acervos públicos) e montar a grade no Krita com molduras e rótulos padronizados. Registrar os créditos das imagens em um slide de apêndice ou no rodapé do arquivo.
+Descrição — Grade de 5 células, uma por prop, cada célula com uma fotografia de referência em close (privilegiando a superfície e o material, não a vista geral do objeto) e o nome do bem cultural embaixo, em tipografia limpa e uniforme.
+Como produzir — Reunir 5 fotografias de referência com bom detalhe de superfície (fontes oficiais: Fundação de Cultura de MS, IPHAN, acervos públicos) e montar a grade no Krita com molduras e rótulos padronizados. Registrar os créditos das imagens em um slide de apêndice ou no rodapé do arquivo.
 -->
 
 ---
@@ -308,7 +325,9 @@ Notas: Divisória entre a mini aula e o estúdio. Os slides a seguir ficam proje
 
 ## Etapa 1 — Grupos especialistas
 
-**Um grupo por prop. 35 minutos.** Ao final, o grupo precisa conseguir **ensinar** o prop para quem nunca ouviu falar dele.
+**5 props. 5 grupos. Um prop por grupo. 35 minutos.**
+
+Ao final, o grupo precisa conseguir **ensinar** o prop para quem nunca ouviu falar dele.
 
 - O que é, e de onde vem?
 - Como é feito ou praticado?
@@ -319,6 +338,10 @@ Registrem em um documento ou painel do grupo — texto **e** imagens de referên
 
 <!--
 Notas: Timebox real da etapa: 5 min de vitrine dos props + 5 min de divisão dos grupos + 35 min de pesquisa. Evitar que todos os grupos queiram o prop "mais famoso" — sorteio ou distribuição resolve.
+
+São exatamente 5 grupos, independente do tamanho da turma: com 25 estudantes dá 5 por grupo; com 30, dá 6. Grupo especialista grande funciona (é pesquisa, dá para dividir subtemas); o que NÃO pode crescer é o grupo misto do Encontro 2 — e ele tem sempre 1 integrante por prop, ou seja, 5 pessoas. Turma pequena (menos de 15): usar 4 props, cortando as igrejas históricas.
+
+Se a turma for muito grande (mais de 30), fazer 10 grupos especialistas — dois por prop, trabalhando em paralelo sem se falar. O jigsaw depois roda em dois blocos independentes, e comparar as duas leituras do mesmo prop na crítica é ganho pedagógico, não redundância.
 
 Circular perguntando, sem entregar resposta pronta: "Que material vocês imaginam predominando aqui — pedra, madeira, barro, metal, fibra?" / "O que torna esse prop reconhecível à primeira vista?" / "Tem alguma história ou disputa por trás disso?"
 
@@ -331,12 +354,28 @@ Checagem antes de liberar a etapa: o grupo consegue responder a 3 perguntas conc
 
 ## Reagrupamento
 
-![diagram](assets/mermaid-4.png)
+```mermaid
+graph LR
+  subgraph ESP["Etapa 1 — 5 grupos especialistas"]
+    P1[Cerâmica Terena]
+    P2[Viola de Cocho]
+    P3[Tereré]
+    P4[Ferrovia Noroeste]
+    P5[Igrejas históricas]
+  end
+  P1 --> M[Grupo misto<br/>5 pessoas · 5 props]
+  P2 --> M
+  P3 --> M
+  P4 --> M
+  P5 --> M
+```
 
 Cada grupo novo recebe **um especialista de cada prop**.
 
 <!--
-Notas: 5 minutos. Preparar previamente uma tabela de distribuição com nomes, ajustando na hora conforme presença. Grupos podem ter 2 integrantes do mesmo prop se o número não fechar — não é ideal, mas não invalida a dinâmica.
+Notas: 5 minutos. O diagrama mostra UM grupo misto para não poluir — na prática formam-se tantos grupos mistos quantos forem os integrantes de cada grupo especialista (5 grupos de 5 → 5 grupos mistos de 5). Dizer isso em voz alta enquanto projeta.
+
+Preparar previamente uma tabela de distribuição com nomes, ajustando na hora conforme presença. Grupos podem ter 2 integrantes do mesmo prop se o número não fechar — não é ideal, mas não invalida a dinâmica.
 
 Explicar o porquê em uma frase: sozinho com o próprio prop, a tendência é a tradução literal. Cruzar props diferentes é o que gera ideias que ninguém acharia sozinho.
 -->
@@ -356,7 +395,9 @@ Nas linhas, os **props** do grupo. Nas colunas, categorias de **fantasia**. Pree
 | **Tereré** | | | | |
 
 <!--
-Notas: A célula preenchida é o exemplo a dar em voz alta — Viola de Cocho × Fenômeno natural mágico → um instrumento que, ao ser tocado, "afina" o clima de uma região. Mostrar que a combinação forçada produz algo que nenhuma das duas colunas produziria sozinha.
+Notas: A tabela do slide é um modelo reduzido — mostra 3 linhas para caber na projeção, mas o grupo tem 5 props e deve montar as 5 linhas no próprio painel.
+
+A célula preenchida é o exemplo a dar em voz alta — Viola de Cocho × Fenômeno natural mágico → um instrumento que, ao ser tocado, "afina" o clima de uma região. Mostrar que a combinação forçada produz algo que nenhuma das duas colunas produziria sozinha.
 
 Pedir que anotem os atributos de cada prop ao lado da linha (material, forma, cor, função, simbologia) — é deles que saem as combinações boas.
 

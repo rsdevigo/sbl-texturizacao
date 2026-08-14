@@ -58,16 +58,36 @@ Ao final da semana, o estudante será capaz de:
 - Ferramenta de registro das dinâmicas: papel/quadro branco físico, ou Google Slides/Jamboard/Miro (um arquivo por grupo)
 - Projetor para demonstração e para apresentar os props culturais aos grupos
 - Exemplos preparados pelo professor: 2–3 kits modulares estilizados de referência (temas variados) e 1 exemplo de fase caminhável simples na Unity
-- **Lista curada de props culturais de Mato Grosso do Sul**, extraída da *Relação de Bens Materiais e Imateriais do Estado de Mato Grosso do Sul* (Fundação de Cultura de MS — [PDF oficial](https://www.fundacaodecultura.ms.gov.br/wp-content/uploads/2026/05/RELACAO-BENS-MATERIAIS-E-IMATERIAIS-DO-ESTADO-DO-MATO-GROSSO-DO-SUL-atualizado.pdf)). Sugestão de 6–8 props para dividir a turma em grupos (ajustar a quantidade ao tamanho da turma), cobrindo categorias diferentes para evitar repetição:
-  1. **Cerâmica Terena** (bem imaterial, artesanato/iconografia — Decreto 12.847/2009)
-  2. **Viola de Cocho** (bem imaterial, instrumento musical artesanal, ofício de mestres cururueiros)
-  3. **Tereré / cultura Guarani da erva-mate** (bem imaterial, Decreto 13.140/2011, patrimônio da humanidade UNESCO 2020) — apoiar com o contexto histórico-industrial da **Companhia Matte Laranjeira** (exploração da erva-mate na região no início do séc. XX)
-  4. **Chamamé** (bem imaterial, gênero musical, patrimônio da humanidade UNESCO 2020)
-  5. **Roda de Capoeira / Ofício dos Mestres de Capoeira** (bem imaterial, herança afro-banto, patrimônio da humanidade UNESCO 2014)
-  6. **Complexo Ferroviário Rede Noroeste do Brasil** (bem material tombado — arquitetura industrial/ferroviária, mais de 1.100 imóveis e 75 estações)
-  7. **Igreja Nossa Senhora do Carmo — Miranda** ou **Catedral Nossa Senhora da Candelária — Corumbá** (bem material tombado — arquitetura religiosa)
-  8. **Usina Açucareira Santo Antônio — Miranda** (bem material tombado — arquitetura industrial rural, imigração italiana)
-  > Para estudantes de outros estados, o professor pode preparar 1–2 props equivalentes do estado de origem, ou incluí-los como "convidados especialistas" em um dos grupos de prop já formados.
+- **Lista curada de 5 props culturais de Mato Grosso do Sul**, extraída da *Relação de Bens Materiais e Imateriais do Estado de Mato Grosso do Sul* (Fundação de Cultura de MS — [PDF oficial](https://www.fundacaodecultura.ms.gov.br/wp-content/uploads/2026/05/RELACAO-BENS-MATERIAIS-E-IMATERIAIS-DO-ESTADO-DO-MATO-GROSSO-DO-SUL-atualizado.pdf)):
+
+| # | Prop | Natureza | Família de material |
+|---|---|---|---|
+| 1 | **Cerâmica Terena** | Bem imaterial — artesanato/iconografia (Decreto 12.847/2009) | Barro cru e queimado, pigmento mineral |
+| 2 | **Viola de Cocho** | Bem imaterial — instrumento artesanal, ofício dos mestres cururueiros | Madeira escavada em peça única, corda, cera |
+| 3 | **Tereré / cultura Guarani da erva-mate** | Bem imaterial (Decreto 13.140/2011, patrimônio da humanidade UNESCO 2020) | Chifre (guampa), metal (bomba), fibra vegetal, couro |
+| 4 | **Complexo Ferroviário Rede Noroeste do Brasil** | Bem material tombado — arquitetura industrial/ferroviária (1.100+ imóveis, 75 estações) | Aço oxidado, tijolo, concreto envelhecido, madeira de dormente |
+| 5 | **Igreja N. Sra. do Carmo (Miranda)** ou **Catedral N. Sra. da Candelária (Corumbá)** | Bem material tombado — arquitetura religiosa | Pedra, cal, reboco descascado, madeira, vitral |
+
+  **Por que exatamente 5, e por que estes:**
+
+  - **A quantidade de props define o tamanho dos grupos mistos do Encontro 2, não a quantidade deles.** Como o reagrupamento jigsaw coloca um especialista de cada prop em cada grupo novo, N props ⇒ grupos mistos de N pessoas. Com 8 props, os grupos mistos teriam 8 integrantes — inviável para dinâmicas de 15 minutos, em que metade do grupo ficaria assistindo. Cinco é o teto prático.
+  - **Os 5 cobrem 5 famílias de material distintas.** Como esta é uma disciplina de superfície, a diversidade material importa mais que a diversidade temática: ao final do Encontro 2 a turma terá circulado por barro, madeira, chifre/metal/fibra, aço oxidado e pedra/cal — o repertório que será texturizado no restante do semestre.
+  - **Chamamé e Roda de Capoeira foram deliberadamente excluídos** apesar do peso cultural (ambos patrimônio da humanidade UNESCO): são bens **performáticos**, ricos em gesto, som e narrativa, mas pobres em superfície texturizável. Se um estudante insistir em um deles, acolher como prop **extra** dentro do grupo dele — não como grupo próprio.
+  - **A Usina Açucareira Santo Antônio saiu por sobreposição material** com o Complexo Ferroviário (ambos arquitetura industrial em tijolo e metal). Ela é a substituta natural caso a Ferrovia se mostre pouco documentada para a turma.
+
+  **Ajuste ao tamanho da turma:**
+
+| Turma | Configuração |
+|---|---|
+| Menos de 15 | 4 props (cortar as igrejas históricas) ⇒ grupos mistos de 4 |
+| 15 a 30 | 5 props, 5 grupos especialistas ⇒ 5 grupos mistos de 5 |
+| Mais de 30 | 5 props, **10** grupos especialistas (dois por prop, trabalhando em paralelo sem se falar) ⇒ o jigsaw roda em dois blocos independentes. Comparar as duas leituras do mesmo prop na crítica é ganho pedagógico, não redundância. |
+
+  > O grupo **especialista** pode crescer sem prejuízo — é trabalho de pesquisa, e subtemas se dividem naturalmente. O que **não** pode crescer é o grupo **misto** do Encontro 2.
+
+  > Para estudantes de outros estados, o professor pode preparar um prop equivalente do estado de origem para **substituir** um dos cinco, ou incluí-los como "convidados especialistas" em um dos grupos já formados. Trocar um prop é preferível a acrescentar um sexto.
+
+  > Contexto de apoio para o prop 3: a história industrial da **Companhia Matte Laranjeira** (exploração da erva-mate na região no início do séc. XX) enriquece muito a pesquisa do grupo do Tereré — vale entregar como pista inicial.
 - Apostila — Parte I, Cap. 1 e Parte VI, Cap. 25 (disponibilizadas antes da aula)
 
 ---
@@ -130,8 +150,8 @@ O objetivo é que o estudante reconheça esses espaços quando voltar ao softwar
 
 **Passo a passo:**
 
-1. **(5 min) Apresentação rápida dos props.** O professor projeta a lista de props culturais (ver **Recursos necessários**) com uma imagem e uma frase de contexto para cada um. Não aprofundar — é uma vitrine, não uma aula sobre cada item.
-2. **(5 min) Divisão em grupos.** Formar um grupo por prop (4–8 grupos, conforme o tamanho da turma e a quantidade de props escolhida). Pode ser por sorteio, afinidade ou distribuição do professor — evitar que todos os grupos escolham o mesmo prop "mais famoso".
+1. **(5 min) Apresentação rápida dos props.** O professor projeta os 5 props culturais (ver **Recursos necessários**) com uma imagem em close de superfície e uma frase de contexto para cada um. Não aprofundar — é uma vitrine, não uma aula sobre cada item. Vale explicitar à turma por que são cinco e não oito: o número de props define o tamanho dos grupos do Encontro 2, e cada prop traz uma família de material diferente.
+2. **(5 min) Divisão em grupos.** Formar **5 grupos, um por prop** (ver a tabela de ajuste ao tamanho da turma em **Recursos necessários**). Pode ser por sorteio, afinidade ou distribuição do professor — evitar que todos os grupos escolham o mesmo prop "mais famoso". Grupos especialistas grandes (5–6 integrantes) não são problema: a pesquisa se divide em subtemas naturalmente.
 3. **(35 min) Pesquisa em grupo.** Cada grupo aprofunda seu prop: o que é, de onde vem, como é feito/praticado, que materiais ou elementos visuais estão associados a ele, que histórias ou simbologias carrega. Registrar em um documento ou painel do grupo (texto + imagens de referência). O grupo deve terminar a etapa capaz de "ensinar" o prop para alguém que nunca ouviu falar dele — essa capacidade de ensinar é o que será testado no reagrupamento do Encontro 2.
 
 **Papel do professor:**
@@ -149,7 +169,7 @@ Circular entre os grupos, aprofundando a pesquisa com perguntas, sem entregar a 
 
 **Formato: Compartilhamento entre grupos sobre os props pesquisados**
 
-Cada grupo apresenta brevemente (2–3 min) o prop que pesquisou para o restante da turma — essa etapa prepara o reagrupamento cruzado que vem a seguir, pois todo estudante vai precisar "levar" o conhecimento do seu prop original para um grupo novo.
+Cada um dos 5 grupos apresenta brevemente (2–3 min) o prop que pesquisou para o restante da turma — essa etapa prepara o reagrupamento cruzado que vem a seguir, pois todo estudante vai precisar "levar" o conhecimento do seu prop original para um grupo novo. Com 5 grupos, as apresentações ocupam 10–15 dos 20 minutos, deixando folga real para as perguntas.
 
 **Roteiro da crítica:**
 
@@ -158,7 +178,7 @@ Cada grupo apresenta brevemente (2–3 min) o prop que pesquisou para o restante
 3. Turma: uma pergunta rápida de esclarecimento por apresentação.
 4. Professor fecha reforçando um detalhe específico do prop que vale a pena carregar para a próxima etapa.
 
-> **Turmas grandes (mais de 8 grupos):** os 20 minutos não comportam 2–3 min por grupo com espaço de pergunta. Reduzir a apresentação para 1 min por grupo (foco só no elemento visual/material mais marcante), ou dividir a turma em duas rodas simultâneas com o professor circulando entre elas.
+> **Turmas com mais de 30 estudantes (10 grupos especialistas, dois por prop):** os 20 minutos não comportam 2–3 min por grupo com espaço de pergunta. Reduzir para 1 min por grupo (foco só no elemento visual/material mais marcante), ou — melhor — pedir que os dois grupos do mesmo prop apresentem **juntos**, em 3 min, destacando **onde suas leituras divergiram**. A divergência entre duas pesquisas do mesmo bem cultural é conteúdo pedagógico de primeira ordem: mostra que não existe leitura única de um patrimônio.
 
 **O professor observa e anota (para C10):**
 - Quem participou ativamente na pesquisa e na apresentação do grupo
@@ -175,11 +195,13 @@ Cada grupo apresenta brevemente (2–3 min) o prop que pesquisou para o restante
 
 **Passo 1 — Reagrupamento (5 min):**
 
-Formar novos grupos (jigsaw) de modo que cada grupo novo tenha, na medida do possível, um integrante de cada prop original. Cada estudante agora é o "especialista" do seu prop dentro do grupo novo e deve conseguir explicá-lo rapidamente aos colegas.
+Formar novos grupos (jigsaw) de modo que cada grupo novo tenha, na medida do possível, um integrante de cada prop original. Com 5 props, cada grupo misto tem **5 integrantes e 5 props** — e formam-se tantos grupos mistos quantos forem os integrantes de cada grupo especialista (5 grupos de 5 ⇒ 5 grupos mistos de 5). Cada estudante agora é o "especialista" do seu prop dentro do grupo novo e deve conseguir explicá-lo rapidamente aos colegas.
+
+> **Regra de escala a não perder de vista:** o grupo misto tem sempre o tamanho do número de props. É por isso que a Etapa 1 usa 5 props e não 8 — com 8, esta etapa teria grupos de 8 pessoas e as dinâmicas de 15 minutos deixariam metade da turma assistindo.
 
 **Passo 2 — Rodízio das dinâmicas de ideação (45 min, ~15 min cada):**
 
-Cada grupo novo passa pelas três técnicas abaixo, aplicando-as aos 3–4 props que os integrantes trouxeram. O objetivo de cada técnica é o mesmo — sair do óbvio — mas o caminho é diferente:
+Cada grupo novo passa pelas três técnicas abaixo, aplicando-as aos 5 props que os integrantes trouxeram. O objetivo de cada técnica é o mesmo — sair do óbvio — mas o caminho é diferente:
 
 - **Matriz morfológica (≈15 min).** Montar uma tabela: nas linhas, os props do grupo (com seus atributos: material, forma, cor, função, simbologia); nas colunas, categorias de elementos de fantasia/magia (criatura, encantamento/ritual, artefato, fenômeno natural mágico). Preencher pelo menos 2 células por prop, forçando combinações que não seriam a primeira ideia óbvia (ex.: Viola de Cocho × Fenômeno natural mágico → um instrumento que, ao ser tocado, "afina" o clima de uma região).
 
@@ -223,7 +245,7 @@ Circular entre os grupos garantindo que as ideias fiquem **ancoradas no prop pes
 Compromete a etapa seguinte, pois o jigsaw depende de cada integrante levar conhecimento real. Estratégia: o professor circula na Etapa 1 verificando se cada grupo já consegue responder a pelo menos 3 perguntas concretas sobre o prop (material, origem, uso) antes do fim dos 50 minutos.
 
 **3. Reagrupamento desigual (grupo novo só com integrantes de 1–2 props, faltando os outros)**
-Pode ocorrer com faltas ou turmas com número não divisível pela quantidade de props. Estratégia: preparar previamente uma tabela de distribuição com nomes, ajustando na hora conforme presença; grupos podem ter 2 integrantes do mesmo prop original se necessário — não é ideal, mas não invalida a dinâmica.
+Pode ocorrer com faltas ou com turmas cujo número não é divisível por 5. Estratégia: preparar previamente uma tabela de distribuição com nomes, ajustando na hora conforme presença; grupos podem ter 2 integrantes do mesmo prop original se necessário — não é ideal, mas não invalida a dinâmica. O piso aceitável é **3 props distintos** por grupo misto: abaixo disso o cruzamento perde força e a ideação tende à tradução literal. Se as faltas derrubarem um grupo abaixo desse piso, é preferível fundi-lo com outro (grupo de 7) do que rodar as dinâmicas com 2 props.
 
 **4. Timebox das três dinâmicas (SCAMPER, matriz, conexões forçadas) estourar**
 Quinze minutos por técnica é apertado para grupos que não conhecem o formato. Estratégia: o professor pode reduzir para 2 técnicas em turmas mais lentas (recomendação: manter matriz morfológica e conexões forçadas, que são mais visuais e rápidas de explicar; SCAMPER fica opcional ou vira lição de casa leve).
@@ -245,7 +267,7 @@ Possível em turmas com acesso irregular a disciplinas anteriores. Estratégia: 
 |---|---|
 | Grupo produz ideia óbvia/literal na primeira tentativa | Perguntar "essa ideia só funciona por causa do prop, ou você chegaria nela de qualquer jeito?" e pedir uma segunda rodada. |
 | Grupo especialista pesquisa raso | Professor intervém com 3 perguntas concretas (material, origem, uso) antes de liberar para a próxima etapa. |
-| Grupo travado numa das três dinâmicas | Reduzir o escopo: aplicar a técnica a apenas 1 prop em vez de 3–4, e ampliar depois se sobrar tempo. |
+| Grupo travado numa das três dinâmicas | Reduzir o escopo: aplicar a técnica a apenas 1 ou 2 props em vez dos 5, e ampliar depois se sobrar tempo. |
 | Estudante de fora do Mato Grosso do Sul deslocado | Oferecer, se possível, um prop equivalente do estado de origem, ou posicioná-lo como "olhar de fora" que ajuda o grupo a evitar pressupostos óbvios sobre o prop de MS. |
 | Turma agitada na crítica informal | Usar cronômetro de 1–2 minutos por grupo — brevidade estrutura a discussão. |
 | Turma grande (crítica não cabe em 20 min) | Reduzir para 1 min por grupo, ou dividir em duas rodas simultâneas com o professor circulando entre elas. |
@@ -271,7 +293,7 @@ Possível em turmas com acesso irregular a disciplinas anteriores. Estratégia: 
 
 | Entrega | Formato | Escopo | Prazo |
 |---|---|---|---|
-| Registro de pesquisa do prop cultural (Etapa 1) | Documento ou painel compartilhado do grupo | Grupo (4–8 estudantes) | Até o fim do Encontro 1 |
+| Registro de pesquisa do prop cultural (Etapa 1) | Documento ou painel compartilhado do grupo | Grupo especialista (5–6 estudantes) | Até o fim do Encontro 1 |
 | Registro das três dinâmicas de ideação (matriz morfológica, SCAMPER, conexões forçadas) | Documento ou painel compartilhado do grupo reagrupado | Grupo (jigsaw) | Até o fim do Encontro 2 |
 | Registro individual de 1–2 ideias escolhidas para levar à Semana 2 | Post-it físico ou digital | Individual | Até o fim do Encontro 2 |
 
