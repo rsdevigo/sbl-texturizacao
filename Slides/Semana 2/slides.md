@@ -77,11 +77,7 @@ Notas: Fixar essa analogia — ela volta em todas as semanas de UV do semestre. 
 
 ## O espaço UV
 
-```mermaid
-graph LR
-  A["Objeto 3D<br/>(vértices)"] -->|coordenada UV| B["Espaço UV<br/>quadrado 0–1"]
-  B -->|pintura/textura| C["Imagem 2D"]
-```
+![diagram](assets/mermaid-2.png)
 
 Cada vértice do objeto tem uma coordenada UV: "esse ponto do objeto corresponde a esse ponto da textura".
 
