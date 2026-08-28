@@ -101,7 +101,7 @@ A textura de **checkerboard** revela onde a projeção distorce.
 
 <div class="media">
 
-![large](assets/cubo_uv_checker.webp)
+![large](assets/cubo_uv_checker.png)
 
 </div>
 
@@ -156,7 +156,7 @@ O checker mostra: cada projeção falha de um jeito diferente.
 
 <div class="media">
 
-![large](assets/comparativo_projecoes_uv.webp)
+![large](assets/comparativo_projecoes_uv.png)
 
 </div>
 
@@ -250,7 +250,7 @@ Cubo e esfera, ao vivo no Blender.
 
 Testando as quatro projeções com **checkerboard** ativo.
 
-![large](assets/blender_uv_editor_layout.webp)
+![large](assets/blender_uv_editor_layout.png)
 
 <!--
 Notas: Transição para os 20 min de demonstração. Layout de tela padrão a partir de hoje: Viewport 3D à esquerda, UV Editor à direita. Deixar claro que seams manuais não entram nesta demonstração — isso é Semana 4.
