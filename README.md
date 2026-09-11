@@ -26,7 +26,7 @@ Se você tem mais tempo, vale ler o Guia do Professor por completo antes de toca
 - **Metodologia:** Studio-Based Learning — sem aulas expositivas longas; o conteúdo emerge das necessidades do projeto.
 - **Pipeline de ferramentas:** Blender (modelagem/UV) → 3D Coat (texturização/pintura) → Unity (integração). Krita é usado como apoio opcional para pintura digital.
 - **Projeto Integrador:** um único **Kit Modular de Ambiente** (tema escolhido pelos próprios estudantes nas primeiras semanas — Medieval, Fantasia, Sci-Fi, Pós-apocalíptico, Cyberpunk, etc.) que atravessa todo o semestre. Toda entrega contribui para esse projeto final.
-- **Avaliação:** Portfolio de Artefatos com pesos crescentes ao longo de 6 críticas formais (CF1 a CF6), a última sendo a defesa final do kit completo na Semana 17.
+- **Avaliação:** Portfolio de Artefatos com pesos crescentes ao longo de 4 críticas formais (CF1 a CF4, Semanas 4, 8, 11 e 14), seguido da CF5 — Projeto Final, a defesa do kit completo na Semana 16. A Semana 17 é semana de Recuperação, sem crítica coletiva.
 
 ### Estrutura fixa de cada encontro
 

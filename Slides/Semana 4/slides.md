@@ -17,7 +17,7 @@ footer: "IFMS • Semana 04"
 **Semana 4** — Distorção, texel density e empacotamento de islands
 
 <!--
-Notas: Abertura da mini aula (20 min). Continuação direta da Semana 3 — o UV já foi ABERTO; agora vamos QUALIFICAR esse UV. A mensagem central da semana está no subtítulo: otimizar UV tem impacto direto e mensurável na qualidade da textura. Última semana da Unidade I. Não é tutorial de cliques — é construir o raciocínio "distorção -> normalização -> empacotamento".
+Notas: Abertura da mini aula (20 min). Continuação direta da Semana 3 — o UV já foi ABERTO; agora vamos QUALIFICAR esse UV. A mensagem central da semana está no subtítulo: otimizar UV tem impacto direto e mensurável na qualidade da textura. Também é a semana em que o Asset 02 começa a receber UV. Última semana da Unidade I. Não é tutorial de cliques — é construir o raciocínio "distorção -> normalização -> empacotamento".
 -->
 
 ---
@@ -30,9 +30,34 @@ Ao final da semana você será capaz de:
 - Explicar **texel density** e por que ela precisa ser consistente
 - Normalizar as islands com **Average Islands Scale**
 - Empacotar o layout com **Pack Islands**, na ordem certa
+- Abrir o UV do **Asset 02** já aplicando os critérios da Semana 3, sem precisar de correção depois
 
 <!--
-Notas: Ler rápido. Cada objetivo volta ao longo da aula. Não antecipar PBR (Semana 5) nem Texture Atlas (Semana 13). O foco é qualificar o UV que já foi aberto na Semana 3.
+Notas: Ler rápido. Cada objetivo volta ao longo da aula. Não antecipar PBR (Semana 5) nem Texture Atlas (Semana 13). Os quatro primeiros objetivos qualificam o UV do Asset 01, já aberto na Semana 3; o quinto abre a frente do Asset 02 — critério C3 da rubrica cobre os dois assets nesta semana.
+-->
+
+---
+
+<!-- _class: two-columns -->
+
+## Duas frentes de trabalho hoje
+
+### Asset 01
+
+Já tem UV desde a Semana 3. Hoje: **otimizar** — corrigir distorção residual, normalizar texel density, empacotar.
+
+### Asset 02
+
+Ainda não tem UV. Hoje: **abrir** — marcar seams e fazer Unwrap aplicando desde o início os critérios já aprendidos.
+
+<div class="tip">
+
+O Asset 02 não precisa estar finalizado hoje — mas precisa estar **começado**.
+
+</div>
+
+<!--
+Notas: Contextualizar a estrutura dos dois encontros antes de entrar na mini aula técnica. O Asset 02 é conteúdo novo desta semana — reforçar que os mesmos critérios de seams da Semana 3 (C3) já se aplicam sem precisar de uma rodada de correção depois. As ferramentas de otimização (Stretch Overlay, Average Islands Scale, Pack Islands) valem para os dois assets.
 -->
 
 ---
@@ -267,7 +292,7 @@ Notas: Amarrar a mini aula. Cada item volta aplicado na produção em estúdio. 
 
 ## Última semana da Unidade I
 
-O UV que você entrega hoje é a **base** das próximas três unidades.
+O UV que você entrega hoje — dos **dois** assets — é a **base** das próximas três unidades.
 
 Na **Semana 5** começa o **PBR**: material que simula a física da luz.
 
@@ -278,7 +303,7 @@ Um UV bom fica **invisível** — o jogador só vê o material. Um UV ruim apare
 </div>
 
 <!--
-Notas: Conectar ao semestre e ao Projeto Integrador. Um UV com problemas nesta semana gera retrabalho nas Semanas 5, 6 e além. Comunicar essa consequência com clareza — é o que motiva o cuidado no estúdio de hoje. A crítica desta semana é INFORMAL.
+Notas: Conectar ao semestre e ao Projeto Integrador. Um UV com problemas nesta semana gera retrabalho nas Semanas 5, 6 e além. Comunicar essa consequência com clareza — é o que motiva o cuidado no estúdio de hoje. A crítica desta semana é INFORMAL: sem Ficha de Crítica Formal nem Autoavaliação obrigatória — o registro de C3 é feito pela análise dos arquivos entregues. A próxima crítica formal é a da Semana 8 (a Semana 5 não tem crítica formal).
 -->
 
 ---
@@ -294,7 +319,7 @@ Comparação **antes / depois** com checkerboard
 ![large](assets/demo_layout_semana04.webp)
 
 <!--
-Notas: Transição para a demonstração de 20 min. Mesmo layout dividido das semanas anteriores: Viewport 3D à esquerda com checkerboard, UV Editor à direita com Stretch Overlay ativo. Sequência: diagnosticar vermelho -> corrigir island -> Average Islands Scale -> Pack Islands -> desfazer/refazer mostrando antes-depois. Manter o arquivo aberto durante o estúdio.
+Notas: Transição para a demonstração de 20 min (o mesmo processo se aplica depois ao Asset 02 no estúdio). Mesmo layout dividido das semanas anteriores: Viewport 3D à esquerda com checkerboard, UV Editor à direita com Stretch Overlay ativo. Sequência: diagnosticar vermelho -> corrigir island -> Average Islands Scale -> Pack Islands -> desfazer/refazer mostrando antes-depois. Manter o arquivo aberto durante o estúdio. Depois da demonstração (não coberto em slides): 50 min de estúdio no Encontro 1 (Asset 01 otimização + Asset 02 abertura inicial), Encontro 2 abre com 20 min de crítica coletiva informal comparando Stretch Overlays de 3 UVs, seguidos de 60 min de estúdio para finalizar Asset 01 e avançar no Asset 02, e fechamento de 10 min antecipando a Semana 5.
 
 [!FIGURA]
 Objetivo didático: orientar o layout de tela da demonstração e antecipar o resultado esperado da otimização, dando à turma um alvo visual claro para o próprio trabalho.

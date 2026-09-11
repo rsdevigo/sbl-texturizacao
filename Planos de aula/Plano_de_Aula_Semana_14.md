@@ -2,9 +2,9 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning
 **Unidade:** IV — Otimização e Integração ao Motor
 **Tema:** Trim Sheets: criação e aplicação para assets modulares
-**Apostila:** Parte V, Cap. 18 — Texture Atlas e Trim Sheets (conceito e workflow de trim sheets; aplicação em arquitetura modular). Leitura de apoio para esta CF5: Parte VI, Cap. 23 — Controle de Qualidade de Materiais
+**Apostila:** Parte V, Cap. 18 — Texture Atlas e Trim Sheets (conceito e workflow de trim sheets; aplicação em arquitetura modular). Leitura de apoio para esta CF4: Parte VI, Cap. 23 — Controle de Qualidade de Materiais
 **Carga horária:** 3h (2 encontros de 1h30)
-**Crítica:** 🔴 **FORMAL — CF5** (peso de 20% no Portfolio de Artefatos — o segundo maior peso entre os momentos intermediários do PA, atrás apenas da CF4)
+**Crítica:** 🔴 **FORMAL — CF4** (peso de 30% no Portfolio de Artefatos — o maior peso entre todas as críticas formais do PA)
 
 ---
 
@@ -19,7 +19,7 @@ Os estudantes chegam com:
 
 > **Nota de transição:** A Semana 13 resolveu o problema de agrupar **objetos completos** em uma única textura compartilhada — o Texture Atlas parte do princípio de que cada objeto ocupa uma região fixa e exclusiva do espaço UV. Isso funciona bem para peças distintas, mas falha para um problema diferente, típico de kits modulares de ambiente: elementos arquitetônicos que se **repetem em grande quantidade com pequenas variações** — paredes, molduras, vigas, trilhos, bordas de encaixe. Repetir esses elementos no atlas, um do lado do outro, desperdiçaria espaço e criaria dezenas de UVs quase idênticas. A Trim Sheet resolve isso de outra forma: uma faixa estreita e longa de textura, projetada para ser **reutilizada via tiling** ao longo de qualquer comprimento de UV, permitindo que uma única textura sirva para paredes de 1 metro e paredes de 10 metros sem nunca precisar de uma textura nova. É uma ferramenta de otimização com lógica diferente da do atlas — não menos texturas por objeto, mas uma textura que se **estica e repete** para servir a qualquer quantidade de geometria modular.
 
-> **Atenção — Crítica Formal (CF5):** Esta é a 5ª das 6 críticas formais da disciplina (mais o Checkpoint C8, dedicado exclusivamente à Semana 16) e a primeira em que o Critério 7 (Otimização) entra em nota formal — até aqui ele era apenas observado (Semana 13). C1, C2, C5, C6 e C9 seguem em nota; C4 (Materiais PBR) passa a ser apenas observado nesta CF; C3 (UV Mapping) não se aplica ainda e C8 (Integração na Unity) só recebe sua primeira nota formal no Checkpoint C8 da Semana 16, não aqui. A CF5 corresponde a 20% do Portfolio de Artefatos — os 10 pontos percentuais remanejados desta CF (antes 30%) financiam o novo Checkpoint C8, que fecha uma lacuna identificada em auditoria pedagógica: sem ele, a Integração na Unity só seria avaliada com nota uma única vez, na própria defesa final.
+> **Atenção — Crítica Formal (CF4):** Esta é a 4ª e última crítica formal do Portfolio de Artefatos (a Semana 16 encerra o semestre com a CF5 — Projeto Final, defesa completa da Rubrica Mestre) e a primeira em que o Critério 7 (Otimização) entra em nota formal — até aqui ele era apenas observado (Semana 13). C1, C2, C5, C6 e C9 seguem em nota; C4 (Materiais PBR) passa a ser apenas observado nesta CF; C3 (UV Mapping) e C8 (Integração na Unity) não se aplicam ainda — C8 só recebe sua primeira nota formal na CF5/Projeto Final da Semana 16. A CF4 corresponde a 30% do Portfolio de Artefatos, o maior peso entre as quatro críticas formais que compõem o PA, refletindo o acúmulo de critérios avaliados até aqui.
 
 ---
 
@@ -32,17 +32,17 @@ Ao final da semana, o estudante será capaz de:
 3. Mapear o UV de um asset arquitetônico modular (parede, viga, moldura) para uma faixa da Trim Sheet, aplicando UV elongado e tiling ao longo do comprimento da peça.
 4. Validar o resultado do tiling no Blender e antecipar seu comportamento na Unity, verificando repetição sem costura visível (seam) e sem distorção de escala.
 5. Aplicar a mesma Trim Sheet a mais de uma variação do asset modular, demonstrando o ganho de reutilização como evidência concreta de otimização (C7).
-6. Apresentar formalmente, na CF5, a Trim Sheet produzida e o(s) asset(s) mapeado(s), justificando as decisões técnicas de otimização tomadas desde a Semana 13.
+6. Apresentar formalmente, na CF4, a Trim Sheet produzida e o(s) asset(s) mapeado(s), justificando as decisões técnicas de otimização tomadas desde a Semana 13.
 
 ---
 
-## Critérios avaliados nesta semana — CF5 (peso 20% no PA)
+## Critérios avaliados nesta semana — CF4 (peso 30% no PA)
 
 > 🔴 **Crítica Formal.** Esta semana atribui nota. Consultar a tabela **Critérios Ativos por Crítica Formal** da Rubrica Mestre antes de preencher a Ficha de Crítica Formal (Instrumento 1).
 
-| Critério | Status na CF5 | O que observar |
+| Critério | Status na CF4 | O que observar |
 |---|---|---|
-| C1 — Processo de Projeto | ✓ Nota | Registro de processo desde a CF4: versões nomeadas, justificativa do atlas da Semana 13 incorporada, anotações de decisões da trim sheet |
+| C1 — Processo de Projeto | ✓ Nota | Registro de processo desde a CF3: versões nomeadas, justificativa do atlas da Semana 13 incorporada, anotações de decisões da trim sheet |
 | C2 — Direção Artística | ✓ Nota | A trim sheet mantém a paleta e a linguagem visual já estabelecidas no kit, ou introduz um estilo dissonante? |
 | C3 — UV Mapping | — Não aplicável nesta CF | — |
 | C4 — Materiais PBR | obs. — passa de nota para observação nesta CF | Os canais PBR da trim (roughness, metallic) seguem coerentes ao serem esticados/repetidos ao longo do tiling? |
@@ -53,7 +53,7 @@ Ao final da semana, o estudante será capaz de:
 | C9 — Apresentação | ✓ Nota | Clareza da apresentação individual; capacidade de explicar o trade-off entre atlas (S13) e trim sheet (S14) |
 | C10 — Participação (CC) | obs. | Qualidade do feedback dado aos colegas durante a apresentação formal |
 
-> **Lembrete de peso:** A CF5 corresponde a 20% da nota do Portfolio de Artefatos (PA) — o segundo maior peso entre os momentos intermediários, atrás apenas da CF4 (25%). Os 10 pontos percentuais que antes pertenciam integralmente à CF5 foram redistribuídos para criar o Checkpoint C8 (Semana 16), garantindo que a Integração na Unity também tenha um momento formal de avaliação e correção antes da reta final do semestre (Semanas 15 a 17).
+> **Lembrete de peso:** A CF4 corresponde a 30% da nota do Portfolio de Artefatos (PA) — o maior peso entre as quatro críticas formais do PA, refletindo o número de critérios já em avaliação nesta altura do semestre. A partir daqui, o próximo momento formal é a CF5 — Projeto Final, na Semana 16, que avalia todos os 10 critérios de uma vez na apresentação e defesa do Kit Modular completo (40% da nota final, fora do PA).
 
 ---
 
@@ -66,11 +66,11 @@ Ao final da semana, o estudante será capaz de:
 - Projetor para demonstração e para a Crítica Formal
 - Ficha de Crítica Formal (Instrumento 1 da Rubrica Mestre), uma por estudante
 - Ficha de Autoavaliação (Instrumento 2), preenchida por cada estudante e trazida para a aula
-- Apostila — Parte V, Cap. 18 — trecho de Trim Sheets, disponibilizado antes da aula. Parte VI, Cap. 23 (Controle de Qualidade de Materiais) recomendado como leitura de apoio para a autoavaliação desta CF5
+- Apostila — Parte V, Cap. 18 — trecho de Trim Sheets, disponibilizado antes da aula. Parte VI, Cap. 23 (Controle de Qualidade de Materiais) recomendado como leitura de apoio para a autoavaliação desta CF4
 
 > **Preparação da Trim Sheet de demonstração:** É essencial que a trim já exista pronta antes da aula — pintá-la do zero consumiria o tempo da demonstração. A trim de referência deve ter ao menos três faixas distintas (ex.: madeira, metal, ornamento) para que a lógica de divisão por tipo de detalhe fique visualmente clara.
 
-> **Preparação da Crítica Formal:** Definir previamente a ordem de apresentação (lista visível, ordem alfabética ou sorteio). Como na CF4, calcular o tempo com cuidado: 20 minutos para toda a turma é justo — para turmas grandes, considerar duplas simultâneas com o professor circulando, ou reservar parte do estúdio do Encontro 2 para completar apresentações que não couberam no bloco formal.
+> **Preparação da Crítica Formal:** Definir previamente a ordem de apresentação (lista visível, ordem alfabética ou sorteio). Como na CF3, calcular o tempo com cuidado: 20 minutos para toda a turma é justo — para turmas grandes, considerar duplas simultâneas com o professor circulando, ou reservar parte do estúdio do Encontro 2 para completar apresentações que não couberam no bloco formal.
 
 ---
 
@@ -198,11 +198,11 @@ Perguntas de mediação circulante:
 
 ## ENCONTRO 2 (1h30)
 
-### Crítica Formal (CF5) — 20 minutos
+### Crítica Formal (CF4) — 20 minutos
 
 **Formato: Apresentação individual estruturada**
 
-Esta é uma crítica 🔴 **FORMAL**, com apresentação individual, preenchimento da Ficha de Crítica Formal (Instrumento 1) comparada à autoavaliação do estudante (Instrumento 2), e nota que compõe 20% do PA.
+Esta é uma crítica 🔴 **FORMAL**, com apresentação individual, preenchimento da Ficha de Crítica Formal (Instrumento 1) comparada à autoavaliação do estudante (Instrumento 2), e nota que compõe 30% do PA.
 
 **Protocolo:**
 
@@ -242,7 +242,7 @@ O professor preenche a Ficha de Crítica Formal (Instrumento 1) para C1, C2, C5,
 
 **Atividade estruturada:**
 
-**Bloco 1 — Correção de costura de tiling identificada na CF5 (≈20 min):**
+**Bloco 1 — Correção de costura de tiling identificada na CF4 (≈20 min):**
 
 Para estudantes com problemas de costura apontados na apresentação:
 1. Reabrir a faixa problemática no Krita ou 3D Coat e ajustar as bordas para que padrão e cor se encontrem sem descontinuidade (offset + patch, mesma técnica da Semana 6, aplicada apenas ao eixo de repetição).
@@ -280,15 +280,15 @@ Para estudantes com trim sólida e já expandida:
 
 **Roteiro:**
 
-1. **(3 min — Síntese da CF5)**
-*"Hoje foi a quinta crítica formal do semestre e a primeira que avaliou Otimização como nota. Entre o atlas da semana passada e a trim de hoje, vocês agora têm duas ferramentas complementares de otimização — uma para agrupar objetos distintos, outra para reutilizar padrões repetitivos. Um kit modular de produção real usa as duas ao mesmo tempo, escolhendo a ferramenta certa para cada tipo de asset."*
+1. **(3 min — Síntese da CF4)**
+*"Hoje foi a quarta e última crítica formal do Portfolio de Artefatos, e a primeira que avaliou Otimização como nota. Entre o atlas da semana passada e a trim de hoje, vocês agora têm duas ferramentas complementares de otimização — uma para agrupar objetos distintos, outra para reutilizar padrões repetitivos. Um kit modular de produção real usa as duas ao mesmo tempo, escolhendo a ferramenta certa para cada tipo de asset."*
 
 2. **(3 min — Reflexão de trade-off)**
 Pergunta aberta: *"Existe algum elemento do seu kit que você hesitou entre colocar no atlas da semana passada ou numa faixa da trim de hoje? O que te fez decidir de um jeito ou de outro?"*
 Deixar 2–3 respostas. O objetivo é consolidar que a escolha entre atlas e trim é uma decisão técnica com critério, não uma questão de preferência.
 
 3. **(2 min — Antecipação da Semana 15)**
-*"Semana que vem: UDIMs e otimização de compressão, mipmaps e channel packing — o fechamento da Unidade IV antes de irmos para a integração na Unity. Antes de chegar: pensem em qual dos mapas PBR dos seus assets (roughness, metallic, AO) poderia ser combinado em um único mapa de canais para economizar memória."*
+*"Semana que vem: o fechamento da Unidade IV — UDIMs, compressão, mipmaps, channel packing e a montagem completa da fase caminhável do kit dentro da Unity, com lightmap baked. É a última semana de produção antes da CF5, a apresentação final. Antes de chegar: pensem em qual dos mapas PBR dos seus assets (roughness, metallic, AO) poderia ser combinado em um único mapa de canais para economizar memória."*
 
 4. **(2 min — Confirmação das entregas e devolução da nota)**
 Informar prazo para devolução da Ficha de Crítica Formal preenchida (feedback escrito) e recapitular nomenclatura de entrega.
@@ -310,10 +310,10 @@ Alguns estudantes criam faixas "genéricas" (madeira, metal, pedra) sem verifica
 Quando a mesma trim é aplicada a peças de comprimentos muito diferentes sem recalibrar o número de repetições do UV, o padrão pode parecer esticado numa peça e comprimido demais em outra. Estratégia: ensinar o estudante a ajustar o número de repetições (tiling count) proporcionalmente ao comprimento de cada peça, mantendo o tamanho do "motivo" visual constante, exatamente como se calibra texel density entre assets desde a Semana 4.
 
 **5. Tempo insuficiente para produzir mais de uma faixa até a Crítica Formal**
-Planejar múltiplas faixas é rápido; pintar cada uma com qualidade e testar tiling consome tempo. Estratégia: reforçar na consigna do primeiro encontro que apenas a primeira faixa (a de maior uso) precisa estar pronta e validada para a CF5 — as demais podem ser produzidas no Bloco 2 do segundo encontro, após o feedback formal.
+Planejar múltiplas faixas é rápido; pintar cada uma com qualidade e testar tiling consome tempo. Estratégia: reforçar na consigna do primeiro encontro que apenas a primeira faixa (a de maior uso) precisa estar pronta e validada para a CF4 — as demais podem ser produzidas no Bloco 2 do segundo encontro, após o feedback formal.
 
 **6. Ansiedade de apresentação elevada por ser uma CF de peso alto**
-Sabendo que a CF5 vale 20% do PA — o segundo maior peso entre os momentos intermediários —, alguns estudantes podem chegar mais tensos que nas críticas anteriores. Estratégia: abrir a crítica reforçando que o peso elevado reflete confiança no progresso já demonstrado nas CFs anteriores, não uma régua mais rígida, e que o objetivo continua sendo registrar o estado atual do processo, não julgar um resultado fechado.
+Sabendo que a CF4 vale 30% do PA — o maior peso entre as quatro críticas formais do PA —, alguns estudantes podem chegar mais tensos que nas críticas anteriores. Estratégia: abrir a crítica reforçando que o peso elevado reflete confiança no progresso já demonstrado nas CFs anteriores, não uma régua mais rígida, e que o objetivo continua sendo registrar o estado atual do processo, não julgar um resultado fechado.
 
 ---
 
@@ -340,7 +340,7 @@ Sabendo que a CF5 vale 20% do PA — o segundo maior peso entre os momentos inte
 | Reaplicação da mesma trim em uma segunda variação de asset, sem textura nova | C7 — Otimização | Há prova concreta de reutilização — a mesma textura servindo a mais de uma peça? |
 | Coerência visual da trim com a paleta e linguagem já estabelecidas no kit desde a Semana 1 | C2 — Direção Artística | A faixa dialoga com os materiais já produzidos, ou introduz um estilo dissonante? |
 | Integração de bake (Normal Map) à trim, reforçando profundidade de entalhe/talha ao longo do tiling, quando aplicável | C6 — Bake | O bake se comporta corretamente ao ser repetido, sem artefato na costura? |
-| Apresentação individual na CF5: clareza da fala, capacidade de diferenciar verbalmente atlas (S13) de trim (S14), organização dos arquivos exibidos | C9 — Apresentação | O estudante consegue explicar por que escolheu trim em vez de atlas para aquele elemento específico? |
+| Apresentação individual na CF4: clareza da fala, capacidade de diferenciar verbalmente atlas (S13) de trim (S14), organização dos arquivos exibidos | C9 — Apresentação | O estudante consegue explicar por que escolheu trim em vez de atlas para aquele elemento específico? |
 | Ficha de Autoavaliação preenchida com evidência específica por critério, entregue antes da apresentação | C1 — Processo de Projeto | A autoavaliação aponta evidência concreta, ou é genérica? |
 | Feedback dado a colegas durante a Crítica Formal com observação técnica específica | C10 — Participação (obs.) | O comentário referencia critério técnico observável (tiling, escolha de faixa, reutilização), ou é genérico? |
 
@@ -358,7 +358,7 @@ Sabendo que a CF5 vale 20% do PA — o segundo maior peso entre os momentos inte
 | Ficha de Crítica Formal (Instrumento 1), preenchida pelo professor | Devolução com feedback escrito | Conforme cronograma de devolução da disciplina |
 | Inventário do kit atualizado, com as novas peças mapeadas na trim registradas como Assets de Repetição | Tabela simples, digital ou anexada ao arquivo de entrega | Até o fim do segundo encontro |
 
-> **Nota sobre a nota da CF5:** A nota atribuída nesta semana corresponde a 20% do Portfolio de Artefatos (PA). O feedback escrito deve destacar claramente o ponto mais forte e a prioridade de melhoria de cada estudante, servindo de guia direto para as Semanas 15 e 16 — esta última contendo o Checkpoint C8, novo momento formal dedicado à Integração na Unity — antes da apresentação final na Semana 17.
+> **Nota sobre a nota da CF4:** A nota atribuída nesta semana corresponde a 30% do Portfolio de Artefatos (PA), o maior peso entre as quatro críticas formais do PA. O feedback escrito deve destacar claramente o ponto mais forte e a prioridade de melhoria de cada estudante, servindo de guia direto para a Semana 15 (otimização final e montagem da fase caminhável na Unity) e para a CF5 — Projeto Final, apresentação e defesa do Kit Modular completo na Semana 16.
 
 ---
 

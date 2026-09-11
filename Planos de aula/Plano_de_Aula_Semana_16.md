@@ -1,11 +1,10 @@
 # Plano de Aula — Semana 16
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning
-**Unidade:** IV — Otimização e Integração ao Motor
-**Tema:** Integração na Unity: materiais, lightmap UV e renderização
-**Apostila:** Parte VI, Cap. 21 — Lightmaps e Iluminação em Motores (abertura de malha para lightmap); Parte VI, Cap. 22 — Integração com Unreal Engine e Unity (importação e configuração)
-**Leitura complementar:** Parte III, Cap. 11 — Shaders, Iluminação e Aparência Final (ancora o item "renderização de modelos texturizados" da ementa; a prática permanece integrada à demonstração e ao estúdio desta semana, sem mini-aula própria)
+**Unidade:** V — Projeto Final e Apresentação
+**Tema:** Apresentação e defesa do Kit Modular de Ambiente
+**Apostila:** Todos os capítulos — integração semestral (Parte I a VI, Cap. 1 a 25). Leitura obrigatória desta semana: Parte VI, Cap. 24 — Apresentação Profissional de Assets (breakdown visual, portfólio e padrão ArtStation)
 **Carga horária:** 3h (2 encontros de 1h30)
-**Crítica:** 🔴 **Checkpoint C8 (formal)** — dedicado exclusivamente à Integração na Unity; primeiro momento em que C8 recebe nota (10% do Portfolio de Artefatos)
+**Crítica:** 🔴 **FORMAL — CF5 / Projeto Final (PF)** — todos os 10 critérios da rubrica avaliados com nota
 
 ---
 
@@ -13,14 +12,14 @@
 
 Os estudantes chegam com:
 
-- Kit modular com UV principal (UV1) validado desde as Semanas 2–4, materiais PBR completos (Albedo, Metallic, Roughness, Normal) desde as Semanas 5–8, texturas com detalhe pintado e bake integrado desde as Semanas 9–12
-- Otimização de textura consolidada na Unidade IV: Texture Atlas (Semana 13), Trim Sheet validada formalmente na CF5 (Semana 14), e mapa ORM / decisões de resolução e compressão fechados na Semana 15
-- Tabela comparativa de memória (antes/depois da otimização) já preenchida, cobrindo todos os assets trabalhados até aqui
-- Um asset do kit já importado na Unity na Semana 15, com material PBR básico configurado (Albedo, Normal, Metallic/Smoothness), sem lightmap — a importação e a configuração de material na Unity **já foram praticadas**; esta semana não repete esse primeiro contato
+- Kit Modular de Ambiente completo: assets com UV1 validado (Semanas 2–4), materiais PBR completos (Semanas 5–8), texturização artística com detalhe pintado e bake integrado (Semanas 9–12), otimização consolidada em atlas/trim (Semana 14) e fase caminhável completa montada na Unity, com materiais otimizados (ORM) e lightmap baked (Semana 15)
+- Fase caminhável funcional na Unity, com todos os assets do kit importados, materiais otimizados e lightmap baked (Semana 15) — a defesa de hoje é o primeiro momento formal em que C8 (Integração na Unity) recebe nota
+- Autoavaliação (Instrumento 2 da rubrica) preenchida previamente à aula, cobrindo todos os 10 critérios
+- Documento de processo acumulado ao longo do semestre: moodboard, versões, anotações de crítica, checklists semanais (Instrumento 4)
+- Leitura de Parte VI, Cap. 24 — Apresentação Profissional de Assets, disponibilizada ao final da Semana 15, orientando o formato de breakdown visual e portfólio esperado nesta defesa
+- Nenhuma entrega técnica nova a produzir — esta semana não introduz conteúdo técnico inédito; é o encerramento do projeto integrador
 
-> **Nota de transição:** As Semanas 13 a 15 resolveram a Unidade IV do lado da **produção de conteúdo**: menos texturas (atlas, trim) e texturas mais leves (channel packing, compressão, resolução justificada). A própria Semana 15 já deu o primeiro passo de integração ao motor, importando um asset e configurando seu material na Unity. Esta semana fecha a unidade com a peça que faltava: um UV que ainda não foi trabalhado na disciplina — o **UV2 de lightmap**, distinto do UV1 usado desde a Semana 2 para aplicar textura — e o lightmap bake da cena completa. Como a importação e a configuração de material já são conhecidas, o tempo desta semana se concentra inteiramente em UV2 e luz. O resultado esperado é a primeira visão do kit modular inteiro, montado como cena, sob iluminação baked — o ensaio geral antes da apresentação final da Semana 17.
-
-> **Atenção — Checkpoint C8:** Diferente das Semanas 13 a 15, esta semana não é mais uma crítica informal. C8 (Integração na Unity) aparece pela primeira vez na disciplina na Semana 15 e, até esta correção, só era avaliado com nota na CF6 (Semana 17) — a única competência inteiramente nova do semestre sem nenhum checkpoint formal antes da defesa final. A partir de agora, a cena montada e o lightmap baked desta semana recebem nota formal de C8, com peso de 10% no Portfolio de Artefatos e sujeita à Recuperação Paralela (Plano de Ensino, Seção 10): quem tirar nota abaixo de 5,0 pode corrigir e reentregar até o início da Semana 17.
+> **Nota de transição:** Todas as 15 semanas anteriores produziram peças isoladas de um mesmo projeto — UV, material, textura, bake, otimização, integração no motor. A Semana 16 não ensina nada tecnicamente novo: ela pede que o estudante monte essas peças em uma narrativa coerente e as defenda oralmente diante da turma e do professor. É, ao mesmo tempo, o encerramento pedagógico da disciplina e a avaliação de maior peso do semestre (CF5 — Projeto Final, 40% da nota final).
 
 ---
 
@@ -28,44 +27,49 @@ Os estudantes chegam com:
 
 Ao final da semana, o estudante será capaz de:
 
-1. Diferenciar UV1 (mapa de textura, trabalhado desde a Semana 2) de UV2 (mapa de lightmap), explicando por que a iluminação baked exige um layout de UV com regras próprias — sem sobreposição entre ilhas, mesmo que isso já exista intencionalmente no UV1.
-2. Gerar um UV2 de lightmap no Blender para os assets do kit, distinto do UV1 já validado, respeitando padding suficiente para evitar vazamento de luz (light bleeding) entre ilhas adjacentes.
-3. Exportar os assets do kit em FBX preservando ambos os canais de UV (UV1 e UV2) e importá-los corretamente na Unity.
-4. Reaproveitar a configuração de material já praticada na Semana 15 para os demais assets do kit (Standard/URP/HDRP, conforme o pipeline do laboratório), sem repetir o primeiro contato com o shader da Unity.
-5. Executar um lightmap bake simples da cena com todos os assets do kit montados, ajustando parâmetros básicos de iluminação (luz direcional, intensidade, resolução de lightmap) para uma primeira leitura coerente do ambiente.
-6. Capturar renders finais da cena montada na Unity sob a iluminação baked, a partir de múltiplos ângulos, como primeira evidência visual do kit modular funcionando como um todo integrado.
+1. Apresentar oralmente o Kit Modular de Ambiente completo em formato estruturado (10 minutos de apresentação + 5 minutos de perguntas), comunicando tema, decisões de direção artística e processo de produção sem depender de explicações longas ou improvisadas.
+2. Justificar tecnicamente as decisões tomadas ao longo do semestre — UV mapping, materiais PBR, texturização, bake, otimização e integração na Unity — relacionando cada decisão a um critério observável da rubrica.
+3. Comparar sua autoavaliação (preenchida previamente) com o feedback recebido na defesa, identificando concordâncias e divergências de percepção sobre o próprio trabalho.
+4. Oferecer feedback específico e construtivo às apresentações dos colegas, referenciando critérios técnicos da rubrica em vez de impressões genéricas.
+5. Refletir criticamente sobre a própria trajetória de aprendizagem ao longo das 16 semanas, identificando o que mudou na forma de tomar decisões técnicas e artísticas desde a Semana 1.
+6. Entregar a documentação final do projeto (Kit Modular completo, cena Unity, renders e autoavaliação reflexiva) organizada e nomeada conforme padrão estabelecido, compondo evidência do Critério 9 (Apresentação).
 
 ---
 
 ## Critérios observados nesta semana
 
-> 🔴 **Checkpoint C8 — crítica formal dedicada.** C8 (Integração na Unity) apareceu pela primeira vez na Semana 15 como prática; nesta semana ele recebe sua **primeira nota formal** da disciplina, com peso de 10% no PA (ver Rubrica Mestre). C1 e C7 seguem apenas observados — o processo de importação e a verificação de otimização em contexto real continuam relevantes como evidência acumulada para a CF6, mas não compõem a nota do Checkpoint.
+> 🔴 **Crítica Formal — CF5 / Projeto Final.** Esta é a única semana em que **todos os 10 critérios da rubrica** recebem nota formal simultaneamente, incluindo C10 (Participação nas Critiques), que nas CFs anteriores era apenas observado. A ponderação desta CF5 segue a tabela de pesos do Projeto Final definida na Rubrica Mestre — não é uma média simples dos critérios, e não é a mesma ponderação usada no Portfolio de Artefatos (PA).
 
-| Critério | Status | O que observar |
+| Critério | Peso no PF (CF5) | O que observar na defesa |
 |---|---|---|
-| C1 — Processo de Projeto | obs. | Registro do processo de importação (o que funcionou de primeira, o que precisou de retrabalho) e decisões de configuração de material anotadas |
-| C7 — Otimização | obs. — verificação em contexto real | As resoluções e compressões definidas na Semana 15 se comportam bem dentro da Unity, ou houve necessidade de ajuste ao ver o resultado no motor? |
-| C8 — Integração na Unity | ✓ **Nota — primeira vez avaliado formalmente** | Materiais com texturas nos slots corretos; normal map com a flag correta ativada; UV2 sem sobreposição; asset em escala coerente na cena; cena completa montada e lightmap baked sem vazamento de luz perceptível |
-| C10 — Participação (CC) | obs. | Qualidade do feedback dado na crítica circulante sobre a configuração de materiais e o resultado do lightmap dos colegas |
+| C1 — Processo de Projeto | 10% | Documentação de processo completa (moodboard, versões, anotações), capacidade de mostrar evolução desde a Semana 1 |
+| C2 — Direção Artística | 12% | Coerência visual entre todos os assets do kit, paleta e linguagem de materiais consistentes, capacidade de verbalizar a proposta |
+| C3 — UV Mapping | 8% | Ocupação de espaço, ausência de distorção e de sobreposição indevida, consistência de texel density entre assets |
+| C4 — Materiais PBR | 12% | Plausibilidade física dos materiais, variação de roughness/metallic informada por lógica de uso |
+| C5 — Texturização | 14% | Maior peso da CF5 — profundidade narrativa do desgaste e sujeira, leitura à distância de uso |
+| C6 — Bake | 8% | Ausência de artefatos e seams visíveis, transferência fiel de detalhe do high-poly |
+| C7 — Otimização | 8% | Justificativa técnica de resolução, uso de atlas/trim, channel packing documentado |
+| C8 — Integração na Unity | 12% | Cena montada, materiais corretos, iluminação coerente, kit funcional como produto entregável |
+| C9 — Apresentação | 8% | Organização da entrega, qualidade do breakdown visual, fluência na apresentação oral |
+| C10 — Participação nas Critiques | 8% | Consolidação do engajamento do estudante nas críticas ao longo de todo o semestre, mais a qualidade do feedback dado hoje |
 
-> **Lembrete de peso:** O Checkpoint C8 corresponde a 10% da nota do Portfolio de Artefatos (PA) — os pontos percentuais remanejados da CF5 (Semana 14), que antes valia 30% e agora vale 20%. É sujeito à Recuperação Paralela como qualquer outra entrega do PA.
+**Fórmula de referência:** `NF = (PA × 0,40) + (CC × 0,20) + (PF × 0,40)` — a nota atribuída hoje corresponde ao componente **PF**, e C10 hoje também alimenta o fechamento da nota de **CC**.
 
 ---
 
 ## Recursos necessários
 
-- Computadores com Blender instalado (3.x ou 4.x)
-- Computadores com Unity instalado (versão LTS mais recente disponível no laboratório, com o pipeline URP configurado previamente pelo professor ou técnico de laboratório)
-- Projeto Unity vazio ou com cena base já criada para o kit modular, disponibilizado com antecedência pelo professor, para evitar perda de tempo com configuração inicial de projeto
-- Todos os assets do kit de cada estudante, já otimizados (atlas, trim, ORM) ao final da Semana 15, com arquivos `.blend` e mapas de textura exportados
-- Arquivo de demonstração do professor: um asset simples já com UV1 validado, pronto para receber UV2 ao vivo
-- Projetor para demonstração
-- Apostila — Parte VI, Cap. 21 e Cap. 22 — trechos de lightmap UV e importação/configuração na Unity, disponibilizados antes da aula. Leitura complementar (opcional): Parte III, Cap. 11 — Shaders, Iluminação e Aparência Final, para o estudante que quiser aprofundar o tema de renderização final além do que é praticado em estúdio
-- Luz direcional (Directional Light) configurada na cena base, para uso imediato no lightmap bake
-- Ficha de Crítica Formal (Instrumento 1 da Rubrica Mestre), preenchida apenas para C8 (demais critérios permanecem em branco, conforme a tabela de Critérios Ativos)
-- Ficha de Autoavaliação (Instrumento 2), preenchida pelo estudante para C8 antes do fechamento da Semana 16
+- Projetor e sistema de som para as apresentações (cada estudante conecta seu notebook ou usa a máquina do laboratório)
+- Ficha de Crítica Formal (Instrumento 1 da rubrica) impressa ou digital — uma por estudante, com todos os 10 critérios ativos preenchidos pelo professor durante a defesa
+- Autoavaliação (Instrumento 2) de cada estudante entregue previamente à aula
+- Ficha de Avaliação por Pares (Instrumento 3) para os colegas registrarem feedback durante as apresentações uns dos outros
+- Cronômetro visível (10 min de apresentação + 5 min de perguntas por estudante) para manter o ritmo da defesa
+- Kit modular de referência do professor (ou de uma coorte anterior, se disponível) para uso na demonstração de padrão esperado
+- Lista de ordem de apresentação definida e divulgada com antecedência (evita disputa de horário no dia)
+- Projeto Unity, arquivos `.blend` e pasta de renders de cada estudante, testados previamente quanto à abertura sem erros (recomenda-se checagem no dia anterior)
+- Apostila — Parte VI, Cap. 24 — Apresentação Profissional de Assets, disponibilizada com antecedência como leitura obrigatória para orientar o breakdown visual e a documentação da defesa
 
-> **Preparação do laboratório:** É necessário confirmar, antes da aula, que a Unity está instalada e o pipeline URP funcional em todas as máquinas — problemas de instalação nesta etapa final da disciplina custam tempo de estúdio que não pode ser recuperado nas duas últimas semanas.
+> **Preparação prévia:** Confirmar, na aula anterior (Semana 15) ou por comunicado, que cada estudante testou a abertura do próprio projeto Unity e da pasta de entrega em uma máquina do laboratório — problemas técnicos de última hora (arquivo corrompido, projeto não abre) não devem consumir tempo da defesa formal.
 
 ---
 
@@ -73,106 +77,92 @@ Ao final da semana, o estudante será capaz de:
 
 ### Mini Aula — 20 minutos
 
-**Do arquivo de produção à cena no motor: UV2 e lightmap**
+**Orientações finais: como estruturar e defender a apresentação do Projeto Final**
 
-Objetivo: fazer o estudante entender que a última peça da integração ao motor é uma camada de informação nova (UV2) e o cálculo de iluminação baked — a importação e a configuração de material, praticadas na Semana 15, não são o foco de hoje.
+Objetivo: alinhar expectativas sobre o formato da defesa, os critérios de avaliação e o papel da autoavaliação, reduzindo ansiedade e dispersão de foco no dia mais avaliativo do semestre.
 
 **Abertura:**
 
-Exibir no projetor o asset que cada estudante já importou e configurou na Unity na Semana 15, sob a iluminação padrão (sem lightmap). Perguntar: *"Esse material já está correto. O que ainda falta para essa cena ficar com uma iluminação convincente, do jeito que apareceria num jogo pronto?"*
-
-Deixar 2–3 respostas. Direcionar para a ideia central: falta a luz calculada e gravada como textura — o lightmap — que exige um canal de UV que nunca foi necessário até agora, o UV2. O trabalho de hoje é gerar esse UV2 e rodar o primeiro lightmap bake da cena.
+Perguntar à turma: *"Depois de 16 semanas produzindo, hoje e no próximo encontro vocês vão contar a história desse projeto para quem não acompanhou o processo de perto. Se vocês tivessem só 10 minutos para convencer alguém de que esse kit modular é bom, o que vocês mostrariam primeiro?"* Deixar 2–3 respostas. Usar as respostas para introduzir a ideia de que uma boa defesa não é mostrar tudo — é uma curadoria do próprio processo.
 
 ---
 
 **Conteúdo a cobrir:**
 
-**1. UV2: por que a iluminação baked precisa de um mapa próprio**
+**1. Estrutura recomendada dos 10 minutos de apresentação**
 
-O UV1, usado desde a Semana 2, foi otimizado para textura: pode ter ilhas sobrepostas (Semana 13, atlas) ou repetidas por tiling (Semana 14, trim sheet) — sobreposição aí é desejável, porque a mesma região de textura é reaproveitada em várias partes do objeto. Um lightmap, ao contrário, registra a luz **incidente sobre cada ponto da superfície** — se duas regiões da malha compartilham o mesmo espaço de UV, elas vão "vazar" luz uma para a outra no resultado baked, mesmo que sejam partes fisicamente distintas do objeto. Por isso, todo asset que vai receber lightmap precisa de um segundo canal de UV (UV2), exclusivo para essa finalidade, sem nenhuma sobreposição entre ilhas — mesmo que o UV1 do mesmo objeto tenha sobreposição intencional.
+Sugestão de sequência, sem ser um roteiro rígido: (a) tema do kit e referência visual (1–2 min), (b) breakdown de processo — o que mudou desde a primeira versão até a final, com pelo menos um exemplo de feedback incorporado (2–3 min), (c) destaque técnico — escolher 2 ou 3 decisões técnicas (UV, material, bake, otimização ou Unity) das quais o estudante mais se orgulha e explicar o porquê (3–4 min), (d) a cena final montada na Unity, com os renders (2 min).
 
-*"UV1 responde a pergunta 'que pixel de textura aparece aqui?'. UV2 responde a uma pergunta diferente: 'quanta luz chega exatamente neste ponto da superfície?'. Como a resposta da segunda pergunta é única para cada ponto físico do objeto, o UV2 não pode ter sobreposição — cada centímetro da malha precisa do seu próprio espaço exclusivo no lightmap."*
+*"Vocês não precisam explicar cada uma das 16 semanas. Escolham o que for mais representativo do trabalho de vocês — a apresentação é uma escolha editorial, não um relatório completo."*
 
-**2. Gerando UV2 no Blender**
+**2. Os 5 minutos de perguntas: defesa, não interrogatório**
 
-O Blender oferece uma opção de geração automática de um segundo canal de UV, com regras de empacotamento adequadas para lightmap (sem sobreposição, com padding entre ilhas). Esse UV2 é gerado independentemente do UV1 já existente e não o substitui — ambos convivem no mesmo objeto e são exportados juntos.
+As perguntas do professor e dos colegas nesta etapa têm o mesmo espírito das críticas circulantes e formais já vividas no semestre: entender a decisão, não expor uma falha. Reforçar que "não sei" seguido de uma tentativa de raciocínio vale mais, na avaliação de C10, do que silêncio ou defensividade.
 
-*"Vocês não vão reabrir o UV1 que já está pronto e validado desde as primeiras semanas. UV2 é um mapa adicional, gerado de forma automática na maioria dos casos, que existe só para a luz — o UV1 continua sendo o responsável pela aparência da textura."*
+*"As perguntas de hoje são as mesmas que vocês já responderam nas cinco críticas formais anteriores — só que agora sobre o projeto inteiro. Vocês já treinaram isso a cada duas ou três semanas desde a CF1."*
 
-> **Lembrete rápido (sem aprofundar):** a configuração de material no shader Lit da Unity — Base Map, Normal Map com a flag ativada, Metallic/Smoothness — já foi praticada na Semana 15. Se algum estudante ainda tiver dúvida pontual, ela é resolvida individualmente no estúdio, não retomada para a turma toda aqui.
+**3. Como a nota de hoje se conecta à rubrica que vocês já conhecem**
 
-**3. Lightmap bake: da malha estática à iluminação calculada**
+Revisar rapidamente a tabela de critérios ativos na CF5: hoje, pela primeira vez, todos os 10 critérios recebem nota simultaneamente, incluindo C10 (Participação), que até agora era só observado. Mostrar a tabela de pesos do Projeto Final e destacar que C5 (Texturização) tem o maior peso — coerente com o fato de ser o núcleo da disciplina.
 
-Para que um objeto receba lightmap bake na Unity, ele precisa estar marcado como estático (Static, ou especificamente Contribute GI). O processo de bake calcula a iluminação indireta da cena (luz que rebate entre superfícies) e a grava como textura no UV2 de cada objeto — sendo por isso que o UV2 sem sobreposição é pré-requisito, não detalhe técnico secundário.
+*"Vocês já foram avaliados nesses critérios separadamente ao longo do semestre. Hoje é a primeira e única vez em que todos aparecem juntos, e a única vez em que a participação nas críticas também vira nota."*
 
-*"O bake de lightmap da Unity é conceitualmente parecido com o bake de Normal Map e AO que vocês já fizeram no Blender nas Semanas 11 e 12: em ambos os casos, uma informação complexa (luz, ou detalhe de superfície) é calculada uma vez e gravada como textura, para não precisar ser recalculada em tempo real."*
+**4. O papel da autoavaliação entregue previamente**
 
-> **Nota do professor:** A configuração de material (normal map, smoothness) já foi praticada na Semana 15, então problemas nela devem ser resolvidos rapidamente e de forma pontual. O que é novo — e onde é esperado e normal que a primeira tentativa de cada estudante tenha algum problema — é o UV2 e o lightmap bake (vazamento de luz por sobreposição, por exemplo). O objetivo da semana é o primeiro ciclo completo de diagnóstico e correção nesse aspecto específico, não a perfeição na primeira tentativa.
+Lembrar que a autoavaliação (Instrumento 2) já foi entregue antes desta aula e será comparada com a avaliação do professor durante a defesa. Divergências entre autoavaliação e avaliação do professor não são punidas — são material de conversa durante os 5 minutos de perguntas.
+
+*"Se vocês se avaliaram em 4 num critério e eu observar um 3, isso não vira automaticamente uma nota mais baixa — vira uma pergunta na hora da defesa: 'me mostra a evidência que te fez pensar em nível 4 aqui'. É a mesma lógica de justificar decisões que vocês praticam desde a Semana 3."*
+
+> **Nota do professor:** Esta mini aula deve ser breve e direta — o objetivo é reduzir ansiedade com clareza de formato, não adicionar conteúdo novo. Evitar prolongar além dos 20 minutos: o tempo de estúdio hoje é a própria defesa.
 
 ---
 
 ### Demonstração — 20 minutos
 
-**Do arquivo de produção à cena no motor: UV2, reexportação e primeiro lightmap bake**
+**Padrão de referência: não há demonstração técnica nesta semana**
 
-**Setup (1 min):**
-Abrir no Blender o mesmo asset de demonstração usado na Semana 15 (já com UV1 validado), e a Unity aberta em uma segunda janela ou monitor, com a cena da Semana 15 já carregada — o asset já importado e com material configurado.
+Conforme o cronograma da disciplina, não há novo conteúdo técnico a demonstrar na Semana 16. Em vez de uma demonstração de ferramenta, o professor usa este bloco para apresentar um exemplo de Kit Modular completo (de uma coorte anterior, ou um kit de referência preparado antecipadamente) como parâmetro de padrão esperado.
 
-**Percurso da demonstração:**
+**Percurso sugerido (20 min):**
 
-**Passo 1 — Geração de UV2 no Blender (6 min):**
-1. No asset de demonstração, gerar o segundo canal de UV com a ferramenta de lightmap do Blender.
-2. Mostrar no UV Editor a diferença entre o layout do UV1 (com ilhas possivelmente sobrepostas ou repetidas) e o layout do UV2 gerado (sem sobreposição, com padding entre ilhas).
+1. **(3 min)** Contextualizar: *"Este é um exemplo de projeto que atingiu nível 4–5 em praticamente todos os critérios da rubrica. Vou passar pelos mesmos pontos que vocês vão apresentar hoje, para vocês verem como isso se traduz em um projeto real."*
+2. **(5 min)** Mostrar o moodboard e a coerência de direção artística do exemplo — relacionando a C2.
+3. **(5 min)** Mostrar o breakdown técnico: UV, material PBR, textura com narrativa de desgaste, bake sem artefatos — relacionando a C3, C4, C5 e C6.
+4. **(4 min)** Mostrar a cena montada na Unity e os renders finais — relacionando a C7 e C8.
+5. **(3 min)** Comentar brevemente a estrutura da apresentação do exemplo (o que foi priorizado, o que foi deixado de fora) — relacionando a C9.
 
-**Passo 2 — Reexportação e reimportação (5 min):**
-1. Reexportar o asset como FBX, confirmando nas opções de exportação que ambos os canais de UV (UV1 e UV2) serão incluídos.
-2. Reimportar o FBX na Unity, substituindo o asset já presente na cena da Semana 15 — o material já configurado permanece associado, sem precisar ser refeito.
-3. *"Reparem que o material continua funcionando normalmente — vocês só adicionaram um canal de UV a mais. Nada do que foi configurado na Semana 15 precisou ser refeito."*
-
-**Passo 3 — Lightmap bake simples (8 min):**
-1. Marcar o objeto como Static (Contribute GI).
-2. Configurar uma luz direcional simples na cena, se ainda não configurada.
-3. Executar o bake de lightmap (Generate Lighting) e mostrar o resultado antes/depois na viewport da Unity.
-4. Verificar rotacionando a câmera: há alguma mancha de luz incoerente? Se sim, é sinal de sobreposição no UV2.
-
-> **Nota do professor:** Se o tempo de bake for muito longo para caber nos 20 minutos, preparar antecipadamente uma cena já com o bake concluído para mostrar o resultado final, e usar o tempo ao vivo para a parte mais transferível: a geração do UV2 e o diagnóstico de vazamento de luz.
+> **Nota do professor:** Se não houver um kit de coorte anterior disponível, o professor pode preparar um kit de referência próprio com antecedência, ou usar prints/documentação de projetos de portfólio profissional da área de jogos (com os devidos créditos), desde que o exemplo cubra visivelmente os 10 critérios da rubrica. O objetivo não é intimidar a turma com um padrão inatingível, mas calibrar expectativas de forma concreta antes da autoavaliação e da defesa.
 
 ---
 
 ### Produção em Estúdio — 50 minutos
 
-**Geração de UV2, exportação e primeira importação de assets do kit na Unity**
+**Preparação final e primeiro bloco de apresentações**
 
 **Consigna entregue verbalmente:**
 
-> *"Cinquenta minutos com três objetivos, na ordem: gerar UV2 de lightmap para os assets do seu kit, reexportar em FBX preservando os dois canais de UV, e reimportar na Unity — reaproveitando o asset e o material que já configuraram na Semana 15, e importando os demais assets do kit com o mesmo material já dominado. Não é necessário ter o kit inteiro montado até o fim deste encontro — o objetivo é validar o processo de UV2 em uma amostra do kit antes de expandir no segundo encontro."*
+> *"Os primeiros 15 minutos são para ajustes finais: testem a abertura do projeto Unity, organizem a ordem dos slides ou telas que vão mostrar, e revisem sua autoavaliação uma última vez. Depois disso, começamos as apresentações na ordem já divulgada. Cada apresentação tem 10 minutos de fala mais 5 minutos de perguntas — o cronômetro vai estar visível para todos."*
 
 **Atividade estruturada:**
 
-**Etapa 1 — Geração de UV2 (≈20 min):**
-1. Para cada asset do kit, gerar o segundo canal de UV (lightmap) no Blender, sem alterar o UV1 já validado.
-2. Verificar visualmente no UV Editor que o UV2 não tem ilhas sobrepostas e possui padding suficiente entre elas.
+**Etapa 1 — Preparação final (≈15 min):**
+1. Teste de abertura do projeto Unity, arquivos `.blend` e pasta de renders na máquina que será usada na apresentação.
+2. Revisão rápida da autoavaliação já entregue e do roteiro de apresentação (o que mostrar primeiro, quais decisões técnicas destacar).
+3. Organização física do material de apoio (documento de processo, breakdown visual, se impresso ou em slide).
 
-**Etapa 2 — Reexportação em FBX (≈10 min):**
-1. Reexportar os assets trabalhados em FBX, conferindo que ambos os canais de UV estão incluídos na exportação.
-2. Organizar os arquivos exportados em uma pasta clara para importação na Unity.
-
-**Etapa 3 — Reimportação e expansão para mais assets (≈20 min):**
-1. Reimportar na Unity o asset já usado na Semana 15 (o material configurado permanece válido — não recriar).
-2. Importar e configurar o material de mais um ou dois assets do kit, repetindo o fluxo já dominado (Albedo, Normal Map com a flag ativada, Metallic/Smoothness) — desta vez sem tempo dedicado a explicar o processo, apenas executá-lo.
-3. Posicionar os assets na cena, comparando visualmente o resultado com o render de referência produzido no Blender.
+**Etapa 2 — Primeiro bloco de apresentações (≈35 min, aproximadamente 2 estudantes de 15 min cada, ajustável ao tamanho da turma):**
+1. Cada estudante apresenta o Kit Modular completo (10 min) seguido de perguntas do professor e da turma (5 min).
+2. O professor preenche a Ficha de Crítica Formal (Instrumento 1) durante e imediatamente após cada apresentação, cobrindo os 10 critérios.
+3. Os colegas que não estão apresentando preenchem a Ficha de Avaliação por Pares (Instrumento 3) para o colega em apresentação, com foco em observação específica, não em nota.
 
 **Papel do professor:**
 
-Circular verificando:
+Manter o cronômetro visível e respeitado — parte da avaliação de C9 (Apresentação) é a capacidade de organizar a fala dentro do tempo dado. Durante os 5 minutos de perguntas, priorizar perguntas que peçam justificativa técnica ("por que esse valor de roughness aqui?", "o que te fez escolher trim sheet nesse elemento e atlas nesse outro?") em vez de perguntas de sim/não.
 
-- **O UV2 realmente não tem sobreposição?** Erro mais comum e mais custoso de diagnosticar depois: verificar visualmente o layout do UV2 no UV Editor antes de exportar, não depois do bake já ter apresentado vazamento de luz.
-- **O material da Semana 15 permaneceu correto após a reimportação?** Ocasionalmente a reimportação pode desconectar texturas — conferir rapidamente antes de seguir em frente.
-- **Os novos assets configurados repetem os mesmos erros da Semana 15, ou o estudante já resolve sozinho (normal map, smoothness)?** Se o estudante ainda erra os mesmos pontos, é um sinal de que a Semana 15 não consolidou o suficiente — reforçar individualmente sem tomar tempo da turma.
-
-Perguntas de mediação circulante:
-- *"Se você girar essa ilha do UV2 no editor, ela toca ou sobrepõe alguma outra ilha? Vamos conferir com o zoom."*
-- *"O material que você configurou na Semana 15 continua correto depois de reimportar o asset com UV2? Confere rápido."*
+Perguntas de mediação para a defesa:
+- *"Você me mostrou o resultado final desse asset — me conta uma decisão que você tomou no meio do processo e depois mudou. O que te fez mudar?"*
+- *"Olhando sua autoavaliação, você se deu nível X em Materiais PBR. Me mostra a evidência que sustenta esse nível."*
+- *"Se você tivesse mais uma semana de produção, o que você priorizaria ajustar?"*
 
 ---
 
@@ -180,56 +170,47 @@ Perguntas de mediação circulante:
 
 ### Crítica Coletiva — 20 minutos
 
-**Formato: circulante, formativa — a nota do Checkpoint C8 é atribuída depois, sobre a entrega final**
-
-> Como a cena completa do kit só fica pronta ao final do segundo bloco de estúdio (Bloco 3, abaixo), esta crítica circulante não é o momento de atribuição de nota — é feedback formativo sobre o que já está pronto até aqui, igual às críticas circulantes das Semanas 13 e 15. A nota formal de C8 (Checkpoint C8) é preenchida pelo professor na Ficha de Crítica Formal **após a entrega**, com base no projeto Unity final, no lightmap bake e nos renders submetidos ao fim da Semana 16.
+**Formato: continuação das defesas, com síntese coletiva ao final**
 
 **Abertura (2 min):**
-*"Hoje é crítica circulante — vou passar de estação em estação vendo os assets já importados e configurados na Unity. Tenham a cena aberta com pelo menos dois assets configurados, e o comparativo com o render do Blender à mão. A nota formal de C8 desta semana — o Checkpoint C8 — vai considerar a cena completa que vocês entregarem ao final do segundo encontro, não o que eu vir agora."*
+*"Vamos continuar as apresentações na mesma dinâmica do primeiro encontro: 10 minutos de apresentação, 5 de perguntas. Continuem preenchendo a ficha de avaliação por pares de quem está apresentando."*
 
 **Dinâmica (16 min):**
-Circulação livre pelas estações. Em cada uma, o professor observa o material configurado na Unity e faz perguntas diretas:
-- *"Esse Normal Map está com a flag certa? Mostra o Inspector da textura."*
-- *"O que você percebeu de diferente entre o render do Blender e o resultado na Unity? O que precisou ajustar?"*
-- *"Já testou marcar esse objeto como Static e rodar um bake rápido? O que apareceu?"*
-
-Encorajar comparação entre colegas — *"Troquem de estação com o vizinho por um minuto: o material dele está lendo os mapas do jeito que você esperaria?"* — sem formalizar como avaliação por pares registrada.
+Continuação de aproximadamente 1 apresentação completa (15 min) dentro deste bloco, mantendo o mesmo rigor de cronômetro e preenchimento da Ficha de Crítica Formal pelo professor.
 
 **Síntese (2 min):**
-*"A maior parte de vocês já tem pelo menos dois assets funcionando corretamente na Unity. O trabalho de hoje no estúdio é expandir isso para o kit inteiro, montar a cena completa e rodar o lightmap bake final — essa cena montada é a primeira vez que o kit inteiro aparece junto, e vai direto para a apresentação da Semana 17."*
+*"Estamos na reta final das apresentações. Nos próximos 60 minutos, terminamos as defesas restantes e fechamos oficialmente o semestre."*
+
+> **Nota do professor:** A divisão exata de quantas apresentações cabem em cada bloco depende do tamanho da turma. Para turmas maiores, ajustar a quantidade de apresentações por bloco mantendo sempre os 15 minutos por estudante (10+5) — nunca comprimir esse tempo, pois ele é parte do que está sendo avaliado em C9.
 
 ---
 
 ### Produção em Estúdio — 60 minutos
 
-**Montagem completa da cena, lightmap bake final e captura de renders**
+**Apresentações finais restantes e consolidação de notas**
 
 **Consigna:**
 
-> *"Sessenta minutos para três blocos: primeiro, importar e configurar o material de todos os assets restantes do kit. Segundo, montar a cena completa com todos os assets posicionados de forma coerente com o tema do kit modular. Terceiro, rodar o lightmap bake da cena completa e capturar renders finais de pelo menos quatro ângulos."*
+> *"Vamos concluir as apresentações restantes na ordem estabelecida. Quem já apresentou, continue preenchendo as fichas de avaliação por pares dos colegas — isso também compõe a nota de participação de vocês."*
 
 **Atividade estruturada:**
 
-**Bloco 1 — Configuração dos assets restantes (≈20 min):**
-1. Repetir o processo de importação e configuração de material para os assets do kit ainda não trabalhados no primeiro encontro.
-2. Verificar cada um quanto a UV2 sem sobreposição, flag de Normal Map ativada e Smoothness coerente.
+**Bloco 1 — Apresentações restantes (≈45–50 min, ajustável ao número de estudantes pendentes):**
+1. Cada estudante restante apresenta o Kit Modular completo (10 min) e responde a perguntas (5 min), seguindo exatamente o mesmo formato do Encontro 1.
+2. O professor preenche a Ficha de Crítica Formal de cada estudante.
+3. Os colegas preenchem a Ficha de Avaliação por Pares.
 
-**Bloco 2 — Montagem da cena completa (≈20 min):**
-1. Posicionar todos os assets do kit na cena, formando uma composição coerente com o tema definido na Semana 1 (ex.: um ambiente modular montado, não apenas objetos soltos lado a lado).
-2. Marcar todos os objetos relevantes como Static (Contribute GI) para participarem do bake.
-3. Ajustar a luz direcional da cena (intensidade, ângulo) para uma primeira leitura de iluminação coerente com o tema (ex.: luz mais quente para ambientes desérticos, mais fria para cenários sci-fi).
-
-**Bloco 3 — Lightmap bake e captura de renders (≈20 min):**
-1. Executar o lightmap bake da cena completa (Generate Lighting).
-2. Revisar o resultado: há vazamento de luz visível entre objetos ou dentro de um mesmo asset? Se sim, identificar se o problema está no UV2 (sobreposição) ou no posicionamento dos objetos (muito próximos entre si).
-3. Capturar screenshots da cena renderizada a partir de pelo menos 4 ângulos diferentes, documentando o kit modular montado.
-4. Salvar o projeto Unity com nomenclatura clara (`[Nome]_Kit_Unity_S16`).
+**Bloco 2 — Consolidação e entrega final (≈10–15 min):**
+1. Cada estudante confirma a entrega final da documentação: Kit Modular completo (arquivos `.blend`, mapas de textura, projeto Unity) e autoavaliação reflexiva, se ainda não entregue previamente.
+2. O professor confirma que todas as fichas de avaliação por pares foram recolhidas.
 
 **Papel do professor:**
 
-- Priorizar apoio aos estudantes com vazamento de luz visível no bake (geralmente sintoma de UV2 mal gerado ou objetos sobrepostos na cena) — direcionar para verificação do UV2 antes de tentar ajustar apenas os parâmetros de luz.
-- Para estudantes que terminam rápido: sugerir testar variações simples de iluminação (cor, intensidade, ângulo da luz direcional) e comparar o efeito no clima geral da cena, antecipando a discussão de direção artística da apresentação final.
-- Perguntas de mediação: *"Olhando a cena montada agora, ela já comunica o tema do seu kit modular mesmo sem nenhuma legenda? O que ajudaria a comunicar isso melhor até a Semana 17?"*
+Se a turma for grande e o tempo apertar, priorizar garantir que todos os estudantes tenham seus 15 minutos completos de defesa — é preferível reduzir o tempo de discussão em outros momentos da aula a comprimir a apresentação de um estudante específico, já que essa é uma avaliação formal individual com peso direto na nota final.
+
+Perguntas de mediação recorrentes ao longo do bloco:
+- *"Esse é o mesmo asset que eu vi na Semana 3 com o UV recém-aberto. O que mudou entre aquela versão e essa?"*
+- *"Comparando com os critérios da rubrica, qual desses 10 você sente que foi o seu ponto mais forte no semestre? E qual foi o mais desafiador?"*
 
 ---
 
@@ -237,40 +218,39 @@ Encorajar comparação entre colegas — *"Troquem de estação com o vizinho po
 
 **Roteiro:**
 
-1. **(3 min — Síntese técnica)**
-*"Hoje o kit modular de vocês apareceu montado, pela primeira vez, dentro de um motor de jogo de verdade — com UV2 de lightmap, materiais reconfigurados no shader da Unity e uma primeira iluminação baked. Essa é a integração final de tudo que foi produzido desde a Semana 1."*
+1. **(3 min — Encerramento das defesas)**
+*"Terminamos as defesas do Projeto Final. Cada um de vocês contou, hoje, a história de um semestre inteiro de decisões técnicas e artísticas — desde a escolha do tema na Semana 1 até a cena montada na Unity na semana passada."*
 
-2. **(3 min — Reflexão de fechamento de unidade)**
-Pergunta aberta: *"O que foi mais diferente entre trabalhar no Blender/3D Coat e configurar o mesmo material na Unity? O que essa diferença te ensina sobre como um pipeline de produção real funciona entre ferramentas diferentes?"*
-Deixar 2–3 respostas. O objetivo é consolidar que a interoperabilidade entre ferramentas é parte central do trabalho de um artista técnico de jogos, não um obstáculo acidental.
+2. **(3 min — Reflexão semestral)**
+Pergunta aberta para 2–3 respostas voluntárias: *"Pensando nas 16 semanas, qual foi a maior mudança na forma como vocês tomam decisões técnicas ou artísticas, comparando o início e o fim do semestre?"* O objetivo é consolidar a metacognição sobre o próprio processo de aprendizagem, não apenas sobre o produto entregue.
 
-3. **(2 min — Antecipação da Semana 17)**
-*"Semana que vem é a última: apresentação e defesa do Kit Modular de Ambiente completo. A cena que vocês montaram hoje na Unity, os renders capturados e toda a documentação de processo das últimas 16 semanas vão compor essa apresentação final."*
+3. **(2 min — Fechamento da participação nas críticas)**
+Reforçar que a nota de C10 (Participação) hoje também consolida o engajamento do estudante em todas as críticas anteriores do semestre, não apenas na defesa de hoje — e que a Avaliação por Pares preenchida hoje ainda será considerada.
 
-4. **(2 min — Confirmação das entregas e da nota do Checkpoint C8)**
-Recapitular nomenclatura de entrega e prazo. Explicar que a nota do Checkpoint C8 (10% do PA) será devolvida por escrito, seguindo o mesmo prazo das demais CFs, e que — como qualquer entrega do Portfolio de Artefatos — está sujeita à Recuperação Paralela: quem tirar nota abaixo de 5,0 pode corrigir a integração e reentregar até o início da Semana 17. Lembrar que os renders de hoje já podem começar a compor a documentação visual (breakdown) exigida na apresentação final, especialmente para o Critério 9 (Apresentação).
+4. **(2 min — Encerramento institucional)**
+Informar prazos administrativos remanescentes (se houver: lançamento de notas, prazo de recurso, disponibilização de feedback escrito individual). Lembrar que a Semana 17 existe como semana de **Recuperação** — atendimento individual, sem crítica coletiva, para quem ainda tiver entregas formais pendentes de qualquer semana do semestre. Agradecer o semestre de trabalho e reforçar que o portfólio produzido — Kit Modular completo, documentado e funcional na Unity — é, a partir de hoje, material de portfólio profissional do estudante.
 
 ---
 
 ## Possíveis Dificuldades
 
-**1. Vazamento de luz (light bleeding) no lightmap por sobreposição no UV2**
-O erro técnico mais comum e mais confuso para quem faz isso pela primeira vez: se duas ilhas do UV2 se sobrepõem, o bake mistura a iluminação de regiões fisicamente distintas do objeto, produzindo manchas de luz incoerentes. Estratégia: antes de qualquer bake, inspecionar visualmente o UV2 no Blender e confirmar ausência de sobreposição — o problema é muito mais rápido de prevenir no UV do que de diagnosticar depois do bake pronto.
+**1. Ansiedade elevada por ser a avaliação de maior peso do semestre**
+Como o Projeto Final corresponde a 40% da nota final e reúne todos os 10 critérios de uma vez, é esperado um nível de ansiedade mais alto do que em críticas formais anteriores. Estratégia: a mini aula do Encontro 1 deve reforçar que nada do que está sendo avaliado hoje é novo — são os mesmos critérios já praticados desde a CF1, agora todos juntos.
 
-**2. Normal Map sem a flag de importação ativada na Unity**
-Um erro silencioso: a textura é importada como imagem comum, o material aceita a conexão sem erro, mas o resultado visual fica sutilmente errado (relevo invertido ou achatado). Estratégia: verificar sistematicamente, para cada Normal Map importado, se a opção "Normal Map" está marcada no Inspector antes de conectar ao material.
+**2. Apresentações que ultrapassam o tempo estabelecido**
+Alguns estudantes tendem a tentar mostrar tudo o que produziram, estourando os 10 minutos. Estratégia: usar cronômetro visível e, se necessário, interromper educadamente ao final do tempo, lembrando que parte da avaliação de C9 é justamente a capacidade de organizar a fala dentro de um tempo definido.
 
-**3. Smoothness invertido em relação ao Roughness já produzido**
-Como o conceito de Roughness (usado desde a Semana 5) é o inverso do conceito de Smoothness (usado no shader Lit da Unity), estudantes frequentemente conectam o canal sem inverter, produzindo superfícies que parecem mais ásperas ou mais lisas do que o material realmente é. Estratégia: comparar visualmente a superfície na Unity com o render de referência do Blender e perguntar diretamente se a leitura de "brilho" bate com a intenção original do material.
+**3. Divergência significativa entre autoavaliação e avaliação do professor**
+Estudantes que se avaliaram muito acima ou muito abaixo do nível observado pelo professor podem reagir defensivamente ou desanimar durante os 5 minutos de perguntas. Estratégia: tratar a divergência como oportunidade de diálogo técnico ("me mostra a evidência"), não como confronto — e lembrar que a autoavaliação em si já é evidência de C1, independentemente de bater exatamente com a nota final.
 
-**4. Confusão entre UV1 e UV2 durante a exportação**
-Alguns estudantes podem gerar o UV2, mas esquecer de conferir se a exportação FBX está de fato incluindo os dois canais, resultando em um lightmap gerado automaticamente pela Unity (de baixa qualidade) em vez do UV2 planejado manualmente. Estratégia: verificar nas configurações de importação da Unity se o canal de lightmap UV está de fato vindo do FBX, e não sendo gerado automaticamente pelo motor como solução de contingência.
+**4. Problemas técnicos de última hora (arquivo corrompido, projeto Unity não abre)**
+Com 16 semanas de arquivos acumulados, há risco de algum estudante ter problema técnico no dia da apresentação. Estratégia: exigir teste prévio de abertura dos arquivos antes da aula (idealmente na Semana 15 ou por comunicado); no dia, ter um plano B com renders/screenshots já exportados como apoio caso o projeto Unity não abra ao vivo.
 
-**5. Escala incorreta dos assets ao importar na Unity**
-Diferenças de unidade entre Blender e Unity podem fazer os assets aparecerem desproporcionalmente grandes ou pequenos na cena. Estratégia: comparar a escala de um asset com um objeto de referência conhecido na cena (ex.: um cubo de 1 metro) e ajustar a escala de importação, se necessário, antes de prosseguir com a montagem da cena completa.
+**5. Engajamento desigual dos colegas durante as apresentações dos outros**
+Em uma sequência longa de apresentações (potencialmente a turma inteira ao longo de duas aulas), há risco de queda de atenção e feedback genérico na Avaliação por Pares. Estratégia: reforçar que a Ficha de Avaliação por Pares de hoje compõe C10 de quem a preenche, não apenas de quem é avaliado — dar feedback vago também é observável e impacta a própria nota do avaliador.
 
-**6. Tempo insuficiente para configurar o kit inteiro na Unity**
-Como em outras semanas de introdução a uma ferramenta nova, o primeiro asset consome mais tempo por exigir diagnóstico de todo o processo; os seguintes tendem a ser mais rápidos, pois os problemas já foram identificados e corrigidos uma vez. Estratégia: priorizar a configuração cuidadosa de dois ou três assets representativos no primeiro encontro e tratar a expansão para o kit completo como o foco do segundo encontro, aceitando que a montagem final da cena aconteça majoritariamente no Bloco 2 do segundo encontro.
+**6. Tempo insuficiente para todas as apresentações em turmas maiores**
+Se o número de estudantes for alto, os blocos de 50 e 60 minutos podem não comportar 15 minutos por pessoa para todos. Estratégia: planejar previamente, a partir do número real de estudantes matriculados, quantas apresentações cabem em cada bloco, e comunicar a ordem e o horário aproximado de cada um com antecedência — evitando comprimir o tempo individual de defesa no dia.
 
 ---
 
@@ -278,12 +258,12 @@ Como em outras semanas de introdução a uma ferramenta nova, o primeiro asset c
 
 | Situação | Estratégia |
 |---|---|
-| Estudante com vazamento de luz visível no bake | Voltar ao Blender e inspecionar visualmente o UV2 no UV Editor, ilha por ilha, procurando sobreposição — resolver na origem (UV) em vez de tentar compensar apenas ajustando parâmetros de luz na Unity. |
-| Estudante com Normal Map com aparência estranha (achatado ou invertido) | Verificar diretamente no Inspector da Unity se a flag "Normal Map" está ativada na importação da textura — esse é o primeiro ponto de verificação antes de qualquer outro diagnóstico. |
-| Estudante com material parecendo mais brilhante ou mais opaco do que deveria | Comparar lado a lado com o render de referência do Blender e perguntar se o canal de Smoothness foi conectado direto ou precisa de inversão em relação ao Roughness original. |
-| Estudante confuso sobre se o lightmap UV vindo é o UV2 planejado ou um gerado automaticamente pela Unity | Checar as configurações de importação do modelo no Inspector da Unity, conferindo se a opção de gerar lightmap UV automaticamente está desativada e se o canal correto do FBX está sendo lido. |
-| Estudante com assets em escala visivelmente incorreta na cena | Posicionar um objeto de escala conhecida (cubo de 1 metro) ao lado do asset importado e comparar visualmente, ajustando a escala de importação conforme necessário. |
-| Estudante terminando rápido e com qualidade | Propor testar variações de iluminação (cor, intensidade, ângulo) e observar o impacto no clima da cena, ou revisar se algum asset se beneficiaria de ajuste fino adicional de Smoothness/Metallic para leitura mais correta sob a luz baked. |
+| Estudante ansioso antes de apresentar | Relembrar que os critérios de hoje são os mesmos já praticados desde a CF1 — nenhuma novidade de conteúdo, apenas a integração de tudo em um só momento. |
+| Apresentação ultrapassando o tempo | Usar o cronômetro visível como referência compartilhada, não como surpresa; interromper com gentileza ao final dos 10 minutos, direcionando o restante para os 5 minutos de perguntas. |
+| Divergência entre autoavaliação e avaliação do professor | Pedir a evidência concreta que sustenta o nível autoatribuído, tratando a diferença como material de diálogo técnico, não como erro a ser corrigido publicamente. |
+| Estudante com problema técnico na abertura do projeto | Recorrer ao plano B de renders/screenshots já exportados, mantendo o foco da defesa na capacidade de explicar o processo, não apenas em mostrar o arquivo ao vivo. |
+| Turma com atenção decrescente ao longo de várias apresentações seguidas | Reforçar publicamente que a Ficha de Avaliação por Pares de hoje compõe a nota de participação de quem a preenche, reengajando o incentivo a prestar atenção. |
+| Estudante que recebe pergunta e não sabe responder de imediato | Aceitar "não sei, mas acho que..." seguido de raciocínio como resposta válida e observável para C10 — reforçar que tentativa de justificativa vale mais do que silêncio. |
 
 ---
 
@@ -291,13 +271,16 @@ Como em outras semanas de introdução a uma ferramenta nova, o primeiro asset c
 
 | Evidência | Critério da Rubrica | Como avaliar |
 |---|---|---|
-| UV2 de lightmap gerado para os assets do kit, sem sobreposição entre ilhas, visível no UV Editor do Blender | C8 — Integração na Unity (✓ nota — Checkpoint C8) | A inspeção visual do UV2 confirma ausência de sobreposição e padding adequado entre ilhas? |
-| Assets exportados em FBX e importados na Unity preservando UV1 e UV2 | C8 — Integração na Unity (✓ nota — Checkpoint C8) | A configuração de importação confirma que ambos os canais de UV vieram do arquivo, sem substituição por lightmap UV gerado automaticamente? |
-| Materiais configurados no shader da Unity com Albedo, Normal Map (flag correta) e Metallic/Smoothness coerentes com os mapas produzidos | C7 — Otimização (obs.) / C8 — Integração na Unity (✓ nota — Checkpoint C8) | O resultado visual na Unity é comparável ao render de referência produzido no Blender, sem inversões de canal perceptíveis? |
-| Cena completa montada com todos os assets do kit posicionados de forma coerente com o tema | C2 — Direção Artística (obs., revisitado) | A composição da cena comunica o tema do kit modular sem explicação adicional? |
-| Lightmap bake da cena executado, sem vazamento de luz perceptível entre objetos ou dentro de um mesmo asset | C8 — Integração na Unity (✓ nota — Checkpoint C8) | O resultado do bake apresenta manchas de luz incoerentes, ou a iluminação lê corretamente a geometria de cada objeto? |
-| Renders finais da cena capturados em ao menos 4 ângulos diferentes | C9 — Apresentação (obs., revisitado) | Os ângulos escolhidos comunicam bem o kit modular como um conjunto coeso, e não apenas objetos isolados? |
-| Participação na crítica circulante: comentários referenciando configuração de material, UV2 ou resultado do bake, não apenas impressão visual geral | C10 — Participação (obs.) | O feedback dado menciona um ponto técnico específico (flag de normal map, sobreposição de UV2, escala) ou é genérico? |
+| Documentação de processo apresentada (moodboard, versões, anotações de crítica, evolução desde a Semana 1) | C1 — Processo de Projeto | A trajetória do projeto é rastreável, com decisões justificadas e feedback anterior visivelmente incorporado? |
+| Coerência visual entre todos os assets do kit e capacidade de verbalizar a proposta estética | C2 — Direção Artística | A paleta, o estilo e o nível de detalhe são consistentes, e o estudante consegue descrever a intenção por trás das escolhas? |
+| UV layout dos assets do kit (ocupação de espaço, distorção, sobreposição) | C3 — UV Mapping | A inspeção do UV editor confirma ocupação acima de 70–85%, distorção mínima e ausência de sobreposição indevida? |
+| Materiais PBR configurados nos assets (Albedo, Metallic, Roughness/Smoothness, Normal) | C4 — Materiais PBR | Os valores são fisicamente plausíveis e variam de acordo com lógica de uso (desgaste, proteção)? |
+| Texturização artística final (desgaste, sujeira, variação, narrativa de uso) | C5 — Texturização | A superfície comunica história de uso perceptível tanto de perto quanto à distância de uso esperada? |
+| Mapas de bake integrados (Normal, AO, Curvature) | C6 — Bake | Há ausência de artefatos e seams visíveis, com transferência fiel de detalhe do high-poly? |
+| Estratégia de otimização documentada (atlas, trim sheet, channel packing, resolução) | C7 — Otimização | O estudante consegue quantificar ou justificar tecnicamente o ganho de cada decisão de otimização tomada? |
+| Cena Unity montada, com materiais, lightmap e renders finais (produzidos na Semana 15) | C8 — Integração na Unity | O kit funciona como um produto entregável, sem retrabalho necessário, sob iluminação coerente? |
+| Estrutura e fluência da apresentação de 10+5 minutos, organização da pasta de entrega final | C9 — Apresentação | A apresentação é clara, dentro do tempo, com breakdown visual que comunica processo e resultado? |
+| Qualidade do feedback dado nas apresentações dos colegas (Ficha de Avaliação por Pares) e consolidação do engajamento em críticas anteriores | C10 — Participação nas Critiques | O feedback registrado é específico e referencia critérios técnicos, e não apenas impressão geral? |
 
 ---
 
@@ -305,12 +288,13 @@ Como em outras semanas de introdução a uma ferramenta nova, o primeiro asset c
 
 | Entrega | Formato | Prazo |
 |---|---|---|
-| Assets do kit com UV2 de lightmap gerado, sem sobreposição | `.blend` atualizado | Até o fim do segundo encontro |
-| Projeto Unity com todos os assets do kit importados, materiais configurados e lightmap baked | Pasta de projeto Unity, nomeada `[Nome]_Kit_Unity_S16` | Até o fim do segundo encontro |
-| Renders finais da cena renderizada na Unity, em pelo menos 4 ângulos | `.png` ou `.jpg`, pasta `_Renders_S16` | Até o fim do segundo encontro |
-| Ficha de Autoavaliação (Instrumento 2) preenchida para C8 | Documento digital ou impresso | Até o fim do segundo encontro |
+| Kit Modular de Ambiente completo (todos os assets texturizados, arquivos `.blend`, mapas de textura) | Pasta nomeada `[Nome]_Kit_Final` | Até o início da própria apresentação |
+| Projeto Unity com a cena completa montada, materiais configurados e lightmap baked (produzido na Semana 15) | Pasta de projeto Unity, nomeada `[Nome]_Kit_Unity_Final` | Até o início da própria apresentação |
+| Renders finais da cena, em pelo menos 4 ângulos | `.png` ou `.jpg`, pasta `_Renders_Final` | Até o início da própria apresentação |
+| Documento de autoavaliação reflexiva (Instrumento 2 preenchido) | `.pdf` ou `.docx` | Entregue previamente à aula |
+| Ficha de Avaliação por Pares preenchida para os colegas observados | Física ou digital, entregue ao professor ao final de cada encontro | Ao final de cada encontro |
 
-> **Nota sobre a nota do Checkpoint C8:** Esta semana atribui nota formal a C8 (Integração na Unity) pela primeira vez na disciplina, com peso de 10% no Portfolio de Artefatos. O material entregue — cena Unity montada, lightmap baked e renders finais — é a evidência avaliada pelo professor na Ficha de Crítica Formal (Instrumento 1), preenchida só para C8. Estudantes com nota abaixo de 5,0 têm direito a Recuperação Paralela (Plano de Ensino, Seção 10), corrigindo e reentregando até o início da Semana 17. C8 volta a ser avaliado, desta vez com todos os critérios da rubrica, na CF6 (Projeto Final).
+> **Nota:** A nota atribuída nesta semana corresponde à CF5 / Projeto Final (PF), 40% da nota final, calculada conforme a tabela de pesos por critério da Rubrica Mestre. C10 (Participação nas Critiques), avaliado formalmente pela primeira e única vez hoje, também consolida o fechamento da nota de Críticas Coletivas (CC), 20% da nota final. Esta é a última entrega avaliativa formal da disciplina.
 
 ---
 

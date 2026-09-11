@@ -17,7 +17,7 @@ footer: "IFMS • Semana 06"
 **Semana 6** — Criação de texturas seamless e tileable
 
 <!--
-Notas: Abertura da mini aula (20 min). Unidade II, entre a CF2 (Sem 5) e a CF3 (Sem 8). Mensagem central no subtítulo: a costura de uma textura não é falta de talento artístico — é uma imagem cujas bordas não são contínuas. Marco da semana: pela primeira vez uma IMAGEM REAL entra no pipeline. Nas Semanas 3-5 o Albedo era cor plana; agora vira uma superfície com variação e história. Não é tutorial de cliques: é entender por que a repetição precisa ser invisível.
+Notas: Abertura da mini aula (20 min). Unidade II, entre a crítica formal da Semana 5 e a CF2 (Semana 8). Mensagem central no subtítulo: a costura de uma textura não é falta de talento artístico — é uma imagem cujas bordas não são contínuas. Marco da semana: pela primeira vez uma IMAGEM REAL entra no pipeline (fotografada OU pintada, dependendo da trilha visual do estudante). Nas Semanas 3-5 o Albedo era cor plana; agora vira uma superfície com variação e história. Não é tutorial de cliques: é entender por que a repetição precisa ser invisível — em qualquer trilha.
 -->
 
 ---
@@ -27,13 +27,37 @@ Notas: Abertura da mini aula (20 min). Unidade II, entre a CF2 (Sem 5) e a CF3 (
 Ao final da semana você será capaz de:
 
 - Explicar **o que é** uma textura seamless e por que jogos precisam dela
-- Diferenciar **offset+patch** de uma repetição direta de foto
-- Criar uma textura seamless a partir de uma foto no **Krita**
+- Diferenciar **offset+patch** de uma repetição direta de foto ou pintura
+- Criar uma textura seamless a partir de uma foto **ou** de uma pintura estilizada no **Krita**
 - Conectar a textura ao canal **Albedo** do Asset 01 no Blender
-- Localizar mapas PBR em fontes livres (**Poly Haven**, **AmbientCG**)
+- Localizar mapas PBR em fontes livres, fotográficas ou estilizadas
 
 <!--
-Notas: Ler rápido. Cada objetivo retorna ao longo da aula. Não antecipar Normal Map nem Roughness mapeado (Semana 7) — hoje só o Albedo deixa de ser cor e passa a ser imagem. Manter os valores de Metallic e Roughness calibrados na Semana 5.
+Notas: Ler rápido. Cada objetivo retorna ao longo da aula. Não antecipar Normal Map nem geração de mapas via 3D Coat (Semana 7) — hoje só o Albedo deixa de ser cor e passa a ser imagem. Manter os valores de Metallic e Roughness calibrados na Semana 5, em qualquer trilha visual.
+-->
+
+---
+
+<!-- _class: comparison -->
+
+## Duas trilhas visuais, um mesmo pipeline
+
+**Fotorrealista**
+- Textura de origem fotográfica
+- Material lido como "escaneado do mundo real"
+
+**Estilizada**
+- Textura de origem pintada/ilustrada
+- Material lido como desenhado com intenção artística
+
+<div class="tip">
+
+Mesmo fluxo de ferramentas nas duas — Krita hoje, 3D Coat a partir da Semana 7. A diferença está só na fonte da imagem. Nenhuma trilha vale mais nota: a escolha precisa ser coerente com o moodboard das Semanas 1–3.
+
+</div>
+
+<!--
+Notas: Slide novo desta revisão. A partir de hoje cada estudante começa a definir se o Hero Asset persegue fotorrealismo ou estilização. Deixar claro que o requisito técnico de seamless (continuidade de borda) é idêntico nas duas — a diferença é só de onde vem a imagem e, mais adiante (Semana 7), como o material entra no 3D Coat. Se algum estudante estiver em dúvida, adiantar que existe um slide de apoio para essa decisão mais à frente na aula.
 -->
 
 ---
@@ -78,26 +102,26 @@ Quando repetida lado a lado, o olho **não** detecta a transição entre tiles.
 
 <div class="industry">
 
-Paredes, pisos e terrenos são maiores que um tile. A solução eficiente é repetir uma textura pequena — mas só funciona se ela for seamless.
+Paredes, pisos e terrenos são maiores que um tile. A solução eficiente é repetir uma textura pequena — mas só funciona se ela for seamless. Vale tanto para uma foto quanto para uma pintura digital.
 
 </div>
 
 <!--
-Notas: Fixar o conceito central. Superfícies grandes de jogo são maiores que uma única tile. Usar textura pequena repetida é a opção mais eficiente em memória — mas exige seamless. A alternativa (textura única cobrindo tudo) existe, mas não escala para um kit modular. Amarrar ao Projeto Integrador: o kit precisa de superfícies amplas coerentes.
+Notas: Fixar o conceito central. Superfícies grandes de jogo são maiores que uma única tile. Usar textura pequena repetida é a opção mais eficiente em memória — mas exige seamless. A alternativa (textura única cobrindo tudo) existe, mas não escala para um kit modular. O requisito técnico de continuidade de borda é o mesmo independentemente da trilha visual (fotorrealista ou estilizada). Amarrar ao Projeto Integrador: o kit precisa de superfícies amplas coerentes.
 -->
 
 ---
 
-## Por que uma foto bruta não é seamless
+## Por que a imagem de origem não é seamless
 
 Uma foto captura **iluminação**, **sombras** e **perspectiva** diferentes em cada borda.
 
-Mesmo com conteúdo idêntico, gradientes de luz vazam pelas extremidades.
+Uma pintura do zero tem o mesmo problema se as pinceladas não foram planejadas para continuar nas bordas.
 
-Ao repetir, essas diferenças aparecem como **linhas de costura**.
+Ao repetir, essas diferenças aparecem como **linhas de costura** — em foto ou em pintura.
 
 <!--
-Notas: O ponto-chave que motiva o método. A costura não é falha de conteúdo — é diferença entre as bordas. Por isso capturar em iluminação difusa (dia nublado) é tão importante: sombras duras criam costuras que "giram" com o tile e não se corrigem por offset simples. Preparar o terreno para a solução: offset.
+Notas: O ponto-chave que motiva o método, agora válido para as duas trilhas. A costura não é falha de conteúdo — é diferença entre as bordas. Por isso capturar em iluminação difusa (dia nublado) é tão importante na trilha fotorrealista: sombras duras criam costuras que "giram" com o tile e não se corrigem por offset simples. Na trilha estilizada, o equivalente é uma pincelada que não foi pensada para repetir. Preparar o terreno para a solução: offset.
 -->
 
 ---
@@ -112,10 +136,10 @@ Deslocar a imagem **50%** em X e Y.
 
 As bordas — antes invisíveis — vão para o **centro**.
 
-Agora dá para **consertá-las** com pintura.
+Agora dá para **consertá-las** com pintura, seja sobre foto ou sobre pintura.
 
 <!--
-Notas: Explicar o coração do processo. O offset não conserta nada sozinho — ele TRAZ o problema para onde conseguimos vê-lo e pintar. As bordas passam a ser contínuas; o trabalho de patch acontece no centro. No Krita: Filter > Transform > Offset, 50% em cada eixo.
+Notas: Explicar o coração do processo. O offset não conserta nada sozinho — ele TRAZ o problema para onde conseguimos vê-lo e pintar. As bordas passam a ser contínuas; o trabalho de patch acontece no centro. No Krita: Filter > Transform > Offset, 50% em cada eixo. O método é idêntico nas duas trilhas visuais — só muda o que se pinta por cima (clone de pixels reais vs. continuação de pinceladas).
 
 [!FIGURA]
 Objetivo didático: tornar visível a lógica do offset — o problema não some, ele muda de lugar para poder ser corrigido.
@@ -131,8 +155,9 @@ Como produzir: no Krita, abrir uma foto de pedra, aplicar Filter > Transform > O
 Com **Clone Stamp** (`S`), amostrar (`Ctrl+clique`) regiões próximas e cobrir a linha.
 
 - Trabalhar em pinceladas **irregulares**, não em linha reta
-- Seguir as **formas naturais** do material (veios, juntas)
+- Seguir as **formas naturais** do material (veios, juntas, direção da pincelada)
 - **Smudge** para suavizar transições
+- Na trilha estilizada, pincéis de textura/canvas do Krita ajudam a manter a coerência pintada
 
 <div class="error">
 
@@ -141,7 +166,7 @@ Patch em linha reta troca uma costura por um **padrão de linhas paralelas** —
 </div>
 
 <!--
-Notas: O erro nº 1 do estúdio. Clonar em linha reta cria um novo padrão repetitivo. Orientar pinceladas diagonais e irregulares, seguindo a textura do material. O Smudge suaviza os limites do patch. Mostrar isso ao vivo na demonstração com o Wrap Around ativo.
+Notas: O erro nº 1 do estúdio. Clonar em linha reta cria um novo padrão repetitivo. Orientar pinceladas diagonais e irregulares, seguindo a textura do material. O Smudge suaviza os limites do patch. Mostrar isso ao vivo na demonstração com o Wrap Around ativo. Para quem estiver criando uma textura estilizada do zero (sem foto de origem), os pincéis padrão do Krita com textura de papel/canvas ajudam a manter o resultado coerente com um universo pintado.
 -->
 
 ---
@@ -154,7 +179,7 @@ Notas: O erro nº 1 do estúdio. Clonar em linha reta cria um novo padrão repet
 
 Atalho `W` no Krita: pré-visualiza a **repetição enquanto você pinta**.
 
-Sem exportar e testar a cada ajuste.
+Sem exportar e testar a cada ajuste — em foto ou em pintura.
 
 <div class="tip">
 
@@ -163,7 +188,7 @@ Recue 2 passos do monitor. Se precisar se **concentrar** para achar a costura, e
 </div>
 
 <!--
-Notas: O Wrap Around (W) é o único feedback confiável em tempo real — o estudante vê a costura ANTES de ir para o Blender. Erro comum nº 2: o PNG isolado parece perfeito, mas a costura só aparece quando tilea. Insistir no uso do Wrap Around durante todo o processo, não só no fim. A régua do "bom o suficiente" é uma decisão artística, não técnica.
+Notas: O Wrap Around (W) é o único feedback confiável em tempo real — o estudante vê a costura ANTES de ir para o Blender, na trilha fotorrealista ou na estilizada. Erro comum nº 2: o PNG isolado parece perfeito, mas a costura só aparece quando tilea. Insistir no uso do Wrap Around durante todo o processo, não só no fim. A régua do "bom o suficiente" é uma decisão artística, não técnica.
 
 [!FIGURA]
 Objetivo didático: mostrar como o Wrap Around revela costuras que são invisíveis na imagem isolada.
@@ -181,26 +206,44 @@ Como produzir: no Krita, abrir uma textura de pedra parcialmente tratada, pressi
 ![diagram](assets/mermaid-1.png)
 
 <!--
-Notas: Núcleo procedimental da semana. O ciclo Krita -> Blender vai se repetir várias vezes no estúdio — é normal. Reforçar o loop C->D->C: verificar no Wrap Around, voltar ao patch se houver costura. O GitHub Action converte o bloco mermaid em imagem automaticamente.
+Notas: Núcleo procedimental da semana. O ciclo Krita -> Blender vai se repetir várias vezes no estúdio — é normal, nas duas trilhas visuais. Reforçar o loop C->D->C: verificar no Wrap Around, voltar ao patch se houver costura. O GitHub Action converte o bloco mermaid em imagem automaticamente.
 -->
 
 ---
 
-## Fontes de texturas PBR gratuitas
+## Fontes de texturas PBR gratuitas — duas trilhas
 
+**Trilha fotorrealista**
 - **Poly Haven** (polyhaven.com) — mapas PBR completos, licença CC0
 - **AmbientCG** (ambientcg.com) — grande variedade por categoria, CC0
 
-Já vêm quase seamless e com Albedo, Normal, Roughness e AO.
+**Trilha estilizada**
+- Coleções "Painted"/"Stylized" (ex.: Poliigon) e pacotes seamless hand-painted no itch.io
 
 <div class="tip">
 
-Baixar é válido e faz parte do fluxo profissional. Mas a entrega inclui **evidência do processo** — não só o arquivo final.
+Fotorrealista já vem quase seamless com Albedo, Normal, Roughness e AO. Estilizada costuma trazer só o Albedo pronto — Metallic/Roughness você calibra à mão, como na Semana 5.
 
 </div>
 
 <!--
-Notas: Deixar claro que baixar textura pronta NÃO isenta de entender o seamless. Se o estudante baixa do Poly Haven, precisa documentar por que é seamless (apontar continuidade de bordas no Wrap Around) e adaptar cor/detalhe ao tema. "Baixar é válido. Entregar sem entender não é." Erro comum nº 6 do plano. Se a internet do lab for instável, ter um pen drive com 5-6 texturas preparadas.
+Notas: Deixar claro que baixar textura pronta NÃO isenta de entender o seamless, em nenhuma trilha. Se o estudante baixa do Poly Haven ou de um banco estilizado, precisa documentar por que é seamless (apontar continuidade de bordas no Wrap Around) e adaptar cor/detalhe ao tema. "Baixar é válido. Entregar sem entender não é." Erro comum nº 6 do plano. Se a internet do lab for instável, ter um pen drive com 5-6 texturas de cada trilha preparadas (pedra, madeira, metal, concreto, tijolos).
+-->
+
+---
+
+## Ainda não decidiu a trilha visual?
+
+Volte ao moodboard das Semanas 1–3: as referências são **fotos** de ambientes reais, ou **ilustrações/concept art**?
+
+<div class="tip">
+
+Sem certeza? Comece pela trilha **estilizada** — mais segura para quem não tem acesso fácil a fotografia de boa qualidade. A decisão pode ser revisitada até a Semana 7.
+
+</div>
+
+<!--
+Notas: Slide novo desta revisão, endereça a dificuldade nº 7 do plano de aula. Alguns estudantes chegam à Semana 6 sem ter decidido a trilha. Usar o próprio moodboard como critério de decisão. Nenhuma trilha é tecnicamente mais fácil nem vale mais nota — mas para quem não tem boa fotografia disponível, a estilizada reduz o risco de imagem de origem ruim.
 -->
 
 ---
@@ -234,7 +277,7 @@ Adicionar o nó Image Texture e, sem querer, desconectar Metallic/Roughness — 
 </div>
 
 <!--
-Notas: Erro comum recorrente. Ao adicionar o Image Texture, o estudante às vezes desfaz outros inputs. Verificar no Principled BSDF: Base Color conectado ao Image Texture, Metallic e Roughness com valores não-padrão coerentes com o material (ex: o Roughness 0.85 da pedra calibrado na Semana 5 continua lá?).
+Notas: Erro comum recorrente. Ao adicionar o Image Texture, o estudante às vezes desfaz outros inputs. Verificar no Principled BSDF: Base Color conectado ao Image Texture, Metallic e Roughness com valores não-padrão coerentes com o material (ex: o Roughness 0.85 da pedra calibrado na Semana 5 continua lá?). Vale para as duas trilhas — o Albedo muda, o restante do material calibrado não.
 -->
 
 ---
@@ -255,12 +298,12 @@ Notas: Erro comum recorrente. Ao adicionar o Image Texture, o estudante às veze
 
 <div class="error">
 
-**Foto com sombra dura** — a sombra "gira" com o tile e não se corrige por offset.
+**Imagem de origem com sombra dura ou pincelada direcional** — o gradiente "gira" com o tile e não se corrige por offset simples.
 
 </div>
 
 <!--
-Notas: Os três erros mais frequentes da semana, alinhados ao bloco de dificuldades do plano. Circular no estúdio caçando exatamente estes padrões. Para a sombra dura: orientar imagens de dia nublado / iluminação difusa; se a sombra for leve, suavizar com Dodge/Burn ou níveis antes do offset.
+Notas: Os três erros mais frequentes da semana, alinhados ao bloco de dificuldades do plano, agora cobrindo as duas trilhas. Circular no estúdio caçando exatamente estes padrões. Para sombra dura: orientar imagens de dia nublado / iluminação difusa; se a sombra for leve, suavizar com Dodge/Burn ou níveis antes do offset. Para pincelada direcional forte na trilha estilizada, o princípio é o mesmo: suavizar antes de aplicar o offset.
 -->
 
 ---
@@ -269,12 +312,12 @@ Notas: Os três erros mais frequentes da semana, alinhados ao bloco de dificulda
 
 ## Na indústria
 
-Bibliotecas como Quixel Megascans e Poliigon existem porque poucos estúdios pintam textura seamless do zero — a competência real de produção é adaptar e integrar referência de qualidade ao material do próprio projeto, não recriar tudo manualmente.
+Bibliotecas como Quixel Megascans e Poliigon existem porque poucos estúdios pintam textura seamless do zero — a competência real de produção é adaptar e integrar referência de qualidade ao material do próprio projeto, não recriar tudo manualmente. Isso vale tanto para bibliotecas fotográficas quanto para bibliotecas de texturas pintadas usadas em jogos estilizados.
 
 Saber reconhecer (e corrigir) uma textura que não fecha em tile é tão valorizado quanto saber produzir uma do zero — é o defeito mais rápido de notar em qualquer render de superfície repetida.
 
 <!--
-Notas: Contextualizar o valor profissional. O uso de bibliotecas de textura scaneada é rotina em produção — a habilidade técnica cobrada do artista é curadoria, adaptação e correção de seams, não produção manual de tudo. Amarra à Semana 13/14: a mesma atenção a costura sem descontinuidade volta no tiling de trim sheets.
+Notas: Contextualizar o valor profissional. O uso de bibliotecas de textura (escaneada ou pintada) é rotina em produção — a habilidade técnica cobrada do artista é curadoria, adaptação e correção de seams, não produção manual de tudo, em nenhuma das duas trilhas. Amarra à Semana 13/14: a mesma atenção a costura sem descontinuidade volta no tiling de trim sheets.
 -->
 
 ---
@@ -283,46 +326,46 @@ Notas: Contextualizar o valor profissional. O uso de bibliotecas de textura scan
 
 # Resumo
 
-- **Seamless** = bordas contínuas; a repetição fica invisível
+- **Seamless** = bordas contínuas; a repetição fica invisível — em foto ou em pintura
 - **Offset** traz a costura das bordas para o centro
 - **Patch** irregular cobre a costura sem criar novo padrão
 - **Wrap Around (W)** é o feedback em tempo real
-- Preserve **Metallic** e **Roughness** ao conectar o Albedo
+- Preserve **Metallic** e **Roughness** ao conectar o Albedo, em qualquer trilha
 
 <!--
-Notas: Amarrar a mini aula. Cada item retorna na demonstração e no estúdio. Não reler tudo — apontar a conexão com a demo (pedra seamless no Krita -> Blender). Lembrar: hoje é crítica INFORMAL; o foco é ler costura e coerência temática no trabalho dos colegas.
+Notas: Amarrar a mini aula. Cada item retorna na demonstração e no estúdio. Não reler tudo — apontar a conexão com a demo (pedra seamless no Krita -> Blender, com uma comparação rápida com o caso estilizado ao final). Lembrar: hoje é crítica INFORMAL; o foco é ler costura e coerência temática (e coerência de trilha) no trabalho dos colegas.
 -->
 
 ---
 
 ## No estúdio: textura do Asset 01
 
-Crie uma textura seamless do **material principal** do Asset 01.
+Crie uma textura seamless do **material principal** do Asset 01, na trilha visual do seu kit.
 
-Três caminhos: criar de uma foto, adaptar do Poly Haven/AmbientCG, ou baixar pronta.
+Quatro caminhos: criar de foto própria/internet, adaptar do Poly Haven/AmbientCG, criar ou baixar estilizada, ou baixar pronta se o tempo for curto.
 
 <div class="tip">
 
-O que importa é chegar a um **PNG seamless** aplicado ao Albedo do Asset 01 no Blender — com Metallic e Roughness preservados.
+O que importa é chegar a um **PNG seamless** aplicado ao Albedo do Asset 01 no Blender — com Metallic e Roughness preservados, e a trilha coerente com o moodboard.
 
 </div>
 
 <!--
-Notas: Consigna do estúdio (50 min). Se o Asset 01 é parede de pedra medieval, a textura é pedra; se é caixa de metal Sci-Fi, é metal com ferrugem. Amarrar ao moodboard: não é "pedra genérica", é AQUELA pedra do tema. Nomenclatura: [Nome]_[material]_seamless_S06.png. Salvar o .kra nativo com as camadas — vai poupar trabalho na Semana 7.
+Notas: Consigna do estúdio (50 min). Se o Asset 01 é parede de pedra medieval, a textura é pedra; se é caixa de metal Sci-Fi, é metal com ferrugem — fotorrealista ou estilizado, conforme a trilha já escolhida. Amarrar ao moodboard: não é "pedra genérica", é AQUELA pedra do tema. Nomenclatura: [Nome]_[material]_seamless_S06.png. Salvar o .kra nativo com as camadas — vai poupar trabalho na Semana 7 (migração para o 3D Coat).
 -->
 
 ---
 
 ## Agora: demonstração
 
-A seguir, uma **pedra seamless ao vivo**: foto → offset → patch → Blender.
+A seguir, uma **pedra seamless ao vivo**: foto → offset → patch → Blender — com uma comparação rápida ao final contra o mesmo processo em uma textura estilizada.
 
 Krita à esquerda com Wrap Around, Blender à direita com o Asset 01.
 
 ![large](assets/demo_seamless_krita_blender.webp)
 
 <!--
-Notas: Transição para a demonstração de 20 min. Sequência: importar foto -> Wrap Around mostra costura -> Offset 50% -> patch com Clone Stamp -> verificar no Wrap Around -> exportar PNG -> Blender: nó Image Texture no Base Color -> comparar com o Albedo plano da Semana 5. Deixar uma costura residual é didaticamente valioso: mostrar o ciclo Krita -> Blender -> Reload.
+Notas: Transição para a demonstração de 20 min. Sequência: importar foto -> Wrap Around mostra costura -> Offset 50% -> patch com Clone Stamp -> verificar no Wrap Around -> exportar PNG -> Blender: nó Image Texture no Base Color -> comparar com o Albedo plano da Semana 5 -> fechar mostrando o mesmo processo já aplicado a uma textura pintada estilizada, reforçando que o critério de "está seamless?" é idêntico nas duas trilhas. Deixar uma costura residual é didaticamente valioso: mostrar o ciclo Krita -> Blender -> Reload.
 
 [!FIGURA]
 Objetivo didático: dar à turma um alvo visual do resultado esperado e antecipar o layout de tela da demonstração.

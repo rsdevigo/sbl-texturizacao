@@ -10,14 +10,14 @@ footer: "IFMS • Semana 07"
 <!-- _class: cover -->
 <!-- _paginate: false -->
 
-# Profundidade sem geometria
+# O material sai do Blender
 
-## O material deixa de ser plano
+## Migração para o 3D Coat: mesh maps e Smart Materials
 
-**Semana 7** — Normal Map e geração procedural
+**Semana 7** — AO, Curvature e Normal direto da malha
 
 <!--
-Notas: Abertura da mini aula (20 min). Unidade II, entre a CF2 (Sem 5) e a CF3 (Sem 8). Mensagem central: nesta semana o material ganha PROFUNDIDADE. Nas Semanas 5-6 o Albedo passou de cor plana a imagem real; agora o Normal Map simula relevo e o Roughness varia dentro da mesma superfície — sem adicionar um único polígono. Saída da semana: o primeiro material PBR COMPLETO (Albedo + Metallic + Roughness + Normal). O Subsurface Scattering (SSS) NÃO é abordado nesta semana — foi movido para a Semana 8, junto ao sistema de camadas do 3D Coat, para não sobrecarregar esta mini-aula com um quinto conceito novo. Não é tutorial de cliques: é entender por que a luz "acredita" em uma superfície que não existe.
+Notas: Abertura da mini aula (20 min). Unidade II, entre a Semana 6 e a CF2 (Semana 8). Mudança de ferramenta desta semana: o Blender deixa de ser onde o material é montado e passa a ser só exportação/reconexão. O 3D Coat entra como ferramenta dedicada de texturização — e entra cedo, porque a partir de hoje as duas trilhas visuais (fotorrealista e estilizada) usam o MESMO fluxo de ferramenta, divergindo só na camada de Color. Saída da semana: primeiro material PBR completo dentro do 3D Coat (Color + Roughness + Metallic + Normal via bake/pintura). SSS não é abordado hoje — vai para a Semana 8.
 -->
 
 ---
@@ -26,180 +26,157 @@ Notas: Abertura da mini aula (20 min). Unidade II, entre a CF2 (Sem 5) e a CF3 (
 
 Ao final da semana você será capaz de:
 
-- Explicar **como** um Normal Map simula relevo sem mudar a geometria
-- Diferenciar **Normal Map** de **Bump Map** e saber quando usar cada um
-- Gerar um Normal Map **procedural** no Blender (Noise → Bump → Normal)
-- Criar **variação de Roughness** com Noise Texture + ColorRamp
-- Montar um material PBR **completo** com os quatro canais conectados
+- Explicar o que são **mesh maps** (AO, Curvature, Normal) e por que não exigem high-poly
+- Exportar do Blender e importar no 3D Coat em **Per-Pixel Painting** (Metalness PBR)
+- Reconhecer os três **Rooms** do 3D Coat e a lógica de camadas por canal
+- **Bakear** AO e Curvature direto da malha e usá-los como máscara de desgaste
+- Pintar um **Normal Map real** no canal Depth — sem nós procedurais
 
 <!--
-Notas: Ler rápido. Cada objetivo retorna ao longo da aula. Não antecipar 3D Coat (Semana 8) nem bake (Semana 11) — hoje tudo acontece com nós procedurais no Blender. SSS não é tratado hoje — fica para a Semana 8.
+Notas: Ler rápido. Cada objetivo retorna ao longo da aula. Objetivo 9 do plano (situar o bake dentro do conceito de texturização procedural da Semana 1) fica para o slide de panorama mais adiante. SSS não é tratado hoje — Semana 8.
 -->
 
 ---
 
 <!-- _class: question -->
 
-# O que mudou entre as três paredes?
+# Essa profundidade veio de onde? Eu não pintei nada ainda.
 
 <!--
-Notas: Abrir com a imagem estática de comparação no projetor (sem abrir software ainda). Três versões do MESMO asset: só Albedo / com Normal / com Normal + Roughness. Aguardar 2-3 respostas. O ponto-chave a extrair da turma: a GEOMETRIA é idêntica nos três casos — nenhum polígono foi adicionado. Confirmar e revelar o conceito no slide seguinte.
+Notas: Abrir com comparação visual no projetor (imagens estáticas), três versões do mesmo asset de parede de pedra: (1) só Albedo — Semana 6. (2) + Ambient Occlusion multiplicado sobre o Albedo — reentrâncias escurecem. (3) + Curvature como máscara — arestas recebem desgaste/brilho diferenciado. Conduzir a turma a perceber que a resposta é a própria geometria do asset: reentrâncias, bordas e bevels. Aguardar 2-3 respostas antes de revelar o conceito.
 
-[!FIGURA]
-Objetivo didático: provocar a turma a perceber que a diferença de profundidade não vem da geometria, ancorando o conceito antes da definição.
-Arquivo sugerido: assets/parede_tres_estagios.webp
-Descrição: a mesma parede de pedra em três painéis lado a lado. (1) só Albedo — superfície plana com a foto aplicada. (2) com Normal Map — blocos de pedra ganham volume, rachaduras e relevo. (3) com Normal + Roughness — algumas faces parecem polidas e outras matte.
-Como produzir: no Blender, montar uma parede simples com textura seamless da Semana 6 no Albedo e renderizar (painel 1). Adicionar Noise → Bump → Normal e renderizar (painel 2). Adicionar Noise → ColorRamp → Roughness e renderizar (painel 3). Compor os três lado a lado no Krita com rótulos.
+[!FIGURA — produzir novo material, o conteúdo mudou de Blender-procedural para 3D Coat/mesh maps]
+Objetivo didático: provocar a turma a perceber que a profundidade nasce da geometria, não de pintura manual, ancorando o conceito de mesh map antes da definição.
+Arquivo sugerido: assets/parede_ao_curvature_tres_estagios.webp (não existe ainda — precisa ser produzido)
+Descrição: a mesma parede de pedra em três painéis lado a lado — (1) só Albedo, (2) + AO multiplicado, (3) + Curvature como máscara de desgaste nas arestas.
+Como produzir: no 3D Coat, importar o asset de demonstração com a textura seamless da Semana 6 no Color, capturar o Render Room sem máscara, gerar AO e capturar de novo, gerar Curvature e aplicar como máscara de desgaste e capturar uma terceira vez. Compor os três lado a lado no Krita com rótulos.
 -->
 
 ---
 
-## O que é um Normal Map
+## Mesh maps: informação que já mora na malha
 
-Uma imagem **RGB** onde cada pixel guarda um **vetor de direção** — a normal da superfície naquele ponto.
+**Ambient Occlusion (AO)** — mede o quanto cada ponto está "protegido" da luz ambiente pela geometria ao redor. Frestas e cantos internos escurecem; superfícies expostas clareiam.
 
-O motor usa esses vetores no cálculo de luz **em vez** das normais reais da geometria.
-
-<div class="industry">
-
-R = direção X · G = direção Y · B = profundidade (Z). Por isso mapas de espaço tangente têm sempre aquele **tom azulado**: quase tudo aponta "para fora".
-
-</div>
-
-<!--
-Notas: Fixar o conceito central. O Normal Map engana o cálculo de luz — a superfície permanece plana, mas a luz reage como se houvesse relevo. O tom azulado é consequência direta da codificação: B alto = Z alto = vetor apontando para fora da superfície. Amarrar ao custo de polígonos: em jogos em tempo real, simular relevo é muito mais barato que modelá-lo.
--->
-
----
-
-## Espaço tangente vs. espaço objeto
-
-**Tangente** — vetores relativos à superfície local. Funciona em qualquer objeto, mesmo rotacionado. É o padrão de jogos.
-
-**Objeto** — vetores absolutos. Só funciona se o objeto **não** girar. Raro na produção.
+**Curvature (Cavity)** — mede convexidade/concavidade. Arestas e quinas recebem um valor; sulcos e frestas recebem outro — o mapa mais útil para simular desgaste de uso.
 
 <div class="tip">
 
-Na dúvida, é **espaço tangente**. É o que o pipeline de jogos usa por padrão.
+Nenhum dos dois exige **high-poly**: nascem do próprio bevel e da topologia do asset de jogo que você já modelou.
 
 </div>
 
 <!--
-Notas: Não aprofundar além disso. A distinção importa porque explica por que o mapa é "colável" em qualquer asset — o espaço tangente acompanha a orientação local de cada face. Espaço objeto é citado só para contraste; nenhum estudante vai usá-lo esta semana.
+Notas: Ponto central da mini aula. Ferramentas como 3D Coat e Substance Painter extraem essa informação direto da malha 3D. AO simula acúmulo natural de sombra/sujeira em reentrâncias. Curvature é o mapa mais útil para desgaste: bordas são onde a pintura descasca e o metal fica exposto — o oposto das reentrâncias.
 -->
 
 ---
 
-## Normal Map vs. Bump Map
+## Normal Map: agora nasce do pincel, não do ruído
 
-**Bump Map** — imagem em **escala de cinza**; o valor é altura (branco = alto). O motor calcula a normal a partir do gradiente.
+Em produções com high-poly, o Normal vem da diferença entre a malha detalhada e a de jogo. **Aqui, sem high-poly dedicado, o caminho é outro.**
 
-**Normal Map** — guarda os **vetores diretamente**. Mais preciso e portável entre motores.
+Pinta-se micro-detalhe direto no canal **Depth** do 3D Coat — trincas, entalhes, rebites, veios — usando pincéis e alphas. O software converte essa profundidade pintada em um Normal Map real na exportação.
 
-<div class="tip">
+<div class="best">
 
-No Blender, o nó **Bump** transforma qualquer valor (inclusive ruído) em contribuição de normal — sem precisar de um mapa pronto.
+Nada de Noise Texture. O relevo desta semana tem **autoria**: cada marca é uma decisão sobre onde o objeto foi tocado ou golpeado.
 
 </div>
 
 <!--
-Notas: O Bump é mais simples porém menos preciso e não exporta bem para outros motores. Mas o nó Bump do Blender é justamente o atalho que usaremos hoje: ele converte a saída do Noise Texture em relevo, sem precisar de um Normal Map baked (isso vem na Semana 11).
+Notas: Diferença central em relação ao que a Semana 6 e a Apostila (Cap. 13) descrevem como via alternativa. O Normal Map desta semana nasce de pintura de profundidade, não de matemática de ruído. Preparar a turma para a Demonstração, onde isso é feito ao vivo.
 -->
 
 ---
 
-## Geração procedural: os nós de hoje
+## O que muda (e o que não muda) desde a Semana 6
 
-- **Noise Texture** — padrão de ruído orgânico (Scale, Detail, Roughness)
-- **Bump** — lê um valor como altura e gera contribuição de normal
-- **ColorRamp** — converte ruído contínuo em faixas de contraste
-- **Musgrave** (3.x) ou **Noise com Detail alto** (4.x) — ruído mais estruturado
+O **Albedo** fotográfico ou estilizado da Semana 6 continua sendo a base de cor — nada disso se perde.
+
+O que muda é **onde** e **como** as camadas seguintes são construídas:
+
+| Semana 6 (Blender) | Semana 7 (3D Coat) |
+|---|---|
+| Nós no Shader Editor | Camadas e máscaras no Paint Room |
+| Roughness/Normal por matemática | Roughness/Normal a partir da malha e do pincel |
+| Blender monta o material | Blender só exporta e recebe de volta |
 
 <!--
-Notas: Apresentar o kit mínimo de nós. Não é preciso decorar parâmetros — a demonstração mostra cada um ao vivo. Atenção à versão do laboratório: no Blender 4.0 o Musgrave foi incorporado ao Noise Texture (via Detail/Roughness). Verificar antes da aula e adaptar a nomenclatura.
+Notas: Reforçar que não é um recomeço — é uma migração de ferramenta. O UV e o Albedo da Semana 6 seguem valendo; a diferença é o lugar onde o resto do material é construído. Isso tranquiliza estudantes que investiram tempo na textura seamless da semana passada.
 -->
 
 ---
 
-<!-- _class: diagram -->
+<!-- _class: comparison -->
 
-## Os dois fluxos da semana
+## As duas trilhas — mesmo fluxo, camada de Color diferente
 
-![diagram](assets/mermaid-1.png)
+**Fotorrealista**
+A foto da Semana 6 entra como camada de Color base. AO/Curvature multiplicam por cima, reforçando sombra de contato e desgaste nas bordas — refinamento físico sobre uma base já realista.
+
+**Estilizada**
+Um **Smart Material** (ou camadas equivalentes) substitui a foto. Os mesmos mapas de AO/Curvature funcionam como máscara automática de onde sujeira, brilho e desgaste aparecem — a mesma lógica do Substance Painter.
 
 <!--
-Notas: Núcleo procedimental. Dois caminhos independentes que chegam a canais diferentes do Principled BSDF: um Noise vira relevo (via Bump → Normal), outro Noise vira variação de brilho (via ColorRamp → Roughness). São dois Noise Texture SEPARADOS — não reaproveitar o mesmo nó. O GitHub Action converte o mermaid em imagem.
+Notas: Nos dois casos o resultado técnico é equivalente: Color + Roughness + Normal ativos, com máscaras de AO/Curvature orientando o desgaste. Quem baixou textura estilizada pronta na Semana 6 usa essa imagem como ponto de partida da camada de Color, igual à trilha fotorrealista usa a foto. Se a biblioteca de Smart Materials do laboratório for limitada, montar manualmente: camada de Color + variação com Brush + camada de desgaste mascarada por AO/Curvature — o conceito pedagógico é o mesmo.
 -->
 
 ---
 
-<!-- _class: image-right -->
+<!-- _class: three-columns -->
 
-![](assets/bump_strength_comparacao.webp)
+## Os três Rooms do 3D Coat
 
-## Calibrar o Strength
+**Paint Room**
+Espaço principal. Pincéis, stencils, alphas e camadas com máscara em qualquer canal PBR — Color, Roughness, Metallic, Normal/Depth.
 
-O `Strength` padrão do Bump é **1.0** — quase sempre **forte demais**.
+**UV Room**
+Visualização das UVs já prontas do Blender. Serve para conferir se o mapa importou corretamente — não para desenrolar do zero.
 
-Pedra `0.2–0.4` · madeira `0.1–0.3` · metal `0.05–0.15`.
+**Render Room**
+Renderização de alta qualidade com iluminação HDR, para avaliar o resultado antes de exportar.
 
-<div class="error">
+<!--
+Notas: Orientação de interface, rápida. No workflow da disciplina os UVs já chegam prontos do Blender — o UV Room é checagem, não produção. Nomes exatos de painéis variam por versão do 3D Coat; verificar antes da aula.
+-->
 
-Strength alto transforma micro-textura em **crateras lunares**.
+---
+
+<!-- _class: timeline -->
+
+## O percurso da migração
+
+1. **Exportar** o asset do Blender — `.obj`/`.fbx`, UV incluída
+2. **Importar** no 3D Coat — Per-Pixel Painting, Metalness PBR, 1024×1024
+3. **Color** — trazer a textura da Semana 6 (ou Smart Material) como camada base
+4. **Bakear AO e Curvature** direto da malha
+5. **Desgaste** — nova camada em Multiply, mascarada por AO/Curvature
+6. **Depth** — pintar 2–3 marcas de profundidade → Normal Map real
+
+<!--
+Notas: Roteiro da Demonstração (20 min) e também da Produção em Estúdio. Passo 1: File → Export → FBX, preferir FBX com mais de um objeto. Passo 2: File → Import for Per-Pixel Painting, confirmar UV e resolução. Passo 4: painel de geração varia por versão — geralmente em Textures ou como Fill Layer com gerador procedural; alternativa manual se instável: pincel de opacidade baixa nas reentrâncias/arestas. Passo 6: canal Roughness recebe o mesmo tratamento por Curvature logo em seguida (arestas mais polidas).
+
+[!FIGURA — produzir novo material, o diagrama Noise/Bump/ColorRamp do deck anterior não se aplica mais]
+Objetivo didático: dar suporte visual ao roteiro de 6 passos da migração Blender → 3D Coat.
+Arquivo sugerido: assets/fluxo_migracao_3dcoat.png (não existe ainda — precisa ser produzido, por exemplo via o mesmo pipeline de mermaid → imagem já usado no deck da Semana 7 anterior)
+Descrição: fluxograma linear com os 6 passos acima, destacando que os passos 4 e 6 usam a mesma máscara de Curvature.
+-->
+
+---
+
+## Geração procedural: continua existindo, mas não é o fluxo de hoje
+
+*"Existe um segundo caminho para Normal e Roughness que vocês não vão usar hoje: nós matemáticos no Blender — Noise, Bump, ColorRamp, como no Capítulo 13 da Apostila."*
+
+<div class="curiosity">
+
+Mesmo princípio de **raster vs. procedural** da Semana 1 — só que aplicado a mapas de suporte, não ao Albedo inteiro. Vantagem dos nós: nunca repete um pixel; desvantagem: controle artístico mais indireto.
 
 </div>
 
 <!--
-Notas: Erro de calibração nº 1 do estúdio. O valor padrão exagera o relevo. Orientar a comparar com referência real (foto do Poly Haven do mesmo material) e baixar o Strength progressivamente até o relevo parecer crível. A estrutura do nó não muda — só a intensidade.
-
-[!FIGURA]
-Objetivo didático: mostrar visualmente que o mesmo Normal Map procedural muda completamente conforme o Strength, ancorando a noção de calibração.
-Arquivo sugerido: assets/bump_strength_comparacao.webp
-Descrição: a mesma parede de pedra em três painéis, com Strength do nó Bump em 1.0 (exagerado, aspecto de cratera), 0.3 (crível) e 0.05 (quase imperceptível).
-Como produzir: no Blender, montar Noise → Bump → Normal em uma parede, renderizar em Viewport Rendered com Strength 1.0, 0.3 e 0.05, capturar cada estado e compor lado a lado no Krita com os valores rotulados.
--->
-
----
-
-<!-- _class: image-left -->
-
-![](assets/colorramp_roughness.webp)
-
-## Variação de Roughness conta história
-
-O **ColorRamp** transforma ruído em contraste de brilho: áreas polidas × áreas matte.
-
-Marcadores **muito próximos** = variação invisível. Afaste-os (ex.: `0.4` e `0.85`).
-
-<div class="tip">
-
-O brilho deve responder a uma **lógica de uso**: onde o material desgastou? Onde acumulou sujeira?
-
-</div>
-
-<!--
-Notas: A variação de Roughness é o que faz o material parecer USADO, não fabricado. Erro comum: dois marcadores do ColorRamp muito juntos (0.6 e 0.65) — a variação não aparece. Afastar para extremos. Mais importante: a variação precisa de intenção artística, não ser só ruído bonito. Referência de material real no Poly Haven ajuda a decidir onde há mais ou menos brilho.
-
-[!FIGURA]
-Objetivo didático: mostrar como o afastamento dos marcadores do ColorRamp converte ruído sem graça em variação de brilho legível.
-Arquivo sugerido: assets/colorramp_roughness.webp
-Descrição: à esquerda, um ColorRamp com marcadores próximos (0.60 e 0.65) e o render resultante com brilho uniforme. À direita, marcadores afastados (0.40 e 0.85) e o render com contraste visível entre áreas polidas e matte.
-Como produzir: no Blender, montar Noise → ColorRamp → Roughness, capturar o editor de nós e o Viewport Rendered com marcadores próximos, depois com marcadores afastados. Compor os dois estados no Krita.
--->
-
----
-
-## O material PBR completo
-
-Quatro canais trabalhando juntos no Principled BSDF:
-
-- **Albedo** — cor e identidade (textura seamless da Semana 6)
-- **Metallic** — quase binário: `0` não-metal · `1` metal
-- **Roughness** — variação procedural (Noise + ColorRamp)
-- **Normal** — relevo procedural (Noise + Bump)
-
-<!--
-Notas: Este é o conjunto mínimo de um material de jogo profissional — o marco da semana. Reforçar o Metallic quase binário: em PBR físico não há meio-termo. Ferrugem é dielétrico (Metallic 0) com a cor do ferrugem no Albedo, não Metallic intermediário. Amarrar ao Projeto Integrador: cada material do kit precisa dos quatro canais coerentes com o tema.
+Notas: Panorama de 3 min, não uma segunda mini aula. A partir de hoje o fluxo oficial da disciplina é o bake e a pintura dentro do 3D Coat. Leitura complementar recomendada, não avaliada nesta semana: Apostila, Parte IV, Cap. 13 — Texturização Procedural. Quem quiser comparar as duas técnicas pode aplicar nós em um Asset Secundário do kit mais adiante.
 -->
 
 ---
@@ -208,24 +185,24 @@ Notas: Este é o conjunto mínimo de um material de jogo profissional — o marc
 
 <div class="error">
 
-**Normal no canal errado** — fio do Bump conectado ao Base Color; o Albedo fica azulado e o relevo some.
+**AO/Curvature como cor final** — o mapa é conectado direto ao Color, apagando a textura de base. Deve entrar como camada auxiliar em Multiply/Overlay, nunca como base.
 
 </div>
 
 <div class="error">
 
-**Scale inadequado** — Noise em 1–2 vira ondas de terreno; em 50+ some no render. Comece por `8–12`.
+**UV ausente ou incorreto na importação** — malha aparece esticada ou uniforme no Paint Room. Reexportar como `.fbx` ou conferir "UV Coords" no export `.obj`.
 
 </div>
 
 <div class="error">
 
-**Roughness sem contraste** — marcadores do ColorRamp muito próximos; a variação não aparece.
+**Normal via Depth exagerado ou sutil demais** — força de pincel padrão gera cratera ou relevo imperceptível. Calibrar comparando com referência no Render Room.
 
 </div>
 
 <!--
-Notas: Os três erros mais frequentes da semana, alinhados ao bloco de dificuldades do plano. Circular no estúdio caçando exatamente estes padrões. Para o canal errado: verificar o fio ROXO chegando à entrada Normal (abaixo de Roughness), vindo do Bump — nunca o fio amarelo do Noise direto. Para a escala: sugerir Texture Coordinate em Object para o Scale corresponder ao tamanho real do asset.
+Notas: Os três erros mais frequentes da semana, alinhados ao bloco de dificuldades do plano. Circular no estúdio caçando exatamente estes padrões. Perguntas de mediação: "Essa camada de AO está em que modo de mistura?" / "Você usou o Curvature para clarear as arestas ou só pintou onde achou bonito?"
 -->
 
 ---
@@ -234,12 +211,12 @@ Notas: Os três erros mais frequentes da semana, alinhados ao bloco de dificulda
 
 ## Na indústria
 
-Ferramentas de geração procedural (Substance Designer, geometry/shader nodes) são hoje o método padrão de produção de materiais base em estúdios AAA — a pintura manual entra depois, para o detalhe que torna cada asset único.
+Bakear mesh maps direto da geometria e aplicar materiais com camadas e máscaras automáticas é o fluxo padrão de ferramentas como **Substance Painter** — Smart Materials reagem à curvatura e ao AO do asset exatamente como vocês estão fazendo hoje no 3D Coat.
 
-Roughness bem variado é o que faz um material "ler" como sujo, novo ou desgastado à distância, muito antes de qualquer detalhe fino ser percebido de perto.
+Essa é a mesma lógica usada em produções AAA para "envelhecer" props e ambientes de forma consistente, sem repintar cada aresta manualmente.
 
 <!--
-Notas: Contextualizar o valor profissional. Geração procedural de texturas é competência central em produção real (Substance Designer é padrão de mercado) — mesmo quando o fluxo desta disciplina prioriza pintura manual no 3D Coat, é importante que o estudante saiba que essa outra via existe e é dominante na indústria. Amarra à Apostila, Parte IV, Cap. 13, que trata o tema com profundidade que a mini-aula desta semana só introduz.
+Notas: Contextualizar o valor profissional. O 3D Coat e o Substance Painter compartilham o mesmo princípio conceitual (camadas mascaradas por mapas gerados da malha) — o estudante que domina esse fluxo aqui transfere a lógica para qualquer ferramenta de mercado equivalente.
 -->
 
 ---
@@ -248,51 +225,47 @@ Notas: Contextualizar o valor profissional. Geração procedural de texturas é 
 
 # Resumo
 
-- **Normal Map** = vetores que enganam a luz; relevo sem geometria
-- **Tangente** é o padrão de jogos; **Bump** gera normal a partir de valor
-- **Noise → Bump → Normal** e **Noise → ColorRamp → Roughness**
-- Calibre o **Strength**; afaste os marcadores do **ColorRamp**
-- Material completo = **Albedo + Metallic + Roughness + Normal**
+- **Mesh maps** (AO, Curvature) nascem da malha — sem high-poly
+- **Normal** desta semana vem de pintura no canal **Depth**, não de ruído
+- Fluxo: exportar do Blender → importar no 3D Coat → Color → bake AO/Curvature → Depth
+- Duas trilhas, **mesmo fluxo**: fotorrealista (foto + máscara) × estilizada (Smart Material + máscara)
+- Meta do estúdio: **Color + Roughness + Normal** ativos no Asset 01
 - **SSS** fica para a Semana 8 — hoje não entra no vocabulário da aula
 
 <!--
-Notas: Amarrar a mini aula. Cada item retorna na demonstração e no estúdio. Não reler tudo — apontar a conexão com a demo. Lembrar: hoje é crítica INFORMAL; o foco é ler profundidade e coerência do material no trabalho dos colegas. Na Semana 8 (CF FORMAL) o mesmo material vem no 3D Coat, e é lá que o Subsurface Scattering aparece como canal do sistema de camadas.
+Notas: Amarrar a mini aula. Cada item retorna na demonstração e no estúdio. Hoje é crítica INFORMAL; o foco é ler profundidade e coerência do material no trabalho dos colegas. Na Semana 8 (CF2, crítica FORMAL) o material é refinado e os quatro mapas PBR são exportados.
 -->
 
 ---
 
-## No estúdio: material PBR completo
+## No estúdio: primeira migração para o 3D Coat
 
-Adicione **Normal** (Noise → Bump) e **Roughness** (Noise → ColorRamp) ao seu asset.
-
-Meta mínima: um asset com **Albedo + Normal + Roughness** conectados e node tree organizado em **frames** nomeados.
+Exporte o Asset 01, importe no 3D Coat e monte **Color + Roughness + Normal** — seguindo sua trilha visual.
 
 <div class="tip">
 
-Quem chegou sem o Albedo do Asset 02: os primeiros 15 min são para concluí-lo antes de avançar.
+Quem chegou sem o Albedo do Asset 02 no Blender: os primeiros 15 min são para concluí-lo, antes de migrar qualquer coisa.
 
 </div>
 
 <!--
-Notas: Consigna do estúdio. Dois blocos: quem falta terminar o Albedo do Asset 02 fecha isso primeiro (Bloco A, ~15 min); toda a turma adiciona Normal e Roughness (Bloco B). Nomenclatura: [Nome]_Asset01_PBR_S07.blend. Capturar screenshot do node tree + render comparativo antes/depois do Normal Map. Organizar em frames (Ctrl+J) é equivalente a organizar camadas no Krita.
+Notas: Consigna do estúdio (50 min). Bloco A (~15 min): concluir Albedo do Asset 02 no Blender, para quem ainda não tem. Bloco B (~35 min, toda a turma): exportar Asset 01, importar em Per-Pixel Painting/Metalness PBR/1024x1024, Color com textura da Semana 6 ou Smart Material, bakear AO/Curvature, camada de desgaste mascarada, Roughness guiado por Curvature, 2-3 marcas de Depth. Salvar: [Nome]_Asset01_3DCoat_S07. Papel do professor: verificar alinhamento de UV, uso de AO/Curvature como máscara (não como cor final) e coerência com a trilha escolhida.
 -->
 
 ---
 
 ## Agora: demonstração
 
-A seguir, um **material PBR completo ao vivo**: Noise → Bump → Normal, depois Noise → ColorRamp → Roughness.
+A seguir, a migração **ao vivo**: exportar do Blender, importar no 3D Coat, trazer o Color da Semana 6, bakear AO/Curvature e começar o Normal via Depth.
 
-Shader Editor à esquerda, Viewport Rendered à direita.
-
-![large](assets/demo_material_completo.webp)
+Blender à esquerda, 3D Coat à direita.
 
 <!--
-Notas: Transição para a demonstração de 20 min. Sequência: parede com Albedo da Semana 6 -> Noise → Bump → Normal (calibrar Strength) -> segundo Noise → ColorRamp → Roughness (afastar marcadores) -> organizar em frames -> comparar antes/depois desabilitando os frames com M. Não demonstrar SSS — ele fica para a Semana 8, junto ao sistema de camadas do 3D Coat. Fechar com a mensagem: o asset é idêntico geometricamente; o que mudou foi a informação que chegou ao cálculo de luz.
+Notas: Transição para a Demonstração de 20 min. Setup: Blender aberto com asset de demonstração (parede simples, textura seamless de pedra já no Albedo). 3D Coat aberto em outra janela. Seguir os 6 passos do slide "O percurso da migração". Fechar com: "eu não pintei nada com a mão até o passo 5 — essa profundidade toda veio da própria malha."
 
-[!FIGURA]
+[!FIGURA — produzir novo material, a imagem do deck anterior (Shader Editor / Viewport) não representa mais o fluxo desta semana]
 Objetivo didático: dar à turma um alvo visual do resultado esperado e antecipar o layout de tela da demonstração.
-Arquivo sugerido: assets/demo_material_completo.webp
-Descrição: tela dividida. À esquerda, o Shader Editor do Blender com dois frames nomeados (Normal_Procedural e Roughness_Variacao) e os nós conectados ao Principled BSDF. À direita, o Viewport Rendered com a parede de pedra exibindo relevo e variação de brilho sob HDRI neutra.
-Como produzir: no Blender, montar o material completo com os dois frames organizados, ativar Viewport Rendered com HDRI neutra e capturar as duas áreas. Compor lado a lado no Krita.
+Arquivo sugerido: assets/demo_migracao_3dcoat.webp (não existe ainda — precisa ser produzido)
+Descrição: tela dividida — à esquerda o Blender com o asset exportado, à direita o 3D Coat no Paint Room mostrando o painel de Layers com AO/Curvature já bakeados.
+Como produzir: capturar as duas janelas lado a lado durante um ensaio da demonstração e compor no Krita.
 -->

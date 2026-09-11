@@ -17,7 +17,7 @@ footer: "IFMS • Semana 11"
 **Semana 11** — Transferindo detalhe de geometria do high-poly para o low-poly
 
 <!--
-Notas: Abertura da mini aula (20 min). Unidade III — Pintura Digital e Bake. Crítica 🔴 FORMAL (CF4) nesta semana — a 4ª das 6, primeira a avaliar o Critério 6 (Bake). Mensagem central: até agora todo detalhe foi pintado à mão sobre o low-poly (S09 desgaste, S10 stencil). Hoje entra uma peça nova de workflow — esculpir/modelar detalhe em uma malha auxiliar de alta resolução e TRANSFERIR esse detalhe para o low-poly pelo bake. Deixar claro na capa: o bake não substitui a pintura; ele resolve o que a pintura não resolve bem — detalhe de geometria real (chanfros, entalhes profundos). Apostila: Parte V, Cap. 15 — Bake de Texturas.
+Notas: Abertura da mini aula (20 min). Unidade III — Pintura Digital e Bake. Crítica 🔴 FORMAL (CF3) nesta semana — a 3ª das 5, primeira a avaliar o Critério 6 (Bake). Mensagem central: até agora todo detalhe foi pintado à mão sobre o low-poly (S09 desgaste, S10 stencil), complementando o Normal via Depth pintado no 3D Coat desde a S07. Hoje entra uma peça nova de workflow — esculpir/modelar detalhe em uma malha auxiliar de alta resolução e TRANSFERIR esse detalhe para o low-poly pelo bake. Deixar claro na capa: o bake não substitui a pintura; ele resolve o que a pintura não resolve bem — detalhe de geometria real (chanfros, entalhes profundos). Apostila: Parte V, Cap. 15 — Bake de Texturas.
 -->
 
 ---
@@ -33,7 +33,7 @@ Ao final da semana você será capaz de:
 - Integrar o bake ao material que já convive com **desgaste** e **stencil**
 
 <!--
-Notas: Ler rápido. O foco PRODUTIVO da semana é apenas Normal e AO — Curvature e ID Map são apresentados hoje só conceitualmente e voltam com demonstração completa na Semana 12. Não antecipar o mascaramento automático por Curvature/ID. Objetivos alinhados ao plano de aula (itens 1 a 5); o item 6 — apresentação na CF4 — é tratado no encontro 2.
+Notas: Ler rápido. O foco PRODUTIVO da semana é apenas Normal e AO — Curvature e ID Map são apresentados hoje só conceitualmente e voltam com demonstração completa na Semana 12. Não antecipar o mascaramento automático por Curvature/ID. Objetivos alinhados ao plano de aula (itens 1 a 5); o item 6 — apresentação na CF3 — é tratado no encontro 2.
 -->
 
 ---
@@ -68,7 +68,7 @@ Hoje não trocamos a pintura por outra coisa. Adicionamos uma fonte nova de deta
 </div>
 
 <!--
-Notas: Revisão rápida. Reforçar a nota de transição do plano de aula: o bake NÃO substitui o que foi aprendido — um Normal Map de bake convive no mesmo material com o EdgeWear e o Dirt pintados. A pintura livre resolve mal detalhe de geometria profunda (chanfros, entalhes, sobreposição de placas); é exatamente esse buraco que o bake preenche.
+Notas: Revisão rápida. Reforçar a nota de transição do plano de aula: o bake NÃO substitui o que foi aprendido — um Normal Map de bake convive no mesmo material com o EdgeWear e o Dirt pintados, e refina o Normal via Depth já pintado desde a Semana 7. A pintura livre resolve mal detalhe de geometria profunda (chanfros, entalhes, sobreposição de placas); é exatamente esse buraco que o bake preenche.
 -->
 
 ---
@@ -166,12 +166,12 @@ Notas: Estes quatro parâmetros são o motivo de esta mini aula ser mais densa q
 
 O Normal Map de bake **não substitui** nada — ele **se soma**.
 
-- Convive com o **Normal procedural** da Semana 7
+- Convive com o **Normal via Depth** pintado no 3D Coat na Semana 7
 - Convive com o **desgaste pintado** das Semanas 9 e 10
 - No 3D Coat, entra como **camada adicional** no canal Normal
 
 <!--
-Notas: Ponto conceitual que gera confusão e volta nas estratégias de mediação. Analogia útil: o procedural da S7 é como textura de pele (padrão geral repetido por toda a superfície); o bake de hoje é como uma cicatriz específica (detalhe único, localizado, que veio de geometria real ali). Os dois coexistem no mesmo canal Normal, em camadas separadas. O EdgeWear/Dirt continuam pintados por cima ou ao redor.
+Notas: Ponto conceitual que gera confusão e volta nas estratégias de mediação. Analogia útil: o Depth da S7 é como textura de pele (padrão geral repetido por toda a superfície, pintado diretamente na malha de produção); o bake de hoje é como uma cicatriz específica (detalhe único, localizado, que veio de geometria real ali). Os dois coexistem no mesmo canal Normal, em camadas separadas. O EdgeWear/Dirt continuam pintados por cima ou ao redor.
 -->
 
 ---
@@ -215,7 +215,7 @@ Manchas em superfícies que deveriam ser planas = sinal clássico de **cage mal 
 Rotacione o asset no viewport **antes** de declarar o bake pronto.
 
 <!--
-Notas: Vira hábito de trabalho, como a "leitura à distância" da Semana 9. O gesto — girar o objeto e conferir cada face antes de considerar pronto — deve ser repetido a cada bake no estúdio. É a defesa contra entregar um bake com artefato para a CF4. Se disponível, mostrar um exemplo de erro preparado previamente para contraste no Image Editor.
+Notas: Vira hábito de trabalho, como a "leitura à distância" da Semana 9. O gesto — girar o objeto e conferir cada face antes de considerar pronto — deve ser repetido a cada bake no estúdio. É a defesa contra entregar um bake com artefato para a CF3. Se disponível, mostrar um exemplo de erro preparado previamente para contraste no Image Editor.
 -->
 
 ---
@@ -258,7 +258,7 @@ Notas: Contextualizar o valor profissional. O fluxo high-poly → bake → low-p
 - O bake **se soma** ao desgaste e ao stencil — não os substitui
 
 <!--
-Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonstração ao vivo (setup completo de Normal + AO no Blender) e no estúdio (high-poly de uma parte do asset + bake). Lembrar: hoje é 🔴 Crítica Formal CF4 no encontro 2 — Bake (C6) é avaliado pela primeira vez, com peso de 25% no Portfolio de Artefatos.
+Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonstração ao vivo (setup completo de Normal + AO no Blender) e no estúdio (high-poly de uma parte do asset + bake). Lembrar: hoje é 🔴 Crítica Formal CF3 no encontro 2 — Bake (C6) é avaliado pela primeira vez, com peso de 25% no Portfolio de Artefatos.
 -->
 
 ---

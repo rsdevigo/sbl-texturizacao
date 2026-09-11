@@ -17,7 +17,7 @@ footer: "IFMS • Semana 14"
 **Semana 14** — Quando o padrão vale mais que o objeto
 
 <!--
-Notas: Abertura da mini aula (20 min). Unidade IV — Otimização e Integração ao Motor. Crítica 🔴 FORMAL (CF5) nesta semana — vale 30% do Portfolio de Artefatos, o maior peso das cinco críticas formais realizadas até aqui, e a primeira vez que o Critério 7 (Otimização) entra em nota formal. Apostila: Parte V, Cap. 18 — Texture Atlas e Trim Sheets (conceito e workflow de trim sheets; aplicação em arquitetura modular). Mensagem central da capa: na Semana 13 o problema era agrupar OBJETOS distintos em uma textura fixa (atlas). Hoje o problema é o oposto — elementos que se REPETEM em quantidade variável (paredes, vigas, molduras, trilhos). A trim sheet é uma faixa de textura que se estica e repete via tiling ao longo de qualquer comprimento, sem nunca precisar de textura nova por segmento. Não antecipar UDIMs / channel packing (S15).
+Notas: Abertura da mini aula (20 min). Unidade IV — Otimização e Integração ao Motor. Crítica 🔴 FORMAL (CF4) nesta semana — vale 30% do Portfolio de Artefatos, o maior peso entre as quatro críticas formais do PA, e a primeira vez que o Critério 7 (Otimização) entra em nota formal. Apostila: Parte V, Cap. 18 — Texture Atlas e Trim Sheets (conceito e workflow de trim sheets; aplicação em arquitetura modular). Mensagem central da capa: na Semana 13 o problema era agrupar OBJETOS distintos em uma textura fixa (atlas). Hoje o problema é o oposto — elementos que se REPETEM em quantidade variável (paredes, vigas, molduras, trilhos). A trim sheet é uma faixa de textura que se estica e repete via tiling ao longo de qualquer comprimento, sem nunca precisar de textura nova por segmento. Não antecipar UDIMs / channel packing (S15).
 -->
 
 ---
@@ -35,7 +35,7 @@ Ao final da semana você será capaz de:
 - Aplicar a mesma trim a **mais de uma variação**, como evidência de otimização
 
 <!--
-Notas: Ler rápido. Os objetivos vêm dos itens 1 a 6 do plano de aula. Reforçar: hoje NÃO é técnica nova de pintura — é uma nova lógica de reutilização. O atlas (S13) e a trim (S14) são ferramentas complementares. O item da reutilização em mais de uma peça é a prova concreta de C7 (Otimização), avaliado formalmente pela primeira vez na CF5 de hoje.
+Notas: Ler rápido. Os objetivos vêm dos itens 1 a 6 do plano de aula. Reforçar: hoje NÃO é técnica nova de pintura — é uma nova lógica de reutilização. O atlas (S13) e a trim (S14) são ferramentas complementares. O item da reutilização em mais de uma peça é a prova concreta de C7 (Otimização), avaliado formalmente pela primeira vez na CF4 de hoje.
 -->
 
 ---
@@ -124,7 +124,7 @@ Quantidade **variável**.
 </div>
 
 <!--
-Notas: Slide-chave. As duas ferramentas são complementares, não concorrentes — um kit modular de produção real usa as duas ao mesmo tempo, escolhendo a certa para cada tipo de asset. Frase-ponte sugerida para a apresentação da CF5: "Uso o atlas quando tenho um número fixo de objetos diferentes para agrupar; uso a trim quando tenho um elemento que se repete em quantidade que eu não sei de antemão." Se a turma sair só com esta distinção, o essencial da aula foi cumprido.
+Notas: Slide-chave. As duas ferramentas são complementares, não concorrentes — um kit modular de produção real usa as duas ao mesmo tempo, escolhendo a certa para cada tipo de asset. Frase-ponte sugerida para a apresentação da CF4: "Uso o atlas quando tenho um número fixo de objetos diferentes para agrupar; uso a trim quando tenho um elemento que se repete em quantidade que eu não sei de antemão." Se a turma sair só com esta distinção, o essencial da aula foi cumprido.
 -->
 
 ---
@@ -217,7 +217,7 @@ Registre: quantas peças do kit compartilham essa trim, e quantas texturas únic
 </div>
 
 <!--
-Notas: Objetivo 5 do plano de aula e o coração da CF5 (C7 entra em nota pela primeira vez). "Essa é a prova concreta de otimização: a mesma textura, sem nenhuma pintura adicional, serve a duas peças de tamanhos diferentes do kit." Distorção de escala (Possíveis Dificuldades nº 4): ao aplicar a mesma trim a comprimentos diferentes, ajustar o tiling count proporcionalmente ao comprimento mantém o tamanho do motivo constante — mesma lógica de texel density entre assets da Semana 4.
+Notas: Objetivo 5 do plano de aula e o coração da CF4 (C7 entra em nota pela primeira vez). "Essa é a prova concreta de otimização: a mesma textura, sem nenhuma pintura adicional, serve a duas peças de tamanhos diferentes do kit." Distorção de escala (Possíveis Dificuldades nº 4): ao aplicar a mesma trim a comprimentos diferentes, ajustar o tiling count proporcionalmente ao comprimento mantém o tamanho do motivo constante — mesma lógica de texel density entre assets da Semana 4.
 -->
 
 ---
@@ -285,7 +285,7 @@ Notas: Contextualizar o valor profissional. Trim sheets são rotina em ambientes
 - **Reutilizar em várias peças** é a evidência concreta de C7
 
 <!--
-Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonstração ao vivo (trim mapeada numa parede modular no 3D Coat) e no estúdio (planejar e iniciar a própria trim). Lembrar a turma: hoje é crítica 🔴 FORMAL (CF5), vale 30% do PA — o maior peso das cinco — e Otimização (C7) entra em nota pela primeira vez. O peso maior reflete confiança no progresso já demonstrado, não uma régua mais rígida.
+Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonstração ao vivo (trim mapeada numa parede modular no 3D Coat) e no estúdio (planejar e iniciar a própria trim). Lembrar a turma: hoje é crítica 🔴 FORMAL (CF4), vale 30% do PA — o maior peso entre as quatro críticas formais do PA — e Otimização (C7) entra em nota pela primeira vez. O peso maior reflete confiança no progresso já demonstrado, não uma régua mais rígida.
 -->
 
 ---

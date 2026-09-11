@@ -2,9 +2,9 @@
 **Disciplina:** Texturização | **Metodologia:** Studio-Based Learning
 **Unidade:** III — Pintura Digital e Bake
 **Tema:** Bake de texturas: Normal Map e Ambient Occlusion
-**Apostila:** Parte V, Cap. 15 — Bake de Texturas (no Blender: Normal Map e Ambient Occlusion). Leitura de apoio para esta CF4: Parte VI, Cap. 23 — Controle de Qualidade de Materiais
+**Apostila:** Parte V, Cap. 15 — Bake de Texturas (no Blender: Normal Map e Ambient Occlusion). Leitura de apoio para esta CF3: Parte VI, Cap. 23 — Controle de Qualidade de Materiais
 **Carga horária:** 3h (2 encontros de 1h30)
-**Crítica:** 🔴 **FORMAL — CF4** (peso de 25% no Portfolio de Artefatos)
+**Crítica:** 🔴 **FORMAL — CF3** (peso de 25% no Portfolio de Artefatos)
 
 ---
 
@@ -17,9 +17,9 @@ Os estudantes chegam com:
 - Moodboard atualizado com referências do tema do kit — Semana 1 (atualização contínua)
 - Ficha de autoavaliação da Rubrica Mestre preenchida **antes** desta aula (disponibilizada no ambiente virtual ao final da Semana 10)
 
-> **Nota de transição:** As Semanas 9 e 10 desenvolveram a texturização artística inteiramente dentro do 3D Coat: pintura livre e stencil, ambos trabalhando diretamente sobre a malha final (low poly) do asset. Esta semana introduz uma peça de workflow que não existia até agora: a possibilidade de **esculpir ou modelar detalhe em uma malha auxiliar de alta resolução e transferir esse detalhe para o low poly através do bake**. Isso não substitui o que foi aprendido — um Normal Map de bake convive no mesmo material com o EdgeWear e o Dirt pintados à mão. O bake resolve um problema que a pintura livre não resolve bem: detalhe de **geometria real** (chanfros, entalhes profundos, sobreposição de placas) que seria caro ou tecnicamente difícil de modelar diretamente na malha de produção.
+> **Nota de transição:** As Semanas 9 e 10 desenvolveram a texturização artística inteiramente dentro do 3D Coat: pintura livre e stencil, ambos trabalhando diretamente sobre a malha final (low poly) do asset — complementando o bake de AO/Curvature e o Normal via Depth já iniciados na Semana 7. Esta semana introduz uma peça de workflow que não existia até agora: a possibilidade de **esculpir ou modelar detalhe em uma malha auxiliar de alta resolução e transferir esse detalhe para o low poly através do bake**. Isso não substitui o que foi aprendido — o Normal Map de alta fidelidade obtido hoje convive no mesmo material com o EdgeWear e o Dirt pintados à mão, e refina o Normal já existente desde a Semana 7 (que nasceu de pintura de profundidade direta na malha de produção, sem high-poly). O bake de hoje resolve um problema que nem a pintura de Depth nem a máscara de Curvature resolvem bem sozinhas: detalhe de **geometria real** (chanfros, entalhes profundos, sobreposição de placas) que seria caro ou tecnicamente difícil de modelar diretamente na malha de produção.
 
-> **Atenção — Crítica Formal (CF4):** Esta é a 4ª das 6 críticas formais da disciplina e a primeira em que o Critério 6 (Bake) entra em avaliação. A partir desta semana, C4 (Materiais PBR) e C5 (Texturização) já avaliados desde CF2/CF3 são reavaliados sobre o estado atual dos dois assets, e C9 (Apresentação) passa de observação para nota formal. O professor deve reservar tempo estruturado para a apresentação individual — esta não é uma crítica circulante como nas semanas anteriores.
+> **Atenção — Crítica Formal (CF3):** Esta é a 3ª das 5 críticas formais da disciplina e a primeira em que o Critério 6 (Bake) entra em avaliação. A partir desta semana, C4 (Materiais PBR) e C5 (Texturização) já avaliados desde CF1/CF2 são reavaliados sobre o estado atual dos dois assets, e C9 (Apresentação) passa de observação para nota formal. O professor deve reservar tempo estruturado para a apresentação individual — esta não é uma crítica circulante como nas semanas anteriores.
 
 ---
 
@@ -36,16 +36,16 @@ Ao final da semana, o estudante será capaz de:
 
 ---
 
-## Critérios avaliados nesta semana — CF4 (peso 25% no PA)
+## Critérios avaliados nesta semana — CF3 (peso 25% no PA)
 
 > 🔴 **Crítica Formal.** Esta semana atribui nota. Consultar a tabela **Critérios Ativos por Crítica Formal** da Rubrica Mestre antes de preencher a Ficha de Crítica Formal (Instrumento 1).
 
-| Critério | Status na CF4 | O que observar |
+| Critério | Status na CF3 | O que observar |
 |---|---|---|
-| C1 — Processo de Projeto | ✓ Nota | Registro de processo desde a CF3: versões nomeadas, anotações de decisões, incorporação de feedback das Semanas 9 e 10 |
+| C1 — Processo de Projeto | ✓ Nota | Registro de processo desde a CF2: versões nomeadas, anotações de decisões, incorporação de feedback das Semanas 9 e 10 |
 | C2 — Direção Artística | ✓ Nota | Coerência visual entre Asset 01 e Asset 02; o bake reforça ou compromete a identidade visual do kit? |
 | C3 — UV Mapping | — Não aplicável nesta CF | — |
-| C4 — Materiais PBR | ✓ Nota | Os canais PBR permanecem fisicamente plausíveis após a integração do Normal Map de bake? Não há conflito entre o Normal procedural da S7 e o novo Normal baked? |
+| C4 — Materiais PBR | ✓ Nota | Os canais PBR permanecem fisicamente plausíveis após a integração do Normal Map de bake? O bake de hoje refina, sem conflitar com, o Normal via Depth já iniciado na Semana 7? |
 | C5 — Texturização | ✓ Nota | O detalhe de bake se soma à narrativa de desgaste já construída, ou os dois parecem desconectados? |
 | C6 — Bake | ✓ **Nota — primeira vez avaliado** | Qualidade técnica do bake: ausência de artefatos, cage bem ajustada, Normal Map com transferência fiel, AO sem bleeding |
 | C7 — Otimização | — Não aplicável nesta CF | — |
@@ -53,7 +53,7 @@ Ao final da semana, o estudante será capaz de:
 | C9 — Apresentação | ✓ **Nota — passa de observação para nota nesta CF** | Organização da entrega, clareza da apresentação individual, capacidade de responder perguntas técnicas |
 | C10 — Participação (CC) | obs. | Qualidade do feedback dado aos colegas durante a apresentação formal dos outros estudantes |
 
-> **Lembrete de peso:** A CF4 corresponde a 25% da nota do Portfolio de Artefatos (PA) — o maior peso entre as críticas formais realizadas até agora, refletindo que o estudante já deveria dominar o processo básico de crítica e estar em trajetória de aprofundamento técnico.
+> **Lembrete de peso:** A CF3 corresponde a 25% da nota do Portfolio de Artefatos (PA) — o mesmo peso da CF2, refletindo que o estudante já deveria dominar o processo básico de crítica e estar em trajetória de aprofundamento técnico.
 
 ---
 
@@ -66,11 +66,11 @@ Ao final da semana, o estudante será capaz de:
 - Projetor para demonstração e para a Crítica Formal
 - Ficha de Crítica Formal (Instrumento 1 da Rubrica Mestre) impressa ou digital, uma por estudante
 - Ficha de Autoavaliação (Instrumento 2) preenchida por cada estudante, trazida para a aula
-- Apostila — Parte V, Cap. 15 — disponibilizada antes da aula. Parte VI, Cap. 23 (Controle de Qualidade de Materiais) recomendado como leitura de apoio para a autoavaliação desta CF4
+- Apostila — Parte V, Cap. 15 — disponibilizada antes da aula. Parte VI, Cap. 23 (Controle de Qualidade de Materiais) recomendado como leitura de apoio para a autoavaliação desta CF3
 
 > **Preparação do par high-poly/low-poly de demonstração:** É essencial que o par já exista pronto antes da aula — modelar ao vivo consumiria o tempo da demonstração. O high-poly deve ter detalhe claramente superior (chanfros definidos, profundidade real nos entalhes) para que o resultado do bake seja visualmente convincente quando projetado no low-poly.
 
-> **Preparação da Crítica Formal:** Organizar a ordem de apresentação dos estudantes antes da aula (lista visível, ordem alfabética ou sorteio) para evitar tempo perdido decidindo quem apresenta primeiro. Calcular o tempo disponível: 20 minutos para toda a turma na CF4 é apertado — para turmas grandes, considerar formato de apresentação em duplas simultâneas com o professor circulando, ou reservar parte do tempo de estúdio do encontro 2 para completar apresentações que não couberam nos 20 minutos formais.
+> **Preparação da Crítica Formal:** Organizar a ordem de apresentação dos estudantes antes da aula (lista visível, ordem alfabética ou sorteio) para evitar tempo perdido decidindo quem apresenta primeiro. Calcular o tempo disponível: 20 minutos para toda a turma na CF3 é apertado — para turmas grandes, considerar formato de apresentação em duplas simultâneas com o professor circulando, ou reservar parte do tempo de estúdio do encontro 2 para completar apresentações que não couberam nos 20 minutos formais.
 
 ---
 
@@ -119,7 +119,7 @@ Apresentar como visão geral — o foco produtivo desta semana é apenas nos doi
 
 **4. Onde o bake se encontra com o que já foi aprendido**
 
-O Normal Map de bake não substitui o Normal procedural criado na Semana 7 nem o desgaste pintado nas Semanas 9 e 10 — ele se **soma**. No 3D Coat, o Normal Map baked entra como uma camada adicional no canal Normal (ou como base, dependendo do fluxo escolhido), e o EdgeWear/Dirt continuam sendo pintados por cima ou ao redor dele.
+O Normal Map de bake não substitui o Normal via Depth pintado na Semana 7 nem o desgaste pintado nas Semanas 9 e 10 — ele se **soma** e refina. No 3D Coat, o Normal Map baked entra como uma camada adicional no canal Normal, complementando as marcas de profundidade já pintadas, e o EdgeWear/Dirt continuam sendo pintados por cima ou ao redor dele.
 
 > **Nota do professor:** Esta é uma mini aula mais densa tecnicamente do que as anteriores — é inevitável, pois bake tem parâmetros que precisam ser entendidos antes de a ferramenta ser usada com segurança (ao contrário de pintura livre, onde o erro é visualmente óbvio e corrigível na hora). Resistir à tentação de aprofundar Curvature e ID Map agora — eles voltam na Semana 12 com tempo dedicado.
 
@@ -165,7 +165,7 @@ Abrir o Blender com o par de malhas de demonstração já carregado: high-poly (
 2. Verificar no viewport: rotacionar o asset e observar se há "manchas" inesperadas em superfícies que deveriam ser planas — sinal clássico de cage mal ajustada.
 3. *"Sempre verifiquem o resultado rotacionando o objeto antes de considerar o bake pronto. Um artefato que não aparece de um ângulo pode aparecer claramente de outro."*
 
-> **Nota do professor:** Não é necessário demonstrar Curvature nesta sessão — ele é mencionado na mini aula apenas conceitualmente e retorna com demonstração completa na Semana 12. O foco aqui é que o estudante saia com o fluxo completo de Normal + AO dominado, pois é isso que será exigido na CF4.
+> **Nota do professor:** Não é necessário demonstrar Curvature nesta sessão — ele é mencionado na mini aula apenas conceitualmente e retorna com demonstração completa na Semana 12. O foco aqui é que o estudante saia com o fluxo completo de Normal + AO dominado, pois é isso que será exigido na CF3.
 
 ---
 
@@ -218,7 +218,7 @@ Perguntas de mediação circulante:
 
 ## ENCONTRO 2 (1h30)
 
-### Crítica Formal (CF4) — 20 minutos
+### Crítica Formal (CF3) — 20 minutos
 
 **Formato: Apresentação individual estruturada**
 
@@ -261,7 +261,7 @@ O professor preenche a Ficha de Crítica Formal (Instrumento 1) para C1, C2, C4,
 
 **Atividade estruturada:**
 
-**Bloco 1 — Correção de artefatos identificados na CF4 (≈20 min):**
+**Bloco 1 — Correção de artefatos identificados na CF3 (≈20 min):**
 
 Para estudantes com problemas de bake apontados na apresentação:
 1. Revisar a extrusion do cage: aumentar ou diminuir em incrementos pequenos (ex: de 0.02m para 0.015m ou 0.03m).
@@ -298,7 +298,7 @@ Para estudantes com ambos os assets já resolvidos:
 
 **Roteiro:**
 
-1. **(3 min — Síntese da CF4)**
+1. **(3 min — Síntese da CF3)**
 *"Hoje foi a quarta crítica formal do semestre e a primeira que avaliou Bake. A maioria de vocês está conectando três sistemas de detalhe agora: o material PBR de base, o desgaste pintado à mão e o detalhe capturado por bake. Essa sobreposição de camadas é exatamente como texturização profissional funciona — nenhuma técnica sozinha resolve tudo."*
 
 2. **(3 min — Reflexão de processo)**
@@ -332,7 +332,7 @@ Alguns estudantes se envolvem em esculpir um nível de detalhe muito além do ne
 O Normal Map de bake fica perfeito isoladamente, mas quando combinado com o EdgeWear e o Dirt das Semanas 9–10, o resultado parece "duas texturas coladas" — o chanfro bakeado é nítido demais comparado ao desgaste orgânico ao redor. Estratégia: reforçar que a integração continua sendo trabalho de pintura livre — usar uma leve camada de Dirt ou EdgeWear sobre a área recém-bakeada para que ela receba o mesmo tratamento narrativo do resto do asset.
 
 **6. Ansiedade de apresentação na Crítica Formal**
-Diferente das críticas informais das semanas anteriores, a CF4 tem formato individual e atribui nota, o que aumenta a tensão de alguns estudantes, especialmente os que tiveram mais dificuldade técnica na semana. Estratégia: abrir a crítica reforçando que o objetivo é registrar o estado atual do processo, não julgar um resultado final — e que a Ficha de Autoavaliação já trazida pelo estudante é parte legítima da nota, não apenas um formulário burocrático.
+Diferente das críticas informais das semanas anteriores, a CF3 tem formato individual e atribui nota, o que aumenta a tensão de alguns estudantes, especialmente os que tiveram mais dificuldade técnica na semana. Estratégia: abrir a crítica reforçando que o objetivo é registrar o estado atual do processo, não julgar um resultado final — e que a Ficha de Autoavaliação já trazida pelo estudante é parte legítima da nota, não apenas um formulário burocrático.
 
 ---
 
@@ -342,9 +342,9 @@ Diferente das críticas informais das semanas anteriores, a CF4 tem formato indi
 |---|---|
 | Estudante não sabe por onde começar a criar o high-poly | Pedir que aponte, no low-poly já existente, uma aresta ou face que "deveria" ter profundidade real mas está achatada por questão de otimização de polígonos. Essa é a área correta para começar — o high-poly nasce de uma limitação já identificada no low-poly, não de uma ideia aberta. |
 | Estudante frustrado após múltiplas tentativas de bake com artefato | Isolar variáveis: pedir para desativar o cage customizado e usar o extrusion automático padrão primeiro, confirmar que funciona sem artefato grosseiro, e só depois reintroduzir ajustes finos. Resolver o problema em etapas pequenas evita que o estudante mude três parâmetros ao mesmo tempo e perca o rastro do que funcionou. |
-| Estudante com autoavaliação muito distante da avaliação do professor na CF4 | Não corrigir publicamente durante a apresentação — anotar a diferença na ficha e conversar individualmente durante o estúdio, pedindo que o estudante aponte a evidência concreta que embasou sua autoavaliação. A calibração se constrói com evidência, não com a opinião do professor imposta. |
+| Estudante com autoavaliação muito distante da avaliação do professor na CF3 | Não corrigir publicamente durante a apresentação — anotar a diferença na ficha e conversar individualmente durante o estúdio, pedindo que o estudante aponte a evidência concreta que embasou sua autoavaliação. A calibração se constrói com evidência, não com a opinião do professor imposta. |
 | Estudante que termina rápido e com qualidade | Propor um segundo bake em outra parte do kit, ou introduzir uma pergunta antecipada da Semana 12: *"Se esse asset tivesse dois materiais diferentes — por exemplo, madeira e reforço metálico — como você acha que separaria isso automaticamente na textura? Pesquise 'Material ID' e me conte o que encontrou."* |
-| Estudante confuso sobre por que o Normal Map de bake e o Normal procedural da Semana 7 coexistem | Explicar com analogia: *"O procedural da Semana 7 é como uma textura de pele — repete um padrão geral (poros, rugosidade fina) por toda a superfície. O bake de hoje é como uma cicatriz específica — um detalhe único, localizado, que só existe naquele ponto exato porque veio de uma geometria real ali."* Os dois podem estar no mesmo canal Normal, em camadas separadas. |
+| Estudante confuso sobre por que o Normal Map de bake e o Normal via Depth da Semana 7 coexistem | Explicar com analogia: *"O Depth da Semana 7 é como uma textura de pele — repete um padrão geral (poros, rugosidade fina) pintado à mão por toda a superfície. O bake de hoje é como uma cicatriz específica — um detalhe único, localizado, que só existe naquele ponto exato porque veio de uma geometria real ali."* Os dois podem estar no mesmo canal Normal, em camadas separadas. |
 | Estudante nervoso antes de apresentar na Crítica Formal | Lembrar que a ficha de autoavaliação já registra a reflexão do estudante antes mesmo de abrir a boca — a apresentação é uma confirmação verbal do que já foi pensado, não uma prova surpresa. Sugerir que comece pela frase mais fácil: "o que eu mais gostei de ter feito esta semana foi...". |
 
 ---
@@ -359,7 +359,7 @@ Diferente das críticas informais das semanas anteriores, a CF4 tem formato indi
 | Comparativo visual high-poly / low-poly-sem-bake / low-poly-com-bake, documentado com screenshots | C1 — Processo de Projeto | A evolução técnica está documentada de forma que qualquer pessoa entenda o que o bake mudou, sem explicação verbal? |
 | Bake integrado de forma coerente ao desgaste já pintado (EdgeWear, Dirt, Scratches) e aos stencils das semanas anteriores | C5 — Texturização | O novo detalhe de geometria dialoga com a narrativa de uso já construída, ou parece um elemento isolado e recém-adicionado? |
 | Coerência entre Asset 01 e Asset 02 mantida após a introdução do bake | C2 — Direção Artística | O nível de detalhe geométrico introduzido é proporcional e consistente entre os dois assets do kit? |
-| Apresentação individual na CF4: clareza da fala, organização dos arquivos exibidos, capacidade de responder perguntas técnicas sobre os parâmetros de bake usados | C9 — Apresentação | O estudante consegue explicar as decisões de cage, extrusion e resolução tomadas, sem depender de leitura de anotações? |
+| Apresentação individual na CF3: clareza da fala, organização dos arquivos exibidos, capacidade de responder perguntas técnicas sobre os parâmetros de bake usados | C9 — Apresentação | O estudante consegue explicar as decisões de cage, extrusion e resolução tomadas, sem depender de leitura de anotações? |
 | Ficha de Autoavaliação preenchida com evidência específica por critério, entregue antes da apresentação | C1 — Processo de Projeto | A autoavaliação aponta evidência concreta no próprio trabalho, ou é genérica ("acho que está bom")? |
 | Feedback dado a colegas durante a Crítica Formal com observação técnica específica | C10 — Participação (obs.) | A pergunta ou comentário do estudante durante a apresentação de um colega referencia um critério técnico observável (cage, artefato, integração), ou é genérico? |
 
@@ -375,7 +375,7 @@ Diferente das críticas informais das semanas anteriores, a CF4 tem formato indi
 | Ficha de Autoavaliação (Instrumento 2) preenchida | Documento digital ou impresso, entregue antes da apresentação | Início do segundo encontro |
 | Ficha de Crítica Formal (Instrumento 1), preenchida pelo professor | Devolução com feedback escrito | Conforme cronograma de devolução da disciplina |
 
-> **Nota sobre a nota da CF4:** A nota atribuída nesta semana corresponde a 25% do Portfolio de Artefatos (PA), o maior peso entre as críticas realizadas até agora. O feedback escrito da Ficha de Crítica Formal deve destacar claramente o ponto mais forte e a prioridade de melhoria de cada estudante, servindo de guia direto para a Semana 12.
+> **Nota sobre a nota da CF3:** A nota atribuída nesta semana corresponde a 25% do Portfolio de Artefatos (PA), o mesmo peso da CF2. O feedback escrito da Ficha de Crítica Formal deve destacar claramente o ponto mais forte e a prioridade de melhoria de cada estudante, servindo de guia direto para a Semana 12.
 
 ---
 

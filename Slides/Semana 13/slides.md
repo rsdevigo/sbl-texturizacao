@@ -269,7 +269,7 @@ Notas: Contextualizar o valor profissional. Em pipelines de produção, agrupar 
 - Otimização é sempre **trade-off** — e reconhecê-lo já é competência técnica
 
 <!--
-Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonstração ao vivo (atlas de 3 assets no Blender) e no estúdio (planejar e remapear o próprio kit). Lembrar: crítica 🔵 informal nesta semana — o atlas e a justificativa de agrupamento produzidos hoje serão evidência de C7 (Otimização) na CF5 da Semana 14 (Trim Sheets), quando Otimização entra em nota formal pela primeira vez.
+Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonstração ao vivo (atlas de 3 assets no Blender) e no estúdio (planejar e remapear o próprio kit). Lembrar: crítica 🔵 informal nesta semana — o atlas e a justificativa de agrupamento produzidos hoje serão evidência de C7 (Otimização) na CF4 da Semana 14 (Trim Sheets), quando Otimização entra em nota formal pela primeira vez.
 -->
 
 ---

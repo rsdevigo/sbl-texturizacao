@@ -10,14 +10,14 @@ footer: "IFMS • Semana 08"
 <!-- _class: cover -->
 <!-- _paginate: false -->
 
-# Do nó ao mapa pintado
+# Quatro mapas, um material
 
-## A textura vira imagem real
+## Refinamento no 3D Coat e exportação PBR unificada
 
-**Semana 8** — Introdução ao 3D Coat: Paint Room, camadas e exportação PBR
+**Semana 8** — Color, Roughness, Metallic e Normal: o fechamento técnico da Unidade II
 
 <!--
-Notas: Abertura da mini aula (20 min). Terceira Crítica Formal do semestre (CF3) — encerra a Unidade II. Mensagem central: até a Semana 7, o material vivia dentro do Blender como rede de nós procedurais. Hoje os estudantes cruzam para uma ferramenta dedicada de texturização — o 3D Coat — onde o material passa a ser pintado, canal por canal, e exportado como imagens reais (PNG). Manter o ritmo: os canais PBR já são conhecidos desde a Semana 5, o foco de hoje é a ferramenta e o fluxo, não os conceitos.
+Notas: Abertura da mini aula (20 min). Esta é a segunda Crítica Formal do semestre (CF2) — após a Semana 4 — e encerra a Unidade II. Mensagem central: a Semana 7 já fez a migração completa para o 3D Coat e já deu ao Asset 01 profundidade real via bake de AO/Curvature e Normal pintado no canal Depth. Hoje não se reintroduz a ferramenta — aprofunda-se o que já está em andamento: mais controle de camada, o canal Metallic, e o fechamento com a exportação dos quatro mapas PBR (Albedo, Metallic, Roughness e Normal, todos vindos do 3D Coat), reconectados no Blender sem nenhum nó procedural remanescente.
 -->
 
 ---
@@ -26,42 +26,42 @@ Notas: Abertura da mini aula (20 min). Terceira Crítica Formal do semestre (CF3
 
 Ao final da semana você será capaz de:
 
-- Identificar os três espaços de trabalho do 3D Coat: **Paint Room**, **UV Room**, **Render Room**
-- Importar um asset com UV do Blender no modo **Per Pixel Painting**
-- Organizar camadas no Paint Room e alternar entre canais PBR
-- Pintar os canais **Color**, **Roughness** e **Metallic** diretamente sobre a malha
-- Exportar mapas PBR e reconectá-los no material do Blender
+- Refinar camadas de Color, Roughness e Metallic com detalhe intencional
+- Localizar o canal **Subsurface Scattering (SSS)** e testá-lo em elementos orgânicos
+- Pintar o canal **Metallic** com lógica física correta (quase binária)
+- Exportar os **quatro mapas PBR** do 3D Coat — Albedo, Metallic, Roughness e **Normal**
+- Configurar o material no Blender com os quatro mapas, sem nós procedurais remanescentes
 
 <!--
-Notas: Ler rápido. Não antecipar Normal Map baked (Semana 11) nem pintura artística de desgaste (Semana 9) — hoje o 3D Coat aparece pela primeira vez, com os três canais básicos. O objetivo 5 já prepara para a demonstração e para o estúdio.
+Notas: Ler rápido. A turma já domina a mecânica básica do 3D Coat desde a Semana 7 — esta mini-aula não reapresenta a ferramenta. O Normal Map já foi bakeado a partir do Depth pintado na Semana 7; hoje ele é exportado junto com os demais mapas pela primeira vez. O objetivo 6 (apresentação na crítica formal) fica para o Encontro 2.
 -->
 
 ---
 
 <!-- _class: question -->
 
-# O material da Semana 7 viaja com o asset para a Unity?
+# Vocês já têm Color, Roughness e Normal ativos. O que falta para esse material estar pronto para a Unity?
 
 <!--
-Notas: Pergunta de abertura. Deixar a turma responder brevemente. Resposta esperada: os nós procedurais (Noise, Bump, ColorRamp) funcionam só dentro do Blender — para exportar para a Unity é preciso ter mapas de imagem reais (PNG/TGA). Confirmar e revelar: o 3D Coat é a ferramenta que gera esses mapas, pintando diretamente sobre a malha 3D.
+Notas: Pergunta de abertura da mini aula. Conduzir a turma a perceber que falta: (1) o Metallic, ainda não trabalhado a fundo; (2) mais uma camada de detalhe intencional sobre o que já existe; (3) a exportação de tudo isso como imagem real, incluindo o Normal pela primeira vez.
 -->
 
 ---
 
-## Nó procedural × mapa pintado
+## Recapitulando: por que os mapas do 3D Coat são portáveis
 
 Nós geram aparência **matematicamente**, a cada render — funcionam só dentro do Blender.
 
-Mapas do 3D Coat são **imagens reais**, portáveis para qualquer motor ou software.
+Mapas do 3D Coat são **imagens reais** (PNG/TGA), portáveis para qualquer motor ou software.
 
 <div class="tip">
 
-Um PNG exportado do 3D Coat abre no Krita, conecta na Unity ou no Unreal sem nenhuma conversão.
+É por isso que o pipeline da disciplina fecha com essa exportação: Blender (modelagem + UV) → **3D Coat (texturização)** → Unity (motor).
 
 </div>
 
 <!--
-Notas: Fixar a diferença fundamental antes de qualquer detalhe de interface. Os estudantes já sabem o que Albedo, Roughness e Metallic representam desde a Semana 5 — hoje muda apenas COMO essa informação é criada e armazenada.
+Notas: Recapitulação rápida (1 min) — conceito já visto na Semana 7, não precisa de tempo de demonstração aqui. Serve só para reancorar por que a exportação de hoje fecha o pipeline.
 -->
 
 ---
@@ -73,115 +73,84 @@ Notas: Fixar a diferença fundamental antes de qualquer detalhe de interface. Os
 ![diagram](assets/mermaid-1.png)
 
 <!--
-Notas: O 3D Coat recebe a malha com UV do Blender e devolve mapas de imagem que representam cada canal PBR. Esses mapas voltam ao Blender (para conferência) ou vão direto para a Unity. Reforçar: esta é a posição exata do 3D Coat no pipeline da disciplina — não substitui o Blender, entra depois do UV pronto.
+Notas: Recapitulação visual. O 3D Coat recebe a malha com UV do Blender e devolve mapas de imagem que representam cada canal PBR — hoje, os quatro. Esses mapas voltam ao Blender (para conferência) ou vão direto para a Unity.
 -->
 
 ---
 
-## Os três espaços de trabalho (Rooms)
+## Subsurface Scattering (SSS): um canal ainda não usado
 
-- **Paint Room** — o espaço principal; pintar sobre a malha 3D com pincéis, stencils e alphas
-- **UV Room** — conferir o mapa UV importado (os UVs já chegam prontos do Blender)
-- **Render Room** — visualização em alta qualidade com iluminação HDR, para avaliar o resultado antes de exportar
+Simula luz que penetra levemente o material antes de dispersar — pele, cera, mármore, folhas, tecidos finos.
 
-<!--
-Notas: O 3D Coat organiza o trabalho em "Rooms" especializadas. No workflow da disciplina, o UV Room é usado apenas para conferência — a abertura de UV acontece no Blender (Semanas 2-4). O Render Room será usado ao longo da demonstração para checar o efeito de cada camada pintada.
--->
-
----
-
-## Camadas que guardam múltiplos canais
-
-O Paint Room usa camadas empilhadas — como no Krita — mas cada camada guarda dados para **vários canais ao mesmo tempo**: Color, Roughness, Metallic, Normal/Depth, Opacity e **Subsurface**.
+Para um kit de ambiente (pedra, metal, madeira, concreto), o SSS quase sempre fica em **0**. As exceções: elementos decorativos orgânicos ou itens translúcidos (velas, cristais).
 
 <div class="tip">
 
-É como se cada camada tivesse várias "sub-imagens" invisíveis. Pintar no canal Color só afeta o Color — a estrutura de camadas é compartilhada.
-
-</div>
-
-<div class="tip">
-
-**Subsurface Scattering (SSS)** é um desses canais: simula luz que penetra levemente o material (pele, cera, mármore, folhas, tecidos finos). Para um kit de ambiente, quase sempre fica em 0 — vale localizar o canal hoje, mesmo sem pintar nele.
+Assim como no Principled BSDF do Blender, o canal aceita valores de 0 a 1. Para quem tiver um elemento orgânico no kit: localize o canal hoje e teste um valor baixo.
 
 </div>
 
 <!--
-Notas: Este é o conceito mais estranho para quem vem do Krita/Photoshop puro. O artista escolhe qual canal está ativo no momento de pintar, mas a pilha de camadas (ordem, blend mode, opacidade) é a mesma para todos os canais. Essa distinção evita o erro mais comum da aula: pintar no canal errado. SSS não foi abordado na Semana 7 (ficou reservado para hoje, de propósito, para não sobrecarregar a mini-aula de Normal Map/procedural) — aqui entra apenas de forma breve e conceitual, sem cobrança prática: localizar o canal na interface é suficiente para quem tiver um elemento orgânico no kit (flor, folha, tecido, vela, cristal).
+Notas: A estrutura de camadas (uma camada, vários canais) já é conhecida desde a Semana 7 — hoje entra especificamente o canal Subsurface, que ainda não tinha sido ativado. Não há cobrança prática de pintura no SSS para quem não tem elemento orgânico no kit — localizar o canal na interface já é suficiente.
 -->
 
 ---
 
-<!-- _class: diagram -->
+## Combinando fontes numa mesma camada de material
 
-## O fluxo da aula em quatro etapas
+Cada material, a esta altura, já tem no mínimo três origens empilhadas:
 
-![diagram](assets/mermaid-2.png)
-
-<!--
-Notas: Núcleo procedimental da semana. Exportar como .obj (com UV Coords marcado) ou .fbx. Importar em Per Pixel Painting. Pintar Color, depois Roughness, depois Metallic — nessa ordem. Exportar como PNG e reconectar no Principled BSDF, lembrando do Color Space Non-Color para os mapas de dado. O GitHub Action converte o mermaid em imagem.
--->
-
----
-
-<!-- _class: image-right -->
-
-![](assets/importacao_per_pixel.webp)
-
-## Importar no modo certo
-
-`File → Import for Per-Pixel Painting`. Resolução **1024×1024** para a aula. Workflow: **Metalness PBR** (não Specular/Glossiness).
+1. **Base** — foto ou Smart Material
+2. **Máscara** gerada da geometria — AO/Curvature
+3. **Pintura manual** — Depth, variações de cor
 
 <div class="tip">
 
-Em produção usaríamos 2048 — hoje 1024 é suficiente e mais rápido para navegar.
+"Se alguém desligar só a sua camada de máscara, o material ainda deveria parecer razoável — só mais 'novo'. Se desligar e o material sumir ou virar outra coisa, a máscara está fazendo trabalho demais sozinha."
 
 </div>
 
 <!--
-Notas: Passo 1 da demonstração. Reforçar que o 3D Coat detecta o UV automaticamente se o export estiver correto. Workflow errado (Specular/Glossiness) muda a lógica dos canais pintados mais adiante — confirmar sempre Metalness PBR neste pipeline.
+Notas: O refinamento desta semana consiste em ajustar o peso relativo dessas três camadas — nenhuma delas sozinha deveria contar toda a história do material. Esta é a lógica central da mini-aula, junto com o SSS.
+-->
 
+---
+
+## O pacote de exportação: quatro mapas, uma vez só
+
+1. **Refinar** as camadas de Color, Roughness e Metallic com detalhe adicional
+2. **Exportar** os quatro mapas: Albedo (Color), Roughness, Metallic e **Normal** — já bakeado a partir do Depth pintado na Semana 7
+3. **Conectar** os quatro mapas no material do Blender, com o Color Space correto em cada nó
+
+<div class="tip">
+
+O Normal sai junto com os outros três pela primeira vez nesta semana — antes, o material no Blender ainda dependia de um Normal procedural ou de nenhum Normal.
+
+</div>
+
+<!--
+Notas: Fecha a mini-aula antes da demonstração. Este pacote de três passos é o roteiro exato que será repetido na demonstração e nos dois estúdios do dia.
 [!FIGURA]
-Objetivo didático: mostrar a janela de importação do 3D Coat para que os estudantes reconheçam as opções antes de tentar sozinhos no estúdio.
-Arquivo sugerido: assets/importacao_per_pixel.webp
-Descrição: captura de tela da janela "Import for Per-Pixel Painting" do 3D Coat, com o campo de resolução marcado em 1024x1024 e o seletor de workflow em "Metalness PBR" destacado.
-Como produzir: no 3D Coat, abrir File → Import for Per-Pixel Painting com um asset de demonstração, capturar a janela de importação antes de confirmar, destacar os dois campos citados com uma seta ou contorno no Krita.
+Objetivo didático: um diagrama visual (substituindo o antigo fluxo de três canais da Semana 7) mostrando os três passos — Refinar → Exportar quatro mapas → Conectar — com destaque para o Normal como novidade da semana.
+Como produzir: regenerar o mermaid do pipeline da aula com os quatro mapas explícitos (Albedo, Roughness, Metallic, Normal) e publicar como assets/mermaid-3.png; até lá, apresentar esta etapa apenas com a lista acima.
 -->
 
 ---
 
-## Canal Color (Albedo)
+## Refinar o Color: camada de detalhe
 
-Renomear a camada base para `Base_Color`. Preencher com a cor dominante do material (Fill).
+Adicionar uma camada `Detalhe_Cor` — modo **Multiply** ou **Overlay**, opacidade **20–30%**.
 
-Criar uma segunda camada de **variação de tom** — modo Overlay, opacidade baixa — para quebrar a uniformidade.
-
-<div class="error">
-
-Uma única camada de Fill uniforme deixa o material com aspecto de plástico.
-
-</div>
-
-<!--
-Notas: Etapa 3 do estúdio. A camada de variação é o que evita o "look" de cor sólida perfeita — nenhuma superfície real é assim. Pedra: cinza; madeira: marrom; metal: cinza escuro frio. Adaptar ao tema do kit de cada estudante.
--->
-
----
-
-## Canal Roughness
-
-Branco = muito rugoso (matte) · preto = muito liso (reflexivo) — mesmo princípio do Principled BSDF.
-
-Camada base (Fill) + camada de **desgaste** nas arestas e projeções, com valor mais claro (mais liso).
+Pintar detalhes específicos do tema sobre a base já existente: sombras de fissuras, manchas de umidade, concentração de cor em áreas de desgaste — **reforçando**, não substituindo, o que a máscara de AO/Curvature já indicava.
 
 <div class="tip">
 
-No Render Room, procure diferença de brilho visível entre arestas e a face principal — é o desgaste pintado aparecendo.
+No Render Room: a cor tem história? Parece que o objeto foi usado?
 
 </div>
 
 <!--
-Notas: Etapa 4. Pedra e madeira não-polidas ficam em torno de 0.6-0.8 na base. As arestas e pontos de contato mais usados recebem roughness mais baixo — reflexo do desgaste físico por uso. Esse é o mesmo raciocínio de "onde a luz revela a história do objeto" que retorna nas Semanas 9-10.
+Notas: Passo 1 da demonstração / Etapa 1 do Estúdio 1. A camada de detalhe precisa concordar com a máscara de baixo, não competir com ela — se as duas contarem histórias diferentes de desgaste, o material perde coerência.
 -->
 
 ---
@@ -194,30 +163,46 @@ Materiais mistos: preencher zonas distintas — sem gradientes suaves.
 
 <div class="error">
 
-Ferrugem é **dielétrico** (Metallic 0) com cor de ferrugem no Albedo — não um valor intermediário de Metallic.
+A transição de metal para ferrugem não é um gradiente suave de Metallic — é uma borda nítida, guiada pela máscara de Curvature. Fisicamente, ou é metal exposto ou não é.
 
 </div>
 
 <!--
-Notas: Etapa 5. Para a maioria dos kits (Medieval, Fantasia, pós-apocalíptico), pedra e madeira ficam em Metallic 0 sem pintura adicional. Reservar o Metallic 1 apenas para metal exposto, com preto pintado nas áreas de ferrugem ou tinta.
+Notas: Passo 2 da demonstração / Etapa 2 do Estúdio 1. Para a maioria dos kits (Medieval, Fantasia, pós-apocalíptico), pedra, madeira e concreto ficam em Metallic 0 sem exceção. Reservar o Metallic 1 apenas para metal exposto, com preto pintado nas áreas de ferrugem ou tinta usando a máscara de Curvature como guia.
 -->
 
 ---
 
-## Exportar e reconectar no Blender
+## Roughness: revisão da máscara combinada
 
-`File → Export Textures` → PNG, mesma resolução da importação → pasta de destino.
+Camadas empilhadas no painel Layers: **base** + **desgaste** (Curvature) + **sujeira** (AO).
 
-No Blender: três nós **Image Texture** — Albedo em **sRGB**, Roughness e Metallic em **Non-Color**.
+<div class="tip">
 
-<div class="error">
-
-Color Space errado deixa o material excessivamente reflexivo ou completamente matte, sem controle.
+No Render Room: alternar ligando/desligando cada camada para conferir a contribuição individual de cada uma. Se não houver diferença de brilho visível entre arestas e face principal, o contraste está fraco.
 
 </div>
 
 <!--
-Notas: Passo final do fluxo. Regra fixa a repetir sempre: só o Albedo fica em sRGB; todo mapa de DADO (Roughness, Metallic, Normal, AO) vai em Non-Color. Manter o Normal Map procedural da Semana 7 conectado — o 3D Coat ainda não gerou Normal Map nesta semana (isso vem no bake, Semana 11).
+Notas: Passo 3 da demonstração / Etapa 3 do Estúdio 1. No Encontro 2, esta revisão pode ganhar uma camada adicional `Roughness_Sujeira` (Multiply, 40–50%, pintada em áreas côncavas com valor mais alto) para incorporar o feedback da crítica formal.
+-->
+
+---
+
+## Exportar os quatro mapas e reconectar no Blender
+
+`File → Export Textures` → PNG, mesma resolução da importação → selecionar **Albedo, Roughness, Metallic e Normal**.
+
+No Blender: quatro nós **Image Texture** — Albedo em **sRGB**; Roughness, Metallic e Normal em **Non-Color**. O Normal passa por um nó **Normal Map** antes do Principled BSDF.
+
+<div class="error">
+
+Conectar o Image Texture do Normal direto ao Principled BSDF, sem o nó `Normal Map` no meio, produz um resultado fisicamente incorreto — o motor interpreta a imagem como cor, não como vetor.
+
+</div>
+
+<!--
+Notas: Passo 4 e 5 da demonstração. Regra fixa a repetir sempre: só o Albedo fica em sRGB; todo mapa de DADO (Roughness, Metallic, Normal) vai em Non-Color. O nó Normal Map é obrigatório entre o Image Texture do Normal e o Principled BSDF — é um erro silencioso, o material roda sem erro mas com aparência errada.
 -->
 
 ---
@@ -238,12 +223,12 @@ Notas: Passo final do fluxo. Regra fixa a repetir sempre: só o Albedo fica em s
 
 <div class="error">
 
-**UV ausente na importação** — export do `.obj` sem "UV Coords" marcado; a malha chega esticada no Paint Room.
+**Normal Map sem o nó intermediário** — Image Texture do Normal ligado direto ao Principled BSDF; o relevo sai errado sem nenhum erro visível na tela.
 
 </div>
 
 <!--
-Notas: Os três erros mais frequentes da semana, alinhados às Possíveis Dificuldades do plano de aula. Circular no estúdio caçando exatamente estes padrões: conferir o indicador de canal ativo, abrir o Render Room isolando o Roughness, e verificar as ilhas de UV no UV Room se a malha aparecer estranha.
+Notas: Alinhado às Possíveis Dificuldades do plano de aula. Circular no estúdio caçando exatamente estes três padrões, e um quarto ponto de checagem: os quatro mapas foram de fato exportados, conferindo no explorador de arquivos — não só na confirmação do 3D Coat.
 -->
 
 ---
@@ -252,12 +237,12 @@ Notas: Os três erros mais frequentes da semana, alinhados às Possíveis Dificu
 
 ## Na indústria
 
-3D Coat, Substance Painter e Mari são as ferramentas-padrão de pintura PBR em produção de jogos — o fluxo de exportar canais e reconectar no material do motor/DCC, praticado hoje pela primeira vez, se repete quase idêntico em qualquer pipeline profissional.
+3D Coat, Substance Painter e Mari são as ferramentas-padrão de pintura PBR em produção de jogos — o fluxo de refinar por canal, exportar e reconectar no material do motor/DCC, praticado hoje com o pacote completo de quatro mapas, se repete quase idêntico em qualquer pipeline profissional.
 
-Canal invertido (roughness/smoothness) é um dos bugs visuais mais comuns em produção — e um dos mais rápidos de diagnosticar quando se sabe exatamente o que procurar.
+Canal invertido (roughness/smoothness) e Normal sem o nó de conversão são dois dos bugs visuais mais comuns em produção — e dos mais rápidos de diagnosticar quando se sabe exatamente o que procurar.
 
 <!--
-Notas: Contextualizar o valor profissional. O primeiro contato com uma ferramenta de pintura PBR dedicada (3D Coat) é um marco real de carreira — é a mesma ferramenta (ou concorrente direta) usada em produção. Amarra à Semana 16, onde o mesmo tipo de inversão de canal (Roughness vs. Smoothness) reaparece na Unity.
+Notas: Contextualizar o valor profissional. Amarra à Semana 16, onde o mesmo tipo de inversão de canal (Roughness vs. Smoothness) reaparece na Unity.
 -->
 
 ---
@@ -266,48 +251,48 @@ Notas: Contextualizar o valor profissional. O primeiro contato com uma ferrament
 
 # Resumo
 
-- Nós procedurais ficam no Blender; **mapas do 3D Coat são imagens reais e portáveis**
-- Três Rooms: **Paint** (pintar), **UV** (conferir), **Render** (avaliar)
-- Uma camada guarda **vários canais**; o canal ativo define o que a pincelada afeta
-- Fluxo: **exportar → importar → pintar (Color, Roughness, Metallic) → exportar → conectar**
-- Albedo em **sRGB**; Roughness e Metallic em **Non-Color**
+- Refinar Color, Roughness e Metallic com camadas que **combinam** base, máscara e pintura manual
+- **Subsurface Scattering**: canal novo, quase sempre 0 num kit de ambiente
+- Metallic é **quase binário** — preto para dielétricos, branco para metais, sem gradientes
+- Exportar os **quatro mapas** PBR: Albedo, Roughness, Metallic e **Normal** (bakeado do Depth na S7)
+- No Blender: Albedo em **sRGB**; os outros três em **Non-Color**; Normal sempre via nó **Normal Map**
 
 <!--
-Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonstração ao vivo e no estúdio. Lembrar: hoje é Crítica Formal (CF3) sobre o material das Semanas 5-7 — os primeiros resultados do 3D Coat entram só como contexto, não como foco avaliativo desta crítica.
+Notas: Amarrar a mini aula antes da demonstração. Hoje é a segunda Crítica Formal do semestre (CF2) — após a Semana 4 — e encerra a Unidade II. O objeto da crítica é o trabalho das Semanas 6–7 consolidado; o refinamento feito no Estúdio 1 pode entrar como contexto, mas o foco avaliativo é o estado consolidado do material nas duas trilhas visuais (fotorrealista e estilizada).
 -->
 
 ---
 
-## No estúdio: primeiro contato com o 3D Coat
+## No estúdio: refinamento e primeira exportação de teste
 
-Meta do Encontro 1: Asset 01 **importado** e com os três canais — Color, Roughness, Metallic — com pelo menos uma **camada base** pintada.
+Meta do Encontro 1: Asset 01 com Color refinado (camada de detalhe), Metallic corretamente preenchido, e uma **primeira exportação de teste** dos quatro mapas.
 
 <div class="tip">
 
-Sigam a ordem da demonstração: primeiro Color, depois Roughness, depois Metallic.
+Antes de sair daqui: Metallic com lógica física e pelo menos uma exportação de teste na pasta do projeto — os quatro mapas, incluindo o Normal.
 
 </div>
 
 <!--
-Notas: Consigna do estúdio de 50 minutos. Não precisa estar terminado — o segundo encontro tem mais 60 minutos de estúdio. Nomenclatura esperada: [Nome]_Asset01_S08.3b. Lembrar de distribuir a autoavaliação ao final deste encontro — é pré-requisito da crítica formal do Encontro 2.
+Notas: Consigna do estúdio de 50 minutos. Não precisa ser a versão final — o Encontro 2 tem mais 60 minutos de estúdio, incluindo a reconexão completa no Blender. Nomenclatura esperada: [Nome]_Asset01_S08.3b e pasta [Nome]_Asset01_Mapas_S08/. Lembrar de distribuir a autoavaliação ao final deste encontro — é pré-requisito da crítica formal (CF2) do Encontro 2.
 -->
 
 ---
 
 ## Agora: demonstração
 
-A seguir, o fluxo completo ao vivo: importar, pintar Color e Roughness por camadas, exportar e reconectar no Blender.
+A seguir, o fluxo completo ao vivo: refinar Color e Metallic por camadas, revisar o Roughness combinado, exportar os quatro mapas e reconectar no Blender com o nó Normal Map.
 
-3D Coat à esquerda, Blender com o material da Semana 7 à direita para comparação.
+3D Coat à esquerda (arquivo da Semana 7), Blender com o material anterior à direita para comparação.
 
 ![large](assets/demo_3dcoat_pipeline.webp)
 
 <!--
-Notas: Transição para a demonstração de 20 min. Sequência: importar asset de demonstração (parede ou caixa) → reconhecer Layers, Toolbar, canais ativos → pintar Base_Color + variação → pintar Base_Roughness + desgaste em arestas → exportar Albedo/Roughness/Metallic → conectar no Blender e comparar com o material de nós da Semana 7. Priorizar Albedo e Roughness se o tempo apertar; Metallic pode ficar como valor único no Principled BSDF.
+Notas: Transição para a demonstração de 20 min. Sequência: abrir o arquivo de demonstração da Semana 7 → refinar Color com camada de detalhe → preencher Metallic (pedra = preto, metal = branco com ferrugem) → revisar Roughness combinado → exportar os quatro mapas → conectar no Blender (quatro Image Texture + nó Normal Map) e comparar com o estado anterior.
 
 [!FIGURA]
-Objetivo didático: antecipar o layout de tela da demonstração para que a turma acompanhe a comparação entre as duas ferramentas.
+Objetivo didático: antecipar o layout de tela da demonstração para que a turma acompanhe a comparação entre refinamento no 3D Coat e reconexão no Blender.
 Arquivo sugerido: assets/demo_3dcoat_pipeline.webp
-Descrição: tela dividida. À esquerda, o Paint Room do 3D Coat com o painel de Layers visível (camadas Base_Color, Variacao_Cor, Base_Roughness, Roughness_Desgaste) sobre um asset de parede de pedra. À direita, o Shader Editor do Blender com o material da Semana 7 e o Viewport Rendered mostrando o resultado.
-Como produzir: no 3D Coat, montar as camadas citadas em um asset de demonstração e capturar o Paint Room com o painel de Layers aberto; no Blender, abrir o material de nós da Semana 7 lado a lado. Compor as duas capturas no Krita.
+Descrição: tela dividida. À esquerda, o Paint Room do 3D Coat com o painel de Layers visível (camadas Base_Color, Detalhe_Cor, Metallic, Roughness base/desgaste/sujeira) sobre um asset de parede de pedra. À direita, o Shader Editor do Blender com quatro nós Image Texture (Albedo, Roughness, Metallic, Normal), o nó Normal Map, e o Viewport Rendered mostrando o resultado final.
+Como produzir: no 3D Coat, montar as camadas citadas em um asset de demonstração e capturar o Paint Room com o painel de Layers aberto; no Blender, montar o node tree com os quatro Image Texture + Normal Map + Principled BSDF. Compor as duas capturas no Krita.
 -->

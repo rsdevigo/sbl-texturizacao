@@ -327,7 +327,7 @@ Muitos estudantes não têm referência intuitiva de quanto espaço está sendo 
 | Asset 02 com UV aberto (seams, Unwrap e checkerboard verificado) | `.blend` com sufixo `_Semana04` | Até o fim do segundo encontro |
 | Screenshots de ambos os assets: UV Editor com Stretch Overlay ativo + Viewport com checkerboard | PNG ou JPG (4 imagens no total — 2 por asset) | Até o fim do segundo encontro |
 
-> **Nota:** A crítica desta semana é informal. Não há Ficha de Crítica Formal nem Autoavaliação obrigatória. O registro avaliativo de C3 para a Semana 4 se dará via análise dos arquivos entregues. O professor pode fazer observações qualitativas no diário de classe para subsidiar o feedback da próxima crítica formal (Semana 5).
+> **Nota:** A crítica desta semana é informal. Não há Ficha de Crítica Formal nem Autoavaliação obrigatória. O registro avaliativo de C3 para a Semana 4 se dará via análise dos arquivos entregues. O professor pode fazer observações qualitativas no diário de classe para subsidiar o feedback da próxima crítica formal (Semana 8 — a Semana 5 não tem crítica formal).
 
 ---
 

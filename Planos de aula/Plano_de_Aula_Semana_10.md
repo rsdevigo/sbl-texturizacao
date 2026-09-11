@@ -38,7 +38,7 @@ Ao final da semana, o estudante será capaz de:
 
 ## Critérios observados nesta semana
 
-> ⚠️ **Semana sem crítica formal — nenhuma nota é atribuída.** O professor observa e registra evidências nos critérios abaixo para calibrar a avaliação da CF4 (sem 11). O estudante recebe feedback oral durante o estúdio.
+> ⚠️ **Semana sem crítica formal — nenhuma nota é atribuída.** O professor observa e registra evidências nos critérios abaixo para calibrar a avaliação da CF3 (sem 11). O estudante recebe feedback oral durante o estúdio.
 
 | Critério | O que observar |
 |---|---|
@@ -47,7 +47,7 @@ Ao final da semana, o estudante será capaz de:
 | C5 — Texturização | O stencil adicionou detalhe com narrativa temática? O detalhe está integrado ao material ou parece "colado"? A combinação de stencil + pintura livre é coerente? |
 | C10 — Participação (CC) | Qualidade do feedback oferecido na crítica informal: o estudante consegue identificar se o stencil parece integrado ou sobreposto, e por quê? |
 
-> **Progressão do PA — semana anterior à CF4:** Esta é a última semana antes da CF4 (sem 11). C5 (Texturização) é o critério que mais cresce neste momento — a distinção entre nível 3 ("detalhe presente mas desconexo do material") e nível 4 ("detalhe integrado com contexto de uso") é o que esta aula trabalha. O professor deve atualizar o registro de observação de C5 e C2 durante o estúdio, pois serão a base da avaliação formal da próxima semana. A nota da CF4 contribuirá com 25% para o PA.
+> **Progressão do PA — semana anterior à CF3:** Esta é a última semana antes da CF3 (sem 11). C5 (Texturização) é o critério que mais cresce neste momento — a distinção entre nível 3 ("detalhe presente mas desconexo do material") e nível 4 ("detalhe integrado com contexto de uso") é o que esta aula trabalha. O professor deve atualizar o registro de observação de C5 e C2 durante o estúdio, pois serão a base da avaliação formal da próxima semana. A nota da CF3 contribuirá com 25% para o PA.
 
 ---
 

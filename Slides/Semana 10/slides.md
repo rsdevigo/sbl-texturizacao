@@ -271,7 +271,7 @@ Notas: Contextualizar o valor profissional. Stencils e alphas reutilizáveis com
 - **Integrar sempre**: suavizar bordas + aplicar no **Color e no Roughness**
 
 <!--
-Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonstração ao vivo (carregar → posicionar → Color → Roughness → integrar → criar no Krita) e no estúdio (Asset 02 recebe o detalhe de stencil). Lembrar: semana de crítica 🔵 Informal — sem nota, mas o professor registra evidências de C5 e C2 para calibrar a CF4 (Semana 11). O Asset 02 precisa sair desta semana em estado de apresentação.
+Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonstração ao vivo (carregar → posicionar → Color → Roughness → integrar → criar no Krita) e no estúdio (Asset 02 recebe o detalhe de stencil). Lembrar: semana de crítica 🔵 Informal — sem nota, mas o professor registra evidências de C5 e C2 para calibrar a CF3 (Semana 11). O Asset 02 precisa sair desta semana em estado de apresentação.
 -->
 
 ---

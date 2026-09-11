@@ -10,14 +10,14 @@ footer: "IFMS • Semana 17"
 <!-- _class: cover -->
 <!-- _paginate: false -->
 
-# Contar a história de um semestre
+# Recuperação
 
-## Apresentação e defesa do Kit Modular de Ambiente
+## Reposição de entregas e atendimento individual
 
-**Semana 17** — O projeto inteiro, defendido em 15 minutos
+**Semana 17** — última semana letiva da disciplina
 
 <!--
-Notas: Abertura da mini aula (20 min). Unidade V — Projeto Final e Apresentação. Crítica 🔴 FORMAL (CF6 / Projeto Final) — 40% da nota final, e a única semana em que TODOS os 10 critérios da rubrica recebem nota simultaneamente, incluindo C10 (Participação), até aqui só observado. Apostila: todos os capítulos — integração semestral. Mensagem central da capa: nas 16 semanas anteriores cada peça foi produzida isolada — UV, material, textura, bake, otimização, integração na Unity. Hoje nada tecnicamente novo é ensinado: pede-se ao estudante montar essas peças em uma narrativa coerente e defendê-la oralmente diante da turma e do professor. Esta mini aula deve ser breve e direta — o objetivo é reduzir ansiedade com clareza de formato, não adicionar conteúdo. Não prolongar além dos 20 min: o tempo de estúdio hoje é a própria defesa.
+Notas: Unidade V — Projeto Final: Recuperação. Sem crítica coletiva ⚪ — feedback individual no atendimento. Apostila: conforme necessidade individual de cada estudante, sem leitura obrigatória nova. Carga horária 3h (2 encontros de 1h30). Mensagem central: esta semana não introduz nenhum conteúdo técnico novo. Ela existe exclusivamente para estudantes com entregas formais pendentes — de qualquer semana do semestre, da Semana 1 até a CF5 da Semana 16 — terem uma última oportunidade estruturada de reposição, com atendimento individual do professor. Não há crítica coletiva nem nova rodada de apresentações formais: o formato é de plantão de atendimento.
 -->
 
 ---
@@ -26,225 +26,109 @@ Notas: Abertura da mini aula (20 min). Unidade V — Projeto Final e Apresentaç
 
 ## Objetivos de hoje
 
-Ao final da semana você será capaz de:
+Ao final da semana, quem está em reposição será capaz de:
 
-- **Apresentar** o Kit Modular completo em 10 min + 5 min de perguntas
-- **Justificar** tecnicamente suas decisões, ligando cada uma a um critério da rubrica
-- **Comparar** sua autoavaliação com o feedback recebido na defesa
-- **Oferecer** feedback específico às apresentações dos colegas
-- **Refletir** sobre sua trajetória desde a Semana 1
-- **Entregar** a documentação final organizada conforme o padrão
+- **Identificar** com precisão qual(is) entrega(s) do semestre está(ão) pendente(s) ou abaixo do padrão esperado
+- **Finalizar e reentregar** o material técnico pendente, com orientação direta do professor
+- **Receber feedback individual** imediato sobre a reposição entregue, sem esperar uma nova crítica coletiva
 
 <!--
-Notas: Ler rápido. Os seis objetivos vêm direto do plano de aula (itens 1 a 6). Reforçar: hoje NÃO há técnica nova — é a integração de tudo que já foi produzido em uma narrativa defensável. A apresentação de 10+5 min alimenta C9; a justificativa técnica atravessa C1–C8; o feedback aos colegas alimenta C10; a reflexão semestral consolida a metacognição sobre o próprio aprendizado. Nada aqui exige produzir peça nova: exige curar e defender o que já existe.
+Notas: Objetivos direto do plano de aula. Reforçar: quem já concluiu todas as entregas do semestre não precisa produzir nada novo — para essas pessoas, a semana é opcional. Quem tem pendências deve já chegar sabendo exatamente o que falta, a partir da comunicação prévia do professor.
+-->
+
+---
+
+## Por que esta semana existe
+
+Não é uma nova mini aula, nem uma nova apresentação formal.
+
+- **Sem conteúdo técnico novo** — nada inédito é ensinado
+- **Sem crítica coletiva** — o feedback é individual, no próprio atendimento
+- Existe **só** para quem tem entregas formais pendentes, de qualquer semana do semestre
+
+<div class="tip">
+
+Já concluiu tudo? Ótimo — esta semana é **opcional** para você.
+
+</div>
+
+<!--
+Notas: Nota de transição do plano de aula. A Semana 17 é exclusivamente para reposição. Estudantes que já concluíram todas as entregas do semestre não precisam comparecer, conforme combinado institucionalmente — podem usar o tempo para polir o portfólio final, se quiserem.
 -->
 
 ---
 
 <!-- _class: question -->
 
-# Se você tivesse só 10 minutos para convencer alguém de que este kit é bom, o que mostraria primeiro?
+# Você sabe exatamente qual é a sua pendência — ou vai descobrir hoje?
 
 <!--
-Notas: Pergunta de abertura (do plano de aula). Deixar 2–3 respostas da turma. Usar as respostas para introduzir a ideia central: uma boa defesa NÃO é mostrar tudo — é uma curadoria do próprio processo. Depois de 16 semanas produzindo, hoje vocês vão contar a história desse projeto para quem não acompanhou de perto. O que aparece primeiro é uma escolha editorial. Direcionar para o próximo slide: a apresentação é uma seleção, não um relatório completo das 17 semanas.
+Notas: Pergunta de abertura, adaptada do espírito do plano (Possível Dificuldade nº 3: estudante sem clareza sobre o que exatamente está pendente). Usar para checar rapidamente, no início do Encontro 1, quem já sabe sua pendência e quem não recebeu ou não leu a comunicação prévia. Direcionar ao próximo slide: como o atendimento é organizado a partir da lista de pendências.
 -->
 
 ---
 
-## De onde viemos: 16 semanas, um só projeto
+## Como funciona o atendimento
 
-Cada semana produziu uma **peça** do mesmo Kit Modular.
+O professor **não** dá aula nova. Ele organiza a fila com base na lista de pendências e atende diretamente.
 
-- **UV** validado (S2–4) e **materiais PBR** completos (S5–8)
-- **Texturização** artística e **bake** integrado (S9–12)
-- **Otimização** em atlas, trim e ORM (S13–15)
-- Cena **montada na Unity** com lightmap e renders (S16)
+Para cada atendimento:
 
-<div class="tip">
-
-Hoje essas peças isoladas viram **uma narrativa coerente** — e você a defende.
-
-</div>
+1. Revisa o que já foi entregue e o que falta, com base na Ficha de Crítica Formal da semana original
+2. Orienta a correção técnica necessária — explicação pontual, não aula nova
+3. Acompanha a finalização da entrega dentro do tempo disponível
 
 <!--
-Notas: Revisão rápida e nota de transição do plano de aula. Todas as 16 semanas anteriores produziram peças de um mesmo projeto integrador. A Semana 17 não ensina nada tecnicamente novo: pede que o estudante monte essas peças em uma narrativa e as defenda. É, ao mesmo tempo, o encerramento pedagógico da disciplina e a avaliação de maior peso do semestre (CF6, 40% via Projeto Final). Reforçar que o estudante chega hoje sem nenhuma entrega técnica nova a produzir — o kit já está pronto.
+Notas: Dinâmica do Encontro 1 (Abertura, 15 min) e Encontro 2. O professor circula entre os estudantes, atendendo um de cada vez ou em pequenos grupos quando a pendência for similar (ex.: vários estudantes com pendência em bake). Prioridade: quem tem mais pendências acumuladas, já que o tempo é finito e não há nova oportunidade formal depois desta semana.
 -->
 
 ---
 
-## Uma defesa é curadoria, não relatório
-
-Você **não precisa** explicar cada uma das 17 semanas.
-
-- Escolha o que for **mais representativo** do seu trabalho
-- Mostrar tudo dilui o que importa e estoura o tempo
-- A apresentação é uma **escolha editorial**, não um inventário
-
-<div class="best">
-
-Selecionar o que mostrar — e o que deixar de fora — já é uma decisão de artista, e é observada em **C9 (Apresentação)**.
-
-</div>
-
-<!--
-Notas: Item central da mini aula. Frase do plano: "Vocês não precisam explicar cada uma das 17 semanas. Escolham o que for mais representativo — a apresentação é uma escolha editorial, não um relatório completo." O erro que se quer prevenir (Possíveis Dificuldades nº 2): tentar mostrar tudo e estourar os 10 minutos. Parte da avaliação de C9 é justamente organizar a fala dentro do tempo dado. Preparar o próximo slide: a estrutura sugerida dos 10 minutos.
--->
-
----
-
-<!-- _class: diagram -->
-
-## Os 10 minutos: uma sequência sugerida
-
-![diagram](assets/mermaid-1.png)
-
-Uma sugestão, **não um roteiro rígido** — ajuste ao seu projeto.
-
-<!--
-Notas: Item 1 da mini aula. O GitHub Action converte o mermaid em imagem — por isso o diagrama vai no markdown, não na nota. Detalhar a sequência do plano: (a) tema do kit e referência visual (1–2 min); (b) breakdown de processo — o que mudou da primeira versão até a final, com PELO MENOS um exemplo de feedback incorporado (2–3 min); (c) destaque técnico — 2 ou 3 decisões (UV, material, bake, otimização ou Unity) das quais o estudante mais se orgulha, explicando o porquê (3–4 min); (d) a cena final na Unity com os renders (2 min). Reforçar que a ordem é sugestão; o essencial é que o breakdown mostre evolução e que os destaques venham com justificativa.
--->
-
----
-
-## O breakdown mostra evolução, não só o resultado
-
-O coração da defesa é **o que mudou** entre a primeira versão e a final.
-
-- Traga **pelo menos um** exemplo de feedback incorporado
-- Mostre a decisão que você tomou, **reviu e mudou** no meio do caminho
-- Isso é a evidência viva de **C1 (Processo de Projeto)**
-
-<!--
-Notas: Reforço do item 1 (parte b) e ligação com C1. A documentação de processo — moodboard, versões, anotações de crítica, checklists semanais (Instrumento 4) — sustenta C1. Perguntas de mediação do plano para provocar isso na defesa: "Você me mostrou o resultado final desse asset — me conta uma decisão que você tomou no meio do processo e depois mudou. O que te fez mudar?" e "Esse é o mesmo asset que eu vi na Semana 3 com o UV recém-aberto. O que mudou entre aquela versão e essa?". A trajetória do projeto precisa ser rastreável.
--->
-
----
-
-## Os 5 minutos de perguntas: defesa, não interrogatório
-
-As perguntas têm o mesmo espírito das **críticas** que você já viveu.
-
-- O objetivo é **entender a decisão**, não expor uma falha
-- *"Não sei, mas acho que..."* seguido de raciocínio **vale**
-- Silêncio ou defensividade valem **menos** em C10
-
-<div class="tip">
-
-São as mesmas perguntas das cinco críticas formais anteriores — só que agora sobre o **projeto inteiro**.
-
-</div>
-
-<!--
-Notas: Item 2 da mini aula. Frase do plano: "As perguntas de hoje são as mesmas que vocês já responderam nas cinco críticas formais anteriores — só que agora sobre o projeto inteiro. Vocês já treinaram isso a cada duas ou três semanas desde a CF1." Reforçar que tentativa de justificativa vale mais que silêncio — isso alimenta C10. As perguntas do professor priorizam justificativa técnica ("por que esse valor de roughness aqui?", "o que te fez escolher trim nesse elemento e atlas naquele?"), não sim/não. Tratar a defesa como conversa técnica, não como confronto.
--->
-
----
-
-## A nota de hoje: a rubrica que você já conhece
-
-Pela **primeira e única vez**, os 10 critérios recebem nota juntos.
-
-- Você já foi avaliado em cada um deles **separadamente** no semestre
-- Hoje inclui **C10 (Participação)**, até agora só observado
-- Nada é novo — é a **integração** de tudo em um só momento
-
-<!--
-Notas: Item 3 da mini aula. Frase do plano: "Vocês já foram avaliados nesses critérios separadamente ao longo do semestre. Hoje é a primeira e única vez em que todos aparecem juntos, e a única vez em que a participação nas críticas também vira nota." Objetivo do slide: reduzir ansiedade (Possíveis Dificuldades nº 1) deixando claro que não há conteúdo novo sendo cobrado. A CF6 corresponde ao componente PF da fórmula NF = (PA × 0,40) + (CC × 0,20) + (PF × 0,40); C10 hoje também consolida o fechamento da nota de CC. Preparar o próximo slide: a tabela de pesos e o destaque de C5.
--->
-
----
-
-## Os pesos do Projeto Final (CF6)
+## O que trazer
 
 <div class="columns">
 <div class="col positive">
 
-### Maior peso
-**C5 — Texturização · 14%**
+### Se você tem pendência
 
-O núcleo da disciplina: narrativa de desgaste e leitura à distância.
+- Saber **qual** entrega e **qual critério**
+- O arquivo de trabalho aberto e pronto
+- A Ficha de Crítica Formal da semana original, se tiver em mãos
 
 </div>
 <div class="col negative">
 
-### Também alto peso
-**C2 · C4 · C8 — 12% cada**
+### Se não tem pendência
 
-Direção artística, materiais PBR e integração na Unity.
+- Comparecimento é **opcional**
+- Pode usar o tempo para polir o portfólio final
+- Ou tirar dúvidas sobre a nota acumulada do semestre
 
 </div>
 </div>
-
-Os demais (C1, C3, C6, C7, C9, C10) completam a ponderação — **não é média simples**.
 
 <!--
-Notas: Item 3 (continuação). Mostrar que C5 (Texturização) tem o maior peso — coerente com ser o núcleo da disciplina. Tabela de referência da Rubrica Mestre para a CF6 / PF: C1 10%, C2 12%, C3 8%, C4 12%, C5 14%, C6 8%, C7 8%, C8 12%, C9 8%, C10 8%. NÃO é média simples dos critérios e NÃO é a mesma ponderação do Portfolio de Artefatos (PA). O estudante não precisa decorar a tabela — precisa saber que texturização, direção artística, materiais e Unity concentram o peso, orientando o que priorizar no breakdown. Evitar transformar isto em aula de planilha: é orientação, não cobrança de memorização.
+Notas: Recursos necessários e papel do estudante. A Semana 17 funciona melhor quando cada estudante já chega sabendo exatamente o que precisa entregar, em vez de descobrir isso no próprio atendimento — daí a importância da comunicação prévia do professor antes desta semana.
 -->
 
 ---
 
-## A autoavaliação já entregue entra na conversa
+## Como a nota funciona
 
-Você entregou a autoavaliação (Instrumento 2) **antes** desta aula.
+Não há avaliação coletiva nova nesta semana.
 
-- Ela será **comparada** com a avaliação do professor na defesa
-- **Divergência não é punição** — vira uma pergunta
-- *"Me mostra a evidência que te fez pensar em nível 4 aqui."*
+- Cada reposição é avaliada nos **mesmos critérios da Rubrica Mestre** já aplicados na semana original
+- Ex.: reposição de UV → C3; reposição de bake → C6; e assim por diante
+- A nota atualizada é lançada individualmente, conforme o combinado institucional para recuperação
 
 <div class="best">
 
-A própria autoavaliação já é evidência de **C1**, independentemente de bater exatamente com a nota final.
+Não é uma nota nova — é a **atualização** da nota do critério correspondente à entrega original.
 
 </div>
 
 <!--
-Notas: Item 4 da mini aula. Frase do plano: "Se vocês se avaliaram em 4 num critério e eu observar um 3, isso não vira automaticamente uma nota mais baixa — vira uma pergunta na hora da defesa: 'me mostra a evidência que te fez pensar em nível 4 aqui'. É a mesma lógica de justificar decisões que vocês praticam desde a Semana 3." Divergência entre autoavaliação e avaliação do professor é material de diálogo técnico, não confronto (Possíveis Dificuldades nº 3). Tratar como oportunidade, não erro a corrigir publicamente. Comparar a autoavaliação com o feedback recebido é o objetivo 3 do plano.
--->
-
----
-
-## Erros comuns na defesa
-
-<div class="error">
-
-**Tentar mostrar tudo** — estoura os 10 min e dilui o essencial. Cure o que é mais representativo.
-
-</div>
-
-<div class="error">
-
-**Responder sim/não** — perde a chance de justificar. Explique o *porquê* de cada decisão.
-
-</div>
-
-<div class="error">
-
-**Travar diante de uma pergunta** — silêncio pesa em C10. Prefira "não sei, mas acho que...".
-
-</div>
-
-<div class="error">
-
-**Depender do arquivo abrir ao vivo** — tenha renders e screenshots já exportados como plano B.
-
-</div>
-
-<!--
-Notas: Erros mais frequentes, das Possíveis Dificuldades do plano (nº 2, 3, 4, 5). Ao circular na preparação, caçar exatamente estes. Para o tempo: usar cronômetro visível e interromper com gentileza ao final dos 10 min. Para a defensividade: reforçar que tentativa de raciocínio vale em C10. Para o problema técnico: exigir teste prévio de abertura dos arquivos (idealmente já feito na S16) e ter renders/screenshots exportados como apoio caso o projeto Unity não abra ao vivo — o foco da defesa é explicar o processo, não depender do arquivo ao vivo.
--->
-
----
-
-<!-- _class: industry -->
-
-## Na indústria
-
-Defender decisões técnicas e artísticas diante de uma banca é **rotina** — em review de portfólio, entrevista ou revisão de milestone.
-
-O Kit Modular que você defende hoje — completo, documentado e funcional na Unity — é, a partir de agora, **material de portfólio profissional**.
-
-<!--
-Notas: Contextualizar o valor profissional (Fechamento do plano). Saber apresentar e justificar o próprio trabalho é competência central na área de jogos — art reviews, entrevistas e milestones exigem exatamente isso. Reforçar que o portfólio produzido ao longo do semestre é um artefato real de empregabilidade, não um exercício de sala. O objetivo do encerramento é consolidar a metacognição sobre o processo de aprendizagem, não só sobre o produto. Não intimidar com padrão inatingível — a demonstração usa um kit de referência para calibrar expectativas de forma concreta.
+Notas: Critérios observados nesta semana, do plano de aula. Esclarecer dúvidas sobre nota acumulada com base no registro de todas as CFs do semestre, sem reabrir entregas já avaliadas e aceitas fora do processo institucional de recurso.
 -->
 
 ---
@@ -253,33 +137,26 @@ Notas: Contextualizar o valor profissional (Fechamento do plano). Saber apresent
 
 # Resumo
 
-- **Curadoria, não relatório** — mostre o mais representativo, dentro do tempo
-- **Breakdown** = o que mudou + feedback incorporado (C1)
-- **10 + 5 min** — apresentação e defesa com justificativa técnica
-- **10 critérios juntos** pela 1ª vez; **C5** tem o maior peso
-- **Autoavaliação** vira diálogo, não punição
-- **Plano B** de renders para qualquer imprevisto técnico
+- **Sem aula nova, sem crítica coletiva** — plantão de atendimento individual
+- Pendências de **qualquer semana**, da 1 até a CF5 da Semana 16
+- Sem pendência? **Comparecimento opcional**
+- Nota atualizada nos **mesmos critérios** da entrega original
+- **Última semana letiva** da disciplina
 
 <!--
-Notas: Amarrar a mini aula antes da demonstração. Cada item volta na prática: a demonstração usa um kit de referência para calibrar o padrão esperado; o estúdio é a própria defesa (10+5 min por estudante, cronômetro visível). Lembrar: hoje é 🔴 CF6 / Projeto Final, 40% da nota final, e a última entrega avaliativa formal da disciplina. Nada do que é avaliado hoje é novo — é a integração do que já foi praticado desde a CF1. Reduzir ansiedade com clareza de formato é o objetivo desta mini aula.
+Notas: Amarrar antes do fechamento administrativo. Reforçar: prazo final institucional para qualquer entrega remanescente, e prazos administrativos de lançamento de notas e recurso, se houver, são comunicados individualmente no encerramento do Encontro 2.
 -->
 
 ---
 
-## Agora: kit de referência
+<!-- _class: invert -->
 
-A seguir, o professor apresenta um **Kit Modular completo** como parâmetro do padrão esperado — passando pelos mesmos pontos que você vai defender.
+# Obrigado pelo semestre
 
-A pergunta que você leva ao estúdio: **quais 2 ou 3 decisões técnicas do meu kit eu mais quero destacar?**
+Do primeiro UV aberto na Semana 1 ao Kit Modular completo defendido na Semana 16 — foi um percurso longo, e o trabalho de vocês mostrou isso a cada crítica.
 
-![large](assets/kit_referencia_breakdown.webp)
+Boa reposição, e sucesso na próxima etapa.
 
 <!--
-Notas: Transição para o bloco de demonstração de 20 min. Não há demonstração técnica nova nesta semana (conforme o cronograma). O professor usa o bloco para apresentar um Kit Modular completo de referência (coorte anterior ou kit próprio preparado antes), percorrendo: (3 min) contextualização como exemplo nível 4–5; (5 min) moodboard e coerência de direção artística → C2; (5 min) breakdown técnico UV, material PBR, textura com narrativa de desgaste, bake sem artefatos → C3, C4, C5, C6; (4 min) cena na Unity e renders → C7, C8; (3 min) estrutura da apresentação do exemplo → C9. Se não houver kit de coorte anterior, usar kit próprio ou documentação de portfólio profissional (com créditos), desde que cubra visivelmente os 10 critérios. O objetivo é calibrar expectativas, não intimidar. Depois disso, o estúdio inicia com 15 min de preparação final e o primeiro bloco de apresentações.
-
-[!FIGURA]
-Objetivo didático: antecipar o padrão esperado com um exemplo concreto, para a turma reconhecer o nível-alvo antes da própria defesa e da comparação com a autoavaliação.
-Arquivo sugerido: assets/kit_referencia_breakdown.webp
-Descrição: montagem de três painéis de um Kit Modular de referência — (1) moodboard e assets do kit lado a lado, mostrando coerência de direção artística; (2) breakdown técnico de um asset: UV layout, material PBR e textura com desgaste, com o bake sem seams; (3) a cena final montada na Unity sob luz baked, com um render em destaque.
-Como produzir: usar um kit de coorte anterior ou de referência do professor. No Blender/3D Coat, capturar o moodboard, o UV editor e o material do asset; no Unity, capturar a cena montada com iluminação baked e um render final. Compor os três painéis no Krita, numerados 1–2–3, com rótulos "Direção Artística", "Breakdown Técnico" e "Cena Final".
+Notas: Fechamento (Encontro 2, 10 min). Recapitular brevemente a trajetória do semestre — do UV inicial ao Kit Modular completo defendido na Semana 16. Informar prazos administrativos finais (lançamento de notas, prazo de recurso, se houver) e agradecer o semestre de trabalho. Esta é a última semana letiva da disciplina — encerrar com tom caloroso, reconhecendo o esforço acumulado da turma.
 -->

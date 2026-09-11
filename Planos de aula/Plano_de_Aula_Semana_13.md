@@ -15,7 +15,7 @@ Os estudantes chegam com:
 - Pacote completo de bake (Normal, AO, Curvature, ID Map) dominado e aplicado em pelo menos um asset do kit — Semana 12
 - Dois **Assets Hero** consolidados (Asset 01 e Asset 02) com UV finalizado, material PBR completo, desgaste pintado e bake integrado — Semanas 1 a 12
 - Ao menos um **Asset Secundário** adicional, produzido em ciclo abreviado (UV simples + material PBR coerente com o kit, sem o mesmo aprofundamento de pintura e bake dos Heróis) — ver "Diretriz de composição do kit" abaixo
-- Feedback da CF4 (Semana 11) incorporado, com prioridade de melhoria já trabalhada
+- Feedback da CF3 (Semana 11) incorporado, com prioridade de melhoria já trabalhada
 - Kit modular com identidade visual e paleta já estabelecidas (moodboard atualizado desde a Semana 1)
 
 > **Diretriz de composição do kit (Plano de Ensino, Seção 8.1):** o Kit Modular final exige 5 a 10 assets, mas nem todos recebem o mesmo tratamento individual. Os Assets Hero (2, produzidos nas Semanas 1–12) recebem o fluxo completo. Os Assets Secundários (2–3) devem ser modelados e ter um UV e material básico preparados como tarefa extraclasse entre as Semanas 9 e 12 — não é esperado que recebam pintura de desgaste ou bake dedicados; a Semana 13 é justamente onde eles ganham textura de fato, ao entrarem no Texture Atlas junto aos Heróis. Se um estudante chega a esta semana sem nenhum Asset Secundário modelado, o professor deve orientá-lo a usar parte da Etapa 1 do estúdio (abaixo) para escolher um objeto simples já existente no repositório de referência da disciplina, em vez de atrasar a criação do UV combinado.
@@ -39,7 +39,7 @@ Ao final da semana, o estudante será capaz de:
 
 ## Critérios observados nesta semana
 
-> 🔵 **Crítica Informal.** Não há nota formal nesta semana. C7 (Otimização) é observado pela **primeira vez** na disciplina — é a semana em que esse critério começa a ser construído como evidência, embora só entre em nota formal na CF5 (Semana 14). C3 (UV Mapping) retorna em observação, revisitado sob a ótica de otimização.
+> 🔵 **Crítica Informal.** Não há nota formal nesta semana. C7 (Otimização) é observado pela **primeira vez** na disciplina — é a semana em que esse critério começa a ser construído como evidência, embora só entre em nota formal na CF4 (Semana 14). C3 (UV Mapping) retorna em observação, revisitado sob a ótica de otimização.
 
 | Critério | Status | O que observar |
 |---|---|---|
@@ -245,7 +245,7 @@ Encorajar comparação entre colegas — *"Vejam o critério de agrupamento do s
 
 - Priorizar apoio aos estudantes que perderam camadas de detalhe pintado ao remapear o UV — esse é o problema técnico mais provável e mais custoso em tempo desta semana.
 - Para estudantes que terminam rápido: sugerir avaliar se um quarto asset do kit poderia entrar no mesmo atlas sem comprometer a qualidade dos outros três.
-- Perguntas de mediação: *"Quantas texturas seu kit inteiro usava antes de hoje, e quantas usa agora depois desses três assets combinados? Essa conta já é uma evidência concreta de otimização que você pode apresentar na CF5."*
+- Perguntas de mediação: *"Quantas texturas seu kit inteiro usava antes de hoje, e quantas usa agora depois desses três assets combinados? Essa conta já é uma evidência concreta de otimização que você pode apresentar na CF4."*
 
 ---
 
@@ -261,10 +261,10 @@ Pergunta aberta: *"Vocês sentiram que algum dos três objetos perdeu qualidade 
 Deixar 2–3 respostas. O objetivo é consolidar que otimização sempre envolve trade-off, e que reconhecer esse trade-off é parte da competência técnica — não existe atlas "perfeito", existe atlas bem justificado para o caso de uso.
 
 3. **(2 min — Antecipação da Semana 14)**
-*"Semana que vem é Crítica Formal — CF5, a quinta do semestre. O tema é Trim Sheets: faixas de textura reutilizáveis para elementos modulares repetitivos. É a primeira vez que Otimização (C7) entra em nota. Antes de chegar: pensem em qual elemento do seu kit se repete várias vezes com pequenas variações — esse é o candidato ideal para trim sheet."*
+*"Semana que vem é Crítica Formal — CF4, a quarta do semestre. O tema é Trim Sheets: faixas de textura reutilizáveis para elementos modulares repetitivos. É a primeira vez que Otimização (C7) entra em nota. Antes de chegar: pensem em qual elemento do seu kit se repete várias vezes com pequenas variações — esse é o candidato ideal para trim sheet."*
 
 4. **(2 min — Confirmação das entregas)**
-Recapitular nomenclatura de entrega e prazo. Lembrar que a justificativa escrita de agrupamento do atlas será parte da evidência de C7 na CF5.
+Recapitular nomenclatura de entrega e prazo. Lembrar que a justificativa escrita de agrupamento do atlas será parte da evidência de C7 na CF4.
 
 ---
 
@@ -298,7 +298,7 @@ Reorganizar UV é mais rápido que reconstruir texturas pintadas à mão nas nov
 | Estudante divide o espaço do atlas igualmente entre objetos de tamanhos diferentes | Colocar os três objetos lado a lado no viewport na escala real e perguntar: "Olhando assim, qual deles claramente precisa de mais pixels para não ficar borrado?" A comparação visual direta corrige a decisão mais rápido que a explicação teórica. |
 | Estudante perdeu camadas de detalhe pintado ao remapear UV | Normalizar a situação como parte esperada do processo, não como erro: "Isso acontece sempre que se remapeia um UV já texturizado — a boa notícia é que vocês já sabem pintar desgaste e stencil desde as Semanas 9 e 10, então essa parte vai mais rápido da segunda vez." |
 | Estudante inseguro se há sobreposição de UV entre objetos | Ensinar o uso da ferramenta de detecção automática de sobreposição do Blender, em vez de depender só da inspeção visual — reforçar que esse é um problema que vale a pena verificar com ferramenta, não só com o olho. |
-| Estudante terminando rápido e com qualidade | Propor avaliar se um quarto asset do kit cabe no mesmo atlas sem comprometer a qualidade dos outros três, ou calcular quantas texturas o kit inteiro usava antes e depois da otimização de hoje — essa métrica concreta já antecipa parte do que será cobrado na CF5. |
+| Estudante terminando rápido e com qualidade | Propor avaliar se um quarto asset do kit cabe no mesmo atlas sem comprometer a qualidade dos outros três, ou calcular quantas texturas o kit inteiro usava antes e depois da otimização de hoje — essa métrica concreta já antecipa parte do que será cobrado na CF4. |
 | Estudante questionando se vale a pena reduzir resolução individual em troca de menos draw calls | Validar a pergunta como legítima — não há resposta única. Propor que o estudante registre esse trade-off por escrito como parte da justificativa: em que situações a economia de draw calls compensa a perda de resolução, e em que situações não compensaria (ex.: um asset em primeiro plano na cena, muito próximo da câmera). |
 
 ---
@@ -327,7 +327,7 @@ Reorganizar UV é mais rápido que reconstruir texturas pintadas à mão nas nov
 | Render comparativo: assets com textura individual (antes) vs. com atlas combinado (depois) | `.png` com sufixo `_Comparativo_Atlas_S13` | Até o fim do segundo encontro |
 | Inventário do kit atualizado (asset / camada / status) | Tabela simples, digital ou anexada ao arquivo de entrega | Até o fim do segundo encontro |
 
-> **Nota:** Não há nota formal nesta semana (crítica informal). A qualidade do atlas produzido hoje, junto com a justificativa de agrupamento, será avaliada como evidência de C7 na CF5 da Semana 14 (Trim Sheets), quando Otimização entra em nota formal pela primeira vez.
+> **Nota:** Não há nota formal nesta semana (crítica informal). A qualidade do atlas produzido hoje, junto com a justificativa de agrupamento, será avaliada como evidência de C7 na CF4 da Semana 14 (Trim Sheets), quando Otimização entra em nota formal pela primeira vez.
 
 ---
 

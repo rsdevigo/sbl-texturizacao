@@ -14,10 +14,10 @@ footer: "IFMS • Semana 05"
 
 ## É calculado pela física da luz
 
-**Semana 5** — Fundamentos do Physically Based Rendering (PBR)
+**Semana 5** — Revisão de UV (feedback da CF1) + Fundamentos do PBR
 
 <!--
-Notas: Abertura da mini aula (20 min). Início da Unidade II. Mensagem central no subtítulo: PBR não é um estilo visual, é um modelo matemático de como a luz se comporta. O UV das Semanas 3-4 vira o endereço onde os mapas PBR vão morar. Hoje é também a segunda crítica formal do semestre (fecha C3 - UV, estreia C4 - PBR). Não é tutorial de cliques: é construir o raciocínio "o material é condutor ou dielétrico? qual sua microtextura?".
+Notas: Abertura da mini aula (20 min). Semana de transição: fecha a Unidade I revisando o UV a partir do feedback da CF1 e abre a Unidade II com a primeira aproximação a materiais PBR. NÃO há crítica formal nesta semana — é um encontro de ajuste e abertura, sem instrumento de avaliação. A CF1 (Semana 4) já avaliou C3 formalmente; a próxima crítica formal, a CF2, só acontece na Semana 8. Pela primeira vez os estudantes saem do UV Editor e entram no Shader Editor.
 -->
 
 ---
@@ -26,13 +26,81 @@ Notas: Abertura da mini aula (20 min). Início da Unidade II. Mensagem central n
 
 Ao final da semana você será capaz de:
 
+- Corrigir distorção e aproveitamento de espaço UV com base no feedback da CF1
 - Explicar **o que é PBR** e por que Metallic/Roughness é o padrão para jogos
 - Descrever a função de **Albedo**, **Metallic** e **Roughness**
 - Atribuir valores **fisicamente plausíveis** a metal, plástico, pedra e madeira
-- Criar **4 materiais PBR** no Principled BSDF e verificar em render
+- Criar materiais PBR de teste e aplicar um deles ao Hero Asset Referência
 
 <!--
-Notas: Ler rápido. Cada objetivo retorna ao longo da aula. Não antecipar texturas seamless (Semana 6) nem Normal Map (Semana 7). O foco é o valor plano: propriedade física da superfície, ainda sem imagem no canal.
+Notas: Ler rápido. Os dois primeiros objetivos fecham a Unidade I (UV); os demais abrem a Unidade II (PBR). Não há nota nesta semana — o professor observa C1, C3 e C4 informalmente, alimentando o acompanhamento que será avaliado formalmente na CF2 (Semana 8). Não antecipar texturas seamless (Semana 6) nem Normal Map (Semana 7): o foco de hoje é o valor plano.
+-->
+
+---
+
+<!-- _class: chapter -->
+
+# Fechando o UV
+
+## Revisão rápida com o feedback da CF1
+
+<!--
+Notas: Parte 1 da mini aula (~8 min). Objetivo: relembrar Stretch Overlay, texel density e Pack Islands o suficiente para que os estudantes ajam sobre o feedback da CF1 sem precisar de uma aula nova. Abrir dizendo: "Vocês já viram tudo isso na Semana 4. Hoje não é aula nova de UV — é a correção do que a crítica formal apontou."
+-->
+
+---
+
+## Três checagens rápidas antes de seguir
+
+- **Stretch Overlay** — azul = compressão, vermelho = esticamento. Meta: predominância de verde/azul-claro neutro.
+- **Texel density** — islands do mesmo objeto com densidade equivalente (Average Islands Scale resolve a maioria dos casos).
+- **Pack Islands** — aproveitamento do espaço 0–1, padding consistente entre islands.
+
+<div class="tip">
+
+Abram o feedback escrito que receberam na CF1 e localizem, no próprio arquivo, exatamente onde está o problema apontado.
+
+</div>
+
+<!--
+Notas: Revisão no quadro/projetor, não uma aula nova. Serve apenas para destravar a correção guiada pelo feedback já recebido. Estudantes que trabalharam em outros softwares podem confundir intuições — reforçar verbalmente a leitura das cores do Stretch Overlay.
+-->
+
+---
+
+<!-- _class: two-columns -->
+
+## O que muda entre a CF1 e hoje
+
+Antes (avaliado na CF1)
+
+- Islands esticadas ou comprimidas
+- Densidade de texel desigual entre islands
+- Espaço 0–1 mal aproveitado
+
+Depois (revisão de hoje)
+
+- Average Islands Scale aplicado
+- Pack Islands reorganizado
+- Stretch Overlay predominantemente neutro
+
+<!--
+Notas: Slide conceitual de apoio à correção ao vivo (Demonstração Parte 1, ~5 min): abrir um arquivo de prática com distorção evidente, aplicar Average Islands Scale e Pack Islands, comparar antes/depois. "Isso é exatamente o que vocês vão fazer com o feedback da própria CF1 daqui a pouco."
+
+[!FIGURA]
+Não existe hoje um arquivo de imagem para este slide — mantido texto-somente. Se for produzida uma nova figura, um bom candidato é um par de capturas de Stretch Overlay lado a lado (antes da correção / depois da correção) do mesmo asset, para reforçar visualmente a comparação.
+-->
+
+---
+
+<!-- _class: chapter -->
+
+# Abrindo a Unidade II
+
+## Fundamentos do Physically Based Rendering
+
+<!--
+Notas: Parte 2 da mini aula (~12 min). Objetivo: criar o entendimento de que PBR não é um estilo visual, mas um modelo matemático de como a luz se comporta ao tocar superfícies. O UV revisado agora é o endereço onde os mapas PBR das próximas semanas vão morar.
 -->
 
 ---
@@ -61,6 +129,7 @@ Mude a luz de lado e o brilho aparece no **lugar errado**.
 Notas: Revelar após as respostas da turma. Fixar: antes de ~2013, o artista embutia luz, sombra e reflexo na textura difusa. Funcionava com câmera e iluminação fixas. Em qualquer outro ângulo, o material quebrava. Isso motiva a virada do PBR.
 
 [!FIGURA]
+Este arquivo ainda não existe em assets/ — precisa ser produzido antes da aula.
 Objetivo didático: mostrar visualmente por que o highlight pintado falha, motivando a necessidade do PBR.
 Arquivo sugerido: assets/highlight_embutido_vs_pbr.webp
 Descrição: mesma esfera em duas condições. À esquerda, esfera com highlight pintado na textura difusa, iluminada por um lado — parece correta. À direita, a MESMA esfera com a luz vinda do lado oposto — o brilho pintado aparece no lado errado, revelando o erro.
@@ -92,7 +161,7 @@ Notas: Este é o conceito-âncora da semana. Reforçar: o artista descreve propr
 ## Dois workflows — por que Metallic/Roughness
 
 - **Specular/Glossiness** — mais antigo, controle direto do reflectance. Pipelines legados.
-- **Metallic/Roughness** — Unity, Unreal, Blender (Principled BSDF). Mais simples de calibrar.
+- **Metallic/Roughness** — Unity, Unreal, Blender (Principled BSDF), 3D Coat. Mais simples de calibrar.
 
 <div class="tip">
 
@@ -135,7 +204,7 @@ Albedo com **highlight pintado** ou valores **extremos**. Nenhum material real r
 Faixa física: valores de brilho entre **~0.15 e ~0.9** (evitar preto e branco puros).
 
 <!--
-Notas: Analogia fotográfica útil (do plano): "Albedo é o material fotografado num dia nublado — iluminação difusa, sem sombra nem reflexo." Erro comum nº 3 da semana: Albedo extremo. Pedra real não reflete 95% da luz. Usar a referência do moodboard para ancorar o valor.
+Notas: Analogia fotográfica útil (do plano): "Albedo é o material fotografado num dia nublado — iluminação difusa, sem sombra nem reflexo." Erro comum observado nesta semana: Albedo extremo. Pedra real não reflete 95% da luz. Usar a referência do moodboard para ancorar o valor.
 -->
 
 ---
@@ -156,7 +225,7 @@ Usar **Metallic 0.5** como padrão — o erro mais comum da primeira semana de P
 </div>
 
 <!--
-Notas: Erro nº 1 da semana. O estudante acha que "deixar no meio" é seguro. Valores intermediários só se justificam em regiões de TRANSIÇÃO (ferrugem sobre metal, metal pintado). Estratégia de correção: mostrar ao vivo Metallic 0, 0.5 e 1 com o mesmo Roughness e perguntar "você já viu esse material na vida real?".
+Notas: Erro mais frequente observado na circulação. O estudante acha que "deixar no meio" é seguro. Valores intermediários só se justificam em regiões de TRANSIÇÃO (ferrugem sobre metal, metal pintado). Estratégia de correção: mostrar ao vivo Metallic 0, 0.5 e 1 com o mesmo Roughness e perguntar "você já viu esse material na vida real?".
 -->
 
 ---
@@ -171,7 +240,7 @@ Define a microgranularidade: o quanto a luz é **espalhada** ao refletir.
 É o canal com **mais liberdade criativa** — a variação de roughness dá história ao material.
 
 <!--
-Notas: Ao contrário do Metallic, Roughness é genuinamente contínuo. Cuidado com o erro nº 1 de intuição invertida: quem viu tutoriais antigos pode achar "mais roughness = mais brilho". No Metallic/Roughness é o oposto. Manter no quadro: Roughness 0 = espelho | Roughness 1 = fosco.
+Notas: Ao contrário do Metallic, Roughness é genuinamente contínuo. Cuidado com o erro de intuição invertida: quem viu tutoriais antigos pode achar "mais roughness = mais brilho". No Metallic/Roughness é o oposto. Manter no quadro: Roughness 0 = espelho | Roughness 1 = fosco.
 -->
 
 ---
@@ -183,7 +252,7 @@ Notas: Ao contrário do Metallic, Roughness é genuinamente contínuo. Cuidado c
 ![diagram](assets/mermaid-1.png)
 
 <!--
-Notas: Este diagrama é o núcleo procedimental da semana. Repetir verbalmente no estúdio: "condutor ou dielétrico? qual a microtextura?". O GitHub Action converte o bloco mermaid em imagem automaticamente. Cada material do kit deve passar por essas duas perguntas antes de qualquer valor ser digitado.
+Notas: Este diagrama é o núcleo procedimental da semana. Repetir verbalmente no estúdio: "condutor ou dielétrico? qual a microtextura?". Cada material do kit deve passar por essas duas perguntas antes de qualquer valor ser digitado. Reaproveitado sem alteração — a lógica é a mesma independente de haver ou não crítica formal.
 -->
 
 ---
@@ -206,25 +275,32 @@ Notas: Mostrar as 5 referências visuais preparadas e pedir que a turma ESTIME a
 
 ---
 
-## No estúdio: 4 materiais do seu kit
+## No estúdio hoje: UV + primeiros materiais
 
-Hoje você cria **4 materiais PBR** que reflitam o universo do seu tema.
+50 minutos, dois blocos — **sem nota**, com acompanhamento do professor:
 
-Ainda **não** é pintar textura — é definir a **propriedade física** da superfície.
+1. **Revisão do UV** (≈20 min) — corrigir o Hero Asset Referência com base no feedback escrito da CF1
+2. **Materiais PBR de teste** (≈25 min) — criar de 2 a 4 materiais que reflitam o tema do kit
 
 <div class="tip">
 
-Comece pelos 4 materiais mais importantes do kit: normalmente uma pedra/concreto, uma madeira/metal e dois materiais característicos do tema.
+Ainda **não** é pintar textura — é definir a **propriedade física** da superfície. Nomeie os materiais com o nome real (ex: `pedra_calcaria`, `aco_enferrujado`).
 
 </div>
 
 <!--
-Notas: Consigna do estúdio (50 min). Reforçar a ligação com o Projeto Integrador e o moodboard: não é "pedra genérica", é AQUELA pedra do kit Medieval/Sci-Fi específico. Nomear os materiais com o material real (ex: pedra_calcaria, aco_enferrujado). Usar esferas (respondem melhor ao reflexo especular) e HDRI neutra no Viewport Rendered.
+Notas: Consigna do estúdio (Encontro 1, 50 min). Etapa 1: reabrir o Hero Asset com o feedback da CF1, reativar Stretch Overlay, aplicar Average Islands Scale/Pack Islands, salvar `[Nome]_HeroAsset_UV_Semana05.blend`. Etapa 2: criar 2-4 materiais no Principled BSDF com valores de referência real, aplicar um deles (valores planos) ao Hero Asset já com UV revisado, salvar `[Nome]_MateriaisPBR_Semana05.blend`. Circular perguntando: "O que a CF1 apontou nesse UV? Mostra onde corrigiu." e "Esse material é condutor ou dielétrico?".
 -->
 
 ---
 
 ## Erros comuns
+
+<div class="error">
+
+**Tratar o UV como opcional** — sem nota nesta semana, mas o UV mal corrigido vira problema de textura visível na Semana 6.
+
+</div>
 
 <div class="error">
 
@@ -245,7 +321,7 @@ Notas: Consigna do estúdio (50 min). Reforçar a ligação com o Projeto Integr
 </div>
 
 <!--
-Notas: Os três erros mais frequentes da semana, alinhados ao bloco de dificuldades do plano. Circular no estúdio caçando exatamente estes padrões. Para Roughness uniforme, usar a analogia do tato: "de olhos fechados, você distingue madeira de pedra pelo tato — o Roughness é o tato visual".
+Notas: Quatro erros mais frequentes da semana, alinhados ao bloco de dificuldades do plano. Circular no estúdio caçando exatamente estes padrões. Para Roughness uniforme, usar a analogia do tato: "de olhos fechados, você distingue madeira de pedra pelo tato — o Roughness é o tato visual".
 -->
 
 ---
@@ -259,7 +335,7 @@ Desde a adoção do workflow PBR pela indústria de jogos (por volta de 2014), n
 Errar metallic ou roughness fora da faixa física de um material é o tipo de erro que uma revisão técnica sênior identifica em segundos, antes mesmo de olhar o restante do asset.
 
 <!--
-Notas: Contextualizar o valor profissional. PBR deixou de ser opcional na indústria há mais de uma década — hoje é o piso mínimo de qualquer pipeline de material em tempo real. Amarra à CF2 desta semana (C4 avaliado formalmente): a calibração contra referência real que a mini-aula ensinou é literalmente o critério observável da rubrica.
+Notas: Contextualizar o valor profissional. PBR deixou de ser opcional na indústria há mais de uma década — hoje é o piso mínimo de qualquer pipeline de material em tempo real. A calibração contra referência real que a mini-aula ensinou hoje é observada informalmente e volta a ser cobrada formalmente na CF2 (Semana 8), já com textura real e dentro do 3D Coat.
 -->
 
 ---
@@ -268,6 +344,7 @@ Notas: Contextualizar o valor profissional. PBR deixou de ser opcional na indús
 
 # Resumo
 
+- **UV revisado** — distorção e aproveitamento corrigidos com base no feedback da CF1
 - **PBR** = a física decide a aparência; o artista define o que o material é
 - **Albedo** — pigmento puro, sem luz nem extremos
 - **Metallic** — binário: 0 dielétrico, 1 condutor
@@ -275,33 +352,36 @@ Notas: Contextualizar o valor profissional. PBR deixou de ser opcional na indús
 - A pergunta-guia: **condutor ou dielétrico? qual a microtextura?**
 
 <!--
-Notas: Amarrar a mini aula. Cada item retorna na demonstração e no estúdio. Não reler tudo — apontar a conexão com a demo dos 4 materiais no Principled BSDF. Lembrar que a crítica de hoje é FORMAL: fecha C3 (UV) e estreia C4 (PBR).
+Notas: Amarrar a mini aula. Cada item retorna na demonstração e no estúdio. Não reler tudo — apontar a conexão com a demo dos materiais no Principled BSDF. Não há crítica formal hoje: as observações de C1, C3 e C4 alimentam o acompanhamento informal até a CF2, na Semana 8.
 -->
 
 ---
 
-## Hoje também: Crítica Formal
+## Encontro 2: crítica circulante informal
 
-Segunda crítica formal do semestre.
+Sem Ficha de Crítica Formal. Sem autoavaliação obrigatória. Sem apresentação individual estruturada.
 
-- **Encerra C3 (UV Mapping)** — avaliação conclusiva do Asset 01
-- **Estreia C4 (Materiais PBR)** — os 4 materiais de teste entram na avaliação
+- 2–3 exemplos de UV revisado com sucesso (antes/depois)
+- 1–2 exemplos de material PBR bem calibrado
+- O erro mais comum observado na circulação do dia anterior
 
-<div class="industry">
+<div class="tip">
 
-Na crítica você **justifica** os valores de Metallic e Roughness com referência a um material real.
+Serve para recalibrar antes do estúdio, não para gerar nota. A reflexão de hoje aquece o que será cobrado formalmente na CF2 (Semana 8).
 
 </div>
 
 <!--
-Notas: Preparar a turma para o segundo encontro. Autoavaliação entregue ANTES da aula. Protocolo: o apresentador fala primeiro, a turma observa, depois abre. Selecionar 3-4 trabalhos que cubram o espectro. Vocabulário técnico esperado: condutor/dielétrico, microgranularidade.
+Notas: Abertura do Encontro 2 (15 min). Roteiro: (5 min) mostrar exemplos projetados de UV e material bem calibrados; (5 min) nomear o erro mais comum observado (tipicamente Metallic 0.5, Albedo muito claro, Roughness igual); (5 min) pergunta aberta a 2-3 voluntários — "Qual bloco foi mais difícil hoje, o UV ou o PBR? Por quê?" — sem registro formal.
 -->
 
 ---
 
 ## Agora: demonstração
 
-A seguir, **4 materiais PBR ao vivo** no Principled BSDF:
+**Parte 1** — correção ao vivo de um UV com distorção residual (Average Islands Scale + Pack Islands)
+
+**Parte 2** — 4 materiais PBR ao vivo no Principled BSDF:
 
 Metal polido • Plástico brilhante • Pedra áspera • Madeira
 
@@ -310,11 +390,32 @@ Rotacionar a HDRI e ver os materiais **responderem** à luz sem ajuste.
 ![large](assets/demo_4_materiais_pbr.webp)
 
 <!--
-Notas: Transição para a demonstração de 20 min. Layout dividido: Viewport Rendered com HDRI neutra à esquerda, Shader Editor à direita. Sequência: metal (Metallic 1, Rough 0.05) -> plástico (Metallic 0) -> pedra (Rough 0.85) -> madeira. Mostrar Metallic 0/0.5/1 no plástico. Rotacionar a HDRI no fim para provar a consistência. Manter o arquivo aberto durante o estúdio como âncora.
+Notas: Transição para a demonstração de 20 min (5 min de UV + 15 min de PBR). Layout dividido: Viewport Rendered com HDRI neutra à esquerda, Shader Editor à direita. Sequência: metal (Metallic 1, Rough 0.05) -> plástico (Metallic 0) -> pedra (Rough 0.85) -> madeira. Mostrar Metallic 0/0.5/1 no plástico. Rotacionar a HDRI no fim para provar a consistência. Manter os dois arquivos de demonstração (UV e materiais) abertos durante o estúdio como âncora.
 
 [!FIGURA]
+Este arquivo ainda não existe em assets/ — precisa ser produzido antes da aula.
 Objetivo didático: dar à turma um alvo visual do resultado esperado e antecipar o layout de tela da demonstração.
 Arquivo sugerido: assets/demo_4_materiais_pbr.webp
 Descrição: captura do Blender com quatro esferas lado a lado em Viewport Rendered sob HDRI neutra — metal polido (reflexo nítido), plástico vermelho brilhante, pedra bege fosca e madeira marrom. Ao lado, o Shader Editor mostrando um Principled BSDF conectado ao Material Output.
 Como produzir: no Blender, montar layout dividido (Viewport Rendered + Shader Editor), criar 4 esferas com os materiais da tabela de referência, adicionar HDRI neutra (ex: studio_small_09 do Poly Haven) no World e capturar a tela com os 4 materiais visíveis.
+-->
+
+---
+
+## Encerrando a Semana 5
+
+Vocês fecharam o ciclo de UV da CF1 e começaram a definir o que os materiais do kit são fisicamente.
+
+A pergunta que vai guiar todo o resto do semestre: **esse valor corresponde a algo real?**
+
+<div class="tip">
+
+**Semana 6:** vocês saem dos valores planos e entram em texturas seamless (imagens no canal Albedo). Guardem os arquivos com versionamento — os valores de hoje vão migrar para dentro das texturas.
+
+A próxima crítica formal, a **CF2**, é só na **Semana 8** — Semanas 6 e 7 são de produção livre, sem nota.
+
+</div>
+
+<!--
+Notas: Fechamento (10 min). Síntese técnica (2 min): "se a resposta for não, o material vai parecer falso, independentemente de quanto detalhe você pintar por cima." Reflexão de processo (3 min): perguntar a 2-3 voluntários qual material foi mais difícil de calibrar e por quê. Confirmação das entregas (2 min): Hero Asset com UV revisado, materiais PBR de teste (v1 e v2 pós-circulação), Hero Asset com material PBR aplicado, screenshots — recapitular nomenclatura esperada.
 -->

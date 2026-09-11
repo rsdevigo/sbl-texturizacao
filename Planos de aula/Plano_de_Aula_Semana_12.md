@@ -14,8 +14,8 @@ Os estudantes chegam com:
 
 - Fluxo completo de bake de **Normal Map** e **Ambient Occlusion** dominado: high-poly/low-poly, cage, ray distance/extrusion, resolução e margin — Semana 11
 - Pelo menos uma área de um dos assets já com bake de Normal + AO integrado ao material no 3D Coat, convivendo com desgaste pintado (S09) e stencil (S10) — Semana 11
-- Feedback escrito da Crítica Formal 4 (CF4), com ponto forte e prioridade de melhoria identificados por estudante — Semana 11
-- Ficha de Autoavaliação da CF4 já devolvida com anotações do professor
+- Feedback escrito da Crítica Formal 3 (CF3), com ponto forte e prioridade de melhoria identificados por estudante — Semana 11
+- Ficha de Autoavaliação da CF3 já devolvida com anotações do professor
 
 > **Nota de transição:** A Semana 11 resolveu o problema de transferir **geometria real** (chanfros, entalhes) do high-poly para o low-poly via Normal Map e AO. Esta semana não introduz um novo processo de bake — o fluxo de seleção de objetos, cage e execução já foi aprendido. O que muda é o **uso** do bake: ID Map e Curvature Map não existem para adicionar detalhe visual diretamente, mas para gerar **máscaras automáticas** que aceleram a texturização no 3D Coat. É a primeira vez na disciplina em que o bake deixa de ser apenas "captura de aparência" e passa a ser "captura de informação para seleção". Esse é o ponto central da aula: o estudante já sabe bakear — agora aprende a bakear *para outro propósito*.
 
@@ -36,7 +36,7 @@ Ao final da semana, o estudante será capaz de:
 
 ## Critérios observados nesta semana
 
-> 🔵 **Crítica Informal.** Não há nota formal nesta semana. C6 (Bake) e C5 (Texturização) seguem em observação contínua — a evidência de hoje será insumo direto para a CF5 (Semana 14, Trim Sheets), quando o kit inteiro precisa estar coerente.
+> 🔵 **Crítica Informal.** Não há nota formal nesta semana. C6 (Bake) e C5 (Texturização) seguem em observação contínua — a evidência de hoje será insumo direto para a CF4 (Semana 14, Trim Sheets), quando o kit inteiro precisa estar coerente.
 
 | Critério | Status | O que observar |
 |---|---|---|
@@ -260,7 +260,7 @@ Deixar 2–3 respostas. O objetivo é consolidar que ferramentas automáticas em
 *"Semana que vem começamos a Unidade IV: otimização e integração ao motor. A primeira parada é Texture Atlas — vamos unificar vários assets do kit em uma única textura para reduzir draw calls. Antes de chegar: pensem em quais três assets do seu kit poderiam, plausivelmente, compartilhar a mesma textura sem perder qualidade visual."*
 
 4. **(2 min — Confirmação das entregas)**
-Recapitular nomenclatura de entrega e prazo. Lembrar que o pacote de quatro bakes será referência de qualidade técnica (C6) na CF5 da Semana 14.
+Recapitular nomenclatura de entrega e prazo. Lembrar que o pacote de quatro bakes será referência de qualidade técnica (C6) na CF4 da Semana 14.
 
 ---
 
@@ -321,7 +321,7 @@ Alguns estudantes, especialmente os que tiveram mais dificuldade na Semana 11, p
 | ID Map e Curvature Map exportados | `.png` na resolução de trabalho do asset (1024 ou 2048), pasta `_Bake_S12` | Até o fim do segundo encontro |
 | Screenshot comparativo: sem máscaras automáticas vs. com Curvature e ID Map aplicados | `.png` com sufixo `_Comparativo_Bake_S12` | Até o fim do segundo encontro |
 
-> **Nota:** Não há nota formal nesta semana (crítica informal). A qualidade do pacote de quatro bakes gerado hoje será avaliada como evidência de C6 na CF5 da Semana 14 (Trim Sheets), quando o kit precisa demonstrar coerência técnica completa entre todos os assets.
+> **Nota:** Não há nota formal nesta semana (crítica informal). A qualidade do pacote de quatro bakes gerado hoje será avaliada como evidência de C6 na CF4 da Semana 14 (Trim Sheets), quando o kit precisa demonstrar coerência técnica completa entre todos os assets.
 
 ---
 

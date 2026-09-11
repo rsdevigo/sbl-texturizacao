@@ -272,7 +272,7 @@ Notas: Contextualizar o valor profissional (não decorativo). Em pipelines de pr
 - A máscara automática **acelera**, não substitui a pintura das Semanas 9 e 10
 
 <!--
-Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonstração ao vivo (bake de ID Map e Curvature no Blender + importação no 3D Coat) e no estúdio (pacote de quatro mapas de um asset do kit). Lembrar: crítica 🔵 informal nesta semana — o pacote de bakes gerado hoje será evidência de C6 (Bake) na CF5 da Semana 14 (Trim Sheets), quando o kit precisa estar tecnicamente coerente.
+Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonstração ao vivo (bake de ID Map e Curvature no Blender + importação no 3D Coat) e no estúdio (pacote de quatro mapas de um asset do kit). Lembrar: crítica 🔵 informal nesta semana — o pacote de bakes gerado hoje será evidência de C6 (Bake) na CF4 da Semana 14 (Trim Sheets), quando o kit precisa estar tecnicamente coerente.
 -->
 
 ---

@@ -71,15 +71,15 @@ Tecnologia em Jogos Digitais | Studio-Based Learning | 17 Semanas | 51 horas
 ---
 
 ### Semana 5 🔵
-**Tema:** Otimização de layout UV: distorção, aproveitamento e densidade de texel
+**Tema:** Revisão de UV com base no feedback da CF1 e fundamentos de PBR (Principled BSDF)
 
 | Campo | Conteúdo |
 |---|---|
-| **Apostila** | Parte II, Cap. 6 — Texel Density e Organização de UVs (análise de distorção, otimização de layout e empacotamento de UV islands) |
-| **Mini Aula** (20 min) | Analisando distorção com Stretch Overlay. Normalização de texel density. Empacotamento com Pack Islands nativo do Blender e estratégias de aproveitamento do espaço UV. |
-| **Demonstração** (20 min) | Otimização ao vivo de um UV com má distribuição de espaço, usando Pack Islands nativo do Blender. Comparação antes/depois. |
-| **Estúdio** (50+60 min) | Revisão e otimização do UV do Hero Asset Referência com base no feedback da crítica formal da Semana 4. |
-| **Entrega** | Hero Asset Referência com UV revisado (blend + screenshot atualizado). |
+| **Apostila** | Parte II, Cap. 6 — Texel Density e Organização de UVs (revisão rápida de distorção e empacotamento); Parte III, Cap. 8 e Cap. 9 — Fundamentos do PBR e os mapas que compõem um material (Albedo, Metallic, Roughness) |
+| **Mini Aula** (20 min) | Revisão rápida de Stretch Overlay, texel density e Pack Islands para corrigir o feedback da CF1. Em seguida, transição para a Unidade II: o que é PBR e por que o modelo Metallic/Roughness é o padrão para jogos em tempo real. |
+| **Demonstração** (20 min) | Ajuste ao vivo de um UV com distorção residual usando Pack Islands. Criação de materiais PBR simples no Principled BSDF (Albedo, Metallic, Roughness) com valores fisicamente plausíveis para diferentes materiais de referência. |
+| **Estúdio** (50+60 min) | Revisão e otimização do UV do Hero Asset Referência com base no feedback da crítica formal da Semana 4. Em seguida, criação de materiais PBR de teste (valores planos, sem textura ainda) para o tema do kit e aplicação de um material ao Hero Asset Referência. |
+| **Entrega** | Hero Asset Referência com UV revisado e material PBR de valores planos aplicado (blend + screenshot atualizado). |
 | **Crítica** | 🔵 Informal — Crítica circulante em estúdio ou comentário coletivo rápido ao final do segundo encontro. |
 
 ---
@@ -89,44 +89,44 @@ Tecnologia em Jogos Digitais | Studio-Based Learning | 17 Semanas | 51 horas
 ---
 
 ### Semana 6 🔵
-**Tema:** Fundamentos de PBR e texturas seamless/tileable
+**Tema:** Criação de texturas seamless e tileable (trilha fotorrealista ou estilizada)
 
 | Campo | Conteúdo |
 |---|---|
-| **Apostila** | Parte III, Cap. 8 — Fundamentos do Physically Based Rendering; Parte III, Cap. 9 — Os Mapas que Compõem um Material PBR (Diffuse/Albedo, Metallic e Roughness); Parte IV, Cap. 12 — Texturas Seamless e Tileables |
-| **Mini Aula** (20 min) | O que é PBR e por que usamos? Workflow Metallic/Roughness. O papel de cada mapa: Albedo, Metallic, Roughness. O que é uma textura seamless e como ela se conecta a esses mapas. |
-| **Demonstração** (20 min) | Criação de um material PBR simples no Blender (Principled BSDF). Criação de uma textura seamless a partir de uma fotografia usando Krita (offset + patch de bordas) e aplicação no material. |
-| **Estúdio** (50+60 min) | Criação de 2–3 materiais PBR de teste (metal, pedra, madeira) e de uma textura seamless temática condizente com o Hero Asset Referência. |
-| **Entrega** | Arquivo .blend com materiais PBR de teste + textura seamless temática (PNG 1024×1024 ou superior). |
+| **Apostila** | Parte IV, Cap. 12 — Texturas Seamless e Tileables |
+| **Mini Aula** (20 min) | O que é uma textura seamless e por que ela é necessária em jogos com superfícies amplas. Duas trilhas de fonte: fotográfica (Poly Haven, AmbientCG) ou estilizada/pintada, ambas exigindo o mesmo tratamento de continuidade de borda. |
+| **Demonstração** (20 min) | Criação de uma textura seamless a partir de uma fotografia usando Krita (offset + patch de bordas) e aplicação no Albedo do material PBR já calibrado na Semana 5. Comparação rápida com o caso de uma textura estilizada. |
+| **Estúdio** (50+60 min) | Criação de uma textura seamless temática (fotográfica ou estilizada, conforme a trilha visual do estudante) condizente com o Hero Asset Referência, conectada ao Albedo com Metallic/Roughness preservados. |
+| **Entrega** | Arquivo .blend do Asset 01 com textura seamless aplicada ao Albedo (PNG 1024×1024 ou superior) + arquivo .kra de origem. |
 | **Crítica** | 🔵 Informal — Crítica circulante em estúdio ou comentário coletivo rápido ao final do segundo encontro. |
 
 ---
 
 ### Semana 7 🔵
-**Tema:** Normal Map, geração procedural e preparação para o 3D Coat
+**Tema:** Migração para o 3D Coat: mesh maps (AO, Curvature, Normal) e Smart Materials
 
 | Campo | Conteúdo |
 |---|---|
-| **Apostila** | Parte V, Cap. 16 — Normal Maps e Transferência de Detalhes; Parte IV, Cap. 13 — Texturização Procedural (geração procedural no Blender) |
-| **Mini Aula** (20 min) | Como funciona um Normal Map (espaço tangente vs. espaço objeto). Introdução à geração procedural de texturas com nós no Blender. (Subsurface Scattering fica para a Semana 8, junto ao sistema de canais do 3D Coat.) |
-| **Demonstração** (20 min) | Criação de um Normal Map procedural no Blender (Bump → Normal Map node). Primeiros nós procedurais (Noise Texture, Musgrave). |
-| **Estúdio** (50+60 min) | Aplicação de material PBR completo (Albedo + Metallic + Roughness + Normal) ao Hero Asset Referência, usando texturas procedurais como base. |
-| **Entrega** | Hero Asset Referência com material PBR completo no Blender (todos os canais conectados). Screenshot do node tree e render. |
+| **Apostila** | Parte III, Cap. 10 — Construção e Análise de Materiais Reais (introdução ao 3D Coat); Parte V, Cap. 16 — Normal Maps e Transferência de Detalhes. Leitura complementar (não avaliada): Parte IV, Cap. 13 — Texturização Procedural, para quem quiser a via alternativa de nós no Blender |
+| **Mini Aula** (20 min) | O que são mesh maps (AO, Curvature, Normal) e por que podem ser gerados direto da malha, sem high-poly. As duas trilhas visuais dentro do mesmo fluxo de ferramenta: base fotográfica + máscara de desgaste (fotorrealista) ou Smart Material guiado pela mesma máscara (estilizado). |
+| **Demonstração** (20 min) | Exportação do Blender e importação no 3D Coat. Bake de AO e Curvature direto da malha. Normal Map gerado por pintura no canal Depth. |
+| **Estúdio** (50+60 min) | Migração do Hero Asset Referência para o 3D Coat: Color (base fotográfica ou Smart Material), máscara de AO/Curvature para desgaste, e Normal via Depth. Mínimo de três canais ativos ao final da semana. |
+| **Entrega** | Hero Asset Referência no 3D Coat com Color + Roughness + Normal ativos. Screenshot de camadas e render comparativo antes/depois da máscara. |
 | **Crítica** | 🔵 Informal — Crítica circulante em estúdio ou comentário coletivo rápido ao final do segundo encontro. |
 
 ---
 
-### Semana 8 🔴 CRÍTICA FORMAL
-**Tema:** Workflow no 3D Coat: camadas, projeção e exportação PBR
+### Semana 8 🔴 CRÍTICA FORMAL — CF2
+**Tema:** Refinamento no 3D Coat e exportação PBR unificada (Albedo, Metallic, Roughness, Normal)
 
 | Campo | Conteúdo |
 |---|---|
-| **Apostila** | Parte III, Cap. 10 — Construção e Análise de Materiais Reais (introdução ao 3D Coat; workflow de texturização PBR: camadas e exportação). Leitura de apoio: Parte VI, Cap. 23 — Controle de Qualidade de Materiais |
-| **Mini Aula** (20 min) | Tour pelo 3D Coat: Paint Room, UV Room, Render Room. Sistema de camadas e canais PBR, incluindo Subsurface Scattering (SSS) para materiais orgânicos. Importação de mesh com UV do Blender e exportação de mapas. |
-| **Demonstração** (20 min) | Importação do Hero Asset Referência (com UV pronto) para o 3D Coat. Pintura de camadas de Albedo, Roughness e Metallic. Exportação de mapas PBR e configuração no Blender. |
-| **Estúdio** (50+60 min) | Cada estudante importa seu Hero Asset Referência para o 3D Coat e realiza a texturização PBR por camadas, aplicando cor base, roughness e metallic coerentes com o tema definido na Semana 3. |
-| **Entrega** | Hero Asset Referência texturizado no 3D Coat: exportação dos mapas PBR (Albedo, Metallic, Roughness) e material configurado no Blender. |
-| **Crítica** | 🔴 **FORMAL** — Apresentação estruturada com rubrica, autoavaliação obrigatória e feedback escrito do professor. |
+| **Apostila** | Parte III, Cap. 10 — Construção e Análise de Materiais Reais (workflow de texturização PBR: camadas e exportação). Leitura de apoio: Parte VI, Cap. 23 — Controle de Qualidade de Materiais |
+| **Mini Aula** (20 min) | Subsurface Scattering (SSS) para materiais orgânicos. Lógica de combinar base + máscara + pintura manual sem que nenhuma camada sozinha conte toda a história do material. |
+| **Demonstração** (20 min) | Refinamento das camadas de Color e Metallic. Exportação dos quatro mapas PBR (Albedo, Metallic, Roughness, Normal) e configuração completa no Blender, com o nó Normal Map. |
+| **Estúdio** (50+60 min) | Cada estudante refina o material do Hero Asset Referência no 3D Coat (Color, Roughness, Metallic), exporta os quatro mapas PBR e reconfigura o material no Blender, sem nós procedurais remanescentes. |
+| **Entrega** | Hero Asset Referência texturizado no 3D Coat: exportação dos quatro mapas PBR (Albedo, Metallic, Roughness, Normal) e material configurado no Blender. |
+| **Crítica** | 🔴 **FORMAL — CF2** (25% do Portfolio de Artefatos) — Apresentação estruturada com rubrica, autoavaliação obrigatória e feedback escrito do professor. |
 
 ---
 

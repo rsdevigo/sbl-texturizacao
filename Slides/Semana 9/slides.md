@@ -258,7 +258,7 @@ Notas: Contextualizar o valor profissional. Narrativa ambiental via desgaste é 
 - Sempre validar a **leitura à distância** no Render Room
 
 <!--
-Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonstração ao vivo (edge wear + dirt no asset preparado) e no estúdio (Asset 01 recebe as camadas de detalhe). Lembrar: semana de crítica 🔵 Informal — sem nota, mas o professor registra evidências de C5 para calibrar a CF4 (Semana 11).
+Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonstração ao vivo (edge wear + dirt no asset preparado) e no estúdio (Asset 01 recebe as camadas de detalhe). Lembrar: semana de crítica 🔵 Informal — sem nota, mas o professor registra evidências de C5 para calibrar a CF3 (Semana 11).
 -->
 
 ---

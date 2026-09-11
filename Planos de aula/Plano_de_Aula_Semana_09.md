@@ -38,7 +38,7 @@ Ao final da semana, o estudante será capaz de:
 
 ## Critérios observados nesta semana
 
-> ⚠️ **Semana sem crítica formal — nenhuma nota é atribuída.** O professor observa e registra evidências nos critérios abaixo para calibrar a avaliação da CF4 (sem 11). O estudante recebe feedback oral durante o estúdio.
+> ⚠️ **Semana sem crítica formal — nenhuma nota é atribuída.** O professor observa e registra evidências nos critérios abaixo para calibrar a avaliação da CF3 (sem 11). O estudante recebe feedback oral durante o estúdio.
 
 | Critério | O que observar |
 |---|---|
@@ -47,7 +47,7 @@ Ao final da semana, o estudante será capaz de:
 | C5 — Texturização | Qualidade e intenção das camadas de detalhe: edge wear nas arestas corretas, sujeira com lógica gravitacional e de uso, scratches com direção e intensidade plausíveis |
 | C10 — Participação (CC) | Qualidade do feedback oferecido na crítica informal: é observável e específico? Conecta desgaste à lógica de uso do objeto? |
 
-> **Progressão do PA — entre CF3 e CF4:** Esta semana fica entre a CF3 (sem 8) e a CF4 (sem 11). C5 (Texturização) é o critério central — é onde o trabalho desta semana mais impacta a próxima avaliação formal. A distinção entre nível 2 ("desgaste uniforme e irreal") e nível 4 ("camadas com narrativa de uso perceptível") é exatamente o que esta aula ensina. O professor deve manter registro de observação de C5 durante o estúdio para calibrar a CF4.
+> **Progressão do PA — entre CF2 e CF3:** Esta semana fica entre a CF2 (sem 8) e a CF3 (sem 11). C5 (Texturização) é o critério central — é onde o trabalho desta semana mais impacta a próxima avaliação formal. A distinção entre nível 2 ("desgaste uniforme e irreal") e nível 4 ("camadas com narrativa de uso perceptível") é exatamente o que esta aula ensina. O professor deve manter registro de observação de C5 durante o estúdio para calibrar a CF3.
 
 ---
 
