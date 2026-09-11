@@ -4,7 +4,7 @@
 **Tema da semana:** Apresentação e defesa do Kit Modular e da fase caminhável
 **Apostila:** Todos os capítulos — Parte I a VI, Cap. 1 a 25 — Integração semestral. Leitura obrigatória desta semana: Parte VI, Cap. 24 — Apresentação Profissional de Assets (breakdown visual, portfólio e padrão ArtStation)
 **Carga horária:** 3h (2 encontros de 1h30)
-**Crítica:** 🔴 **FORMAL — CF5 / Projeto Final** (40% da Nota Final)
+**Crítica:** 🔴 **FORMAL — CF5 / Projeto Final** (40% da Nota Final) — Apresentação estruturada com rubrica, autoavaliação obrigatória e feedback escrito do professor
 
 ---
 
@@ -28,7 +28,7 @@ Ao final da semana, o estudante será capaz de:
 
 ---
 
-## Critérios da Rubrica Mestre ativos nesta semana — CF5 (todos os critérios, com pesos)
+## Critérios da Rubrica Mestre ativos nesta semana
 
 | Critério | Peso na CF5 |
 |---|---|

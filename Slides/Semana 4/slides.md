@@ -10,266 +10,146 @@ footer: "IFMS • Semana 04"
 <!-- _class: cover -->
 <!-- _paginate: false -->
 
-# Otimizar o UV
+# Texturização
 
-## Não é estética — é resolução de textura
+## Do moodboard ao UV real
 
-**Semana 4** — Distorção, texel density e empacotamento de islands
+**Semana 4** — Abertura de UV do Hero Asset Referência — Smart UV Project e seams manuais
 
 <!--
-Notas: Abertura da mini aula (20 min). Continuação direta da Semana 3 — o UV já foi ABERTO; agora vamos QUALIFICAR esse UV. A mensagem central da semana está no subtítulo: otimizar UV tem impacto direto e mensurável na qualidade da textura. Também é a semana em que o Asset 02 começa a receber UV. Última semana da Unidade I. Não é tutorial de cliques — é construir o raciocínio "distorção -> normalização -> empacotamento".
+Notas: Abrir marcando a virada: até aqui (Semana 3) o Hero Asset era decisão e justificativa escrita. Hoje ele chega modelado, pela primeira vez, e a turma abre o UV dele de verdade. É também a primeira Crítica Formal do semestre — dizer isso já na abertura, sem alarmismo.
 -->
 
 ---
 
-## Objetivos de hoje
+## Onde vocês estão
+
+Semana 2: primeiro contato técnico com UV, **sem tema**.
+
+Semana 3: tema e Hero Asset Referência **definidos e justificados**.
+
+Hoje: o Hero Asset chega modelado — e o UV dele vale nota.
+
+<!--
+Notas: Recapitular em uma frase cada semana, sem reabrir conteúdo técnico de projeção UV (Semana 2) nem a lógica dos três critérios de escolha (Semana 3) — isso já foi ensinado. Só situar o fluxo.
+-->
+
+---
+
+<div class="objectives">
 
 Ao final da semana você será capaz de:
 
-- Identificar distorção com o **Stretch Overlay** e nomear sua causa
-- Explicar **texel density** e por que ela precisa ser consistente
-- Normalizar as islands com **Average Islands Scale**
-- Empacotar o layout com **Pack Islands**, na ordem certa
-- Abrir o UV do **Asset 02** já aplicando os critérios da Semana 3, sem precisar de correção depois
-
-<!--
-Notas: Ler rápido. Cada objetivo volta ao longo da aula. Não antecipar PBR (Semana 5) nem Texture Atlas (Semana 13). Os quatro primeiros objetivos qualificam o UV do Asset 01, já aberto na Semana 3; o quinto abre a frente do Asset 02 — critério C3 da rubrica cobre os dois assets nesta semana.
--->
-
----
-
-<!-- _class: two-columns -->
-
-## Duas frentes de trabalho hoje
-
-### Asset 01
-
-Já tem UV desde a Semana 3. Hoje: **otimizar** — corrigir distorção residual, normalizar texel density, empacotar.
-
-### Asset 02
-
-Ainda não tem UV. Hoje: **abrir** — marcar seams e fazer Unwrap aplicando desde o início os critérios já aprendidos.
-
-<div class="tip">
-
-O Asset 02 não precisa estar finalizado hoje — mas precisa estar **começado**.
+- Explicar quando usar **Smart UV Project** e suas limitações
+- Aplicar a **lógica de corte de seams** para reduzir distorção
+- Abrir o UV completo do Hero Asset com islands organizadas
+- Avaliar o próprio layout com **Stretch Overlay** e checkerboard
+- Apresentar o UV na **primeira Crítica Formal** do semestre
 
 </div>
 
 <!--
-Notas: Contextualizar a estrutura dos dois encontros antes de entrar na mini aula técnica. O Asset 02 é conteúdo novo desta semana — reforçar que os mesmos critérios de seams da Semana 3 (C3) já se aplicam sem precisar de uma rodada de correção depois. As ferramentas de otimização (Stretch Overlay, Average Islands Scale, Pack Islands) valem para os dois assets.
+Notas: Os três primeiros objetivos são cobertos na mini aula e na demonstração; os dois últimos são o trabalho do estúdio de hoje, fechado na Crítica Formal do Encontro 2.
 -->
 
 ---
 
 <!-- _class: question -->
 
-# A textura é a **mesma**. Por que uma parte do objeto aparece **nítida** e outra parece **borrada**?
+# O Smart UV Project resolveria isso sozinho?
 
 <!--
-Notas: Mostrar aqui a comparação visual (figura abaixo). Deixar 2-3 respostas da turma antes de revelar a causa: texel density inconsistente. Não corrigir — usar as respostas como ponte para o conceito.
+Notas: Deixar 2-3 respostas antes de nomear o conceito. A resposta certa é "depende" — ponte direta para a próxima seção.
 -->
 
 ---
 
-<!-- _class: image-right -->
+## Smart UV Project: quando usar
 
-![](assets/comparacao_nitido_borrado.webp)
+Analisa a geometria e corta automaticamente por ângulo de face.
 
-## O olho vê o sintoma
-
-A causa está no **UV**, não na textura.
-
-Uma island pequena recebe **menos pixels**. A textura chega esticada.
+Rápido, útil como **ponto de partida** ou para objetos secundários de baixa importância visual.
 
 <!--
-Notas: Revelar a causa depois das respostas da turma. Fixar: o problema não é o arquivo de imagem — é como o espaço UV foi distribuído. Isso prepara os três conceitos técnicos da aula.
-
-[!FIGURA]
-Objetivo didático: dar evidência visual concreta de que o mesmo material rende qualidade diferente conforme a área de UV — é o gancho que motiva toda a otimização da semana.
-Arquivo sugerido: assets/comparacao_nitido_borrado.webp
-Descrição: um único asset do kit renderizado com checkerboard (ou madeira), dividido ao meio: metade com UV normalizado (quadrados uniformes, nítido) e metade com island subdimensionada (quadrados grandes, borrado). Uma linha divide as duas condições.
-Como produzir: no Blender, duplicar o asset e aplicar checkerboard em ambos; num deles reduzir a escala de uma island no UV Editor. Renderizar lado a lado em Material Preview e compor a comparação no Krita com rótulos "nítido / borrado".
+Notas: Não é uma ferramenta ruim — é uma ferramenta para um problema diferente do de hoje. O Hero Asset é a peça mais observada do semestre.
 -->
 
 ---
-
-## Stretch Overlay: ver o que o olho não vê
-
-No UV Editor, ativa a colorização de distorção por face:
-
-- **Azul** — sem distorção (proporção do 3D preservada)
-- **Verde** — distorção leve, geralmente aceitável
-- **Vermelho** — distorção severa: a textura vai esticar
-
-<div class="tip">
-
-A causa mais comum: island **mal orientada** ou **mal escalonada** após o Unwrap.
-
-</div>
-
-<!--
-Notas: O Stretch Overlay é ativado pelo ícone de gradiente na barra do UV Editor. Reforçar que ele mostra o problema ANTES de aplicar textura — não é preciso pintar para saber que vai dar errado. Adicionar um seam resolve parte; orientar/escalonar a island resolve o resto.
--->
-
----
-
-## Texel density: todos os assets, a mesma atenção
-
-**Texel density** = pixels de textura por unidade de área do modelo.
-
-Island grande -> mais pixels. Island pequena -> menos pixels.
-
-Se dois assets do kit têm density diferente, um parece ter o **dobro** da resolução do outro. O conjunto fica **incoerente**.
-
-<!--
-Notas: Este é o conceito-chave da semana. Amarrar ao Projeto Integrador: num kit modular, todos os assets vistos à mesma distância no jogo devem ter texel density similar, senão a cena parece amadora. Verificação prática: com checkerboard, os quadrados devem ter tamanho visual similar entre os assets, na mesma escala.
--->
-
----
-
-## Average Islands Scale: normalizar em um clique
-
-No UV Editor, com **todas** as islands selecionadas:
-
-`UV > Average Islands Scale`
-
-Redimensiona todas as islands para a **mesma densidade** de pixels por unidade de superfície.
-
-<div class="industry">
-
-É o **ponto de partida** de qualquer otimização: normalizar **antes** de empacotar.
-
-</div>
-
-<!--
-Notas: Cuidado conceitual importante: o Average calcula em relação à ÁREA DA FACE no 3D, não ao tamanho aparente no Viewport. Um objeto pequeno terá islands menores, um grande terá maiores — mas a DENSIDADE será igual. Antecipar a confusão do bloco de dificuldades do plano.
--->
-
----
-
-## Pack Islands: aproveitar o espaço UV
-
-Depois de normalizar, as islands ficam espalhadas fora do quadrado.
-
-`UV > Pack Islands` reorganiza tudo dentro do quadrado **0-1**, maximizando o aproveitamento e respeitando um **padding** mínimo.
-
-Margin sugerida: **0.004** (textura 1024px) • **0.008** (textura 512px).
-
-<div class="tip">
-
-Ferramentas de empacotamento mais sofisticadas (ex.: **UVPackmaster**) voltam como recapitulação de 5 min no **início da Semana 6** — hoje o foco é só o Pack Islands nativo.
-
-</div>
-
-<!--
-Notas: Padding maior evita bleeding em mipmaps, mas desperdiça espaço. Não usar/demonstrar UVPackmaster nesta aula — para não sobrecarregar a mini-aula, ele é citado apenas como nome e retomado com 5 min de recapitulação no início da Semana 6, quando o Asset 01 já estiver pronto para receber textura. Hoje o Pack Islands nativo do Blender é suficiente para o Asset 01 e o Asset 02.
--->
-
----
-
-<!-- _class: diagram -->
-
-## A ordem importa
-
-![diagram](assets/mermaid-1.png)
-
-Pack Islands **não corrige** distorção — só reposiciona.
-
-<!--
-Notas: Este diagrama é o núcleo procedimental da semana. Repetir verbalmente e projetar durante o estúdio: "Distorção -> Normalização -> Empacotamento". Inverter a ordem é o erro nº 1 da semana. O GitHub Action converte o bloco mermaid em imagem automaticamente — não é preciso gerar arquivo manualmente. Uma island distorcida é empacotada distorcida.
--->
-
----
-
-## Empacotar com padding — a analogia
-
-**Margin** é a **calçada** entre duas casas no UV.
-
-- Calçada larga demais -> desperdiça terreno (resolução)
-- Calçada estreita demais -> na chuva (mipmap), a água escorre de uma casa para a outra (**bleeding**)
-
-<div class="tip">
-
-Para texturas de 1024px, **4px de calçada** já bastam.
-
-</div>
-
-<!--
-Notas: Analogia física do plano de aula para fixar a diferença entre padding suficiente e excessivo. Usar se a turma travar no conceito abstrato de margin. Não transformar em discussão numérica — a ideia é a intuição.
--->
-
----
-
-## Quanto do espaço UV você aproveita?
-
-- **~40%** — desperdício: metade da resolução jogada fora
-- **~70%** — funcional: meta mínima desta semana
-- **~90%** — otimizado: padrão de produção
-
-<div class="industry">
-
-Espaço UV vazio é **resolução de textura desperdiçada**.
-
-</div>
-
-<!--
-Notas: Muitos estudantes não têm referência intuitiva de "70% de aproveitamento". Criar âncoras visuais concretas nomeando qualitativamente cada faixa. Na demonstração, mostrar os três níveis lado a lado. A meta de entrega é acima de 70%.
--->
-
----
-
-## Cuidado: distorção que não é do UV
-
-Às vezes o vermelho no Stretch Overlay vem da **geometria**, não do seam:
-
-- **Ngon** — face com mais de 4 vértices
-- **Face não-planar** — vértices fora do mesmo plano
-
-Adicionar seams **não resolve** — o problema está antes do UV.
-
-<!--
-Notas: Erro comum nº 2 da semana. Se o vermelho persiste após reposicionar seams, pedir que verifique ngons: Select > All by Trait > Faces by Sides. Se for geometria, o conserto é no modelo, não no UV. Diagnóstico antes de ação.
--->
-
----
-
-## Erros comuns
 
 <div class="error">
 
-**Pack Islands antes de Average Islands Scale** — empacota com tamanhos errados; a density fica inconsistente e só aparece ao pintar.
+Cortes nem sempre ficam em posições esteticamente discretas.
 
 </div>
 
 <div class="error">
 
-**Confundir distorção de UV com ngon/geometria** — seams não corrigem face não-planar.
+Distribuição de islands raramente é eficiente no espaço 0–1.
 
 </div>
 
 <div class="error">
 
-**Aceitar Stretch Overlay vermelho** — o veio da madeira vai aparecer inclinado na textura final.
+Densidade de texel entre islands costuma ficar desigual.
 
 </div>
 
 <!--
-Notas: Os três erros mais frequentes da semana. O primeiro é de ORDEM, o segundo é de DIAGNÓSTICO, o terceiro é de CRITÉRIO. Fixar cada um com a solução durante a demo e circular no estúdio buscando exatamente esses padrões.
+Notas: Três limitações do Smart UV Project isoladamente. Para um Hero Asset, não é suficiente sozinho — precisa de seams manuais por cima.
 -->
 
 ---
 
-<!-- _class: industry -->
+## Seams: lógica de corte
+
+1. Cortar em arestas que **já escondem** a costura (cantos, junções)
+2. Cortar o **suficiente** para reduzir distorção, sem fragmentar demais
+3. Priorizar mudanças **reais** de superfície — não cortes arbitrários
+
+<!--
+Notas: Ligar ao critério 3 da Semana 3 (reaproveitamento) — um bom seam pensa também em onde a textura vai ser pintada depois.
+-->
+
+---
+
+## Princípios de um bom layout UV
+
+**Islands organizadas** — agrupadas por lógica de superfície.
+
+**Padding consistente** — 4 a 8 px em textura de 1024px.
+
+**Aproveitamento de espaço** — todo pixel não usado é resolução desperdiçada.
+
+<!--
+Notas: Reforçar que o critério técnico (Stretch Overlay, densidade de texel) já foi visto na Semana 2 em objetos neutros — a novidade de hoje é aplicar isso a uma peça real que vale nota.
+-->
+
+---
+
+<div class="tip">
+
+**Esse UV está sem sobreposição, com seams justificáveis, aproveitando o espaço?**
+
+</div>
+
+O padrão esperado hoje é o **Nível 3** da Rubrica Mestre — não o nível máximo.
+
+<!--
+Notas: Pergunta de checagem para repetir circulando no estúdio. Reforçar que a CF1 avalia domínio técnico do processo, não perfeição estética.
+-->
+
+---
+
+<!-- _class: invert -->
 
 ## Na indústria
 
-Texel density consistente entre todos os assets de um jogo é item obrigatório de qualquer guia de estilo técnico de produção — inconsistência aqui é apontada em qualquer revisão de arte, por mais bonita que seja a textura isolada.
+Um bom UV é **invisível** — ninguém nota o layout, só a textura final.
 
-Ferramentas como o UVPackmaster existem porque empacotar UV com eficiência, à mão, para um kit inteiro, não escala em produção real — mas o critério que a ferramenta automatiza é exatamente o que vocês aprenderam a julgar hoje.
+Um UV mal resolvido aparece semanas depois, quando é caro corrigir.
 
 <!--
-Notas: Contextualizar o valor profissional. Texel density inconsistente é um dos erros mais visíveis (e mais fáceis de evitar) em portfólios iniciantes. Amarra à Semana 6, onde o addon UVPackmaster é citado como recapitulação — reforçar que a ferramenta acelera, mas o julgamento sobre a proporção correta continua sendo do artista.
+Notas: Amarrar ao C3 (UV Mapping) da Rubrica Mestre, foco principal da CF1 de hoje.
 -->
 
 ---
@@ -278,52 +158,157 @@ Notas: Contextualizar o valor profissional. Texel density inconsistente é um do
 
 # Resumo
 
-- **Stretch Overlay** revela distorção antes de pintar — mire azul/verde
-- **Texel density** consistente = kit visualmente coerente
-- **Average Islands Scale** normaliza a densidade em um clique
-- **Pack Islands** aproveita o espaço — mas não corrige distorção
-- Ordem sagrada: **Distorção -> Normalização -> Empacotamento**
+- **Smart UV Project** é ponto de partida, não solução final para o Hero Asset
+- **Seams manuais** reduzem distorção e escondem costura
+- Layout bom = **islands organizadas + padding + aproveitamento de espaço**
+- Hoje é a **CF1** — primeira nota formal do semestre, foco em C3
 
 <!--
-Notas: Amarrar a mini aula. Cada item volta aplicado na produção em estúdio. Não reler tudo — apontar a conexão com o próximo passo: a demonstração de otimização ao vivo. Lembrar que é a última semana para deixar a base do UV pronta antes do PBR.
--->
-
----
-
-## Última semana da Unidade I
-
-O UV que você entrega hoje — dos **dois** assets — é a **base** das próximas três unidades.
-
-Na **Semana 5** começa o **PBR**: material que simula a física da luz.
-
-<div class="industry">
-
-Um UV bom fica **invisível** — o jogador só vê o material. Um UV ruim aparece na textura.
-
-</div>
-
-<!--
-Notas: Conectar ao semestre e ao Projeto Integrador. Um UV com problemas nesta semana gera retrabalho nas Semanas 5, 6 e além. Comunicar essa consequência com clareza — é o que motiva o cuidado no estúdio de hoje. A crítica desta semana é INFORMAL: sem Ficha de Crítica Formal nem Autoavaliação obrigatória — o registro de C3 é feito pela análise dos arquivos entregues. A próxima crítica formal é a da Semana 8 (a Semana 5 não tem crítica formal).
+Notas: Fechar a mini aula amarrando os conceitos antes da demonstração.
 -->
 
 ---
 
 ## Agora: demonstração
 
-A seguir, **otimização ao vivo** de um UV com problemas reais:
+Do Smart UV Project ao unwrap manual — comparação lado a lado.
 
-Diagnóstico com Stretch Overlay • Average Islands Scale • Pack Islands
+Organização de islands com Average Islands Scale e Pack Islands.
 
-Comparação **antes / depois** com checkerboard
-
-![large](assets/demo_layout_semana04.webp)
+![diagram](assets/uv_comparacao_smart_manual.webp)
 
 <!--
-Notas: Transição para a demonstração de 20 min (o mesmo processo se aplica depois ao Asset 02 no estúdio). Mesmo layout dividido das semanas anteriores: Viewport 3D à esquerda com checkerboard, UV Editor à direita com Stretch Overlay ativo. Sequência: diagnosticar vermelho -> corrigir island -> Average Islands Scale -> Pack Islands -> desfazer/refazer mostrando antes-depois. Manter o arquivo aberto durante o estúdio. Depois da demonstração (não coberto em slides): 50 min de estúdio no Encontro 1 (Asset 01 otimização + Asset 02 abertura inicial), Encontro 2 abre com 20 min de crítica coletiva informal comparando Stretch Overlays de 3 UVs, seguidos de 60 min de estúdio para finalizar Asset 01 e avançar no Asset 02, e fechamento de 10 min antecipando a Semana 5.
+Notas: Transição para os 20 min de demonstração.
 
 [!FIGURA]
-Objetivo didático: orientar o layout de tela da demonstração e antecipar o resultado esperado da otimização, dando à turma um alvo visual claro para o próprio trabalho.
-Arquivo sugerido: assets/demo_layout_semana04.webp
-Descrição: captura do Blender com janela dividida — à esquerda o prop do kit em Material Preview com checkerboard uniforme; à direita o UV Editor com Stretch Overlay predominantemente azul e islands empacotadas ocupando bem o quadrado 0-1.
-Como produzir: no Blender, montar o layout dividido, aplicar checkerboard, ativar o Stretch Overlay, executar Average Islands Scale e Pack Islands no prop de demonstração. Capturar a tela cheia com os dois painéis mostrando o estado OTIMIZADO.
+Objetivo didático — Mostrar visualmente a diferença de qualidade entre um UV resolvido só por Smart UV Project e o mesmo objeto com seams manuais, islands organizadas e Pack Islands aplicado.
+Arquivo sugerido — assets/uv_comparacao_smart_manual.webp
+Descrição — Duas capturas de tela lado a lado do mesmo prop no UV Editor do Blender: à esquerda, resultado do Smart UV Project (islands fragmentadas, aproveitamento mediano); à direita, resultado após seams manuais + Pack Islands (islands organizadas, aproveitamento alto), ambas com checkerboard aplicado no Viewport ao fundo.
+Como produzir — Capturar no Blender com o prop de demonstração do professor, exportando as duas telas no mesmo enquadramento para comparação direta.
+-->
+
+---
+
+<!-- _class: chapter -->
+
+<span class="chapter-number">04</span>
+
+# Produção em estúdio
+
+Do Hero Asset modelado ao UV pronto para a Crítica Formal
+
+<!--
+Notas: Divisória entre a mini aula e o estúdio. Os slides a seguir ficam projetados durante a produção — servem de consigna e timebox visíveis, apresentados um a um conforme a etapa correspondente começa.
+-->
+
+---
+
+<!-- _class: exercise -->
+
+## Etapa 1 — Primeira leitura da geometria
+
+**10 minutos.**
+
+Importem o Hero Asset Referência recebido de Modelagem 3D e Level Design.
+
+Apliquem Smart UV Project como primeira leitura — onde a malha é mais complexa?
+
+<!--
+Notas: Encontro 1. Circular perguntando onde a malha concentra mais complexidade de forma, antes de qualquer corte manual.
+-->
+
+---
+
+<!-- _class: exercise -->
+
+## Etapa 2 — Seams e unwrap manual
+
+**25 minutos.**
+
+Marquem seams nos pontos estratégicos (cantos, junções, mudanças reais de superfície).
+
+Apliquem Unwrap e avaliem com o **Stretch Overlay**.
+
+<!--
+Notas: Perguntar: "Por que você cortou o seam aqui e não ali? Essa costura vai aparecer na peça final?" Identificar seams excessivamente fragmentados.
+-->
+
+---
+
+<!-- _class: exercise -->
+
+## Etapa 3 — Organização do layout
+
+**15 minutos.**
+
+Average Islands Scale + Pack Islands.
+
+Checkerboard ativo — ajustem manualmente islands mal posicionadas ou sobrepostas.
+
+<div class="warning">
+
+Todo estudante deve sair do Encontro 1 com um UV pelo menos funcional.
+
+</div>
+
+<!--
+Notas: O refinamento final acontece no início do Encontro 2, antes da Crítica Formal. Identificar quem ainda tem distorção não resolvida — atenção prioritária amanhã.
+-->
+
+---
+
+<!-- _class: exercise -->
+
+## Refinamento final — 30 minutos
+
+Revisem o Stretch Overlay uma última vez.
+
+Capturem o screenshot do UV com checkerboard — é a evidência da CF1.
+
+Preencham a **Autoavaliação** antes de apresentar — não depois.
+
+<!--
+Notas: Abertura do Encontro 2. Verificar que todos têm a Ficha de Autoavaliação preenchida antes do início das apresentações.
+-->
+
+---
+
+<!-- _class: exercise -->
+
+## Crítica Formal 1 (CF1) — 50 minutos
+
+Apresentem o UV: layout, checkerboard, lógica dos seams.
+
+Leiam brevemente sua autoavaliação.
+
+<div class="tip">
+
+Padrão esperado: **Nível 3** da Rubrica Mestre no Critério C3.
+
+</div>
+
+<!--
+Notas: Cerca de 3 min por estudante, ajustar ao tamanho da turma. Perguntas focadas em C3: "Essa distorção compromete a textura futura?", "Esse aproveitamento de espaço está adequado?" Ficha de Crítica Formal preenchida durante ou logo após cada apresentação.
+-->
+
+---
+
+<!-- _class: exercise -->
+
+## Antes de sair
+
+Confirmem as três entregas de hoje:
+
+- Hero Asset com **UV aberto** (`.blend`)
+- **Screenshot** do UV layout com checkerboard
+- **Autoavaliação** preenchida
+
+<div class="warning">
+
+Próxima Crítica Formal só na Semana 8 (CF2). A Semana 5 é de ajuste e abertura — sem nova cobrança de rubrica.
+
+</div>
+
+<!--
+Notas: Fechamento (10 min): "O UV que vocês abriram hoje é o endereço onde toda textura, todo material e toda pintura das próximas semanas vai morar." Reflexão individual: "O feedback que mais me surpreendeu na CF1 foi ___. Na Semana 5, vou corrigir ___ primeiro." Ponte: na Semana 5 corrigem o UV com base no feedback e entram no Shader Editor pela primeira vez.
 -->

@@ -4,17 +4,23 @@
 **Tema da semana:** Texture Atlas: unificação de assets em uma única textura
 **Apostila:** Parte V, Cap. 18 — Texture Atlas e Trim Sheets (conceito e criação de atlas; otimização de draw calls)
 **Carga horária:** 3h (2 encontros de 1h30)
-**Crítica:** 🔵 Informal — circulante em estúdio e comentário coletivo ao final do segundo encontro
+**Crítica:** 🔵 Informal — circulante, sem nota formal nesta semana
 
 ---
 
 ## O que já foi ministrado (Semana 12 — não repetir)
 
-Na **Semana 12**, os estudantes completaram o panorama de bake (Normal, AO, Curvature, ID Map) em um segundo asset do Kit Modular, usando máscaras automáticas para acelerar a distribuição de materiais no 3D Coat.
+Os estudantes chegam com:
 
-**Esta é a última semana da Unidade III e o primeiro passo formal de otimização do semestre.** Até aqui, cada asset do kit teve sua própria textura individual. A partir de hoje, múltiplos assets passam a compartilhar uma única textura (atlas), reduzindo draw calls — um conceito que só faz sentido porque, a esta altura, o estudante já tem pelo menos dois ou três assets texturizados para combinar.
+- **Hero Asset Referência** completo desde a Semana 9: UV finalizado, material PBR completo, desgaste pintado e bake integrado — resultado consolidado das Semanas 4 a 9.
+- Pelo menos **dois Assets Secundários**, entregues por Modelagem 3D e Level Design e já trabalhados nas Semanas 10 a 12: UV, material PBR coerente com o kit, e pacote de bake (Normal, AO, Curvature, ID Map quando aplicável) aplicado — um deles na CF3 da Semana 11, o outro no bake avançado da Semana 12.
+- Feedback da CF3 (Semana 11) incorporado, com prioridade de melhoria já trabalhada.
+- Kit modular com identidade visual e paleta já estabelecidas (moodboard atualizado desde a Semana 1).
+- Ainda não entram nesta semana os **Assets de Repetição** (elementos modulares repetitivos, como paredes/vigas/molduras) — eles só passam a ser trabalhados tecnicamente na Semana 14, com a Trim Sheet.
 
-**Esta semana também formaliza o inventário do kit** (asset / camada — Hero Asset Referência, Secundário ou Repetição / status), exigido no Plano de Ensino, Seção 8.1, como evidência de C1 e C7 e piso mínimo de 5 assets.
+> **Diretriz de composição do kit (Plano de Ensino, Seção 8.1):** o Kit Modular final exige 5 a 10 assets, mas nem todos recebem o mesmo tratamento individual. O Hero Asset Referência (1 peça, produzida nas Semanas 3–9) recebeu o fluxo completo e mais aprofundado de UV, PBR, pintura e bake — foi a prova de conceito de todo o pipeline. Os Assets Secundários (2–3, entregues por Modelagem 3D e Level Design a partir da Semana 10) recebem um ciclo abreviado: UV simples, material PBR coerente com o kit e bake nas Semanas 11–12. A Semana 13 é a semana em que o Hero Asset Referência deixa de ser tratado separadamente e passa a ser **incorporado ao kit**, junto aos Assets Secundários, dentro do mesmo Texture Atlas. Se um estudante chega a esta semana com apenas um Asset Secundário com bake concluído, o professor deve orientá-lo a usar parte da Etapa 1 do estúdio (abaixo) para adiantar o UV de um segundo Asset Secundário já modelado, em vez de atrasar a criação do UV combinado.
+
+> **Nota de transição:** Até aqui, cada peça do kit recebeu tratamento distinto — o Hero Asset Referência com um fluxo completo e individual (Semanas 4–9), os Assets Secundários com um ciclo abreviado próprio (Semanas 10–12). Essa separação foi correta para aprender UV mapping, PBR, pintura e bake em profundidade num objeto só antes de multiplicar o processo, mas não é como um kit modular é entregue em produção real. Esta semana **encerra a Unidade III** (Produção do Kit Modular: Bake e Detalhamento) com o primeiro problema de "kit como um todo": o **Texture Atlas**. Em vez de cada asset carregar sua própria textura (o que gera múltiplos draw calls quando vários objetos aparecem juntos em cena), o Hero Asset Referência e pelo menos dois Assets Secundários passam a compartilhar uma única textura, reorganizando seus UVs dentro do mesmo espaço 0–1. Isso não é um recurso novo de pintura ou bake — é uma decisão de **arquitetura de produção**, e exige revisitar o UV mapping aprendido nas Semanas 4 a 6 sob uma lente nova: eficiência para tempo real, não apenas ausência de distorção. Na Semana 14, já na Unidade IV, essa mesma lógica de otimização se estende aos Assets de Repetição, através da Trim Sheet.
 
 ---
 
@@ -22,31 +28,38 @@ Na **Semana 12**, os estudantes completaram o panorama de bake (Normal, AO, Curv
 
 Ao final da semana, o estudante será capaz de:
 
-1. Explicar o que é um Texture Atlas e por que ele reduz draw calls em comparação a texturas individuais por asset.
-2. Planejar um atlas identificando quais assets do kit compartilham características suficientes (escala de detalhe, resolução necessária) para dividir a mesma textura.
-3. Reorganizar UV islands de múltiplos objetos em um único espaço UV, com padding adequado para evitar bleeding entre assets.
-4. Validar texel density consistente entre os assets combinados no atlas.
-5. Registrar o inventário do Kit Modular (asset / camada / status), atingindo o piso mínimo de 5 assets entre Hero Asset Referência, Secundários e de Repetição.
+1. Explicar o que é um Texture Atlas e por que ele reduz draw calls, relacionando o conceito à performance de um kit modular em tempo real (Unity).
+2. Avaliar quais assets do próprio kit — Hero Asset Referência e Assets Secundários — são bons candidatos a compartilhar textura, com base em critério técnico (tamanho relativo, complexidade de material, frequência de uso em cena) e não apenas em conveniência.
+3. Reorganizar UV islands de múltiplos objetos dentro de um único espaço UV 0–1, aplicando os princípios de padding, texel density e aproveitamento de espaço já dominados nas Semanas 4 a 6.
+4. Executar o processo de re-bake e re-texturização necessário quando os UVs de um asset já finalizado são remapeados para caber no atlas combinado.
+5. Verificar a integridade do atlas resultante: ausência de sobreposição indevida entre ilhas de objetos diferentes, texel density comparável entre os assets combinados, bleeding contido pelo padding.
+6. Justificar, em crítica circulante, a escolha dos três (ou mais) assets combinados no atlas — incluindo o Hero Asset Referência — e o trade-off entre economia de textura e perda de resolução individual.
 
 ---
 
 ## Critérios da Rubrica Mestre ativos nesta semana
 
-| Critério | Foco desta semana |
-|---|---|
-| C1 — Processo de Projeto | **Inventário do kit** formalizado (asset / camada / status) — evidência central desta semana |
-| C2 — Direção Artística | Coerência visual entre os assets combinados no mesmo atlas |
-| C5 — Texturização | Preservação da qualidade de cada asset individual após a combinação em atlas |
-| C7 — Otimização | **Foco principal:** planejamento de atlas, organização de UV islands, texel density consistente entre assets |
+> 🔵 **Crítica Informal.** Não há nota formal nesta semana. C7 (Otimização) é observado pela **primeira vez** na disciplina — é a semana em que esse critério começa a ser construído como evidência, embora só entre em nota formal na CF4 (Semana 14). C3 (UV Mapping) retorna em observação, revisitado sob a ótica de otimização.
+
+| Critério | Status | O que observar |
+|---|---|---|
+| C1 — Processo de Projeto | obs. | Justificativa registrada da escolha dos assets combinados no atlas; comparação antes/depois documentada |
+| C3 — UV Mapping | obs. — revisitado | O remapeamento de UV para o atlas mantém os princípios de texel density e padding já dominados, ou os sacrifica em nome da economia? |
+| C7 — Otimização | obs. — **primeira aparição** | Critério de escolha dos assets combinados; ocupação eficiente do espaço do atlas; ausência de sobreposição indevida |
+| C10 — Participação (CC) | obs. | Qualidade do feedback dado na crítica circulante, especialmente sobre a lógica de agrupamento escolhida pelos colegas |
 
 ---
 
 ## Recursos necessários
 
-- Computadores com Blender instalado
-- Ao menos três assets do Kit Modular já texturizados (incluindo o Hero Asset Referência) — cada estudante organiza os próprios arquivos
-- Template de inventário do kit (planilha ou tabela simples: asset / camada / status)
-- Apostila — Parte V, Cap. 18 — disponibilizada antes da aula
+- Computadores com Blender instalado (3.x ou 4.x)
+- Computadores com 3D Coat instalado (versão 2023 ou superior)
+- Arquivos `.blend` de todos os assets do kit de cada estudante (mínimo 3: o Hero Asset Referência com UV, material e bake das semanas anteriores, mais ao menos dois Assets Secundários com UV, material e bake das Semanas 11–12)
+- Arquivo de demonstração do professor: 3 assets simples do kit de referência do professor (ex.: barril, caixote, tocha), cada um ainda com UV individual, prontos para serem combinados ao vivo
+- Projetor para demonstração
+- Apostila — Parte V, Cap. 18 — trecho de Texture Atlas, disponibilizado antes da aula
+
+> **Preparação do conjunto de demonstração:** É necessário que os três objetos de referência já existam com UV individual e textura aplicada antes da aula — modelá-los ou texturizá-los do zero consumiria o tempo da demonstração. O importante é que sejam objetos de tamanho e complexidade visivelmente diferentes entre si (um grande, um médio, um pequeno), para que a decisão de proporção de espaço no atlas fique clara para a turma.
 
 ---
 
@@ -54,80 +67,230 @@ Ao final da semana, o estudante será capaz de:
 
 ### Mini Aula — 20 minutos
 
-1. **O que é Texture Atlas e por que reduz draw calls:** ao combinar as UVs de múltiplos objetos em uma única textura, o motor de jogo pode renderizá-los com uma única chamada de material, em vez de uma por asset — ganho relevante de performance em cenas com muitos objetos, como a fase caminhável da Semana 15.
-2. **Planejamento de atlas:** nem todos os assets do kit precisam estar no mesmo atlas — a decisão depende de escala de detalhe (um objeto pequeno e um grande podem competir por espaço de textura de forma ineficiente) e de quais assets aparecem juntos com frequência na cena.
-3. **Organização de UV islands de múltiplos objetos:** cada asset ocupa uma região distinta do mesmo espaço UV (0–1), com padding suficiente entre eles para evitar bleeding (vazamento de cor entre islands vizinhas nos mipmaps).
-4. **Texel density consistente:** assim como dentro de um único asset (Semana 5), a densidade de pixel por área deve ser comparável entre os diferentes assets do atlas — senão um objeto parece nítido e outro borrado lado a lado na cena.
+**De um UV por objeto para um UV por grupo: o que é e por que existe o Texture Atlas**
+
+Objetivo: fazer o estudante entender o Texture Atlas não como uma técnica isolada, mas como resposta a um problema de performance que só aparece quando o kit é visto como um todo, não asset por asset.
+
+**Abertura:**
+
+Exibir no projetor uma cena simples com 5 objetos do mesmo kit modular, cada um com sua própria textura — 5 materiais distintos carregados simultaneamente. Ao lado, a mesma cena com os 5 objetos compartilhando uma única textura combinada — 1 material carregado. Perguntar: *"Visualmente, as duas cenas parecem idênticas. Mas para o motor de jogo, elas custam coisas muito diferentes. O que vocês acham que mudou por trás da cena, mesmo sem mudança visível?"*
+
+Deixar 2–3 respostas. Direcionar para a ideia central: cada material/textura distinta que a GPU precisa carregar para renderizar um frame gera um **draw call** adicional. Um kit modular de ambiente pode ter dezenas de instâncias do mesmo conjunto de assets em cena (paredes, barris, caixas repetidos) — se cada peça carrega textura própria, o custo de renderização cresce rapidamente. O Texture Atlas resolve isso agrupando várias texturas em uma só, para que múltiplos objetos usem o mesmo material.
+
+---
+
+**Conteúdo a cobrir:**
+
+**1. O que é um draw call e por que ele importa**
+
+Um draw call é uma instrução da CPU para a GPU desenhar um conjunto de geometria com um material específico. Trocar de material entre objetos custa tempo de processamento. Em uma cena com muitos objetos pequenos e repetidos — exatamente o perfil de um kit modular de ambiente — reduzir o número de materiais distintos é uma das otimizações mais diretas disponíveis ao artista de texturas, antes mesmo de qualquer otimização de código.
+
+*"Vocês não vão escrever nenhuma linha de código hoje. A otimização de hoje acontece inteiramente na forma como vocês organizam o UV e a textura — é trabalho de artista, não de programador, e ainda assim tem impacto direto em performance."*
+
+**2. Texture Atlas: definição e o que muda em relação ao UV individual**
+
+Um Texture Atlas é uma única textura (ex.: 2048×2048) que contém, dentro do mesmo espaço de imagem, os mapas de vários objetos diferentes — cada um ocupando uma região exclusiva. Isso exige que o UV de cada objeto combinado seja remapeado: em vez de ocupar sozinho o espaço 0–1 inteiro, cada objeto passa a ocupar apenas uma fração desse espaço, dividindo-o com os demais.
+
+*"Pensem no atlas como uma folha de contato de fotos: em vez de uma foto por página, várias fotos organizadas numa única folha — cada uma ainda reconhecível e separada, mas compartilhando o mesmo papel."*
+
+**3. Planejamento do atlas: quais assets combinar**
+
+Nem todo conjunto de assets é um bom candidato para atlas conjunto. Critérios de decisão:
+
+- **Assets que aparecem juntos com frequência em cena** (ex.: elementos de uma mesma composição do kit, incluindo o Hero Asset Referência ao lado dos Assets Secundários que o acompanham) se beneficiam mais do que assets isolados e raramente vistos ao mesmo tempo.
+- **Assets de complexidade de material semelhante** combinam melhor — misturar um objeto com material simples (cor sólida) e outro com detalhe fino de pintura (como costuma ser o caso do Hero Asset Referência) pode desperdiçar espaço do atlas se não for bem proporcionado.
+- **Tamanho relativo em cena** deve informar a proporção de espaço no atlas: um objeto grande (parede) precisa de mais área de textura do que um pequeno (moeda), mesmo dentro do mesmo atlas.
+
+*"A pergunta não é 'quais três assets eu escolho por serem mais fáceis de combinar', é 'quais três assets do meu kit — meu Hero Asset Referência e os Assets Secundários que Modelagem 3D e Level Design já entregaram — realmente aparecem juntos, na mesma cena, com frequência suficiente para justificar compartilhar textura'."*
+
+**4. Reorganização de UV islands: revisitando as Semanas 4 a 6 com um objetivo novo**
+
+Os princípios já dominados — padding entre ilhas, texel density consistente, aproveitamento de espaço — continuam valendo integralmente, mas agora aplicados entre **objetos diferentes**, não apenas entre ilhas do mesmo objeto. A texel density precisa ser mantida coerente entre os assets combinados: se um objeto pequeno ocupa proporcionalmente mais espaço no atlas do que sua importância visual justifica, ele está "roubando" resolução dos demais.
+
+> **Nota do professor:** Este é o ponto onde mais erros conceituais aparecem. Reforçar que texel density consistente entre objetos diferentes no mesmo atlas é tão importante quanto era entre ilhas do mesmo objeto nas Semanas 4 a 6 — a diferença é que agora o "objeto" de referência é o kit inteiro, não uma peça isolada.
+
+**5. Panorama rápido: quando o atlas não é suficiente (5 min)**
+
+O Texture Atlas resolve bem a combinação de vários objetos pequenos ou médios em uma única textura de resolução moderada (2048×2048, por exemplo). Mas existe um caso que o atlas não resolve bem: um **único** asset muito complexo, que precisaria de mais resolução do que um atlas ou uma textura simples conseguem oferecer sem estourar o tamanho do arquivo. Para esse caso existe o UDIM (Multi-Tile Texturing) — um sistema que distribui o UV de um único asset por vários blocos (tiles) de textura, cada um com sua própria imagem, multiplicando a densidade de texels disponível. *"Guardem esse nome — UDIM — porque vocês vão usá-lo em breve, quando tivermos um caso concreto que realmente precisa dele. Por hoje, a diferença que importa é: atlas agrupa vários objetos numa textura; UDIM multiplica a resolução de um único objeto muito complexo."*
 
 ---
 
 ### Demonstração — 20 minutos
 
-1. **(10 min) Criação de um Texture Atlas** combinando 3 assets de referência em um único UV 2048×2048 no Blender.
-2. **(10 min) Reorganização de UV islands e validação de texel density:** mostrar como usar Average Islands Scale entre múltiplos objetos selecionados simultaneamente, seguido de Pack Islands para o conjunto.
+**Criação de um Texture Atlas combinando 3 assets em um único UV 2048×2048**
+
+**Setup (1 min):**
+Abrir o Blender com os três objetos de demonstração já carregados, cada um com seu material e UV individual visíveis lado a lado no viewport.
+
+**Percurso da demonstração:**
+
+**Passo 1 — Avaliação e decisão de proporção (4 min):**
+1. Mostrar os três objetos e discutir em voz alta o critério de escolha: *"Estes três aparecem juntos na minha cena de referência — fazem parte do mesmo conjunto de mobiliário do kit."*
+2. Estimar visualmente a proporção de espaço que cada um deveria ocupar no atlas combinado, com base no tamanho relativo em cena (não no tamanho do UV individual anterior).
+
+**Passo 2 — Criação do UV combinado (8 min):**
+1. Selecionar os três objetos e entrar em modo de edição conjunta (`Edit Mode` com múltiplos objetos selecionados, ou unir temporariamente para fins de UV).
+2. Abrir o UV Editor e mostrar as três ilhas de UV originais sobrepostas no mesmo espaço 0–1 (problema a ser resolvido).
+3. Reposicionar e redimensionar cada conjunto de ilhas proporcionalmente ao tamanho relativo definido no Passo 1, usando `Pack Islands` com a opção de manter proporção relativa entre grupos, quando disponível na versão do Blender em uso.
+4. Aplicar padding entre os grupos de ilhas de objetos diferentes — reforçar que esse padding precisa ser generoso o suficiente para evitar bleeding entre os *objetos*, não só entre ilhas do mesmo objeto.
+
+**Passo 3 — Criação da textura combinada 2048×2048 (5 min):**
+1. Criar uma nova imagem 2048×2048 no Blender ou levar o UV remapeado ao 3D Coat para repintura.
+2. Demonstrar rapidamente como uma textura já existente de um dos objetos pode ser reposicionada e redimensionada dentro da nova textura combinada, respeitando a nova área do UV.
+3. Mostrar o resultado: os três objetos, agora com uma única textura carregada, exibindo suas aparências originais preservadas.
+
+**Passo 4 — Validação (2 min):**
+1. Aplicar checkerboard temporariamente sobre o atlas combinado para verificar distorção introduzida pelo redimensionamento.
+2. Verificar visualmente se a texel density entre os três objetos permanece comparável — nenhum deles deve parecer "borrado" em relação aos outros.
+
+> **Nota do professor:** Se o tempo apertar, é aceitável não repintar a textura combinada ao vivo — mostrar o UV remapeado e uma textura combinada já preparada de antemão é suficiente para transmitir o processo. O ponto central da demonstração é a reorganização do UV, não a repintura em si.
 
 ---
 
 ### Produção em Estúdio — 50 minutos
 
-**Consigna:**
+**Planejamento e início da execução do Texture Atlas do próprio kit**
 
-> *"Planejem e comecem a executar um Texture Atlas com pelo menos 3 assets do seu kit, incluindo o Hero Asset Referência. Em paralelo, preencham o inventário do kit."*
+**Consigna entregue verbalmente:**
+
+> *"Cinquenta minutos com dois objetivos: primeiro, escolher três assets do seu kit que fazem sentido compartilhar uma única textura — seu Hero Asset Referência e pelo menos dois Assets Secundários que Modelagem 3D e Level Design já entregaram, usando o critério da mini aula, não conveniência. Segundo, começar a reorganizar os UVs desses três assets dentro de um único espaço 2048×2048. Vocês não precisam terminar a repintura hoje — o objetivo do primeiro encontro é ter os UVs remapeados e organizados corretamente."*
 
 **Atividade estruturada:**
 
-1. **(15 min) Planejamento do atlas** — decidir quais assets combinar e por quê.
-2. **(25 min) Execução:** combinar UVs no mesmo espaço, normalizar texel density, empacotar.
-3. **(10 min) Preenchimento do inventário do kit** (asset / camada / status).
+**Etapa 1 — Seleção e justificativa dos assets (≈10 min):**
+1. Revisar os assets do kit já produzidos — o Hero Asset Referência e os Assets Secundários com bake das Semanas 11–12 — e escolher três (o Hero Asset Referência mais dois Assets Secundários, no mínimo) que aparecem juntos com frequência na composição do ambiente.
+2. Escrever uma justificativa breve (2–3 frases) de por que esses três foram escolhidos — esse registro alimenta C1 (Processo) e C7 (Otimização).
+3. Atualizar (ou iniciar) o **inventário do kit**: uma tabela simples com uma linha por asset, indicando nome, papel no kit (Hero Asset Referência, Asset Secundário ou Asset de Repetição) e status (modelado / com UV / texturizado / com bake). Esse inventário passa a ser atualizado a cada semana até a Semana 17 e é a forma de verificar, cedo, se o kit está a caminho do mínimo de 5 assets.
 
-**Papel do professor:** verificar se o inventário já soma ao menos 5 assets projetados (mesmo que nem todos estejam finalizados) entre as três camadas do Plano de Ensino, Seção 8.1.
+**Etapa 2 — Reorganização do UV combinado (≈25 min):**
+1. Selecionar os três objetos no Blender e abrir o UV Editor em modo conjunto.
+2. Definir a proporção de espaço de cada objeto no atlas com base no tamanho relativo em cena.
+3. Reposicionar e redimensionar as ilhas de UV de cada objeto dentro do espaço 0–1 combinado, aplicando padding entre grupos.
+4. Verificar sobreposição: nenhuma ilha de um objeto pode se sobrepor à ilha de outro.
+
+**Etapa 3 — Início da textura combinada (≈10 min):**
+1. Criar a imagem de destino 2048×2048.
+2. Se o tempo permitir, iniciar o reposicionamento das texturas já existentes dentro do novo espaço do atlas (no Blender ou já preparando a exportação para o 3D Coat).
+
+**Etapa 4 — Registro de processo (≈5 min):**
+1. Salvar o arquivo: `[Nome]_Atlas_S13.blend`.
+2. Screenshot do UV combinado com checkerboard aplicado, para levar à crítica circulante do segundo encontro.
+
+**Papel do professor:**
+
+Circular verificando:
+
+- **A justificativa de agrupamento é técnica ou apenas por conveniência?** Perguntar diretamente: "Esses três objetos aparecem juntos na sua cena, ou você só escolheu os que já estavam prontos?"
+- **O Hero Asset Referência está de fato entrando no atlas, ou o estudante o deixou de fora por receio de "estragar" o trabalho mais elaborado das Semanas 4–9?** Reforçar que incorporar o Hero Asset Referência ao kit é o próprio objetivo pedagógico desta semana.
+- **A proporção de espaço no atlas reflete o tamanho relativo real dos objetos em cena?** Erro comum: dividir o espaço igualmente entre os três objetos, independentemente do tamanho — isso desperdiça resolução no objeto pequeno e sacrifica o grande.
+- **Há sobreposição de ilhas entre objetos diferentes?** Esse é o erro mais grave possível nesta etapa — verificar com atenção redobrada, pois sobreposição entre objetos diferentes (ao contrário de ilhas do mesmo objeto) é mais fácil de passar despercebida.
+
+Perguntas de mediação circulante:
+- *"Se você tivesse que explicar para alguém de fora da disciplina por que esses três objetos específicos compartilham textura, o que você diria?"*
+- *"Olhando a proporção de espaço que você deu a cada objeto no atlas, ela corresponde a quanto espaço eles realmente ocupam quando você olha sua cena de referência?"*
 
 ---
 
 ## ENCONTRO 2 (1h30)
 
-### Crítica Coletiva Informal — 20 minutos
+### Crítica Circulante Informal — 20 minutos
 
-Circulante em estúdio; comentário coletivo rápido sobre a validação de texel density entre os assets combinados.
+**Formato: circulante, sem nota formal**
+
+**Abertura (2 min):**
+*"Hoje é crítica circulante — vou passar de estação em estação. Tenham o UV combinado aberto com checkerboard e a justificativa escrita de por que vocês escolheram esses três assets. Quero ouvir a lógica de agrupamento antes de olhar o resultado técnico."*
+
+**Dinâmica (16 min):**
+Circulação livre pelas estações. Em cada uma, o professor pede primeiro a justificativa verbal, depois observa o UV combinado:
+- *"Por que esses três e não outros três do seu kit? O Hero Asset Referência está entre eles?"*
+- *"A proporção de espaço que cada objeto recebeu no atlas faz sentido com o tamanho dele na cena?"*
+- *"Onde está o padding entre os objetos? Se eu aumentar o zoom nessa fronteira, vou ver bleeding?"*
+
+Encorajar comparação entre colegas — *"Vejam o critério de agrupamento do seu vizinho: vocês concordam com a lógica dele, ou agrupariam diferente?"* — sem formalizar como avaliação por pares registrada.
+
+**Síntese (2 min):**
+*"A maior parte de vocês já tem o UV combinado organizado. O trabalho de hoje no estúdio é fechar a textura do atlas — trazer as texturas individuais para dentro do espaço combinado e garantir que a qualidade visual não caiu em nenhum dos três objetos."*
 
 ---
 
 ### Produção em Estúdio — 60 minutos
 
+**Finalização da textura combinada e validação do Texture Atlas**
+
 **Consigna:**
 
-> *"Finalizem o Texture Atlas e o mapa de textura único. Fechem o inventário do kit."*
+> *"Sessenta minutos para transformar o UV combinado de vocês em um atlas de fato funcional: a textura final 2048×2048 com os três objetos representados, prontos para serem exportados e aplicados de volta aos assets do kit."*
 
-**Atividade:**
+**Atividade estruturada:**
 
-1. Finalizar UV combinado e textura única do atlas.
-2. Renderizar os objetos com o atlas aplicado, verificando ausência de bleeding.
-3. Finalizar o inventário do kit, garantindo o piso mínimo de 5 assets (1 Hero Asset Referência + 2–3 Secundários + 2–4 de Repetição, conforme Plano de Ensino, Seção 8.1).
-4. Salvar: `[Nome]_TextureAtlas_Semana13`.
+**Bloco 1 — Transferência das texturas para o atlas combinado (≈25 min):**
+1. Para cada um dos três objetos: reposicionar ou repintar a textura existente (Albedo, e demais canais PBR relevantes) dentro da nova área do UV combinado.
+2. Se o fluxo do estudante usar o 3D Coat: reimportar o mesh com o novo UV combinado e reconstruir as camadas de detalhe já pintadas (desgaste, stencil, bake) na nova posição do UV — este é o ponto de maior atenção, pois o remapeamento de UV invalida a posição original das camadas pintadas, e é especialmente sensível no Hero Asset Referência, que carrega o maior volume de detalhe pintado do kit.
+3. Verificar que cada objeto mantém sua identidade visual original mesmo dentro do espaço compartilhado.
 
-**Papel do professor:** priorizar estudantes cujo inventário ainda está abaixo do piso de 5 assets — identificar cedo é o objetivo explícito desta entrega, conforme o Plano de Ensino.
+**Bloco 2 — Re-bake, se necessário (≈15 min):**
+1. Para objetos cujo Normal Map ou AO da Semana 11/12 dependiam da posição original do UV: executar novo bake com o UV remapeado.
+2. Verificar ausência de artefatos após o re-bake, seguindo o mesmo protocolo de checagem da Semana 11 (rotacionar o viewport, checar superfícies planas).
+
+**Bloco 3 — Validação final do atlas (≈15 min):**
+1. Aplicar os três objetos na cena de teste com a textura combinada carregada uma única vez.
+2. Confirmar visualmente: um material, três objetos, aparência preservada.
+3. Verificar texel density comparativa entre os três objetos — nenhum deve parecer nitidamente mais nítido ou mais borrado que os outros.
+
+**Bloco 4 — Registro final (≈5 min):**
+1. Exportar a textura do atlas (`.png`, 2048×2048).
+2. Salvar arquivo Blender/3D Coat com sufixo `_Atlas_S13_Final`.
+3. Render comparativo: os três objetos com textura individual (antes) vs. com atlas combinado (depois).
+
+**Papel do professor:**
+
+- Priorizar apoio aos estudantes que perderam camadas de detalhe pintado ao remapear o UV — esse é o problema técnico mais provável e mais custoso em tempo desta semana, sobretudo no Hero Asset Referência.
+- Para estudantes que terminam rápido: sugerir avaliar se um quarto asset do kit (outro Asset Secundário) poderia entrar no mesmo atlas sem comprometer a qualidade dos outros três.
+- Perguntas de mediação: *"Quantas texturas seu kit inteiro usava antes de hoje, e quantas usa agora depois desses três assets combinados? Essa conta já é uma evidência concreta de otimização que você pode apresentar na CF4."*
 
 ---
 
 ### Fechamento — 10 minutos
 
-1. **(3 min)** Síntese: *"O atlas de hoje é a primeira vez que vocês pensam no kit como um conjunto, não como peças isoladas. Essa mentalidade de otimização de conjunto continua nas próximas duas semanas."*
-2. **(3 min)** Reflexão: *"Olhando o inventário, que camada do kit (Hero Asset, Secundário, Repetição) ainda está mais fraca?"*
-3. **(2 min)** Ponte para a Semana 14: *"Na próxima semana é a quarta Crítica Formal — Trim Sheets, a técnica que sustenta os Assets de Repetição do kit."*
-4. **(2 min)** Confirmação das entregas.
+**Roteiro:**
+
+1. **(3 min — Síntese técnica)**
+*"Hoje vocês fecharam a Unidade III transformando texturas individuais em uma estratégia de kit: o Hero Asset Referência, que até agora era tratado à parte, entrou de fato no conjunto do Kit Modular junto com os Assets Secundários. O Texture Atlas resolve bem casos de objetos de tamanho parecido e uso conjunto. Semana que vem vocês entram na Unidade IV, e vão conhecer uma ferramenta complementar para um problema diferente: elementos modulares repetitivos, como paredes e molduras — os Assets de Repetição — aí entra a Trim Sheet."*
+
+2. **(3 min — Reflexão sobre trade-offs)**
+Pergunta aberta: *"Vocês sentiram que algum dos três objetos perdeu qualidade visual por causa da divisão de espaço no atlas? Se sim, o que vocês fariam diferente da próxima vez — talvez combinar objetos diferentes, ou usar um atlas maior?"*
+Deixar 2–3 respostas. O objetivo é consolidar que otimização sempre envolve trade-off, e que reconhecer esse trade-off é parte da competência técnica — não existe atlas "perfeito", existe atlas bem justificado para o caso de uso.
+
+3. **(2 min — Antecipação da Semana 14)**
+*"Semana que vem é Crítica Formal — CF4, a quarta do semestre. O tema é Trim Sheets, aplicadas aos Assets de Repetição do kit: faixas de textura reutilizáveis para elementos modulares repetitivos. É a primeira vez que Otimização (C7) entra em nota, e também a primeira vez que os Assets de Repetição entram tecnicamente no processo. Antes de chegar: pensem em qual elemento do seu kit se repete várias vezes com pequenas variações — esse é o candidato ideal para trim sheet."*
+
+4. **(2 min — Confirmação das entregas)**
+Recapitular nomenclatura de entrega e prazo. Lembrar que a justificativa escrita de agrupamento do atlas será parte da evidência de C7 na CF4.
 
 ---
 
 ## Possíveis Dificuldades
 
-**1. Bleeding entre islands de assets diferentes**
-Estratégia: aumentar o padding entre as regiões do atlas e verificar em mipmaps reduzidos (zoom out no Viewport).
+**1. Escolha de assets por conveniência, não por critério de uso conjunto**
+Alguns estudantes tendem a escolher os três assets "mais prontos" ou "mais fáceis de mexer", em vez de avaliar se realmente aparecem juntos na cena. Estratégia: exigir a justificativa escrita antes de começar a reorganização do UV — o ato de verbalizar por escrito frequentemente expõe a fragilidade do critério e leva à reconsideração antes de investir tempo no remapeamento.
 
-**2. Assets com escalas de detalhe muito diferentes combinados no mesmo atlas**
-Estratégia: reconsiderar o agrupamento — um objeto pequeno com muito detalhe pode justificar um atlas separado dos objetos grandes e simples.
+**2. Deixar o Hero Asset Referência de fora do atlas por receio de comprometê-lo**
+Como o Hero Asset Referência recebeu o tratamento mais aprofundado do semestre (Semanas 4–9), alguns estudantes hesitam em remapear seu UV, tratando-o como "intocável" e montando o atlas só com Assets Secundários. Estratégia: lembrar que a incorporação do Hero Asset Referência ao kit é justamente o objetivo pedagógico desta semana — sugerir trabalhar a partir de uma cópia do arquivo original, preservando o trabalho anterior, e tratar o remapeamento como uma etapa esperada do pipeline, não como risco.
 
-**3. Inventário do kit abaixo do piso de 5 assets nesta altura do semestre**
-Estratégia: mapear com o estudante, nesta própria aula, quais Assets de Repetição (mais rápidos de produzir via Trim Sheet, Semana 14) podem completar o piso a tempo.
+**3. Divisão de espaço igual entre objetos de tamanhos diferentes**
+Erro comum: dividir o atlas em três áreas iguais, independentemente do tamanho relativo dos objetos em cena, resultando em resolução desproporcional (o objeto grande fica com pouca definição, o pequeno com definição desnecessária). Estratégia: pedir para o estudante comparar visualmente os três objetos lado a lado na escala real da cena antes de decidir a proporção do UV — a decisão de espaço deve vir da cena, não da conveniência de organização no editor.
+
+**4. Perda de camadas de detalhe pintado ao remapear o UV**
+Quando um asset já tinha desgaste, stencil ou bake associados ao UV original (Semanas 9 a 12), o remapeamento para o atlas invalida a posição espacial dessas camadas, exigindo reconstrução — problema mais grave no Hero Asset Referência, que concentra o maior volume de pintura detalhada. Estratégia: alertar sobre isso antes de começar a reorganização — sugerir manter o arquivo original intacto (salvar como novo arquivo, não sobrescrever) e tratar a reconstrução do detalhe pintado como parte esperada do processo, não como erro.
+
+**5. Sobreposição de ilhas entre objetos diferentes**
+Diferente da sobreposição entre ilhas do mesmo objeto (erro já familiar desde a Semana 4), a sobreposição entre objetos diferentes no atlas é mais difícil de perceber visualmente no UV Editor, especialmente com muitas ilhas na tela. Estratégia: usar a ferramenta de detecção de sobreposição do Blender (`UV → Select Overlap` ou equivalente) para verificação sistemática, em vez de depender apenas da inspeção visual.
+
+**6. Padding insuficiente entre grupos de objetos diferentes**
+Mesmo com padding adequado entre ilhas do mesmo objeto, pode faltar espaço de segurança entre o "bloco" de um objeto e o "bloco" de outro, causando bleeding visível na fronteira quando a textura é comprimida ou tem mipmap gerado. Estratégia: tratar cada grupo de objeto como uma unidade e aplicar padding extra nas bordas externas do grupo, não apenas internamente entre suas próprias ilhas.
+
+**7. Tempo insuficiente para repintar a textura combinada completa**
+Reorganizar UV é mais rápido que reconstruir texturas pintadas à mão nas novas posições — alguns estudantes podem terminar o primeiro encontro com o UV pronto mas gastar todo o segundo encontro só na repintura de um dos três objetos. Estratégia: priorizar a reconstrução de camadas nos objetos com maior detalhe pintado primeiro (geralmente o Hero Asset Referência, mais trabalhado desde a Semana 9); os Assets Secundários, mais simples, podem ser resolvidos rapidamente ao final, mesmo que com menos refinamento.
 
 ---
 
@@ -135,9 +298,13 @@ Estratégia: mapear com o estudante, nesta própria aula, quais Assets de Repeti
 
 | Situação | Estratégia |
 |---|---|
-| Estudante sem saber quais assets combinar no atlas | Perguntar quais assets aparecem juntos com mais frequência na fase caminhável planejada |
-| Texel density inconsistente entre assets do atlas | Aplicar Average Islands Scale com todos os objetos do atlas selecionados simultaneamente, não um de cada vez |
-| Inventário incompleto | Usar a tabela de camadas do Plano de Ensino (Seção 8.1) como checklist direto com o estudante |
+| Estudante não sabe quais assets combinar | Perguntar: "Se você fosse montar uma cena de demonstração do seu kit agora, quais objetos apareceriam juntos, no mesmo enquadramento, com mais frequência?" A resposta geralmente revela o agrupamento natural sem precisar de instrução técnica adicional. |
+| Estudante deixa o Hero Asset Referência de fora do atlas | Perguntar: "Por que ele não está entre os três? Ele é a peça mais representativa do seu tema — se ele não aparece junto dos outros assets do kit, o que isso diz sobre o kit?" Reforçar que incorporar o Hero Asset Referência é o objetivo desta semana, não uma opção. |
+| Estudante divide o espaço do atlas igualmente entre objetos de tamanhos diferentes | Colocar os três objetos lado a lado no viewport na escala real e perguntar: "Olhando assim, qual deles claramente precisa de mais pixels para não ficar borrado?" A comparação visual direta corrige a decisão mais rápido que a explicação teórica. |
+| Estudante perdeu camadas de detalhe pintado ao remapear UV | Normalizar a situação como parte esperada do processo, não como erro: "Isso acontece sempre que se remapeia um UV já texturizado — a boa notícia é que vocês já sabem pintar desgaste e stencil desde as Semanas 9 e 10, então essa parte vai mais rápido da segunda vez." |
+| Estudante inseguro se há sobreposição de UV entre objetos | Ensinar o uso da ferramenta de detecção automática de sobreposição do Blender, em vez de depender só da inspeção visual — reforçar que esse é um problema que vale a pena verificar com ferramenta, não só com o olho. |
+| Estudante terminando rápido e com qualidade | Propor avaliar se um quarto asset do kit (outro Asset Secundário) cabe no mesmo atlas sem comprometer a qualidade dos outros três, ou calcular quantas texturas o kit inteiro usava antes e depois da otimização de hoje — essa métrica concreta já antecipa parte do que será cobrado na CF4. |
+| Estudante questionando se vale a pena reduzir resolução individual em troca de menos draw calls | Validar a pergunta como legítima — não há resposta única. Propor que o estudante registre esse trade-off por escrito como parte da justificativa: em que situações a economia de draw calls compensa a perda de resolução, e em que situações não compensaria (ex.: um asset em primeiro plano na cena, muito próximo da câmera). |
 
 ---
 
@@ -145,10 +312,13 @@ Estratégia: mapear com o estudante, nesta própria aula, quais Assets de Repeti
 
 | Evidência | Critério da Rubrica | Como avaliar |
 |---|---|---|
-| Texture Atlas com 3+ assets, UV combinado sem bleeding | C7 — Otimização | Inspeção do UV Editor e render final |
-| Texel density consistente entre assets do atlas | C7 — Otimização | Comparação visual com checkerboard |
-| Inventário do kit com piso mínimo de 5 assets | C1 — Processo de Projeto | Verificação da tabela de inventário |
-| Coerência visual entre assets combinados | C2 — Direção Artística | Comparação visual no render final |
+| Justificativa escrita da escolha dos três assets combinados no atlas (Hero Asset Referência + Assets Secundários), baseada em uso conjunto em cena | C7 — Otimização | A justificativa é técnica (frequência de uso conjunto, tamanho relativo) ou apenas conveniência ("eram os que já estavam prontos")? |
+| UV combinado de três ou mais assets em um único espaço 0–1, sem sobreposição indevida entre objetos | C3 — UV Mapping / C7 — Otimização | Há sobreposição verificada com a ferramenta de detecção do Blender? O padding entre grupos de objetos é suficiente? |
+| Proporção de espaço no atlas coerente com o tamanho relativo dos objetos em cena | C7 — Otimização | O objeto maior recebeu proporcionalmente mais área de textura que o menor? A escolha foi justificada, não arbitrária? |
+| Textura combinada 2048×2048 com os três objetos representados, preservando identidade visual individual de cada um | C5 — Texturização / C7 — Otimização | A qualidade visual de cada objeto se manteve após a compressão no espaço compartilhado, comparada ao estado anterior? |
+| Camadas de detalhe (desgaste, stencil, bake) reconstruídas corretamente na nova posição do UV, quando aplicável — sobretudo no Hero Asset Referência | C5 — Texturização / C6 — Bake | O detalhe reconstruído mantém a mesma qualidade e coerência narrativa do original, ou houve perda perceptível? |
+| Render comparativo documentando o número de texturas do kit antes e depois da criação do atlas | C1 — Processo de Projeto | A evolução é compreensível sem explicação verbal? Há uma métrica concreta (número de texturas, resolução total) registrada? |
+| Participação na crítica circulante: comentários referenciando a lógica de agrupamento específica dos colegas | C10 — Participação (obs.) | O feedback dado menciona critério técnico observável (proporção, padding, uso conjunto em cena), ou é genérico? |
 
 ---
 
@@ -156,10 +326,14 @@ Estratégia: mapear com o estudante, nesta própria aula, quais Assets de Repeti
 
 | Entrega | Formato | Prazo |
 |---|---|---|
-| Texture Atlas com 3+ assets do kit | UV combinado + mapa de textura único (PNG) | Até o fim do segundo encontro |
-| Render dos objetos com o atlas aplicado | PNG ou JPG | Até o fim do segundo encontro |
-| Inventário do kit (asset / camada / status) | Planilha ou documento | Até o fim do segundo encontro |
+| Arquivo Blender/3D Coat com o Hero Asset Referência e pelo menos dois Assets Secundários combinados, UV remapeado e textura de atlas aplicada | `.blend` e projeto 3D Coat com sufixo `_Atlas_S13_Final` | Até o fim do segundo encontro |
+| Textura do Texture Atlas exportada | `.png`, 2048×2048, pasta `_Atlas_S13` | Até o fim do segundo encontro |
+| Justificativa escrita da escolha dos assets combinados (2–3 frases) | Documento digital ou anotação junto ao arquivo de entrega | Até o fim do segundo encontro |
+| Render comparativo: assets com textura individual (antes) vs. com atlas combinado (depois) | `.png` com sufixo `_Comparativo_Atlas_S13` | Até o fim do segundo encontro |
+| Inventário do kit atualizado (asset / papel no kit / status) | Tabela simples, digital ou anexada ao arquivo de entrega | Até o fim do segundo encontro |
+
+> **Nota:** Não há nota formal nesta semana (crítica informal). A qualidade do atlas produzido hoje, junto com a justificativa de agrupamento, será avaliada como evidência de C7 na CF4 da Semana 14 (Trim Sheets), quando Otimização entra em nota formal pela primeira vez.
 
 ---
 
-*Plano de Aula — Texturização — Jogos Digitais | Semana 13 | 2026 | Prof. Rodrigo Devigo — IFMS Campus Dourados*
+*Plano de Aula — Texturização — Jogos Digitais | Semana 13 | 2026*

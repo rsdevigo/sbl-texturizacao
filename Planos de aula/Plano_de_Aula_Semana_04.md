@@ -4,7 +4,7 @@
 **Tema da semana:** Abertura de UV do Hero Asset Referência — Smart UV Project e seams manuais
 **Apostila:** Parte II, Cap. 5 — UV Unwrapping (Smart UV Project, Seams e Unwrap manual)
 **Carga horária:** 3h (2 encontros de 1h30)
-**Crítica:** 🔴 **FORMAL — CF1** (20% do Portfolio de Artefatos)
+**Crítica:** 🔴 **FORMAL — CF1** (20% do Portfolio de Artefatos) — Apresentação estruturada com rubrica, autoavaliação obrigatória e feedback escrito do professor
 
 ---
 
