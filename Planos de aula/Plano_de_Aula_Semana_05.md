@@ -1,14 +1,14 @@
 # Plano de Aula — Semana 5
-**Disciplina:** Texturização | **Metodologia:** Studio-Based Learning  
-**Unidade:** I/II — Transição: Revisão de UV e Fundamentos do PBR  
-**Tema:** Revisão de UV com base no feedback da CF1 e fundamentos de PBR (Principled BSDF)  
+**Disciplina:** Texturização | **Curso:** Tecnologia em Jogos Digitais | **Metodologia:** Studio-Based Learning  
+**Unidade:** I — Fundamentos, Mapeamento UV e Definição do Hero Asset (Semanas 1–5)  
+**Tema da semana:** Revisão de UV com base no feedback da CF1 e fundamentos de PBR (Principled BSDF)  
 **Apostila:** Parte II, Cap. 6 — Texel Density e Organização de UVs (revisão rápida); Parte III, Cap. 8 — Fundamentos do Physically Based Rendering; Parte III, Cap. 9 — Os Mapas que Compõem um Material PBR (Diffuse/Albedo, Metallic e Roughness)  
 **Carga horária:** 3h (2 encontros de 1h30)  
 **Crítica:** 🔵 Informal — Crítica circulante em estúdio ou comentário coletivo rápido ao final do segundo encontro (sem instrumento formal; a próxima crítica formal é a CF2, na Semana 8)
 
 ---
 
-## Pré-requisito da semana
+## O que já foi ministrado (Semana 4 — não repetir)
 
 Os estudantes chegam com:
 
@@ -32,7 +32,7 @@ Ao final da semana, o estudante será capaz de:
 
 ---
 
-## Critérios da Rubrica Mestre observados nesta semana
+## Critérios da Rubrica Mestre ativos nesta semana
 
 | Critério | Foco desta semana |
 |---|---|

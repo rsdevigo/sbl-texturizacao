@@ -1,14 +1,14 @@
 # Plano de Aula — Semana 6
-**Disciplina:** Texturização | **Metodologia:** Studio-Based Learning
+**Disciplina:** Texturização | **Curso:** Tecnologia em Jogos Digitais | **Metodologia:** Studio-Based Learning
 **Unidade:** II — Materiais PBR e Workflow no 3D Coat (Semanas 6–9)
-**Tema:** Criação de texturas seamless e tileable (trilha fotorrealista ou estilizada)
+**Tema da semana:** Criação de texturas seamless e tileable (trilha fotorrealista ou estilizada)
 **Apostila:** Parte IV, Cap. 12 — Texturas Seamless e Tileables (fontes de texturas e técnicas de criação)
 **Carga horária:** 3h (2 encontros de 1h30)
 **Crítica:** 🔵 Informal — Crítica circulante em estúdio e comentário coletivo ao final do segundo encontro
 
 ---
 
-## Pré-requisito da semana
+## O que já foi ministrado (Semana 5 — não repetir)
 
 Os estudantes chegam com:
 
@@ -34,7 +34,7 @@ Ao final da semana, o estudante será capaz de:
 
 ---
 
-## Critérios observados nesta semana
+## Critérios da Rubrica Mestre ativos nesta semana
 
 > ⚠️ **Semana sem crítica formal — nenhuma nota é atribuída.** O professor observa e registra evidências nos critérios abaixo para calibrar a avaliação da próxima crítica formal. O estudante não recebe nota, mas recebe feedback oral durante o estúdio.
 

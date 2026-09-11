@@ -1,14 +1,14 @@
 # Plano de Aula — Semana 4
 **Disciplina:** Texturização | **Curso:** Tecnologia em Jogos Digitais | **Metodologia:** Studio-Based Learning
 **Unidade:** I — Fundamentos, Mapeamento UV e Definição do Hero Asset (Semanas 1–5)
-**Tema:** Abertura de UV do Hero Asset Referência — Smart UV Project e seams manuais
+**Tema da semana:** Abertura de UV do Hero Asset Referência — Smart UV Project e seams manuais
 **Apostila:** Parte II, Cap. 5 — UV Unwrapping (Smart UV Project, Seams e Unwrap manual)
 **Carga horária:** 3h (2 encontros de 1h30)
-**Crítica:** 🔴 FORMAL — Apresentação estruturada com rubrica, autoavaliação obrigatória e feedback escrito do professor (CF1)
+**Crítica:** 🔴 **FORMAL — CF1** (20% do Portfolio de Artefatos)
 
 ---
 
-## Pré-requisito da semana
+## O que já foi ministrado (Semana 3 — não repetir)
 
 Os estudantes chegam com:
 

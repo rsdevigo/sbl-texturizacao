@@ -1,14 +1,14 @@
 # Plano de Aula — Semana 7
-**Disciplina:** Texturização | **Metodologia:** Studio-Based Learning
+**Disciplina:** Texturização | **Curso:** Tecnologia em Jogos Digitais | **Metodologia:** Studio-Based Learning
 **Unidade:** II — Materiais PBR e Workflow no 3D Coat (Semanas 6–9)
-**Tema:** Migração para o 3D Coat: mesh maps (AO, Curvature, Normal) e Smart Materials
+**Tema da semana:** Migração para o 3D Coat: mesh maps (AO, Curvature, Normal) e Smart Materials
 **Apostila:** Parte III, Cap. 10 — Construção e Análise de Materiais Reais (introdução ao 3D Coat); Parte V, Cap. 16 — Normal Maps e Transferência de Detalhes. Leitura complementar (não avaliada): Parte IV, Cap. 13 — Texturização Procedural, para quem quiser a via alternativa de nós no Blender
 **Carga horária:** 3h (2 encontros de 1h30)
 **Crítica:** 🔵 Informal — Crítica circulante com ênfase em leitura de profundidade e coerência do material
 
 ---
 
-## Pré-requisito da semana
+## O que já foi ministrado (Semana 6 — não repetir)
 
 Os estudantes chegam com:
 
@@ -39,7 +39,7 @@ Ao final da semana, o estudante será capaz de:
 
 ---
 
-## Critérios observados nesta semana
+## Critérios da Rubrica Mestre ativos nesta semana
 
 > ⚠️ **Semana sem crítica formal — nenhuma nota é atribuída.** O professor observa e registra evidências nos critérios abaixo para calibrar a avaliação da CF2 (Semana 8). O estudante recebe feedback oral durante o estúdio.
 
