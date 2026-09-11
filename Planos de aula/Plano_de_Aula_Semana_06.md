@@ -1,9 +1,9 @@
 # Plano de Aula — Semana 6
-**Disciplina:** Texturização | **Metodologia:** Studio-Based Learning  
-**Unidade:** II — Materiais PBR e Workflow  
-**Tema:** Criação de texturas seamless e tileable  
-**Apostila:** Parte IV, Cap. 12 — Texturas Seamless e Tileables (fontes de texturas e técnicas de criação)  
-**Carga horária:** 3h (2 encontros de 1h30)  
+**Disciplina:** Texturização | **Metodologia:** Studio-Based Learning
+**Unidade:** II — Materiais PBR e Workflow no 3D Coat (Semanas 6–9)
+**Tema:** Criação de texturas seamless e tileable (trilha fotorrealista ou estilizada)
+**Apostila:** Parte IV, Cap. 12 — Texturas Seamless e Tileables (fontes de texturas e técnicas de criação)
+**Carga horária:** 3h (2 encontros de 1h30)
 **Crítica:** 🔵 Informal — Crítica circulante em estúdio e comentário coletivo ao final do segundo encontro
 
 ---
@@ -12,14 +12,13 @@
 
 Os estudantes chegam com:
 
-- Asset 01 com UV otimizado + material PBR aplicado (Principled BSDF com valores planos de Albedo, Metallic e Roughness) — Semana 5
-- Asset 02 com UV aberto — Semana 4
-- 4 materiais PBR temáticos calibrados (v2 pós-crítica formal) — Semana 5
+- Hero Asset Referência com UV revisado + material PBR aplicado (Principled BSDF com valores planos de Albedo, Metallic e Roughness) — Semana 5
+- 4 materiais PBR temáticos calibrados (v2 pós-crítica) — Semana 5
 - Compreensão consolidada de: Albedo, Metallic, Roughness, plausibilidade física, Principled BSDF
 
-> **Transição pedagógica desta semana:** nas Semanas anteriores, os estudantes definiram *o que o material é* usando valores planos (cor sólida, Metallic 0 ou 1, Roughness fixo). A Semana 6 é o primeiro momento em que uma **imagem real** entra no pipeline — o Albedo deixa de ser uma cor e passa a ser uma textura com variação, micro-detalhe e identidade visual do tema. O conceito central a introduzir é que uma textura de jogo precisa ser **seamless** (sem costura visível quando repetida) para funcionar em superfícies maiores do que um único UV tile.
+> **Transição pedagógica desta semana:** nas semanas anteriores, os estudantes definiram *o que o material é* usando valores planos (cor sólida, Metallic 0 ou 1, Roughness fixo). A Semana 6 é o primeiro momento em que uma **imagem real** entra no pipeline — o Albedo deixa de ser uma cor e passa a ser uma textura com variação, micro-detalhe e identidade visual do tema. O conceito central a introduzir é que uma textura de jogo precisa ser **seamless** (sem costura visível quando repetida) para funcionar em superfícies maiores do que um único UV tile.
 
-> **Nota sobre a trilha visual do estudante:** a partir desta semana, cada estudante começa a definir se o seu Hero Asset vai perseguir um resultado **fotorrealista** (textura fotográfica, material lido como "escaneado do mundo real") ou **estilizado** (textura de origem pintada/ilustrada, material lido como desenhado com intenção artística). As duas trilhas usam exatamente o mesmo fluxo de ferramentas do semestre — Blender nesta semana, 3D Coat a partir da Semana 7 — a diferença está apenas na fonte da imagem e, mais adiante, na forma de aplicar o material dentro do 3D Coat. Nenhuma trilha é tecnicamente mais fácil nem vale mais nota; a escolha deve ser coerente com o universo visual que o estudante já vem construindo para o kit desde as Semanas 1–3.
+> **Nota sobre a trilha visual do estudante:** a partir desta semana, cada estudante começa a definir se o seu Hero Asset Referência vai perseguir um resultado **fotorrealista** (textura fotográfica, material lido como "escaneado do mundo real") ou **estilizado** (textura de origem pintada/ilustrada, material lido como desenhado com intenção artística). As duas trilhas usam exatamente o mesmo fluxo de ferramentas do semestre — Blender nesta semana, 3D Coat a partir da Semana 7 — a diferença está apenas na fonte da imagem e, mais adiante, na forma de aplicar o material dentro do 3D Coat. Nenhuma trilha é tecnicamente mais fácil nem vale mais nota; a escolha deve ser coerente com o universo visual que o estudante já vem construindo para o kit desde as Semanas 1–3. Essa mesma decisão de trilha vai valer para os Assets Secundários que entrarem no Kit Modular a partir da Semana 10.
 
 ---
 
@@ -30,7 +29,7 @@ Ao final da semana, o estudante será capaz de:
 1. Explicar o que é uma textura seamless e por que ela é necessária em jogos com superfícies amplas.
 2. Diferenciar uma textura seamless criada por offset+patch de uma simples repetição direta de foto ou ilustração.
 3. Criar ou adaptar uma textura seamless a partir de uma imagem de origem (fotografia ou textura pintada/estilizada) usando o Krita, aplicando o método de offset e patch de bordas.
-4. Importar a textura seamless no Blender e conectá-la ao canal Albedo do Principled BSDF do Asset 01.
+4. Importar a textura seamless no Blender e conectá-la ao canal Albedo do Principled BSDF do Hero Asset Referência.
 5. Localizar e baixar texturas PBR de fontes livres — fotográficas (Poly Haven, AmbientCG) ou estilizadas/pintadas (bancos de texturas seamless painterly) — e identificar os mapas disponíveis em cada pacote, conforme a trilha visual escolhida para o kit.
 
 ---
@@ -53,7 +52,7 @@ Ao final da semana, o estudante será capaz de:
 ## Recursos necessários
 
 - Computadores com Blender instalado (3.x ou 4.x) e Krita instalado
-- Asset 01 de cada estudante (arquivo `.blend` da Semana 5 com UV + material PBR)
+- Hero Asset Referência de cada estudante (arquivo `.blend` da Semana 5 com UV + material PBR)
 - Arquivo de demonstração do professor: fotografia de pedra ou tijolos (resolução mínima 1024×1024, iluminação difusa e neutra — sem sombras duras) **e** um exemplo de textura estilizada/pintada seamless, para mostrar os dois casos lado a lado
 - Krita aberto e configurado para uso (confirmar instalação no laboratório com antecedência)
 - Acesso à internet para acessar Poly Haven (polyhaven.com), AmbientCG (ambientcg.com) e um banco de texturas estilizadas seamless (ex.: coleção Painted/Stylized da Poliigon, ou pacotes seamless hand-painted gratuitos no itch.io)
@@ -70,7 +69,7 @@ Ao final da semana, o estudante será capaz de:
 
 **Recapitulação rápida (5 min): empacotamento avançado de UV**
 
-Antes de começar o conteúdo novo, retomar em 5 minutos o que ficou pendente da Semana 4: o add-on UVPackmaster (quando disponível no laboratório) permite empacotamento de UV islands com rotação livre e aproveitamento de formas irregulares — um resultado mais eficiente que o Pack Islands nativo do Blender, especialmente para islands orgânicas. Mostrar rapidamente (ou, se o add-on não estiver instalado, descrever com uma imagem) a diferença de aproveitamento de espaço entre um Pack Islands nativo e um empacotamento via UVPackmaster no mesmo asset. Fechar com a pergunta: *"Vale a pena reabrir o Pack Islands do Asset 01 ou do Asset 02 com essa ferramenta antes de aplicar a textura de hoje? Se sim, façam isso nos primeiros minutos do estúdio."*
+Antes de começar o conteúdo novo, retomar em 5 minutos o que ficou pendente da Semana 4: o add-on UVPackmaster (quando disponível no laboratório) permite empacotamento de UV islands com rotação livre e aproveitamento de formas irregulares — um resultado mais eficiente que o Pack Islands nativo do Blender, especialmente para islands orgânicas. Mostrar rapidamente (ou, se o add-on não estiver instalado, descrever com uma imagem) a diferença de aproveitamento de espaço entre um Pack Islands nativo e um empacotamento via UVPackmaster no mesmo asset. Fechar com a pergunta: *"Vale a pena reabrir o Pack Islands do Hero Asset Referência com essa ferramenta antes de aplicar a textura de hoje? Se sim, façam isso nos primeiros minutos do estúdio."*
 
 **Texturas seamless: por que repetição sem costuras é uma exigência de produção**
 
@@ -140,8 +139,8 @@ Para esta semana, os estudantes podem *criar* uma textura a partir de uma imagem
 
 **Criação de uma textura seamless de pedra a partir de uma fotografia no Krita**
 
-**Setup (2 min):**  
-Abrir o Krita com a fotografia de pedra preparada (resolução 1024×1024 ou superior, iluminação difusa). Ter o Blender aberto minimizado com o Asset 01 de demonstração já carregado para uso na segunda parte.
+**Setup (2 min):**
+Abrir o Krita com a fotografia de pedra preparada (resolução 1024×1024 ou superior, iluminação difusa). Ter o Blender aberto minimizado com o Hero Asset Referência de demonstração já carregado para uso na segunda parte.
 
 **Percurso da demonstração:**
 
@@ -169,13 +168,13 @@ Abrir o Krita com a fotografia de pedra preparada (resolução 1024×1024 ou sup
 3. Exportar: `File → Export As...` → formato PNG, 1024×1024, nome `pedra_seamless_demo.png`.
 
 **Passo 5 — Importação no Blender (2 min):**
-1. Abrir o Blender com o Asset 01 de demonstração.
+1. Abrir o Blender com o Hero Asset Referência de demonstração.
 2. No Shader Editor, adicionar um nó `Image Texture` (`Shift+A → Texture → Image Texture`).
 3. Abrir a textura exportada no nó.
 4. Conectar a saída `Color` do Image Texture à entrada `Base Color` do Principled BSDF.
 5. No Viewport Rendered: mostrar a textura aplicada sobre o asset — comparar com o Albedo plano da semana anterior.
 
-**Passo 6 — Comparação rápida com o caso estilizado (2 min):**  
+**Passo 6 — Comparação rápida com o caso estilizado (2 min):**
 Abrir uma segunda janela do Krita já preparada com uma textura pintada estilizada de pedra (sem repetir o processo completo, só mostrar o resultado no Wrap Around): *"O processo de offset+patch é idêntico. A única diferença é que aqui eu não estou clonando pixels de uma foto — estou continuando as pinceladas. O critério de 'está seamless?' é o mesmo nos dois casos."*
 
 > **Nota do professor:** Não precisa ser perfeito — uma costura residual durante a demo é didaticamente valiosa. Mostrar: *"Tem ainda uma costura aqui. O que eu faria agora? Volto ao Krita, re-exporto e recarrego o nó. Esse ciclo Krita → Blender vai se repetir várias vezes durante o estúdio — é normal, nas duas trilhas."*
@@ -184,11 +183,11 @@ Abrir uma segunda janela do Krita já preparada com uma textura pintada estiliza
 
 ### Produção em Estúdio — 50 minutos
 
-**Criação da textura seamless temática e aplicação ao Asset 01**
+**Criação da textura seamless temática e aplicação ao Hero Asset Referência**
 
 **Consigna entregue verbalmente:**
 
-> *"O objetivo deste estúdio é criar uma textura seamless que represente o material principal do Asset 01 do seu kit — a superfície que ele mais mostra. Se o Asset 01 é uma parede de pedra medieval, a textura é pedra. Se é uma caixa de metal enferrujado Sci-Fi, a textura é metal com ferrugem. Vocês têm quatro caminhos: criar a partir de uma foto própria ou da internet, criar a partir de uma foto do Poly Haven ou AmbientCG (que já são quase seamless), baixar ou criar uma textura estilizada/pintada seamless se essa for a trilha visual do seu kit, ou baixar uma textura pronta de qualquer uma dessas fontes se o tempo for curto. Qualquer caminho vale — o que importa é que ao final vocês tenham uma textura PNG seamless aplicada ao canal Albedo do Asset 01 no Blender, e que a escolha de trilha (fotorrealista ou estilizada) seja coerente com o universo do kit."*
+> *"O objetivo deste estúdio é criar uma textura seamless que represente o material principal do Hero Asset Referência de vocês — a superfície que ele mais mostra. Se o Hero Asset é um pilar de pedra medieval, a textura é pedra. Se é uma caixa de metal enferrujado Sci-Fi, a textura é metal com ferrugem. Vocês têm quatro caminhos: criar a partir de uma foto própria ou da internet, criar a partir de uma foto do Poly Haven ou AmbientCG (que já são quase seamless), baixar ou criar uma textura estilizada/pintada seamless se essa for a trilha visual do seu kit, ou baixar uma textura pronta de qualquer uma dessas fontes se o tempo for curto. Qualquer caminho vale — o que importa é que ao final vocês tenham uma textura PNG seamless aplicada ao canal Albedo do Hero Asset Referência no Blender, e que a escolha de trilha (fotorrealista ou estilizada) seja coerente com o universo do kit."*
 
 **Atividade estruturada:**
 
@@ -196,10 +195,10 @@ Abrir uma segunda janela do Krita já preparada com uma textura pintada estiliza
 2. Aplicar o processo de offset + patch conforme demonstração.
 3. Verificar continuidade no Wrap Around (`W`).
 4. Exportar a textura: `[Nome]_[material]_seamless_S06.png` (ex: `joao_pedra_seamless_S06.png`).
-5. No Blender, abrir o arquivo do Asset 01 da Semana 5.
+5. No Blender, abrir o arquivo do Hero Asset Referência da Semana 5.
 6. No Shader Editor, adicionar o nó `Image Texture`, carregar a textura exportada e conectar ao `Base Color` do Principled BSDF.
 7. Verificar no Viewport Rendered com HDRI: a textura tile sem costuras visíveis? O Albedo anterior (cor plana) foi substituído pela textura, mas Metallic e Roughness devem permanecer com os valores calibrados na Semana 5.
-8. Salvar: `[Nome]_Asset01_Textura_S06.blend`.
+8. Salvar: `[Nome]_HeroAsset_Textura_S06.blend`.
 
 **Papel do professor:**
 
@@ -228,7 +227,7 @@ Esta é uma crítica informal. Não há apresentação individual obrigatória �
 
 **Protocolo:**
 
-**Abertura (2 min):**  
+**Abertura (2 min):**
 Professor define o foco da crítica: *"Hoje vamos olhar para duas coisas: (1) a textura está seamless? — olho de 2 metros de distância do monitor, textura no Asset em Viewport Rendered; (2) essa textura poderia existir no universo do kit? — o material, a cor, o nível de detalhe combinam com o moodboard, seja a trilha fotorrealista ou estilizada?"*
 
 **Rodada circulante (15 min — 4–5 estações):**
@@ -239,48 +238,45 @@ Para cada trabalho observado, o professor faz a turma se posicionar diante do mo
 - *"Essa textura de [material] combina com o universo [tema do kit]? Parece medieval suficiente? Sci-Fi o bastante? Estilizado ou fotorrealista, o que está certo e o que destoa?"*
 - *"O material está preservado — Roughness e Metallic configurados corretamente? Ou só o Albedo foi conectado?"*
 
-**Fechamento da crítica (3 min):**  
+**Fechamento da crítica (3 min):**
 Professor sintetiza os padrões observados na turma:
 - Qual o erro de seamless mais comum (tipicamente: patch em linha reta criando novo padrão repetitivo, ou patch insuficiente nas extremidades).
 - Qual é o estado geral de coerência temática — os kits estão ganhando identidade visual, e a trilha escolhida (fotorrealista/estilizada) está clara?
-- Orientação para o estúdio: *"Quem ainda tem costura visível: foco em voltar ao Krita e refinar o patch. Quem já está satisfeito com a textura: começa a criar a textura seamless para o Asset 02, na mesma trilha visual do Asset 01."*
+- Orientação para o estúdio: *"Quem ainda tem costura visível: foco em voltar ao Krita e refinar o patch. Quem já está satisfeito com a textura: usa o tempo do segundo estúdio para aprofundar — refinar a variação de cor, testar uma segunda passagem de patch com mais detalhe, ou preparar uma segunda textura de apoio (ex.: argamassa entre as pedras) que o Hero Asset Referência também vai precisar no 3D Coat, a partir da Semana 7."*
 
 ---
 
 ### Produção em Estúdio — 60 minutos
 
-**Refinamento da textura do Asset 01 + início da textura do Asset 02**
+**Refinamento e aprofundamento da textura do Hero Asset Referência**
 
 **Consigna:**
 
-> *"Sessenta minutos, duas prioridades em ordem. Primeiro: se a crítica apontou costura ou incoerência temática no Asset 01, corrija agora — volte ao Krita, refine o patch, re-exporte e recarregue no Blender. Segundo, para quem estiver satisfeito com o Asset 01: repita o processo para o Asset 02, mantendo a mesma trilha visual (fotorrealista ou estilizada). Não precisa terminar — o objetivo é ter o fluxo completo (Krita → export PNG → Blender → conectar ao Albedo) rodando de forma autônoma para ambos os assets."*
+> *"Sessenta minutos para aprofundar o material do Hero Asset Referência. Se a crítica apontou costura ou incoerência temática: corrija agora — volte ao Krita, refine o patch, re-exporte e recarregue no Blender. Se a textura já está sólida: usem o tempo para ir além do mínimo — criar uma segunda textura seamless de apoio para uma superfície secundária do mesmo Hero Asset (por exemplo, a argamassa entre as pedras, ou o couro de uma alça, dependendo da peça), testar variações de cor que sugiram desgaste por idade, ou revisar o UV mais uma vez para garantir que a densidade de texel está aproveitando bem a resolução da textura nova. Não é obrigatório terminar tudo — o objetivo é sair da semana com domínio real do fluxo Krita → Blender."*
 
 **Atividade:**
 
-**Parte 1 — Refinamento do Asset 01 (≈20 min para quem precisar, pular para Parte 2 se já resolvido):**
+**Parte 1 — Refinamento da textura principal (≈20 min para quem precisar, pular para Parte 2 se já resolvido):**
 1. Reabrir a textura no Krita.
 2. Ativar Wrap Around, identificar costuras residuais e refinar o patch com Clone Stamp.
 3. Re-exportar com o mesmo nome (sobrescrever) ou com sufixo `_v2`.
-4. No Blender: no nó Image Texture do Asset 01, clicar em `Reload` para atualizar a textura sem precisar reimportar.
+4. No Blender: no nó Image Texture do Hero Asset Referência, clicar em `Reload` para atualizar a textura sem precisar reimportar.
 5. Verificar no Viewport Rendered.
-6. Salvar: `[Nome]_Asset01_Textura_S06_v2.blend`.
+6. Salvar: `[Nome]_HeroAsset_Textura_S06_v2.blend`.
 
-**Parte 2 — Textura seamless para o Asset 02 (≈40 min):**
-1. Identificar o material principal do Asset 02 no kit.
-2. Buscar ou capturar imagem de origem coerente com o tema e com a trilha visual já escolhida no Asset 01.
-3. Aplicar o processo de offset + patch no Krita.
-4. Verificar no Wrap Around.
-5. Exportar: `[Nome]_[material]_seamless_Asset02_S06.png`.
-6. Abrir o arquivo do Asset 02 no Blender (Semana 4 — UV aberto, sem material ainda).
-7. Criar material no Principled BSDF com os valores de Metallic e Roughness coerentes com o material do Asset 02 (referenciar os 4 materiais de teste da Semana 5).
-8. Conectar a textura seamless ao `Base Color`.
-9. Salvar: `[Nome]_Asset02_Textura_S06.blend`.
+**Parte 2 — Aprofundamento para quem já concluiu (≈40 min):**
+1. Identificar uma segunda superfície do Hero Asset Referência que use um material distinto do principal (ex.: metal de um encaixe, tecido de um detalhe, argamassa entre blocos de pedra).
+2. Criar ou adaptar uma segunda textura seamless para essa superfície, seguindo o mesmo processo de offset + patch.
+3. Exportar: `[Nome]_[material2]_seamless_S06.png`.
+4. No Blender, criar um segundo slot de material (ou usar uma máscara de vertex color/UV para dividir a malha entre os dois materiais, conforme a complexidade do asset) e conectar a nova textura ao Base Color desse segundo material.
+5. Ajustar Metallic e Roughness do segundo material com valores fisicamente coerentes.
+6. Salvar: `[Nome]_HeroAsset_Textura_S06.blend` (atualizado).
 
 **Papel do professor:**
 
-- Para estudantes refinando o Asset 01: *"O que mudou com o patch que você fez? Consegue mostrar no Wrap Around antes e depois?"* — estimular a verbalização do processo para C1.
-- Para estudantes avançando para o Asset 02: *"O Roughness do Asset 02 é o mesmo do Asset 01? Os dois objetos no seu kit têm a mesma superfície? Se não, os valores têm que ser diferentes."*
-- Para estudantes rápidos que terminam os dois assets: *"Você tem um terceiro asset em mente para o kit? Se tiver, começa o UV dele — semana que vem você vai precisar."* Ou: *"Experimenta ajustar o Scale da textura do Asset 01 para ver o impacto na leitura visual do objeto."*
+- Para estudantes refinando a textura principal: *"O que mudou com o patch que você fez? Consegue mostrar no Wrap Around antes e depois?"* — estimular a verbalização do processo para C1.
+- Para estudantes avançando para a segunda textura: *"Esse segundo material do seu Hero Asset — ele é fisicamente diferente do primeiro? O Roughness dele deveria ser igual?"*
+- Para estudantes rápidos que terminam tudo: *"Experimenta ajustar o Scale da textura principal para ver o impacto na leitura visual do objeto. Ou: pensa em qual Asset Secundário do kit já poderia usar essa mesma textura de base, quando ele chegar de Modelagem 3D lá pela Semana 10."*
 
 ---
 
@@ -288,41 +284,41 @@ Professor sintetiza os padrões observados na turma:
 
 **Roteiro:**
 
-1. **(2 min — Síntese técnica)**  
-*"Hoje vocês fizeram a primeira conexão entre uma imagem real e o pipeline de texturização. O Albedo do Asset 01 não é mais uma cor — é uma superfície com história, fotografada ou pintada. Isso parece simples, mas é a base de tudo que vem na Semana 7 em diante."*
+1. **(2 min — Síntese técnica)**
+*"Hoje vocês fizeram a primeira conexão entre uma imagem real e o pipeline de texturização. O Albedo do Hero Asset Referência não é mais uma cor — é uma superfície com história, fotografada ou pintada. Isso parece simples, mas é a base de tudo que vem na Semana 7 em diante."*
 
-2. **(3 min — Reflexão de processo)**  
+2. **(3 min — Reflexão de processo)**
 Pergunta para 2–3 voluntários: *"Qual foi a parte mais difícil do processo de seamless? O patch em si, ou saber quando a costura estava boa o suficiente? Como você decidiu parar?"* O objetivo é problematizar o critério de "bom o suficiente" — que é uma decisão artística, não técnica.
 
-3. **(3 min — Antecipação da Semana 7)**  
-*"Na semana que vem, a ferramenta muda: vocês vão levar esses assets para o 3D Coat e vão aprender a gerar mapas direto da malha 3D — Ambient Occlusion, Curvature e Normal Map — sem precisar de nós matemáticos no Blender. Quem está na trilha fotorrealista vai usar esses mapas para reforçar o desgaste sobre a própria textura fotográfica de hoje; quem está na trilha estilizada vai usar os mesmos mapas como máscara para Smart Materials — materiais inteligentes que se aplicam automaticamente em arestas, frestas e reentrâncias. Para isso, vocês vão precisar das texturas seamless que criaram hoje — mantenham os arquivos de origem do Krita (não só o PNG exportado). O arquivo `.kra` nativo do Krita com as camadas preservadas vai poupar trabalho."*
+3. **(3 min — Antecipação da Semana 7)**
+*"Na semana que vem, a ferramenta muda: vocês vão levar o Hero Asset Referência para o 3D Coat e vão aprender a gerar mapas direto da malha 3D — Ambient Occlusion, Curvature e Normal Map — sem precisar de nós matemáticos no Blender. Quem está na trilha fotorrealista vai usar esses mapas para reforçar o desgaste sobre a própria textura fotográfica de hoje; quem está na trilha estilizada vai usar os mesmos mapas como máscara para Smart Materials — materiais inteligentes que se aplicam automaticamente em arestas, frestas e reentrâncias. Para isso, vocês vão precisar das texturas seamless que criaram hoje — mantenham os arquivos de origem do Krita (não só o PNG exportado). O arquivo `.kra` nativo do Krita com as camadas preservadas vai poupar trabalho."*
 
-4. **(2 min — Confirmação das entregas)**  
+4. **(2 min — Confirmação das entregas)**
 Recapitular as entregas da semana com nomenclatura esperada.
 
 ---
 
 ## Possíveis Dificuldades
 
-**1. Patch em linha reta cria um novo padrão repetitivo**  
+**1. Patch em linha reta cria um novo padrão repetitivo**
 O erro mais comum ao usar o Clone Stamp é cobrir a costura com pinceladas horizontais ou verticais regulares. O resultado substitui uma costura reta por um padrão de linhas paralelas igualmente visível. Estratégia: orientar pinceladas *diagonais e irregulares*, seguindo as formas naturais do material (veios da madeira, juntas da pedra, direção da pincelada estilizada). Mostrar ao vivo no Krita com o Wrap Around ativo.
 
-**2. Costura visível apenas em repetição, invisível no arquivo isolado**  
+**2. Costura visível apenas em repetição, invisível no arquivo isolado**
 O estudante olha para o PNG exportado e não vê costura — só percebe o problema depois de aplicar no Blender, quando a textura tilea. Estratégia: insistir no uso do Wrap Around (`W`) no Krita *durante* o processo. Ele é o único feedback em tempo real confiável. Se o estudante chegou ao Blender e viu costura: *"Volte ao Krita, abra o arquivo .kra (não o PNG), ative o Wrap Around e corrija lá — re-exporte e dê Reload no nó do Blender."*
 
-**3. Imagem de origem com iluminação direcional forte (sombras duras)**  
+**3. Imagem de origem com iluminação direcional forte (sombras duras)**
 Fotos com sombras duras criam gradientes que não podem ser corrigidos com offset+patch simples — as sombras seguem a direção da luz e criam costuras que "giram" conforme o tile. Estratégia: orientar os estudantes a usar imagens capturadas em dia nublado ou iluminação difusa. Se a foto tiver sombras leves, o Krita permite suavizá-las com Dodge/Burn ou ajuste de níveis por camada antes do offset.
 
-**4. Krita não instalado ou com problemas no laboratório**  
+**4. Krita não instalado ou com problemas no laboratório**
 O Krita é um software gratuito mas precisa estar instalado com antecedência. Estratégia: confirmar a instalação antes da aula. Como alternativa imediata, o próprio Blender possui um Image Editor integrado com ferramentas básicas de pintura (`Texture Paint` workspace) que permite fazer um patch rudimentar. Para esta semana, essa alternativa é funcional embora menos confortável.
 
-**5. Escala da textura incorreta após aplicação no Blender**  
-A textura aparece muito grande (poucos tiles visíveis) ou muito pequena (tiles microscópicos) em relação ao objeto. Isso não é problema do seamless — é de escala de mapeamento. Estratégia: adicionar um nó `Mapping` (Shift+A → Vector → Mapping) entre o `Texture Coordinate` e o `Image Texture`. Ajustar os valores de `Scale` em X e Y até a proporção parecer fisicamente coerente. Referenciar: uma pedra de parede medieval típica tem entre 20–40 cm — quanto isso representa em relação ao Asset 01?
+**5. Escala da textura incorreta após aplicação no Blender**
+A textura aparece muito grande (poucos tiles visíveis) ou muito pequena (tiles microscópicos) em relação ao objeto. Isso não é problema do seamless — é de escala de mapeamento. Estratégia: adicionar um nó `Mapping` (Shift+A → Vector → Mapping) entre o `Texture Coordinate` e o `Image Texture`. Ajustar os valores de `Scale` em X e Y até a proporção parecer fisicamente coerente. Referenciar: uma pedra de parede medieval típica tem entre 20–40 cm — quanto isso representa em relação ao Hero Asset Referência?
 
-**6. Estudante baixa textura pronta (fotográfica ou estilizada) e não entende o processo**  
+**6. Estudante baixa textura pronta (fotográfica ou estilizada) e não entende o processo**
 Texturas do Poly Haven, AmbientCG ou de um banco estilizado já são seamless, então o estudante que as baixa pula todo o aprendizado prático da semana. Estratégia: não proibir o uso das fontes — elas são parte do fluxo profissional em qualquer trilha. Mas exigir que o estudante **documente** por que a textura é seamless (identificar o Wrap Around, apontar a continuidade de bordas) e que adapte a cor ou o detalhe ao tema do kit se necessário. *"Baixar é válido. Entregar sem entender não é."*
 
-**7. Trilha visual ainda indefinida**  
+**7. Trilha visual ainda indefinida**
 Alguns estudantes chegam à Semana 6 sem ter decidido se vão perseguir fotorrealismo ou estilização. Estratégia: usar o próprio moodboard da Semana 1–3 como critério de decisão — *"Suas referências visuais são fotos de ambientes reais ou são ilustrações/concept art? A resposta já aponta a trilha."* Se ainda houver dúvida genuína, orientar para a trilha estilizada como padrão mais seguro para quem não tem acesso fácil a fotografia de boa qualidade — a decisão pode ser revisitada até a Semana 7.
 
 ---
@@ -335,7 +331,7 @@ Alguns estudantes chegam à Semana 6 sem ter decidido se vão perseguir fotorrea
 | Estudante inseguro sobre se a textura está "boa o suficiente" | *"Recua 2 passos do monitor e olha para a parede tileada. Se você precisar se concentrar para achar a costura, ela já não vai incomodar o jogador. Essa é a régua."* |
 | Textura coerente tecnicamente mas desconectada do tema | Abrir o moodboard ao lado do Blender. *"Olha para essas referências. Essa pedra que você usou — ela existe nesse universo? A cor está certa? O nível de desgaste está certo?"* Redirecionar para busca de nova referência se necessário. |
 | Metallic ou Roughness perdidos ao adicionar o nó Image Texture | *"Esses inputs no Principled BSDF — o que está conectado agora? Metallic e Roughness ainda têm valor? Se o campo está branco e sem nó, o valor voltou para o padrão. Recoloca os valores que você tinha na Semana 5."* |
-| Estudante avançado que termina cedo os dois assets | Propor desafio de variação: *"Cria uma segunda versão da mesma textura com cor ligeiramente diferente — como se fosse o mesmo material em partes mais novas e partes mais antigas. Dois arquivos PNG do mesmo material com variação de temperatura de cor. Isso vai ser útil para dar vida ao kit mais pra frente."* |
+| Estudante avançado que termina cedo | Propor a segunda textura de apoio (Parte 2 do segundo estúdio) ou desafio de variação: *"Cria uma segunda versão da mesma textura com cor ligeiramente diferente — como se fosse o mesmo material em partes mais novas e partes mais antigas."* |
 | Turma com dificuldade geral no Krita (interface desconhecida) | Fazer uma pausa de 5 minutos para um micro-tour: mostrar Clone Stamp (`S`), Smudge, Wrap Around (`W`) e Export. Não mais do que isso — o Krita é suficientemente intuitivo para o nível necessário esta semana. |
 
 ---
@@ -346,7 +342,7 @@ Alguns estudantes chegam à Semana 6 sem ter decidido se vão perseguir fotorrea
 |---|---|---|
 | PNG da textura seamless com ausência de costura visível a zoom normal | C4 — Materiais PBR | Ativar Wrap Around no Krita ou observar a repetição no Viewport do Blender com escala real — costura não deve ser identificável sem esforço |
 | Arquivo `.kra` do Krita com camadas preservadas (ou registro do processo de offset+patch) | C1 — Processo de Projeto | Presença do arquivo de origem nomeado corretamente; camadas distinguindo a imagem original do trabalho de patch |
-| Asset 01 com textura seamless conectada ao Albedo e Metallic/Roughness preservados da Semana 5 | C4 — Materiais PBR | Verificar no Principled BSDF: Base Color conectado ao Image Texture, Metallic e Roughness com valores não-padrão coerentes com o material |
+| Hero Asset Referência com textura seamless conectada ao Albedo e Metallic/Roughness preservados da Semana 5 | C4 — Materiais PBR | Verificar no Principled BSDF: Base Color conectado ao Image Texture, Metallic e Roughness com valores não-padrão coerentes com o material |
 | Coerência temática da textura com o universo do kit (cor, desgaste, escala) e com a trilha visual escolhida | C2 — Direção Artística | Comparação direta com o moodboard: a textura poderia existir naquele universo visual? A trilha (fotorrealista/estilizada) é consistente com as referências? |
 | Participação na crítica circulante: identificar costura ou incoerência temática no trabalho de outro estudante | C10 — Participação | Qualidade e especificidade da observação — não apenas "está bom" ou "está ruim", mas apontamento técnico ou artístico fundamentado |
 | Arquivo nomeado e versionado corretamente (PNG + .blend + .kra) | C1 — Processo de Projeto | Existência dos três tipos de arquivo com sufixo `_S06` e distinção de versões onde aplicável |
@@ -357,12 +353,12 @@ Alguns estudantes chegam à Semana 6 sem ter decidido se vão perseguir fotorrea
 
 | Entrega | Formato | Prazo |
 |---|---|---|
-| Textura seamless do Asset 01 (material principal do kit, na trilha visual escolhida) | PNG 1024×1024 ou superior, com sufixo `_seamless_S06` | Até o fim do segundo encontro |
+| Textura seamless principal do Hero Asset Referência (na trilha visual escolhida) | PNG 1024×1024 ou superior, com sufixo `_seamless_S06` | Até o fim do segundo encontro |
 | Arquivo de origem do Krita (processo de patch preservado) | `.kra` nativo do Krita | Até o fim do segundo encontro |
-| Asset 01 com textura seamless aplicada no Albedo | `.blend` com sufixo `_Asset01_Textura_S06` | Até o fim do segundo encontro |
-| Asset 02 com textura seamless aplicada (se concluído) | PNG + `.blend` com sufixo `_Asset02_Textura_S06` | Até o fim do segundo encontro (entrega parcial aceita) |
+| Hero Asset Referência com textura seamless aplicada no Albedo | `.blend` com sufixo `_HeroAsset_Textura_S06` | Até o fim do segundo encontro |
+| Segunda textura seamless de apoio, se aplicável (entrega opcional/progressiva) | PNG + material adicional no mesmo `.blend` | Até o fim do segundo encontro (entrega opcional) |
 
-> **Nota:** A entrega do Asset 02 com textura é progressiva — o objetivo é que todos completem o Asset 01. O Asset 02 será concluído no início da Semana 7 se necessário, antes da migração para o 3D Coat.
+> **Nota:** Não há crítica formal nesta semana. As observações do professor sobre C1, C2 e C4 alimentam o acompanhamento informal do progresso, servindo de base para a CF2, na Semana 8.
 
 ---
 

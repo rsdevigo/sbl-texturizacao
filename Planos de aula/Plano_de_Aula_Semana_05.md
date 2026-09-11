@@ -211,7 +211,7 @@ Sem Ficha de Crítica Formal e sem autoavaliação obrigatória. O professor cir
 
 ### Produção em Estúdio — 65 minutos
 
-**Refinamento dos materiais PBR + expansão para o Asset 01**
+**Refinamento dos materiais PBR + consolidação do Hero Asset Referência**
 
 **Consigna:**
 

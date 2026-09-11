@@ -97,7 +97,7 @@ Tecnologia em Jogos Digitais | Studio-Based Learning | 17 Semanas | 51 horas
 | **Mini Aula** (20 min) | O que é uma textura seamless e por que ela é necessária em jogos com superfícies amplas. Duas trilhas de fonte: fotográfica (Poly Haven, AmbientCG) ou estilizada/pintada, ambas exigindo o mesmo tratamento de continuidade de borda. |
 | **Demonstração** (20 min) | Criação de uma textura seamless a partir de uma fotografia usando Krita (offset + patch de bordas) e aplicação no Albedo do material PBR já calibrado na Semana 5. Comparação rápida com o caso de uma textura estilizada. |
 | **Estúdio** (50+60 min) | Criação de uma textura seamless temática (fotográfica ou estilizada, conforme a trilha visual do estudante) condizente com o Hero Asset Referência, conectada ao Albedo com Metallic/Roughness preservados. |
-| **Entrega** | Arquivo .blend do Asset 01 com textura seamless aplicada ao Albedo (PNG 1024×1024 ou superior) + arquivo .kra de origem. |
+| **Entrega** | Arquivo .blend do Hero Asset Referência com textura seamless aplicada ao Albedo (PNG 1024×1024 ou superior) + arquivo .kra de origem. |
 | **Crítica** | 🔵 Informal — Crítica circulante em estúdio ou comentário coletivo rápido ao final do segundo encontro. |
 
 ---
