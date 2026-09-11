@@ -8,12 +8,12 @@ Levantamento de todos os recursos que o professor precisa preparar previamente, 
 | R02 | pratica_UV_base.blend | Semana 02 | Blender | 2 | Cena com cubo, cilindro, esfera e prop temático simples, sem UV, para prática |
 | R03 | checkerboard_1024.png | Semanas 02–04, 06 | Blender | 2 | Textura de grid 1024×1024 para verificação visual de UV |
 | R04 | demo_prop_uv_fechado.blend | Semana 03 | Blender | 3 | Prop temático (barril/caixote/pedra) com UV ainda não aberto, para demonstração de seams |
-| R05 | Ficha_Autoavaliacao_Instrumento2 | Semanas 03, 05, 08, 11, 14, 17 | — (PDF/digital) | 3 | Instrumento 2 da Rubrica Mestre — autoavaliação do estudante antes das críticas formais |
+| R05 | Ficha_Autoavaliacao_Instrumento2 | Semanas 04, 08, 11, 14, 16 | — (PDF/digital) | 4 | Instrumento 2 da Rubrica Mestre — autoavaliação do estudante antes das críticas formais |
 | R06 | demo_uv_problemas.blend | Semana 04 | Blender | 4 | UV com ilhas desproporcionais e distorção visível, para demonstrar otimização |
 | R07 | Addon UVPackmaster | Semana 04 | Blender | 4 | Add-on de empacotamento de UV (ou usar Pack Islands nativo como alternativa) |
 | R08 | demo_esferas_sem_material.blend | Semana 05 | Blender | 5 | Cena com 4 esferas/cubos sem material, para aplicação de PBR ao vivo |
 | R09 | HDRI_estudio_neutro.hdr | Semanas 05, 07 | Blender | 5 | HDRI neutro (ex.: studio_small_09, Poly Haven) para visualização correta de materiais |
-| R10 | Ficha_Critica_Formal_Instrumento1 | Semanas 05, 08, 11, 14, 17 | — (PDF/digital) | 5 | Instrumento 1 da Rubrica Mestre — ficha de avaliação usada nas críticas formais |
+| R10 | Ficha_Critica_Formal_Instrumento1 | Semanas 04, 08, 11, 14, 16 | — (PDF/digital) | 4 | Instrumento 1 da Rubrica Mestre — ficha de avaliação usada nas críticas formais |
 | R11 | Refs_Materiais_Reais.zip | Semana 05 | — (imagens) | 5 | 5 fotos de referência: metal polido, metal fosco, plástico, pedra, madeira |
 | R12 | demo_foto_pedra_tijolos.jpg | Semana 06 | Blender / Krita | 6 | Fotografia de pedra/tijolos (mín. 1024×1024, luz difusa) para criação de textura seamless |
 | R13 | demo_seamless_albedo.blend | Semana 07 | Blender | 7 | Asset simples (cubo/parede) com textura seamless já conectada ao Albedo |
@@ -29,10 +29,10 @@ Levantamento de todos os recursos que o professor precisa preparar previamente, 
 | R23 | demo_trimsheet + demo_parede_modular.blend | Semana 14 | Blender / 3D Coat | 14 | Trim sheet temática pronta + asset de parede modular para mapeamento ao vivo |
 | R24 | demo_orm_canais.blend | Semana 15 | Blender / 3D Coat | 15 | Asset com Roughness, Metallic e AO separados, para combinação em mapa ORM |
 | R25 | Planilha_Comparacao_Memoria.xlsx | Semana 15 | — | 15 | Tabela para registro de comparação de uso de memória antes/depois da otimização |
-| R26 | Projeto_Unity_Base_URP | Semana 16 | Unity | 16 | Projeto/cena base com pipeline URP e luz direcional já configurados |
-| R27 | demo_uv1_validado.blend | Semana 16 | Blender / Unity | 16 | Asset com UV1 validado, pronto para receber UV2 (lightmap) ao vivo |
-| R28 | Ficha_Avaliacao_Pares_Instrumento3 | Semana 17 | — (PDF/digital) | 17 | Instrumento 3 da Rubrica Mestre — feedback entre colegas na defesa final |
-| R29 | Kit_Modular_Referencia_Professor | Semana 17 | Blender / 3D Coat / Unity | 17 | Kit modular completo do professor (ou de uma coorte anterior) como padrão esperado |
+| R26 | Projeto_Unity_Base_URP | Semana 15 | Unity | 15 | Projeto/cena base com pipeline URP e luz direcional já configurados |
+| R27 | demo_uv1_validado.blend | Semana 15 | Blender / Unity | 15 | Asset com UV1 validado, pronto para receber UV2 (lightmap) ao vivo |
+| R28 | Ficha_Avaliacao_Pares_Instrumento3 | Semana 16 | — (PDF/digital) | 16 | Instrumento 3 da Rubrica Mestre — feedback entre colegas na defesa final |
+| R29 | Kit_Modular_Referencia_Professor | Semana 16 | Blender / 3D Coat / Unity | 16 | Kit modular completo do professor (ou de uma coorte anterior) como padrão esperado |
 
 ## Observações
 

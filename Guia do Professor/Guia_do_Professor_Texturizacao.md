@@ -103,7 +103,7 @@ O estudante mantém um registro mínimo de processo: pasta de referências organ
 
 ### 3.4 Iteração contínua
 
-Nenhuma entrega na disciplina é definitiva até a Semana 17. O estudante deve entender que uma nota baixa em uma crítica formal intermediária não é uma punição terminal, mas um ponto de dados para a próxima iteração — daí a estrutura de pesos crescentes do Portfolio de Artefatos (CF1 = 10%, até CF5 = 30%), que recompensa explicitamente a trajetória de melhoria. Cabe ao professor reforçar, em linguagem simples e recorrente, que "essa nota de hoje não é sobre você — é sobre o asset de hoje, e o asset de amanhã pode ser diferente".
+Nenhuma entrega na disciplina é definitiva até a Semana 17 (Recuperação). O estudante deve entender que uma nota baixa em uma crítica formal intermediária não é uma punição terminal, mas um ponto de dados para a próxima iteração — daí a estrutura de pesos crescentes do Portfolio de Artefatos (CF1 = 20%, até CF4 = 30%), que recompensa explicitamente a trajetória de melhoria. Cabe ao professor reforçar, em linguagem simples e recorrente, que "essa nota de hoje não é sobre você — é sobre o asset de hoje, e o asset de amanhã pode ser diferente".
 
 ---
 
@@ -199,9 +199,9 @@ A disciplina espera que o estudante progrida de "descrever o que fez" para "just
 
 Este roteiro pode também ocorrer de forma inteiramente circulante — o professor caminha entre as estações e faz uma crítica breve e individual a cada estudante, sem reunir a turma. A escolha entre formato coletivo e circulante depende do tempo disponível e de quão homogêneo é o estágio de progresso da turma naquela semana.
 
-#### Roteiro B — Crítica Formal Intermediária (CF1–CF5)
+#### Roteiro B — Crítica Formal Intermediária (CF1–CF4)
 
-**Duração:** 20 minutos, no início do segundo encontro das semanas 3, 5, 8, 11 e 14.
+**Duração:** 20 minutos, no início do segundo encontro das semanas 4, 8, 11 e 14.
 **Pré-requisito:** autoavaliação (Instrumento 2 da Rubrica Mestre) entregue antes do encontro; professor já revisou os trabalhos e selecionou 3–4 casos representativos.
 
 | Tempo | Etapa | Condução |
@@ -214,10 +214,10 @@ Este roteiro pode também ocorrer de forma inteiramente circulante — o profess
 
 Estudantes não selecionados para apresentação nesta CF específica ainda entregam a autoavaliação e recebem a Ficha de Crítica Formal preenchida pelo professor com base na avaliação direta do trabalho entregue (não é necessário que todos apresentem oralmente em toda CF — a amostragem rotativa garante que, ao longo do semestre, todos apresentem repetidamente).
 
-#### Roteiro C — Crítica Final (CF6, Semana 17)
+#### Roteiro C — Crítica Final (CF5 — Projeto Final, Semana 16)
 
-**Duração:** parte central da Semana 17, com defesa oral individual de no mínimo 10–15 minutos por estudante (ajustar conforme tamanho da turma e tempo disponível — pode ocupar os dois encontros da semana).
-**Formato:** apresentação e defesa formal do Kit Modular de Ambiente completo, com banca (ver Seção 10).
+**Duração:** parte central da Semana 16, com defesa oral individual de no mínimo 10–15 minutos por estudante (ajustar conforme tamanho da turma e tempo disponível — ocupa os dois encontros da semana).
+**Formato:** apresentação e defesa formal do Kit Modular de Ambiente completo e da fase caminhável, com banca (ver Seção 10).
 
 | Etapa | Duração sugerida | Condução |
 |---|---|---|
@@ -374,7 +374,7 @@ As competências técnicas de Pintura Digital (manejo de camadas, blend modes, p
 
 ### 10.1 Bancas finais
 
-A Crítica Formal 6 (Semana 17) funciona como banca de defesa do Projeto Integrador. Recomenda-se, sempre que a estrutura do curso permitir, a composição de banca com mais de um avaliador — o professor titular da disciplina e, idealmente, um segundo professor da área (por exemplo, de Arte Conceitual, Modelagem 3D ou Desenvolvimento de Jogos), o que traz uma perspectiva externa à rotina do estúdio e reforça, para o estudante, que a competência desenvolvida é avaliável por qualquer profissional da área, não apenas pelo professor que o acompanhou. A banca segue o Roteiro C descrito na Seção 5.6, com tempo individual de defesa de no mínimo 10–15 minutos por estudante.
+A CF5 — Projeto Final (Semana 16) funciona como banca de defesa do Projeto Integrador. Recomenda-se, sempre que a estrutura do curso permitir, a composição de banca com mais de um avaliador — o professor titular da disciplina e, idealmente, um segundo professor da área (por exemplo, de Arte Conceitual, Modelagem 3D ou Desenvolvimento de Jogos), o que traz uma perspectiva externa à rotina do estúdio e reforça, para o estudante, que a competência desenvolvida é avaliável por qualquer profissional da área, não apenas pelo professor que o acompanhou. A banca segue o Roteiro C descrito na Seção 5.6, com tempo individual de defesa de no mínimo 10–15 minutos por estudante.
 
 ### 10.2 Exposição dos trabalhos
 
@@ -386,7 +386,7 @@ Cada estudante deve encerrar a disciplina com material de portfólio profissiona
 
 ### 10.4 Autoavaliação final
 
-Além da autoavaliação de cada crítica formal (Instrumento 2 da Rubrica Mestre), a Semana 17 pede uma autoavaliação de caráter distinto: retrospectiva sobre o semestre inteiro, não apenas sobre a última entrega. Perguntas recomendadas para essa autoavaliação final: "Compare seu primeiro asset (Semana 3) com o kit final. O que mudou na sua forma de tomar decisões técnicas e artísticas, não apenas no resultado visual?"; "Qual foi o feedback mais difícil de receber ao longo do semestre, e o que você fez com ele?"; "Se você tivesse que ensinar UV mapping, PBR ou bake para um colega de outra turma, o que você diria que é mais importante entender — não fazer, entender?"; "O que no seu processo de trabalho você pretende manter e o que pretende mudar em projetos futuros?". Essa autoavaliação final deve ser lida pelo professor antes da defesa (CF6) sempre que o cronograma permitir, para que a banca possa referenciar diretamente a trajetória do estudante durante a própria defesa — reforçando, no último momento formal da disciplina, o mesmo princípio que orientou o semestre inteiro: a avaliação da texturização não é sobre um resultado isolado, mas sobre um processo de julgamento que o estudante desenvolveu e agora consegue articular por conta própria.
+Além da autoavaliação de cada crítica formal (Instrumento 2 da Rubrica Mestre), a Semana 16 pede uma autoavaliação de caráter distinto: retrospectiva sobre o semestre inteiro, não apenas sobre a última entrega. Perguntas recomendadas para essa autoavaliação final: "Compare seu primeiro asset (Semana 3) com o kit final. O que mudou na sua forma de tomar decisões técnicas e artísticas, não apenas no resultado visual?"; "Qual foi o feedback mais difícil de receber ao longo do semestre, e o que você fez com ele?"; "Se você tivesse que ensinar UV mapping, PBR ou bake para um colega de outra turma, o que você diria que é mais importante entender — não fazer, entender?"; "O que no seu processo de trabalho você pretende manter e o que pretende mudar em projetos futuros?". Essa autoavaliação final deve ser lida pelo professor antes da defesa (CF5) sempre que o cronograma permitir, para que a banca possa referenciar diretamente a trajetória do estudante durante a própria defesa — reforçando, no último momento formal da disciplina, o mesmo princípio que orientou o semestre inteiro: a avaliação da texturização não é sobre um resultado isolado, mas sobre um processo de julgamento que o estudante desenvolveu e agora consegue articular por conta própria.
 
 ---
 

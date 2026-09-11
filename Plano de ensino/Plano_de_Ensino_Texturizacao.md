@@ -267,9 +267,9 @@ A nota máxima passível de ser atingida após a Recuperação Final é 7,0 (set
 | 2 | Fundamentos de textura e UV; projeções simples no Blender | Arquivo .blend com 3 objetos UV mapeados | 🔵 Informal |
 | 3 | Moodboard temático e definição do Hero Asset Referência | Moodboard curado + Hero Asset definido | 🔵 Informal |
 | 4 | Abertura de UV do Hero Asset Referência — Smart Unwrap e Seams | Hero Asset com UV aberto | 🔴 **CF1** |
-| 5 | Layout UV, distorção e otimização | Hero Asset com UV revisado | 🔵 Informal |
-| 6 | Fundamentos de PBR e texturas seamless/tileable | Materiais PBR de teste + textura seamless | 🔵 Informal |
-| 7 | Normal Map, geração procedural e preparação para o 3D Coat | Hero Asset com material PBR completo no Blender | 🔵 Informal |
+| 5 | Revisão de UV (feedback da CF1) e fundamentos de PBR (Principled BSDF) | Hero Asset com UV revisado e material PBR de valores planos aplicado | 🔵 Informal |
+| 6 | Criação de texturas seamless e tileable (trilha fotorrealista ou estilizada) | Asset 01 com textura seamless aplicada ao Albedo | 🔵 Informal |
+| 7 | Migração para o 3D Coat: mesh maps (AO, Curvature, Normal) e Smart Materials | Hero Asset migrado para o 3D Coat, com Color, AO/Curvature e Normal via Depth | 🔵 Informal |
 | 8 | Workflow no 3D Coat: camadas e exportação PBR | Hero Asset texturizado no 3D Coat | 🔴 **CF2** |
 | 9 | Pintura digital: desgaste, sujeira e variação de cor | Hero Asset com camadas de detalhe pintadas | 🔵 Informal |
 | 10 | Stencils e detalhamento artístico | Detalhes via stencil no Hero Asset ou primeiro asset do kit | 🔵 Informal |
