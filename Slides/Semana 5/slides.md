@@ -58,12 +58,46 @@ Notas: Os dois primeiros objetivos fecham a Unidade I (revisão técnica de UV);
 
 **Stretch Overlay** — azul = compressão, vermelho = esticamento. Meta: verde/azul-claro predominante.
 
-**Texel density** — todas as islands do mesmo objeto devem ter densidade equivalente (Average Islands Scale resolve a maior parte dos casos).
-
 **Pack Islands** — aproveitamento do espaço 0–1, padding consistente entre islands.
 
 <!--
-Notas: "Vocês já viram tudo isso na Semana 4. Hoje não é aula nova de UV — é a correção do que a crítica formal apontou. Abram o feedback que receberam e localizem, no próprio arquivo, onde está o problema." Revisão rápida (~8 min), não uma aula nova.
+Notas: "Vocês já viram tudo isso na Semana 4. Hoje não é aula nova de UV — é a correção do que a crítica formal apontou. Abram o feedback que receberam e localizem, no próprio arquivo, onde está o problema." Revisão rápida, não uma aula nova. Texel density tem slide próprio a seguir — é o ponto que mais gera feedback recorrente na CF1.
+-->
+
+---
+
+## Texel density: o que é e por que importa
+
+**Texel density** é a quantidade de pixels de textura por unidade de superfície real (ex.: pixels por metro).
+
+Se duas islands do mesmo objeto têm densidades diferentes, a **mesma textura** aplicada depois vai ficar nítida em uma parte e borrada em outra — mesmo com um UV "sem distorção" no Stretch Overlay.
+
+<div class="warning">
+
+Stretch Overlay mede distorção *dentro* de uma island. Texel density mede consistência de escala *entre* islands. São dois problemas diferentes — corrigir um não resolve o outro.
+
+</div>
+
+<!--
+Notas: Esse é o ponto que mais aparece como feedback recorrente na CF1: um UV pode estar tecnicamente "limpo" (sem esticamento) e ainda ter islands em escalas de densidade muito diferentes entre si.
+-->
+
+---
+
+## Corrigindo densidade de texel
+
+**Sintoma:** no UV Editor, uma island parece "grande demais" ou "pequena demais" em relação ao espaço que ocupa na malha 3D — comparado às outras islands do mesmo objeto.
+
+**Correção:** `Average Islands Scale` — reescala todas as islands selecionadas para que a proporção pixel/área fique equivalente entre elas, usando a área real da malha como referência.
+
+<div class="tip">
+
+Ordem prática: `Average Islands Scale` primeiro (iguala densidade) → depois `Pack Islands` (otimiza o espaço 0–1). Fazer na ordem inversa desfaz o trabalho de igualar a densidade.
+
+</div>
+
+<!--
+Notas: Reforçar a ordem das operações — é um erro comum rodar Pack Islands antes e ter que refazer o Average Islands Scale depois. Ferramenta de conferência visual: aplicar um checkerboard de escala uniforme (ex. 10cm x 10cm) e olhar se o tamanho aparente dos quadrados é o mesmo em todas as islands do objeto.
 -->
 
 ---
