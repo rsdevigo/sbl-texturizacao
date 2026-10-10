@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Curso:** Tecnologia em Jogos Digitais | **Metodologia:** Studio-Based Learning
 **Unidade:** III — Produção do Kit Modular: Bake e Detalhamento (Semanas 10–13)
 **Tema da semana:** Bake avançado: ID Map, Curvature e integração ao workflow PBR
-**Apostila:** Parte V, Cap. 15 — Bake de Texturas (ID Map e Curvature Map); Parte V, Cap. 17 — Máscaras, Stencils e Decals (uso de bakes como base de mascaramento no 3D Coat)
+**Apostila:** Parte V, Cap. 15 — Bake de Texturas (ID Map e Curvature Map); Parte V, Cap. 17 — Máscaras, Stencils e Decals (uso de bakes como base de mascaramento no 3DCoatTextura)
 **Carga horária:** 3h (2 encontros de 1h30)
 **Crítica:** 🔵 Informal — circulante, sem nota formal nesta semana
 
@@ -13,11 +13,11 @@
 Os estudantes chegam com:
 
 - Fluxo completo de bake de **Normal Map** e **Ambient Occlusion** dominado: high-poly/low-poly, cage, ray distance/extrusion, resolução e margin — Semana 11
-- Um Asset Secundário do Kit Modular (ou a peça alternativa prevista para quem ainda não havia recebido nenhum) já com bake de Normal + AO integrado ao material no 3D Coat, convivendo com o desgaste e os stencils já construídos no Hero Asset Referência (S09/S10) — Semana 11
+- Um Asset Secundário do Kit Modular (ou a peça alternativa prevista para quem ainda não havia recebido nenhum) já com bake de Normal + AO integrado ao material no 3DCoatTextura, convivendo com o desgaste e os stencils já construídos no Hero Asset Referência (S09/S10) — Semana 11
 - Feedback escrito da Crítica Formal 3 (CF3), com ponto forte e prioridade de melhoria identificados por estudante — Semana 11
 - Ficha de Autoavaliação da CF3 já devolvida com anotações do professor
 
-> **Nota de transição:** A Semana 11 resolveu o problema de transferir **geometria real** (chanfros, entalhes) de um par high-poly/low-poly para o Asset Secundário via Normal Map e AO. Esta semana não introduz um novo processo de bake — o fluxo de seleção de objetos, cage e execução já foi aprendido. O que muda é o **uso** do bake: ID Map e Curvature Map não existem para adicionar detalhe visual diretamente, mas para gerar **máscaras automáticas** que aceleram a texturização no 3D Coat. É a primeira vez na disciplina em que o bake deixa de ser apenas "captura de aparência" e passa a ser "captura de informação para seleção". Esse é o ponto central da aula: o estudante já sabe bakear — agora aprende a bakear *para outro propósito*.
+> **Nota de transição:** A Semana 11 resolveu o problema de transferir **geometria real** (chanfros, entalhes) de um par high-poly/low-poly para o Asset Secundário via Normal Map e AO. Esta semana não introduz um novo processo de bake — o fluxo de seleção de objetos, cage e execução já foi aprendido. O que muda é o **uso** do bake: ID Map e Curvature Map não existem para adicionar detalhe visual diretamente, mas para gerar **máscaras automáticas** que aceleram a texturização no 3DCoatTextura. É a primeira vez na disciplina em que o bake deixa de ser apenas "captura de aparência" e passa a ser "captura de informação para seleção". Esse é o ponto central da aula: o estudante já sabe bakear — agora aprende a bakear *para outro propósito*.
 >
 > O alvo desta semana é o **pacote completo de bake (4 mapas)** de um asset do kit — Normal e AO da Semana 11, mais ID Map e Curvature de hoje. Para quem já recebeu mais de um Asset Secundário de Modelagem 3D e Level Design, o ideal é diversificar e aplicar o pacote completo a um **segundo** Asset Secundário, diferente do trabalhado na Semana 11 — isso adianta o kit rumo à Semana 13 (Texture Atlas), que vai exigir múltiplos assets já texturizados. Para quem ainda tem apenas um Asset Secundário (ou trabalhou com a peça alternativa da S11), o pacote completo de quatro mapas é aplicado a essa **mesma** peça, completando-a tecnicamente antes de seguir adiante. Os dois casos são igualmente válidos — o objetivo pedagógico é dominar ID Map e Curvature, não necessariamente abrir uma peça nova.
 
@@ -30,7 +30,7 @@ Ao final da semana, o estudante será capaz de:
 1. Explicar a diferença de propósito entre os bakes já dominados (Normal, AO — geram aparência) e os bakes desta semana (ID Map, Curvature — geram máscara de seleção).
 2. Configurar um bake de **ID Map** atribuindo cores distintas por material ou grupo de faces no Asset Secundário trabalhado.
 3. Configurar um bake de **Curvature Map**, identificando regiões convexas (arestas, cantos salientes) e côncavas (sulcos, frestas) do asset.
-4. Importar o pacote completo de bakes (Normal, AO, Curvature, ID Map) no 3D Coat e utilizá-lo como base de **mascaramento automático** — Curvature para edge highlight e cavity dirt, ID Map para seleção rápida por material.
+4. Importar o pacote completo de bakes (Normal, AO, Curvature, ID Map) no 3DCoatTextura e utilizá-lo como base de **mascaramento automático** — Curvature para edge highlight e cavity dirt, ID Map para seleção rápida por material.
 5. Comparar o resultado de uma máscara gerada automaticamente por bake com o desgaste pintado manualmente no Hero Asset Referência (Semanas 9 e 10), avaliando onde a automação economiza tempo sem comprometer a intenção artística.
 6. Justificar, em crítica circulante, a escolha de quais áreas do kit se beneficiam de mascaramento automático versus pintura livre.
 
@@ -52,7 +52,7 @@ Ao final da semana, o estudante será capaz de:
 ## Recursos necessários
 
 - Computadores com Blender instalado (3.x ou 4.x)
-- Computadores com 3D Coat instalado (versão 2023 ou superior)
+- Computadores com 3DCoatTextura instalado (versão 2026)
 - Arquivo `.blend` do Asset Secundário (ou peça alternativa) de cada estudante, já com pacote de bake de Normal + AO da Semana 11; e, para quem tem mais de um Asset Secundário recebido, o arquivo do segundo Asset Secundário a ser trabalhado nesta semana
 - Arquivo de demonstração do professor: asset com pelo menos dois materiais distintos (ex: madeira + reforço metálico) preparado para bake de ID Map, e mesmo asset com detalhe de aresta/sulco suficiente para um Curvature Map ilustrativo
 - Projetor para demonstração
@@ -76,7 +76,7 @@ Objetivo: deslocar o entendimento do estudante de "bake gera uma textura que se 
 
 Exibir no projetor um asset com dois materiais visualmente distintos (madeira + metal) já texturizado manualmente, ao lado do mesmo asset com um ID Map colorido (uma cor sólida por material). Perguntar: *"Se eu quisesse selecionar só a área de metal deste objeto para aplicar um desgaste diferente, sem usar o mouse para clicar peça por peça, como essa segunda imagem me ajudaria?"*
 
-Deixar 2–3 respostas. Direcionar para a ideia central: cada cor sólida no ID Map corresponde a um material ou grupo de faces — o 3D Coat pode usar essa imagem para gerar uma **máscara de seleção instantânea**, sem depender de seams ou cliques manuais.
+Deixar 2–3 respostas. Direcionar para a ideia central: cada cor sólida no ID Map corresponde a um material ou grupo de faces — o 3DCoatTextura pode usar essa imagem para gerar uma **máscara de seleção instantânea**, sem depender de seams ou cliques manuais.
 
 ---
 
@@ -98,9 +98,9 @@ O Curvature Map compara a normal de cada ponto da superfície com a de seus vizi
 
 *"Lembrem do desgaste pintado à mão no Hero Asset Referência: vocês decidiram região por região onde o EdgeWear fazia sentido. O Curvature Map faz uma primeira passada automática disso — ele já sabe, geometricamente, onde estão as arestas e os sulcos do modelo. Vocês continuam no controle da decisão artística, mas não partem mais do zero."*
 
-**4. Por que essas máscaras aceleram o 3D Coat sem substituir a pintura**
+**4. Por que essas máscaras aceleram o 3DCoatTextura sem substituir a pintura**
 
-No 3D Coat, o Curvature Map importado pode alimentar diretamente os geradores de **Edge Highlight** (realce de aresta) e **Cavity Dirt** (sujeira de cavidade) — efeitos que, no Hero Asset Referência, foram construídos manualmente com pincéis e alphas. O ID Map alimenta seleções rápidas por material, permitindo isolar "só o metal" ou "só a madeira" no Asset Secundário com um clique, para aplicar um ajuste de cor, roughness ou desgaste específico daquele material.
+No 3DCoatTextura, o Curvature Map importado pode alimentar diretamente os geradores de **Edge Highlight** (realce de aresta) e **Cavity Dirt** (sujeira de cavidade) — efeitos que, no Hero Asset Referência, foram construídos manualmente com pincéis e alphas. O ID Map alimenta seleções rápidas por material, permitindo isolar "só o metal" ou "só a madeira" no Asset Secundário com um clique, para aplicar um ajuste de cor, roughness ou desgaste específico daquele material.
 
 *"O objetivo de hoje não é abandonar o pincel — é usar as duas primeiras camadas de decisão (onde há aresta, onde há material X) automaticamente, para que o tempo de pintura livre de vocês seja gasto em refinamento artístico, não em selecionar região por região manualmente."*
 
@@ -114,7 +114,7 @@ Cage, ray distance, resolução e margin funcionam exatamente como na semana pas
 
 ### Demonstração — 20 minutos
 
-**Bake de ID Map e Curvature Map, e importação do pacote completo no 3D Coat**
+**Bake de ID Map e Curvature Map, e importação do pacote completo no 3DCoatTextura**
 
 **Setup (1 min):**
 Abrir o Blender com o asset de demonstração já preparado: dois materiais nomeados e coloridos (`Mat_Madeira`, `Mat_Metal`) e o par high-poly/low-poly reaproveitado da Semana 11.
@@ -126,7 +126,7 @@ Abrir o Blender com o asset de demonstração já preparado: dois materiais nome
 2. Criar um novo `Image Texture Node`, `Asset_IDMap_2048`, Color Space **sRGB** (diferente de Normal e AO, que usam Non-Color — o ID Map representa cor pura de identidade, não dado técnico).
 3. Em `Bake Type`, selecionar **Diffuse** com apenas o contribuidor **Color** ativo (desligar Direct e Indirect) — isso captura só a cor base de cada material, sem influência de luz ou sombra.
 4. Executar o bake. Mostrar o resultado: um mapa com blocos de cor sólida correspondendo exatamente às áreas de cada material.
-5. *"Reparem que não há gradiente nenhum entre as cores — se aparecer um degradê na borda, geralmente é sinal de anti-aliasing na configuração de bake, e isso precisa ser desligado para ID Map funcionar como máscara limpa no 3D Coat."*
+5. *"Reparem que não há gradiente nenhum entre as cores — se aparecer um degradê na borda, geralmente é sinal de anti-aliasing na configuração de bake, e isso precisa ser desligado para ID Map funcionar como máscara limpa no 3DCoatTextura."*
 
 **Passo 2 — Bake de Curvature Map (6 min):**
 1. Criar novo `Image Texture Node`: `Asset_CurvatureBake_2048`, Non-Color.
@@ -135,16 +135,16 @@ Abrir o Blender com o asset de demonstração já preparado: dois materiais nome
 4. Executar o bake. Mostrar o resultado: tons claros nas arestas do baú/objeto, tons escuros nos sulcos e reentrâncias.
 5. *"Comparem mentalmente com a AO da semana passada: a AO escurece onde falta luz ambiente; a Curvature escurece onde a geometria é côncava, independente de luz nenhuma. São informações diferentes, mesmo que visualmente pareçam parecidas à primeira vista."*
 
-**Passo 3 — Importação do pacote completo no 3D Coat (5 min):**
-1. Alternar para o 3D Coat com o asset já texturizado (material PBR coerente com o kit + Normal/AO da S11).
+**Passo 3 — Importação do pacote completo no 3DCoatTextura (5 min):**
+1. Alternar para o 3DCoatTextura com o asset já texturizado (material PBR coerente com o kit + Normal/AO da S11).
 2. Importar o Curvature Map recém-gerado como fonte para o gerador **Cavity Dirt**: mostrar o painel onde essa opção aceita uma textura externa em vez de calcular a curvatura internamente a partir da malha.
-3. Importar o ID Map como base de uma **seleção por cor** (ferramenta de seleção/máscara do 3D Coat que lê blocos de cor): isolar a área "metal" com um clique e aplicar um ajuste rápido de roughness só naquela região, como exemplo.
+3. Importar o ID Map como base de uma **seleção por cor** (ferramenta de seleção/máscara do 3DCoatTextura que lê blocos de cor): isolar a área "metal" com um clique e aplicar um ajuste rápido de roughness só naquela região, como exemplo.
 4. Mostrar o resultado combinado: Cavity Dirt automático (via Curvature) por cima do desgaste já pintado manualmente, sem sobrepor de forma destrutiva — como uma camada adicional com opacidade ajustável.
 
 **Passo 4 — Antes/depois (1 min):**
 Alternar rapidamente entre o material sem as máscaras automáticas e com elas aplicadas, destacando o ganho de detalhe em frestas e a facilidade da seleção por material.
 
-> **Nota do professor:** Se a versão do 3D Coat disponível no laboratório não tiver um gerador de Cavity Dirt que aceite textura externa diretamente, adaptar a demonstração usando a Curvature como **camada de máscara de opacidade** (Layer Mask) sobre uma camada de sujeira já pintada — o princípio pedagógico (curvature acelera decisão de onde aplicar sujeira) se mantém mesmo que o caminho técnico exato varie por versão.
+> **Nota do professor:** Se a versão do 3DCoatTextura disponível no laboratório não tiver um gerador de Cavity Dirt que aceite textura externa diretamente, adaptar a demonstração usando a Curvature como **camada de máscara de opacidade** (Layer Mask) sobre uma camada de sujeira já pintada — o princípio pedagógico (curvature acelera decisão de onde aplicar sujeira) se mantém mesmo que o caminho técnico exato varie por versão.
 
 ---
 
@@ -189,7 +189,7 @@ Alternar rapidamente entre o material sem as máscaras automáticas e com elas a
 
 Circular verificando:
 
-- **As cores do ID Map estão suficientemente distintas?** Cores próximas (ex: dois tons de marrom) dificultam a seleção por cor no 3D Coat depois. Sugerir substituição por cores saturadas e opostas na roda cromática.
+- **As cores do ID Map estão suficientemente distintas?** Cores próximas (ex: dois tons de marrom) dificultam a seleção por cor no 3DCoatTextura depois. Sugerir substituição por cores saturadas e opostas na roda cromática.
 - **O estudante está tentando duplicar um high-poly desnecessário para o Curvature?** Reforçar o ponto da mini aula: Curvature funciona direto no low-poly na maioria dos casos.
 - **A escolha do asset (mesmo vs. diferente da S11) foi feita corretamente conforme a situação real de recebimento de peças do estudante?** Confirmar na Etapa 0 antes que o estudante avance, para não haver retrabalho.
 - **O objetivo é o pacote completo de quatro mapas, não um asset perfeito.** Reforçar que hoje é sobre dominar a geração dos dois mapas novos — a aplicação refinada acontece no encontro 2.
@@ -217,22 +217,22 @@ Circulação livre pelas estações. Em cada uma, o professor observa os dois no
 Encorajar comentários entre colegas próximos — *"Passem para o vizinho: vocês concordam com a separação de material que ele fez?"* — sem formalizar como avaliação por pares registrada (isso é reservado às críticas formais).
 
 **Síntese (2 min):**
-*"A maior parte de vocês já tem o pacote completo de quatro bakes em pelo menos um asset do kit. O trabalho de hoje no estúdio é usar essas duas novas máscaras dentro do 3D Coat para acelerar a texturização — não é para substituir o que vocês já pintaram, é para dar um empurrão automático antes de refinar à mão."*
+*"A maior parte de vocês já tem o pacote completo de quatro bakes em pelo menos um asset do kit. O trabalho de hoje no estúdio é usar essas duas novas máscaras dentro do 3DCoatTextura para acelerar a texturização — não é para substituir o que vocês já pintaram, é para dar um empurrão automático antes de refinar à mão."*
 
 ---
 
 ### Produção em Estúdio — 60 minutos
 
-**Integração de ID Map e Curvature ao workflow do 3D Coat**
+**Integração de ID Map e Curvature ao workflow do 3DCoatTextura**
 
 **Consigna:**
 
-> *"Sessenta minutos para levar os dois mapas novos até dentro do 3D Coat e usá-los de verdade: Curvature para acelerar desgaste em arestas e sujeira em cavidades, ID Map para selecionar rapidamente uma região de material e ajustar algo nela — cor, roughness, ou um detalhe pintado só naquela área."*
+> *"Sessenta minutos para levar os dois mapas novos até dentro do 3DCoatTextura e usá-los de verdade: Curvature para acelerar desgaste em arestas e sujeira em cavidades, ID Map para selecionar rapidamente uma região de material e ajustar algo nela — cor, roughness, ou um detalhe pintado só naquela área."*
 
 **Atividade estruturada:**
 
-**Bloco 1 — Importação e configuração no 3D Coat (≈15 min):**
-1. Importar Normal, AO (já existentes da S11), ID Map e Curvature (novos) no 3D Coat, cada um no canal ou uso correspondente.
+**Bloco 1 — Importação e configuração no 3DCoatTextura (≈15 min):**
+1. Importar Normal, AO (já existentes da S11), ID Map e Curvature (novos) no 3DCoatTextura, cada um no canal ou uso correspondente.
 2. Configurar o Curvature como fonte de Cavity Dirt/Edge Highlight (ou como máscara de opacidade sobre uma camada de sujeira, conforme o caminho técnico disponível na versão instalada).
 3. Configurar o ID Map como referência de seleção por cor.
 
@@ -242,14 +242,14 @@ Encorajar comentários entre colegas próximos — *"Passem para o vizinho: voc�
 3. Ajustar manualmente qualquer área onde a máscara automática exagerou ou ficou fraca demais — o objetivo é combinação, não substituição total.
 
 **Bloco 3 — Aplicação de seleção por ID Map (≈15 min):**
-1. Usar a ferramenta de seleção por cor do 3D Coat lendo o ID Map para isolar uma das regiões de material (ex: só o metal).
+1. Usar a ferramenta de seleção por cor do 3DCoatTextura lendo o ID Map para isolar uma das regiões de material (ex: só o metal).
 2. Aplicar um ajuste específico àquela região isolada: variação de roughness, cor ligeiramente diferente, ou um detalhe de desgaste característico daquele material (ex: ferrugem só no metal, não na madeira).
 3. Verificar que a seleção automática não vazou para a região errada — se vazou, revisar a separação de material feita no Blender no primeiro encontro.
 
 **Bloco 4 — Registro final (≈10 min):**
-1. Exportar os mapas atualizados e salvar o projeto do 3D Coat.
+1. Exportar os mapas atualizados e salvar o projeto do 3DCoatTextura.
 2. Renders comparativos: sem máscaras automáticas vs. com Curvature e ID Map aplicados.
-3. Salvar arquivo Blender/3D Coat com sufixo `_BakeCompleto_S12_Final`.
+3. Salvar arquivo Blender/3DCoatTextura com sufixo `_BakeCompleto_S12_Final`.
 
 **Papel do professor:**
 
@@ -281,7 +281,7 @@ Recapitular nomenclatura de entrega e prazo. Lembrar que o pacote de quatro bake
 ## Possíveis Dificuldades
 
 **1. Cores do ID Map muito próximas entre si**
-Quando dois materiais recebem cores similares (ex: dois tons de cinza ou de marrom), a seleção por cor no 3D Coat pode capturar as duas áreas juntas ou nenhuma corretamente. Estratégia: antes do bake, revisar as cores atribuídas no Blender e substituir por cores saturadas e opostas na roda cromática — vermelho puro, verde puro, azul puro, magenta — mesmo que essas cores nunca apareçam no material final; o ID Map não representa aparência, só identidade.
+Quando dois materiais recebem cores similares (ex: dois tons de cinza ou de marrom), a seleção por cor no 3DCoatTextura pode capturar as duas áreas juntas ou nenhuma corretamente. Estratégia: antes do bake, revisar as cores atribuídas no Blender e substituir por cores saturadas e opostas na roda cromática — vermelho puro, verde puro, azul puro, magenta — mesmo que essas cores nunca apareçam no material final; o ID Map não representa aparência, só identidade.
 
 **2. Vazamento de seleção entre materiais na borda das faces**
 Mesmo com cores bem distintas, pode haver um contorno de mistura entre as duas cores na borda da seleção de face, causado por anti-aliasing do bake. Estratégia: desligar qualquer suavização/anti-aliasing na configuração do bake de Diffuse/ID Map — a nitidez da borda é mais importante que a suavidade visual neste caso específico.
@@ -335,7 +335,7 @@ Alguns estudantes podem hesitar entre diversificar (segundo Asset Secundário) o
 
 | Entrega | Formato | Prazo |
 |---|---|---|
-| Arquivo Blender/3D Coat com pacote completo de bake (Normal, AO, Curvature, ID Map) do asset do kit trabalhado, integrado ao material | `.blend` e projeto 3D Coat com sufixo `_AssetSecundario_BakeCompleto_S12_Final` (usar `_AssetSecundario2_` quando for um segundo asset distinto do da S11) | Até o fim do segundo encontro |
+| Arquivo Blender/3DCoatTextura com pacote completo de bake (Normal, AO, Curvature, ID Map) do asset do kit trabalhado, integrado ao material | `.blend` e projeto 3DCoatTextura com sufixo `_AssetSecundario_BakeCompleto_S12_Final` (usar `_AssetSecundario2_` quando for um segundo asset distinto do da S11) | Até o fim do segundo encontro |
 | ID Map e Curvature Map exportados | `.png` na resolução de trabalho do asset (1024 ou 2048), pasta `_Bake_S12` | Até o fim do segundo encontro |
 | Screenshot comparativo: sem máscaras automáticas vs. com Curvature e ID Map aplicados | `.png` com sufixo `_Comparativo_Bake_S12` | Até o fim do segundo encontro |
 

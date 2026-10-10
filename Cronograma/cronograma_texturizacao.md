@@ -20,7 +20,7 @@ Tecnologia em Jogos Digitais | Studio-Based Learning | 17 Semanas | 51 horas
 | Campo | Conteúdo |
 |---|---|
 | **Apostila** | Parte I, Cap. 1 — Materiais, Texturas e Representação Visual (fundamentos); Parte VI, Cap. 25 — Pipeline Completo de Texturização para Jogos (visão geral do pipeline) |
-| **Mini Aula** (20 min) | O que é textura e material em computação gráfica? Diferença entre raster e procedural. Apresentação do pipeline Blender → 3D Coat → Unity. Apresentação do trabalho interdisciplinar: as três disciplinas envolvidas, o entregável final (fase caminhável na Unity) e o tema (mundo fantástico a partir de elementos regionais do Mato Grosso do Sul ou do estado de origem do estudante). |
+| **Mini Aula** (20 min) | O que é textura e material em computação gráfica? Diferença entre raster e procedural. Apresentação do pipeline Blender → 3DCoatTextura → Unity. Apresentação do trabalho interdisciplinar: as três disciplinas envolvidas, o entregável final (fase caminhável na Unity) e o tema (mundo fantástico a partir de elementos regionais do Mato Grosso do Sul ou do estado de origem do estudante). |
 | **Demonstração** (20 min) | Tour pela interface do Blender: Shading Workspace, UV Editor e Viewport Shading. Visualização de exemplos de kits modulares prontos (Medieval, Sci-Fi, etc.) e de fases caminháveis simples na Unity. |
 | **Estúdio** (50+60 min) | Discussão coletiva sobre o tema regional: levantamento livre de referências culturais, paisagísticas e folclóricas do Mato Grosso do Sul (ou do estado de origem de cada estudante). Início da pesquisa livre, sem compromisso de entrega. |
 | **Entrega** | Nenhuma. Semana de abertura e alinhamento do trabalho interdisciplinar. |
@@ -48,7 +48,7 @@ Tecnologia em Jogos Digitais | Studio-Based Learning | 17 Semanas | 51 horas
 | Campo | Conteúdo |
 |---|---|
 | **Apostila** | Revisão da Parte I, Cap. 1 (aplicada à escolha do tema); leitura antecipada da Parte II, Cap. 5 — UV Unwrapping, para a Semana 4 |
-| **Mini Aula** (20 min) | O que é um Hero Asset Referência e por que ele existe: uma peça única, altamente representativa do tema, que funciona como prova de conceito do pipeline completo (UV → PBR → 3D Coat) antes de escalar para o Kit Modular inteiro. Critérios para escolher um bom Hero Asset: legibilidade do tema, viabilidade técnica, potencial de reaproveitamento de linguagem visual no restante do kit. |
+| **Mini Aula** (20 min) | O que é um Hero Asset Referência e por que ele existe: uma peça única, altamente representativa do tema, que funciona como prova de conceito do pipeline completo (UV → PBR → 3DCoatTextura) antes de escalar para o Kit Modular inteiro. Critérios para escolher um bom Hero Asset: legibilidade do tema, viabilidade técnica, potencial de reaproveitamento de linguagem visual no restante do kit. |
 | **Demonstração** (20 min) | Exemplos de Hero Assets de projetos de referência (ArtStation) e como eles se conectam a um kit modular mais amplo. Critério de avaliação da coerência entre moodboard e Hero Asset escolhido. |
 | **Estúdio** (50+60 min) | Cada estudante consolida seu moodboard temático a partir do material já produzido em Pintura Digital e Arte Conceitual (mínimo de 10 referências organizadas) e define, em diálogo com Modelagem 3D e Level Design, qual será seu Hero Asset Referência — a peça que Modelagem 3D modela nesta mesma semana. |
 | **Entrega** | Moodboard temático curado (PNG, PDF ou link) + definição do Hero Asset Referência com justificativa de 1 parágrafo (por que essa peça representa o tema). |
@@ -84,7 +84,7 @@ Tecnologia em Jogos Digitais | Studio-Based Learning | 17 Semanas | 51 horas
 
 ---
 
-## Unidade II — Materiais PBR e Workflow no 3D Coat (Semanas 6–9)
+## Unidade II — Materiais PBR e Workflow no 3DCoatTextura (Semanas 6–9)
 
 ---
 
@@ -103,41 +103,41 @@ Tecnologia em Jogos Digitais | Studio-Based Learning | 17 Semanas | 51 horas
 ---
 
 ### Semana 7 🔵
-**Tema:** Migração para o 3D Coat: mesh maps (AO, Curvature, Normal) e Smart Materials
+**Tema:** Migração para o 3DCoatTextura: mesh maps (AO, Curvature, Normal) e Smart Materials
 
 | Campo | Conteúdo |
 |---|---|
-| **Apostila** | Parte III, Cap. 10 — Construção e Análise de Materiais Reais (introdução ao 3D Coat); Parte V, Cap. 16 — Normal Maps e Transferência de Detalhes. Leitura complementar (não avaliada): Parte IV, Cap. 13 — Texturização Procedural, para quem quiser a via alternativa de nós no Blender |
+| **Apostila** | Parte III, Cap. 10 — Construção e Análise de Materiais Reais (introdução ao 3DCoatTextura); Parte V, Cap. 16 — Normal Maps e Transferência de Detalhes. Leitura complementar (não avaliada): Parte IV, Cap. 13 — Texturização Procedural, para quem quiser a via alternativa de nós no Blender |
 | **Mini Aula** (20 min) | O que são mesh maps (AO, Curvature, Normal) e por que podem ser gerados direto da malha, sem high-poly. As duas trilhas visuais dentro do mesmo fluxo de ferramenta: base fotográfica + máscara de desgaste (fotorrealista) ou Smart Material guiado pela mesma máscara (estilizado). |
-| **Demonstração** (20 min) | Exportação do Blender e importação no 3D Coat. Bake de AO e Curvature direto da malha. Normal Map gerado por pintura no canal Depth. |
-| **Estúdio** (50+60 min) | Migração do Hero Asset Referência para o 3D Coat: Color (base fotográfica ou Smart Material), máscara de AO/Curvature para desgaste, e Normal via Depth. Mínimo de três canais ativos ao final da semana. |
-| **Entrega** | Hero Asset Referência no 3D Coat com Color + Roughness + Normal ativos. Screenshot de camadas e render comparativo antes/depois da máscara. |
+| **Demonstração** (20 min) | Exportação do Blender e importação no 3DCoatTextura. Bake de AO e Curvature direto da malha. Normal Map gerado por pintura no canal Depth. |
+| **Estúdio** (50+60 min) | Migração do Hero Asset Referência para o 3DCoatTextura: Color (base fotográfica ou Smart Material), máscara de AO/Curvature para desgaste, e Normal via Depth. Mínimo de três canais ativos ao final da semana. |
+| **Entrega** | Hero Asset Referência no 3DCoatTextura com Color + Roughness + Normal ativos. Screenshot de camadas e render comparativo antes/depois da máscara. |
 | **Crítica** | 🔵 Informal — Crítica circulante em estúdio ou comentário coletivo rápido ao final do segundo encontro. |
 
 ---
 
 ### Semana 8 🔴 CRÍTICA FORMAL — CF2
-**Tema:** Refinamento no 3D Coat e exportação PBR unificada (Albedo, Metallic, Roughness, Normal)
+**Tema:** Refinamento no 3DCoatTextura e exportação PBR unificada (Albedo, Metallic, Roughness, Normal)
 
 | Campo | Conteúdo |
 |---|---|
 | **Apostila** | Parte III, Cap. 10 — Construção e Análise de Materiais Reais (workflow de texturização PBR: camadas e exportação). Leitura de apoio: Parte VI, Cap. 23 — Controle de Qualidade de Materiais |
 | **Mini Aula** (20 min) | Subsurface Scattering (SSS) para materiais orgânicos. Lógica de combinar base + máscara + pintura manual sem que nenhuma camada sozinha conte toda a história do material. |
 | **Demonstração** (20 min) | Refinamento das camadas de Color e Metallic. Exportação dos quatro mapas PBR (Albedo, Metallic, Roughness, Normal) e configuração completa no Blender, com o nó Normal Map. |
-| **Estúdio** (50+60 min) | Cada estudante refina o material do Hero Asset Referência no 3D Coat (Color, Roughness, Metallic), exporta os quatro mapas PBR e reconfigura o material no Blender, sem nós procedurais remanescentes. |
-| **Entrega** | Hero Asset Referência texturizado no 3D Coat: exportação dos quatro mapas PBR (Albedo, Metallic, Roughness, Normal) e material configurado no Blender. |
+| **Estúdio** (50+60 min) | Cada estudante refina o material do Hero Asset Referência no 3DCoatTextura (Color, Roughness, Metallic), exporta os quatro mapas PBR e reconfigura o material no Blender, sem nós procedurais remanescentes. |
+| **Entrega** | Hero Asset Referência texturizado no 3DCoatTextura: exportação dos quatro mapas PBR (Albedo, Metallic, Roughness, Normal) e material configurado no Blender. |
 | **Crítica** | 🔴 **FORMAL — CF2** (25% do Portfolio de Artefatos) — Apresentação estruturada com rubrica, autoavaliação obrigatória e feedback escrito do professor. |
 
 ---
 
 ### Semana 9 🔵
-**Tema:** Texturização artística por pintura digital no 3D Coat
+**Tema:** Texturização artística por pintura digital no 3DCoatTextura
 
 | Campo | Conteúdo |
 |---|---|
-| **Apostila** | Parte IV, Cap. 14 — Pintura Digital para Jogos (aplicada a texturas; ferramentas de pintura no 3D Coat) |
+| **Apostila** | Parte IV, Cap. 14 — Pintura Digital para Jogos (aplicada a texturas; ferramentas de pintura no 3DCoatTextura) |
 | **Mini Aula** (20 min) | Diferença entre texturização fotorrealista e estilizada. Pintura de desgaste, sujeira e detalhes hand-painted. Organização de camadas por tipo de detalhe. |
-| **Demonstração** (20 min) | Pintura de desgaste e variação de cor em um material metálico no 3D Coat. Técnicas de edge wear, dirt e scratches com pincéis e alphas. |
+| **Demonstração** (20 min) | Pintura de desgaste e variação de cor em um material metálico no 3DCoatTextura. Técnicas de edge wear, dirt e scratches com pincéis e alphas. |
 | **Estúdio** (50+60 min) | Adicionar detalhes de desgaste, sujeira e variação de cor ao Hero Asset Referência texturizado na semana anterior. Foco em leitura de silhueta e legibilidade do material. Esta é a semana da SCT (Semana de Ciência e Tecnologia) — ajustar ritmo de estúdio conforme a agenda do evento. |
 | **Entrega** | Hero Asset Referência com camadas de detalhe pintadas (edge wear, dirt, scratches) — mapas exportados e render comparativo antes/depois. |
 | **Crítica** | 🔵 Informal — Crítica circulante em estúdio ou comentário coletivo rápido ao final do segundo encontro. |
@@ -157,9 +157,9 @@ Tecnologia em Jogos Digitais | Studio-Based Learning | 17 Semanas | 51 horas
 
 | Campo | Conteúdo |
 |---|---|
-| **Apostila** | Parte V, Cap. 17 — Máscaras, Stencils e Decals (uso de stencils no 3D Coat; criação e importação de alphas) |
+| **Apostila** | Parte V, Cap. 17 — Máscaras, Stencils e Decals (uso de stencils no 3DCoatTextura; criação e importação de alphas) |
 | **Mini Aula** (20 min) | O que é stencil e para que serve. Diferença entre stencil e alpha. Fontes de stencils (ArtStation, criação manual no Krita). Técnicas de projeção e controle de opacidade. |
-| **Demonstração** (20 min) | Aplicação de stencil de rachaduras em uma superfície de pedra no 3D Coat. Criação de um stencil personalizado no Krita e importação. |
+| **Demonstração** (20 min) | Aplicação de stencil de rachaduras em uma superfície de pedra no 3DCoatTextura. Criação de um stencil personalizado no Krita e importação. |
 | **Estúdio** (50+60 min) | Uso de stencils para refinar o Hero Asset Referência (símbolos, rachaduras, corrosão) e, para quem já recebeu os primeiros assets modelados por Modelagem 3D e Level Design nesta fase de "Kit modular", início da aplicação da mesma linguagem visual a eles. |
 | **Entrega** | Hero Asset Referência (ou primeiro asset do kit) com detalhes aplicados via stencil — mapas exportados e screenshot do processo. |
 | **Crítica** | 🔵 Informal — Crítica circulante em estúdio ou comentário coletivo rápido ao final do segundo encontro. |
@@ -174,7 +174,7 @@ Tecnologia em Jogos Digitais | Studio-Based Learning | 17 Semanas | 51 horas
 | **Apostila** | Parte V, Cap. 15 — Bake de Texturas (no Blender: Normal Map e Ambient Occlusion). Leitura de apoio: Parte VI, Cap. 23 — Controle de Qualidade de Materiais |
 | **Mini Aula** (20 min) | O que é bake e por que usar? High-poly vs. low-poly: transferência de detalhe. Foco em Normal Map e Ambient Occlusion. Configuração de raio de bake e cage. (Curvature, ID Map e Thickness são apresentados na Semana 12.) |
 | **Demonstração** (20 min) | Setup completo de bake de Normal Map no Blender (high-poly + low-poly do mesmo asset). Configuração de cage, ray distance e resolução. Verificação de artefatos. |
-| **Estúdio** (50+60 min) | Cada estudante executa o bake de Normal Map e AO em um asset do Kit Modular (par low-poly/high-poly preparado em Modelagem 3D e Level Design) e integra o resultado ao material no 3D Coat. |
+| **Estúdio** (50+60 min) | Cada estudante executa o bake de Normal Map e AO em um asset do Kit Modular (par low-poly/high-poly preparado em Modelagem 3D e Level Design) e integra o resultado ao material no 3DCoatTextura. |
 | **Entrega** | Normal Map e AO baked de um asset do kit + material atualizado com o bake integrado. Comparação visual high-poly vs. low-poly com bake. |
 | **Crítica** | 🔴 **FORMAL** — Apresentação estruturada com rubrica, autoavaliação obrigatória e feedback escrito do professor. |
 
@@ -185,11 +185,11 @@ Tecnologia em Jogos Digitais | Studio-Based Learning | 17 Semanas | 51 horas
 
 | Campo | Conteúdo |
 |---|---|
-| **Apostila** | Parte V, Cap. 15 — Bake de Texturas (ID Map e Curvature Map); Parte V, Cap. 17 — Máscaras, Stencils e Decals (uso de bakes como base de mascaramento no 3D Coat) |
+| **Apostila** | Parte V, Cap. 15 — Bake de Texturas (ID Map e Curvature Map); Parte V, Cap. 17 — Máscaras, Stencils e Decals (uso de bakes como base de mascaramento no 3DCoatTextura) |
 | **Mini Aula** (20 min) | Panorama dos tipos de bake (Normal, AO, Curvature, ID Map, Thickness). ID Map: criação e uso para mascaramento por material. Curvature Map: detecção de arestas e cavidades. |
-| **Demonstração** (20 min) | Configuração de bake de ID Map com materiais coloridos no Blender. Importação do pacote de bakes no 3D Coat e uso do Curvature Map para edge highlight e cavity dirt automáticos. |
-| **Estúdio** (50+60 min) | Executar bake completo (Normal, AO, Curvature, ID Map) de um segundo asset do kit e configurar o pacote no 3D Coat, usando máscaras geradas por bake para distribuir materiais automaticamente. |
-| **Entrega** | Pacote completo de bake (4 mapas) de um asset do kit + configuração de material no 3D Coat com uso de máscara por curvature e ID. |
+| **Demonstração** (20 min) | Configuração de bake de ID Map com materiais coloridos no Blender. Importação do pacote de bakes no 3DCoatTextura e uso do Curvature Map para edge highlight e cavity dirt automáticos. |
+| **Estúdio** (50+60 min) | Executar bake completo (Normal, AO, Curvature, ID Map) de um segundo asset do kit e configurar o pacote no 3DCoatTextura, usando máscaras geradas por bake para distribuir materiais automaticamente. |
+| **Entrega** | Pacote completo de bake (4 mapas) de um asset do kit + configuração de material no 3DCoatTextura com uso de máscara por curvature e ID. |
 | **Crítica** | 🔵 Informal — Crítica circulante em estúdio ou comentário coletivo rápido ao final do segundo encontro. |
 
 ---
@@ -219,7 +219,7 @@ Tecnologia em Jogos Digitais | Studio-Based Learning | 17 Semanas | 51 horas
 |---|---|
 | **Apostila** | Parte V, Cap. 18 — Texture Atlas e Trim Sheets (conceito e workflow de trim sheets; aplicação em arquitetura modular). Leitura de apoio: Parte VI, Cap. 23 — Controle de Qualidade de Materiais |
 | **Mini Aula** (20 min) | O que é uma Trim Sheet e quando usar. Diferença entre Trim Sheet e Texture Atlas. Planejamento de uma trim: divisão de faixas por tipo de detalhe. Tiling horizontal vs. vertical. |
-| **Demonstração** (20 min) | Criação de uma Trim Sheet temática no 3D Coat. Mapeamento de asset arquitetônico modular na Trim Sheet (UV elongado). Validação no Blender e Unity. |
+| **Demonstração** (20 min) | Criação de uma Trim Sheet temática no 3DCoatTextura. Mapeamento de asset arquitetônico modular na Trim Sheet (UV elongado). Validação no Blender e Unity. |
 | **Estúdio** (50+60 min) | Cada estudante cria uma Trim Sheet condizente com o tema do kit e aplica em ao menos um asset arquitetônico modular — a peça que sustenta a modularidade da fase caminhável. |
 | **Entrega** | Trim Sheet temática (PNG 1024×2048 ou equivalente) + asset mapeado na trim, render com comparação de variações usando a mesma trim. |
 | **Crítica** | 🔴 **FORMAL** — Apresentação estruturada com rubrica, autoavaliação obrigatória e feedback escrito do professor. |

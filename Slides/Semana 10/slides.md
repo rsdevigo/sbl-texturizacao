@@ -14,7 +14,7 @@ footer: "IFMS • Semana 10"
 
 ## Stencils: detalhe preciso, reproduzível e intencional
 
-**Semana 10** — Uso de stencils no 3D Coat e criação de alphas no Krita
+**Semana 10** — Uso de stencils no 3DCoatTextura e criação de alphas no Krita
 
 <!--
 Notas: Abertura da mini aula (20 min). Unidade III — Pintura Digital e Bake. Crítica 🔵 Informal nesta semana. Mensagem central: na Semana 9 os estudantes aprenderam a pintar desgaste à mão livre (edge wear, dirt, scratches) no Asset 01. Hoje entra uma nova FORMA de adicionar detalhe: o stencil. Não é técnica concorrente com a pintura livre — é complementar. Se a pintura livre é desenhar à mão, o stencil é um gabarito com controle total de posição, escala e ângulo. O foco desta semana migra do Asset 01 (desgaste orgânico) para o Asset 02 (detalhe específico e temático via stencil). Deixar claro na capa a metáfora que guia a aula: alpha = carimbo; stencil = molde parado enquanto se passa a tinta por cima.
@@ -33,7 +33,7 @@ Ao final da semana você será capaz de:
 - **Integrar** o stencil ao material com pintura livre (sem efeito "colado")
 
 <!--
-Notas: Ler rápido. Não antecipar bake de Normal/AO/Curvature (Semana 11) nem trim sheets/atlas (Unidade IV). Hoje é detalhe estampado com intenção, usando o 3D Coat já conhecido da Semana 8 e a pintura livre da Semana 9. O objetivo 4 (decisão projetual) é o coração da aula — o stencil é ferramenta de precisão, não de conveniência. Reforçar que a técnica é simples; a decisão de onde e por que aplicar é o que importa.
+Notas: Ler rápido. Não antecipar bake de Normal/AO/Curvature (Semana 11) nem trim sheets/atlas (Unidade IV). Hoje é detalhe estampado com intenção, usando o 3DCoatTextura já conhecido da Semana 8 e a pintura livre da Semana 9. O objetivo 4 (decisão projetual) é o coração da aula — o stencil é ferramenta de precisão, não de conveniência. Reforçar que a técnica é simples; a decisão de onde e por que aplicar é o que importa.
 -->
 
 ---
@@ -49,14 +49,14 @@ Notas: Pergunta de abertura. Exibir duas imagens lado a lado da MESMA superfíci
 Objetivo didático: materializar a distinção central da aula — precisão controlada (stencil) versus irregularidade orgânica (pintura livre) — antes de qualquer explicação de menu.
 Arquivo sugerido: assets/rachadura_brush_vs_stencil.webp
 Descrição: comparação lado a lado da mesma superfície de pedra. À esquerda, rachadura pintada à mão livre com brush, com traços irregulares e bordas imprecisas. À direita, a mesma rachadura aplicada por stencil, com forma definida, ramificações nítidas e bordas limpas.
-Como produzir: no 3D Coat, no asset de pedra de demonstração, pintar uma rachadura à mão livre no canal Color e capturar o Render Room; em seguida, aplicar um stencil de rachadura e capturar no mesmo ângulo e iluminação. Compor as duas capturas lado a lado no Krita.
+Como produzir: no 3DCoatTextura, no asset de pedra de demonstração, pintar uma rachadura à mão livre no canal Color e capturar o Render Room; em seguida, aplicar um stencil de rachadura e capturar no mesmo ângulo e iluminação. Compor as duas capturas lado a lado no Krita.
 -->
 
 ---
 
 ## De onde viemos: Semana 9
 
-Você já sabe adicionar detalhe **à mão livre** no 3D Coat:
+Você já sabe adicionar detalhe **à mão livre** no 3DCoatTextura:
 
 - **Edge wear** nas arestas expostas
 - **Dirt / grime** nas cavidades (Multiply)
@@ -86,7 +86,7 @@ O alpha é o **carimbo**. O stencil é o **molde** que fica parado enquanto voc�
 </div>
 
 <!--
-Notas: A distinção mais importante da aula — e a fonte do erro mais comum de interface (usar o painel de Alphas em vez do de Stencils). O alpha se repete ao longo da pincelada; o stencil permanece fixo no espaço 3D independentemente de onde o brush passa. No 3D Coat, o stencil fica no painel Stencils (aba lateral) e é ativado/desativado com a tecla S. Com o stencil ativo, qualquer brush obedece ao gabarito. Deixar a metáfora carimbo/molde bem fixada — ela resolve a confusão no estúdio.
+Notas: A distinção mais importante da aula — e a fonte do erro mais comum de interface (usar o painel de Alphas em vez do de Stencils). O alpha se repete ao longo da pincelada; o stencil permanece fixo no espaço 3D independentemente de onde o brush passa. No 3DCoatTextura, o stencil fica no painel Stencils (aba lateral) e é ativado/desativado com a tecla S. Com o stencil ativo, qualquer brush obedece ao gabarito. Deixar a metáfora carimbo/molde bem fixada — ela resolve a confusão no estúdio.
 -->
 
 ---
@@ -108,12 +108,12 @@ Notas: Este é o percurso completo que a demonstração e o estúdio seguem. Cin
 De onde vêm os gabaritos:
 
 - **Poly Haven / ArtStation** — coleções gratuitas por categoria
-- **Alphas de ZBrush** — compatíveis com o 3D Coat
+- **Alphas de ZBrush** — compatíveis com o 3DCoatTextura
 - **Krita** — qualquer foto vira stencil em minutos
 
 <div class="tip">
 
-Convenção: **fundo preto** (não pinta) + **detalhe branco** (pinta). No 3D Coat, o modo **Multiply** respeita isso automaticamente.
+Convenção: **fundo preto** (não pinta) + **detalhe branco** (pinta). No 3DCoatTextura, o modo **Multiply** respeita isso automaticamente.
 
 </div>
 
@@ -139,7 +139,7 @@ A internet de referências de superfície é uma **biblioteca de stencils** espe
 </div>
 
 <!--
-Notas: Explicar o PORQUÊ de cada passo, não só o clique. O contraste alto separa o detalhe (rachadura) do fundo; a conversão para grayscale garante que o 3D Coat leia o gabarito como máscara; o PNG 1024 é resolução suficiente para a maioria dos detalhes. Na demonstração este bloco leva ~4 min mas tem alto valor pedagógico: mostra ao estudante que ele não está limitado à biblioteca pronta. Opcional: Filters → Edge Detection para extrair só as bordas.
+Notas: Explicar o PORQUÊ de cada passo, não só o clique. O contraste alto separa o detalhe (rachadura) do fundo; a conversão para grayscale garante que o 3DCoatTextura leia o gabarito como máscara; o PNG 1024 é resolução suficiente para a maioria dos detalhes. Na demonstração este bloco leva ~4 min mas tem alto valor pedagógico: mostra ao estudante que ele não está limitado à biblioteca pronta. Opcional: Filters → Edge Detection para extrair só as bordas.
 -->
 
 ---
@@ -179,7 +179,7 @@ Antes de pintar, responda: *"Por que aqui? O que causou esse detalhe neste ponto
 </div>
 
 <!--
-Notas: Segundo erro-chave depois da integração: posicionamento aleatório. Rachaduras no meio de uma superfície plana sem fissuras ao redor denunciam falta de lógica narrativa. Demonstrar que o stencil permanece fixo enquanto se muda de face reforça a natureza de "gabarito no espaço" (não segue o brush). A incapacidade do estudante de justificar a posição é o sinal a caçar na circulação. Controles no 3D Coat: Drag move, Ctrl+Drag escala, Shift+Drag rotaciona; tecla S ativa/desativa.
+Notas: Segundo erro-chave depois da integração: posicionamento aleatório. Rachaduras no meio de uma superfície plana sem fissuras ao redor denunciam falta de lógica narrativa. Demonstrar que o stencil permanece fixo enquanto se muda de face reforça a natureza de "gabarito no espaço" (não segue o brush). A incapacidade do estudante de justificar a posição é o sinal a caçar na circulação. Controles no 3DCoatTextura: Drag move, Ctrl+Drag escala, Shift+Drag rotaciona; tecla S ativa/desativa.
 -->
 
 ---
@@ -278,7 +278,7 @@ Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonst
 
 ## Agora: demonstração
 
-A seguir, ao vivo no 3D Coat: carregar e **posicionar** um stencil de rachadura, aplicar no **Color** e no **Roughness**, **criar um stencil no Krita** e **integrar** as bordas.
+A seguir, ao vivo no 3DCoatTextura: carregar e **posicionar** um stencil de rachadura, aplicar no **Color** e no **Roughness**, **criar um stencil no Krita** e **integrar** as bordas.
 
 A pergunta que você leva ao estúdio: **esse detalhe pertence ao material ou está por cima?**
 
@@ -290,6 +290,6 @@ Notas: Transição para a demonstração de 20 min. Sequência: asset de pedra c
 [!FIGURA]
 Objetivo didático: antecipar o resultado esperado da demonstração para que a turma reconheça o alvo visual antes de produzir no estúdio.
 Arquivo sugerido: assets/demo_stencil_rachadura.webp
-Descrição: captura do Render Room do 3D Coat mostrando o asset de pedra com uma rachadura aplicada por stencil, saindo de uma aresta em direção ao centro — interior mais claro no Color e superfície mais rugosa no Roughness, com micro-trincas irradiando. Painel de Stencils visível à lateral com o gabarito carregado e o painel de Layers com Stencil_Rachadura_Color e Stencil_Rachadura_Rough nomeadas.
-Como produzir: no 3D Coat, aplicar o stencil de rachadura no asset de demonstração seguindo o percurso da demonstração (Color + Roughness + integração de bordas); abrir o Render Room com iluminação HDR e capturar em ângulo que mostre a rachadura na aresta, com os painéis de Stencils e Layers abertos.
+Descrição: captura do Render Room do 3DCoatTextura mostrando o asset de pedra com uma rachadura aplicada por stencil, saindo de uma aresta em direção ao centro — interior mais claro no Color e superfície mais rugosa no Roughness, com micro-trincas irradiando. Painel de Stencils visível à lateral com o gabarito carregado e o painel de Layers com Stencil_Rachadura_Color e Stencil_Rachadura_Rough nomeadas.
+Como produzir: no 3DCoatTextura, aplicar o stencil de rachadura no asset de demonstração seguindo o percurso da demonstração (Color + Roughness + integração de bordas); abrir o Render Room com iluminação HDR e capturar em ângulo que mostre a rachadura na aresta, com os painéis de Stencils e Layers abertos.
 -->

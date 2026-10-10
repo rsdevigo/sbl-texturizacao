@@ -33,7 +33,7 @@ Ao final da semana, o estudante será capaz de:
 | Critério | Foco desta semana |
 |---|---|
 | C1 — Processo de Projeto | Organização final de todos os arquivos do kit antes da apresentação da Semana 16 |
-| C2 — Direção Artística | Coerência visual do conjunto completo sob iluminação real da Unity (diferente da iluminação de estúdio do Blender/3D Coat) |
+| C2 — Direção Artística | Coerência visual do conjunto completo sob iluminação real da Unity (diferente da iluminação de estúdio do Blender/3DCoatTextura) |
 | C7 — Otimização | Channel packing (ORM) e UV2 aplicados corretamente |
 | C8 — Integração na Unity | **Foco principal — mas sem nota formal ainda.** Montagem completa da fase caminhável, com feedback do professor. A primeira e única nota formal de C8 é atribuída na CF5 (Semana 16), conforme Rubrica Mestre |
 
@@ -116,7 +116,7 @@ Circulante em estúdio; comentário coletivo rápido sobre o estado de montagem 
 ### Fechamento — 10 minutos
 
 1. **(3 min)** Síntese: *"A partir de hoje, o kit deixou de ser uma coleção de arquivos separados e virou uma cena única e funcional. É essa cena, não os arquivos individuais, que vocês vão apresentar na Semana 16."*
-2. **(3 min)** Reflexão: *"Que problema de integração surpreendeu vocês ao levar o kit para a Unity, que não aparecia no Blender ou no 3D Coat?"*
+2. **(3 min)** Reflexão: *"Que problema de integração surpreendeu vocês ao levar o kit para a Unity, que não aparecia no Blender ou no 3DCoatTextura?"*
 3. **(2 min)** Ponte para a Semana 16: *"Na próxima semana é a apresentação e defesa do Projeto Final — a CF5, com todos os dez critérios da rubrica em jogo, incluindo a primeira e única nota de C8."*
 4. **(2 min)** Confirmação das entregas.
 
@@ -127,7 +127,7 @@ Circulante em estúdio; comentário coletivo rápido sobre o estado de montagem 
 **1. UV2 sobreposto (herdado do UV1), impedindo lightmap bake correto**
 Estratégia: usar a função de lightmap unwrap automático do Blender como ponto de partida, ajustando manualmente apenas onde necessário.
 
-**2. Materiais aparecendo "achatados" ou sem brilho na Unity, diferente do 3D Coat**
+**2. Materiais aparecendo "achatados" ou sem brilho na Unity, diferente do 3DCoatTextura**
 Estratégia: verificar se o Roughness/Metallic foi corretamente conectado nos slots do shader da Unity (Standard ou URP/HDRP, conforme o pipeline do projeto) — não apenas visualmente semelhante no Blender.
 
 **3. Falhas de colisão no percurso caminhável**
@@ -143,7 +143,7 @@ Estratégia: priorizar a montagem funcional da fase (mesmo sem lightmap perfeito
 | Situação | Estratégia |
 |---|---|
 | Estudante sem saber por onde começar a montagem na Unity | Seguir a ordem da demonstração: importar → configurar material → posicionar → testar colisão → lightmap |
-| Textura com aparência diferente entre 3D Coat e Unity | Comparar valores de Roughness/Metallic lado a lado nos dois softwares |
+| Textura com aparência diferente entre 3DCoatTextura e Unity | Comparar valores de Roughness/Metallic lado a lado nos dois softwares |
 | Kit com assets insuficientes para uma fase minimamente interessante | Revisar o inventário da Semana 13 e priorizar a finalização dos Assets de Repetição pendentes |
 | Ansiedade pela proximidade da apresentação final | Lembrar que esta semana não tem nota formal — é o momento de errar e corrigir antes da CF5 |
 
@@ -156,7 +156,7 @@ Estratégia: priorizar a montagem funcional da fase (mesmo sem lightmap perfeito
 | Mapas ORM (channel packing) aplicados | C7 — Otimização | Inspeção dos materiais na Unity |
 | UV2 aberto e lightmap bake executado sem erros graves | C7, C8 — Otimização / Integração na Unity (observado) | Inspeção do lightmap e da cena |
 | Fase caminhável funcional de ponta a ponta | C8 — Integração na Unity (observado) | Teste de caminhada; vídeo ou gif de evidência |
-| Coerência visual do kit sob iluminação real | C2 — Direção Artística | Comparação com a referência de estúdio (Blender/3D Coat) |
+| Coerência visual do kit sob iluminação real | C2 — Direção Artística | Comparação com a referência de estúdio (Blender/3DCoatTextura) |
 
 ---
 

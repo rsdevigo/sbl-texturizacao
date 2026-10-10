@@ -1,7 +1,7 @@
 # Plano de Aula — Semana 8
 **Disciplina:** Texturização | **Curso:** Tecnologia em Jogos Digitais | **Metodologia:** Studio-Based Learning
-**Unidade:** II — Materiais PBR e Workflow no 3D Coat (Semanas 6–9)
-**Tema da semana:** Refinamento no 3D Coat e exportação PBR unificada (Albedo, Metallic, Roughness, Normal)
+**Unidade:** II — Materiais PBR e Workflow no 3DCoatTextura (Semanas 6–9)
+**Tema da semana:** Refinamento no 3DCoatTextura e exportação PBR unificada (Albedo, Metallic, Roughness, Normal)
 **Apostila:** Parte III, Cap. 10 — Construção e Análise de Materiais Reais (workflow de texturização PBR: camadas e exportação). Leitura de apoio para esta CF2: Parte VI, Cap. 23 — Controle de Qualidade de Materiais
 **Carga horária:** 3h (2 encontros de 1h30)
 **Crítica:** 🔴 **FORMAL — CF2** (25% do Portfolio de Artefatos) — Apresentação estruturada com rubrica, autoavaliação obrigatória e feedback escrito do professor
@@ -12,12 +12,12 @@
 
 Os estudantes chegam com:
 
-- Hero Asset Referência no 3D Coat com material PBR iniciado: Color (base fotográfica ou estilizada da Semana 6), Roughness e Normal (via Depth) ativos, com máscaras de AO/Curvature aplicadas — Semana 7
+- Hero Asset Referência no 3DCoatTextura com material PBR iniciado: Color (base fotográfica ou estilizada da Semana 6), Roughness e Normal (via Depth) ativos, com máscaras de AO/Curvature aplicadas — Semana 7
 - Trilha visual definida e consistente no Hero Asset Referência (fotorrealista ou estilizada)
 - UV layout do Hero Asset Referência já otimizado e validado com checkerboard (Semana 4, revisado na Semana 5)
 - Autoavaliação da Semana 8 **preenchida e entregue antes do segundo encontro** — requisito da crítica formal
 
-> **Nota de transição:** A Semana 7 já fez a migração completa para o 3D Coat e já deu ao Hero Asset Referência profundidade real — via bake de AO/Curvature e via Normal pintado no canal Depth. Esta semana não reintroduz a ferramenta: ela aprofunda o que já está em andamento. Como existe apenas uma peça em jogo — o Hero Asset Referência — todo o tempo de estúdio desta semana se converte em profundidade de trabalho sobre ela: mais refinamento de camada (mais controle, mais intenção), exportação mais cuidada e uma exploração mais completa do Subsurface Scattering para quem tiver elementos orgânicos no kit. O foco passa a ser refinamento de camada e o fechamento técnico do semestre até aqui — exportar os **quatro** mapas PBR (Albedo, Metallic, Roughness e Normal, todos vindos do 3D Coat) e reconectá-los no Blender, substituindo de vez qualquer material provisório anterior. Isso vale igualmente para as duas trilhas: o critério de avaliação é a plausibilidade física e a comunicação visual do material, não a técnica usada para chegar lá.
+> **Nota de transição:** A Semana 7 já fez a migração completa para o 3DCoatTextura e já deu ao Hero Asset Referência profundidade real — via bake de AO/Curvature e via Normal pintado no canal Depth. Esta semana não reintroduz a ferramenta: ela aprofunda o que já está em andamento. Como existe apenas uma peça em jogo — o Hero Asset Referência — todo o tempo de estúdio desta semana se converte em profundidade de trabalho sobre ela: mais refinamento de camada (mais controle, mais intenção), exportação mais cuidada e uma exploração mais completa do Subsurface Scattering para quem tiver elementos orgânicos no kit. O foco passa a ser refinamento de camada e o fechamento técnico do semestre até aqui — exportar os **quatro** mapas PBR (Albedo, Metallic, Roughness e Normal, todos vindos do 3DCoatTextura) e reconectá-los no Blender, substituindo de vez qualquer material provisório anterior. Isso vale igualmente para as duas trilhas: o critério de avaliação é a plausibilidade física e a comunicação visual do material, não a técnica usada para chegar lá.
 
 > **Orientação sobre autoavaliação:** A autoavaliação deve ser distribuída digitalmente ou em papel **ao final do primeiro encontro**, para que os estudantes possam preenchê-la antes do segundo encontro. O professor deve comunicar claramente que a autoavaliação é pré-requisito de participação na crítica formal — quem chegar sem ela preenche no lugar antes de apresentar, perdendo tempo de produção.
 
@@ -27,11 +27,11 @@ Os estudantes chegam com:
 
 Ao final da semana, o estudante será capaz de:
 
-1. Refinar camadas de Color, Roughness e Metallic no 3D Coat com detalhe intencional, combinando base (foto ou Smart Material), máscara de AO/Curvature e pintura manual.
-2. Descrever quando o Subsurface Scattering (SSS) é fisicamente adequado e localizar o canal correspondente no sistema de camadas do 3D Coat.
+1. Refinar camadas de Color, Roughness e Metallic no 3DCoatTextura com detalhe intencional, combinando base (foto ou Smart Material), máscara de AO/Curvature e pintura manual.
+2. Descrever quando o Subsurface Scattering (SSS) é fisicamente adequado e localizar o canal correspondente no sistema de camadas do 3DCoatTextura.
 3. Pintar o canal Metallic com lógica física correta (binária na maioria dos casos) e ajustar transições coerentes em materiais mistos.
-4. Exportar os quatro mapas PBR do 3D Coat — Albedo, Metallic, Roughness e Normal (bakeado na Semana 7 a partir das camadas de Depth) — em resolução e formato adequados, de forma unificada para as duas trilhas visuais.
-5. Configurar o material no Blender utilizando os quatro mapas exportados do 3D Coat, sem depender de nenhum nó procedural remanescente.
+4. Exportar os quatro mapas PBR do 3DCoatTextura — Albedo, Metallic, Roughness e Normal (bakeado na Semana 7 a partir das camadas de Depth) — em resolução e formato adequados, de forma unificada para as duas trilhas visuais.
+5. Configurar o material no Blender utilizando os quatro mapas exportados do 3DCoatTextura, sem depender de nenhum nó procedural remanescente.
 6. (Crítica formal) Apresentar e defender oralmente as decisões de material tomadas durante as Semanas 6–7 no Hero Asset Referência, utilizando vocabulário técnico correto e a autoavaliação como ponto de partida, justificando a trilha visual escolhida.
 
 ---
@@ -42,20 +42,20 @@ Ao final da semana, o estudante será capaz de:
 |---|---|
 | C1 — Processo de Projeto | Qualidade da documentação entregue à crítica: organização de pasta, versões salvas, registro visual do processo das Semanas 6–7; incorporação de feedbacks anteriores visível nas iterações |
 | C2 — Direção Artística | Coerência da paleta e proposta estética no Hero Asset Referência; capacidade de verbalizar as escolhas visuais durante a crítica, incluindo a justificativa da trilha (fotorrealista/estilizada) |
-| C4 — Materiais PBR | Material PBR completo e unificado exportado do 3D Coat (Albedo, Metallic, Roughness, Normal), avaliado por plausibilidade física — independentemente da trilha visual |
-| C5 — Texturização | Consolidação e refinamento dos mapas pintados/bakeados no 3D Coat: qualidade da cor base, coerência do Roughness, distinção visual entre áreas do material, credibilidade do Normal Map |
+| C4 — Materiais PBR | Material PBR completo e unificado exportado do 3DCoatTextura (Albedo, Metallic, Roughness, Normal), avaliado por plausibilidade física — independentemente da trilha visual |
+| C5 — Texturização | Consolidação e refinamento dos mapas pintados/bakeados no 3DCoatTextura: qualidade da cor base, coerência do Roughness, distinção visual entre áreas do material, credibilidade do Normal Map |
 | C9 — Apresentação | Qualidade e organização da apresentação na crítica formal: breakdown visual, clareza da defesa oral, uso da autoavaliação |
 | C10 — Participação | Qualidade das perguntas e feedbacks oferecidos durante a crítica dos colegas; postura de recepção e negociação de feedback sobre o próprio trabalho |
 
-> **CF2 — Crítica Formal (Portfolio de Artefatos):** Esta é a segunda crítica formal do semestre (após a Semana 4). C5 (Texturização) entra formalmente na avaliação nesta CF — os mapas pintados e bakeados no 3D Coat, refinados e exportados nesta semana, são a evidência central, nas duas trilhas visuais. C9 (Apresentação) é avaliado formalmente pela primeira vez nesta CF — o estudante deve demonstrar não apenas o que produziu, mas como articula suas decisões. A nota desta CF contribui com 25% para o PA.
+> **CF2 — Crítica Formal (Portfolio de Artefatos):** Esta é a segunda crítica formal do semestre (após a Semana 4). C5 (Texturização) entra formalmente na avaliação nesta CF — os mapas pintados e bakeados no 3DCoatTextura, refinados e exportados nesta semana, são a evidência central, nas duas trilhas visuais. C9 (Apresentação) é avaliado formalmente pela primeira vez nesta CF — o estudante deve demonstrar não apenas o que produziu, mas como articula suas decisões. A nota desta CF contribui com 25% para o PA.
 
 ---
 
 ## Recursos necessários
 
-- Computadores com 3D Coat instalado (versão 2023 ou superior recomendada)
+- Computadores com 3DCoatTextura instalado (versão 2026)
 - Computadores com Blender instalado (3.x ou 4.x) — para configurar o material final ao término do estúdio
-- Arquivo `.3b`/`.3dc` do Hero Asset Referência de cada estudante, com o material iniciado na Semana 7
+- Arquivo `.3b` do Hero Asset Referência de cada estudante, com o material iniciado na Semana 7
 - Arquivo `.blend` do Hero Asset Referência de cada estudante, com UV das semanas anteriores
 - Projetor para demonstração e para a crítica formal
 - Fichas de Crítica Formal impressas (Instrumento 1 da Rubrica Mestre) — uma por estudante apresentado
@@ -63,7 +63,7 @@ Ao final da semana, o estudante será capaz de:
 - Apostila — Parte III, Cap. 10 — disponibilizada antes da aula. Parte VI, Cap. 23 (Controle de Qualidade de Materiais) recomendado como leitura de apoio para a autoavaliação desta CF2
 - Pasta de exportação criada previamente no computador de demonstração do professor: `[DEMO]_3DCoat_Exportacao/`
 
-> **Nota sobre versões do 3D Coat:** a interface passou por reorganizações entre versões — verificar a versão instalada no laboratório antes da aula e adaptar nomes de menu conforme necessário. O princípio de fluxo (refinar por canal → exportar → reconectar no Blender) é estável entre versões.
+> **Nota sobre a versão:** a disciplina adota o **3DCoatTextura 2026**. Conferir na instalação do laboratório, antes da aula, os nomes exatos dos menus de exportação. O princípio de fluxo (refinar por canal → exportar → reconectar no Blender) é o mesmo do 3DCoat completo.
 
 ---
 
@@ -73,7 +73,7 @@ Ao final da semana, o estudante será capaz de:
 
 **Do refinamento por camada à exportação unificada: Subsurface, combinação de máscaras e o pacote de quatro mapas**
 
-Objetivo: a turma já domina a mecânica básica do 3D Coat desde a Semana 7 — esta mini-aula não reapresenta a ferramenta, ela aprofunda duas coisas que ainda faltam: o canal Subsurface (para quem tiver elementos orgânicos no Hero Asset Referência) e a lógica de **combinar** camadas de fontes diferentes (base fotográfica/Smart Material + máscara de AO/Curvature + pintura manual de detalhe) em um resultado final coerente, fechando com o pacote completo de exportação.
+Objetivo: a turma já domina a mecânica básica do 3DCoatTextura desde a Semana 7 — esta mini-aula não reapresenta a ferramenta, ela aprofunda duas coisas que ainda faltam: o canal Subsurface (para quem tiver elementos orgânicos no Hero Asset Referência) e a lógica de **combinar** camadas de fontes diferentes (base fotográfica/Smart Material + máscara de AO/Curvature + pintura manual de detalhe) em um resultado final coerente, fechando com o pacote completo de exportação.
 
 **Desenvolvimento:**
 
@@ -83,13 +83,13 @@ Abrir com a seguinte pergunta para a turma: *"Vocês já têm Color, Roughness e
 
 **Conteúdo a cobrir:**
 
-**1. Por que os mapas do 3D Coat são portáveis e os nós do Blender não são**
+**1. Por que os mapas do 3DCoatTextura são portáveis e os nós do Blender não são**
 
-Recapitulação rápida (1 min): os mapas que saem do 3D Coat são imagens reais — PNG ou TGA — que podem ser abertas em qualquer software e conectadas em qualquer motor, diferente de um material feito só de nós dentro do Blender. É por isso que o pipeline da disciplina fecha com essa exportação: Blender (modelagem + UV) → **3D Coat (texturização)** → Unity (motor).
+Recapitulação rápida (1 min): os mapas que saem do 3DCoatTextura são imagens reais — PNG ou TGA — que podem ser abertas em qualquer software e conectadas em qualquer motor, diferente de um material feito só de nós dentro do Blender. É por isso que o pipeline da disciplina fecha com essa exportação: Blender (modelagem + UV) → **3DCoatTextura (texturização)** → Unity (motor).
 
-**2. Subsurface Scattering (SSS) como canal do 3D Coat**
+**2. Subsurface Scattering (SSS) como canal do 3DCoatTextura**
 
-O Subsurface Scattering simula materiais que permitem que a luz penetre levemente antes de ser dispersa internamente — como pele, cera, mármore, folhas e tecidos finos. O resultado visual é uma suavidade característica nas transições de luz/sombra e um leve "brilho interno" nas bordas. No 3D Coat, assim como no Principled BSDF do Blender, o canal Subsurface aceita valores de 0 (sem efeito) a 1 (máximo). Se o Hero Asset Referência do estudante tiver algum elemento orgânico ou translúcido — flores, folhas, tecido, cera, cristal —, hoje é o momento de localizar esse canal na interface e testar valores baixos (0.05–0.15 costuma ser suficiente para o efeito ser perceptível sem "derreter" a leitura de material sólido). Para a maioria dos Hero Assets do kit (pedra, metal, madeira, concreto), o SSS não se aplica — e não pintar nada nesse canal é a decisão fisicamente correta, não uma omissão.
+O Subsurface Scattering simula materiais que permitem que a luz penetre levemente antes de ser dispersa internamente — como pele, cera, mármore, folhas e tecidos finos. O resultado visual é uma suavidade característica nas transições de luz/sombra e um leve "brilho interno" nas bordas. No 3DCoatTextura, assim como no Principled BSDF do Blender, o canal Subsurface aceita valores de 0 (sem efeito) a 1 (máximo). Se o Hero Asset Referência do estudante tiver algum elemento orgânico ou translúcido — flores, folhas, tecido, cera, cristal —, hoje é o momento de localizar esse canal na interface e testar valores baixos (0.05–0.15 costuma ser suficiente para o efeito ser perceptível sem "derreter" a leitura de material sólido). Para a maioria dos Hero Assets do kit (pedra, metal, madeira, concreto), o SSS não se aplica — e não pintar nada nesse canal é a decisão fisicamente correta, não uma omissão.
 
 **3. Combinando fontes numa mesma camada de material**
 
@@ -110,7 +110,7 @@ O material do Hero Asset Referência de cada estudante, a esta altura, já tem n
 **Refinamento de camadas, Metallic, e exportação dos quatro mapas PBR**
 
 **Setup (1 min):**
-Abrir o 3D Coat com o arquivo de demonstração da Semana 7 (asset já com Color, Roughness e Normal iniciados). Ter o Blender aberto em outra janela.
+Abrir o 3DCoatTextura com o arquivo de demonstração da Semana 7 (asset já com Color, Roughness e Normal iniciados). Ter o Blender aberto em outra janela.
 
 **Percurso da demonstração:**
 
@@ -144,7 +144,7 @@ Abrir o 3D Coat com o arquivo de demonstração da Semana 7 (asset já com Color
    - `HeroAsset_Roughness.png` → `Roughness` (Color Space: **Non-Color**)
    - `HeroAsset_Metallic.png` → `Metallic` (Color Space: **Non-Color**)
    - `HeroAsset_Normal.png` → através de um nó `Normal Map` (`Shift+A → Vector → Normal Map`) → entrada `Normal` do Principled BSDF (Color Space do Image Texture: **Non-Color**)
-4. Mostrar o viewport Rendered: *"Os quatro canais agora vêm de imagens reais, exportadas do 3D Coat. Esse material está pronto para ir para a Unity exatamente como está aqui."*
+4. Mostrar o viewport Rendered: *"Os quatro canais agora vêm de imagens reais, exportadas do 3DCoatTextura. Esse material está pronto para ir para a Unity exatamente como está aqui."*
 
 > **Nota do professor:** O nó `Normal Map` entre o Image Texture do Normal e o Principled BSDF é obrigatório — conectar a saída Color do Image Texture diretamente ao Normal do Principled produz resultado incorreto. Reforçar isso explicitamente, é um erro recorrente.
 
@@ -161,7 +161,7 @@ Abrir o 3D Coat com o arquivo de demonstração da Semana 7 (asset já com Color
 **Atividade estruturada:**
 
 **Etapa 1 — Refinamento do Color (≈15 min):**
-1. Abrir o arquivo `.3b`/`.3dc` do Hero Asset Referência da Semana 7.
+1. Abrir o arquivo `.3b` do Hero Asset Referência da Semana 7.
 2. Adicionar camada de detalhe focal sobre a base já existente, reforçando a leitura de uso/desgaste com pincel de opacidade baixa.
 3. Revisar no Render Room: a variação de cor conta uma história, sem apagar a base?
 4. Se houver tempo: testar uma segunda camada de detalhe em outra área do asset, comparando o peso relativo das duas camadas.
@@ -185,7 +185,7 @@ Abrir o 3D Coat com o arquivo de demonstração da Semana 7 (asset já com Color
 5. Verificar no explorador de arquivos que os quatro PNGs foram gerados com tamanho esperado.
 
 **Etapa 5 — Salvar e documentar (≈5 min):**
-1. Salvar o arquivo do 3D Coat: `[Nome]_HeroAsset_S08.3b`.
+1. Salvar o arquivo do 3DCoatTextura: `[Nome]_HeroAsset_S08.3b`.
 2. Tirar screenshot do painel de Layers com todas as camadas visíveis.
 3. Tirar screenshot do Render Room mostrando o resultado combinado.
 
@@ -195,7 +195,7 @@ Circular verificando três pontos em cada estação:
 
 - **O Metallic está correto para o material?** Para kits Medieval, Fantasia ou pós-apocalíptico, a maioria dos Hero Assets de pedra e madeira deve ter Metallic = 0. Estudantes que colocam Metallic em valores intermediários em pedra ou madeira devem ser orientados.
 - **A camada de detalhe do Color está reforçando ou competindo com a máscara de AO/Curvature já existente?** Se as duas contarem histórias diferentes (uma diz "desgastado aqui", a outra diz "desgastado ali"), o material perde coerência.
-- **Os quatro mapas foram exportados de fato?** Confirmar no explorador de arquivos, não só na confirmação do 3D Coat — exportações vazias por erro de seleção de canal acontecem.
+- **Os quatro mapas foram exportados de fato?** Confirmar no explorador de arquivos, não só na confirmação do 3DCoatTextura — exportações vazias por erro de seleção de canal acontecem.
 
 Perguntas de mediação circulante:
 
@@ -214,18 +214,18 @@ Perguntas de mediação circulante:
 
 **Formato: Crítica formal com rubrica, autoavaliação e feedback escrito do professor**
 
-Esta é a segunda crítica formal do semestre (após a Semana 4). O objeto da crítica é o trabalho das Semanas 6–7 no Hero Asset Referência: a textura seamless de origem, a trilha visual escolhida, e o material construído no 3D Coat com máscaras de AO/Curvature e Normal via Depth. O refinamento feito no início deste encontro (Estúdio 1) pode ser incluído como contexto, mas o foco avaliativo é o estado consolidado do material.
+Esta é a segunda crítica formal do semestre (após a Semana 4). O objeto da crítica é o trabalho das Semanas 6–7 no Hero Asset Referência: a textura seamless de origem, a trilha visual escolhida, e o material construído no 3DCoatTextura com máscaras de AO/Curvature e Normal via Depth. O refinamento feito no início deste encontro (Estúdio 1) pode ser incluído como contexto, mas o foco avaliativo é o estado consolidado do material.
 
 **Protocolo:**
 
 **Preparação (antes do início — 2 min antes):**
 - Professor confere se todos têm a autoavaliação preenchida. Quem não tem: preenche agora, em 5 minutos, antes de qualquer outra atividade.
 - Fichas de Crítica Formal (Instrumento 1) separadas por estudante.
-- Projetor ligado e pronto para receber o arquivo do estudante (3D Coat ou Blender, conforme o que o estudante preferir apresentar).
+- Projetor ligado e pronto para receber o arquivo do estudante (3DCoatTextura ou Blender, conforme o que o estudante preferir apresentar).
 
 **Abertura (2 min):**
 Professor define o contexto e os critérios em foco:
-*"Esta é a crítica formal da Unidade II. Vocês vão apresentar o material que construíram no 3D Coat, no Hero Asset Referência, nas últimas duas semanas. Quero ouvir de cada um: qual é a trilha visual do seu kit — fotorrealista ou estilizada —, quais canais estão ativos, e uma escolha que vocês fizeram — de máscara, de Roughness, de Normal — e por que fizeram essa escolha. Depois a turma comenta. Cada apresentação tem dois minutos."*
+*"Esta é a crítica formal da Unidade II. Vocês vão apresentar o material que construíram no 3DCoatTextura, no Hero Asset Referência, nas últimas duas semanas. Quero ouvir de cada um: qual é a trilha visual do seu kit — fotorrealista ou estilizada —, quais canais estão ativos, e uma escolha que vocês fizeram — de máscara, de Roughness, de Normal — e por que fizeram essa escolha. Depois a turma comenta. Cada apresentação tem dois minutos."*
 
 Os critérios observados hoje: C1 (processo e documentação), C2 (coerência artística), C4 (materiais PBR), C5 (texturização), C9 (apresentação oral).
 
@@ -234,7 +234,7 @@ Os critérios observados hoje: C1 (processo e documentação), C2 (coerência ar
 Para cada apresentação:
 
 1. **O estudante apresenta** (2 min):
-   - Projeta o Hero Asset Referência com o material no Render Room do 3D Coat ou no viewport Rendered do Blender.
+   - Projeta o Hero Asset Referência com o material no Render Room do 3DCoatTextura ou no viewport Rendered do Blender.
    - Descreve: o material, a trilha visual, os canais ativos, e uma decisão técnica ou artística que tomou.
    - Lê a própria autoavaliação: o critério em que se avaliou mais alto e o critério em que se avaliou mais baixo, com justificativa.
 
@@ -264,11 +264,11 @@ Sintetizar os padrões observados:
 
 **Consigna:**
 
-> *"Sessenta minutos para três objetivos, todos no Hero Asset Referência: (1) refinamento final das camadas no 3D Coat, incorporando o que saiu na crítica; (2) exportação final dos quatro mapas PBR — Albedo, Metallic, Roughness e Normal; (3) reconexão completa no Blender, sem nenhum nó procedural remanescente. Como é uma peça só este semestre, quem terminar os três blocos com tempo de sobra usa o restante para aprofundar: mais uma camada de detalhe, um teste comparativo de Roughness, ou revisão fina do Normal — não para começar outra coisa."*
+> *"Sessenta minutos para três objetivos, todos no Hero Asset Referência: (1) refinamento final das camadas no 3DCoatTextura, incorporando o que saiu na crítica; (2) exportação final dos quatro mapas PBR — Albedo, Metallic, Roughness e Normal; (3) reconexão completa no Blender, sem nenhum nó procedural remanescente. Como é uma peça só este semestre, quem terminar os três blocos com tempo de sobra usa o restante para aprofundar: mais uma camada de detalhe, um teste comparativo de Roughness, ou revisão fina do Normal — não para começar outra coisa."*
 
 **Atividade estruturada:**
 
-**Bloco 1 — Refinamento final das camadas no 3D Coat (≈20 min):**
+**Bloco 1 — Refinamento final das camadas no 3DCoatTextura (≈20 min):**
 
 Incorporar o feedback recebido na crítica formal. Focos típicos:
 1. Reforçar ou reduzir a intensidade da máscara de AO/Curvature conforme apontado.
@@ -317,10 +317,10 @@ Para estudantes que terminaram o fluxo completo dos três blocos:
 **Roteiro:**
 
 1. **(2 min — Síntese da semana)**
-*"Hoje vocês fecharam a Unidade II: um material PBR completo, com quatro mapas reais exportados do 3D Coat, funcionando igualmente bem seja a trilha fotorrealista ou estilizada. Esse fluxo — refinar por camada, exportar, reconectar — é a base de tudo que vem pela frente: desgaste mais elaborado, stencils, bake de assets do kit inteiro."*
+*"Hoje vocês fecharam a Unidade II: um material PBR completo, com quatro mapas reais exportados do 3DCoatTextura, funcionando igualmente bem seja a trilha fotorrealista ou estilizada. Esse fluxo — refinar por camada, exportar, reconectar — é a base de tudo que vem pela frente: desgaste mais elaborado, stencils, bake de assets do kit inteiro."*
 
 2. **(3 min — Reflexão comparativa)**
-Pergunta para 2–3 voluntários: *"Compara o material que vocês tinham no final da Semana 6 — só uma textura no Albedo — com o material de agora, com os quatro mapas do 3D Coat. O que mudou? O que a máscara de AO/Curvature e o Normal pintado adicionaram que a textura sozinha não tinha?"*
+Pergunta para 2–3 voluntários: *"Compara o material que vocês tinham no final da Semana 6 — só uma textura no Albedo — com o material de agora, com os quatro mapas do 3DCoatTextura. O que mudou? O que a máscara de AO/Curvature e o Normal pintado adicionaram que a textura sozinha não tinha?"*
 
 3. **(3 min — Antecipação da Semana 9)**
 *"Na semana que vem: texturização artística no Hero Asset Referência — desgaste, sujeira e variação de cor pintados com ainda mais intenção, para além do que a máscara automática já faz. Vocês vão aprender edge wear, dirt e a lógica de leitura de silhueta. Antes de chegar na Semana 9, olhem o moodboard de vocês — o tema do kit pede um material envelhecido? Destruído? Novo? Essa decisão vai guiar onde vocês pintam o desgaste, nas duas trilhas."*
@@ -341,7 +341,7 @@ Mapas de Roughness, Metallic e Normal conectados com Color Space em "sRGB" (padr
 **3. Normal Map conectado sem o nó intermediário**
 Conectar o Image Texture do Normal diretamente à entrada Normal do Principled BSDF, sem passar pelo nó `Normal Map`, produz um resultado fisicamente incorreto (o motor interpreta a imagem como cor, não como vetor). Estratégia: verificar visualmente a presença do nó `Normal Map` entre os dois — é um erro silencioso, o material roda sem erro mas com aparência errada, então vale conferir ativamente em cada estação.
 
-**4. 3D Coat lento ou travando no laboratório**
+**4. 3DCoatTextura lento ou travando no laboratório**
 Sintomas: viewport lento ao rodar o asset, pintura com delay, travamento ao trocar de canal. Estratégia: usar resolução 512×512 em vez de 1024 nos computadores mais lentos — o fluxo é idêntico, apenas com menos detalhe. Orientar o estudante a trabalhar em 512 em aula e re-importar em 1024 em casa ou em computador mais potente para a entrega final.
 
 **5. Estudante não traz autoavaliação para a crítica formal**
@@ -362,7 +362,7 @@ Como há apenas um asset em jogo este semestre, alguns estudantes podem terminar
 | Estudante com material muito parecido com o final da Semana 6 (sem ganho visível na Semana 7–8) | *"Compara o antes e o depois no Render Room. Se o material parece igual à textura sozinha, as camadas de máscara e o Normal não adicionaram informação nova. Volta e reforça a camada de desgaste ou o Depth com algo que a textura de base não tinha."* |
 | Estudante nervoso ou travado na crítica formal | Redirecionar para a autoavaliação: *"O que você escreveu na sua autoavaliação como ponto forte? Começa mostrando isso."* O documento é um apoio — quem preencheu com honestidade tem um roteiro de apresentação pronto. |
 | Estudante com dificuldade de justificar decisões na crítica | *"Não precisa ter sido a decisão certa — precisa ter sido uma decisão consciente. Por que você escolheu essa trilha, esse tom de roughness, essa intensidade de desgaste? Você olhou referências? Isso é suficiente para justificar."* Reforçar que justificar ≠ acertar. |
-| Turma geral com dificuldade de organizar a exportação em lote dos quatro mapas | Fazer uma pausa de 5 minutos para revisar juntos, no projetor, a janela de exportação do 3D Coat, conferindo explicitamente a checklist dos quatro canais marcados antes de confirmar. |
+| Turma geral com dificuldade de organizar a exportação em lote dos quatro mapas | Fazer uma pausa de 5 minutos para revisar juntos, no projetor, a janela de exportação do 3DCoatTextura, conferindo explicitamente a checklist dos quatro canais marcados antes de confirmar. |
 | Estudante que terminou cedo e quer ir além | Propor: *"Tenta pintar uma camada adicional de Depth com brush de tamanho pequeno e opacidade alta, simulando desgaste concentrado em um ponto específico do asset — um canto que seria mais batido no universo do kit. Refaz a exportação e compara o Normal Map novo com o antigo."* |
 | Diferença de ritmo entre trilha fotorrealista e estilizada no mesmo estúdio | Como as duas trilhas usam o mesmo fluxo de ferramenta, a circulação do professor não precisa se dividir por grupo — as perguntas de mediação são as mesmas, só a referência visual muda (foto de material real vs. moodboard/concept art). |
 
@@ -372,10 +372,10 @@ Como há apenas um asset em jogo este semestre, alguns estudantes podem terminar
 
 | Evidência | Critério da Rubrica | Como avaliar |
 |---|---|---|
-| Hero Asset Referência no 3D Coat com Color refinado (base + máscara + camada de detalhe) | C5 — Texturização | Verificar no painel de Layers/Render Room: há pelo menos três camadas contribuindo para o Color, com variação visível |
+| Hero Asset Referência no 3DCoatTextura com Color refinado (base + máscara + camada de detalhe) | C5 — Texturização | Verificar no painel de Layers/Render Room: há pelo menos três camadas contribuindo para o Color, com variação visível |
 | Canal Roughness com contraste perceptível entre regiões (base, arestas, cavidades) no mapa exportado | C4 — Materiais PBR | Abrir o PNG exportado do Roughness: há gradação de tons entre arestas e reentrâncias? |
 | Canal Metallic preenchido corretamente para o tipo de material (0 para dielétricos, 1 para metais, transições nítidas quando mistos) | C4 — Materiais PBR | Verificar no mapa exportado: o preenchimento é coerente com as propriedades físicas do material? |
-| Quatro mapas PBR exportados do 3D Coat (Albedo, Roughness, Metallic, Normal) | C4 — Materiais PBR | Conferir a pasta de exportação: quatro arquivos PNG presentes, com conteúdo (não uniformes/vazios) |
+| Quatro mapas PBR exportados do 3DCoatTextura (Albedo, Roughness, Metallic, Normal) | C4 — Materiais PBR | Conferir a pasta de exportação: quatro arquivos PNG presentes, com conteúdo (não uniformes/vazios) |
 | Material no Blender configurado com os quatro mapas conectados nos slots corretos (Color Space e nó Normal Map corretos) | C4 — Materiais PBR | Verificar o Shader Editor: Albedo em sRGB; Roughness, Metallic e Normal (Image Texture) em Non-Color; nó Normal Map presente entre o Image Texture do Normal e o Principled BSDF |
 | Apresentação oral na crítica formal: descrição do material, trilha visual, canais ativos, e justificativa de ao menos uma decisão técnica ou artística | C9 — Apresentação | Qualidade da justificativa oral: é específica e técnica ("escolhi roughness 0.7 para pedra porque...") ou vaga ("ficou bom")? |
 | Autoavaliação preenchida com evidência concreta para cada critério avaliado | C1 — Processo de Projeto | Verificar se a autoavaliação cita evidências observáveis no trabalho (ex: "tenho quatro mapas exportados e conectados" — não apenas "acho que está bom") |
@@ -388,9 +388,9 @@ Como há apenas um asset em jogo este semestre, alguns estudantes podem terminar
 
 | Entrega | Formato | Prazo |
 |---|---|---|
-| Arquivo do 3D Coat com o Hero Asset Referência refinado (Color, Roughness, Metallic, Normal) | `.3b`/`.3dc` com sufixo `_HeroAsset_3DCoat_S08` | Até o fim do segundo encontro |
-| Mapas PBR exportados do 3D Coat: Albedo, Roughness, Metallic **e Normal** | `.png` 1024×1024 (ou 2048) com sufixos `_Albedo`, `_Roughness`, `_Metallic`, `_Normal` na pasta `_Mapas_S08` | Até o fim do segundo encontro |
-| Arquivo Blender com material final configurado usando os quatro mapas do 3D Coat, sem nós procedurais remanescentes | `.blend` com sufixo `_HeroAsset_3DCoat_S08` | Até o fim do segundo encontro |
+| Arquivo do 3DCoatTextura com o Hero Asset Referência refinado (Color, Roughness, Metallic, Normal) | `.3b` com sufixo `_HeroAsset_3DCoat_S08` | Até o fim do segundo encontro |
+| Mapas PBR exportados do 3DCoatTextura: Albedo, Roughness, Metallic **e Normal** | `.png` 1024×1024 (ou 2048) com sufixos `_Albedo`, `_Roughness`, `_Metallic`, `_Normal` na pasta `_Mapas_S08` | Até o fim do segundo encontro |
+| Arquivo Blender com material final configurado usando os quatro mapas do 3DCoatTextura, sem nós procedurais remanescentes | `.blend` com sufixo `_HeroAsset_3DCoat_S08` | Até o fim do segundo encontro |
 | Autoavaliação preenchida com evidências | Instrumento 2 da Rubrica Mestre (físico ou digital) | Até o início do segundo encontro |
 | Screenshot do painel de Layers (camadas visíveis) e do Render Room | `.png` com sufixos `_Layers_S08` e `_RenderRoom_S08` | Até o fim do segundo encontro |
 

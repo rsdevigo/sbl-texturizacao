@@ -40,7 +40,7 @@ Capacitar o estudante a desenvolver fluxos de trabalho de texturização para jo
 - Compreender os fundamentos de materiais e texturas em computação gráfica e renderização em tempo real.
 - Realizar abertura de malha e mapeamento UV eficiente no Blender, minimizando distorção e maximizando o aproveitamento do texel.
 - Criar materiais fisicamente plausíveis utilizando o workflow PBR (metallic/roughness) com mapas de diffuse, metallic, roughness, normal e subsurface.
-- Produzir texturas artísticas por meio de pintura digital e uso de stencils no 3D Coat.
+- Produzir texturas artísticas por meio de pintura digital e uso de stencils no 3DCoatTextura.
 - Executar bake de mapas de iluminação, normal e ambient occlusion a partir de high-poly para low-poly.
 - Organizar assets utilizando Texture Atlas, Trim Sheets e UDIMs para otimização de performance.
 - Otimizar texturas para motores de jogo considerando tamanho, compressão, mipmaps e empacotamento de canais.
@@ -55,7 +55,7 @@ Capacitar o estudante a desenvolver fluxos de trabalho de texturização para jo
 
 ### 5.1 Competências Técnicas
 
-- Operação do pipeline de texturização: Blender → 3D Coat → Unity.
+- Operação do pipeline de texturização: Blender → 3DCoatTextura → Unity.
 - Criação e aplicação de UV maps funcionais para assets de jogos.
 - Produção de conjuntos de mapas PBR coerentes e fisicamente plausíveis.
 - Técnicas de bake (normal, AO, curvature, lightmap) de high-poly para low-poly.
@@ -97,7 +97,7 @@ A disciplina adota o Studio-Based Learning como abordagem central. O conteúdo n
 
 ### 6.3 Projeto Integrador
 
-Nas semanas 1 a 3, cada estudante define — em diálogo com as disciplinas de Pintura Digital e Arte Conceitual e de Modelagem 3D e Level Design — o recorte temático do seu Kit Modular de Ambiente: um mundo fantástico construído a partir de elementos regionais do Mato Grosso do Sul (ou do estado de origem do estudante). Entre as Semanas 3 e 9, o estudante desenvolve um **Hero Asset Referência** — uma peça única que serve de prova de conceito do pipeline completo (UV → PBR → 3D Coat) e de norte visual para o restante do kit. A partir da Semana 10, com os demais assets modelados por Modelagem 3D e Level Design, o Kit Modular é produzido e otimizado (bake, atlas, trim sheets). Todas as entregas ao longo do semestre são peças deste projeto: nenhuma atividade é desconectada do contexto maior. O projeto culmina na Semana 16 com a apresentação e defesa do Kit completo integrado a uma fase caminhável na Unity; a Semana 17 é reservada à recuperação.
+Nas semanas 1 a 3, cada estudante define — em diálogo com as disciplinas de Pintura Digital e Arte Conceitual e de Modelagem 3D e Level Design — o recorte temático do seu Kit Modular de Ambiente: um mundo fantástico construído a partir de elementos regionais do Mato Grosso do Sul (ou do estado de origem do estudante). Entre as Semanas 3 e 9, o estudante desenvolve um **Hero Asset Referência** — uma peça única que serve de prova de conceito do pipeline completo (UV → PBR → 3DCoatTextura) e de norte visual para o restante do kit. A partir da Semana 10, com os demais assets modelados por Modelagem 3D e Level Design, o Kit Modular é produzido e otimizado (bake, atlas, trim sheets). Todas as entregas ao longo do semestre são peças deste projeto: nenhuma atividade é desconectada do contexto maior. O projeto culmina na Semana 16 com a apresentação e defesa do Kit completo integrado a uma fase caminhável na Unity; a Semana 17 é reservada à recuperação.
 
 ### 6.4 Estratégias de Mediação
 
@@ -114,7 +114,7 @@ Nas semanas 1 a 3, cada estudante define — em diálogo com as disciplinas de P
 ### 7.1 Softwares
 
 - **Blender** — abertura de malha UV, modelagem de referência, bake de texturas, renderização.
-- **3D Coat** — texturização PBR, pintura digital, stencils.
+- **3DCoatTextura 2026** — texturização PBR, pintura digital, stencils (edição do 3DCoat dedicada à texturização: Paint Room e Render Room).
 - **Unity** — importação de assets, configuração de materiais, iluminação, lightmap baking e montagem da fase caminhável.
 - **Krita** (opcional) — pintura digital e criação de texturas seamless.
 
@@ -154,7 +154,7 @@ Os 5 a 10 assets exigidos no Kit Modular final não têm todos o mesmo nível de
 
 | Camada | Quantidade mínima | Quando é produzida | Nível de acabamento | Técnica de produção |
 |---|---|---|---|---|
-| **Hero Asset Referência** | 1 | Semanas 3–9 | Completo: UV individual, PBR completo, pintura de desgaste, bake dedicado | Fluxo individual ensinado semana a semana, com as duas críticas formais iniciais (CF1 — UV, CF2 — texturização no 3D Coat) |
+| **Hero Asset Referência** | 1 | Semanas 3–9 | Completo: UV individual, PBR completo, pintura de desgaste, bake dedicado | Fluxo individual ensinado semana a semana, com as duas críticas formais iniciais (CF1 — UV, CF2 — texturização no 3DCoatTextura) |
 | **Assets Secundários** | 2–3 | A partir da Semana 10, com produção concluída até a Semana 13 | Ciclo abreviado: UV simples e material PBR coerente com o kit, com bake (CF3) quando aplicável, sem o mesmo aprofundamento de pintura do Hero Asset | Modelados por Modelagem 3D e Level Design; combinados ao Hero Asset no Texture Atlas (Semana 13) |
 | **Assets de Repetição** | 2–4 | Semana 14 | Uma única Trim Sheet aplicada a múltiplas variações do mesmo elemento modular (parede, moldura, viga) | Trim Sheet (Semana 14, CF4) |
 
@@ -221,13 +221,13 @@ A nota máxima passível de ser atingida após a Recuperação Final é 7,0 (set
 - Prática de abertura de malha: Smart UV Project, Seams, Unwrap manual no Blender.
 - Análise de distorção e otimização de layout UV.
 
-### Unidade II — Materiais PBR e Workflow no 3D Coat (Semanas 6–9)
+### Unidade II — Materiais PBR e Workflow no 3DCoatTextura (Semanas 6–9)
 
 - Fundamentos do Physically Based Rendering (PBR).
 - Mapas PBR: Diffuse/Albedo, Metallic, Roughness, Normal, Subsurface.
 - Criação de texturas seamless e tileable.
 - Geração procedural de elementos em texturas.
-- Workflow de criação de materiais no 3D Coat: camadas, projeção e exportação.
+- Workflow de criação de materiais no 3DCoatTextura: camadas, projeção e exportação.
 - Texturização artística por pintura digital: desgaste, sujeira e detalhes.
 
 ### Unidade III — Produção do Kit Modular: Bake e Detalhamento (Semanas 10–13)
@@ -269,8 +269,8 @@ A nota máxima passível de ser atingida após a Recuperação Final é 7,0 (set
 | 4 | Abertura de UV do Hero Asset Referência — Smart Unwrap e Seams | Hero Asset com UV aberto | 🔴 **CF1** |
 | 5 | Revisão de UV (feedback da CF1) e fundamentos de PBR (Principled BSDF) | Hero Asset com UV revisado e material PBR de valores planos aplicado | 🔵 Informal |
 | 6 | Criação de texturas seamless e tileable (trilha fotorrealista ou estilizada) | Asset 01 com textura seamless aplicada ao Albedo | 🔵 Informal |
-| 7 | Migração para o 3D Coat: mesh maps (AO, Curvature, Normal) e Smart Materials | Hero Asset migrado para o 3D Coat, com Color, AO/Curvature e Normal via Depth | 🔵 Informal |
-| 8 | Workflow no 3D Coat: camadas e exportação PBR | Hero Asset texturizado no 3D Coat | 🔴 **CF2** |
+| 7 | Migração para o 3DCoatTextura: mesh maps (AO, Curvature, Normal) e Smart Materials | Hero Asset migrado para o 3DCoatTextura, com Color, AO/Curvature e Normal via Depth | 🔵 Informal |
+| 8 | Workflow no 3DCoatTextura: camadas e exportação PBR | Hero Asset texturizado no 3DCoatTextura | 🔴 **CF2** |
 | 9 | Pintura digital: desgaste, sujeira e variação de cor | Hero Asset com camadas de detalhe pintadas | 🔵 Informal |
 | 10 | Stencils e detalhamento artístico | Detalhes via stencil no Hero Asset ou primeiro asset do kit | 🔵 Informal |
 | 11 | Bake: Normal Map e AO (high→low) | Normal Map e AO baked de um asset do kit | 🔴 **CF3** |

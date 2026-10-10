@@ -27,7 +27,7 @@ Comece sempre pelo Roughness: ele define 80% da leitura do material.
 
 1. Modelar o asset no **Blender**
 2. Fazer o UV unwrap com atenção ao *texel density*
-3. Pintar no **3D Coat**
+3. Pintar no **3DCoatTextura**
 4. Exportar e validar no **Unity**
 
 <div class="warning">

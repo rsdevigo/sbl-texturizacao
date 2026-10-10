@@ -1,6 +1,6 @@
 # Plano de Aula — Semana 6
 **Disciplina:** Texturização | **Curso:** Tecnologia em Jogos Digitais | **Metodologia:** Studio-Based Learning
-**Unidade:** II — Materiais PBR e Workflow no 3D Coat (Semanas 6–9)
+**Unidade:** II — Materiais PBR e Workflow no 3DCoatTextura (Semanas 6–9)
 **Tema da semana:** Criação de texturas seamless e tileable (trilha fotorrealista ou estilizada)
 **Apostila:** Parte IV, Cap. 12 — Texturas Seamless e Tileables (fontes de texturas e técnicas de criação)
 **Carga horária:** 3h (2 encontros de 1h30)
@@ -18,7 +18,7 @@ Os estudantes chegam com:
 
 > **Transição pedagógica desta semana:** nas semanas anteriores, os estudantes definiram *o que o material é* usando valores planos (cor sólida, Metallic 0 ou 1, Roughness fixo). A Semana 6 é o primeiro momento em que uma **imagem real** entra no pipeline — o Albedo deixa de ser uma cor e passa a ser uma textura com variação, micro-detalhe e identidade visual do tema. O conceito central a introduzir é que uma textura de jogo precisa ser **seamless** (sem costura visível quando repetida) para funcionar em superfícies maiores do que um único UV tile.
 
-> **Nota sobre a trilha visual do estudante:** a partir desta semana, cada estudante começa a definir se o seu Hero Asset Referência vai perseguir um resultado **fotorrealista** (textura fotográfica, material lido como "escaneado do mundo real") ou **estilizado** (textura de origem pintada/ilustrada, material lido como desenhado com intenção artística). As duas trilhas usam exatamente o mesmo fluxo de ferramentas do semestre — Blender nesta semana, 3D Coat a partir da Semana 7 — a diferença está apenas na fonte da imagem e, mais adiante, na forma de aplicar o material dentro do 3D Coat. Nenhuma trilha é tecnicamente mais fácil nem vale mais nota; a escolha deve ser coerente com o universo visual que o estudante já vem construindo para o kit desde as Semanas 1–3. Essa mesma decisão de trilha vai valer para os Assets Secundários que entrarem no Kit Modular a partir da Semana 10.
+> **Nota sobre a trilha visual do estudante:** a partir desta semana, cada estudante começa a definir se o seu Hero Asset Referência vai perseguir um resultado **fotorrealista** (textura fotográfica, material lido como "escaneado do mundo real") ou **estilizado** (textura de origem pintada/ilustrada, material lido como desenhado com intenção artística). As duas trilhas usam exatamente o mesmo fluxo de ferramentas do semestre — Blender nesta semana, 3DCoatTextura a partir da Semana 7 — a diferença está apenas na fonte da imagem e, mais adiante, na forma de aplicar o material dentro do 3DCoatTextura. Nenhuma trilha é tecnicamente mais fácil nem vale mais nota; a escolha deve ser coerente com o universo visual que o estudante já vem construindo para o kit desde as Semanas 1–3. Essa mesma decisão de trilha vai valer para os Assets Secundários que entrarem no Kit Modular a partir da Semana 10.
 
 ---
 
@@ -242,7 +242,7 @@ Para cada trabalho observado, o professor faz a turma se posicionar diante do mo
 Professor sintetiza os padrões observados na turma:
 - Qual o erro de seamless mais comum (tipicamente: patch em linha reta criando novo padrão repetitivo, ou patch insuficiente nas extremidades).
 - Qual é o estado geral de coerência temática — os kits estão ganhando identidade visual, e a trilha escolhida (fotorrealista/estilizada) está clara?
-- Orientação para o estúdio: *"Quem ainda tem costura visível: foco em voltar ao Krita e refinar o patch. Quem já está satisfeito com a textura: usa o tempo do segundo estúdio para aprofundar — refinar a variação de cor, testar uma segunda passagem de patch com mais detalhe, ou preparar uma segunda textura de apoio (ex.: argamassa entre as pedras) que o Hero Asset Referência também vai precisar no 3D Coat, a partir da Semana 7."*
+- Orientação para o estúdio: *"Quem ainda tem costura visível: foco em voltar ao Krita e refinar o patch. Quem já está satisfeito com a textura: usa o tempo do segundo estúdio para aprofundar — refinar a variação de cor, testar uma segunda passagem de patch com mais detalhe, ou preparar uma segunda textura de apoio (ex.: argamassa entre as pedras) que o Hero Asset Referência também vai precisar no 3DCoatTextura, a partir da Semana 7."*
 
 ---
 
@@ -291,7 +291,7 @@ Professor sintetiza os padrões observados na turma:
 Pergunta para 2–3 voluntários: *"Qual foi a parte mais difícil do processo de seamless? O patch em si, ou saber quando a costura estava boa o suficiente? Como você decidiu parar?"* O objetivo é problematizar o critério de "bom o suficiente" — que é uma decisão artística, não técnica.
 
 3. **(3 min — Antecipação da Semana 7)**
-*"Na semana que vem, a ferramenta muda: vocês vão levar o Hero Asset Referência para o 3D Coat e vão aprender a gerar mapas direto da malha 3D — Ambient Occlusion, Curvature e Normal Map — sem precisar de nós matemáticos no Blender. Quem está na trilha fotorrealista vai usar esses mapas para reforçar o desgaste sobre a própria textura fotográfica de hoje; quem está na trilha estilizada vai usar os mesmos mapas como máscara para Smart Materials — materiais inteligentes que se aplicam automaticamente em arestas, frestas e reentrâncias. Para isso, vocês vão precisar das texturas seamless que criaram hoje — mantenham os arquivos de origem do Krita (não só o PNG exportado). O arquivo `.kra` nativo do Krita com as camadas preservadas vai poupar trabalho."*
+*"Na semana que vem, a ferramenta muda: vocês vão levar o Hero Asset Referência para o 3DCoatTextura e vão aprender a gerar mapas direto da malha 3D — Ambient Occlusion, Curvature e Normal Map — sem precisar de nós matemáticos no Blender. Quem está na trilha fotorrealista vai usar esses mapas para reforçar o desgaste sobre a própria textura fotográfica de hoje; quem está na trilha estilizada vai usar os mesmos mapas como máscara para Smart Materials — materiais inteligentes que se aplicam automaticamente em arestas, frestas e reentrâncias. Para isso, vocês vão precisar das texturas seamless que criaram hoje — mantenham os arquivos de origem do Krita (não só o PNG exportado). O arquivo `.kra` nativo do Krita com as camadas preservadas vai poupar trabalho."*
 
 4. **(2 min — Confirmação das entregas)**
 Recapitular as entregas da semana com nomenclatura esperada.

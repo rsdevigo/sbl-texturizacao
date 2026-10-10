@@ -23,7 +23,7 @@ Na **Semana 2**, os estudantes tiveram o primeiro contato técnico real com o Bl
 Ao final da semana, o estudante será capaz de:
 
 1. Consolidar um moodboard temático curado (mínimo de 10 referências organizadas) que traduza visualmente o recorte cultural amadurecido desde a Semana 1 em um mundo fantástico coerente.
-2. Explicar o conceito de Hero Asset Referência — uma peça única e altamente representativa do tema que funciona como prova de conceito do pipeline completo (UV → PBR → 3D Coat) antes de escalar para o Kit Modular inteiro.
+2. Explicar o conceito de Hero Asset Referência — uma peça única e altamente representativa do tema que funciona como prova de conceito do pipeline completo (UV → PBR → 3DCoatTextura) antes de escalar para o Kit Modular inteiro.
 3. Selecionar e justificar por escrito um Hero Asset Referência, avaliando três critérios: legibilidade do tema, viabilidade técnica e potencial de reaproveitamento de linguagem visual no restante do kit.
 4. Comunicar oralmente, de forma clara e justificada, a proposta temática e a escolha do Hero Asset para a turma e o professor (primeiro exercício formal de comunicação visual da disciplina).
 5. Alinhar com Modelagem 3D e Level Design o briefing do Hero Asset Referência, viabilizando sua modelagem para a Semana 4.
@@ -62,11 +62,11 @@ Objetivo: dar significado técnico e estratégico à escolha que os estudantes v
 
 **Desenvolvimento:**
 
-Abrir com uma pergunta para a turma: *"Se vocês tivessem que provar, com uma única peça, que o pipeline inteiro — UV, PBR, pintura no 3D Coat — funciona para o tema de vocês, qual peça escolheriam?"* Deixar 2–3 respostas antes de nomear o conceito.
+Abrir com uma pergunta para a turma: *"Se vocês tivessem que provar, com uma única peça, que o pipeline inteiro — UV, PBR, pintura no 3DCoatTextura — funciona para o tema de vocês, qual peça escolheriam?"* Deixar 2–3 respostas antes de nomear o conceito.
 
 **Conteúdo a cobrir:**
 
-1. **Definição de Hero Asset Referência.** Uma peça única, não necessariamente parte literal do Kit Modular final, que representa com máxima clareza o tema escolhido. Ela funciona como prova de conceito: é nela que cada etapa do pipeline (abertura de UV na Semana 4, material PBR na Semana 6–7, texturização no 3D Coat na Semana 8–9) é testada pela primeira vez, antes de escalar para o conjunto de assets do Kit Modular a partir da Semana 10.
+1. **Definição de Hero Asset Referência.** Uma peça única, não necessariamente parte literal do Kit Modular final, que representa com máxima clareza o tema escolhido. Ela funciona como prova de conceito: é nela que cada etapa do pipeline (abertura de UV na Semana 4, material PBR na Semana 6–7, texturização no 3DCoatTextura na Semana 8–9) é testada pela primeira vez, antes de escalar para o conjunto de assets do Kit Modular a partir da Semana 10.
 
 2. **Por que não começar direto pelo Kit Modular.** Modelar, abrir UV e texturizar uma peça só é mais rápido de iterar e corrigir do que descobrir um problema de pipeline depois de já ter dez assets modelados. O Hero Asset é onde os erros são baratos.
 
@@ -96,7 +96,7 @@ Abrir com uma pergunta para a turma: *"Se vocês tivessem que provar, com uma ú
 1. Demonstrar, com um exemplo fictício rápido (pode ser um recorte simples, tipo "ferrovia abandonada + mitologia local"), como transformar um conjunto de referências dispersas em uma escolha de Hero Asset justificável em um parágrafo.
 2. Modelar em voz alta a estrutura da justificativa que os estudantes vão escrever: *"Este objeto representa o tema porque [elemento do moodboard] + é viável porque [escopo/técnica] + vai se conectar ao resto do kit porque [material/paleta reaproveitável]."*
 
-> **Nota do professor:** não é necessário abrir Blender ou 3D Coat nesta demonstração — é a primeira aula inteiramente conceitual/curatorial do semestre. Isso é proposital: reforça que decisão de projeto é etapa distinta de execução técnica.
+> **Nota do professor:** não é necessário abrir Blender ou 3DCoatTextura nesta demonstração — é a primeira aula inteiramente conceitual/curatorial do semestre. Isso é proposital: reforça que decisão de projeto é etapa distinta de execução técnica.
 
 ---
 
@@ -252,7 +252,7 @@ Depois de semanas de amadurecimento livre, alguns resistem a fechar a decisão. 
 | Justificativa do Hero Asset Referência (1 parágrafo) | Texto (comentário no arquivo, `.txt` ou `.docx`) | Individual | Até o fim do segundo encontro |
 | Briefing do Hero Asset para Modelagem 3D e Level Design | Conforme combinado entre os professores (documento compartilhado, formulário ou entrega em aula) | Individual | Até o fim do segundo encontro |
 
-> Não há entrega técnica em Blender/3D Coat nesta semana — a primeira operação sobre o Hero Asset real (abertura de UV) começa na Semana 4, primeira Crítica Formal do semestre.
+> Não há entrega técnica em Blender/3DCoatTextura nesta semana — a primeira operação sobre o Hero Asset real (abertura de UV) começa na Semana 4, primeira Crítica Formal do semestre.
 
 ---
 

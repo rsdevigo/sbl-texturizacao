@@ -17,7 +17,7 @@
 |---|---|
 | Crítica formal Semana 3: UV aberto de um **asset do kit** | Crítica formal **Semana 4**: UV aberto do **Hero Asset Referência** — peça exploratória que funciona como "norte" visual/técnico para o Kit Modular, não entra no kit final como está |
 | Crítica formal Semana 5: fundamentos de PBR | **Removida** — sem crítica formal na Semana 5 |
-| Crítica formal Semana 8: Asset do kit texturizado no 3D Coat | Crítica formal **Semana 8** (mantida na semana, conteúdo ajustado): **Hero Asset Referência texturizado no 3D Coat** |
+| Crítica formal Semana 8: Asset do kit texturizado no 3DCoatTextura | Crítica formal **Semana 8** (mantida na semana, conteúdo ajustado): **Hero Asset Referência texturizado no 3DCoatTextura** |
 | Crítica formal Semana 11 (bake), Semana 14 (trim sheet) | **Mantidas**, mesmo conteúdo |
 | Crítica formal / apresentação final Semana 17 | Apresentação final **antecipada para a Semana 16**; Semana 17 vira **Recuperação** |
 
@@ -36,7 +36,7 @@
 | 5 | 07–11/09 | Produção livre (sem crítica formal) | Experimentações, thumbnail e blue sky | Blocagem da fase | |
 | 6 | 14–18/09 | Produção livre / suporte ao Hero Asset | — | Preparação teórica: Modularidade | |
 | 7 | 21–25/09 | Produção livre / suporte ao Hero Asset | — | Preparação teórica: Modularidade (cont.) | |
-| 8 🔴 | 28/09–02/10 | **Hero Asset Referência — texturizado no 3D Coat** (crítica formal) | Artes conceituais do cenário | Planejamento da modularidade e criação de Backlog | |
+| 8 🔴 | 28/09–02/10 | **Hero Asset Referência — texturizado no 3DCoatTextura** (crítica formal) | Artes conceituais do cenário | Planejamento da modularidade e criação de Backlog | |
 | 9 | 05–09/10 | Produção livre | — | — | **SCT** (Semana de Ciência e Tecnologia) |
 | — | 12–16/10 | — | — | — | **Recesso** ("Saco cheio") — não conta como semana letiva |
 | 10 | 19–23/10 | Produção livre / início dos assets do Kit | — | Kit modular | |
@@ -54,7 +54,7 @@
 
 O Hero Asset Referência é uma peça única, escolhida como o objeto mais representativo do tema do estudante (ex.: o elemento arquitetônico ou prop mais icônico do mundo fantástico proposto). Ele não entra literalmente no Kit Modular final — sua função é pedagógica e de direção de projeto:
 
-* Serve de prova de conceito do pipeline completo (UV → PBR → 3D Coat) antes de escalar para múltiplos assets do kit.
+* Serve de prova de conceito do pipeline completo (UV → PBR → 3DCoatTextura) antes de escalar para múltiplos assets do kit.
 * Funciona como "norte" visual: paleta, densidade de detalhe, linguagem de desgaste e acabamento que todos os assets do Kit Modular (a partir da Semana 10) deverão seguir.
 * As duas críticas formais das Semanas 4 e 8 avaliam etapas técnicas (UV e texturização PBR) aplicadas a essa peça de referência, sem a pressão de já ser uma entrega "final de portfólio".
 

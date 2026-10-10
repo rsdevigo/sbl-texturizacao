@@ -142,7 +142,7 @@ Notas: Esse é o ponto central da mini aula — reforçar antes de entrar nos do
 
 **Specular/Glossiness** — mais antigo, controle direto do reflectance.
 
-**Metallic/Roughness** — Unity, Unreal, Blender, 3D Coat. Mais simples de calibrar.
+**Metallic/Roughness** — Unity, Unreal, Blender, 3DCoatTextura. Mais simples de calibrar.
 
 Nesta disciplina, o workflow é **exclusivamente Metallic/Roughness**.
 

@@ -14,10 +14,10 @@ footer: "IFMS • Semana 09"
 
 ## Desgaste, sujeira e detalhe hand-painted
 
-**Semana 9** — Texturização artística no 3D Coat: edge wear, dirt e scratches
+**Semana 9** — Texturização artística no 3DCoatTextura: edge wear, dirt e scratches
 
 <!--
-Notas: Abertura da mini aula (20 min). Unidade III — Pintura Digital e Bake. Crítica 🔵 Informal nesta semana. Mensagem central: na Semana 8 os estudantes aprenderam a pintar os três canais base no 3D Coat (Color, Roughness, Metallic). Hoje NÃO há ferramenta nova — há uma nova INTENÇÃO. O foco passa do estrutural (canais corretos) para o narrativo (o que aconteceu com esse objeto?). Deixar isso claro logo na capa: a pergunta que guia a semana é "qual é a história desse objeto?".
+Notas: Abertura da mini aula (20 min). Unidade III — Pintura Digital e Bake. Crítica 🔵 Informal nesta semana. Mensagem central: na Semana 8 os estudantes aprenderam a pintar os três canais base no 3DCoatTextura (Color, Roughness, Metallic). Hoje NÃO há ferramenta nova — há uma nova INTENÇÃO. O foco passa do estrutural (canais corretos) para o narrativo (o que aconteceu com esse objeto?). Deixar isso claro logo na capa: a pergunta que guia a semana é "qual é a história desse objeto?".
 -->
 
 ---
@@ -28,7 +28,7 @@ Ao final da semana você será capaz de:
 
 - Distinguir texturização **fotorrealista** de **estilizada** e escolher a coerente com o kit
 - Aplicar os três tipos de detalhe: **edge wear**, **dirt/grime** e **scratches**
-- Organizar **camadas por tipo de detalhe** no 3D Coat
+- Organizar **camadas por tipo de detalhe** no 3DCoatTextura
 - Usar a **lógica de uso** para decidir *onde* pintar cada detalhe
 - Avaliar a leitura do material **à distância de uso**, não só em close-up
 
@@ -49,14 +49,14 @@ Notas: Pergunta de abertura. Exibir dois renders do MESMO asset: um só com as t
 Objetivo didático: materializar visualmente a diferença entre "textura funcional" e "textura com história" — o salto conceitual de toda a aula em uma imagem.
 Arquivo sugerido: assets/antes_depois_desgaste.webp
 Descrição: comparação lado a lado do MESMO asset (ex.: barril ou caixa de metal). À esquerda, versão S08 com Color, Roughness e Metallic base, aparência limpa e uniforme. À direita, versão S09 com edge wear nas arestas, sujeira acumulada nas cavidades inferiores e scratches direcionais.
-Como produzir: no 3D Coat, abrir o asset de demonstração; capturar o Render Room com apenas as camadas base visíveis; depois reativar as camadas de detalhe e capturar de novo no mesmo ângulo e iluminação. Compor as duas capturas lado a lado no Krita.
+Como produzir: no 3DCoatTextura, abrir o asset de demonstração; capturar o Render Room com apenas as camadas base visíveis; depois reativar as camadas de detalhe e capturar de novo no mesmo ângulo e iluminação. Compor as duas capturas lado a lado no Krita.
 -->
 
 ---
 
 ## De onde viemos: Semana 8
 
-Você já tem o Asset 01 com os três canais pintados no 3D Coat:
+Você já tem o Asset 01 com os três canais pintados no 3DCoatTextura:
 
 - **Color** — cor base + variação de tom
 - **Roughness** — base + desgaste inicial nas arestas
@@ -265,7 +265,7 @@ Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonst
 
 ## Agora: demonstração
 
-A seguir, ao vivo no 3D Coat: **edge wear** e **dirt** no Color e no Roughness, com verificação à distância no Render Room.
+A seguir, ao vivo no 3DCoatTextura: **edge wear** e **dirt** no Color e no Roughness, com verificação à distância no Render Room.
 
 A pergunta que você leva ao estúdio: **qual é a história do seu objeto?**
 
@@ -277,6 +277,6 @@ Notas: Transição para a demonstração de 20 min. Sequência: partir do asset 
 [!FIGURA]
 Objetivo didático: antecipar o resultado esperado da demonstração para que a turma reconheça o alvo visual antes de produzir no estúdio.
 Arquivo sugerido: assets/demo_edgewear_dirt.webp
-Descrição: captura do Render Room do 3D Coat mostrando o asset de demonstração já com edge wear nas arestas superiores (cor interna + roughness mais baixo, arestas com brilho sutil diferente) e dirt acumulado nas cavidades inferiores (tom escuro e mais matte). Painel de Layers visível à lateral com as camadas EdgeWear_Color, EdgeWear_Rough, Dirt_Color e Dirt_Rough nomeadas.
-Como produzir: no 3D Coat, pintar as quatro camadas no asset de demonstração seguindo o percurso da demonstração; abrir o Render Room com iluminação HDR e capturar em um ângulo que mostre arestas e cavidades ao mesmo tempo, com o painel de Layers aberto.
+Descrição: captura do Render Room do 3DCoatTextura mostrando o asset de demonstração já com edge wear nas arestas superiores (cor interna + roughness mais baixo, arestas com brilho sutil diferente) e dirt acumulado nas cavidades inferiores (tom escuro e mais matte). Painel de Layers visível à lateral com as camadas EdgeWear_Color, EdgeWear_Rough, Dirt_Color e Dirt_Rough nomeadas.
+Como produzir: no 3DCoatTextura, pintar as quatro camadas no asset de demonstração seguindo o percurso da demonstração; abrir o Render Room com iluminação HDR e capturar em um ângulo que mostre arestas e cavidades ao mesmo tempo, com o painel de Layers aberto.
 -->

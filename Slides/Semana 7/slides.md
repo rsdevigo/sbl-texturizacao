@@ -14,10 +14,10 @@ footer: "IFMS • Semana 07"
 
 ## Profundidade direto da malha
 
-**Semana 7** — Migração para o 3D Coat: mesh maps (AO, Curvature, Normal) e Smart Materials
+**Semana 7** — Migração para o 3DCoatTextura: mesh maps (AO, Curvature, Normal) e Smart Materials
 
 <!--
-Notas: Marcar a virada de ferramenta: o Blender deixa de montar o material e passa a só exportar a malha e receber os mapas de volta. O 3D Coat entra como ferramenta dedicada — e as duas trilhas visuais passam a usar o mesmo fluxo de ferramenta a partir de hoje. Sem crítica formal — a CF2 é na Semana 8.
+Notas: Marcar a virada de ferramenta: o Blender deixa de montar o material e passa a só exportar a malha e receber os mapas de volta. O 3DCoatTextura entra como ferramenta dedicada — e as duas trilhas visuais passam a usar o mesmo fluxo de ferramenta a partir de hoje. Sem crítica formal — a CF2 é na Semana 8.
 -->
 
 ---
@@ -39,8 +39,8 @@ Notas: Recapitular em uma frase. Não reabrir o conteúdo técnico de seamless d
 Ao final da semana você será capaz de:
 
 - Explicar o que são mesh maps (AO, Curvature, Normal) e por que dispensam high-poly
-- Exportar do Blender e importar o Hero Asset no 3D Coat (Per-Pixel Painting, Metalness PBR)
-- Reconhecer os três espaços de trabalho do 3D Coat (Paint Room, UV Room, Render Room)
+- Exportar do Blender e importar o Hero Asset no 3DCoatTextura (Per-Pixel Painting, Metalness PBR)
+- Reconhecer os espaços de trabalho do 3DCoatTextura 2026 (Paint Room e Render Room)
 - Bakear AO e Curvature e usá-los como máscara de desgaste
 - Pintar um Normal Map real no canal Depth, sem nós procedurais
 - Montar um material com Color, Roughness e Normal ativos, em qualquer trilha visual
@@ -66,7 +66,7 @@ Notas: Mostrar 3 versões da mesma parede: (1) só Albedo (resultado da Semana 6
 Objetivo didático — Evidenciar que AO e Curvature nascem da geometria, sem exigir high-poly nem pintura manual.
 Arquivo sugerido — assets/parede_ao_curvature_comparacao.webp
 Descrição — Três renders lado a lado da mesma parede de pedra: (1) só Albedo/textura seamless da Semana 6, (2) com mapa de AO multiplicado (reentrâncias mais escuras), (3) com Curvature também aplicado (arestas com desgaste/brilho diferenciado).
-Como produzir — Renderizar no 3D Coat (Render Room) o mesmo asset de demonstração em três estados de camada: só Color, Color+AO, Color+AO+Curvature.
+Como produzir — Renderizar no 3DCoatTextura (Render Room) o mesmo asset de demonstração em três estados de camada: só Color, Color+AO, Color+AO+Curvature.
 -->
 
 ---
@@ -85,7 +85,7 @@ Notas: Frestas/cantos internos = mais escuros no AO (é onde sujeira e sombra de
 
 ## Normal Map: da pintura, não do ruído
 
-Sem high-poly dedicado, o caminho é pintar micro-detalhe direto no canal **Depth** do 3D Coat.
+Sem high-poly dedicado, o caminho é pintar micro-detalhe direto no canal **Depth** do 3DCoatTextura.
 
 Entalhes, rachaduras, rebites — o software converte a profundidade pintada em Normal Map real na exportação.
 
@@ -105,7 +105,7 @@ Notas: Diferença central em relação ao workflow tradicional de produções AA
 
 O Albedo fotográfico ou estilizado continua sendo a base de cor.
 
-O que muda: Roughness, Normal e desgaste agora são **camadas e máscaras no 3D Coat**, geradas da própria malha — não nós no Shader Editor.
+O que muda: Roughness, Normal e desgaste agora são **camadas e máscaras no 3DCoatTextura**, geradas da própria malha — não nós no Shader Editor.
 
 <!--
 Notas: Reforçar que não é um recomeço — é uma troca de ferramenta para a mesma tarefa de refinar o material.
@@ -131,16 +131,14 @@ Notas: Quem já baixou uma textura estilizada pronta na Semana 6 usa essa imagem
 
 ---
 
-## Os três espaços do 3D Coat
+## Os espaços do 3DCoatTextura 2026
 
 **Paint Room** — onde vocês pintam: pincéis, stencils, alphas, camadas com máscara, em qualquer canal PBR.
-
-**UV Room** — conferir se o UV do Blender importou corretamente (o UV já chega pronto).
 
 **Render Room** — visualização em alta qualidade com HDR, para avaliar antes de exportar.
 
 <!--
-Notas: No workflow da disciplina os UVs já chegam prontos do Blender — o UV Room serve principalmente para conferência, não para editar UV do zero.
+Notas: O 3DCoatTextura é a edição do 3DCoat dedicada só à texturização — não tem as salas de escultura, retopologia e modelagem. No workflow da disciplina os UVs já chegam prontos do Blender: a conferência é feita na janela Texture Editor, dentro do Paint Room. Se o UV precisar de correção, corrige-se no Blender e reexporta-se.
 -->
 
 ---
@@ -155,7 +153,7 @@ Vantagem: nunca repete um pixel. Desvantagem: controle artístico mais indireto.
 
 </div>
 
-A partir de hoje, o fluxo **oficial** da disciplina é o bake e a pintura dentro do 3D Coat — os nós ficam como leitura complementar (Apostila, Cap. 13), não avaliada.
+A partir de hoje, o fluxo **oficial** da disciplina é o bake e a pintura dentro do 3DCoatTextura — os nós ficam como leitura complementar (Apostila, Cap. 13), não avaliada.
 
 <!--
 Notas: Panorama de 3 min, não é conteúdo obrigatório. Nota: o Subsurface Scattering (SSS) não entra hoje — é apresentado na Semana 8, para não sobrecarregar esta mini aula.
@@ -194,7 +192,7 @@ Notas: Fechar a mini aula amarrando os conceitos antes da demonstração.
 
 ## Agora: demonstração
 
-Exportar do Blender, importar no 3D Coat, trazer a textura da Semana 6 como Color.
+Exportar do Blender, importar no 3DCoatTextura, trazer a textura da Semana 6 como Color.
 
 Bakear AO e Curvature, pintar o primeiro Normal via Depth, ajustar Roughness guiado por Curvature.
 
@@ -204,10 +202,10 @@ Bakear AO e Curvature, pintar o primeiro Normal via Depth, ajustar Roughness gui
 Notas: Transição para os 20 min de demonstração. Passo a passo: (1) exportar FBX com UV, (2) importar Per-Pixel Painting / Metalness PBR / 1024×1024, (3) camada de Color com a textura da Semana 6, (4) bake de AO e Curvature + camada de desgaste em modo Multiply, (5) Normal via pincel de Depth (rachadura, entalhe), (6) Roughness com Fill base + camada guiada por Curvature.
 
 [!FIGURA]
-Objetivo didático — Mostrar a sequência do fluxo de migração Blender → 3D Coat até o material com três canais ativos.
+Objetivo didático — Mostrar a sequência do fluxo de migração Blender → 3DCoatTextura até o material com três canais ativos.
 Arquivo sugerido — assets/demo_3dcoat_bake_workflow.webp
-Descrição — Sequência de 4 capturas de tela do 3D Coat lado a lado: malha recém-importada sem textura, com camada de Color aplicada, com AO/Curvature bakeados e aplicados como máscara de desgaste, e com as primeiras marcas de Normal pintadas no Depth.
-Como produzir — Capturar no 3D Coat usando o asset de demonstração do professor (parede simples com textura seamless da Semana 6), salvando cada etapa do Paint Room.
+Descrição — Sequência de 4 capturas de tela do 3DCoatTextura lado a lado: malha recém-importada sem textura, com camada de Color aplicada, com AO/Curvature bakeados e aplicados como máscara de desgaste, e com as primeiras marcas de Normal pintadas no Depth.
+Como produzir — Capturar no 3DCoatTextura usando o asset de demonstração do professor (parede simples com textura seamless da Semana 6), salvando cada etapa do Paint Room.
 -->
 
 ---
@@ -218,7 +216,7 @@ Como produzir — Capturar no 3D Coat usando o asset de demonstração do profes
 
 # Produção em estúdio
 
-Do Blender ao 3D Coat: migrando o Hero Asset Referência
+Do Blender ao 3DCoatTextura: migrando o Hero Asset Referência
 
 <!--
 Notas: Divisória entre a mini aula e o estúdio. Os slides a seguir ficam projetados durante a produção — servem de consigna e timebox visíveis, apresentados um a um conforme a etapa correspondente começa.
@@ -228,16 +226,16 @@ Notas: Divisória entre a mini aula e o estúdio. Os slides a seguir ficam proje
 
 <!-- _class: exercise -->
 
-## Etapa 1 — Exportar e importar no 3D Coat
+## Etapa 1 — Exportar e importar no 3DCoatTextura
 
 **≈10 minutos.**
 
 Exportem o Hero Asset do Blender (`.obj`/`.fbx`, com UV incluído).
 
-Importem no 3D Coat: Per-Pixel Painting, workflow Metalness PBR, resolução 1024×1024.
+Importem no 3DCoatTextura: Per-Pixel Painting, workflow Metalness PBR, resolução 1024×1024.
 
 <!--
-Notas: Encontro 1. Verificar se o UV importou corretamente no UV Room. Em computadores mais lentos, orientar para 512×512.
+Notas: Encontro 1. Verificar se o UV importou corretamente na janela Texture Editor (Paint Room). Em computadores mais lentos, orientar para 512×512.
 -->
 
 ---
@@ -335,7 +333,7 @@ Reforcem o Normal com uma segunda camada de Depth em escala menor (micro sobre m
 Ou testem um Smart Material diferente e comparem visualmente. Ou explorem o canal Subsurface, se houver elemento orgânico (sem cobrança — o SSS é formalizado na Semana 8).
 
 <!--
-Notas: Para quem já tem os três canais fechados. Alternativa: comparar o bake do 3D Coat com a técnica de nós procedurais do Blender (Cap. 13) em uma segunda superfície.
+Notas: Para quem já tem os três canais fechados. Alternativa: comparar o bake do 3DCoatTextura com a técnica de nós procedurais do Blender (Cap. 13) em uma segunda superfície.
 -->
 
 ---
@@ -346,7 +344,7 @@ Notas: Para quem já tem os três canais fechados. Alternativa: comparar o bake 
 
 Confirmem as entregas de hoje:
 
-- Hero Asset no 3D Coat com **Color + Roughness + Normal ativos** (`_HeroAsset_3DCoat_S07`)
+- Hero Asset no 3DCoatTextura com **Color + Roughness + Normal ativos** (`_HeroAsset_3DCoat_S07`)
 - Screenshot do painel de **Layers** (camadas nomeadas)
 - Screenshot comparativo **antes/depois** das máscaras de AO/Curvature e do Normal
 
@@ -357,5 +355,5 @@ Sem crítica formal hoje. Na semana que vem: **CF2** — apresentem esse materia
 </div>
 
 <!--
-Notas: Fechamento (10 min): "Hoje vocês montaram um material PBR completo pela primeira vez dentro do 3D Coat — com profundidade vinda da própria malha e do pincel, não de nós matemáticos." Ponte: na Semana 8 o material é refinado e exportado com os quatro mapas PBR completos.
+Notas: Fechamento (10 min): "Hoje vocês montaram um material PBR completo pela primeira vez dentro do 3DCoatTextura — com profundidade vinda da própria malha e do pincel, não de nós matemáticos." Ponte: na Semana 8 o material é refinado e exportado com os quatro mapas PBR completos.
 -->

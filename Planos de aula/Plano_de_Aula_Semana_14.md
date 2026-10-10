@@ -12,7 +12,7 @@
 
 Os estudantes chegam com:
 
-- Hero Asset Referência completo: UV, material PBR, texturização no 3D Coat com os 4 mapas exportados (Albedo, Metallic, Roughness, Normal) e pintura artística de desgaste — Semanas 4 a 9
+- Hero Asset Referência completo: UV, material PBR, texturização no 3DCoatTextura com os 4 mapas exportados (Albedo, Metallic, Roughness, Normal) e pintura artística de desgaste — Semanas 4 a 9
 - Ao menos dois Assets Secundários do Kit Modular com UV, material PBR coerente com o tema e bake (Normal, AO, Curvature, ID Map) aplicado — Semanas 10 a 12
 - Texture Atlas funcional, combinando ao menos três assets do kit — incluindo o Hero Asset Referência — em um único UV 2048×2048, com justificativa escrita de agrupamento e render comparativo antes/depois — Semana 13
 - Ficha de Autoavaliação da Rubrica Mestre preenchida **antes** desta aula (disponibilizada ao final da Semana 13)
@@ -62,8 +62,8 @@ Ao final da semana, o estudante será capaz de:
 ## Recursos necessários
 
 - Computadores com Blender instalado (3.x ou 4.x)
-- Computadores com 3D Coat instalado (versão 2023 ou superior)
-- Arquivos `.blend`/projeto 3D Coat do kit de cada estudante, incluindo o Texture Atlas da Semana 13 e ao menos um Asset de Repetição (parede, viga, moldura) ainda com UV individual — para quem ainda não recebeu o Asset de Repetição real de Modelagem 3D e Level Design, o professor disponibiliza uma peça modular simples de apoio (ver nota acima)
+- Computadores com 3DCoatTextura instalado (versão 2026)
+- Arquivos `.blend`/projeto 3DCoatTextura do kit de cada estudante, incluindo o Texture Atlas da Semana 13 e ao menos um Asset de Repetição (parede, viga, moldura) ainda com UV individual — para quem ainda não recebeu o Asset de Repetição real de Modelagem 3D e Level Design, o professor disponibiliza uma peça modular simples de apoio (ver nota acima)
 - Arquivo de demonstração do professor: uma Trim Sheet temática já preparada de antemão (ex.: faixa de madeira trabalhada com talha, metal com rebites, pedra com fiada de tijolos) e um asset de parede modular pronto para ser mapeado nela ao vivo
 - Projetor para demonstração e para a Crítica Formal
 - Ficha de Crítica Formal (Instrumento 1 da Rubrica Mestre), uma por estudante
@@ -130,10 +130,10 @@ Se as bordas esquerda e direita (ou superior e inferior) da faixa não forem des
 
 ### Demonstração — 20 minutos
 
-**Criação e aplicação de uma Trim Sheet temática no 3D Coat**
+**Criação e aplicação de uma Trim Sheet temática no 3DCoatTextura**
 
 **Setup (1 min):**
-Abrir o 3D Coat com a Trim Sheet de demonstração já pintada (três faixas: madeira, metal, ornamento) e o asset de parede modular de referência, ainda com UV individual, carregado ao lado.
+Abrir o 3DCoatTextura com a Trim Sheet de demonstração já pintada (três faixas: madeira, metal, ornamento) e o asset de parede modular de referência, ainda com UV individual, carregado ao lado.
 
 **Percurso da demonstração:**
 
@@ -142,7 +142,7 @@ Abrir o 3D Coat com a Trim Sheet de demonstração já pintada (três faixas: ma
 2. Destacar que as bordas de cada faixa foram desenhadas para se encontrarem sem descontinuidade — mostrar a faixa duplicada lado a lado no Krita ou em um preview de tiling para provar que a costura é invisível.
 
 **Passo 2 — Mapeamento do UV da parede na trim (8 min):**
-1. No Blender (ou no UV Room do 3D Coat), abrir o UV do asset de parede — ainda com seu UV individual da fase anterior.
+1. No Blender, abrir o UV do asset de parede — ainda com seu UV individual da fase anterior.
 2. Remapear o UV para ocupar uma tira estreita sobre a faixa de madeira da trim, com o eixo do comprimento da parede alinhado ao eixo de tiling da faixa.
 3. Configurar a repetição (tiling) do UV ao longo do comprimento da parede — mostrar como aumentar o número de repetições do UV faz o padrão se repetir mais vezes sem perda de nitidez.
 4. Aplicar o material com a trim carregada e mostrar o resultado no viewport: a parede exibindo o padrão de madeira repetido de forma contínua.
@@ -166,7 +166,7 @@ Abrir o 3D Coat com a Trim Sheet de demonstração já pintada (três faixas: ma
 
 **Consigna entregue verbalmente:**
 
-> *"Cinquenta minutos com dois objetivos: primeiro, planejar as faixas da trim sheet do seu kit — que tipos de detalhe modular se repetem no seu tema e merecem uma faixa própria. Segundo, começar a pintar ou construir a primeira faixa no 3D Coat ou no Krita. Vocês não precisam terminar a trim inteira hoje — o objetivo do primeiro encontro é ter o planejamento definido e a primeira faixa iniciada."*
+> *"Cinquenta minutos com dois objetivos: primeiro, planejar as faixas da trim sheet do seu kit — que tipos de detalhe modular se repetem no seu tema e merecem uma faixa própria. Segundo, começar a pintar ou construir a primeira faixa no 3DCoatTextura ou no Krita. Vocês não precisam terminar a trim inteira hoje — o objetivo do primeiro encontro é ter o planejamento definido e a primeira faixa iniciada."*
 
 **Atividade estruturada:**
 
@@ -177,11 +177,11 @@ Abrir o 3D Coat com a Trim Sheet de demonstração já pintada (três faixas: ma
 
 **Etapa 2 — Criação da primeira faixa (≈30 min):**
 1. Criar a imagem de destino da trim (ex.: 1024×2048 ou proporção equivalente, coerente com a resolução de trabalho do kit).
-2. Pintar ou construir a primeira faixa (a de maior uso — geralmente o material estrutural dominante) no 3D Coat ou Krita, garantindo que as bordas se encontrem sem descontinuidade quando repetidas.
+2. Pintar ou construir a primeira faixa (a de maior uso — geralmente o material estrutural dominante) no 3DCoatTextura ou Krita, garantindo que as bordas se encontrem sem descontinuidade quando repetidas.
 3. Testar o tiling da faixa isoladamente antes de avançar: duplicar a faixa lado a lado em um preview e verificar a costura.
 
 **Etapa 3 — Registro de processo (≈10 min):**
-1. Salvar o arquivo: `[Nome]_TrimSheet_S14.blend` / projeto 3D Coat correspondente.
+1. Salvar o arquivo: `[Nome]_TrimSheet_S14.blend` / projeto 3DCoatTextura correspondente.
 2. Screenshot da trim em construção com preview de tiling da primeira faixa, para levar à Crítica Formal do segundo encontro.
 
 **Papel do professor:**
@@ -247,7 +247,7 @@ O professor preenche a Ficha de Crítica Formal (Instrumento 1) para C1, C2, C5,
 **Bloco 1 — Correção de costura de tiling identificada na CF4 (≈20 min):**
 
 Para estudantes com problemas de costura apontados na apresentação:
-1. Reabrir a faixa problemática no Krita ou 3D Coat e ajustar as bordas para que padrão e cor se encontrem sem descontinuidade (offset + patch, mesma técnica da Semana 6, aplicada apenas ao eixo de repetição).
+1. Reabrir a faixa problemática no Krita ou 3DCoatTextura e ajustar as bordas para que padrão e cor se encontrem sem descontinuidade (offset + patch, mesma técnica da Semana 6, aplicada apenas ao eixo de repetição).
 2. Testar novamente com o preview de tiling lado a lado antes de reaplicar ao asset.
 3. Reaplicar a faixa corrigida ao material do asset e validar no viewport, rotacionando a câmera.
 
@@ -267,7 +267,7 @@ Para estudantes com trim sólida e já expandida:
 
 **Bloco 4 — Exportação e registro final (≈5 min):**
 1. Exportar a Trim Sheet final (`.png`, resolução definida no planejamento).
-2. Salvar arquivo Blender/3D Coat com sufixo `_TrimSheet_S14_Final`.
+2. Salvar arquivo Blender/3DCoatTextura com sufixo `_TrimSheet_S14_Final`.
 3. Render comparativo: as peças modulares mapeadas com a trim, lado a lado, demonstrando reutilização sem perda de qualidade visual.
 
 **Papel do professor:**
@@ -353,7 +353,7 @@ Sabendo que a CF4 vale 30% do PA — o maior peso entre as quatro críticas form
 | Entrega | Formato | Prazo |
 |---|---|---|
 | Trim Sheet finalizada (ao menos uma faixa validada, idealmente mais de uma) | `.png`, resolução definida no planejamento (ex.: 1024×2048), pasta `_TrimSheet_S14` | Até o fim do segundo encontro |
-| Arquivo Blender/3D Coat com ao menos um asset modular mapeado na trim, com tiling configurado | `.blend`/projeto com sufixo `_TrimSheet_S14_Final` | Até o fim do segundo encontro |
+| Arquivo Blender/3DCoatTextura com ao menos um asset modular mapeado na trim, com tiling configurado | `.blend`/projeto com sufixo `_TrimSheet_S14_Final` | Até o fim do segundo encontro |
 | Justificativa escrita da escolha das faixas e das peças associadas | Documento digital ou anotação junto ao arquivo de entrega | Até o fim do segundo encontro |
 | Render comparativo: peças modulares mapeadas com a trim, demonstrando reutilização | `.png` com sufixo `_Comparativo_TrimSheet_S14` | Até o fim do segundo encontro |
 | Ficha de Autoavaliação (Instrumento 2) preenchida | Documento digital ou impresso, entregue antes da apresentação | Início do segundo encontro |

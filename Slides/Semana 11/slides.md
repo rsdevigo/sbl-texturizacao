@@ -17,7 +17,7 @@ footer: "IFMS • Semana 11"
 **Semana 11** — Transferindo detalhe de geometria do high-poly para o low-poly
 
 <!--
-Notas: Abertura da mini aula (20 min). Unidade III — Pintura Digital e Bake. Crítica 🔴 FORMAL (CF3) nesta semana — a 3ª das 5, primeira a avaliar o Critério 6 (Bake). Mensagem central: até agora todo detalhe foi pintado à mão sobre o low-poly (S09 desgaste, S10 stencil), complementando o Normal via Depth pintado no 3D Coat desde a S07. Hoje entra uma peça nova de workflow — esculpir/modelar detalhe em uma malha auxiliar de alta resolução e TRANSFERIR esse detalhe para o low-poly pelo bake. Deixar claro na capa: o bake não substitui a pintura; ele resolve o que a pintura não resolve bem — detalhe de geometria real (chanfros, entalhes profundos). Apostila: Parte V, Cap. 15 — Bake de Texturas.
+Notas: Abertura da mini aula (20 min). Unidade III — Pintura Digital e Bake. Crítica 🔴 FORMAL (CF3) nesta semana — a 3ª das 5, primeira a avaliar o Critério 6 (Bake). Mensagem central: até agora todo detalhe foi pintado à mão sobre o low-poly (S09 desgaste, S10 stencil), complementando o Normal via Depth pintado no 3DCoatTextura desde a S07. Hoje entra uma peça nova de workflow — esculpir/modelar detalhe em uma malha auxiliar de alta resolução e TRANSFERIR esse detalhe para o low-poly pelo bake. Deixar claro na capa: o bake não substitui a pintura; ele resolve o que a pintura não resolve bem — detalhe de geometria real (chanfros, entalhes profundos). Apostila: Parte V, Cap. 15 — Bake de Texturas.
 -->
 
 ---
@@ -56,7 +56,7 @@ Como produzir: no Blender, abrir o asset low-poly de demonstração; capturar o 
 
 ## De onde viemos: Semanas 9 e 10
 
-Todo o detalhe até aqui foi **pintado à mão** sobre o low-poly, no 3D Coat:
+Todo o detalhe até aqui foi **pintado à mão** sobre o low-poly, no 3DCoatTextura:
 
 - **Semana 9** — desgaste: edge wear, dirt, scratches
 - **Semana 10** — stencil: rachaduras, símbolos, corrosão
@@ -121,7 +121,7 @@ Captura a **direção de cada face** do high-poly e grava como cor RGB.
 
 - É o mapa **mais importante** do bake
 - Reconstrói chanfros e entalhes sem adicionar um único polígono
-- Espaço **Tangent** (padrão para motores de jogo e 3D Coat)
+- Espaço **Tangent** (padrão para motores de jogo e 3DCoatTextura)
 
 <!--
 Notas: O Normal Map é o coração da semana. A textura resultante é roxo-azulada característica (Tangent Space). Ele não muda a silhueta do objeto — engana só o sombreamento da superfície. Por isso continua sendo importante ter geometria de silhueta correta no low-poly; o bake resolve o detalhe interno, não o contorno.
@@ -166,9 +166,9 @@ Notas: Estes quatro parâmetros são o motivo de esta mini aula ser mais densa q
 
 O Normal Map de bake **não substitui** nada — ele **se soma**.
 
-- Convive com o **Normal via Depth** pintado no 3D Coat na Semana 7
+- Convive com o **Normal via Depth** pintado no 3DCoatTextura na Semana 7
 - Convive com o **desgaste pintado** das Semanas 9 e 10
-- No 3D Coat, entra como **camada adicional** no canal Normal
+- No 3DCoatTextura, entra como **camada adicional** no canal Normal
 
 <!--
 Notas: Ponto conceitual que gera confusão e volta nas estratégias de mediação. Analogia útil: o Depth da S7 é como textura de pele (padrão geral repetido por toda a superfície, pintado diretamente na malha de produção); o bake de hoje é como uma cicatriz específica (detalhe único, localizado, que veio de geometria real ali). Os dois coexistem no mesmo canal Normal, em camadas separadas. O EdgeWear/Dirt continuam pintados por cima ou ao redor.
@@ -228,7 +228,7 @@ Aparecem hoje **apenas como conceito** — voltam com tempo na Semana 12:
 - **ID Map** — cor sólida por material; máscara de seleção rápida
 
 <!--
-Notas: Deliberadamente breve. A nota do professor no plano de aula é explícita: resistir à tentação de aprofundar Curvature e ID Map agora — eles voltam na Semana 12 com demonstração completa de mascaramento automático no 3D Coat. Deixar só a semente: para quem tem um asset com dois materiais distintos (ex.: madeira + metal), esse é o candidato ideal para ID Map na próxima semana.
+Notas: Deliberadamente breve. A nota do professor no plano de aula é explícita: resistir à tentação de aprofundar Curvature e ID Map agora — eles voltam na Semana 12 com demonstração completa de mascaramento automático no 3DCoatTextura. Deixar só a semente: para quem tem um asset com dois materiais distintos (ex.: madeira + metal), esse é o candidato ideal para ID Map na próxima semana.
 -->
 
 ---

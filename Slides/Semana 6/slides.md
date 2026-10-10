@@ -337,5 +337,5 @@ Sem crítica formal hoje. Guardem o `.kra` (não só o PNG) — vocês vão prec
 </div>
 
 <!--
-Notas: Fechamento (10 min): "O Albedo do Hero Asset não é mais uma cor — é uma superfície com história." Ponte: na Semana 7 a ferramenta muda para o 3D Coat, com bake de AO/Curvature/Normal direto da malha — quem está na trilha fotorrealista reforça o desgaste sobre a textura de hoje; quem está na estilizada usa os mesmos mapas como máscara para Smart Materials.
+Notas: Fechamento (10 min): "O Albedo do Hero Asset não é mais uma cor — é uma superfície com história." Ponte: na Semana 7 a ferramenta muda para o 3DCoatTextura, com bake de AO/Curvature/Normal direto da malha — quem está na trilha fotorrealista reforça o desgaste sobre a textura de hoje; quem está na estilizada usa os mesmos mapas como máscara para Smart Materials.
 -->

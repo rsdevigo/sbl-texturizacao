@@ -83,7 +83,7 @@ Prova de conceito do pipeline completo — **antes** de escalar para o Kit Modul
 ![diagram](assets/mermaid-2.png)
 
 <!--
-Notas: O Hero Asset é onde cada etapa do pipeline é testada pela primeira vez — UV na Semana 4, material PBR nas Semanas 6-7, texturização no 3D Coat nas Semanas 8-9. Só depois disso validado é que o Kit Modular é produzido de fato, a partir da Semana 10. Não detalhar UV ou PBR agora — apenas nomear a trajetória.
+Notas: O Hero Asset é onde cada etapa do pipeline é testada pela primeira vez — UV na Semana 4, material PBR nas Semanas 6-7, texturização no 3DCoatTextura nas Semanas 8-9. Só depois disso validado é que o Kit Modular é produzido de fato, a partir da Semana 10. Não detalhar UV ou PBR agora — apenas nomear a trajetória.
 -->
 
 ---
@@ -230,7 +230,7 @@ Como transformar referências dispersas em uma justificativa de um parágrafo.
 ![large](assets/hero_asset_exemplos.webp)
 
 <!--
-Notas: Transição para os 20 min de demonstração. Reforçar que a demonstração não abre Blender nem 3D Coat — é a primeira aula inteiramente curatorial do semestre, e isso é proposital: decisão de projeto é etapa distinta de execução técnica.
+Notas: Transição para os 20 min de demonstração. Reforçar que a demonstração não abre Blender nem 3DCoatTextura — é a primeira aula inteiramente curatorial do semestre, e isso é proposital: decisão de projeto é etapa distinta de execução técnica.
 
 [!FIGURA]
 Objetivo didático — Mostrar exemplos concretos de Hero Assets publicados e sua relação direta com um moodboard, para que o estudante veja o padrão de qualidade esperado antes de decidir o próprio.

@@ -6,7 +6,7 @@
 **Carga horária:** 3h (2 encontros de 1h30)
 **Crítica:** 🔵 Informal — Compartilhamento entre grupos sobre os props culturais pesquisados
 
-> **Nota de fonte:** o pipeline específico da disciplina (Blender → 3D Coat → Unity) é conteúdo próprio da disciplina, não da apostila. O Cap. 1 da apostila trata da distinção conceitual entre material, textura, UV e texel — é essa a leitura de base desta semana; o Cap. 25 dá a visão geral do pipeline completo.
+> **Nota de fonte:** o pipeline específico da disciplina (Blender → 3DCoatTextura → Unity) é conteúdo próprio da disciplina, não da apostila. O Cap. 1 da apostila trata da distinção conceitual entre material, textura, UV e texel — é essa a leitura de base desta semana; o Cap. 25 dá a visão geral do pipeline completo.
 
 ---
 
@@ -28,7 +28,7 @@ Esta é a primeira das 17 semanas letivas: não há conteúdo anterior a retomar
 
 Ao final da semana, o estudante será capaz de:
 
-1. Descrever o pipeline de texturização da disciplina (Blender → 3D Coat → Unity) e a função de cada etapa.
+1. Descrever o pipeline de texturização da disciplina (Blender → 3DCoatTextura → Unity) e a função de cada etapa.
 2. Diferenciar textura raster de textura procedural e identificar quando cada abordagem é usada.
 3. Explicar o que é o trabalho interdisciplinar do semestre: as três disciplinas envolvidas, o entregável final (fase caminhável na Unity) e a lógica do tema (mundo fantástico a partir de elementos regionais do Mato Grosso do Sul ou do estado de origem do estudante).
 4. Reconhecer, a partir de um bem cultural real (material ou imaterial) do estado, atributos concretos (forma, função, material, contexto de uso, simbologia) que podem virar base de um design fantástico.
@@ -109,7 +109,7 @@ Abrir com uma pergunta para a turma: *"Qual a diferença entre a cor de um objet
 - **Textura** = imagem mapeada sobre uma superfície 3D para representar cor, rugosidade, reflexo etc.
 - **Material** = conjunto de propriedades que define como a superfície reage à luz (inclui uma ou mais texturas).
 - **Raster vs. Procedural:** raster é uma imagem bitmap (pixels); procedural é gerado por algoritmo em tempo real. Vantagens e limitações de cada um — este conceito volta com aplicação prática na Semana 7 (Normal Map procedural); aqui é só reconhecimento do vocabulário.
-- **O pipeline da disciplina:** Blender (modelagem + UV) → 3D Coat (texturização PBR manual) → Unity (integração no motor). Cada software tem um papel específico — nenhum é substituível pelo outro nesse fluxo.
+- **O pipeline da disciplina:** Blender (modelagem + UV) → 3DCoatTextura (texturização PBR manual) → Unity (integração no motor). Cada software tem um papel específico — nenhum é substituível pelo outro nesse fluxo.
 - **O trabalho interdisciplinar do semestre:** três disciplinas — Pintura Digital e Arte Conceitual, Texturização e Modelagem 3D e Level Design — convergindo para um único entregável: uma **fase caminhável na Unity**, construída a partir de um **Kit Modular de Ambiente** com tema de um mundo fantástico criado a partir de elementos regionais do Mato Grosso do Sul (ou do estado de origem do estudante). Explicar que o recorte temático nasce do diálogo entre as três disciplinas, não é escolhido isoladamente em Texturização — e que a aula de hoje já começa esse recorte de um jeito estruturado, não genérico.
 
 > **Nota do professor:** Evite entrar em detalhes técnicos de PBR ou UV agora. O objetivo desta mini aula é criar senso de trajetória e situar o estudante no projeto interdisciplinar, não profundidade técnica. Se houver perguntas avançadas, responda com: *"Vamos chegar nisso na semana X."*

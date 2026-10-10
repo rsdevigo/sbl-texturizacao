@@ -2,7 +2,7 @@
 **Disciplina:** Texturização | **Curso:** Tecnologia em Jogos Digitais | **Metodologia:** Studio-Based Learning  
 **Unidade:** III — Produção do Kit Modular: Bake e Detalhamento (Semanas 10–13)  
 **Tema da semana:** Uso de Stencils em texturização  
-**Apostila:** Parte V, Cap. 17 — Máscaras, Stencils e Decals (uso de stencils no 3D Coat; criação e importação de alphas)  
+**Apostila:** Parte V, Cap. 17 — Máscaras, Stencils e Decals (uso de stencils no 3DCoatTextura; criação e importação de alphas)  
 **Carga horária:** 3h (2 encontros de 1h30)  
 **Crítica:** 🔵 Informal — Crítica circulante no segundo encontro
 
@@ -12,9 +12,9 @@
 
 Os estudantes chegam com:
 
-- Hero Asset Referência finalizado com camadas de desgaste: EdgeWear, Dirt e Scratches pintados no 3D Coat, mapas PBR exportados e conectados no Blender — Semana 9
+- Hero Asset Referência finalizado com camadas de desgaste: EdgeWear, Dirt e Scratches pintados no 3DCoatTextura, mapas PBR exportados e conectados no Blender — Semana 9
 - Render comparativo antes/depois do Hero Asset Referência (S08 vs. S09) salvo — Semana 9
-- Para quem já recebeu Assets Secundários de Modelagem 3D e Level Design nesta fase: arquivo(s) importado(s) no 3D Coat com ao menos as camadas base dos três canais (Color, Roughness, Metallic) — recebimento variável conforme o cronograma de entrega da disciplina de Modelagem 3D, não necessariamente concluído até esta semana
+- Para quem já recebeu Assets Secundários de Modelagem 3D e Level Design nesta fase: arquivo(s) importado(s) no 3DCoatTextura com ao menos as camadas base dos três canais (Color, Roughness, Metallic) — recebimento variável conforme o cronograma de entrega da disciplina de Modelagem 3D, não necessariamente concluído até esta semana
 - Moodboard atualizado com referências do tema do kit — Semana 1 (atualização contínua)
 
 > **Nota de transição — início da fase de Kit Modular:** A Semana 9 desenvolveu a linguagem do desgaste por pintura livre — edge wear, dirt, scratches — e encerrou a Unidade II inteiramente dedicada ao Hero Asset Referência. A partir desta semana abre a Unidade III: o Kit Modular propriamente dito começa a ganhar corpo. Modelagem 3D e Level Design já entregou (ou está entregando, ao longo desta fase) os **Assets Secundários** (2–3 peças com ciclo de produção abreviado) e os **Assets de Repetição** (2–4 elementos modulares como paredes, vigas e molduras, que só entrarão tecnicamente em cena na Semana 14 via Trim Sheet). O Hero Asset Referência não desaparece — ele continua existindo e será incorporado ao kit mais adiante (por exemplo, no Texture Atlas da Semana 13) — mas deixa de ser o único foco da disciplina.
@@ -31,7 +31,7 @@ Ao final da semana, o estudante será capaz de:
 
 1. Distinguir **stencil** de **alpha/brush**: compreender que o stencil é uma máscara estática projetada no espaço 3D, enquanto o alpha é uma textura aplicada junto com o brush.
 2. Identificar e selecionar **fontes de stencils** apropriadas ao tema do kit (ArtStation, Poly Haven, TextureHaven) ou criar um stencil personalizado no Krita a partir de referência fotográfica.
-3. Aplicar um stencil no 3D Coat com controle de **posição, escala, rotação e opacidade**, combinando múltiplos stencils para criar detalhe complexo.
+3. Aplicar um stencil no 3DCoatTextura com controle de **posição, escala, rotação e opacidade**, combinando múltiplos stencils para criar detalhe complexo.
 4. Decidir **onde e como** o stencil contribui para a narrativa visual do asset: o stencil deve responder a uma necessidade do tema (rachadura, símbolo, corrosão, padrão de uso) — não ser aplicado aleatoriamente.
 5. Combinar stencil com pintura livre para **integrar** o detalhe estampado ao contexto do material (evitando o efeito "colado sobre a superfície").
 6. Para quem já tem Assets Secundários em mãos: reconhecer e reproduzir a **mesma linguagem visual** (tipo de stencil, paleta de cor, nível de desgaste) já estabelecida no Hero Asset Referência, iniciando a coerência de conjunto do Kit Modular.
@@ -45,7 +45,7 @@ Ao final da semana, o estudante será capaz de:
 
 | Critério | O que observar |
 |---|---|
-| C1 — Processo de Projeto | Screenshot do processo: stencil configurado no 3D Coat, camadas nomeadas, versão salva com sufixo `_S10` |
+| C1 — Processo de Projeto | Screenshot do processo: stencil configurado no 3DCoatTextura, camadas nomeadas, versão salva com sufixo `_S10` |
 | C2 — Direção Artística | O tipo de stencil escolhido é coerente com o tema do kit? (Rachaduras para pedra medieval; corrosão para sci-fi; grafites para pós-apocalíptico). Para quem trabalhou Assets Secundários: a linguagem visual aplicada a eles é reconhecivelmente a mesma do Hero Asset Referência? |
 | C5 — Texturização | O stencil adicionou detalhe com narrativa temática? O detalhe está integrado ao material ou parece "colado"? A combinação de stencil + pintura livre é coerente? |
 | C10 — Participação (CC) | Qualidade do feedback oferecido na crítica informal: o estudante consegue identificar se o stencil parece integrado ou sobreposto, e por quê? |
@@ -56,17 +56,17 @@ Ao final da semana, o estudante será capaz de:
 
 ## Recursos necessários
 
-- Computadores com 3D Coat instalado (versão 2023 ou superior)
+- Computadores com 3DCoatTextura instalado (versão 2026)
 - Computadores com Krita instalado (versão 5.x — gratuito)
 - Computadores com Blender instalado (3.x ou 4.x)
-- Arquivo do Hero Asset Referência de cada estudante no 3D Coat (`.3b`, finalizado na S09)
+- Arquivo do Hero Asset Referência de cada estudante no 3DCoatTextura (`.3b`, finalizado na S09)
 - Para quem já recebeu Assets Secundários: arquivo(s) `.3b` com camadas base ou em branco, a depender do progresso do recebimento
 - Arquivo de demonstração do professor: asset de pedra com UV e camadas base pintadas (Color, Roughness, Metallic — Fill), pronto para receber stencils
 - Coleção de stencils organizada por categoria temática: **rachaduras** (pedra, concreto), **corrosão e oxidação** (metal, enferrujado), **padrões e símbolos** (runas, marcas industriais, grafites) — disponível como pasta .zip no servidor da disciplina ou pen drive
 - Projetor para demonstração e crítica informal
 - Apostila — Parte V, Cap. 17 — disponibilizada antes da aula
 
-> **Preparação da coleção de stencils:** Organizar entre 15–20 stencils em escala de cinza (PNG fundo preto, detalhes brancos) divididos por categoria. Stencils com fundo preto funcionam diretamente no 3D Coat em modo de blend "Multiply". Fontes: [Poly Haven](https://polyhaven.com), [ArtStation Marketplace](https://www.artstation.com/marketplace) (muitos gratuitos), ou criados em aula no Krita como parte da demonstração.
+> **Preparação da coleção de stencils:** Organizar entre 15–20 stencils em escala de cinza (PNG fundo preto, detalhes brancos) divididos por categoria. Stencils com fundo preto funcionam diretamente no 3DCoatTextura em modo de blend "Multiply". Fontes: [Poly Haven](https://polyhaven.com), [ArtStation Marketplace](https://www.artstation.com/marketplace) (muitos gratuitos), ou criados em aula no Krita como parte da demonstração.
 
 > **Preparação do arquivo de demonstração:** O asset de demonstração deve ser de pedra (ou material genérico que permita rachaduras) com as três camadas base já pintadas. Não adicionar desgaste da S09 — o estudante precisa ver que o stencil pode trabalhar tanto sobre uma base limpa (como estará um Asset Secundário recém-chegado) quanto sobre um material já desgastado (como está o Hero Asset Referência). Usar o mesmo asset da S09 se possível, para que a turma perceba a continuidade.
 
@@ -100,14 +100,14 @@ Deixar 2–3 respostas. Direcionar para a ideia central: stencil não é melhor 
 
 *"Pense assim: o alpha é o carimbo. O stencil é o molde que fica parado enquanto você passa a tinta por cima."*
 
-No 3D Coat: o stencil fica no painel **Stencils** (aba lateral). Pode ser ativado e desativado com a tecla **S**. Com o stencil ativo, qualquer brush que você usar vai obedecer ao gabarito.
+No 3DCoatTextura: o stencil fica no painel **Stencils** (aba lateral). Pode ser ativado e desativado com a tecla **S**. Com o stencil ativo, qualquer brush que você usar vai obedecer ao gabarito.
 
 **2. Fontes de stencils**
 
 **Fontes externas (gratuitas):**
 - Poly Haven: texturas PBR com mapas de alpha utilizáveis como stencil
 - ArtStation Marketplace: coleções gratuitas de stencils por categoria
-- Fichiers de alpha do ZBrush (compatíveis com 3D Coat): muitas disponíveis no Reddit e Discord de ZBrush
+- Fichiers de alpha do ZBrush (compatíveis com 3DCoatTextura): muitas disponíveis no Reddit e Discord de ZBrush
 
 **Criação manual no Krita:**
 Qualquer imagem em escala de cinza pode virar stencil. Processo rápido:
@@ -116,7 +116,7 @@ Qualquer imagem em escala de cinza pode virar stencil. Processo rápido:
 3. Opcional: `Filters → Edge Detection` para extrair só as bordas
 4. Exportar como PNG 1024×1024 em escala de cinza
 
-O stencil deve ter **fundo preto** (área que não pinta) e **detalhes em branco** (área que pinta). No 3D Coat, o modo de blend "Multiply" respeita essa convenção automaticamente.
+O stencil deve ter **fundo preto** (área que não pinta) e **detalhes em branco** (área que pinta). No 3DCoatTextura, o modo de blend "Multiply" respeita essa convenção automaticamente.
 
 **3. Quando usar stencil: a decisão projetual**
 
@@ -141,16 +141,16 @@ O erro mais comum com stencil é aplicá-lo e deixar por aí — o resultado par
 
 Um ponto novo nesta semana, específico do início do Kit Modular: o mesmo stencil (ou a mesma família de stencils) aplicado a mais de um asset do kit, com a mesma paleta de cor e o mesmo tipo de resposta em Roughness, é o que começa a fazer duas peças diferentes parecerem que pertencem ao mesmo mundo. *"Se o Hero Asset Referência de vocês tem rachaduras de um certo tipo, com uma certa cor de interior exposto, e o Asset Secundário que chegou de Modelagem 3D é do mesmo material, esse é o mesmo stencil e a mesma paleta — não um novo experimento. A coerência visual do kit começa exatamente aqui, numa decisão pequena de reaproveitar o que já funciona."*
 
-> **Nota do professor:** Resistir à tentação de mostrar todas as opções do painel de Stencils na mini aula — o 3D Coat tem muitas. Cobrir apenas o essencial: como carregar, como posicionar (drag para mover, Ctrl+drag para escalar, Shift+drag para rotacionar), como ativar/desativar (tecla S). O restante o estudante descobre durante a demonstração e o estúdio.
+> **Nota do professor:** Resistir à tentação de mostrar todas as opções do painel de Stencils na mini aula — o 3DCoatTextura tem muitas. Cobrir apenas o essencial: como carregar, como posicionar (drag para mover, Ctrl+drag para escalar, Shift+drag para rotacionar), como ativar/desativar (tecla S). O restante o estudante descobre durante a demonstração e o estúdio.
 
 ---
 
 ### Demonstração — 20 minutos
 
-**Aplicação de stencil no 3D Coat e criação de stencil no Krita**
+**Aplicação de stencil no 3DCoatTextura e criação de stencil no Krita**
 
 **Setup (1 min):**  
-Abrir o 3D Coat com o asset de demonstração pronto: mesh de pedra com UV, três canais base (Color, Roughness, Metallic — Fill). Ter o Krita aberto em segundo plano com uma fotografia de parede rachada já carregada.
+Abrir o 3DCoatTextura com o asset de demonstração pronto: mesh de pedra com UV, três canais base (Color, Roughness, Metallic — Fill). Ter o Krita aberto em segundo plano com uma fotografia de parede rachada já carregada.
 
 **Percurso da demonstração:**
 
@@ -181,7 +181,7 @@ Abrir o 3D Coat com o asset de demonstração pronto: mesh de pedra com UV, trê
 2. Aplicar `Filters → Adjust → Brightness/Contrast` (Contrast ao máximo). Mostrar como o contraste alto isola as rachaduras.
 3. Converter para escala de cinza: `Image → Convert Image Color Space → Grayscale`.
 4. Exportar como PNG: `File → Export → PNG → 1024×1024`.
-5. Voltar ao 3D Coat: importar o stencil criado e mostrar que ele funciona imediatamente. *"Em menos de 2 minutos, qualquer foto com contraste vira stencil. A internet inteira de referências de superfície é uma biblioteca de stencils esperando para ser convertida — e o mesmo stencil que vocês acabaram de criar pode ser reaplicado depois em qualquer outro asset do kit que peça o mesmo tipo de detalhe."*
+5. Voltar ao 3DCoatTextura: importar o stencil criado e mostrar que ele funciona imediatamente. *"Em menos de 2 minutos, qualquer foto com contraste vira stencil. A internet inteira de referências de superfície é uma biblioteca de stencils esperando para ser convertida — e o mesmo stencil que vocês acabaram de criar pode ser reaplicado depois em qualquer outro asset do kit que peça o mesmo tipo de detalhe."*
 
 **Passo 5 — Integração: suavizar bordas do stencil (2 min):**
 1. No canal Color, desativar o stencil (tecla S) para trabalhar com brush livre.
@@ -204,7 +204,7 @@ Abrir o 3D Coat com o asset de demonstração pronto: mesh de pedra com UV, trê
 **Atividade estruturada:**
 
 **Etapa 1 — Verificação do estado dos assets (≈5 min):**
-1. Abrir o arquivo `.3b` do Hero Asset Referência no 3D Coat.
+1. Abrir o arquivo `.3b` do Hero Asset Referência no 3DCoatTextura.
 2. Abrir o Render Room por 1 minuto: avaliar o estado atual. Identificar: *que detalhe específico o tema pede que este asset ainda não tem?*
 3. Para quem já recebeu Asset(s) Secundário(s): abrir também o(s) arquivo(s) correspondente(s) e verificar se as camadas base (Color, Roughness, Metallic — Fill) já existem. Se ainda não existirem, será necessário criar um Fill simples antes de aplicar qualquer stencil (ver Caminho B, Etapa 3).
 
@@ -215,7 +215,7 @@ Abrir o 3D Coat com o asset de demonstração pronto: mesh de pedra com UV, trê
    - Sci-Fi: corrosão química com padrão hexagonal, marca de laser, grade de ventilação, grafismo de painel
    - Pós-apocalíptico: grafite de spray, ferrugem com padrão de escorrimento, vidro quebrado, fuligem localizada
    - Cyberpunk: circuito impresso, néon derramado, marca de solda, código QR desgastado
-3. Importar no 3D Coat e posicionar: *a rachadura deve começar em ponto de tensão, o símbolo deve ter posição intencional na composição do asset.*
+3. Importar no 3DCoatTextura e posicionar: *a rachadura deve começar em ponto de tensão, o símbolo deve ter posição intencional na composição do asset.*
 
 **Etapa 3 — Aplicação do stencil no Hero Asset Referência em múltiplos canais (≈20 min):**
 
@@ -332,12 +332,12 @@ Para estudantes com o stencil do Hero Asset Referência integrado e resolvido:
 > **Nota de continuidade:** Estudantes que chegaram mais avançados podem ter, ao final desta semana, o Hero Asset Referência com stencil + desgaste completo e um Asset Secundário já com a linguagem visual iniciada. Isso coloca esses estudantes em posição confortável para a Crítica Formal da S11, onde o foco será bake — eles chegam com o kit já ganhando identidade visual de conjunto. Estudantes que ainda não receberam Asset Secundário não estão atrasados: a CF3 avalia o Hero Asset Referência e/ou o primeiro asset do kit disponível, conforme o que cada um tiver em mãos.
 
 **Bloco 3 — Exportação e verificação no Blender (≈15 min):**
-1. No 3D Coat: `File → Export Textures`.
+1. No 3DCoatTextura: `File → Export Textures`.
 2. Exportar Albedo (Color), Roughness, Metallic do Hero Asset Referência (e do Asset Secundário, se trabalhado).
 3. Pasta de destino: `[Nome]_HeroAsset_Mapas_S10/` (e `[Nome]_AssetSecundario_Mapas_S10/`, se aplicável).
 4. Abrir o Blender com o material do Hero Asset Referência (e do Asset Secundário, se aplicável).
 5. Conectar os mapas exportados no Principled BSDF. Verificar: **Color Space** dos mapas de dados (Roughness, Metallic) deve ser **Non-Color**.
-6. Viewport Rendered: verificar que o stencil aparece corretamente. Se o detalhe desapareceu ou parece diferente do 3D Coat, comparar os nós — o erro mais comum é mapa conectado no slot errado.
+6. Viewport Rendered: verificar que o stencil aparece corretamente. Se o detalhe desapareceu ou parece diferente do 3DCoatTextura, comparar os nós — o erro mais comum é mapa conectado no slot errado.
 7. Capturar render do(s) asset(s) com material S10 conectado.
 8. Salvar: `[Nome]_HeroAsset_Blender_S10.blend` (e `[Nome]_AssetSecundario_Blender_S10.blend`, se aplicável).
 
@@ -402,7 +402,7 @@ O estudante posiciona o stencil onde "coube" sem pensar na lógica narrativa do 
 Alguns estudantes tentam usar o painel de Alphas do brush em vez do painel de Stencils, obtendo resultados diferentes do esperado. O brush com alpha se repete ao longo do traço; o stencil permanece fixo. O resultado parece errado e o estudante não entende por quê. Estratégia: verificar qual painel está ativo durante a circulação — Alpha em vez de Stencil é o erro mais comum de identificação de interface.
 
 **8. Detalhe de stencil desaparece ou distorce no Blender após exportação**
-O mapa exportado parece correto no 3D Coat mas no Blender o detalhe tem cor estranha ou a roughness parece invertida. Causa mais comum: mapa de Roughness conectado com Color Space sRGB em vez de Non-Color. Estratégia: checklist de verificação na etapa de exportação: *"Roughness e Metallic: Color Space = Non-Color. Albedo: Color Space = sRGB. Se o detalhe sumiu, começa por aí."*
+O mapa exportado parece correto no 3DCoatTextura mas no Blender o detalhe tem cor estranha ou a roughness parece invertida. Causa mais comum: mapa de Roughness conectado com Color Space sRGB em vez de Non-Color. Estratégia: checklist de verificação na etapa de exportação: *"Roughness e Metallic: Color Space = Non-Color. Albedo: Color Space = sRGB. Se o detalhe sumiu, começa por aí."*
 
 ---
 
@@ -441,10 +441,10 @@ O mapa exportado parece correto no 3D Coat mas no Blender o detalhe tem cor estr
 
 | Entrega | Formato | Prazo |
 |---|---|---|
-| Arquivo do 3D Coat com o Hero Asset Referência com ao menos um stencil integrado em dois canais | `.3b` ou `.3dc` com sufixo `_HeroAsset_S10` | Até o fim do segundo encontro |
+| Arquivo do 3DCoatTextura com o Hero Asset Referência com ao menos um stencil integrado em dois canais | `.3b` com sufixo `_HeroAsset_S10` | Até o fim do segundo encontro |
 | Mapas PBR exportados do Hero Asset Referência: Albedo, Roughness, Metallic | `.png` 1024×1024 (ou 2048) na pasta `_HeroAsset_Mapas_S10` | Até o fim do segundo encontro |
 | Arquivo Blender do Hero Asset Referência com mapas da S10 conectados | `.blend` com sufixo `_HeroAsset_Blender_S10` | Até o fim do segundo encontro |
-| Para quem já recebeu Asset Secundário: arquivo `.3b` com a mesma linguagem visual de stencil iniciada, e mapas exportados | `.3b`/`.3dc` com sufixo `_AssetSecundario_S10` e mapas em `_AssetSecundario_Mapas_S10` | Até o fim do segundo encontro (quando aplicável) |
+| Para quem já recebeu Asset Secundário: arquivo `.3b` com a mesma linguagem visual de stencil iniciada, e mapas exportados | `.3b` com sufixo `_AssetSecundario_S10` e mapas em `_AssetSecundario_Mapas_S10` | Até o fim do segundo encontro (quando aplicável) |
 | Screenshot do Paint Room com painel de Stencils e camadas visíveis | `.png` com sufixo `_StencilProcess_S10` | Até o fim do segundo encontro |
 | Screenshot do Render Room: close-up do stencil aplicado | `.png` com sufixo `_StencilCloseup_S10` | Até o fim do segundo encontro |
 | Screenshot do Render Room: câmera afastada (distância de uso) | `.png` com sufixo `_DistanciaUso_S10` | Até o fim do segundo encontro |

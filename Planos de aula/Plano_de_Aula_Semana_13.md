@@ -53,7 +53,7 @@ Ao final da semana, o estudante será capaz de:
 ## Recursos necessários
 
 - Computadores com Blender instalado (3.x ou 4.x)
-- Computadores com 3D Coat instalado (versão 2023 ou superior)
+- Computadores com 3DCoatTextura instalado (versão 2026)
 - Arquivos `.blend` de todos os assets do kit de cada estudante (mínimo 3: o Hero Asset Referência com UV, material e bake das semanas anteriores, mais ao menos dois Assets Secundários com UV, material e bake das Semanas 11–12)
 - Arquivo de demonstração do professor: 3 assets simples do kit de referência do professor (ex.: barril, caixote, tocha), cada um ainda com UV individual, prontos para serem combinados ao vivo
 - Projetor para demonstração
@@ -135,7 +135,7 @@ Abrir o Blender com os três objetos de demonstração já carregados, cada um c
 4. Aplicar padding entre os grupos de ilhas de objetos diferentes — reforçar que esse padding precisa ser generoso o suficiente para evitar bleeding entre os *objetos*, não só entre ilhas do mesmo objeto.
 
 **Passo 3 — Criação da textura combinada 2048×2048 (5 min):**
-1. Criar uma nova imagem 2048×2048 no Blender ou levar o UV remapeado ao 3D Coat para repintura.
+1. Criar uma nova imagem 2048×2048 no Blender ou levar o UV remapeado ao 3DCoatTextura para repintura.
 2. Demonstrar rapidamente como uma textura já existente de um dos objetos pode ser reposicionada e redimensionada dentro da nova textura combinada, respeitando a nova área do UV.
 3. Mostrar o resultado: os três objetos, agora com uma única textura carregada, exibindo suas aparências originais preservadas.
 
@@ -170,7 +170,7 @@ Abrir o Blender com os três objetos de demonstração já carregados, cada um c
 
 **Etapa 3 — Início da textura combinada (≈10 min):**
 1. Criar a imagem de destino 2048×2048.
-2. Se o tempo permitir, iniciar o reposicionamento das texturas já existentes dentro do novo espaço do atlas (no Blender ou já preparando a exportação para o 3D Coat).
+2. Se o tempo permitir, iniciar o reposicionamento das texturas já existentes dentro do novo espaço do atlas (no Blender ou já preparando a exportação para o 3DCoatTextura).
 
 **Etapa 4 — Registro de processo (≈5 min):**
 1. Salvar o arquivo: `[Nome]_Atlas_S13.blend`.
@@ -225,7 +225,7 @@ Encorajar comparação entre colegas — *"Vejam o critério de agrupamento do s
 
 **Bloco 1 — Transferência das texturas para o atlas combinado (≈25 min):**
 1. Para cada um dos três objetos: reposicionar ou repintar a textura existente (Albedo, e demais canais PBR relevantes) dentro da nova área do UV combinado.
-2. Se o fluxo do estudante usar o 3D Coat: reimportar o mesh com o novo UV combinado e reconstruir as camadas de detalhe já pintadas (desgaste, stencil, bake) na nova posição do UV — este é o ponto de maior atenção, pois o remapeamento de UV invalida a posição original das camadas pintadas, e é especialmente sensível no Hero Asset Referência, que carrega o maior volume de detalhe pintado do kit.
+2. Se o fluxo do estudante usar o 3DCoatTextura: reimportar o mesh com o novo UV combinado e reconstruir as camadas de detalhe já pintadas (desgaste, stencil, bake) na nova posição do UV — este é o ponto de maior atenção, pois o remapeamento de UV invalida a posição original das camadas pintadas, e é especialmente sensível no Hero Asset Referência, que carrega o maior volume de detalhe pintado do kit.
 3. Verificar que cada objeto mantém sua identidade visual original mesmo dentro do espaço compartilhado.
 
 **Bloco 2 — Re-bake, se necessário (≈15 min):**
@@ -239,7 +239,7 @@ Encorajar comparação entre colegas — *"Vejam o critério de agrupamento do s
 
 **Bloco 4 — Registro final (≈5 min):**
 1. Exportar a textura do atlas (`.png`, 2048×2048).
-2. Salvar arquivo Blender/3D Coat com sufixo `_Atlas_S13_Final`.
+2. Salvar arquivo Blender/3DCoatTextura com sufixo `_Atlas_S13_Final`.
 3. Render comparativo: os três objetos com textura individual (antes) vs. com atlas combinado (depois).
 
 **Papel do professor:**
@@ -326,7 +326,7 @@ Reorganizar UV é mais rápido que reconstruir texturas pintadas à mão nas nov
 
 | Entrega | Formato | Prazo |
 |---|---|---|
-| Arquivo Blender/3D Coat com o Hero Asset Referência e pelo menos dois Assets Secundários combinados, UV remapeado e textura de atlas aplicada | `.blend` e projeto 3D Coat com sufixo `_Atlas_S13_Final` | Até o fim do segundo encontro |
+| Arquivo Blender/3DCoatTextura com o Hero Asset Referência e pelo menos dois Assets Secundários combinados, UV remapeado e textura de atlas aplicada | `.blend` e projeto 3DCoatTextura com sufixo `_Atlas_S13_Final` | Até o fim do segundo encontro |
 | Textura do Texture Atlas exportada | `.png`, 2048×2048, pasta `_Atlas_S13` | Até o fim do segundo encontro |
 | Justificativa escrita da escolha dos assets combinados (2–3 frases) | Documento digital ou anotação junto ao arquivo de entrega | Até o fim do segundo encontro |
 | Render comparativo: assets com textura individual (antes) vs. com atlas combinado (depois) | `.png` com sufixo `_Comparativo_Atlas_S13` | Até o fim do segundo encontro |

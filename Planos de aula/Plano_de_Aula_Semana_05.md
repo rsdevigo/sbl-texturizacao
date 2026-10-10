@@ -16,7 +16,7 @@ Os estudantes chegam com:
 - Familiaridade consolidada com: seams manuais, Unwrap, Average Islands Scale, Pack Islands, Stretch Overlay
 - A Semana 5 fecha a Unidade I revisando o UV a partir do feedback da CF1, e abre a Unidade II com a primeira aproximação a materiais PBR. Pela primeira vez, os estudantes sairão do UV Editor e entrarão no Shader Editor para configurar materiais. O UV revisado nesta semana é o endereço onde os mapas PBR das próximas semanas vão morar.
 
-> **Nota de transição:** Não há crítica formal nesta semana — a Semana 5 é um encontro de ajuste e abertura, não de avaliação conclusiva. A CF1 (Semana 4) já avaliou C3 (UV Mapping) formalmente; esta semana serve para incorporar esse feedback antes de seguir adiante, sem nova cobrança de rubrica. A próxima crítica formal, a CF2, acontece somente na Semana 8, ao final da Unidade II — ela avaliará o resultado acumulado de UV, material PBR e textura, já dentro do 3D Coat.
+> **Nota de transição:** Não há crítica formal nesta semana — a Semana 5 é um encontro de ajuste e abertura, não de avaliação conclusiva. A CF1 (Semana 4) já avaliou C3 (UV Mapping) formalmente; esta semana serve para incorporar esse feedback antes de seguir adiante, sem nova cobrança de rubrica. A próxima crítica formal, a CF2, acontece somente na Semana 8, ao final da Unidade II — ela avaliará o resultado acumulado de UV, material PBR e textura, já dentro do 3DCoatTextura.
 
 ---
 
@@ -40,7 +40,7 @@ Ao final da semana, o estudante será capaz de:
 | C3 — UV Mapping | Observado (não avaliado formalmente) — incorporação do feedback da CF1 antes da CF2 |
 | C4 — Materiais PBR | Observado (não avaliado formalmente) — primeira aproximação: valores de Metallic e Roughness fisicamente plausíveis |
 
-> **Sem crítica formal:** Esta semana não atribui nota. O professor observa e orienta, mas o registro formal de C3 e C4 só volta a acontecer na CF2 (Semana 8), quando o material PBR já estiver acompanhado de textura real e migrado para o 3D Coat.
+> **Sem crítica formal:** Esta semana não atribui nota. O professor observa e orienta, mas o registro formal de C3 e C4 só volta a acontecer na CF2 (Semana 8), quando o material PBR já estiver acompanhado de textura real e migrado para o 3DCoatTextura.
 
 ---
 
@@ -90,7 +90,7 @@ O PBR transfere a responsabilidade da aparência do artista para a física. O ar
 **2. Dois workflows PBR — por que usamos Metallic/Roughness**
 
 - **Specular/Glossiness:** mais antigo, mais intuitivo para artistas vindos de fluxos tradicionais. Permite controle direto do reflectance. Usado em alguns pipelines legados.
-- **Metallic/Roughness:** adotado pela Unity, Unreal, Blender (Principled BSDF), 3D Coat e pela maioria dos motores modernos. Mais simples de calibrar e menos sujeito a erros físicos.
+- **Metallic/Roughness:** adotado pela Unity, Unreal, Blender (Principled BSDF), 3DCoatTextura e pela maioria dos motores modernos. Mais simples de calibrar e menos sujeito a erros físicos.
 
 Nesta disciplina, o workflow será **exclusivamente Metallic/Roughness**. Quando o estudante exportar para a Unity nas semanas finais, os mapas já estarão no formato esperado.
 

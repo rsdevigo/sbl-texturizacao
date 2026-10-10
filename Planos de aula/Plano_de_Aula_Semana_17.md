@@ -39,7 +39,7 @@ Não há critério novo. Os critérios ativos são exatamente os que já se apli
 
 ## Recursos necessários
 
-- Computadores com Blender, 3D Coat e Unity disponíveis
+- Computadores com Blender, 3DCoatTextura e Unity disponíveis
 - Fichas de Crítica Formal de todas as CFs anteriores, organizadas por estudante, para consulta rápida durante o atendimento
 - Formulário de Recuperação Final (defesa oral revisada), quando aplicável
 - Agenda de atendimento individual, organizada com antecedência conforme o número de estudantes em reposição

@@ -33,7 +33,7 @@ Ao final da semana, o estudante será capaz de:
 2. Identificar os tipos de mapa de bake mais usados em produção de jogos — **Normal Map**, **Ambient Occlusion**, **Curvature**, **ID Map** e **Thickness** — e reconhecer para que serve cada um (o foco produtivo desta semana é Normal e AO; Curvature é apresentada conceitualmente e aprofundada, junto com ID Map, na Semana 12).
 3. Configurar corretamente os parâmetros de um bake no Blender: seleção de objetos high-poly/low-poly, **cage** (malha de projeção), **ray distance** (distância de captura) e resolução do mapa de destino.
 4. Executar um bake de Normal Map e de Ambient Occlusion sem artefatos visíveis (sem manchas em superfícies planas, sem vazamento — *bleeding* — entre ilhas de UV) em um Asset Secundário do Kit Modular (ou alternativa prevista, conforme a nota acima).
-5. Integrar o Normal Map e o AO baked ao material do asset trabalhado no 3D Coat, mantendo coerência de linguagem visual com o Hero Asset Referência.
+5. Integrar o Normal Map e o AO baked ao material do asset trabalhado no 3DCoatTextura, mantendo coerência de linguagem visual com o Hero Asset Referência.
 6. Apresentar formalmente o estado atual do Kit Modular na Crítica Formal 3, justificando decisões técnicas e artísticas com base nos critérios da rubrica.
 
 ---
@@ -62,7 +62,7 @@ Ao final da semana, o estudante será capaz de:
 ## Recursos necessários
 
 - Computadores com Blender instalado (3.x ou 4.x)
-- Computadores com 3D Coat instalado (versão 2023 ou superior)
+- Computadores com 3DCoatTextura instalado (versão 2026)
 - Arquivos `.blend` do Hero Asset Referência (com material completo desde a Semana 9/10) e do(s) Asset(s) Secundário(s) já recebido(s) de Modelagem 3D e Level Design, de cada estudante
 - Para estudantes ainda sem Asset Secundário: arquivo de malha auxiliar de alta resolução simplificada, preparada previamente pelo professor a partir do Hero Asset Referência de cada estudante (ou um Asset de Repetição simples já disponível), para servir de high-poly de contingência
 - Arquivo de demonstração do professor: par de meshes já preparado — versão low-poly de produção e versão high-poly com detalhe esculpido/modelado (chanfros, entalhes) do **mesmo** asset, ambos com a mesma origem/escala
@@ -124,7 +124,7 @@ Apresentar como visão geral — o foco produtivo desta semana é apenas nos doi
 
 **4. Onde o bake se encontra com o que já foi aprendido**
 
-O Normal Map de bake do Asset Secundário segue a mesma lógica de PBR e desgaste já dominada no Hero Asset Referência — ele não é uma técnica isolada, é a mesma linguagem visual do kit aplicada a uma nova peça. No 3D Coat, o Normal Map baked entra no canal Normal do material do asset, e o EdgeWear/Dirt são pintados por cima ou ao redor dele para que a peça nova converse visualmente com o Hero Asset Referência.
+O Normal Map de bake do Asset Secundário segue a mesma lógica de PBR e desgaste já dominada no Hero Asset Referência — ele não é uma técnica isolada, é a mesma linguagem visual do kit aplicada a uma nova peça. No 3DCoatTextura, o Normal Map baked entra no canal Normal do material do asset, e o EdgeWear/Dirt são pintados por cima ou ao redor dele para que a peça nova converse visualmente com o Hero Asset Referência.
 
 > **Nota do professor:** Esta é uma mini aula mais densa tecnicamente do que as anteriores — é inevitável, pois bake tem parâmetros que precisam ser entendidos antes de a ferramenta ser usada com segurança (ao contrário de pintura livre, onde o erro é visualmente óbvio e corrigível na hora). Resistir à tentação de aprofundar Curvature e ID Map agora — eles voltam na Semana 12 com tempo dedicado.
 
@@ -153,7 +153,7 @@ Abrir o Blender com o par de malhas de demonstração já carregado: high-poly (
 
 **Passo 3 — Execução do bake de Normal Map (4 min):**
 1. Em `Bake Type`: selecionar **Normal**.
-2. Manter `Space: Tangent` (padrão para uso em motores de jogo e no 3D Coat).
+2. Manter `Space: Tangent` (padrão para uso em motores de jogo e no 3DCoatTextura).
 3. Clicar em `Bake`. Aguardar o processamento (comentar sobre o tempo variar conforme a complexidade do high-poly e a resolução).
 4. Resultado: mostrar o mapa gerado no Image Editor — textura roxo-azulada característica de um Normal Map em espaço tangente.
 5. Aplicar no viewport Rendered: mostrar o low-poly agora exibindo os chanfros e entalhes do high-poly, sem ter ganho um único polígono.
@@ -264,7 +264,7 @@ O professor preenche a Ficha de Crítica Formal (Instrumento 1) para C1, C2, C4,
 
 **Consigna:**
 
-> *"Sessenta minutos com foco na prioridade de melhoria que cada um recebeu na crítica formal de hoje. Se o problema foi um artefato de bake, corrijam o cage e regravem. Se foi falta de integração entre o bake e o desgaste já construído no kit, ajustem isso no 3D Coat. Se o Asset Secundário já está sólido, usem o tempo para aplicar bake em uma segunda área — outra peça do kit, ou outra parte da mesma peça. Quem estava trabalhando com a malha de contingência: se o Asset Secundário real chegou nesse meio-tempo, aproveitem para já iniciar o bake nele."*
+> *"Sessenta minutos com foco na prioridade de melhoria que cada um recebeu na crítica formal de hoje. Se o problema foi um artefato de bake, corrijam o cage e regravem. Se foi falta de integração entre o bake e o desgaste já construído no kit, ajustem isso no 3DCoatTextura. Se o Asset Secundário já está sólido, usem o tempo para aplicar bake em uma segunda área — outra peça do kit, ou outra parte da mesma peça. Quem estava trabalhando com a malha de contingência: se o Asset Secundário real chegou nesse meio-tempo, aproveitem para já iniciar o bake nele."*
 
 **Atividade estruturada:**
 
@@ -275,10 +275,10 @@ Para estudantes com problemas de bake apontados na apresentação:
 2. Verificar se as UVs têm padding suficiente (revisar princípios da Semana 4) — bleeding entre ilhas geralmente se resolve aumentando a margem entre elas ou o `Margin` do bake.
 3. Regravar o bake e verificar rotacionando o viewport antes de declarar resolvido.
 
-**Bloco 2 — Integração do bake ao material no 3D Coat (≈20 min):**
+**Bloco 2 — Integração do bake ao material no 3DCoatTextura (≈20 min):**
 
 Para estudantes com bake tecnicamente limpo:
-1. Importar o Normal Map baked como uma camada adicional no canal Normal do 3D Coat do Asset Secundário.
+1. Importar o Normal Map baked como uma camada adicional no canal Normal do 3DCoatTextura do Asset Secundário.
 2. Importar o AO baked: usar como camada de Multiply sobre o canal Color, opacidade ajustável (60–80%), para reforçar visualmente as frestas e cantos criados.
 3. Verificar no Render Room: o bake reforça ou desconecta da linguagem visual já estabelecida no Hero Asset Referência? Ajustar opacidade das camadas para que o Asset Secundário leia como parte do mesmo kit, e não como uma peça isolada.
 
@@ -315,7 +315,7 @@ Pergunta aberta: *"Qual foi a diferença entre a autoavaliação que vocês escr
 Deixar 2–3 respostas. O objetivo é desenvolver a calibração entre autopercepção e avaliação externa — uma habilidade central de C1 (Processo) e C10 (Participação) que se desenvolve ao longo do semestre.
 
 3. **(2 min — Antecipação da Semana 12)**
-*"Semana que vem: bake avançado — ID Map e Curvature, aplicados a um segundo asset do kit. Vocês vão aprender a usar esses dois mapas como base de mascaramento automático no 3D Coat, o que acelera bastante a texturização de detalhe. Antes de chegar: pensem em qual peça do kit teria mais de um material distinto (ex: madeira + metal no mesmo objeto) — esse é o candidato ideal para ID Map."*
+*"Semana que vem: bake avançado — ID Map e Curvature, aplicados a um segundo asset do kit. Vocês vão aprender a usar esses dois mapas como base de mascaramento automático no 3DCoatTextura, o que acelera bastante a texturização de detalhe. Antes de chegar: pensem em qual peça do kit teria mais de um material distinto (ex: madeira + metal no mesmo objeto) — esse é o candidato ideal para ID Map."*
 
 4. **(2 min — Confirmação das entregas e devolução da nota)**
 Informar prazo para devolução da Ficha de Crítica Formal preenchida (feedback escrito) e recapitular nomenclatura de entrega.

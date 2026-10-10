@@ -285,14 +285,14 @@ Notas: Contextualizar o valor profissional. Trim sheets são rotina em ambientes
 - **Reutilizar em várias peças** é a evidência concreta de C7
 
 <!--
-Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonstração ao vivo (trim mapeada numa parede modular no 3D Coat) e no estúdio (planejar e iniciar a própria trim). Lembrar a turma: hoje é crítica 🔴 FORMAL (CF4), vale 30% do PA — o maior peso entre as quatro críticas formais do PA — e Otimização (C7) entra em nota pela primeira vez. O peso maior reflete confiança no progresso já demonstrado, não uma régua mais rígida.
+Notas: Amarrar a mini aula antes da demonstração. Cada item retorna na demonstração ao vivo (trim mapeada numa parede modular no 3DCoatTextura) e no estúdio (planejar e iniciar a própria trim). Lembrar a turma: hoje é crítica 🔴 FORMAL (CF4), vale 30% do PA — o maior peso entre as quatro críticas formais do PA — e Otimização (C7) entra em nota pela primeira vez. O peso maior reflete confiança no progresso já demonstrado, não uma régua mais rígida.
 -->
 
 ---
 
 ## Agora: demonstração
 
-A seguir, ao vivo no 3D Coat: mapear uma **parede modular** sobre uma faixa da trim, configurar o **tiling** e validar a repetição sem costura.
+A seguir, ao vivo no 3DCoatTextura: mapear uma **parede modular** sobre uma faixa da trim, configurar o **tiling** e validar a repetição sem costura.
 
 A pergunta que você leva ao estúdio: **quais elementos do meu kit se repetem o suficiente para merecer uma faixa?**
 
@@ -305,5 +305,5 @@ Notas: Transição para a demonstração de 20 min. Sequência do plano de aula:
 Objetivo didático: antecipar o alvo visual da demonstração para que a turma reconheça o resultado esperado antes de produzir no estúdio.
 Arquivo sugerido: assets/demo_trim_parede_mapeada.webp
 Descrição: montagem de três painéis — (1) a trim sheet completa (ex.: 1024×2048) com três faixas rotuladas: madeira, metal, ornamento; (2) o UV de uma parede modular mapeado como tira estreita sobre a faixa de madeira, com marcas de repetição ao longo do comprimento; (3) a mesma trim aplicada a duas paredes de tamanhos diferentes no viewport, ambas com o padrão contínuo e sem costura.
-Como produzir: no 3D Coat, abrir a trim de demonstração com três faixas; no Blender ou no UV Room, mapear o UV da parede modular sobre a faixa de madeira com tiling configurado e capturar o UV. Aplicar a trim a duas peças de comprimentos diferentes e capturar o viewport. Compor os três painéis lado a lado no Krita com os rótulos das faixas.
+Como produzir: no 3DCoatTextura, abrir a trim de demonstração com três faixas; no Blender, mapear o UV da parede modular sobre a faixa de madeira com tiling configurado e capturar o UV. Aplicar a trim a duas peças de comprimentos diferentes e capturar o viewport. Compor os três painéis lado a lado no Krita com os rótulos das faixas.
 -->

@@ -64,7 +64,7 @@ Nas Semanas 13 e 14, otimizamos a **organização espacial** do UV.
 
 - **Atlas** (S13) e **Trim Sheet** (S14) → menos arquivos distintos
 - Materiais PBR completos, com bake integrado desde as Semanas 11–12
-- Todo o trabalho, até aqui: **Blender e 3D Coat**
+- Todo o trabalho, até aqui: **Blender e 3DCoatTextura**
 
 <div class="tip">
 
@@ -531,7 +531,7 @@ Notas: Fecha a semana. Lembrar: crítica 🔵 INFORMAL, sem nota formal — mas 
 
 Hoje vocês fecharam a Unidade IV e viram o kit inteiro, pela primeira vez, montado como uma cena única dentro de um motor de jogo — com otimização de arquivo e iluminação baked. É a integração final de tudo que foi produzido desde a Semana 1.
 
-*"Das quatro ferramentas de otimização desta unidade — atlas, trim, ORM e UDIM — qual vocês acham que vão usar mais fora da disciplina? E o que foi mais diferente entre trabalhar no Blender/3D Coat e montar a cena na Unity?"*
+*"Das quatro ferramentas de otimização desta unidade — atlas, trim, ORM e UDIM — qual vocês acham que vão usar mais fora da disciplina? E o que foi mais diferente entre trabalhar no Blender/3DCoatTextura e montar a cena na Unity?"*
 
 <div class="tip">
 

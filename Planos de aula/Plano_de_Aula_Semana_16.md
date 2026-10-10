@@ -49,7 +49,7 @@ Ao final da semana, o estudante será capaz de:
 
 ## Recursos necessários
 
-- Computadores com Blender, 3D Coat e Unity instalados, com o projeto completo de cada estudante
+- Computadores com Blender, 3DCoatTextura e Unity instalados, com o projeto completo de cada estudante
 - Projetor para as apresentações
 - Fichas de Crítica Formal (uma por estudante) e formulário de Autoavaliação reflexiva do Projeto Final
 - Apostila — Parte VI, Cap. 24 — leitura obrigatória, disponibilizada com antecedência
@@ -163,7 +163,7 @@ Estratégia: reforçar antes das apresentações que perguntas técnicas são pa
 
 | Entrega | Formato | Prazo |
 |---|---|---|
-| Kit Modular completo (todos os assets texturizados) | Arquivos organizados (Blender/3D Coat) | Início da apresentação |
+| Kit Modular completo (todos os assets texturizados) | Arquivos organizados (Blender/3DCoatTextura) | Início da apresentação |
 | Fase caminhável funcional na Unity | Projeto Unity | Início da apresentação |
 | Breakdown visual (wireframe, UVs, mapas, comparativos) | PNG/PDF ou apresentação | Início da apresentação |
 | Documento de autoavaliação reflexiva | Texto | Início da apresentação |

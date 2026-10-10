@@ -14,7 +14,7 @@ footer: "IFMS • Semana 08"
 
 ## Do refinamento à exportação completa
 
-**Semana 8** — Refinamento no 3D Coat e exportação PBR unificada (Albedo, Metallic, Roughness, Normal)
+**Semana 8** — Refinamento no 3DCoatTextura e exportação PBR unificada (Albedo, Metallic, Roughness, Normal)
 
 <!--
 Notas: Marcar que hoje é a segunda Crítica Formal do semestre (CF2), fechando a Unidade II. É a mesma peça em jogo desde a Semana 3 — hoje o material fica tecnicamente completo e pronto para a Unity.
@@ -24,7 +24,7 @@ Notas: Marcar que hoje é a segunda Crítica Formal do semestre (CF2), fechando 
 
 ## Onde vocês estão
 
-Semana 7: Color, Roughness e Normal ativos no 3D Coat, via bake de AO/Curvature e pintura de Depth.
+Semana 7: Color, Roughness e Normal ativos no 3DCoatTextura, via bake de AO/Curvature e pintura de Depth.
 
 Hoje: falta o Metallic, mais refinamento intencional, e a exportação dos quatro mapas.
 
@@ -41,7 +41,7 @@ Ao final da semana você será capaz de:
 - Refinar Color, Roughness e Metallic combinando base, máscara e pintura manual
 - Descrever quando o Subsurface Scattering é fisicamente adequado
 - Pintar o canal Metallic com lógica física correta (binária, transições nítidas)
-- Exportar os quatro mapas PBR do 3D Coat de forma unificada
+- Exportar os quatro mapas PBR do 3DCoatTextura de forma unificada
 - Configurar o material final no Blender sem nenhum nó procedural remanescente
 - Apresentar e defender as decisões de material na Crítica Formal (CF2)
 
@@ -63,15 +63,15 @@ Notas: Vocês já têm Color, Roughness e Normal ativos desde a semana passada. 
 
 ---
 
-## Por que os mapas do 3D Coat são portáveis
+## Por que os mapas do 3DCoatTextura são portáveis
 
-Os mapas do 3D Coat são **imagens reais** (PNG/TGA) — abrem em qualquer software, conectam em qualquer motor.
+Os mapas do 3DCoatTextura são **imagens reais** (PNG/TGA) — abrem em qualquer software, conectam em qualquer motor.
 
 Um material feito só de nós no Blender não sai do Blender.
 
 <div class="tip">
 
-Por isso o pipeline fecha assim: Blender (modelagem + UV) → **3D Coat (texturização)** → Unity (motor).
+Por isso o pipeline fecha assim: Blender (modelagem + UV) → **3DCoatTextura (texturização)** → Unity (motor).
 
 </div>
 
@@ -344,7 +344,7 @@ Notas: Verificar Color Space de cada nó — só o Albedo em sRGB, todos os outr
 
 Confirmem as entregas de hoje:
 
-- Arquivo do 3D Coat refinado (`_HeroAsset_3DCoat_S08`)
+- Arquivo do 3DCoatTextura refinado (`_HeroAsset_3DCoat_S08`)
 - **Quatro mapas PBR** exportados (`_Albedo`, `_Roughness`, `_Metallic`, `_Normal`)
 - `.blend` com material final configurado, sem nós procedurais remanescentes
 - Screenshots do Layers e do Render Room

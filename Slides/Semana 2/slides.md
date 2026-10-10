@@ -24,7 +24,7 @@ Notas: Esta é a primeira semana em que a turma opera o Blender com intenção d
 
 ## O que já vimos
 
-Textura × material • raster × procedural • pipeline **Blender → 3D Coat → Unity**.
+Textura × material • raster × procedural • pipeline **Blender → 3DCoatTextura → Unity**.
 
 O trabalho interdisciplinar e o tema do semestre — ainda **em amadurecimento**, sem recorte fechado.
 

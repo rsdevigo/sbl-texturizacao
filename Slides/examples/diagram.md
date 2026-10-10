@@ -12,7 +12,7 @@ footer: 'IFMS · Jogos Digitais · Texturização'
 
 ```mermaid
 flowchart LR
-    A[Blender<br/>Modelagem + UV] --> B[3D Coat<br/>Texturização PBR]
+    A[Blender<br/>Modelagem + UV] --> B[3DCoatTextura<br/>Texturização PBR]
     B --> C[Unity<br/>Integração]
     C --> D{Crítica<br/>coletiva}
     D -->|Ajustes| B

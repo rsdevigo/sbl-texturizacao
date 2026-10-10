@@ -115,7 +115,7 @@ Notas: Material é o "recipiente"; textura é o "conteúdo". Essa relação hier
 | Ocupa memória | Leve, ajustável |
 
 <!--
-Notas: Duas abordagens complementares, não rivais. Nesta disciplina o foco é raster/PBR pintado no 3D Coat, mas o estudante precisa reconhecer o vocabulário. O conceito volta com aplicação prática na Semana 7 (Normal Map procedural) — dizer isso em voz alta.
+Notas: Duas abordagens complementares, não rivais. Nesta disciplina o foco é raster/PBR pintado no 3DCoatTextura, mas o estudante precisa reconhecer o vocabulário. O conceito volta com aplicação prática na Semana 7 (Normal Map procedural) — dizer isso em voz alta.
 -->
 
 ---
@@ -153,7 +153,7 @@ Notas: Nomear as etapas, sem detalhar UV nem PBR. O importante é o senso de tra
 ## Cada etapa tem um papel
 
 - **Blender** — modelar e abrir o mapa **UV**
-- **3D Coat** — pintar os **materiais PBR**
+- **3DCoatTextura** — pintar os **materiais PBR**
 - **Unity** — integrar ao **motor de jogo**
 
 <div class="industry">
@@ -268,7 +268,7 @@ Notas: Contextualizar o valor profissional da etapa de pesquisa, que costuma ser
 
 - **Textura** = imagem na superfície • **Material** = como reage à luz
 - **Raster** (pixels) × **Procedural** (algoritmo)
-- Pipeline: **Blender → 3D Coat → Unity**
+- Pipeline: **Blender → 3DCoatTextura → Unity**
 - Projeto: **fase caminhável** na Unity, com três disciplinas
 - Tema: **mundo fantástico** a partir de bens culturais de MS
 

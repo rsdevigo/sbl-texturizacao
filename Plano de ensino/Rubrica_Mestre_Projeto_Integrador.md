@@ -4,7 +4,7 @@
 **Metodologia:** Studio-Based Learning (SBL)
 **Trabalho Interdisciplinar:** Texturização, Pintura Digital e Arte Conceitual, e Modelagem 3D e Level Design
 **Projeto:** Kit Modular de Ambiente estilizado (tema: mundo fantástico a partir de elementos regionais do Mato Grosso do Sul ou do estado de origem do estudante) integrado a uma fase caminhável na Unity
-**Pipeline:** Blender → 3D Coat → Unity
+**Pipeline:** Blender → 3DCoatTextura → Unity
 
 ---
 
@@ -224,7 +224,7 @@ A nota do **PA** é calculada com **pesos crescentes** entre CF1 e CF4, valoriza
 | Momento Avaliativo | Semana | Peso no PA | Critério(s) avaliado(s) com nota |
 |---|---|---|---|
 | CF1 — Hero Asset Referência, UV aberto | 4 | 20% | C1, C2, C3 |
-| CF2 — Hero Asset Referência, texturizado no 3D Coat | 8 | 25% | C1, C2, C4, C5, C9 |
+| CF2 — Hero Asset Referência, texturizado no 3DCoatTextura | 8 | 25% | C1, C2, C4, C5, C9 |
 | CF3 — Bake de um asset do kit | 11 | 25% | C1, C2, C4, C5, C6, C9 |
 | CF4 — Trim Sheet | 14 | 30% | C1, C2, C5, C6, C7, C9 |
 | **Total** | | **100%** | |
@@ -403,7 +403,7 @@ _______________________________________________________________
 | C5 — Texturização | | *Ex: "O desgaste está só nas arestas. Faltou sujeira acumulada nos cantos e partes baixas."* |
 | C6 — Bake | | *Ex: "O normal map do arco tem um seam visível na parte de cima. O restante está limpo."* |
 | C7 — Otimização | | *Ex: "Não consegui identificar uso de trim sheet. Há assets que poderiam compartilhar textura."* |
-| C8 — Integração na Unity | | *Ex: "O asset ficou bem na Unity, mas o normal map parece fraco comparado ao 3D Coat."* |
+| C8 — Integração na Unity | | *Ex: "O asset ficou bem na Unity, mas o normal map parece fraco comparado ao 3DCoatTextura."* |
 | C9 — Apresentação | | *Ex: "Os renders de apresentação estão bem iluminados. Sentiu falta de um wireframe."* |
 | C10 — Critiques | | *Ex: "Você deu um feedback muito específico para a Maria sobre o roughness. Foi útil."* |
 

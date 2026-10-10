@@ -24,6 +24,9 @@
   - Recursos
     - [Recursos](/Recursos/Recursos_de_Aprendizagem_a_Preparar.md)
     - [Lista de Props Culturais MS](/Recursos/Lista_de_Props_Culturais_MS.md)
+    - [Guia de Migração Substance → 3DCoatTextura](/Recursos/Guia_Migracao_Substance_3DCoatTextura.md)
+    - [Features do 3DCoatTextura por Trilha](/Recursos/Features_3DCoatTextura_Trilhas.md)
+    - [Cursos e Playlists de 3DCoatTextura](/Recursos/Cursos_3DCoatTextura_Migracao_Substance.md)
   - Guia do Professor
     - [Guia do Professor Texturizacao](/Guia%20do%20Professor/Guia_do_Professor_Texturizacao.md)
   - Slides

@@ -1,8 +1,8 @@
 # Plano de Aula — Semana 9
 **Disciplina:** Texturização | **Curso:** Tecnologia em Jogos Digitais | **Metodologia:** Studio-Based Learning  
-**Unidade:** II — Materiais PBR e Workflow no 3D Coat (Semanas 6–9)  
-**Tema da semana:** Texturização artística: desgaste, sujeira e detalhes hand-painted no 3D Coat  
-**Apostila:** Parte IV, Cap. 14 — Pintura Digital para Jogos (aplicada a texturas; ferramentas de pintura no 3D Coat)  
+**Unidade:** II — Materiais PBR e Workflow no 3DCoatTextura (Semanas 6–9)  
+**Tema da semana:** Texturização artística: desgaste, sujeira e detalhes hand-painted no 3DCoatTextura  
+**Apostila:** Parte IV, Cap. 14 — Pintura Digital para Jogos (aplicada a texturas; ferramentas de pintura no 3DCoatTextura)  
 **Carga horária:** 3h (2 encontros de 1h30)  
 **Crítica:** 🔵 Informal — Crítica circulante no segundo encontro
 
@@ -14,12 +14,12 @@
 
 Os estudantes chegam com:
 
-- Hero Asset Referência texturizado no 3D Coat (arquivo `.3b` salvo): canais Color, Roughness e Metallic com pelo menos uma camada base e uma camada de variação em cada — Semana 8
+- Hero Asset Referência texturizado no 3DCoatTextura (arquivo `.3b` salvo): canais Color, Roughness e Metallic com pelo menos uma camada base e uma camada de variação em cada — Semana 8
 - Os 4 mapas PBR exportados (Albedo, Metallic, Roughness, Normal em PNG 1024×1024 ou superior) e conectados corretamente no Blender, sem nós procedurais remanescentes — Semana 8 (CF2)
 - Material no Blender com Color Space Non-Color aplicado nos mapas de dados — Semana 8
 - Moodboard atualizado com referências do tema do kit — Semana 1 (atualização contínua)
 
-> **Nota de transição:** A Semana 8 fechou a exportação completa do material PBR do Hero Asset Referência e encerrou a Unidade II com a CF2. Os estudantes já têm os quatro mapas fundamentais com camadas base. Esta semana move o foco do **estrutural** para o **narrativo**: o que diferencia uma textura funcional de uma textura com caráter? A resposta é desgaste intencional, sujeira com lógica e variação de cor que conta a história do objeto. O conteúdo novo não é uma nova ferramenta — é uma forma diferente de usar o 3D Coat, agora com propósito artístico claro, e é a última semana da Unidade II antes de a Unidade III abrir, na Semana 10, a fase de Kit Modular.
+> **Nota de transição:** A Semana 8 fechou a exportação completa do material PBR do Hero Asset Referência e encerrou a Unidade II com a CF2. Os estudantes já têm os quatro mapas fundamentais com camadas base. Esta semana move o foco do **estrutural** para o **narrativo**: o que diferencia uma textura funcional de uma textura com caráter? A resposta é desgaste intencional, sujeira com lógica e variação de cor que conta a história do objeto. O conteúdo novo não é uma nova ferramenta — é uma forma diferente de usar o 3DCoatTextura, agora com propósito artístico claro, e é a última semana da Unidade II antes de a Unidade III abrir, na Semana 10, a fase de Kit Modular.
 
 > **Atenção ao moodboard:** Antes da aula, lembrar os estudantes de revisitar o moodboard do kit. A pergunta central da semana — *"qual é a história desse objeto?"* — só pode ser respondida se o estudante souber o contexto do universo do kit. Um objeto medieval envelhecido tem um tipo de desgaste. Um objeto sci-fi em uso ativo tem outro. A referência visual é a bússola da pintura.
 
@@ -31,7 +31,7 @@ Ao final da semana, o estudante será capaz de:
 
 1. Distinguir texturização fotorrealista de texturização estilizada e identificar qual abordagem é mais coerente com o tema do seu kit.
 2. Identificar e aplicar os três tipos canônicos de detalhe de superfície: **edge wear** (desgaste em arestas), **dirt/grime** (sujeira acumulada em cavidades) e **scratches** (riscos e arranhões por fricção).
-3. Organizar camadas no 3D Coat por tipo de detalhe, mantendo separação entre a base e cada camada de informação adicional.
+3. Organizar camadas no 3DCoatTextura por tipo de detalhe, mantendo separação entre a base e cada camada de informação adicional.
 4. Aplicar a lógica de uso para determinar **onde** pintar desgaste: arestas expostas ao contato, superfícies inferiores e côncavas que acumulam sujeira, faces superiores sujeitas a impacto.
 5. Construir variação de sujeira e cor em múltiplas camadas, evitando um resultado uniforme — diferentes intensidades e tons de acúmulo em diferentes regiões do Hero Asset Referência, conforme a lógica de uso de cada uma.
 6. Avaliar a leitura do material à distância de uso (não apenas em close-up), verificando se o desgaste contribui para a silhueta e legibilidade do asset.
@@ -45,7 +45,7 @@ Ao final da semana, o estudante será capaz de:
 
 | Critério | O que observar |
 |---|---|
-| C1 — Processo de Projeto | Registro do processo: screenshots comparativos antes/depois, nomenclatura das camadas no 3D Coat, versão salva com sufixo `_S09` |
+| C1 — Processo de Projeto | Registro do processo: screenshots comparativos antes/depois, nomenclatura das camadas no 3DCoatTextura, versão salva com sufixo `_S09` |
 | C2 — Direção Artística | O desgaste é coerente com o tema do kit? A história do objeto está alinhada com a proposta estética do moodboard? |
 | C5 — Texturização | Qualidade e intenção das camadas de detalhe: edge wear nas arestas corretas, sujeira com lógica gravitacional e de uso, variação de cor entre regiões, scratches com direção e intensidade plausíveis |
 | C10 — Participação (CC) | Qualidade do feedback oferecido na crítica informal: é observável e específico? Conecta desgaste à lógica de uso do objeto? |
@@ -56,9 +56,9 @@ Ao final da semana, o estudante será capaz de:
 
 ## Recursos necessários
 
-- Computadores com 3D Coat instalado (versão 2023 ou superior)
+- Computadores com 3DCoatTextura instalado (versão 2026)
 - Computadores com Blender instalado (3.x ou 4.x)
-- Arquivos `.3b` do Hero Asset Referência de cada estudante (3D Coat — Semana 8)
+- Arquivos `.3b` do Hero Asset Referência de cada estudante (3DCoatTextura — Semana 8)
 - Arquivo de demonstração do professor: asset com textura base já pintada (Color + Roughness + Metallic com Fill simples), pronto para receber detalhes
 - Projetor para demonstração e para a crítica informal
 - Coleção de referências visuais de desgaste organizadas por tema (Medieval, Sci-Fi, Pós-apocalíptico, etc.) — exibir no projetor durante o estúdio como apoio visual
@@ -102,15 +102,15 @@ Não há resposta certa — mas a escolha deve ser deliberada e consistente em t
 
 Apresentar como uma taxonomia simples que organiza o processo de pintura:
 
-**Edge Wear (desgaste de aresta):** acontece onde o material é exposto ao contato físico — bordas, projeções, pontos de manipulação. É o lugar onde tinta descasca, metal polido aparece sob ferrugem, pedra lascada expõe material interno. No 3D Coat: canal Roughness (arestas ficam mais polidas = roughness menor) e canal Color (cor interna exposta é diferente da cor de superfície). *Regra de ouro: quanto mais projetado e exposto, mais desgastado.*
+**Edge Wear (desgaste de aresta):** acontece onde o material é exposto ao contato físico — bordas, projeções, pontos de manipulação. É o lugar onde tinta descasca, metal polido aparece sob ferrugem, pedra lascada expõe material interno. No 3DCoatTextura: canal Roughness (arestas ficam mais polidas = roughness menor) e canal Color (cor interna exposta é diferente da cor de superfície). *Regra de ouro: quanto mais projetado e exposto, mais desgastado.*
 
-**Dirt / Grime (sujeira e acúmulo):** acontece onde gravitação e abrigo convergem — cantos inferiores, encaixes entre peças, fendas, reentrâncias. Pó, fuligem, musgo, óleo acumulam em lugares protegidos onde o vento não chega e a água fica parada. No 3D Coat: canal Color (tom mais escuro ou acinzentado), canal Roughness (sujeira = muito rugosa). *Regra de ouro: quanto mais baixo e protegido, mais sujo.*
+**Dirt / Grime (sujeira e acúmulo):** acontece onde gravitação e abrigo convergem — cantos inferiores, encaixes entre peças, fendas, reentrâncias. Pó, fuligem, musgo, óleo acumulam em lugares protegidos onde o vento não chega e a água fica parada. No 3DCoatTextura: canal Color (tom mais escuro ou acinzentado), canal Roughness (sujeira = muito rugosa). *Regra de ouro: quanto mais baixo e protegido, mais sujo.*
 
-**Scratches (riscos e arranhões):** acontecem pela direção de uso — arrastar, esvaziar, empurrar. Têm direção e comprimento que revelam como o objeto foi usado. No 3D Coat: canal Color (exposição de material base) + canal Roughness (risco = alteração de micro-superfície). *Regra de ouro: os riscos seguem a direção do movimento do usuário.*
+**Scratches (riscos e arranhões):** acontecem pela direção de uso — arrastar, esvaziar, empurrar. Têm direção e comprimento que revelam como o objeto foi usado. No 3DCoatTextura: canal Color (exposição de material base) + canal Roughness (risco = alteração de micro-superfície). *Regra de ouro: os riscos seguem a direção do movimento do usuário.*
 
 **3. Organização de camadas por tipo de detalhe**
 
-Cada tipo de detalhe deve ter sua própria camada (ou grupo de camadas) no 3D Coat. Isso permite:
+Cada tipo de detalhe deve ter sua própria camada (ou grupo de camadas) no 3DCoatTextura. Isso permite:
 - Ajustar a intensidade de cada detalhe sem retrabalhar os outros
 - Comparar o antes/depois desativando camadas individualmente
 - Manter o arquivo legível para revisão futura
@@ -137,7 +137,7 @@ Um erro comum de iniciante é tratar "sujeira" como uma única camada, uniforme,
 
 **5. A leitura à distância de uso**
 
-Desgaste deve funcionar na distância em que o jogador vê o asset — não apenas em close-up de render de portfólio. Em jogos, assets de ambiente são vistos a 3–10 metros. Micro-detalhes que só aparecem a 30cm no 3D Coat Render Room são invisíveis no jogo.
+Desgaste deve funcionar na distância em que o jogador vê o asset — não apenas em close-up de render de portfólio. Em jogos, assets de ambiente são vistos a 3–10 metros. Micro-detalhes que só aparecem a 30cm no 3DCoatTextura Render Room são invisíveis no jogo.
 
 Regra prática: se o edge wear não aparece no viewport do Blender com câmera a 5 metros de distância, está fraco demais. Se o asset parece "coberto de arranhões" a essa distância, está forte demais. O objetivo é que o desgaste **leia à distância** sem ser caricato — e que a silhueta do objeto continue legível mesmo com todos os detalhes de superfície ativos.
 
@@ -147,10 +147,10 @@ Regra prática: se o edge wear não aparece no viewport do Blender com câmera a
 
 ### Demonstração — 20 minutos
 
-**Pintura de edge wear, dirt e scratches no 3D Coat**
+**Pintura de edge wear, dirt e scratches no 3DCoatTextura**
 
 **Setup (1 min):**  
-Abrir o 3D Coat com o asset de demonstração já preparado: malha com UV, três canais base pintados (Color, Roughness, Metallic com Fill uniforme). Ter o Render Room disponível para comparações rápidas ao longo da demonstração.
+Abrir o 3DCoatTextura com o asset de demonstração já preparado: malha com UV, três canais base pintados (Color, Roughness, Metallic com Fill uniforme). Ter o Render Room disponível para comparações rápidas ao longo da demonstração.
 
 **Percurso da demonstração:**
 
@@ -201,7 +201,7 @@ Abrir o 3D Coat com o asset de demonstração já preparado: malha com UV, três
 
 **Consigna entregue verbalmente:**
 
-> *"Cinquenta minutos com um objetivo: adicionar desgaste com história ao Hero Asset Referência. Antes de abrir o 3D Coat, olhem o moodboard e respondam mentalmente: 'O que aconteceu com esse objeto? Ele foi muito usado? Abandonado? Ainda está em uso ativo?' A resposta vai ditar onde vocês pintam. Quando terminar, tirem um screenshot do Render Room com a câmera longe — se o desgaste aparecer, está no caminho certo. Se não aparecer, está fraco demais. Não façam desgaste bonito: façam desgaste verdadeiro."*
+> *"Cinquenta minutos com um objetivo: adicionar desgaste com história ao Hero Asset Referência. Antes de abrir o 3DCoatTextura, olhem o moodboard e respondam mentalmente: 'O que aconteceu com esse objeto? Ele foi muito usado? Abandonado? Ainda está em uso ativo?' A resposta vai ditar onde vocês pintam. Quando terminar, tirem um screenshot do Render Room com a câmera longe — se o desgaste aparecer, está no caminho certo. Se não aparecer, está fraco demais. Não façam desgaste bonito: façam desgaste verdadeiro."*
 
 **Atividade estruturada:**
 
@@ -269,7 +269,7 @@ Esta é uma crítica 🔵 Informal. Não há ficha formal, não há apresentaç�
 **Protocolo:**
 
 **Preparação (2 min antes do início):**
-- Cada estudante exibe o Hero Asset Referência no Render Room do 3D Coat ou no viewport do Blender com os mapas conectados.
+- Cada estudante exibe o Hero Asset Referência no Render Room do 3DCoatTextura ou no viewport do Blender com os mapas conectados.
 - Preparar dois screenshots visíveis: o estado do asset ao final da Semana 8 (antes) e o estado atual (depois).
 
 **Abertura (2 min):**
@@ -335,7 +335,7 @@ No canal **Color** (opcional):
 3. Pintar apenas nos riscos maiores — micro-riscos podem ficar só no Roughness.
 
 **Bloco 3 — Exportação e atualização no Blender (≈15 min):**
-1. No 3D Coat: `File → Export Textures`.
+1. No 3DCoatTextura: `File → Export Textures`.
 2. Exportar Albedo (Color), Roughness, Metallic.
 3. Pasta de destino: `[Nome]_HeroAsset_Mapas_S09/` (nova pasta — preservar a da Semana 8 para comparação).
 4. Abrir o Blender com o material da Semana 8.
@@ -404,7 +404,7 @@ Riscos pintados em todas as direções simultaneamente criam ruído visual sem n
 Se o estudante trabalhou com opacidades muito baixas em todas as camadas, o render da S09 parece idêntico ao da S08. O asset não evoluiu visivelmente. Estratégia: o professor deve identificar isso durante a crítica informal e redirecionar antes do segundo estúdio. Pedir que o estudante desative todas as camadas novas e compare: *"Você vê diferença? Não? Então as camadas não têm intensidade suficiente."* Intensificar primeiro o edge wear (aumento de opacidade) antes de avançar para outros detalhes.
 
 **8. Arquivo do Hero Asset Referência não está disponível ou foi perdido**
-Estudante que não salvou corretamente o arquivo `.3b` na Semana 8 ou não tem acesso ao computador em que trabalhou. Estratégia: usar o arquivo exportado de Blender (`.obj` ou `.fbx`) para reimportar no 3D Coat e iniciar novamente. O estudante perde o trabalho das camadas base da S08, mas pode refazê-las em 10–15 minutos com o fluxo já aprendido, e então avançar para os detalhes desta semana. Usar o tempo do primeiro estúdio para reconstruir a base.
+Estudante que não salvou corretamente o arquivo `.3b` na Semana 8 ou não tem acesso ao computador em que trabalhou. Estratégia: usar o arquivo exportado de Blender (`.obj` ou `.fbx`) para reimportar no 3DCoatTextura e iniciar novamente. O estudante perde o trabalho das camadas base da S08, mas pode refazê-las em 10–15 minutos com o fluxo já aprendido, e então avançar para os detalhes desta semana. Usar o tempo do primeiro estúdio para reconstruir a base.
 
 ---
 
@@ -441,7 +441,7 @@ Estudante que não salvou corretamente o arquivo `.3b` na Semana 8 ou não tem a
 
 | Entrega | Formato | Prazo |
 |---|---|---|
-| Arquivo do 3D Coat com o Hero Asset Referência com camadas de detalhe (EdgeWear, Dirt com variação e, se houver tempo, Scratches) | `.3b` ou `.3dc` com sufixo `_HeroAsset_3DCoat_S09` | Até o fim do segundo encontro |
+| Arquivo do 3DCoatTextura com o Hero Asset Referência com camadas de detalhe (EdgeWear, Dirt com variação e, se houver tempo, Scratches) | `.3b` com sufixo `_HeroAsset_3DCoat_S09` | Até o fim do segundo encontro |
 | Mapas PBR exportados com detalhes: Albedo, Roughness, Metallic | `.png` 1024×1024 (ou 2048) na pasta `_Mapas_S09` | Até o fim do segundo encontro |
 | Arquivo Blender atualizado com mapas da S09 conectados | `.blend` com sufixo `_HeroAsset_3DCoat_S09` | Até o fim do segundo encontro |
 | Render comparativo antes/depois (S08 vs. S09) | `.png` com sufixo `_Comparativo_S08_S09` | Até o fim do segundo encontro |
