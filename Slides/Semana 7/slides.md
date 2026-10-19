@@ -95,13 +95,7 @@ Notas: Bloco 2 (3 min). A conferência do UV importado é feita na janela Textur
 
 ## O pipeline: a seta só anda para a frente
 
-```mermaid
-flowchart LR
-    A[Blender<br/>Modelagem + UV aprovado] -->|FBX| B[3DCoatTextura<br/>Camadas e máscaras]
-    B -->|Mapas PBR| C[Blender<br/>Principled BSDF]
-    B -->|Mapas PBR| D[Unity<br/>URP Lit]
-    B -.->|UV errado? volta| A
-```
+![diagram](assets/mermaid-2.png)
 
 <div class="tip">
 
