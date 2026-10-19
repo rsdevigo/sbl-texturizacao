@@ -25,15 +25,16 @@ Os estudantes chegam com:
 
 Ao final da semana, o estudante será capaz de:
 
-1. Explicar o que são mesh maps (Ambient Occlusion, Curvature, Normal) e por que eles podem ser gerados direto da geometria, sem depender de uma imagem externa nem de um asset high-poly dedicado.
-2. Exportar o Hero Asset Referência com UV do Blender (`.obj`/`.fbx`) e importá-lo corretamente no 3DCoatTextura em modo Per-Pixel Painting (workflow Metalness PBR).
-3. Reconhecer os dois espaços de trabalho do 3DCoatTextura 2026 (Paint Room e Render Room), a conferência de UV pela janela Texture Editor e a lógica de camadas por canal.
-4. Bakear/gerar os mapas de Ambient Occlusion e Curvature a partir da malha do Hero Asset Referência, e usá-los como máscara de desgaste.
-5. Gerar um Normal Map real pintando micro-detalhe no canal Depth do 3DCoatTextura (trinca, entalhe, rebite), sem depender de nós procedurais do Blender.
-6. **Trilha fotorrealista:** projetar a textura seamless fotográfica da Semana 6 como camada de Color base no 3DCoatTextura e usar AO/Curvature como máscara para reforçar desgaste físico nas arestas e reentrâncias.
-7. **Trilha estilizada:** aplicar um Smart Material (ou um conjunto de camadas equivalente) sobre o Hero Asset Referência, usando AO/Curvature como máscara automática de sujeira e desgaste nas bordas — a mesma lógica de materiais inteligentes usada no Substance Painter.
-8. Montar, ao final da semana, um material PBR com pelo menos três canais ativos no 3DCoatTextura (Color/Albedo, Roughness, Normal), qualquer que seja a trilha visual.
-9. Situar o bake de mesh maps desta semana dentro do conceito mais amplo de texturização procedural apresentado na Semana 1 — reconhecendo que a via alternativa de nós do Blender (Apostila, Parte IV, Cap. 13) continua disponível como técnica complementar, não obrigatória.
+1. Verificar se um modelo do Blender está pronto para exportar para o 3DCoatTextura (UV, modificadores, transformações, camadas de UV) e corrigir os problemas mais comuns antes da exportação.
+2. Explicar o que são mesh maps (Ambient Occlusion, Curvature, Normal) e por que eles podem ser gerados direto da geometria, sem depender de uma imagem externa nem de um asset high-poly dedicado.
+3. Exportar o Hero Asset Referência com UV do Blender (`.obj`/`.fbx`) e importá-lo corretamente no 3DCoatTextura em modo Per-Pixel Painting (workflow Metalness PBR).
+4. Reconhecer os dois espaços de trabalho do 3DCoatTextura 2026 (Paint Room e Render Room), a conferência de UV pela janela Texture Editor e a lógica de camadas por canal.
+5. Bakear/gerar os mapas de Ambient Occlusion e Curvature a partir da malha do Hero Asset Referência, e usá-los como máscara de desgaste.
+6. Gerar um Normal Map real pintando micro-detalhe no canal Depth do 3DCoatTextura (trinca, entalhe, rebite), sem depender de nós procedurais do Blender.
+7. **Trilha fotorrealista:** projetar a textura seamless fotográfica da Semana 6 como camada de Color base no 3DCoatTextura e usar AO/Curvature como máscara para reforçar desgaste físico nas arestas e reentrâncias.
+8. **Trilha estilizada:** aplicar um Smart Material (ou um conjunto de camadas equivalente) sobre o Hero Asset Referência, usando AO/Curvature como máscara automática de sujeira e desgaste nas bordas — a mesma lógica de materiais inteligentes usada no Substance Painter.
+9. Montar, ao final da semana, um material PBR com pelo menos três canais ativos no 3DCoatTextura (Color/Albedo, Roughness, Normal), qualquer que seja a trilha visual.
+10. Situar o bake de mesh maps desta semana dentro do conceito mais amplo de texturização procedural apresentado na Semana 1 — reconhecendo que a via alternativa de nós do Blender (Apostila, Parte IV, Cap. 13) continua disponível como técnica complementar, não obrigatória.
 
 > O Subsurface Scattering (SSS) não é abordado nesta semana — ele é apresentado na Semana 8, junto ao refinamento final dos canais, para não sobrecarregar esta mini-aula com um conceito novo adicional.
 
@@ -62,11 +63,15 @@ Ao final da semana, o estudante será capaz de:
 - Krita instalado (para eventuais ajustes nas texturas seamless antes da exportação)
 - Arquivo `.blend` do Hero Asset Referência de cada estudante (Semanas 4–6)
 - Arquivo `.kra` do Krita com as texturas seamless preservadas em camadas
-- Arquivo de demonstração do professor: Asset simples (cubo ou parede) com textura seamless já conectada ao Albedo no Blender, exportado como `.obj`
+- Arquivo de demonstração do professor: Asset simples (cubo ou parede) com textura seamless já conectada ao Albedo no Blender, exportado como `.fbx` (R13)
 - Acesso à internet, se disponível, para consulta de bibliotecas de Smart Materials do 3DCoatTextura ou referência visual de curvatura/AO
 - Projetor para demonstração
 - Apostila — Parte III, Cap. 10 e Parte V, Cap. 16 — disponibilizadas antes da aula
 - Pasta de exportação criada previamente no computador de demonstração do professor: `[DEMO]_3DCoat_Exportacao/`
+- **Arquivos de segurança da demonstração (R31):** um `.3b` salvo a cada etapa (`demo_S07_etapa1_importado.3b`, `etapa2_color.3b`, `etapa3_ao_curvature.3b`, `etapa4_depth.3b`) — se o 3DCoatTextura travar ao vivo, abrir o da etapa seguinte e continuar
+- **Kit de FBX com defeito (R30):** seis caixotes (K1 correto, K2–K6 com defeito), gerados por script — ver [Kit de FBX com defeito](/Recursos/Kit_FBX_Defeitos_Semana07.md). Prints de K2–K5 no Blender para o quiz da mini aula
+- Slide do **checklist de exportação** (fica projetado durante o estúdio) e **cola de navegação Blender × 3DCoatTextura** (orbitar, pan, zoom, pincel, Fill)
+- Teste prévio no laboratório: licença/modo de aprendizado do 3DCoatTextura ativo; importação de um FBX em 512 e 1024; localização de *Conditions*, *Texture Editor*, *Smart Material Editor* e *Edit → Calculate Occlusion/Curvature* na versão instalada
 
 > **Nota sobre a versão:** a disciplina adota o **3DCoatTextura 2026** — a edição do 3DCoat dedicada exclusivamente à texturização. Conferir na instalação do laboratório, antes da aula, os nomes exatos dos painéis de bake e de geração de máscaras (ex.: "Textures → Ambient Occlusion", "Cavity/Curvature Generator", camadas do tipo "Fill Layer" com gerador procedural). A versão 2026 traz uma biblioteca de Smart Materials e máscaras procedurais baseados em nós (NGMaterials/NGMasks), o que favorece a trilha estilizada. Para uso em casa, a Pilgway oferece licenças educacionais e estudantis não comerciais — confirmar as condições vigentes no site oficial antes de divulgar à turma. O princípio é estável em todas as versões: AO e Curvature podem ser calculados diretamente da geometria visível, sem exigir um asset high-poly separado — o bevel e a topologia do próprio Hero Asset Referência já fornecem informação suficiente.
 
@@ -76,11 +81,19 @@ Ao final da semana, o estudante será capaz de:
 
 ### Mini Aula — 20 minutos
 
-**Mesh maps: gerando profundidade e máscaras direto da malha, sem nós e sem high-poly**
+**O 3DCoatTextura, o workflow Blender → 3DCoatTextura e os mesh maps**
 
-Objetivo: mostrar que existe uma segunda forma de dar profundidade a um material, além dos nós matemáticos do Blender — o **bake**, que lê a própria geometria do asset e converte isso em textura. E mostrar que esse mesmo bake serve de base tanto para reforçar uma textura fotográfica (trilha realismo) quanto para guiar um Smart Material (trilha estilizada).
+Objetivo: apresentar a nova ferramenta e a regra de divisão de trabalho entre os dois softwares (*"modelagem e UV se resolvem no Blender; o 3DCoatTextura só pinta"*), treinar o olhar para reconhecer se um modelo está pronto para exportar, e mostrar que existe uma segunda forma de dar profundidade a um material: o **bake de mesh maps**, que lê a própria geometria do asset e a converte em máscara.
 
-**Desenvolvimento:**
+| Bloco | Tempo | Conteúdo |
+|---|---|---|
+| 1 | 3 min | Abertura: "eu não pintei nada" |
+| 2 | 3 min | Por que o 3DCoatTextura |
+| 3 | 4 min | Mapa do pipeline |
+| 4 | 5 min | Quiz "Esse modelo está pronto para exportar?" |
+| 5 | 5 min | Mesh maps e as duas trilhas |
+
+**Bloco 1 — Abertura (3 min)**
 
 Abrir com uma comparação visual no projetor (imagens estáticas):
 
@@ -91,11 +104,46 @@ Mostrar três versões do mesmo asset de parede de pedra:
 
 Perguntar: *"De onde vem essa informação? Eu não pintei nada ainda — ela veio de quê?"* — conduzir a turma a perceber que a resposta é a própria geometria do asset: reentrâncias, bordas e bevels.
 
----
+Não fechar a resposta agora: ela volta no Bloco 5 e no Passo 4 da demonstração.
 
-**Conteúdo a cobrir:**
+**Bloco 2 — Por que o 3DCoatTextura (3 min)**
 
-**1. O que são mesh maps e por que não exigem high-poly**
+O 3DCoatTextura é a edição do 3DCoat dedicada só à texturização: traz os espaços de pintura e de renderização, sem as salas de escultura, retopologia e modelagem do 3DCoat completo. É exatamente o recorte de que a disciplina precisa, porque a modelagem e o UV são feitos no Blender. O trabalho se organiza em "Rooms" (salas):
+
+- **Paint Room:** o principal espaço de trabalho. O artista pinta diretamente sobre a malha 3D usando pincéis, stencils, alphas e camadas com máscara, em qualquer canal PBR (Color, Roughness, Metallic, Normal/Depth).
+- **Render Room:** visualização de renderização de alta qualidade com iluminação HDR, usada para avaliar o resultado antes de exportar.
+
+Não há uma UV Room separada: para conferir se o UV importou corretamente, usa-se a janela **Texture Editor** dentro do Paint Room, que mostra as ilhas de UV sobre a textura. Como os UVs já chegam prontos do Blender, qualquer correção de UV volta a ser feita no Blender.
+
+Regra da disciplina, para deixar escrita no quadro: ***"Modelagem e UV se resolvem no Blender. O 3DCoatTextura só pinta."*** Mencionar que a Pilgway oferece licença educacional/estudantil não comercial para quem quiser instalar em casa (confirmar as condições vigentes antes de divulgar).
+
+**Bloco 3 — Mapa do pipeline (4 min)**
+
+Projetar o diagrama do pipeline (slide) e percorrer com a turma o que entra e o que sai em cada etapa:
+
+| Etapa | Ferramenta | Entra | Sai |
+|---|---|---|---|
+| Modelagem e UV | Blender | Hero Asset modelado (Semanas 3–4) | Malha low-poly com UV aprovado e transformações aplicadas |
+| Transporte | FBX | Malha + UV | Arquivo `.fbx` |
+| Texturização | 3DCoatTextura | FBX + textura da Semana 6 | Arquivo `.3b` com camadas; mapas PBR exportados |
+| Montagem e teste | Blender / Unity | Mapas PBR | Material montado (Principled BSDF / URP Lit) |
+
+*"A seta só anda para a frente. Se o UV estiver errado, a correção não acontece no 3DCoatTextura: volta para o Blender, reexporta e reimporta. Por isso o UV do Hero Asset precisa estar aprovado antes de começar a pintar — mudar o UV depois obriga a reprojetar a pintura."*
+
+**Bloco 4 — Quiz "Esse modelo está pronto para exportar?" (5 min)**
+
+Projetar, um de cada vez, prints do Blender de quatro caixotes do [Kit de FBX com defeito](/Recursos/Kit_FBX_Defeitos_Semana07.md). A turma responde em voz alta: *qual é o problema e o que fazer?*
+
+| Print | Problema | Resposta esperada | Cenário |
+|---|---|---|---|
+| K2 | Malha sem UV | Abrir o UV no Blender — o 3DCoatTextura não tem UV Room | 2 |
+| K3 | Mirror sem deslocar o UV (ilhas sobrepostas) | Pintar um lado pinta o outro; separar as ilhas ou assumir a simetria | 3 |
+| K4 | Escala 100 e rotação não aplicadas | `Ctrl+A → All Transforms` | 9 |
+| K5 | Array não aplicado | Aplicar (ou *Apply Modifiers* no export) e conferir o UV depois | 8 |
+
+Fechar apresentando o **checklist de exportação** (que ficará projetado durante o estúdio) e a página [Cenários de Exportação Blender → 3DCoatTextura](/Recursos/Cenarios_Exportacao_Blender_3DCoatTextura.md), com os 10 cenários completos.
+
+**Bloco 5 — Mesh maps e as duas trilhas (5 min)**
 
 Ferramentas de texturização como o 3DCoatTextura e o Substance Painter conseguem extrair informação direto da malha 3D:
 
@@ -105,47 +153,42 @@ Ferramentas de texturização como o 3DCoatTextura e o Substance Painter consegu
 
 O ponto central: AO e Curvature **não precisam de high-poly** — nascem da malha de jogo que os estudantes já modelaram, com seus bevels e reentrâncias. O Normal Map desta semana nasce de pintura de profundidade, não de matemática de ruído.
 
-**2. Onde isso substitui e onde isso complementa o que foi visto na Semana 6**
-
 O Albedo fotográfico ou estilizado da Semana 6 continua sendo a base de cor. O que muda é como as camadas seguintes (Roughness, Normal, variação de desgaste) são construídas: em vez de nós no Shader Editor do Blender, agora são camadas e máscaras dentro do 3DCoatTextura, geradas a partir da própria malha.
-
-**3. As duas trilhas — mesmo fluxo de ferramenta, abordagem diferente**
 
 - **Trilha fotorrealista:** a textura fotográfica da Semana 6 entra como camada de Color base (projetada sobre o UV, que já é o mesmo UV do Blender). Por cima dela, AO e Curvature funcionam como camadas de multiplicação/máscara para reforçar sombra de contato e desgaste nas bordas — um refinamento físico sobre uma base que já é realista.
 - **Trilha estilizada:** em vez de uma foto, o estudante aplica um Smart Material (ou monta uma camada de cor + variação manual, se a biblioteca de Smart Materials do laboratório for limitada) — e usa exatamente os mesmos mapas de AO/Curvature como máscara automática de onde a sujeira, o brilho e o desgaste devem aparecer. Quem já baixou um pacote de textura estilizada pronta na Semana 6 usa essa imagem como ponto de partida da camada de Color, do mesmo jeito que a trilha fotorrealista usa a foto.
 
 Nos dois casos, o resultado técnico ao final da semana é equivalente: um material com Color, Roughness e Normal ativos no 3DCoatTextura, com máscaras de AO/Curvature orientando onde o desgaste acontece.
 
-**4. Os espaços de trabalho do 3DCoatTextura 2026**
-
-O 3DCoatTextura é a edição do 3DCoat dedicada só à texturização: traz os espaços de pintura e de renderização, sem as salas de escultura, retopologia e modelagem do 3DCoat completo. É exatamente o recorte de que a disciplina precisa, porque a modelagem e o UV são feitos no Blender. O trabalho se organiza em "Rooms" (salas):
-
-- **Paint Room:** o principal espaço de trabalho. O artista pinta diretamente sobre a malha 3D usando pincéis, stencils, alphas e camadas com máscara, em qualquer canal PBR (Color, Roughness, Metallic, Normal/Depth).
-- **Render Room:** visualização de renderização de alta qualidade com iluminação HDR, usada para avaliar o resultado antes de exportar.
-
-Não há uma UV Room separada: para conferir se o UV importou corretamente, usa-se a janela **Texture Editor** dentro do Paint Room, que mostra as ilhas de UV sobre a textura. Como os UVs já chegam prontos do Blender, qualquer correção de UV volta a ser feita no Blender.
-
-**5. Geração procedural como técnica alternativa (panorama, 3 min)**
-
-*"Existe um segundo caminho para gerar Normal e Roughness que vocês não vão usar hoje: nós matemáticos dentro do Blender — Noise Texture, Bump, ColorRamp — como a Apostila descreve no Capítulo 13 (Parte IV). É o mesmo princípio de raster vs. procedural que vimos na Semana 1, só que aplicado a mapas de suporte em vez do Albedo inteiro. A vantagem dos nós é que o material nunca repete um pixel duas vezes e pode ser ajustado sem repintar nada; a desvantagem é o controle artístico mais indireto. Quem quiser comparar as duas técnicas em uma segunda superfície do próprio Hero Asset, a leitura do Capítulo 13 fica disponível — mas a partir de hoje, o fluxo oficial da disciplina é o bake e a pintura dentro do 3DCoatTextura."*
-
-> **Leitura complementar recomendada (não avaliada nesta semana):** Apostila, Parte IV, Cap. 13 — Texturização Procedural.
+> **Via alternativa — só mencionar, sem panorama (leitura complementar, não avaliada):** *"Existe um segundo caminho para gerar Normal e Roughness que vocês não vão usar hoje: nós matemáticos dentro do Blender — Noise Texture, Bump, ColorRamp — como a Apostila descreve no Capítulo 13 (Parte IV). É o mesmo princípio de raster vs. procedural que vimos na Semana 1, só que aplicado a mapas de suporte em vez do Albedo inteiro. A vantagem dos nós é que o material nunca repete um pixel duas vezes e pode ser ajustado sem repintar nada; a desvantagem é o controle artístico mais indireto. Quem quiser comparar as duas técnicas em uma segunda superfície do próprio Hero Asset, a leitura do Capítulo 13 fica disponível — mas a partir de hoje, o fluxo oficial da disciplina é o bake e a pintura dentro do 3DCoatTextura."*
+>
+> Apostila, Parte IV, Cap. 13 — Texturização Procedural.
 
 ---
 
 ### Demonstração — 20 minutos
 
-**Migração para o 3DCoatTextura: exportação, bake de AO/Curvature e início do Normal via Depth**
+**Do Blender ao primeiro material no 3DCoatTextura: checklist, importação, mesh maps, Attach × Fill e Depth**
 
-**Setup (1 min):**
-Ter o Blender aberto com o asset de demonstração (parede simples com textura seamless de pedra já conectada ao Albedo, Semana 6). Ter o 3DCoatTextura aberto em outra janela, pronto para importar.
+**Setup (antes da aula):**
+Blender aberto com o asset de demonstração (R13: parede simples com textura seamless de pedra da Semana 6). 3DCoatTextura aberto em outra janela. **Arquivos de segurança** (R31) na pasta `[DEMO]_3DCoat_Exportacao/`: se o 3DCoatTextura travar, abrir o `.3b` da etapa seguinte e continuar a demonstração a partir dele.
 
-**Percurso da demonstração:**
+| Passo | Tempo | Conteúdo |
+|---|---|---|
+| 1 | 3 min | Checklist e exportação no Blender |
+| 2 | 3 min | Importação e conferência do UV |
+| 3 | 2 min | Textura da Semana 6 como Color |
+| 4 | 7 min | Mesh maps e o momento "Attach × Fill" |
+| 5 | 3 min | Normal via Depth |
+| 6 | 2 min | Roughness guiado por Curvature |
 
-**Passo 1 — Exportação do Blender (2 min):**
-1. Com o asset de demonstração selecionado: `File → Export → FBX (.fbx)` (preferir FBX quando houver mais de um objeto; `.obj` também funciona para um único objeto).
-2. Confirmar que a UV está incluída na exportação.
-3. Salvar em `[DEMO]_3DCoat_Exportacao/asset_demo.fbx`.
+**Passo 1 — Checklist e exportação do Blender (3 min):**
+Ler o checklist em voz alta, conferindo cada item no asset de demonstração:
+1. UV de textura único, ativo, dentro de 0–1 (abrir o UV Editor).
+2. Modificadores aplicados e UV conferido depois de aplicar.
+3. `Ctrl+A → All Transforms`; normais e sharp edges definidos.
+4. Um material (ou atlas decidido).
+5. `File → Export → FBX (.fbx)`, *Selected Objects*, só a low-poly. Salvar em `[DEMO]_3DCoat_Exportacao/asset_demo.fbx`.
 
 **Passo 2 — Importação no 3DCoatTextura (3 min):**
 1. `File → Import for Per-Pixel Painting` (ou `New Project → Per Pixel Painting`, dependendo da versão).
@@ -153,30 +196,31 @@ Ter o Blender aberto com o asset de demonstração (parede simples com textura s
 3. Confirmar UV presente, resolução de textura **1024×1024**, workflow **Metalness PBR**.
 4. Confirmar. A malha aparece no Paint Room.
 5. Reconhecer rapidamente a interface: painel de Layers (direita), Toolbar (esquerda), canais ativos (Color, Roughness, Metallic, Normal/Depth).
+6. Abrir a janela **Texture Editor** e mostrar as ilhas: *"É aqui que se confere o UV — não existe UV Room. Se estiver errado, volta para o Blender."*
 
-**Passo 3 — Trazer a textura seamless da Semana 6 como camada de Color (3 min):**
+**Passo 3 — Trazer a textura seamless da Semana 6 como camada de Color (2 min):**
 1. Canal ativo: **Color**.
 2. Criar nova camada, renomear para `Base_Color_Foto` (ou `Base_Color_Estilizada`, conforme o caso).
 3. Usar a ferramenta de projeção/fill com a textura PNG exportada do Krita na Semana 6 (o UV já é o mesmo, então a projeção deve alinhar automaticamente).
 4. Mostrar no Render Room: a base já parece muito próxima do que existia no Blender — só que agora dentro do 3DCoatTextura.
 
-**Passo 4 — Bake/geração de AO e Curvature (6 min):**
-1. Localizar o painel de geração de mapas (nome exato varia por versão — geralmente dentro do menu Textures, ou como um tipo de camada procedural/"Fill Layer" com gerador).
-2. Gerar o mapa de **Ambient Occlusion**: mostrar como as reentrâncias do asset escurecem automaticamente.
-3. Gerar o mapa de **Curvature**: mostrar como as arestas ficam destacadas.
-4. Criar uma nova camada `Desgaste_AO_Curvature`, modo Multiply, e usar o AO (ou o Curvature, invertido) como máscara para escurecer levemente as reentrâncias e clarear/saturar levemente as arestas.
-5. *"Reparem: eu não pintei nada com a mão até agora. Essa profundidade toda veio da própria malha. A partir daqui, eu só refino."*
+**Passo 4 — Mesh maps e o momento "Attach × Fill" (7 min):**
+1. `Edit → Calculate Occlusion` e `Edit → Calculate Curvature`. Mostrar as camadas geradas (AmbientOcclusion, CavityMap) e **ocultar a de AO**, para o modelo não escurecer duas vezes.
+2. Criar uma camada vazia `Sombra_AO`. Criar um Smart Material com cor **vermelho puro**, condição **More on Shadow** e Gloss/Metalness desligados. Salvar.
+3. **Momento didático:** botão direito no material → *Attach to the current layer*. Nada aparece. Perguntar: *"Por que não aconteceu nada?"* Conduzir: o *Attach* diz **o quê** a camada mostra; quem diz **onde** é o pincel ou o Fill.
+4. Ferramenta **Fill** → clicar no modelo: o vermelho aparece só nas reentrâncias. *"Reparem: eu não pintei nada com a mão. Essa informação veio da própria malha."* (responde à pergunta da abertura).
+5. Mudar o *Degree* no editor → Save → nada muda. *"No 3DCoat a condição é calculada no clique: limpa a camada e preenche de novo."* Limpar a camada → Fill.
+6. Trocar o vermelho pela cor de sombra definitiva e passar a camada para **Multiply**. Repetir rapidamente com **More on Convex** numa camada `Desgaste_Arestas` (tom mais claro) para as bordas.
 
-**Passo 5 — Normal Map via pintura de Depth (4 min):**
+**Passo 5 — Normal Map via pintura de Depth (3 min):**
 1. Mudar o canal ativo para **Depth/Normal**.
 2. Selecionar um pincel com alpha de rachadura ou entalhe.
 3. Pintar 2–3 marcas de profundidade sobre a superfície — uma rachadura, um entalhe de ferramenta.
 4. Mostrar no Render Room: o relevo aparece como um Normal Map real, gerado pela pintura, não por ruído procedural.
 
 **Passo 6 — Roughness rápido com Curvature como referência (2 min):**
-1. Canal ativo: **Roughness**.
-2. Fill com valor base (cinza escuro para pedra, roughness alto).
-3. Nova camada usando a máscara de Curvature: clarear ligeiramente (roughness mais baixo = mais polido) nas arestas.
+1. Canal ativo: **Roughness**. Fill com valor base (roughness alto para pedra).
+2. Nova camada com Smart Material de roughness mais baixo e condição **More on Convex** → Fill: arestas mais polidas.
 
 > **Nota do professor:** Se o bake de AO/Curvature não estiver disponível ou for instável na versão instalada, uma alternativa funcional é pintar manualmente com um pincel de opacidade baixa nas reentrâncias (escurecendo) e nas arestas (clareando), guiando-se visualmente pela geometria — o resultado pedagógico é equivalente, só perde a automação.
 
@@ -184,7 +228,17 @@ Ter o Blender aberto com o asset de demonstração (parede simples com textura s
 
 ### Produção em Estúdio — 50 minutos
 
-**Migração do Hero Asset Referência para o 3DCoatTextura**
+**Parte 1 — Clínica de exportação (10 min, em duplas)**
+
+Cada dupla recebe um FBX do [Kit de FBX com defeito](/Recursos/Kit_FBX_Defeitos_Semana07.md) (K1–K6), **sem saber qual é o defeito**. Tarefa:
+
+1. Importar no 3DCoatTextura e descrever o **sintoma**.
+2. Encontrar o **cenário** na página [Cenários de Exportação](/Recursos/Cenarios_Exportacao_Blender_3DCoatTextura.md).
+3. Corrigir no Blender (*File → Import → FBX*), reexportar e confirmar no 3DCoatTextura.
+
+Nos 2 minutos finais, duas duplas contam **sintoma → causa → correção**. Quem recebe o K1 (controle, sem defeito) também tem uma resposta válida: *"não há nada a corrigir"*, justificada com o checklist. Gabarito no roteiro do kit.
+
+**Parte 2 — Migração do Hero Asset Referência para o 3DCoatTextura (40 min)**
 
 **Consigna entregue verbalmente:**
 
@@ -192,11 +246,11 @@ Ter o Blender aberto com o asset de demonstração (parede simples com textura s
 
 **Atividade estruturada:**
 
-1. Exportar o Hero Asset Referência do Blender como `.obj`/`.fbx` com UV.
+1. Passar o **checklist de exportação** (slide projetado) e exportar o Hero Asset Referência do Blender como `.fbx` com UV.
 2. Importar no 3DCoatTextura em Per-Pixel Painting, Metalness PBR, resolução 1024×1024.
 3. Canal Color: criar camada base com a textura seamless da Semana 6 (trilha fotorrealista) ou com o Smart Material / camadas equivalentes escolhidos (trilha estilizada).
-4. Gerar/bakear AO e Curvature a partir da malha.
-5. Criar uma camada de desgaste usando AO/Curvature como máscara sobre o Color (escurecer reentrâncias, clarear/destacar arestas).
+4. Gerar AO e Curvature a partir da malha (`Edit → Calculate Occlusion` / `Calculate Curvature`).
+5. Criar uma camada de desgaste usando AO/Curvature como máscara sobre o Color (escurecer reentrâncias, clarear/destacar arestas): camada vazia + Smart Material com condição → **Attach + Fill**.
 6. Canal Roughness: Fill base + camada guiada por Curvature (arestas mais polidas).
 7. Canal Normal/Depth: pintar 2–3 marcas de profundidade (rachaduras, entalhes) coerentes com o tema do kit.
 8. Salvar: `[Nome]_HeroAsset_3DCoat_S07.3b`.
@@ -229,6 +283,8 @@ Esta é uma crítica informal. O professor conduz a turma por 4–5 estações, 
 
 **Abertura (2 min):**
 Professor define o foco: *"Hoje vamos olhar para profundidade, mas gerada de um jeito novo — direto da malha, ou pintada com pincel, não por nó matemático. Três perguntas guiam a crítica: (1) o desgaste das arestas parece físico e consistente com a máscara de Curvature, ou parece aleatório? (2) as reentrâncias estão mais escuras de forma crível? (3) para quem é estilizado: o Smart Material está respondendo à geometria do asset, ou parece só um padrão colado por cima?"*
+
+Em cada estação, pedir que o estudante **mostre o liga/desliga** da camada de máscara (antes/depois): a discussão parte da comparação, não da descrição.
 
 **Rodada circulante (15 min — 4–5 estações):**
 
@@ -289,7 +345,7 @@ Pergunta para 2–3 voluntários: *"O Normal que vocês pintaram hoje — ele re
 *"Na semana que vem: Crítica FORMAL — a CF2 do semestre. Vocês vão apresentar o material que construíram nas Semanas 6 e 7 no Hero Asset Referência, explicando a trilha escolhida e as decisões de máscara e desgaste. Depois, vamos refinar as camadas, unificar tudo — incluindo o Normal, que sai bakeado do 3DCoatTextura para as duas trilhas — e exportar os quatro mapas PBR completos: Albedo, Metallic, Roughness e Normal. Preparem a autoavaliação antes do segundo encontro."*
 
 4. **(2 min — Confirmação das entregas)**
-Recapitular entregas com nomenclatura esperada.
+Recapitular entregas com nomenclatura esperada e indicar o estudo da semana no menu **Recursos** do site: *Cenários de Exportação*, *Features do 3DCoatTextura por Trilha* (vídeo de referência da trilha escolhida) e, para quem já conhece o Substance Painter, o *Guia de Migração*.
 
 ---
 
@@ -313,6 +369,9 @@ O 3DCoatTextura 2026 já traz Smart Materials procedurais (NGMaterials), mas o l
 **6. Estudante avança rápido demais e chega ao Encontro 2 sem trabalho de aprofundamento definido**
 Com um único asset como foco, alguns estudantes podem terminar os três canais básicos cedo e ficar sem direção. Estratégia: ter sempre pronta uma lista curta de aprofundamentos válidos (segunda camada de Depth, comparação de Smart Materials, exploração de SSS) para direcionar esse tempo, em vez de deixar o estudante ocioso.
 
+**7. Smart Material preso à camada, mas nada aparece — ou o ajuste da condição não muda nada**
+É a dúvida mais provável da semana, especialmente para quem conhece o Substance Painter (onde o generator é recalculado o tempo todo). No 3DCoatTextura, o *Attach* define o material da camada, mas a área só é preenchida com Fill ou pincel, e a condição é calculada no momento do clique. Estratégia: retomar o momento "Attach × Fill" da demonstração — testar com vermelho puro, **limpar a camada e preencher de novo** a cada ajuste de condição, Degree ou Contrast. Conferir também se o AO/Curvature foi calculado (`Edit → Calculate Occlusion/Curvature`) e se a camada AmbientOcclusion gerada está oculta.
+
 ---
 
 ## Estratégias de Mediação
@@ -325,6 +384,8 @@ Com um único asset como foco, alguns estudantes podem terminar os três canais 
 | Metallic em valor intermediário incorreto (ex: 0.3 ou 0.5) | *"Em PBR físico, Metallic é quase binário: 0 para não-metais, 1 para metais puros. Qual é o caso do seu material? Provavelmente 0 ou 1."* |
 | Estudante que terminou cedo e quer explorar mais | Propor reforçar o Normal com uma segunda camada de Depth em escala menor (micro sobre macro), ou comparar o resultado do bake com a técnica alternativa de nós do Blender em uma segunda superfície do Hero Asset. |
 | Turma geral com dificuldade na navegação do 3DCoatTextura (primeiro contato) | Fazer pausa de 5 minutos para rever os três controles de navegação no projetor: orbitar (botão do meio), zoom (scroll), pan (Shift + botão do meio). Comparar explicitamente com o Blender. Depois voltar ao estúdio. |
+| Estudante mudou a condição (ou o Degree) e o resultado não mudou | *"A condição é calculada no clique. Limpa a camada e dá o Fill de novo. Testa com vermelho puro para ver exatamente onde ela pega."* |
+| UV errado descoberto já dentro do 3DCoatTextura | *"Aqui não se corrige UV. Volta ao Blender, passa o checklist, reexporta e reimporta — é o caminho de volta do pipeline."* |
 
 ---
 
@@ -337,6 +398,7 @@ Com um único asset como foco, alguns estudantes podem terminar os três canais 
 | Normal Map gerado por pintura no canal Depth, com micro-relevo visível e escala coerente com o material do kit | C5 — Texturização | Comparar o render com e sem as marcas de Depth habilitadas: a diferença deve ser perceptível sem ser exagerada |
 | Coerência da abordagem (fotorrealista ou estilizada) com o moodboard do kit | C2 — Direção Artística | A base de Color e o tratamento de desgaste comunicam a trilha visual pretendida, sem mistura acidental de linguagem |
 | Camadas organizadas e nomeadas por função | C1 — Processo de Projeto | Verificar nomenclatura das camadas no painel Layers; presença de registro visual (screenshot) do material antes e depois do bake |
+| Clínica de exportação: a dupla identifica o sintoma, o cenário e a correção do FBX recebido | C1 — Processo de Projeto | Relato oral da dupla (sintoma → causa → correção) e reimportação correta no 3DCoatTextura |
 | Participação na crítica: identificar uso correto ou incorreto de máscara de AO/Curvature no trabalho de colega | C10 — Participação | Qualidade da observação — especificidade técnica (opacidade excessiva, máscara desconectada do modo de mistura) em vez de comentário genérico |
 
 ---

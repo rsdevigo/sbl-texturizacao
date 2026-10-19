@@ -1,7 +1,7 @@
 # Guia de migração: Substance Painter → 3DCoatTextura 2026
 
 > Material de apoio publicado no site, no menu **Recursos**.
-> Complementa a lista de cursos em [`Cursos_3DCoatTextura_Migracao_Substance.md`](Cursos_3DCoatTextura_Migracao_Substance.md).
+> Complementa a lista de cursos em [Cursos_3DCoatTextura_Migracao_Substance.md](/Recursos/Cursos_3DCoatTextura_Migracao_Substance.md).
 > Levantamento feito em outubro de 2026. Os nomes de menus do 3DCoat mudam entre versões, então confira na instalação do laboratório.
 
 ---

@@ -33,6 +33,8 @@ Levantamento de todos os recursos que o professor precisa preparar previamente, 
 | R27 | demo_uv1_validado.blend | Semana 15 | Blender / Unity | 15 | Asset com UV1 validado, pronto para receber UV2 (lightmap) ao vivo |
 | R28 | Ficha_Avaliacao_Pares_Instrumento3 | Semana 16 | — (PDF/digital) | 16 | Instrumento 3 da Rubrica Mestre — feedback entre colegas na defesa final |
 | R29 | Kit_Modular_Referencia_Professor | Semana 16 | Blender / 3DCoatTextura / Unity | 16 | Kit modular completo do professor (ou de uma coorte anterior) como padrão esperado |
+| R30 | Kit_Semana07/Kit_FBX_Defeitos (K1–K6) + gerar_kit_fbx_defeitos.py | Semana 07 | Blender / 3DCoatTextura | 7 | Seis caixotes em FBX (um correto, cinco com defeitos de exportação) para o quiz e a clínica de exportação — ver Kit_FBX_Defeitos_Semana07.md |
+| R31 | demo_S07_etapa1..4.3b | Semana 07 | 3DCoatTextura | 7 | Arquivos de segurança da demonstração, um por etapa (importado, Color, AO/Curvature, Depth) |
 
 ## Observações
 

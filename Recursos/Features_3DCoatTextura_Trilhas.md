@@ -1,7 +1,7 @@
 # Features do 3DCoatTextura 2026 por trilha visual
 
 > Material de apoio publicado no site, no menu **Recursos**.
-> Reúne **só as features do 3DCoat** citadas no [`Guia_Migracao_Substance_3DCoatTextura.md`](Guia_Migracao_Substance_3DCoatTextura.md), com a documentação oficial, um vídeo de referência e o uso em cada trilha.
+> Reúne **só as features do 3DCoat** citadas no [Guia_Migracao_Substance_3DCoatTextura.md](/Recursos/Guia_Migracao_Substance_3DCoatTextura.md), com a documentação oficial, um vídeo de referência e o uso em cada trilha.
 > Levantamento feito em outubro de 2026. Vários vídeos foram gravados em versões anteriores à 2026: o conceito vale, mas a interface pode estar diferente.
 
 **As três trilhas**

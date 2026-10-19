@@ -1,7 +1,7 @@
 # Cenários de exportação: Blender → 3DCoatTextura
 
 > Material de apoio publicado no site, no menu **Recursos**.
-> Complementa o [Guia de Migração Substance → 3DCoatTextura](Guia_Migracao_Substance_3DCoatTextura.md) e o Plano de Aula da Semana 7.
+> Complementa o [Guia de Migração Substance → 3DCoatTextura](/Recursos/Guia_Migracao_Substance_3DCoatTextura.md) e o Plano de Aula da Semana 7.
 > Levantamento feito em outubro de 2026. Os nomes exatos das opções da janela de importação mudam entre versões: confira na 2026 do laboratório.
 
 Ponto de partida: **o 3DCoatTextura não tem UV Room nem salas de modelagem**. Tudo o que for de malha e de UV precisa sair resolvido do Blender. O 3DCoat só consegue *receber* esses estados com algumas opções de importação.
