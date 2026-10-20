@@ -29,6 +29,12 @@
     - [Cursos e Playlists de 3DCoatTextura](/Recursos/Cursos_3DCoatTextura_Migracao_Substance.md)
     - [Cenários de Exportação Blender → 3DCoatTextura](/Recursos/Cenarios_Exportacao_Blender_3DCoatTextura.md)
     - [Kit de FBX com Defeito (Semana 7)](/Recursos/Kit_FBX_Defeitos_Semana07.md)
+  - Tutoriais
+    - [Índice de Tutoriais](/Tutoriais/README.md)
+    - [Smart Material Diffuse (geral)](/Tutoriais/Tutorial_Smart_Material_Diffuse_3DCoat.md)
+    - [Clone 1 — SimpleDiffuse](/Tutoriais/Clone_1_SimpleDiffuse.md)
+    - [Clone 2 — Stylized FT](/Tutoriais/Clone_2_Stylized_FT.md)
+    - [Clone 3 — SoMuchDiffuse](/Tutoriais/Clone_3_SoMuchDiffuse.md)
   - Guia do Professor
     - [Guia do Professor Texturizacao](/Guia%20do%20Professor/Guia_do_Professor_Texturizacao.md)
   - Slides
