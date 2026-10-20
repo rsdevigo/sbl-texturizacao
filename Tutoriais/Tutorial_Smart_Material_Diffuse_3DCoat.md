@@ -16,6 +16,7 @@ Neste tutorial você monta um Smart Material estilizado no 3DCoat. Ele gera uma 
 
 **Pré-requisitos**
 
+- Ter feito o [Tutorial 0 — Primeiros passos no 3DCoatTextura](/Tutoriais/Tutorial_0_Primeiros_Passos_3DCoatTextura.md) (interface, camadas, Attach + Fill, exportação).
 - Um módulo do kit (parede, piso, pilar) com UVs sem sobreposição. A sobreposição quebra AO e curvatura.
 - Mapa de normal assado do high poly (Blender ou 3DCoat).
 - 3DCoat 2021.53 ou mais novo (Cavity RGB como padrão). Os nomes das opções podem variar um pouco entre versões.

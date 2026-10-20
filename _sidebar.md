@@ -31,6 +31,7 @@
     - [Kit de FBX com Defeito (Semana 7)](/Recursos/Kit_FBX_Defeitos_Semana07.md)
   - Tutoriais
     - [Índice de Tutoriais](/Tutoriais/README.md)
+    - [Tutorial 0 — Primeiros passos](/Tutoriais/Tutorial_0_Primeiros_Passos_3DCoatTextura.md)
     - [Smart Material Diffuse (geral)](/Tutoriais/Tutorial_Smart_Material_Diffuse_3DCoat.md)
     - [Clone 1 — SimpleDiffuse](/Tutoriais/Clone_1_SimpleDiffuse.md)
     - [Clone 2 — Stylized FT](/Tutoriais/Clone_2_Stylized_FT.md)
