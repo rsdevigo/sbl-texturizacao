@@ -36,6 +36,12 @@
     - [Clone 1 — SimpleDiffuse](/Tutoriais/Clone_1_SimpleDiffuse.md)
     - [Clone 2 — Stylized FT](/Tutoriais/Clone_2_Stylized_FT.md)
     - [Clone 3 — SoMuchDiffuse](/Tutoriais/Clone_3_SoMuchDiffuse.md)
+    - Materiais por parte da malha
+      - [Modo 1 — Clipping Mask](/Tutoriais/Partes_1_Clipping_Mask.md)
+      - [Modo 2 — Freeze](/Tutoriais/Partes_2_Freeze.md)
+      - [Modo 3 — ID map](/Tutoriais/Partes_3_ID_Map.md)
+      - [Modo 4 — Fill direto por parte](/Tutoriais/Partes_4_Fill_por_Parte.md)
+      - [Modo 5 — Nós (2026)](/Tutoriais/Partes_5_Nos_2026.md)
   - Guia do Professor
     - [Guia do Professor Texturizacao](/Guia%20do%20Professor/Guia_do_Professor_Texturizacao.md)
   - Slides

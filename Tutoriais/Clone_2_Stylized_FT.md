@@ -19,7 +19,7 @@ O [Stylized FT](https://flippednormals.com/product/stylized-ft-smart-material-fo
 | Ambient Occlusion | Camada de oclusão suave |
 | Roughness / Metallic | Versão PBR opcional |
 
-**Antes de começar:** faça a Etapa 1 do [tutorial geral](/Tutoriais/Tutorial_Smart_Material_Diffuse_3DCoat.md) e o [Clone 1](/Tutoriais/Clone_1_SimpleDiffuse.md). Este clone parte da estrutura dele.
+**Antes de começar:** faça o [Clone 1](/Tutoriais/Clone_1_SimpleDiffuse.md), incluindo a preparação dos mapas (AO, curvatura e, se houver, normal map). Este clone parte da estrutura dele e usa os mesmos mapas.
 
 ## Criando os padrões no Krita
 
@@ -56,6 +56,7 @@ As camadas 1 a 6 ficam no Smart Material. As camadas 7 e 8 dependem da posição
 
 1. **Duplique o Clone 1.** Em `CLONE_SimpleDiffuse`, use *Duplicate* e renomeie para `CLONE_FT`.
    - *Por quê:* as camadas de base, cavidade, AO e borda já estão prontas. O FT é uma evolução do mesmo esqueleto.
+   - **Remova as camadas 6 a 8 do Clone 1** (gradientes por condição e variação). No FT, os gradientes são assados por módulo (camadas 7 e 8 deste clone, por causa do controle *Position*), e o padrão pintado faz o papel da variação.
 2. **Insira a camada de padrão (2) logo acima da base.** Carregue `PAT_*.png` no canal *Color* e no canal *Depth*, com *Preferred Mapping: Cube*. Mantenha o *Depth* baixo.
    - *Por quê:* no *Color*, o padrão varia o tom. No *Depth*, ele cria relevo, e as camadas de cavidade e borda passam a reagir às juntas e aos veios. É assim que o "pattern generation" conversa com o resto.
    - Cube mapping projeta o padrão pelos 3 eixos, sem depender das UVs. Isso evita costuras em módulos com muitas ilhas.

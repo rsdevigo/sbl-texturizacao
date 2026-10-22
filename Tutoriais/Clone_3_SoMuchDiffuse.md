@@ -24,20 +24,26 @@ Diferente dos outros dois, este produto tem [documentação pública](https://ww
 
 **Antes de começar:** faça o [Clone 1](/Tutoriais/Clone_1_SimpleDiffuse.md). A Parte A parte dele.
 
-## Preparação: mapas extras
+## Preparação: os mapas que alimentam as máscaras
 
-O SoMuchDiffuse parte de mapas assados do high poly. Além de AO e curvatura (Etapa 1 do [tutorial geral](/Tutoriais/Tutorial_Smart_Material_Diffuse_3DCoat.md)), o clone precisa de mais dois.
+O SoMuchDiffuse parte de mapas assados do high poly. O clone precisa de AO e curvatura (os mesmos do Clone 1) e de mais dois mapas: thickness e, opcionalmente, directional occlusion.
 
-1. **Curvatura em duas escalas.** Calcule uma vez com intensidade alta (cavity nítida) e guarde. Depois calcule com intensidade baixa e long-range alto (curvatura suave).
+1. **Importe o low poly (e o normal map, se houver).** Em *File → Import*, carregue o módulo para o *Paint Room* (UV/Per-pixel painting). O normal map assado do high poly no Blender é **opcional**: se houver, aplique-o numa camada e dê Alt+clique no olho dela, para que só ela fique visível.
+   - *Por quê:* a curvatura do 3DCoat é calculada a partir da malha e do relevo visível, e outras camadas visíveis contaminam o cálculo. Sem normal map, as máscaras enxergam só a geometria da low poly, então chanfre (bevel) as quinas importantes no Blender para a borda ter onde aparecer.
+2. **Calcule a oclusão (AO).** Em *Edit → Calculate Occlusion and Curvature maps*. Confira também, em *Edit → Preferences → Tools*, se o RGB Cavity está ativo (padrão desde a 2021.53).
+   - *Por quê:* as camadas de sombra e de cor de oclusão (2 e 5) leem o AO. O Cavity RGB libera o *Cavity Area Width*, usado nas cavidades.
+3. **Curvatura em duas escalas.** Calcule uma vez com intensidade alta (cavity nítida) e guarde. Depois calcule com intensidade baixa e long-range alto (curvatura suave).
    - *Por quê:* o original separa *Cavity* de *Soft Cavity* e tem *Curvature Blur*. Duas escalas reproduzem isso: uma desenha a fresta, a outra o volume.
-2. **Thickness.** Em *Light Baking*, tipo *Thickness*. Grave numa camada oculta chamada `MAP_thickness`.
+4. **Thickness.** Em *Light Baking*, tipo *Thickness*. Grave numa camada oculta chamada `MAP_thickness`.
    - *Por quê:* é a máscara do grupo Thickness do original, que marca partes finas onde a luz atravessa.
-3. **Directional Occlusion (opcional).** Em *Light Baking*, tipo *Directional Occlusion*.
+5. **Directional Occlusion (opcional).** Em *Light Baking*, tipo *Directional Occlusion*.
    - *Por quê:* ao contrário do AO comum, ela considera a direção da luz. Pode substituir a máscara *Worldspace Intensity*, que limpa a sujeira do lado iluminado.
+
+**Evidência:** antes de seguir, mostre ao colega ao lado os mapas de AO, as duas curvaturas e o thickness. Escuro nas frestas, claro nas quinas vivas e claro nas partes finas significa que deu certo.
 
 ## Parte A — Smart Material (forma)
 
-Duplique o Clone 1 como `CLONE_SoMuchDiffuse` e reorganize as camadas assim:
+Duplique o Clone 1 como `CLONE_SoMuchDiffuse`, **remova as camadas 6 a 8 do Clone 1** (gradientes por condição e variação: aqui a luz de topo e a de baixo vêm do rig assado na Parte B) e reorganize as camadas assim:
 
 | # | Camada | Condition | Modo | Cor | Opacidade |
 | --- | --- | --- | --- | --- | --- |
