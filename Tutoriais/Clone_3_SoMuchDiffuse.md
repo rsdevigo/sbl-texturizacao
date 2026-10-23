@@ -1,6 +1,8 @@
-# Clone 3 — SoMuchDiffuse no 3DCoat
+# Clone 3 — SoMuchDiffuse no 3DCoatTextura
 
 20/10/2026 · Rodrigo
+
+> **3DCoatTextura 2026.** Na versão 2026.11, os Smart Materials padrão da biblioteca foram convertidos para o sistema de nós (*NGMaterials*). Este tutorial monta o material no **Smart Material Editor** (camadas com *Condition Mask*), o fluxo clássico. Antes da aula, confira na versão do laboratório se o botão **+** do painel *Smart Materials* ainda cria um Smart Material desse tipo. Se não criar, monte cada camada em nós: um *SimpleMaterial* com a cor da camada e um *SimpleMask* com o *condition type* equivalente (*More on Convex* → convex, *More on Concave* → concave, *More on Shadow* → in shadow).
 
 ## O que vamos clonar
 
@@ -15,11 +17,11 @@ Diferente dos outros dois, este produto tem [documentação pública](https://ww
 | Cavity | Color, Clipping, Contrast, Soft Cavity, Worldspace Intensity | Cavidade nítida + cavidade suave + limpeza no lado iluminado | A e B |
 | Ambient Occlusion | Occlusion Color, Spread | Camada de oclusão com cor própria | A |
 | Thickness | Color, Spread | Mapa Thickness como máscara | A |
-| Specular | Number of Lights, Rig Height, Light Rotation, Exponent | Luzes do Render Room + Light Baking | B |
+| Specular | Number of Lights, Rig Height, Light Rotation, Exponent | Luzes do Render Room + Light Baking Tool | B |
 | Specular Edges | Edge Color, Edge Exponent | Borda × máscara de luz | B |
 | Underlight | Gradient Top/Bottom, Intensity, Spread | Luz rebatida de baixo | B |
 | WSN Mask | Máscara da parte de baixo | Brilho apagado nas faces voltadas para baixo | B |
-| Post Process | Cel Shading, Highlight HSL | Ajustes finais no 3DCoat, Krita ou shader | C |
+| Post Process | Cel Shading, Highlight HSL | Ajustes finais no 3DCoatTextura, Krita ou shader | C |
 | Overrides | Baked Lighting on/off | Saída única ou separada | C |
 
 **Antes de começar:** faça o [Clone 1](/Tutoriais/Clone_1_SimpleDiffuse.md). A Parte A parte dele.
@@ -29,14 +31,14 @@ Diferente dos outros dois, este produto tem [documentação pública](https://ww
 O SoMuchDiffuse parte de mapas assados do high poly. O clone precisa de AO e curvatura (os mesmos do Clone 1) e de mais dois mapas: thickness e, opcionalmente, directional occlusion.
 
 1. **Importe o low poly (e o normal map, se houver).** Em *File → Import*, carregue o módulo para o *Paint Room* (UV/Per-pixel painting). O normal map assado do high poly no Blender é **opcional**: se houver, aplique-o numa camada e dê Alt+clique no olho dela, para que só ela fique visível.
-   - *Por quê:* a curvatura do 3DCoat é calculada a partir da malha e do relevo visível, e outras camadas visíveis contaminam o cálculo. Sem normal map, as máscaras enxergam só a geometria da low poly, então chanfre (bevel) as quinas importantes no Blender para a borda ter onde aparecer.
-2. **Calcule a oclusão (AO).** Em *Edit → Calculate Occlusion and Curvature maps*. Confira também, em *Edit → Preferences → Tools*, se o RGB Cavity está ativo (padrão desde a 2021.53).
+   - *Por quê:* a curvatura do 3DCoatTextura é calculada a partir da malha e do relevo visível, e outras camadas visíveis contaminam o cálculo. Sem normal map, as máscaras enxergam só a geometria da low poly, então chanfre (bevel) as quinas importantes no Blender para a borda ter onde aparecer.
+2. **Calcule a oclusão (AO).** Em *Edit → Calculate Occlusion and Curvature maps*. Confira também, em *Edit → Preferences → Tools*, se a opção *RGB Cavity "Curvature"* está ativa (no 3DCoatTextura 2026 ela já vem ativa por padrão).
    - *Por quê:* as camadas de sombra e de cor de oclusão (2 e 5) leem o AO. O Cavity RGB libera o *Cavity Area Width*, usado nas cavidades.
 3. **Curvatura em duas escalas.** Calcule uma vez com intensidade alta (cavity nítida) e guarde. Depois calcule com intensidade baixa e long-range alto (curvatura suave).
    - *Por quê:* o original separa *Cavity* de *Soft Cavity* e tem *Curvature Blur*. Duas escalas reproduzem isso: uma desenha a fresta, a outra o volume.
-4. **Thickness.** Em *Light Baking*, tipo *Thickness*. Grave numa camada oculta chamada `MAP_thickness`.
+4. **Thickness.** Na *Light Baking Tool* (menu *Edit*), em *Map Type: Thickness*. Grave numa camada oculta chamada `MAP_thickness`.
    - *Por quê:* é a máscara do grupo Thickness do original, que marca partes finas onde a luz atravessa.
-5. **Directional Occlusion (opcional).** Em *Light Baking*, tipo *Directional Occlusion*.
+5. **Directional Occlusion (opcional).** Na *Light Baking Tool* (menu *Edit*), em *Map Type: Directional Occlusion*.
    - *Por quê:* ao contrário do AO comum, ela considera a direção da luz. Pode substituir a máscara *Worldspace Intensity*, que limpa a sujeira do lado iluminado.
 
 **Evidência:** antes de seguir, mostre ao colega ao lado os mapas de AO, as duas curvaturas e o thickness. Escuro nas frestas, claro nas quinas vivas e claro nas partes finas significa que deu certo.
@@ -45,13 +47,13 @@ O SoMuchDiffuse parte de mapas assados do high poly. O clone precisa de AO e cur
 
 Duplique o Clone 1 como `CLONE_SoMuchDiffuse`, **remova as camadas 6 a 8 do Clone 1** (gradientes por condição e variação: aqui a luz de topo e a de baixo vêm do rig assado na Parte B) e reorganize as camadas assim:
 
-| # | Camada | Condition | Modo | Cor | Opacidade |
+| # | Camada | Condition Mask | Modo | Cor | Opacidade |
 | --- | --- | --- | --- | --- | --- |
 | 1 | `01 Diffuse Color` | Always | Normal | Cor média | 100% |
-| 2 | `02 Shadow Color` | Shadow (oclusão), contraste baixo | Multiply | Cor escolhida (ex.: roxo médio) | 40 a 60% |
-| 3 | `03 Cavity – clipping/contrast` | More on concave, nítida | Multiply | Escura e saturada | 70% |
-| 4 | `04 Soft Cavity` | More on concave, largura alta | Multiply | Igual à cavidade | 25% |
-| 5 | `05 Occlusion Color` | Shadow, contraste médio | Multiply | Cor própria do AO (ex.: azul escuro) | 30% |
+| 2 | `02 Shadow Color` | More on Shadow, contraste baixo | Multiply | Cor escolhida (ex.: roxo médio) | 40 a 60% |
+| 3 | `03 Cavity – clipping/contrast` | More on Concave, nítida | Multiply | Escura e saturada | 70% |
+| 4 | `04 Soft Cavity` | More on Concave, largura alta | Multiply | Igual à cavidade | 25% |
+| 5 | `05 Occlusion Color` | More on Shadow, contraste médio | Multiply | Cor própria do AO (ex.: azul escuro) | 30% |
 | 6 | `06 Thickness` | Máscara `MAP_thickness` | Screen | Clara e saturada | 20% |
 
 1. **Use Multiply com uma cor escolhida na sombra (2).**
@@ -69,7 +71,7 @@ Esta é a parte que distingue o SoMuchDiffuse. O rig é montado uma vez, salvo, 
 
 1. **Monte o rig no Render Room.** Comece com 3 luzes distribuídas ao redor do objeto, na mesma altura (40 a 60° acima do horizonte). Salve a cena de luz como preset do grupo.
    - *Por quê:* é o equivalente a *Number of Lights*, *Specular Rig Height* e *Specular Light Rotation*. Luzes espalhadas acendem todos os lados, e o objeto lê bem de qualquer ângulo de câmera. 1 luz dá mais drama, 4 a 8 luzes dão leitura mais uniforme.
-2. **Camada 7 — Top Down.** Asse com *Light Baking → Light From Render Room* numa camada em *Overlay*, com cor quente, a 30 a 40%.
+2. **Camada 7 — Top Down.** Asse com a *Light Baking Tool*, *Map Type: Light From Render Room*, numa camada em *Overlay*, com cor quente, a 30 a 40%.
    - *Por quê:* é o *Diffuse Gradient* com *Gradient Type: lit*. A opacidade faz o papel do *Spread*.
 3. **Camada 8 — Specular.** Asse de novo, agora com as luzes mais concentradas (spot estreito ou intensidade alta), numa camada em *Add* ou *Screen*, a 20 a 30%.
    - *Por quê:* é o highlight especular pintado. O *Specular Exponent* do original controla o tamanho do brilho, e aqui quem faz isso é a abertura da luz: luz estreita dá brilho pequeno e duro.
@@ -84,7 +86,7 @@ Esta é a parte que distingue o SoMuchDiffuse. O rig é montado uma vez, salvo, 
 
 ## Parte C — Pós-processo e saída
 
-1. **Highlight HSL.** Selecione as áreas mais claras (camadas 7 a 9) e aplique um ajuste de matiz/saturação: matiz +5 a +10° para o amarelo, saturação +10 a +15%. Faça no menu de ajustes de camada do 3DCoat ou exporte para o Krita.
+1. **Highlight HSL.** Selecione as áreas mais claras (camadas 7 a 9) e aplique um ajuste de matiz/saturação: matiz +5 a +10° para o amarelo, saturação +10 a +15%. Faça no menu de ajustes de camada do 3DCoatTextura ou exporte para o Krita.
    - *Por quê:* é o *Highlight HSL* do original (*Highlight Clip* isola a faixa clara, *Hue/Saturation* deslocam a cor). Luz quente e saturada lê como sol.
 2. **Cel shading (opcional).** Para um visual toon, faça o corte luz/sombra no shader do Unity: um *Shader Graph* com *Step* ou *Smoothstep* sobre a luminância, com dois parâmetros equivalentes a *Cel Bias* (ponto de corte) e *Cel Softness* (suavidade).
    - *Por quê:* posterizar a textura pintada cria serrilhado. No shader, o corte fica limpo e ajustável em tempo real.
@@ -169,7 +171,7 @@ Mesma pilha do 3R, mas o brilho vai para uma cor especular em vez de metalness. 
 | 3R | URP/Lit, *Workflow Mode: Metallic* | Base Map, Metallic Map (smoothness no alfa), Normal Map |
 | 3S | URP/Lit, *Workflow Mode: Specular* | Base Map, Specular Map (smoothness no alfa), Normal Map |
 
-- O Glossiness do 3DCoat equivale ao Smoothness do Unity (roughness invertido). Ao exportar, empacote o gloss no **alfa** do mapa de Metallic ou Specular, que é onde o URP lê o smoothness.
+- O Glossiness do 3DCoatTextura equivale ao Smoothness do Unity (roughness invertido). Ao exportar, empacote o gloss no **alfa** do mapa de Metallic ou Specular, que é onde o URP lê o smoothness.
 - Exporte o normal no formato **OpenGL (Y+)**, que é o do Unity. É o mesmo ajuste do controle *Normal Format* do original.
 - *Por quê do URP/Lit aqui:* agora os canais existem para a luz real reagir a eles. O shader Unlit ignoraria roughness, metal e normal.
 
@@ -186,6 +188,6 @@ Mesma pilha do 3R, mas o brilho vai para uma cor especular em vez de metalness. 
 - [ ] As frestas são mais fracas no lado iluminado.
 - [ ] A saída escolhida (baked ou separada) combina com o shader usado.
 
-**Limite do clone:** o original recalcula a luz ao mexer num slider. No 3DCoat, mudar a luz exige assar de novo as camadas 7 a 10. Por isso o rig deve ser decidido cedo, junto com o tema do kit.
+**Limite do clone:** o original recalcula a luz ao mexer num slider. No 3DCoatTextura, mudar a luz exige assar de novo as camadas 7 a 10. Por isso o rig deve ser decidido cedo, junto com o tema do kit.
 
-**Fontes:** [SoMuchMaterials — produto](https://www.somuchmonsters.com/somuchdiffuse) · [SoMuchMaterials — documentação](https://www.somuchmonsters.com/somuchmaterials-documentation) · [3DCoat — Light Baking](https://3dcoat.com/documentation/?p=10277) · [3DCoat — Cavity and Curvature](https://3dcoat.com/documentation/?p=10661)
+**Fontes:** [SoMuchMaterials — produto](https://www.somuchmonsters.com/somuchdiffuse) · [SoMuchMaterials — documentação](https://www.somuchmonsters.com/somuchmaterials-documentation) · [3DCoat — Light Baking Tool](https://3dcoat.com/documentation/?p=10277) · [3DCoat — Cavity and Curvature](https://3dcoat.com/documentation/?p=10661)

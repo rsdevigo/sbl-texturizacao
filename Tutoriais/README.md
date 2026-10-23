@@ -1,4 +1,4 @@
-# Tutoriais — Smart Materials estilizados no 3DCoat
+# Tutoriais — Smart Materials estilizados no 3DCoatTextura
 
 Criados em 20/10/2026.
 
@@ -22,4 +22,4 @@ Cinco modos de aplicar materiais só em uma parte do modelo (o "folder com másc
 | [2. Freeze](/Tutoriais/Partes_2_Freeze.md) | Congela tudo menos a parte antes do Fill | Não (refazer o congelamento) | Poucas partes, aplicação rápida, retoques protegidos |
 | [3. ID map](/Tutoriais/Partes_3_ID_Map.md) | Seleção por cor de um ID map assado no Blender | Sim, se virar máscara do modo 1 | Muitas partes, ou partes que não coincidem com materiais/objetos |
 | [4. Fill direto por parte](/Tutoriais/Partes_4_Fill_por_Parte.md) | Escopo do Fill: objeto, material ou ângulo | Não | Blocagem e testes rápidos; preencher as máscaras do modo 1 |
-| [5. Nós (2026)](/Tutoriais/Partes_5_Nos_2026.md) | *Out mask* da pasta com imagem preto e branco da parte | Sim (procedural) | Fluxo procedural; testar na versão do laboratório antes |
+| [5. Nós (2026)](/Tutoriais/Partes_5_Nos_2026.md) | *out mask* da pasta com imagem preto e branco da parte | Sim (procedural) | Fluxo procedural; exige 3DCoatTextura 2026.11 ou mais novo |

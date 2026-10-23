@@ -2,13 +2,13 @@
 
 22/10/2026 · Rodrigo
 
-> Os nomes de menus do 3DCoat mudam entre versões. Se alguma opção não estiver no lugar indicado, confira na versão 2026 do laboratório e anote a diferença para a turma.
+> Os nomes de menus do 3DCoatTextura mudam entre versões. Se alguma opção não estiver no lugar indicado, confira na versão 2026 do laboratório e anote a diferença para a turma.
 
 ## Visão geral
 
 Um **ID map** é uma textura de cores chapadas, uma cor por parte do modelo: tábuas em vermelho, aros em azul, pregos em amarelo. Ela não aparece no jogo. Serve só para dizer ao programa onde fica cada parte.
 
-No Substance, você usa o ID map com o *Color Selection* na máscara da pasta. No 3DCoat, o ID map vira uma **camada**, e a ferramenta **Select** escolhe uma cor dela e transforma essa área numa seleção (congelamento). A partir da seleção, você cria a máscara da parte ou aplica o material direto.
+No Substance, você usa o ID map com o *Color Selection* na máscara da pasta. No 3DCoatTextura, o ID map vira uma **camada**, e a ferramenta **Select** escolhe uma cor dela e transforma essa área numa seleção (congelamento). A partir da seleção, você cria a máscara da parte ou aplica o material direto.
 
 **Quando usar:** peças com **muitas partes** ou partes que não coincidem com materiais e objetos do Blender (uma faixa de tinta, um entalhe, uma área de couro dentro da mesma malha). É também o caminho natural quando o modelo vem com bake de high poly, que já pode gerar o ID map junto (Semanas 11–12).
 
@@ -30,10 +30,10 @@ O 3DCoatTextura não gera ID map a partir de um high poly. O mapa precisa vir pr
 
 **Evidência:** o PNG do ID aberto no Krita ou no Blender, com uma cor uniforme por parte e bordas limpas.
 
-## Etapa 2 — Importar o ID map no 3DCoat
+## Etapa 2 — Importar o ID map no 3DCoatTextura
 
 1. **Importe o modelo** em Per-Pixel Painting, como de costume.
-2. **Importe o ID map como camada.** *Textures → Import Layers Colors* e escolha o PNG.
+2. **Importe o ID map como camada.** *Textures → Import Layers Colors* e escolha o PNG. (Se não estiver ali na versão do laboratório, procure no menu *Layers* a importação de *Layers Color*.)
    - *Por quê:* o ID entra como uma camada comum na pilha, que pode ser usada para seleção e máscaras.
 3. **Renomeie a camada para `ID` e deixe-a no topo.** Ela pode ficar visível enquanto você seleciona e oculta no resto do tempo.
    - *Por quê:* a seleção por cor lê o que está visível. Com o ID por cima de tudo, as cores dele não se misturam com os materiais.
@@ -45,7 +45,7 @@ O 3DCoatTextura não gera ID map a partir de um high poly. O mapa precisa vir pr
 1. **Deixe só a camada `ID` visível** (Alt+clique no olho).
 2. **Pegue a ferramenta Select** e clique sobre a cor dos aros. Ajuste a tolerância se a seleção pegar cores vizinhas ou deixar falhas.
    - `Shift` + clique adiciona outra cor à seleção (aros **e** pregos, por exemplo). `Ctrl` + clique remove.
-   - *Por quê:* é o *Color Selection* do Substance. A ferramenta Select transforma a área daquela cor numa seleção, que o 3DCoat representa como área congelada.
+   - *Por quê:* é o *Color Selection* do Substance. A ferramenta Select transforma a área daquela cor numa seleção, que o 3DCoatTextura representa como área congelada.
 3. **Confira o lado da seleção.** Faça um teste rápido: numa camada nova, pinte uma pincelada larga passando pelos aros e pelas tábuas.
    - Se a tinta ficou **só nos aros**, a seleção está pronta. Desfaça o teste (`Ctrl+Z`).
    - Se a tinta ficou **só fora dos aros**, use *Freeze → Invert Freeze/Selection* e teste de novo.
@@ -61,7 +61,7 @@ Com a seleção pronta, crie uma máscara da parte para usar com **Clipping Mask
 2. **Preencha só a área selecionada.** *Freeze → Fill Unfrozen*, com qualquer cor.
 3. **Desfaça a seleção.** *Freeze → Unfreeze All*.
    - *Por quê:* agora a parte está registrada numa camada. Você não precisa mais do ID para essa parte, e pode corrigir a máscara com pincel ou borracha.
-4. **Aplique o material e prenda à máscara.** Crie `Aros – Smart Material metal` acima de `M Aros`, prenda o Smart Material (*Attach*), use *Fill entire layer* e, no painel de **Blending** da camada, defina **Clip Mask Layer** = `M Aros`.
+4. **Aplique o material e prenda à máscara.** Crie `Aros – Smart Material metal` acima de `M Aros`, prenda o Smart Material (*Attach*), use *Fill Entire Layer* e, no painel **Layer Blending** da camada (botão direito na camada → *Layer Blending*), defina **Clip Mask Layer** = `M Aros`.
    - *Por quê:* o material fica no objeto todo, mas só aparece onde a máscara tem tinta. Se a máscara mudar, o material acompanha sem refazer o Fill.
 5. **Repita para cada cor do ID.**
 

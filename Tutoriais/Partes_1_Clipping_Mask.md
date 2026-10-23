@@ -3,18 +3,18 @@
 22/10/2026 · Rodrigo
 
 > **Modo recomendado.** É o mais parecido com "pasta com máscara" do Substance Painter e o único em que a máscara continua editável depois que os materiais já foram aplicados.
-> Os nomes de menus do 3DCoat mudam entre versões. Se alguma opção não estiver no lugar indicado, confira na versão 2026 do laboratório e anote a diferença para a turma.
+> Os nomes de menus do 3DCoatTextura mudam entre versões. Se alguma opção não estiver no lugar indicado, confira na versão 2026 do laboratório e anote a diferença para a turma.
 
 ## Visão geral
 
 No Substance, você cria uma pasta, põe uma máscara preta nela, pinta de branco a parte do modelo (os aros de um barril, por exemplo) e tudo que estiver dentro da pasta só aparece ali.
 
-No 3DCoat, a mesma ideia é feita com **Clipping Mask**:
+No 3DCoatTextura, a mesma ideia é feita com **Clipping Mask**:
 
 - uma camada **de máscara** existe só na parte desejada (os aros);
 - as camadas de material ficam **presas** (*clipped*) a ela e só aparecem onde a máscara tem tinta.
 
-> **A regra que faz tudo funcionar:** no 3DCoat, a máscara é a **transparência** da camada. Onde a camada de máscara foi pintada ou preenchida, o material aparece. Onde ela é transparente, o material some. Não existe máscara em tons de cinza separada como no Photoshop: a própria camada é a máscara.
+> **A regra que faz tudo funcionar:** no 3DCoatTextura, a máscara é a **transparência** da camada. Onde a camada de máscara foi pintada ou preenchida, o material aparece. Onde ela é transparente, o material some. Não existe máscara em tons de cinza separada como no Photoshop: a própria camada é a máscara.
 
 **Por que este é o modo preferido**
 
@@ -28,17 +28,17 @@ No 3DCoat, a mesma ideia é feita com **Clipping Mask**:
 
 ## Etapa 1 — Separar as partes no Blender
 
-Para preencher a máscara com um clique, o 3DCoat precisa saber onde começa e termina cada parte. Isso se decide no Blender.
+Para preencher a máscara com um clique, o 3DCoatTextura precisa saber onde começa e termina cada parte. Isso se decide no Blender.
 
 1. **Atribua um material por parte.** No barril: `Tabuas` e `Aros`. Use *Material Properties → +* e, no modo de edição, selecione as faces de cada parte e clique em *Assign*.
-   - *Por quê:* no 3DCoat, cada material do Blender chega como uma parte separada (*Surface Material*), que pode ser preenchida ou congelada inteira com um clique.
+   - *Por quê:* no 3DCoatTextura, cada material do Blender chega como uma parte separada (*Surface Material*), que pode ser preenchida ou congelada inteira com um clique.
    - Os materiais aqui servem só para **separar áreas**. As cores e texturas deles não importam.
 2. **Ou separe em objetos.** Se as partes já são peças soltas (um prego, uma alça), pode deixá-las como objetos diferentes no mesmo FBX.
    - *Por quê:* objetos separados chegam como *Paint Objects*, que também podem ser preenchidos ou congelados inteiros.
 3. **Confira o UV e exporte.** UV sem sobreposição, transformações aplicadas, exportação em FBX.
-   - *Por quê:* se cada material tiver um UV separado, o 3DCoat pode criar um conjunto de texturas por material. Para o kit modular, prefira **um único UV** (atlas) com vários materiais apontando para ele.
+   - *Por quê:* se cada material tiver um UV separado, o 3DCoatTextura pode criar um conjunto de texturas por material. Para o kit modular, prefira **um único UV** (atlas) com vários materiais apontando para ele.
 
-**Evidência:** no Blender, cada parte com uma cor de material diferente no *Viewport Shading → Material*.
+**Evidência:** no Blender, cada parte com uma cor de material diferente no *Viewport Shading: Solid*, com *Color: Material*.
 
 ## Etapa 2 — Organizar a pilha em pastas
 
@@ -90,15 +90,15 @@ Escolha **uma** das formas abaixo. Todas produzem o mesmo resultado: a camada `M
 
 1. **Crie a camada do material** acima de `M Aros`, dentro da pasta. Nomeie `Aros – Smart Material metal`.
 2. **Prenda (Attach) o Smart Material.** Clique com o botão direito no material na biblioteca → *Attach to the current layer*.
-3. **Preencha a camada inteira.** Botão direito na camada → *Fill entire layer* (ou o Fill com escopo *Layer*).
+3. **Preencha a camada inteira.** Botão direito na camada → *Fill Entire Layer* (ou o Fill com escopo *Layer*).
    - *Por quê:* o material é preenchido no objeto todo. Quem decide onde ele aparece é a máscara, não o Fill. Isso é o que permite mudar a máscara depois sem refazer o material.
-4. **Prenda a camada à máscara.** Com a camada do material selecionada, abra o painel de **Blending** da camada e, em **Clip Mask Layer**, escolha `M Aros` na lista.
+4. **Prenda a camada à máscara.** Com a camada do material selecionada, abra o painel **Layer Blending** da camada (botão direito na camada → *Layer Blending*) e, em **Clip Mask Layer**, escolha `M Aros` na lista.
    - *Por quê:* a partir daqui, a camada só aparece onde `M Aros` tem tinta. Os aros ficam metálicos e as tábuas não são afetadas.
    - Atalho: botão direito numa camada → **Clipping Mask** cria uma camada de máscara nova logo abaixo dela, já ligada.
 5. **Repita para cada camada da pasta.** Toda camada nova (outro material, sujeira, desgaste à mão) recebe o mesmo **Clip Mask Layer** = `M Aros`.
    - *Por quê:* várias camadas podem usar a mesma máscara. É o equivalente a "tudo que está dentro da pasta respeita a máscara da pasta".
 
-> **Por que não basta colocar a camada dentro da pasta?** No 3DCoat, a pasta organiza e permite mudar opacidade e modo de mistura do grupo, mas não recorta sozinha. O recorte vem do *Clip Mask Layer* de cada camada.
+> **Por que não basta colocar a camada dentro da pasta?** No 3DCoatTextura, a pasta organiza e permite mudar opacidade e modo de mistura do grupo, mas não recorta sozinha. O recorte vem do *Clip Mask Layer* de cada camada.
 
 **Evidência:** gire o modelo e confira que o metal aparece só nos aros. Depois, dê uma pincelada de teste na camada `M Aros` sobre uma tábua: o metal deve aparecer ali também. Desfaça a pincelada (`Ctrl+Z`) e siga.
 
@@ -108,7 +108,7 @@ Escolha **uma** das formas abaixo. Todas produzem o mesmo resultado: a camada `M
 
 1. **Aumente ou corrija a área.** Selecione `M Aros` e pinte com o pincel numa área nova (a ponta de um prego, por exemplo). O metal aparece ali na hora.
 2. **Remova área.** Use a borracha na camada `M Aros`. O metal some daquela região.
-3. **Inverta, se precisar.** No painel de Blending de uma camada de material, **Invert Clip Mask** faz a camada aparecer **fora** da máscara.
+3. **Inverta, se precisar.** No painel *Layer Blending* de uma camada de material, **Invert Clip Mask** faz a camada aparecer **fora** da máscara.
    - *Por quê:* é útil para "tudo menos os aros" sem criar outra máscara.
    - Para conferir a área de uma máscara, `Ctrl+clique` na camada mostra as regiões transparentes como congeladas. Para limpar a visualização: `Ctrl+D` e depois *Freeze → Unfreeze All*.
 
@@ -131,7 +131,7 @@ Escolha **uma** das formas abaixo. Todas produzem o mesmo resultado: a camada `M
 
 | Sintoma | Causa provável | Correção |
 | --- | --- | --- |
-| O material aparece no modelo inteiro | Camada sem *Clip Mask Layer* definido | Abrir o painel de Blending da camada e escolher a máscara |
+| O material aparece no modelo inteiro | Camada sem *Clip Mask Layer* definido | Abrir o painel *Layer Blending* da camada e escolher a máscara |
 | O material não aparece em lugar nenhum | Máscara vazia, ou presa à camada errada | Conferir a máscara visível sozinha (Etapa 3) e o nome escolhido na lista |
 | O material aparece fora da parte | *Invert Clip Mask* ligado sem querer | Desligar o *Invert Clip Mask* |
 | O Fill por *Surface Material* pinta o modelo todo | As partes não chegaram separadas | Voltar à Etapa 1 e conferir os materiais no Blender |

@@ -1,6 +1,8 @@
-# Clone 1 — SimpleDiffuse no 3DCoat
+# Clone 1 — SimpleDiffuse no 3DCoatTextura
 
 20/10/2026 · Rodrigo
+
+> **3DCoatTextura 2026.** Na versão 2026.11, os Smart Materials padrão da biblioteca foram convertidos para o sistema de nós (*NGMaterials*). Este tutorial monta o material no **Smart Material Editor** (camadas com *Condition Mask*), o fluxo clássico. Antes da aula, confira na versão do laboratório se o botão **+** do painel *Smart Materials* ainda cria um Smart Material desse tipo. Se não criar, monte cada camada em nós: um *SimpleMaterial* com a cor da camada e um *SimpleMask* com o *condition type* equivalente (*More on Convex* → convex, *More on Concave* → concave, *More on Shadow* → in shadow).
 
 ## O que vamos clonar
 
@@ -18,7 +20,7 @@ O [SimpleDiffuse](https://nhanceschool.gumroad.com/l/SimpleDiffuse) é vendido c
 | Gradients (claro de cima, escuro multiplicado de baixo; Gradient Color, Power) | Camadas 6 e 7 — Gradientes de topo e de base |
 | Texturizer (variação de cor com ruídos) | Camada 8 — Variação |
 | Base Light, Rim Light | Fora deste clone: é o assunto do [Clone 3](/Tutoriais/Clone_3_SoMuchDiffuse.md) (rig de luz e underlight) |
-| Post Process (Multiply, Overlay) | Ajustes finais da camada no 3DCoat (opacidade, *Adjust*), se necessário |
+| Post Process (Multiply, Overlay) | Ajustes finais da camada no 3DCoatTextura (opacidade, *Adjust*), se necessário |
 
 **O clone entrega**
 
@@ -37,17 +39,17 @@ Nada no material funciona sem AO e curvatura calculados. Todas as camadas do clo
 - Um módulo do kit (parede, piso, pilar) com UVs sem sobreposição. A sobreposição quebra AO e curvatura.
 - **Opcional:** mapa de normal assado do high poly no Blender (o 3DCoatTextura não faz bake de high para low). Sem ele, o material funciona com a geometria da própria low poly.
 - Quinas importantes chanfradas (bevel) no Blender, principalmente se não houver normal map. É no chanfro que a borda ganha largura para aparecer.
-- 3DCoat 2021.53 ou mais novo (Cavity RGB como padrão). Os nomes das opções podem variar um pouco entre versões.
+- 3DCoatTextura 2026, a versão adotada na disciplina. Os nomes das opções podem variar um pouco entre atualizações.
 
 1. **Importe o low poly (e o normal map, se houver).** Em *File → Import*, carregue o módulo para o *Paint Room* (UV/Per-pixel painting). Se tiver normal map, aplique-o numa camada.
-   - *Por quê:* a curvatura do 3DCoat é calculada a partir da malha e do relevo visível. Com normal map, as máscaras enxergam também o detalhe esculpido (rachaduras, entalhes). Sem ele, enxergam só a geometria da low poly: bordas aparecem apenas nas quinas que existem em polígonos e cavidades apenas onde a malha tem reentrâncias.
+   - *Por quê:* a curvatura do 3DCoatTextura é calculada a partir da malha e do relevo visível. Com normal map, as máscaras enxergam também o detalhe esculpido (rachaduras, entalhes). Sem ele, enxergam só a geometria da low poly: bordas aparecem apenas nas quinas que existem em polígonos e cavidades apenas onde a malha tem reentrâncias.
    - Sem normal map, o detalhe fino pode ser pintado no canal *Depth* antes de calcular a curvatura. As condições passam a reagir a ele, e ele vira normal map na exportação.
 2. **Isole o normal map (se houver).** Alt+clique no olho da camada do normal, para que só ela fique visível. Sem normal map, apenas deixe ocultas as outras camadas com relevo.
    - *Por quê:* outras camadas visíveis contaminam o cálculo.
-3. **Calcule oclusão e curvatura.** Em *Edit → Calculate Occlusion and Curvature maps* (ou *Textures → Calculate curvature*, com *Local Curvature RGB*).
+3. **Calcule oclusão e curvatura.** Em *Edit → Calculate Occlusion and Curvature maps*, com a opção *Local Curvature RGB for Cavity map*.
    - Para frestas nítidas (estilo cavity), use intensidade alta (ex.: curvature 400, long-range 10). Para formas grandes e suaves, use intensidade baixa (ex.: curvature 8, long-range 100). Valores de exemplo do [manual](https://3dcoat.com/documentation/?p=10661).
    - *Por quê:* o estilo hand-painted precisa das duas escalas. A local dá o highlight fino da borda e a long-range dá o volume.
-4. **Confira o Cavity RGB.** Em *Edit → Preferences → Tools*, verifique se o RGB Cavity está ativo (padrão desde a 2021.53).
+4. **Confira o Cavity RGB.** Em *Edit → Preferences → Tools*, verifique se a opção *RGB Cavity "Curvature"* está ativa (no 3DCoatTextura 2026 ela já vem ativa por padrão).
    - *Por quê:* ele libera o controle *Cavity Area Width* no editor, que a camada de cavidade usa para ajustar a largura das frestas.
 
 **Evidência:** antes de seguir, mostre ao colega ao lado os mapas de AO e curvatura. Escuro nas frestas e claro nas quinas vivas significa que deu certo.
@@ -56,13 +58,13 @@ Nada no material funciona sem AO e curvatura calculados. Todas as camadas do clo
 
 Oito camadas, de baixo para cima. Os valores são um ponto de partida para ajustar no olho.
 
-| # | Nome da camada | Condition | Cor | Opacidade |
+| # | Nome da camada | Condition Mask | Cor | Opacidade |
 | --- | --- | --- | --- | --- |
 | 1 | `01 Base – cor` | Always | Cor média do material | 100% |
-| 2 | `02 Sombra – intensidade` | Shadow (oclusão) | Base mais escura, levemente fria | 50% |
-| 3 | `03 Cavidade – intensidade` | More on concave | Quase preta, fria | 70% |
-| 4 | `04 AO – suave` | Shadow (oclusão), contraste baixo | Igual à sombra | 25% |
-| 5 | `05 Borda – intensidade` | More on convex | Base mais clara, levemente quente | 60% |
+| 2 | `02 Sombra – intensidade` | More on Shadow | Base mais escura, levemente fria | 50% |
+| 3 | `03 Cavidade – intensidade` | More on Concave | Quase preta, fria | 70% |
+| 4 | `04 AO – suave` | More on Shadow, contraste baixo | Igual à sombra | 25% |
+| 5 | `05 Borda – intensidade` | More on Convex | Base mais clara, levemente quente | 60% |
 | 6 | `06 Gradiente topo – intensidade` | More on Top | Base mais clara e quente | 20 a 35% |
 | 7 | `07 Gradiente base – intensidade` | More on Bottom | Base mais escura e fria | 20 a 35% |
 | 8 | `08 Variação – intensidade` | Always + textura de ruído grande (Cube) | Base com matiz deslocado 5 a 10° | 10 a 20% |
@@ -73,22 +75,22 @@ Glossiness e Metalness ficam em zero em todas as camadas. O resultado é só cor
 
 1. **Crie o material.** No painel *Smart Materials*, crie uma pasta `CLONES`, clique no **+** e nomeie `CLONE_SimpleDiffuse`. Abra o *Smart Material Editor*.
    - *Por quê:* uma pasta própria vira um `.3dcpack` único na hora de compartilhar.
-2. **Camada 1 — Base.** Cor média, *Condition: Always*.
+2. **Camada 1 — Base.** Cor média, *Condition Mask: Always*.
    - *Por quê:* é a referência de valor de tudo. Escolha um tom médio, para sobrar espaço para escurecer e clarear.
-3. **Camada 2 — Sombra.** Condição de oclusão com contraste médio, cor mais escura e um pouco mais fria que a base.
+3. **Camada 2 — Sombra.** *Condition Mask* *More on Shadow* com *Contrast* médio, cor mais escura e um pouco mais fria que a base.
    - *Por quê:* é o que transforma uma cor chapada em volume. Diferente do clone FT, aqui o deslocamento de matiz é pequeno: o SimpleDiffuse é a versão "segura" do estilo.
-4. **Camada 3 — Cavidade.** *More on concave*, com *Cavity Width* baixo e *Contrast* alto. Ajuste a largura com *Cavity Area Width*.
+4. **Camada 3 — Cavidade.** *More on Concave*, com *Cavity Width* baixo e *Contrast* alto. Ajuste a largura com *Cavity Area Width*.
    - *Por quê:* desenha o "traço" nas frestas que separa as formas. Fina e escura, ela substitui o lineart que um pintor faria à mão.
 5. **Camada 4 — AO suave.** Repita a condição da sombra com contraste baixo e opacidade baixa.
    - *Por quê:* faz a transição entre a fresta nítida (camada 3) e a sombra larga (camada 2). Sem ela, a cavidade parece recortada.
-6. **Camada 5 — Borda.** *More on convex*, cor mais clara e levemente quente. Adicione uma imagem de ruído em *Edge Scattering*.
+6. **Camada 5 — Borda.** *More on Convex*, cor mais clara e levemente quente. Adicione uma imagem de ruído em *Edge Scattering*.
    - *Por quê:* é o highlight de quina do hand-painted. O ruído quebra a borda, para ela parecer pincelada e não filtro.
-7. **Camada 6 — Gradiente de topo.** *Condition: More on Top*, cor mais clara e levemente quente que a base, opacidade de 20 a 35%.
+7. **Camada 6 — Gradiente de topo.** *Condition Mask: More on Top*, cor mais clara e levemente quente que a base, opacidade de 20 a 35%.
    - *Por quê:* é o gradiente claro de cima do original. O topo da peça recebe a luz do céu, e o gradiente dá leitura de altura ao módulo mesmo sem luz assada.
    - Por ser uma condição, o gradiente fica **dentro** do Smart Material e funciona com um clique em qualquer peça. Ele é calculado pela orientação do objeto no momento do Fill: se a peça for girada depois, refaça o Fill.
-8. **Camada 7 — Gradiente de base.** *Condition: More on Bottom*, cor mais escura e um pouco mais fria que a base, opacidade de 20 a 35%. Se o editor da sua versão tiver modo de mistura por camada, use *Multiply*.
+8. **Camada 7 — Gradiente de base.** *Condition Mask: More on Bottom*, cor mais escura e um pouco mais fria que a base, opacidade de 20 a 35%. Se o editor da sua versão tiver modo de mistura por camada, use *Multiply*.
    - *Por quê:* é o gradiente escuro "multiplicado" de baixo do original. Ele "assenta" a peça no chão e evita que a parte de baixo fique tão clara quanto o topo.
-9. **Camada 8 — Variação.** *Condition: Always*, com uma textura de ruído grande (manchas do tamanho de cerca de 1/4 do objeto) no canal *Color*, *Preferred Mapping: Cube*. Use a cor da base com o matiz deslocado 5 a 10° e opacidade de 10 a 20%.
+9. **Camada 8 — Variação.** *Condition Mask: Always*, com uma textura de ruído grande (manchas do tamanho de cerca de 1/4 do objeto) no canal *Color*, *Preferred Mapping: Cube*. Use a cor da base com o matiz deslocado 5 a 10° e opacidade de 10 a 20%.
    - *Por quê:* é o *Texturizer* do original. Superfícies reais nunca têm matiz uniforme, e a variação grande evita o aspecto de "plástico pintado".
    - Prefira um ruído pintado no Krita, com manchas suaves e pouco contraste. Ruído fotográfico de grão fino quebra o estilo.
 10. **Nomeie e ordene.** Confira se os nomes seguem a tabela (`01 Base – cor` etc.).

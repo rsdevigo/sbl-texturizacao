@@ -1,6 +1,8 @@
-# Clone 2 — Stylized FT no 3DCoat
+# Clone 2 — Stylized FT no 3DCoatTextura
 
 20/10/2026 · Rodrigo
+
+> **3DCoatTextura 2026.** Na versão 2026.11, os Smart Materials padrão da biblioteca foram convertidos para o sistema de nós (*NGMaterials*). Este tutorial monta o material no **Smart Material Editor** (camadas com *Condition Mask*), o fluxo clássico. Antes da aula, confira na versão do laboratório se o botão **+** do painel *Smart Materials* ainda cria um Smart Material desse tipo. Se não criar, monte cada camada em nós: um *SimpleMaterial* com a cor da camada e um *SimpleMask* com o *condition type* equivalente (*More on Convex* → convex, *More on Concave* → concave, *More on Shadow* → in shadow).
 
 ## O que vamos clonar
 
@@ -12,9 +14,9 @@ O [Stylized FT](https://flippednormals.com/product/stylized-ft-smart-material-fo
 | --- | --- |
 | Pattern generation | Textura tileável pintada no Krita (Color + Depth) |
 | Shade blending | Camadas de sombra fria e luz quente com matiz deslocado |
-| Cavity | Camada *More on concave* |
-| Edges (Intensity / Contrast) | Opacidade e contraste da camada *More on convex* |
-| Top gradient (Position) | Camada de topo assada por módulo (Light Baking) |
+| Cavity | Camada *More on Concave* |
+| Edges (Intensity / Contrast) | Opacidade e contraste da camada *More on Convex* |
+| Top gradient (Position) | Camada de topo assada por módulo (Light Baking Tool) |
 | Bottom gradient (Position) | Camada de base escura assada por módulo |
 | Ambient Occlusion | Camada de oclusão suave |
 | Roughness / Metallic | Versão PBR opcional |
@@ -26,7 +28,7 @@ O [Stylized FT](https://flippednormals.com/product/stylized-ft-smart-material-fo
 O padrão é o coração do FT. Cada material recebe um mapa em tons de cinza, 1024 × 1024 px e tileável, pintado com pinceladas visíveis.
 
 1. **Ative o modo tile.** No Krita, use *View → Wrap Around Mode* (tecla W).
-   - *Por quê:* você pinta vendo a repetição, e as emendas somem antes de chegar ao 3DCoat.
+   - *Por quê:* você pinta vendo a repetição, e as emendas somem antes de chegar ao 3DCoatTextura.
 2. **Pinte em 3 valores.** Fundo cinza médio (50%), formas em cinza claro (70 a 80%), separações em cinza escuro (20 a 30%).
    - *Por quê:* o mesmo mapa vai para *Color* (como máscara de tom) e para *Depth* (como relevo). Com 3 valores bem definidos, as duas leituras ficam limpas.
 3. **Pinte o padrão de cada material:**
@@ -41,16 +43,16 @@ O padrão é o coração do FT. Cada material recebe um mapa em tons de cinza, 1
 
 As camadas 1 a 6 ficam no Smart Material. As camadas 7 e 8 dependem da posição da peça e são assadas por módulo.
 
-| # | Camada | Condition / fonte | Cor | Opacidade | Onde fica |
+| # | Camada | Condition Mask / fonte | Cor | Opacidade | Onde fica |
 | --- | --- | --- | --- | --- | --- |
 | 1 | `01 Base – cor` | Always | Cor média | 100% | Smart Material |
 | 2 | `02 Padrão – intensidade` | Always + `PAT_*.png` em Color e Depth (Cube) | Base mais clara | 25% | Smart Material |
-| 3 | `03 Sombra fria` | Shadow (oclusão) | Escura, matiz 20 a 30° para o frio | 50% | Smart Material |
-| 4 | `04 Cavidade` | More on concave | Muito escura e saturada | 70% | Smart Material |
-| 5 | `05 AO` | Shadow, contraste baixo | Igual à sombra fria | 25% | Smart Material |
-| 6 | `06 Borda – intensidade/contraste` | More on convex | Clara, matiz 10 a 20° para o quente | 60% | Smart Material |
-| 7 | `07 Topo – posição` | Light Baking (luz de cima) | Quente, clara | 30 a 40% | Módulo |
-| 8 | `08 Base – posição` | Light Baking ou Fill em degradê | Fria, escura | 20 a 30% | Módulo |
+| 3 | `03 Sombra fria` | More on Shadow | Escura, matiz 20 a 30° para o frio | 50% | Smart Material |
+| 4 | `04 Cavidade` | More on Concave | Muito escura e saturada | 70% | Smart Material |
+| 5 | `05 AO` | More on Shadow, contraste baixo | Igual à sombra fria | 25% | Smart Material |
+| 6 | `06 Borda – intensidade/contraste` | More on Convex | Clara, matiz 10 a 20° para o quente | 60% | Smart Material |
+| 7 | `07 Topo – posição` | Light Baking Tool (luz de cima) | Quente, clara | 30 a 40% | Módulo |
+| 8 | `08 Base – posição` | Light Baking Tool ou Fill em degradê | Fria, escura | 20 a 30% | Módulo |
 
 ## Passo a passo
 
@@ -64,8 +66,8 @@ As camadas 1 a 6 ficam no Smart Material. As camadas 7 e 8 dependem da posição
    - *Por quê:* este é o *shade blending*. A sombra deixa de ser "base mais escura" e passa a ser outra cor. É a principal diferença visual entre o FT e o SimpleDiffuse.
 4. **Aqueça a borda (6).** Desloque o matiz da borda 10 a 20° para o amarelo ou laranja. Use a opacidade como *Intensity* e o contraste da condição como *Contrast*.
    - *Por quê:* quente na luz e frio na sombra cria contraste de temperatura, a assinatura do estilo. Separar intensidade e contraste replica os dois controles de borda do FT.
-5. **Asse o degradê de topo (7) e o de base (8) no módulo.** Aplique o material, monte uma luz de cima no Render Room e use *Light Baking* para gravar a luz numa camada em *Screen*. Para a base, use uma camada escura e fria, com degradê de baixo para cima.
-   - *Por quê:* o FT tem *Position* nos dois degradês porque a altura da luz muda de peça para peça. No 3DCoat, assar por módulo dá o mesmo controle. Mantenha o mesmo rig de luz em todo o kit.
+5. **Asse o degradê de topo (7) e o de base (8) no módulo.** Aplique o material, monte uma luz de cima no Render Room e use a *Light Baking Tool* (*Map Type: Light From Render Room*) para gravar a luz numa camada em *Screen*. Para a base, use uma camada escura e fria, com degradê de baixo para cima.
+   - *Por quê:* o FT tem *Position* nos dois degradês porque a altura da luz muda de peça para peça. No 3DCoatTextura, assar por módulo dá o mesmo controle. Mantenha o mesmo rig de luz em todo o kit.
 6. **Confira a ordem de valores.** Cavidade < AO < sombra < base < padrão claro < borda < topo.
    - *Por quê:* se o padrão ficar mais claro que a borda, ele compete com o volume e o objeto achata.
 
@@ -129,4 +131,4 @@ Duplique cada preset com o sufixo `_PBR`, remova as camadas 7 e 8 (degradês ass
 
 **Limite do clone:** o FT original gera os padrões por nodes. Aqui eles são pintados, o que dá mais personalidade ao grupo e menos variação automática.
 
-**Fontes:** [Stylized FT — FlippedNormals](https://flippednormals.com/product/stylized-ft-smart-material-for-substance-painter-54727) · [FT Diffuse — ArtStation](https://www.artstation.com/marketplace/p/j8mRg/stylized-texture-generator-for-substance-painter-ft-diffuse) · [3DCoat — Smart Materials](https://3dcoat.com/documentation/manual/brush-components/smart-materials/) · [3DCoat — Light Baking](https://3dcoat.com/documentation/?p=10277)
+**Fontes:** [Stylized FT — FlippedNormals](https://flippednormals.com/product/stylized-ft-smart-material-for-substance-painter-54727) · [FT Diffuse — ArtStation](https://www.artstation.com/marketplace/p/j8mRg/stylized-texture-generator-for-substance-painter-ft-diffuse) · [3DCoat — Smart Materials](https://3dcoat.com/documentation/manual/brush-components/smart-materials/) · [3DCoat — Light Baking Tool](https://3dcoat.com/documentation/?p=10277)

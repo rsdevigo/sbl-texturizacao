@@ -2,7 +2,7 @@
 
 22/10/2026 · Rodrigo
 
-> Os nomes de menus do 3DCoat mudam entre versões. Se alguma opção não estiver no lugar indicado, confira na versão 2026 do laboratório e anote a diferença para a turma.
+> Os nomes de menus do 3DCoatTextura mudam entre versões. Se alguma opção não estiver no lugar indicado, confira na versão 2026 do laboratório e anote a diferença para a turma.
 
 ## Visão geral
 
@@ -21,11 +21,11 @@
 ## Etapa 1 — Separar as partes no Blender
 
 1. **Atribua um material por parte** (`Tabuas`, `Aros`), ou mantenha as peças soltas como objetos separados no mesmo FBX.
-   - *Por quê:* o 3DCoat consegue congelar de uma vez um material inteiro (*Surface Material*) ou um objeto inteiro (*Paint Object*). Sem essa separação, o congelamento precisa ser pintado à mão.
+   - *Por quê:* o 3DCoatTextura consegue congelar de uma vez um material inteiro (*Surface Material*) ou um objeto inteiro (*Paint Object*). Sem essa separação, o congelamento precisa ser pintado à mão.
 2. **Confira o UV, aplique as transformações e exporte em FBX.**
    - *Por quê:* prefira um único UV com vários materiais apontando para ele. Assim o modelo exporta um conjunto só de texturas.
 
-**Evidência:** no Blender, cada parte com uma cor de material diferente no *Viewport Shading → Material*.
+**Evidência:** no Blender, cada parte com uma cor de material diferente no *Viewport Shading: Solid*, com *Color: Material*.
 
 ## Etapa 2 — Congelar tudo menos a parte
 
@@ -38,7 +38,7 @@ O caminho mais direto é congelar a parte desejada e **inverter**.
    Clique sobre os aros (ou escolha o material/objeto na lista, conforme a versão).
 2. **Inverta.** *Freeze → Invert Freeze/Selection*.
    - *Por quê:* agora os aros estão livres e todo o resto (as tábuas) está protegido. Inverter é mais rápido do que congelar uma por uma todas as outras partes.
-3. **Confira a área congelada.** O 3DCoat mostra as áreas congeladas com uma trama. Se não aparecer, use *Freeze → Show/Hide Freeze* ou *Toggle Freeze View*.
+3. **Confira a área congelada.** O 3DCoatTextura mostra as áreas congeladas com uma trama. Se não aparecer, use *Freeze → Show/Hide Freeze* ou *Toggle Freeze View*.
    - *Por quê:* aplicar o material com o congelamento invertido é o erro mais comum deste modo. Olhar antes custa dois segundos.
 
 **Outras formas de congelar:**
@@ -84,7 +84,7 @@ O caminho mais direto é congelar a parte desejada e **inverter**.
 | O material caiu só nas tábuas (o contrário do desejado) | Faltou inverter, ou inverteu duas vezes | Conferir a trama e usar *Invert Freeze/Selection* |
 | O pincel "não pinta" numa área | Congelamento esquecido de uma etapa anterior | *Freeze → Unfreeze All* |
 | Mudei o Smart Material e preciso refazer | O recorte está gravado na camada | *Restore Freezing State*, limpar a camada e preencher de novo |
-| A borda entre as partes ficou serrilhada ou com fresta | Congelamento com borda dura em baixa resolução | *Smooth Freezing* ou *Expand/Contract Frozen Area* antes do Fill |
+| A borda entre as partes ficou serrilhada ou com fresta | Congelamento com borda dura em baixa resolução | *Smooth Freezing* ou *Expand Frozen Area* / *Contract Frozen Area* antes do Fill |
 | *Freeze Surface Material* congela o modelo todo | As partes não chegaram separadas | Voltar à Etapa 1 |
 
 ## Checklist de autoavaliação

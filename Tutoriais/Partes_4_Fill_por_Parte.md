@@ -2,7 +2,7 @@
 
 22/10/2026 · Rodrigo
 
-> Os nomes de menus do 3DCoat mudam entre versões. Se alguma opção não estiver no lugar indicado, confira na versão 2026 do laboratório e anote a diferença para a turma.
+> Os nomes de menus do 3DCoatTextura mudam entre versões. Se alguma opção não estiver no lugar indicado, confira na versão 2026 do laboratório e anote a diferença para a turma.
 
 ## Visão geral
 
@@ -32,7 +32,7 @@ O Fill tem três jeitos de saber onde parar:
    - *Por quê:* o Fill por ângulo para nas quinas. Se o aro estiver no mesmo plano da tábua, sem quina entre eles, o Fill passa direto.
 3. **Confira o UV, aplique as transformações e exporte em FBX.**
 
-**Evidência:** no Blender, cada parte com uma cor de material diferente no *Viewport Shading → Material*.
+**Evidência:** no Blender, cada parte com uma cor de material diferente no *Viewport Shading: Solid*, com *Color: Material*.
 
 ## Etapa 2 — Fill por material ou por objeto
 
@@ -63,10 +63,10 @@ O Fill tem três jeitos de saber onde parar:
 O recorte está gravado na camada, então mudar um material segue sempre a mesma rotina:
 
 1. **Ajuste o Smart Material** (ou prenda outro).
-2. **Limpe a camada** da parte (menu da camada → limpar, ou *Make Transparent*).
+2. **Limpe a camada** da parte (botão direito na camada → *Make Transparent*).
 3. **Preencha de novo** com o mesmo escopo, clicando na mesma parte.
    - Para refazer com o mesmo material preso, o menu da camada tem **Refill Material**. Confira se ele respeita o escopo na versão do laboratório; se preencher o modelo todo, use o Fill com escopo.
-   - *Por quê:* é a lógica raster do 3DCoat clássico. O resultado não se atualiza sozinho.
+   - *Por quê:* é a lógica raster do fluxo clássico (sem nós). O resultado não se atualiza sozinho.
 
 ## Etapa 5 — Proteger a parte para o pincel
 
