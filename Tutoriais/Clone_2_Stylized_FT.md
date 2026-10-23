@@ -2,7 +2,7 @@
 
 20/10/2026 · Rodrigo
 
-> **3DCoatTextura 2026.** Na versão 2026.11, os Smart Materials padrão da biblioteca foram convertidos para o sistema de nós (*NGMaterials*). Este tutorial monta o material no **Smart Material Editor** (camadas com *Condition Mask*), o fluxo clássico. Antes da aula, confira na versão do laboratório se o botão **+** do painel *Smart Materials* ainda cria um Smart Material desse tipo. Se não criar, monte cada camada em nós: um *SimpleMaterial* com a cor da camada e um *SimpleMask* com o *condition type* equivalente (*More on Convex* → convex, *More on Concave* → concave, *More on Shadow* → in shadow).
+> **3DCoatTextura 2026.** Na versão 2026.11, os Smart Materials padrão da biblioteca foram convertidos para o sistema de nós (*NGMaterials*). Este tutorial monta o material no **Smart Material Editor** (camadas com *Condition Mask*), o fluxo clássico. Antes da aula, confira na versão do laboratório se o botão **+** do painel *Materials* ainda cria um Smart Material desse tipo. Se não criar, monte cada camada em nós: um *SimpleMaterial* com a cor da camada e um *SimpleMask* com o *condition type* equivalente (*More on Convex* → convex, *More on Concave* → concave, *More in Shadow* → in shadow).
 
 ## O que vamos clonar
 
@@ -47,9 +47,9 @@ As camadas 1 a 6 ficam no Smart Material. As camadas 7 e 8 dependem da posição
 | --- | --- | --- | --- | --- | --- |
 | 1 | `01 Base – cor` | Always | Cor média | 100% | Smart Material |
 | 2 | `02 Padrão – intensidade` | Always + `PAT_*.png` em Color e Depth (Cube) | Base mais clara | 25% | Smart Material |
-| 3 | `03 Sombra fria` | More on Shadow | Escura, matiz 20 a 30° para o frio | 50% | Smart Material |
+| 3 | `03 Sombra fria` | More in Shadow | Escura, matiz 20 a 30° para o frio | 50% | Smart Material |
 | 4 | `04 Cavidade` | More on Concave | Muito escura e saturada | 70% | Smart Material |
-| 5 | `05 AO` | More on Shadow, contraste baixo | Igual à sombra fria | 25% | Smart Material |
+| 5 | `05 AO` | More in Shadow, contraste baixo | Igual à sombra fria | 25% | Smart Material |
 | 6 | `06 Borda – intensidade/contraste` | More on Convex | Clara, matiz 10 a 20° para o quente | 60% | Smart Material |
 | 7 | `07 Topo – posição` | Light Baking Tool (luz de cima) | Quente, clara | 30 a 40% | Módulo |
 | 8 | `08 Base – posição` | Light Baking Tool ou Fill em degradê | Fria, escura | 20 a 30% | Módulo |
@@ -66,7 +66,7 @@ As camadas 1 a 6 ficam no Smart Material. As camadas 7 e 8 dependem da posição
    - *Por quê:* este é o *shade blending*. A sombra deixa de ser "base mais escura" e passa a ser outra cor. É a principal diferença visual entre o FT e o SimpleDiffuse.
 4. **Aqueça a borda (6).** Desloque o matiz da borda 10 a 20° para o amarelo ou laranja. Use a opacidade como *Intensity* e o contraste da condição como *Contrast*.
    - *Por quê:* quente na luz e frio na sombra cria contraste de temperatura, a assinatura do estilo. Separar intensidade e contraste replica os dois controles de borda do FT.
-5. **Asse o degradê de topo (7) e o de base (8) no módulo.** Aplique o material, monte uma luz de cima no Render Room e use a *Light Baking Tool* (*Map Type: Light From Render Room*) para gravar a luz numa camada em *Screen*. Para a base, use uma camada escura e fria, com degradê de baixo para cima.
+5. **Asse o degradê de topo (7) e o de base (8) no módulo.** Aplique o material, monte uma luz de cima na sala Render e use a *Light Baking Tool* (*Map Type: Light From Render Room*) para gravar a luz numa camada em *Screen*. Para a base, use uma camada escura e fria, com degradê de baixo para cima.
    - *Por quê:* o FT tem *Position* nos dois degradês porque a altura da luz muda de peça para peça. No 3DCoatTextura, assar por módulo dá o mesmo controle. Mantenha o mesmo rig de luz em todo o kit.
 6. **Confira a ordem de valores.** Cavidade < AO < sombra < base < padrão claro < borda < topo.
    - *Por quê:* se o padrão ficar mais claro que a borda, ele compete com o volume e o objeto achata.

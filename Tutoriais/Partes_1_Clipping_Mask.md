@@ -14,7 +14,9 @@ No 3DCoatTextura, a mesma ideia é feita com **Clipping Mask**:
 - uma camada **de máscara** existe só na parte desejada (os aros);
 - as camadas de material ficam **presas** (*clipped*) a ela e só aparecem onde a máscara tem tinta.
 
-> **A regra que faz tudo funcionar:** no 3DCoatTextura, a máscara é a **transparência** da camada. Onde a camada de máscara foi pintada ou preenchida, o material aparece. Onde ela é transparente, o material some. Não existe máscara em tons de cinza separada como no Photoshop: a própria camada é a máscara.
+> **A regra que faz tudo funcionar:** a camada de máscara funciona em **preto e branco**. Onde ela tem tinta **branca**, o material aparece inteiro; onde ela é transparente (ou preta), o material some; onde tem cinza ou uma cor escura, o material aparece só em parte e se mistura com as camadas de baixo. Por isso a máscara é sempre pintada com **branco puro**.
+>
+> A documentação do 3DCoat confirma: na máscara, *"White: Reveals 100% of the layer. Black: Hides 100%. Gray: Creates partial transparency or soft blending."* Testado no 3DCoatTextura 2026.24: a máscara branca no Albedo recorta **todos** os canais do material (cor, brilho e metal). Não é preciso pintar nem ligar Gloss, Metalness ou Depth na máscara.
 
 **Por que este é o modo preferido**
 
@@ -60,31 +62,49 @@ A pilha fica assim (de cima para baixo, como aparece no painel):
     M Tábuas                      ← máscara
 ```
 
+### Opacidade dos canais em cada camada
+
+Cada camada do 3DCoatTextura tem uma opacidade por canal: **Albedo Color**, **Depth Opacity**, **Gloss** (o Roughness, invertido) e **Metalness**. Elas ficam no topo do painel *Layers* e no painel *Layer Blending* (lá aparecem como *Depth Opacity*, *Opacity*, *Gloss/Roughness Opacity* e *Metalness Opacity*) (botão direito na camada → *Layer Blending*). Ajuste **antes** de preencher:
+
+| Camada | Albedo Color | Depth Opacity | Gloss | Metalness | Por quê |
+| --- | --- | --- | --- | --- | --- |
+| `M` (máscara) | 100%, em **branco puro** | 0% | 0% | 0% | Quem recorta o material é o Albedo branco da máscara; os outros canais não mudam o recorte. Em 0%, eles evitam que relevo ou brilho gravados por engano na máscara apareçam por baixo do material |
+| Material (Smart Material) | 100% | 100% se o material tiver relevo; senão 0% | 100% | 100% | Os canais que o material usa precisam estar abertos para ele aparecer |
+| Pincel (desgaste, sujeira) | 100% | Conforme o efeito (ex.: 30 a 50% para riscos com relevo) | 100% se o desgaste mudar o brilho | 0% (100% se for metal exposto) | Abra só o canal que a pincelada deve alterar |
+
+Além da opacidade da camada, confira os **botões de canal na barra superior** antes de preencher a máscara: deixe ligado só o **Albedo** (desligue *Depth*, *Gloss* e *Metalness*). Assim o Fill nem chega a gravar relevo, brilho ou metal na camada `M`.
+
+- *Por quê:* a opacidade 0% esconde o canal, mas o valor continua gravado na camada. Desligar o canal na barra superior evita gravar. Se já gravou, botão direito na camada → *Set Height to Zero* (relevo) e *Remove Glossiness* (brilho).
+
 ## Etapa 3 — Preencher a camada de máscara só na parte
 
 Escolha **uma** das formas abaixo. Todas produzem o mesmo resultado: a camada `M Aros` com tinta só nos aros.
 
+> **A máscara precisa ser branca e sólida.** Onde `M Aros` tem branco a 100%, o material aparece inteiro; onde a tinta é parcial, cinza ou de outra cor, o material fica parcial e se mistura com as camadas de baixo. Antes de preencher a máscara, escolha **branco puro (#FFFFFF)**, deixe a lista *Conditions* da barra superior em **Always** (sem condição) e a intensidade da ferramenta em 100%. Nas *Tool Options* do Fill, desmarque *Use Color [Albedo] Tolerance*: com ele marcado, o Fill só preenche a área de cor parecida com o ponto clicado, e a máscara sai pela metade.
+
 **A. Fill por parte (o mais rápido, se a Etapa 1 foi feita)**
 
-1. Selecione a camada `M Aros` e escolha uma cor qualquer (cinza médio, por exemplo).
-2. Pegue a ferramenta **Fill** e, nas opções, troque o escopo de *Layer* para **Surface Material** (se as partes são materiais) ou **Object** (se são objetos).
+1. Selecione a camada `M Aros` e escolha **branco puro (#FFFFFF)**. Na barra superior, deixe ligado **só o canal Albedo** (Depth, Gloss e Metalness desligados).
+2. Pegue a ferramenta **Fill** e, nas opções, troque o escopo de *Layer* para **Material/Surface** (se as partes são materiais) ou **Object** (se são objetos). Nas *Tool Options* do Fill, **desmarque** *Use Color [Albedo] Tolerance* e deixe marcado *Fill w/ Color*.
 3. Clique sobre os aros.
    - *Por quê:* com esse escopo, o Fill pinta exatamente a área daquele material ou objeto e para na fronteira. É o "pintar a máscara de branco" do Substance, em um clique.
+4. Se a parte usa **mais de um material** do Blender (por exemplo, a lâmina tem um material em cima e outro no gume), clique em cada um deles, na mesma camada `M`.
+   - *Por quê:* *Material/Surface* preenche o material inteiro em que você clicou, nem mais nem menos. Ele segue a divisão de materiais feita no Blender, e não o que você considera "a parte". Se um material cobrir mais do que a parte (o topo da lâmina e o topo do cabo, por exemplo), corrija a divisão no Blender (Etapa 1) e importe de novo.
 
 **B. Fill por ângulo (sem preparação no Blender, para hard surface)**
 
-1. Na ferramenta **Fill**, ligue **Use max. angle** e ajuste o ângulo.
+1. Na ferramenta **Fill**, ligue **Use Maximum Angle** e ajuste o ângulo.
 2. Clique sobre uma face dos aros.
    - *Por quê:* o Fill se espalha pelas faces vizinhas até encontrar uma quina mais fechada que o ângulo definido. Em peças com quinas bem marcadas, isso isola a parte sem material nem ID.
 
 **C. Pincel (para partes orgânicas ou sem fronteira de malha)**
 
-1. Pinte a camada `M Aros` com um pincel duro, na área desejada.
+1. Pinte a camada `M Aros` com um pincel duro e **branco**, na área desejada.
    - *Por quê:* às vezes a parte não coincide com a malha (uma mancha de musgo, uma faixa de tinta). A máscara pintada à mão funciona igual às outras.
 
-> A cor da camada de máscara não importa para os materiais, só a transparência. Se quiser, use a cor base da parte: assim a máscara já serve de "fundo" e nunca aparece um buraco se um material tiver transparência.
+> **Use sempre branco puro na máscara.** Qualquer outra cor deixa o material parcialmente transparente e misturado com o que está embaixo. O cinza é útil só quando a mistura é intencional (uma transição suave entre duas partes, por exemplo).
 
-**Evidência:** com só as camadas de máscara visíveis, cada parte aparece com tinta e o resto do modelo fica vazio.
+**Evidência:** com só as camadas de máscara visíveis, cada parte aparece com tinta **uniforme** (sem degradê nem manchas mais claras) e o resto do modelo fica vazio.
 
 ## Etapa 4 — Aplicar o material e prendê-lo à máscara
 
@@ -106,7 +126,7 @@ Escolha **uma** das formas abaixo. Todas produzem o mesmo resultado: a camada `M
 
 É aqui que o modo mostra a vantagem.
 
-1. **Aumente ou corrija a área.** Selecione `M Aros` e pinte com o pincel numa área nova (a ponta de um prego, por exemplo). O metal aparece ali na hora.
+1. **Aumente ou corrija a área.** Selecione `M Aros` e pinte com o pincel **branco** numa área nova (a ponta de um prego, por exemplo). O metal aparece ali na hora. Pincel cinza cria uma transição suave.
 2. **Remova área.** Use a borracha na camada `M Aros`. O metal some daquela região.
 3. **Inverta, se precisar.** No painel *Layer Blending* de uma camada de material, **Invert Clip Mask** faz a camada aparecer **fora** da máscara.
    - *Por quê:* é útil para "tudo menos os aros" sem criar outra máscara.
@@ -131,10 +151,14 @@ Escolha **uma** das formas abaixo. Todas produzem o mesmo resultado: a camada `M
 
 | Sintoma | Causa provável | Correção |
 | --- | --- | --- |
+| A parte aparece com uma cor chapada e uma linha escura (degrau) na borda da máscara | A camada `M` foi preenchida com o canal **Depth** ligado (o degrau vira relevo) e o material de cima não está aparecendo | Botão direito em `M` → *Set Height to Zero* e deixar Depth em 0%; conferir se a camada do material está **acima** de `M`, preenchida e com *Clip Mask Layer* = `M` |
+| A parte ficou com brilho ou cara de metal estranhos | A camada `M` gravou Gloss ou Metalness | *Remove Glossiness* na camada `M` e deixar Gloss e Metalness em 0% |
+| O material aparece "misturado" com a cor de baixo numa parte da área (ex.: forte em cima, desbotado embaixo) | A máscara `M` não é **branca e sólida**: foi preenchida com uma cor que não é branco, com *Use Color [Albedo] Tolerance* marcado (o Fill só pega a área de cor parecida com o ponto clicado), com uma condição ativa ou com intensidade baixa | Ver a `M` sozinha (Alt+clique no olho); se não estiver toda branca, *Make Transparent*, escolher branco puro, *Conditions* em **Always** (sem condição) e preencher de novo |
+| O Fill com *Material/Surface* preencheu só um pedaço da parte, ou incluiu um pedaço de outra parte | A divisão de materiais do Blender não coincide com a parte | Clicar em cada material que forma a parte; se um material cobre áreas de partes diferentes, corrigir a atribuição no Blender (Etapa 1) |
 | O material aparece no modelo inteiro | Camada sem *Clip Mask Layer* definido | Abrir o painel *Layer Blending* da camada e escolher a máscara |
 | O material não aparece em lugar nenhum | Máscara vazia, ou presa à camada errada | Conferir a máscara visível sozinha (Etapa 3) e o nome escolhido na lista |
 | O material aparece fora da parte | *Invert Clip Mask* ligado sem querer | Desligar o *Invert Clip Mask* |
-| O Fill por *Surface Material* pinta o modelo todo | As partes não chegaram separadas | Voltar à Etapa 1 e conferir os materiais no Blender |
+| O Fill por *Material/Surface* pinta o modelo todo | As partes não chegaram separadas | Voltar à Etapa 1 e conferir os materiais no Blender |
 | A borda da máscara ficou serrilhada | Fill por ângulo em malha de poucas faces, ou textura de baixa resolução | Aumentar a resolução de trabalho, ou suavizar a borda da máscara com pincel |
 | Pincelada de desgaste vaza para a parte vizinha | Camada de pincel não está presa à máscara | Definir o *Clip Mask Layer* também na camada de pincel |
 
@@ -156,5 +180,5 @@ Mostre a pilha desligando uma pasta por vez e responda: **por que a fronteira en
 - [3DCoat — Layer and Clipping Masks](https://3dcoat.com/documentation/manual/workspaces-rooms/paint/the-layers-panel/layer-and-clipping-masks/)
 - [3DCoat — Blending Panel (Clip Mask Layer, Invert Clip Mask)](https://3dcoat.com/documentation/manual/workspaces-rooms/paint/the-layers-panel/the-blending-panel/)
 - [3DCoat — The Layers Panel](https://3dcoat.com/documentation/manual/interface-and-navigation/the-layers-panel)
-- [3DCoat — Paint Tool Panel (Fill: Layer, Surface Material, Object, Use max. angle)](https://3dcoat.com/documentation/manual/workspaces-rooms/paint/paint-room-tools/)
+- [3DCoat — Paint Tool Panel (Fill: Layer, Material/Surface, Object, Use Maximum Angle)](https://3dcoat.com/documentation/manual/workspaces-rooms/paint/paint-room-tools/)
 - [3DCoat — Attach a Smart Material to a layer](https://3dcoat.com/documentation/?p=6295)

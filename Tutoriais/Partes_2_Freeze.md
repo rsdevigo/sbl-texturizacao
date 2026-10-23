@@ -45,7 +45,7 @@ O caminho mais direto é congelar a parte desejada e **inverter**.
 
 - **Ferramenta Freeze, modos *Convexity* e *Concavity*:** congela por forma, útil para proteger quinas ou frestas.
 - **Pincel com a ferramenta Freeze:** pinta o congelamento à mão, para áreas que não coincidem com a malha.
-- **Fill com *Fill with freeze*:** na ferramenta Fill, essa opção congela a área em vez de pintá-la. Combina com o escopo *Surface Material*/*Object* e com o **Use max. angle** para hard surface sem preparação.
+- **Fill com *Fill w/ Freeze*:** na ferramenta Fill, essa opção congela a área em vez de pintá-la. Combina com o escopo *Material/Surface*/*Object* e com o **Use Maximum Angle** para hard surface sem preparação.
 
 **Evidência:** print com a trama de congelamento sobre as tábuas e os aros livres.
 
@@ -102,6 +102,6 @@ Mostre uma parte retrabalhada depois da primeira aplicação e explique **como v
 ## Fontes
 
 - [3DCoat — Freeze (menu)](https://3dcoat.com/documentation/manual/interface-and-navigation/freeze-menu/)
-- [3DCoat — Paint Tool Panel (ferramentas Freeze, Select e Fill)](https://3dcoat.com/documentation/manual/workspaces-rooms/paint/paint-room-tools/)
+- [3DCoat — Paint Tool Panel (ferramentas Freeze, Selection e Fill)](https://3dcoat.com/documentation/manual/workspaces-rooms/paint/paint-room-tools/)
 - [3DCoat — The Layers Panel (Freeze Painted/Transparent Pixels)](https://3dcoat.com/documentation/manual/interface-and-navigation/the-layers-panel)
 - [3DCoat — Attach a Smart Material to a layer](https://3dcoat.com/documentation/?p=6295)

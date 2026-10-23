@@ -2,7 +2,7 @@
 
 20/10/2026 · Rodrigo
 
-> **3DCoatTextura 2026.** Na versão 2026.11, os Smart Materials padrão da biblioteca foram convertidos para o sistema de nós (*NGMaterials*). Este tutorial monta o material no **Smart Material Editor** (camadas com *Condition Mask*), o fluxo clássico. Antes da aula, confira na versão do laboratório se o botão **+** do painel *Smart Materials* ainda cria um Smart Material desse tipo. Se não criar, monte cada camada em nós: um *SimpleMaterial* com a cor da camada e um *SimpleMask* com o *condition type* equivalente (*More on Convex* → convex, *More on Concave* → concave, *More on Shadow* → in shadow).
+> **3DCoatTextura 2026.** Na versão 2026.11, os Smart Materials padrão da biblioteca foram convertidos para o sistema de nós (*NGMaterials*). Este tutorial monta o material no **Smart Material Editor** (camadas com *Condition Mask*), o fluxo clássico. Antes da aula, confira na versão do laboratório se o botão **+** do painel *Materials* ainda cria um Smart Material desse tipo. Se não criar, monte cada camada em nós: um *SimpleMaterial* com a cor da camada e um *SimpleMask* com o *condition type* equivalente (*More on Convex* → convex, *More on Concave* → concave, *More in Shadow* → in shadow).
 
 ## O que vamos clonar
 
@@ -41,7 +41,7 @@ Nada no material funciona sem AO e curvatura calculados. Todas as camadas do clo
 - Quinas importantes chanfradas (bevel) no Blender, principalmente se não houver normal map. É no chanfro que a borda ganha largura para aparecer.
 - 3DCoatTextura 2026, a versão adotada na disciplina. Os nomes das opções podem variar um pouco entre atualizações.
 
-1. **Importe o low poly (e o normal map, se houver).** Em *File → Import*, carregue o módulo para o *Paint Room* (UV/Per-pixel painting). Se tiver normal map, aplique-o numa camada.
+1. **Importe o low poly (e o normal map, se houver).** Em *File → Import*, carregue o módulo para o sala *Painting* (pintura Per-Pixel). Se tiver normal map, aplique-o numa camada.
    - *Por quê:* a curvatura do 3DCoatTextura é calculada a partir da malha e do relevo visível. Com normal map, as máscaras enxergam também o detalhe esculpido (rachaduras, entalhes). Sem ele, enxergam só a geometria da low poly: bordas aparecem apenas nas quinas que existem em polígonos e cavidades apenas onde a malha tem reentrâncias.
    - Sem normal map, o detalhe fino pode ser pintado no canal *Depth* antes de calcular a curvatura. As condições passam a reagir a ele, e ele vira normal map na exportação.
 2. **Isole o normal map (se houver).** Alt+clique no olho da camada do normal, para que só ela fique visível. Sem normal map, apenas deixe ocultas as outras camadas com relevo.
@@ -61,9 +61,9 @@ Oito camadas, de baixo para cima. Os valores são um ponto de partida para ajust
 | # | Nome da camada | Condition Mask | Cor | Opacidade |
 | --- | --- | --- | --- | --- |
 | 1 | `01 Base – cor` | Always | Cor média do material | 100% |
-| 2 | `02 Sombra – intensidade` | More on Shadow | Base mais escura, levemente fria | 50% |
+| 2 | `02 Sombra – intensidade` | More in Shadow | Base mais escura, levemente fria | 50% |
 | 3 | `03 Cavidade – intensidade` | More on Concave | Quase preta, fria | 70% |
-| 4 | `04 AO – suave` | More on Shadow, contraste baixo | Igual à sombra | 25% |
+| 4 | `04 AO – suave` | More in Shadow, contraste baixo | Igual à sombra | 25% |
 | 5 | `05 Borda – intensidade` | More on Convex | Base mais clara, levemente quente | 60% |
 | 6 | `06 Gradiente topo – intensidade` | More on Top | Base mais clara e quente | 20 a 35% |
 | 7 | `07 Gradiente base – intensidade` | More on Bottom | Base mais escura e fria | 20 a 35% |
@@ -73,11 +73,11 @@ Glossiness e Metalness ficam em zero em todas as camadas. O resultado é só cor
 
 ## Passo a passo
 
-1. **Crie o material.** No painel *Smart Materials*, crie uma pasta `CLONES`, clique no **+** e nomeie `CLONE_SimpleDiffuse`. Abra o *Smart Material Editor*.
+1. **Crie o material.** No painel *Materials*, crie uma pasta `CLONES`, clique no **+** e nomeie `CLONE_SimpleDiffuse`. Abra o *Smart Material Editor*.
    - *Por quê:* uma pasta própria vira um `.3dcpack` único na hora de compartilhar.
 2. **Camada 1 — Base.** Cor média, *Condition Mask: Always*.
    - *Por quê:* é a referência de valor de tudo. Escolha um tom médio, para sobrar espaço para escurecer e clarear.
-3. **Camada 2 — Sombra.** *Condition Mask* *More on Shadow* com *Contrast* médio, cor mais escura e um pouco mais fria que a base.
+3. **Camada 2 — Sombra.** *Condition Mask* *More in Shadow* com *Contrast* médio, cor mais escura e um pouco mais fria que a base.
    - *Por quê:* é o que transforma uma cor chapada em volume. Diferente do clone FT, aqui o deslocamento de matiz é pequeno: o SimpleDiffuse é a versão "segura" do estilo.
 4. **Camada 3 — Cavidade.** *More on Concave*, com *Cavity Width* baixo e *Contrast* alto. Ajuste a largura com *Cavity Area Width*.
    - *Por quê:* desenha o "traço" nas frestas que separa as formas. Fina e escura, ela substitui o lineart que um pintor faria à mão.

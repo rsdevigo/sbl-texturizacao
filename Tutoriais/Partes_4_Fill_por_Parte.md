@@ -13,8 +13,8 @@ O Fill tem três jeitos de saber onde parar:
 | Escopo / opção | Para onde o Fill vai | Precisa de preparação no Blender? |
 | --- | --- | --- |
 | **Object** | O objeto inteiro em que você clicou (*Paint Object*) | Sim: partes como objetos separados |
-| **Surface Material** | O material inteiro em que você clicou | Sim: um material por parte |
-| **Use max. angle** | Se espalha pelas faces vizinhas até uma quina mais fechada que o ângulo | Não: usa a própria malha |
+| **Material/Surface** | O material inteiro em que você clicou | Sim: um material por parte |
+| **Use Maximum Angle** | Se espalha pelas faces vizinhas até uma quina mais fechada que o ângulo | Não: usa a própria malha |
 
 **Diferença para os outros modos:** não sobra nada para editar depois. O recorte fica gravado na camada. Se a área mudar, é preciso limpar a camada e preencher de novo.
 
@@ -24,10 +24,10 @@ O Fill tem três jeitos de saber onde parar:
 
 **Resultado esperado:** cada parte com seu material, cada material numa camada com nome de parte, aplicado em um clique por parte.
 
-## Etapa 1 — Preparar no Blender (para Object e Surface Material)
+## Etapa 1 — Preparar no Blender (para Object e Material/Surface)
 
 1. **Atribua um material por parte** (`Tabuas`, `Aros`), ou deixe as peças soltas como objetos separados no mesmo FBX.
-   - *Por quê:* o Fill por *Surface Material* ou por *Object* usa exatamente essa separação como fronteira.
+   - *Por quê:* o Fill por *Material/Surface* ou por *Object* usa exatamente essa separação como fronteira.
 2. **Para o modo por ângulo, marque bem as quinas.** As fronteiras entre as partes devem ser quinas reais da malha (por exemplo, o aro "sobe" da tábua com uma face lateral).
    - *Por quê:* o Fill por ângulo para nas quinas. Se o aro estiver no mesmo plano da tábua, sem quina entre eles, o Fill passa direto.
 3. **Confira o UV, aplique as transformações e exporte em FBX.**
@@ -38,7 +38,8 @@ O Fill tem três jeitos de saber onde parar:
 
 1. **Crie a camada `Aros – Smart Material metal`.** Se quiser organizar como no Substance, coloque-a numa pasta `Aros – Metal`.
 2. **Prenda o Smart Material.** Botão direito no material na biblioteca → *Attach to the current layer*.
-3. **Escolha o escopo.** Na ferramenta **Fill**, troque o escopo de *Layer* para **Surface Material** (partes como materiais) ou **Object** (partes como objetos).
+3. **Escolha o escopo.** Na ferramenta **Fill**, troque o escopo de *Layer* para **Material/Surface** (partes como materiais) ou **Object** (partes como objetos). Nas *Tool Options* do Fill, **desmarque** *Use Color [Albedo] Tolerance* e deixe marcado *Fill w/ Color*.
+   - *Por quê:* com a tolerância de cor marcada, o Fill para onde a cor visível muda, e não na fronteira da parte.
    - *Por quê:* o escopo padrão (*Layer*) preenche o modelo inteiro. Trocar o escopo é o que limita o material à parte.
 4. **Ligue o *Preview*,** se disponível, e passe o mouse sobre os aros.
    - *Por quê:* o preview mostra a área antes de gravar. Evita desfazer e refazer.
@@ -50,7 +51,7 @@ O Fill tem três jeitos de saber onde parar:
 ## Etapa 3 — Fill por ângulo (sem preparação)
 
 1. **Crie a camada e prenda o Smart Material**, como na Etapa 2.
-2. **Ligue *Use max. angle*** na ferramenta Fill e comece com um ângulo médio (algo como 30 a 45°).
+2. **Ligue *Use Maximum Angle*** na ferramenta Fill e comece com um ângulo médio (algo como 30 a 45°).
 3. **Clique numa face dos aros** e observe até onde o preenchimento foi.
    - Se **vazou** para as tábuas: diminua o ângulo.
    - Se **parou antes** de cobrir o aro inteiro (nas curvas do aro, por exemplo): aumente o ângulo, ou clique de novo nas áreas que faltaram.
@@ -83,7 +84,7 @@ O Fill direto não deixa máscara para o pincel respeitar. Para pintar desgaste 
 
 | Sintoma | Causa provável | Correção |
 | --- | --- | --- |
-| O Fill pinta o modelo todo | Escopo em *Layer* | Trocar para *Surface Material* ou *Object* |
+| O Fill pinta o modelo todo | Escopo em *Layer* | Trocar para *Material/Surface* ou *Object* |
 | O Fill por material pinta tudo | As partes não chegaram separadas | Voltar à Etapa 1 |
 | O Fill por ângulo vaza | Ângulo alto, ou falta quina na fronteira | Diminuir o ângulo, ou criar a quina no Blender |
 | O Fill por ângulo para no meio da parte | Ângulo baixo para uma peça curva | Aumentar o ângulo ou clicar nas áreas que faltaram |
@@ -102,7 +103,7 @@ Mostre duas versões da mesma peça com combinações diferentes de material (fe
 
 ## Fontes
 
-- [3DCoat — Paint Tool Panel (Fill: Layer, Surface Material, Object, Use max. angle, Preview)](https://3dcoat.com/documentation/manual/workspaces-rooms/paint/paint-room-tools/)
+- [3DCoat — Paint Tool Panel (Fill: Layer, Material/Surface, Object, Use Maximum Angle, Preview)](https://3dcoat.com/documentation/manual/workspaces-rooms/paint/paint-room-tools/)
 - [3DCoat — ID map (Fill por ângulo como alternativa ao ID)](https://3dcoat.com/documentation/manual/workspaces-rooms/paint/importing-into-the-paint-room/id-map/)
 - [3DCoat — The Layers Panel (Refill Material, Freeze Transparent Pixels)](https://3dcoat.com/documentation/manual/interface-and-navigation/the-layers-panel)
 - [3DCoat — Attach a Smart Material to a layer](https://3dcoat.com/documentation/?p=6295)

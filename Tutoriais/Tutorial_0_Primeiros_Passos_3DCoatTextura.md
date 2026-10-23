@@ -7,7 +7,7 @@
 
 ## Visão geral
 
-O 3DCoatTextura é a versão do 3DCoat só para texturização. Ele tem **duas salas**: a **Paint Room**, onde se pinta e se monta o material, e a **Render Room**, onde se ilumina e se confere o resultado. Na versão 2026.11, ele também tem o **Node Editor**, onde ficam os materiais e máscaras em nós (*NGMaterials* e *NGMasks*). Ele **não** tem salas de modelagem, escultura nem UV. Por isso, tudo que é malha e UV precisa sair pronto do Blender.
+O 3DCoatTextura é a versão do 3DCoat só para texturização. Ele tem **duas salas**: a **Painting**, onde se pinta e se monta o material, e a **Render**, onde se ilumina e se confere o resultado (são as abas no topo da tela). Na versão 2026.11, ele também tem a sala **Nodes** e o painel *Node Editor Window*, onde ficam os materiais e máscaras em nós (*NGMaterials* e *NGMasks*). Ele **não** tem salas de modelagem, escultura nem UV. Por isso, tudo que é malha e UV precisa sair pronto do Blender.
 
 **A ideia que mais confunde no começo:** no 3DCoatTextura, a camada só existe **onde você pintou ou preencheu**. Não há uma camada que cobre o objeto inteiro com uma máscara recortando (como no Substance Painter). E o preenchimento com condição (borda, cavidade, sombra) é calculado **uma vez, no clique**. Se você mudar a condição depois, precisa limpar a camada e preencher de novo.
 
@@ -45,16 +45,16 @@ Casos especiais (trim sheet, vários materiais, duas camadas de UV) estão nos [
 Antes de pintar, gaste dez minutos só navegando. Quem não domina a câmera pinta torto e se frustra.
 
 1. **Identifique as salas.** As abas no topo da janela trocam de sala: *Paint* e *Render*.
-   - *Por quê:* a Paint Room é onde 90% do trabalho acontece. A Render Room serve para conferir o material sob outra luz e para montar a luz que será assada nos tutoriais de Smart Material.
+   - *Por quê:* a sala Painting é onde 90% do trabalho acontece. A sala Render serve para conferir o material sob outra luz e para montar a luz que será assada nos tutoriais de Smart Material.
 2. **Aprenda a câmera.** No padrão do 3DCoatTextura, arraste no **espaço vazio** em volta do modelo: botão esquerdo gira, botão direito aproxima e o botão do meio desloca. Sobre o modelo, use as mesmas combinações segurando `Alt`.
    - Se preferir a navegação do Blender, use a opção *Customize Navigation* (a documentação oficial tem o guia *Customize Navigation as Blender*). Combine com o grupo um padrão único, para que um possa ajudar o outro.
    - *Por quê:* no 3DCoatTextura, o clique sobre o modelo pinta. Girar a câmera sem querer pintar exige saber onde clicar.
 3. **Localize os painéis.** Encontre e, se necessário, abra pelo menu *Windows → Panels*:
    - **Layers** (camadas);
-   - **Smart Materials** (biblioteca de materiais);
+   - **Materials** (biblioteca de materiais e Smart Materials, na parte de baixo da tela, ao lado de *Stencils* e *Masks*);
    - **Brushes** e **Alphas** (formato do pincel);
    - **Color** (paleta e seletor de cor);
-   - a **barra superior de ferramentas**, onde ficam raio, intensidade e os botões de canal (Color, Depth, Roughness/Gloss, Metalness).
+   - a **barra superior de ferramentas**, onde ficam raio, intensidade e os botões de canal (*Depth*, *Albedo*, *Gloss*, *Metalness*) e a lista de condições (*Always* quando não há condição).
    - *Por quê:* esses cinco lugares concentram quase todas as decisões. Os outros painéis podem ficar fechados por enquanto.
 4. **Salve o layout.** Arrume os painéis e salve o espaço de trabalho (*Windows → Store Workspace*; para recuperar, *Windows → Restore Workspace*).
    - *Por quê:* nos computadores do laboratório, a interface costuma voltar ao padrão. Um layout salvo poupa tempo no começo de cada aula.
@@ -73,7 +73,7 @@ Antes de pintar, gaste dez minutos só navegando. Quem não domina a câmera pin
 3. **Confira o UV dentro do 3DCoatTextura.** Abra o *Texture UV Editor* (menu *Textures*) e compare com o UV do Blender.
    - *Por quê:* se o UV chegou diferente, é melhor descobrir agora do que depois de uma hora de pintura.
 
-**Evidência:** print do modelo na Paint Room ao lado do Texture UV Editor, com as mesmas ilhas do Blender.
+**Evidência:** print do modelo na sala Painting ao lado do Texture UV Editor, com as mesmas ilhas do Blender.
 
 ## Etapa 4 — Camadas e canais
 
@@ -81,7 +81,7 @@ No 3DCoatTextura, uma única camada guarda vários canais ao mesmo tempo: cor, r
 
 1. **Crie uma camada nova** no painel Layers e dê um nome com número e função (`01 Base`, `02 Sombra`, `03 Borda`).
    - *Por quê:* nomes claros tornam a pilha legível para o grupo e para a crítica. É o mesmo padrão usado nos tutoriais de Smart Material.
-2. **Teste os canais um por um.** Na barra superior, deixe ligado só o canal **Color** e dê uma pincelada. Desfaça (`Ctrl+Z`), ligue só o **Depth** e pinte de novo. Repita com Roughness/Gloss e Metalness.
+2. **Teste os canais um por um.** Na barra superior, deixe ligado só o canal **Albedo** e dê uma pincelada. Desfaça (`Ctrl+Z`), ligue só o **Depth** e pinte de novo. Repita com Gloss e Metalness.
    - *Por quê:* o pincel pinta todos os canais ligados de uma vez. O erro mais comum no começo é pintar relevo ou metal sem querer, porque o canal ficou ligado.
    - O **Depth** cria relevo. Na exportação, ele vira o **Normal Map**. É assim que o Hero Asset ganha Normal na Semana 7, sem precisar de high-poly.
 3. **Experimente opacidade e modo de mistura.** No painel *Layer Blending* (botão direito na camada → *Layer Blending*), mude a opacidade e teste os modos *Multiply*, *Screen* e *Overlay*.
@@ -97,7 +97,7 @@ No 3DCoatTextura, uma única camada guarda vários canais ao mesmo tempo: cor, r
    - *Por quê:* o alpha é o formato da ponta do pincel. Um alpha suave perdoa mais e é melhor para aprender.
 2. **Ajuste raio e intensidade na barra superior** e pinte algumas pinceladas de cor no modelo.
    - *Por quê:* raio e intensidade são os dois controles que você vai mexer o tempo todo. Vale saber onde ficam antes de qualquer outra coisa.
-3. **Teste o Fill.** Escolha a ferramenta de preenchimento (*Fill*) e clique no modelo para preencher uma camada inteira com uma cor.
+3. **Teste o Fill.** Escolha a ferramenta de preenchimento (*Fill*) e clique no modelo para preencher uma camada inteira com uma cor. Nas *Tool Options* do Fill, **desmarque** *Use Color [Albedo] Tolerance* e deixe marcado *Fill w/ Color*.
    - *Por quê:* a cor base de todo material começa com um Fill. Depois disso, condições e pincéis trabalham por cima.
 
 **Evidência:** uma camada de cor base preenchida e outra com pinceladas por cima, com nomes claros.
@@ -108,7 +108,7 @@ As condições do 3DCoatTextura (borda, cavidade, sombra) leem dois mapas calcul
 
 1. **Calcule os mapas.** Em *Edit → Calculate Occlusion and Curvature maps*.
    - *Por quê:* esses cálculos são o equivalente aos *generators* do Substance. Eles são feitos uma vez por modelo e servem para todas as camadas.
-2. **Teste as condições com cores puras.** Crie três camadas e preencha com *Fill* usando condições diferentes: vermelho em *More on Convex* (bordas), azul em *More on Concave* (cavidades) e verde em *More on Shadow* (áreas fechadas).
+2. **Teste as condições com cores puras.** Crie três camadas e preencha com *Fill* usando condições diferentes: vermelho em *More on Convex* (bordas), azul em *More on Concave* (cavidades) e verde em *More in Shadow* (áreas fechadas).
    - *Por quê:* cores puras mostram exatamente onde cada condição age. Depois fica fácil trocar pelas cores do material.
 
 **Evidência:** print com as três cores. Vermelho nas quinas, azul nas frestas, verde nas áreas escondidas.
@@ -123,7 +123,7 @@ Um Smart Material é um material de várias camadas, cada uma com sua condição
 
 1. **Crie uma camada nova** chamada `10 Smart Material – teste`.
    - *Por quê:* aplicar o material numa camada separada deixa comparar e apagar sem perder o resto.
-2. **Escolha um material na biblioteca.** No painel Smart Materials, escolha um material pronto (por exemplo, um metal pintado ou uma madeira).
+2. **Escolha um material na biblioteca.** No painel *Materials*, escolha um material pronto (por exemplo, um metal pintado ou uma madeira).
 3. **Prenda o material (Attach).** Com a camada nova selecionada, clique com o botão direito no material na biblioteca → *Attach to the current layer*. Confira se ele aparece no painel *Material Preview*.
    - No 3DCoatTextura 2026.11, os materiais padrão da biblioteca são *NGMaterials* (em nós). Para eles, basta **clicar** no material para que ele vire o material ativo da ferramenta, ou **arrastá-lo** sobre o modelo ou a camada. Se o *Attach to the current layer* não aparecer no menu de um material, é porque ele é um NGMaterial.
    - *Por quê:* sem o Attach, o Fill usa só a cor escolhida no painel Color, e o resultado parece um balde de tinta.
@@ -154,7 +154,7 @@ Um Smart Material é um material de várias camadas, cada uma com sua condição
    - *Por quê:* sem isso, a Unity lê o Normal como uma imagem colorida e o relevo sai errado. A Unity usa a convenção OpenGL (Y+), a mesma do preset.
 3. **Crie um material URP Lit** com *Workflow Mode: Metallic*. Ligue a cor em *Base Map*, o Metallic em *Metallic Map* (com *Smoothness → Source: Metallic Alpha* para a suavidade) e o Normal em *Normal Map*.
    - *Por quê:* é o material PBR padrão da Unity. Ele reage à luz da cena, que é o que se espera do Hero Asset nas Semanas 7 e 8.
-4. **Compare com o 3DCoatTextura.** Coloque o modelo na cena com uma luz direcional e compare com a Render Room.
+4. **Compare com o 3DCoatTextura.** Coloque o modelo na cena com uma luz direcional e compare com a sala Render.
    - *Por quê:* diferenças grandes de brilho ou relevo quase sempre vêm de um mapa trocado ou da convenção do Normal.
 
 > **Trilha hand-painted:** quem seguir o estilo pintado (luz assada na cor) vai usar um shader **Unlit**, como explicado na Etapa 6 do [Tutorial geral de Smart Material](/Tutoriais/Tutorial_Smart_Material_Diffuse_3DCoat.md). Para este tutorial, use URP Lit.

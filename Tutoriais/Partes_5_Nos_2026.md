@@ -37,7 +37,7 @@ O nó de textura lê uma imagem pelo UV. Para cada parte, você precisa de uma i
 ## Etapa 2 — Criar a pasta e o material em nós
 
 1. **Crie a pasta da parte** no painel Layers (*Create folder group*) e nomeie `Aros – Metal`. Coloque uma camada dentro dela.
-2. **Abra o Node Editor** para a pasta.
+2. **Abra o editor de nós** com a pasta selecionada: aba *Nodes* no topo da tela ou painel *Node Editor Window* na parte de baixo.
 3. **Adicione um *SimpleMaterial*,** defina cor, gloss e metal e ligue-o ao **out material**.
    - *Por quê:* o *SimpleMaterial* faz o papel da *fill layer* do Substance: um material que cobre tudo, até que a máscara recorte.
    - Aplicado à **pasta**, o material e a máscara valem para todas as camadas dentro dela. É o "folder com máscara" do Substance.
@@ -65,7 +65,7 @@ Para efeitos que ficam **dentro** de uma parte, como desgaste só nas quinas dos
 
 ## Atalhos da biblioteca de nós
 
-- **NGMasks prontas.** A biblioteca de máscaras em nós (*NGMasks*) traz desgaste, sujeira e riscos editáveis. Escolha o material e aplique uma máscara da biblioteca com um clique; depois, combine com a máscara da parte (Etapa 4) para o efeito ficar só nela.
+- **NGMasks prontas.** A biblioteca de máscaras em nós (*NGMasks*, no painel *Masks*, na parte de baixo da tela) traz desgaste, sujeira e riscos editáveis. Escolha o material e aplique uma máscara da biblioteca com um clique; depois, combine com a máscara da parte (Etapa 4) para o efeito ficar só nela.
 - **TriPlanar em vez de UVWTexture para grunge e padrões.** O nó *TriPlanar* projeta a textura pelos três eixos, sem depender do UV, e evita marcar as emendas. Use o *UVWTexture* só para a **máscara da parte**, que precisa seguir o UV. O nó *inGizmoTransform* controla posição, rotação e escala do *TriPlanar* e do *UVWTexture* direto na viewport.
 
 ## Etapa 5 — Toque autoral com pincel

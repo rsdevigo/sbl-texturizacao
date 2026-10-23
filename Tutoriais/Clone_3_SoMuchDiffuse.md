@@ -2,7 +2,7 @@
 
 20/10/2026 · Rodrigo
 
-> **3DCoatTextura 2026.** Na versão 2026.11, os Smart Materials padrão da biblioteca foram convertidos para o sistema de nós (*NGMaterials*). Este tutorial monta o material no **Smart Material Editor** (camadas com *Condition Mask*), o fluxo clássico. Antes da aula, confira na versão do laboratório se o botão **+** do painel *Smart Materials* ainda cria um Smart Material desse tipo. Se não criar, monte cada camada em nós: um *SimpleMaterial* com a cor da camada e um *SimpleMask* com o *condition type* equivalente (*More on Convex* → convex, *More on Concave* → concave, *More on Shadow* → in shadow).
+> **3DCoatTextura 2026.** Na versão 2026.11, os Smart Materials padrão da biblioteca foram convertidos para o sistema de nós (*NGMaterials*). Este tutorial monta o material no **Smart Material Editor** (camadas com *Condition Mask*), o fluxo clássico. Antes da aula, confira na versão do laboratório se o botão **+** do painel *Materials* ainda cria um Smart Material desse tipo. Se não criar, monte cada camada em nós: um *SimpleMaterial* com a cor da camada e um *SimpleMask* com o *condition type* equivalente (*More on Convex* → convex, *More on Concave* → concave, *More in Shadow* → in shadow).
 
 ## O que vamos clonar
 
@@ -17,7 +17,7 @@ Diferente dos outros dois, este produto tem [documentação pública](https://ww
 | Cavity | Color, Clipping, Contrast, Soft Cavity, Worldspace Intensity | Cavidade nítida + cavidade suave + limpeza no lado iluminado | A e B |
 | Ambient Occlusion | Occlusion Color, Spread | Camada de oclusão com cor própria | A |
 | Thickness | Color, Spread | Mapa Thickness como máscara | A |
-| Specular | Number of Lights, Rig Height, Light Rotation, Exponent | Luzes do Render Room + Light Baking Tool | B |
+| Specular | Number of Lights, Rig Height, Light Rotation, Exponent | Luzes da sala Render + Light Baking Tool | B |
 | Specular Edges | Edge Color, Edge Exponent | Borda × máscara de luz | B |
 | Underlight | Gradient Top/Bottom, Intensity, Spread | Luz rebatida de baixo | B |
 | WSN Mask | Máscara da parte de baixo | Brilho apagado nas faces voltadas para baixo | B |
@@ -30,7 +30,7 @@ Diferente dos outros dois, este produto tem [documentação pública](https://ww
 
 O SoMuchDiffuse parte de mapas assados do high poly. O clone precisa de AO e curvatura (os mesmos do Clone 1) e de mais dois mapas: thickness e, opcionalmente, directional occlusion.
 
-1. **Importe o low poly (e o normal map, se houver).** Em *File → Import*, carregue o módulo para o *Paint Room* (UV/Per-pixel painting). O normal map assado do high poly no Blender é **opcional**: se houver, aplique-o numa camada e dê Alt+clique no olho dela, para que só ela fique visível.
+1. **Importe o low poly (e o normal map, se houver).** Em *File → Import*, carregue o módulo para o sala *Painting* (pintura Per-Pixel). O normal map assado do high poly no Blender é **opcional**: se houver, aplique-o numa camada e dê Alt+clique no olho dela, para que só ela fique visível.
    - *Por quê:* a curvatura do 3DCoatTextura é calculada a partir da malha e do relevo visível, e outras camadas visíveis contaminam o cálculo. Sem normal map, as máscaras enxergam só a geometria da low poly, então chanfre (bevel) as quinas importantes no Blender para a borda ter onde aparecer.
 2. **Calcule a oclusão (AO).** Em *Edit → Calculate Occlusion and Curvature maps*. Confira também, em *Edit → Preferences → Tools*, se a opção *RGB Cavity "Curvature"* está ativa (no 3DCoatTextura 2026 ela já vem ativa por padrão).
    - *Por quê:* as camadas de sombra e de cor de oclusão (2 e 5) leem o AO. O Cavity RGB libera o *Cavity Area Width*, usado nas cavidades.
@@ -50,10 +50,10 @@ Duplique o Clone 1 como `CLONE_SoMuchDiffuse`, **remova as camadas 6 a 8 do Clon
 | # | Camada | Condition Mask | Modo | Cor | Opacidade |
 | --- | --- | --- | --- | --- | --- |
 | 1 | `01 Diffuse Color` | Always | Normal | Cor média | 100% |
-| 2 | `02 Shadow Color` | More on Shadow, contraste baixo | Multiply | Cor escolhida (ex.: roxo médio) | 40 a 60% |
+| 2 | `02 Shadow Color` | More in Shadow, contraste baixo | Multiply | Cor escolhida (ex.: roxo médio) | 40 a 60% |
 | 3 | `03 Cavity – clipping/contrast` | More on Concave, nítida | Multiply | Escura e saturada | 70% |
 | 4 | `04 Soft Cavity` | More on Concave, largura alta | Multiply | Igual à cavidade | 25% |
-| 5 | `05 Occlusion Color` | More on Shadow, contraste médio | Multiply | Cor própria do AO (ex.: azul escuro) | 30% |
+| 5 | `05 Occlusion Color` | More in Shadow, contraste médio | Multiply | Cor própria do AO (ex.: azul escuro) | 30% |
 | 6 | `06 Thickness` | Máscara `MAP_thickness` | Screen | Clara e saturada | 20% |
 
 1. **Use Multiply com uma cor escolhida na sombra (2).**
@@ -69,7 +69,7 @@ Duplique o Clone 1 como `CLONE_SoMuchDiffuse`, **remova as camadas 6 a 8 do Clon
 
 Esta é a parte que distingue o SoMuchDiffuse. O rig é montado uma vez, salvo, e reaproveitado em todos os módulos do kit.
 
-1. **Monte o rig no Render Room.** Comece com 3 luzes distribuídas ao redor do objeto, na mesma altura (40 a 60° acima do horizonte). Salve a cena de luz como preset do grupo.
+1. **Monte o rig na sala Render.** Comece com 3 luzes distribuídas ao redor do objeto, na mesma altura (40 a 60° acima do horizonte). Salve a cena de luz como preset do grupo.
    - *Por quê:* é o equivalente a *Number of Lights*, *Specular Rig Height* e *Specular Light Rotation*. Luzes espalhadas acendem todos os lados, e o objeto lê bem de qualquer ângulo de câmera. 1 luz dá mais drama, 4 a 8 luzes dão leitura mais uniforme.
 2. **Camada 7 — Top Down.** Asse com a *Light Baking Tool*, *Map Type: Light From Render Room*, numa camada em *Overlay*, com cor quente, a 30 a 40%.
    - *Por quê:* é o *Diffuse Gradient* com *Gradient Type: lit*. A opacidade faz o papel do *Spread*.

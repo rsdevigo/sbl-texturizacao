@@ -2,7 +2,7 @@
 
 20/10/2026 · Rodrigo
 
-> **3DCoatTextura 2026.** Na versão 2026.11, os Smart Materials padrão da biblioteca foram convertidos para o sistema de nós (*NGMaterials*). Este tutorial monta o material no **Smart Material Editor** (camadas com *Condition Mask*), o fluxo clássico. Antes da aula, confira na versão do laboratório se o botão **+** do painel *Smart Materials* ainda cria um Smart Material desse tipo. Se não criar, monte cada camada em nós: um *SimpleMaterial* com a cor da camada e um *SimpleMask* com o *condition type* equivalente (*More on Convex* → convex, *More on Concave* → concave, *More on Shadow* → in shadow).
+> **3DCoatTextura 2026.** Na versão 2026.11, os Smart Materials padrão da biblioteca foram convertidos para o sistema de nós (*NGMaterials*). Este tutorial monta o material no **Smart Material Editor** (camadas com *Condition Mask*), o fluxo clássico. Antes da aula, confira na versão do laboratório se o botão **+** do painel *Materials* ainda cria um Smart Material desse tipo. Se não criar, monte cada camada em nós: um *SimpleMaterial* com a cor da camada e um *SimpleMask* com o *condition type* equivalente (*More on Convex* → convex, *More on Concave* → concave, *More in Shadow* → in shadow).
 
 ## Visão geral
 
@@ -30,7 +30,7 @@ Neste tutorial você monta um Smart Material estilizado no 3DCoatTextura. Ele ge
 
 Nada no material funciona sem AO e curvatura calculados. Todas as máscaras das próximas etapas leem esses mapas.
 
-1. **Importe o low poly com o normal map.** Em *File → Import*, carregue o módulo para o *Paint Room* (UV/Per-pixel painting) e aplique o normal map numa camada.
+1. **Importe o low poly com o normal map.** Em *File → Import*, carregue o módulo para o sala *Painting* (pintura Per-Pixel) e aplique o normal map numa camada.
    - *Por quê:* a curvatura do 3DCoatTextura é calculada a partir do normal map visível. Sem ele, o low poly não tem detalhe para gerar bordas e frestas.
 2. **Isole o normal map.** Alt+clique no olho da camada do normal, para que só ela fique visível.
    - *Por quê:* outras camadas visíveis contaminam o cálculo.
@@ -48,11 +48,11 @@ Nada no material funciona sem AO e curvatura calculados. Todas as máscaras das 
 
 O salto de qualidade do estilo está aqui: a sombra é uma *cor diferente*, não a base escurecida. É o controle *Shadow Color* do SoMuchDiffuse e o *shade blending* do FT.
 
-1. **Crie o material.** No painel *Smart Materials*, clique no **+**, dê um nome no padrão `GRUPO_Material_Tema` (ex.: `G3_Pedra_Medieval`) e abra o *Smart Material Editor*.
+1. **Crie o material.** No painel *Materials*, clique no **+**, dê um nome no padrão `GRUPO_Material_Tema` (ex.: `G3_Pedra_Medieval`) e abra o *Smart Material Editor*.
 2. **Camada 1 — Base.** Em *Color*, defina a cor média do material, com *Condition Mask* em *Always*. Deixe *Glossiness* e *Metalness* em zero.
    - *Por quê:* no fluxo diffuse-only, brilho e metal serão pintados na cor. Valores PBR só confundem a leitura no viewport.
    - Escolha um valor **médio**, nem muito claro nem muito escuro. Ele precisa de espaço para receber sombras e luzes por cima.
-3. **Camada 2 — Cor de sombra.** Nova camada com uma cor mais escura, **mais saturada** e com o **matiz deslocado para o frio** (azul, roxo). Use *Condition Mask* *More on Shadow* (exige o AO calculado) com opacidade entre 40 e 60%.
+3. **Camada 2 — Cor de sombra.** Nova camada com uma cor mais escura, **mais saturada** e com o **matiz deslocado para o frio** (azul, roxo). Use *Condition Mask* *More in Shadow* (exige o AO calculado) com opacidade entre 40 e 60%.
    - *Por quê:* na pintura tradicional, a sombra recebe a luz fria do céu e ganha saturação. Escurecer para o preto deixa o material "sujo" e sem vida.
 
 | Material | Base (exemplo) | Sombra (exemplo) | Desvio de matiz |
@@ -71,7 +71,7 @@ Essas três camadas descrevem a *forma* do objeto, independente de onde a luz ve
 1. **Camada 3 — Cavidade.** Uma cor mais escura e fria que a sombra, com *Condition Mask* *More on Concave*. Ajuste *Cavity Width*, *Cavity Degree* e *Contrast*, e use *Cavity Area Width* (Cavity RGB) para controlar a largura.
    - *Por quê:* é o "traço" que o pintor faz nas frestas para separar as formas. Deve ser **fino e nítido**. Se ficar largo, vira sujeira.
    - Equivalente a *Cavity Clipping/Contrast* do SoMuchDiffuse.
-2. **Camada 4 — AO.** Cor de sombra em baixa opacidade (20 a 35%), *Condition Mask* *More on Shadow*.
+2. **Camada 4 — AO.** Cor de sombra em baixa opacidade (20 a 35%), *Condition Mask* *More in Shadow*.
    - *Por quê:* a cavidade marca a fresta e o AO marca a área *ao redor* dela, onde a luz chega menos. Juntas, dão profundidade em duas escalas.
 3. **Camada 5 — Highlight de borda.** Uma cor mais clara e **quente** (amarelada) que a base, com *Condition Mask* *More on Convex* e contraste alto.
    - *Por quê:* imita o desgaste e o brilho nas quinas, a assinatura do hand-painted. A cor quente faz o contraponto à sombra fria da Etapa 2.
@@ -85,7 +85,7 @@ Essas três camadas descrevem a *forma* do objeto, independente de onde a luz ve
 
 A luz depende da posição da peça no mundo. Por isso ela não entra no Smart Material: é assada **por módulo**, em camadas acima do material, com a *Light Baking Tool* (menu *Edit*). É o equivalente ao rig de luzes do SoMuchDiffuse.
 
-1. **Monte a luz no Render Room.** Uma luz principal vinda de cima, levemente de lado (ângulo de 30 a 45°), e uma secundária fraca vinda de baixo. Mantenha a mesma orientação para **todos os módulos do kit**.
+1. **Monte a luz na sala Render.** Uma luz principal vinda de cima, levemente de lado (ângulo de 30 a 45°), e uma secundária fraca vinda de baixo. Mantenha a mesma orientação para **todos os módulos do kit**.
    - *Por quê:* se cada módulo tiver luz pintada numa direção, o kit montado no Unity não encaixa visualmente. A consistência da luz é o que une o kit.
 2. **Camada 6 — Luz de topo.** Na *Light Baking Tool*, escolha *Map Type: Light From Render Room* e grave numa camada nova, em modo *Screen* ou *Overlay*, com uma cor quente.
    - *Por quê:* o topo das peças recebe a luz do sol ou do céu. É o *top gradient* do FT e a *Gradient Type: lit* do SoMuchDiffuse.
